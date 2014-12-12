@@ -1,0 +1,68 @@
+body {
+	padding: 30px;
+}
+
+.navbar {
+	margin-bottom: 30px;
+}
+.navbar-collapse, .navbar-collapse li
+{
+	font-size:15px;
+}
+.list_a
+{
+	text-decoration:none;
+	color : black;
+}
+.list_a:hover
+{
+	text-decoration:none;
+	color : black;
+}
+.list_a .col-12-lg:hover
+{
+	background-color: #f1f1f1;
+}
+.col-12-lg
+{
+	background-color: #f8f8f8;
+	border: 1px solid #e7e7e7;
+	font-size:15px;
+	padding:10px 60px;
+	margin:10px 0px;
+}
+.row
+{
+	margin:0px;
+}
+.col-12-lg p
+{
+	margin:30px 0px;
+}
+p span
+{
+	color:#999;
+}
+#img_url
+{
+	margin-bottom:10px;
+}
+.form-group
+{
+	margin:40px 0px;
+}
+@Media (max-width: 767px)
+{
+	body
+	{
+		padding: 10px;
+	}
+	.container
+	{
+		padding:0px;
+	}
+	.col-12-lg
+	{
+		padding:20px 10px;
+	}
+}

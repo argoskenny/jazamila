@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* 去除連結虛線*/
+a, a:hover, a:focus
+{
+	outline: none; /* for Firefox */
+	behavior:expression(this.onFocus=this.blur());
+}
+html,body{
+    height: 100%
+}
+
+/******HEADER******/
+.navbar
+{
+	height:60px;
+	background-color:#FFF;
+	border-style:none;
+}
+.navbar-brand img
+{
+	width:150px;
+	height:20px;
+	margin-bottom:10px;
+}
+/* 手機版選單樣式 */
+.navbar-collapse.in,.navbar-collapse.collapsing
+{
+	background-color:#FFF;
+}
+.header .container
+{
+	margin-top:15px;
+}
+
+.nav.navbar-nav.navbar-right li
+{
+	margin:0px 10px;
+	display:block;
+	background-color:#FFF;
+	height:45px;
+}
+.nav.navbar-nav.navbar-right li a
+{
+	color:#F97062;
+	font-size:15px;
+}
+.nav.navbar-nav.navbar-right li a:hover,.nav.navbar-nav.navbar-right li a:active
+{
+	color:#F25851;
+	background:none;
+	text-decoration:underline;
+}
+.nav.navbar-nav.navbar-right .active a
+{
+	background-color:#F97062;
+	color:#FFFFFF;
+	border-radius:4px;
+}
+.nav.navbar-nav.navbar-right .active a:hover,.nav.navbar-nav.navbar-right .active a:active
+{
+	background-color:#F25851;
+	color:#FFFFFF;
+}
+.navbar-default .navbar-toggle .icon-bar
+{
+	background-color:#FFF;
+}
+.navbar-toggle
+{
+	border:0px;
+	background-color:#F97062;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus
+{
+	background-color:#F25851;
+}
+
+/******FOOTER******/
+
+.footer
+{
+	height:120px;
+	background-color:#333;
+	color:#CCC;
+}
+.footer .container
+{
+	line-height:120px;
+}
+.footer .container a
+{
+	color:#F97062;
+}
+.footer .container a:hover,.foot a:active
+{
+	color:#F25851;
+}

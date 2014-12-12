@@ -1,0 +1,387 @@
+@charset "utf-8";
+/* 去除連結虛線*/
+a, a:hover, a:focus, #list_search_btn
+{
+	outline: none; /* for Firefox */
+	behavior:expression(this.onFocus=this.blur());
+}
+/* 列表標題區塊 */
+.main
+{
+	padding-bottom:80px;
+	background-color:#D9EFEC;
+	text-align:center;
+}
+.main_title
+{
+	color:#34AC98;
+	font-size:60px;
+	padding-top:80px;
+}
+.main_text
+{
+	color:#34AC98;
+	font-size:28px;
+}
+/* 搜尋欄 */
+.input-group
+{
+	margin-top:50px;
+}
+.input-group .btn, .input-group .btn:visited
+{
+	padding-top:11px;
+	padding-bottom:11px;
+	border:none;
+	color:#FFF;
+	background-color:#F97062;
+	font-size:15px;
+}
+.input-group .btn:hover, .input-group .btn:active
+{
+	background-color:#F25851;
+}
+
+#list_search_btn, #list_search_btn:visited
+{
+	padding-top:11px;
+	padding-bottom:11px;
+	border:none;
+	color:#FFF;
+	background-color:#F97062;
+	font-size:15px;
+}
+#list_search_btn:hover, #list_search_btn:active
+{
+	background-color:#F25851;
+}
+	
+	
+.input-group .form-control
+{
+	box-shadow:none;
+	border-style:none;
+	color:#CCC;
+	font-size:15px;
+	height:45px;
+}
+.input-group .form-control:focus
+{
+	border:#fdb0a8 solid 1px;
+	box-shadow:0px 0px 10px 1px #fdb0a8;
+	-webkit-box-shadow:0px 0px 10px 1px #fdb0a8;
+}
+
+/* 分頁連結樣式 */
+.pages_div
+{
+	text-align:right;
+}
+/* 分頁樣式*/
+.pagination a
+{
+	color:#F97062;
+}
+.pagination .active span
+{
+	background-color:#F97062;
+	border-color:#F97062;
+}
+.pagination .active span:hover
+{
+	background-color:#F97062;
+	border-color:#F97062;
+}
+
+/* 列表 */
+.res_list_data_first
+{
+	margin-top:40px;
+	border-bottom:#DDD solid 1px;
+	margin-left:30px;
+	color:#999;
+	font-size:15px;
+	line-height:50px;
+	overflow:hidden;
+}
+.res_list_data_first span
+{
+	color:#34AC98;
+}
+.res_list_no_data
+{
+	padding-top:30px;
+	padding-bottom:30px;
+	padding-left:5px;
+	border-bottom:#DDD solid 1px;
+	margin-left:30px;
+	font-size:15px;
+	line-height:40px;
+	text-align:center;
+	overflow:hidden;
+}
+.res_list_data1
+{
+	padding:30px 0px 30px 20px;
+	border-bottom:#DDD solid 1px;
+	margin-left:30px;
+	font-size:15px;
+	background-color:#FFFFFF;
+	overflow:hidden;
+}
+.res_list_data2
+{
+	padding:30px 0px 30px 20px;
+	border-bottom:#DDD solid 1px;
+	margin-left:30px;
+	font-size:15px;
+	background-color:#FAFAFA;
+	overflow:hidden;
+}
+.res_list_data1:hover, .res_list_data2:hover
+{
+	background-color:#FAFFFB;
+}
+.res_list_area a
+{
+	color:#F97062;
+}
+.res_list_area a:hover,.res_list_area a:active
+{
+	color:#F25851;
+}
+.res_note
+{
+	color:#999;
+}
+/* 列表內文 */
+.flex_pic
+{
+	float:left;
+	width:12%;
+	margin-right:3%;
+}
+.flex_pic img
+{	
+	width:90px;
+	height:125px;
+	border:none;
+}
+.flex_text
+{	
+	float:right;
+	vertical-align:top;
+	width:85%;
+}
+.flex_text ul
+{
+	list-style:none;
+	display:inline-block;
+	padding-left:0;
+}
+.flex_text span
+{
+	color:#999;
+}
+.flex_text ul:first-child
+{
+	width:70%
+}
+.flex_text ul:last-child
+{
+	width:25%
+}
+.share
+{
+	text-align:left;
+	margin-bottom:30px;
+}
+
+/* 條件選單區塊 */
+.option_title
+{
+	border-radius:5px;
+	margin-top:40px;
+	font-size:15px;
+}
+.option_title_content
+{
+	text-align:left;
+	padding-left:14px;
+	border-bottom:#DDD solid 1px;
+	line-height:50px;
+	font-weight:bold;
+}
+.option_select
+{
+	padding-top:40px;
+	padding-bottom:60px;
+	border-bottom:#DDD solid 1px;
+}
+.option_select b
+{
+	font-size:15px;
+	padding-left:14px;
+	line-height:40px;
+}
+/* 條件下拉選單 */
+.option_select .btn-group
+{
+	width:100%;
+}
+.option_select .btn-group .btn
+{
+	width:100%;
+	font-size:15px;
+	height:45px;
+}
+.option_select .dropdown-menu
+{
+	width:100%;
+	font-size:15px;
+}
+.dropdown-menu li a
+{
+	height:40px;
+	padding: 10px 20px;
+}
+.dropdown-menu li a:hover, .dropdown-menu li a:focus
+{
+	background-color:#F97062;
+}
+
+/* 選單確定按鈕 */
+.option_btn
+{
+	text-align:center;
+	margin-top:60px;
+	margin-bottom:25px;
+	border-color:#F00;
+}
+.option_btn button
+{
+	background-color:#F97062;
+	border-style:none;
+	width:100%;
+	height:45px;
+	font-size:15px;
+}
+.option_btn button:hover, .option_btn button:active
+{
+	background-color:#F25851;
+}
+/* 選單錯誤訊息 */
+.money_error
+{
+	margin-top:40px;
+	color:#FFF;
+	font-size:15px;
+	line-height:30px;
+	background-color:#34AC98;
+	border-radius:5px;
+	display:none;
+	text-align:center;
+}
+.col-lg-12
+{
+	width:auto;
+}
+
+/* Media Query 列表內文 */
+@media screen and (max-width:970px) {
+	.flex_pic
+	{
+		width:15%;
+	}
+	.flex_text
+	{
+		width:80%;	
+	}
+}
+@media screen and (max-width:560px) {
+	.flex_pic
+	{
+		width:20%
+	}
+	.flex_text
+	{
+		width:75%;	
+	}
+}
+@media screen and (max-width:460px) {
+	.flex_pic
+	{
+		width:35%
+	}
+	.flex_text
+	{
+		width:60%;	
+	}
+	.flex_text ul:first-child,
+	.flex_text ul:last-child
+	{
+		width:100%;	
+	}
+}
+
+@Media (max-width: 767px)
+{
+	/* 修正 bootstrap padding */
+	.col-xs-12
+	{
+		padding-left:0px;
+		padding-right:0px;
+	}
+	.main
+	{
+		padding-bottom:30px;
+	}
+	.main_title
+	{
+		font-size:32px;
+		padding-top:40px;
+	}
+	.main_text
+	{
+		font-size:15px;
+	}
+	.res_list_data_first
+	{
+		margin-left:0px;
+	}
+	.res_list_data1, .res_list_data2
+	{
+		margin-left:0px;
+		padding-left:10px;
+		font-size:12px;
+	}
+	.option_title
+	{
+		padding-bottom:1px;
+	}
+	.pages_div
+	{
+		text-align:center;
+	}
+	.option_select
+	{
+		padding-top:10px;
+		padding-bottom:10px;
+		border-bottom:none;
+	}
+	.option_select b
+	{
+		padding-left:14px;
+		line-height:30px;
+	}
+	.option_btn
+	{
+		margin-top:30px;
+		margin-bottom:0px;
+	}
+	.res_list_no_data
+	{
+		margin-left:0px;
+		margin-bottom:20px;
+	}
+}
