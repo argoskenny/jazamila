@@ -44,8 +44,9 @@ class ReCaptcha
      *
      * @param string $secret shared secret between site and ReCAPTCHA server.
      */
-    function ReCaptcha($secret)
+    function ReCaptcha()
     {
+        $secret = '6LdH9gATAAAAALcTCdsNj_iBplsuWEZZWWKJ_yQH';
         if ($secret == null || $secret == "") {
             die("To use reCAPTCHA you must get an API key from <a href='"
                 . self::$_signupUrl . "'>" . self::$_signupUrl . "</a>");

@@ -386,7 +386,7 @@ class Jazamila extends CI_Controller {
 	// 儲存新增餐廳
 	public function save_post_data()
 	{
-		$this->load->library('recaptchalib');
+		$this->load->library('recaptcha');
 
 		// Register API keys at https://www.google.com/recaptcha/admin
 		$siteKey = "6LdH9gATAAAAAIGxel7yPewJbIhC5xwUA0ZUJAgz";
@@ -397,10 +397,10 @@ class Jazamila extends CI_Controller {
 		$resp = null;
 		// The error code from reCAPTCHA, if any
 		$error = null;
-		$this->recaptchalib->ReCaptcha($secret);
+		$this->recaptcha->ReCaptcha();
 		// Was there a reCAPTCHA response?
 		if ($_POST["g-recaptcha-response"]) {
-		    $resp = $this->recaptchalib->verifyResponse(
+		    $resp = $this->recaptcha->verifyResponse(
 		        $_SERVER["REMOTE_ADDR"],
 		        $_POST["g-recaptcha-response"]
 		    );

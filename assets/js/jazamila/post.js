@@ -137,6 +137,7 @@ $('#post_submit').click(function()
 	}
 	
 	// 驗證碼檢查
+	/*
 	var querySting = {captcha:$('#captcha').val()};
 	$.ajax({
 		type:	"POST",
@@ -162,6 +163,7 @@ $('#post_submit').click(function()
 			}
 		}
 	});
+	*/
 	document.post_form.submit();
 });
 
