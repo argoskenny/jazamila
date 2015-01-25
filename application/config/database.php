@@ -49,8 +49,8 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'yourname';
-$db['default']['password'] = 'yourpassword';
+$db['default']['username'] = 'jazamila';
+$db['default']['password'] = '@WSX1qazaq1XSW@';
 $db['default']['database'] = 'jazamila_db';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';

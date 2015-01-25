@@ -127,7 +127,7 @@ $('#post_submit').click(function()
 	}
 	
 	if(!checking('res_foodtype','foodtype')){checkStr += 'res_foodtype ';}
-	if(!checking('captcha','captcha')){checkStr += 'captcha ';}
+	//if(!checking('captcha','captcha')){checkStr += 'captcha ';}
 	
 	if( checkStr != '' )
 	{

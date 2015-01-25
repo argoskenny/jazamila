@@ -1,3 +1,3 @@
 <?
-$admin_list['argoskenny'] = 'yourpassword';
+$admin_list['argoskenny'] = 'gg19548823';
 ?>

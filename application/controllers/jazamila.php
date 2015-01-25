@@ -16,22 +16,6 @@ class Jazamila extends CI_Controller {
 		// 引入COOKIE
 		$this->load->helper('cookie');
 	}
-	public function view($page = 'home')
-{
-			
-	if ( ! file_exists('application/views/pages/'.$page.'.php'))
-	{
-		// 哇勒!我們沒有這個頁面!
-		show_404();
-	}
-	
-	$data['title'] = ucfirst($page); // 第一個字母大寫
-	
-	$this->load->view('templates/header', $data);
-	$this->load->view('pages/'.$page, $data);
-	$this->load->view('templates/footer', $data);
-
-}
 	
 	// 首頁
 	public function index()
@@ -402,6 +386,35 @@ class Jazamila extends CI_Controller {
 	// 儲存新增餐廳
 	public function save_post_data()
 	{
+		$this->load->library('recaptchalib');
+
+		// Register API keys at https://www.google.com/recaptcha/admin
+		$siteKey = "6LdH9gATAAAAAIGxel7yPewJbIhC5xwUA0ZUJAgz";
+		$secret = "6LdH9gATAAAAALcTCdsNj_iBplsuWEZZWWKJ_yQH";
+		// reCAPTCHA supported 40+ languages listed here: https://developers.google.com/recaptcha/docs/language
+		$lang = "zh-TW";
+		// The response from reCAPTCHA
+		$resp = null;
+		// The error code from reCAPTCHA, if any
+		$error = null;
+		$this->recaptchalib->ReCaptcha($secret);
+		// Was there a reCAPTCHA response?
+		if ($_POST["g-recaptcha-response"]) {
+		    $resp = $this->recaptchalib->verifyResponse(
+		        $_SERVER["REMOTE_ADDR"],
+		        $_POST["g-recaptcha-response"]
+		    );
+		}
+
+		if ($resp != null && $resp->success) {
+
+		}
+		else
+		{
+			header('Location:http://jazamila.com/post?cpatcha=wrong');
+			exit;
+		}
+
 		// 載入地區與類型設定檔
 		require(APPPATH .'rf_config/type.inc.php');
 		require(APPPATH .'rf_config/area.inc.php');

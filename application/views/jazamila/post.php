@@ -17,6 +17,8 @@
 	<link href="assets/css/common/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<link href="assets/css/jazamila/header_footer.css" rel="stylesheet" type="text/css" />
 	<link href="assets/css/jazamila/post.css" rel="stylesheet" type="text/css" />
+
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body ontouchstart="">
@@ -129,11 +131,14 @@
 					<span id="add_blog" class="blog_adjust">+</span>
 				</div>
 				<div class="form-group">
-					<label for="captcha">驗證碼 *</label><span style="color:#666;">（有大小寫之分）</span><br />
+					<label for="captcha">驗證碼 *</label><br />
+					<!--
 					<img src="CaptchaImg" name="IM1" id="IM1" onclick="IMCHEN();return false;" alt="" title="看不清楚？按我變換圖片" />
 					<input type="text" class="form-control" id="captcha" name="captcha" maxlength="4">
 					<div class="msg" id="msg_captcha">請輸入驗證碼</div>
 					<div class="msg" id="msg_captcha_error">驗證碼錯誤</div>
+					-->
+					<div class="g-recaptcha" data-sitekey="6LdH9gATAAAAAIGxel7yPewJbIhC5xwUA0ZUJAgz"></div>
 				</div>
 				<div class="form_submit">
 					<button type="button" id="post_submit" data-loading-text="儲存中..." class="btn">確定送出</button>
