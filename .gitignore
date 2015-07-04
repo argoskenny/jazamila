@@ -8,4 +8,8 @@ application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
 
-assets/pics
+assets/pics/*
+assets/post/*
+assets/tmp/*
+application/config/production/*
+application/config/development/*
