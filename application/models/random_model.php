@@ -376,6 +376,29 @@ class Random_model extends CI_Model{
 	{
 		return $this->db->insert('r_feedback', $data);
 	}
+
+	// API 使用
+	public function api_all_list()
+	{
+		$data 		= array();
+		$query_arr 	= array();
+		
+		$this->db->order_by('res_region','ASC');
+		$this->db->order_by('res_section','ASC');
+		$this->db->limit(100);
+		$query 		= $this->db->get('r_restaurant');
+		$query_arr 	= $query->result_array();
+		// 防止無餐廳資料
+		if(!empty($query_arr))
+		{
+			$data 		= $this->res_data_switch($query_arr);
+			return $data;
+		}
+		else
+		{
+			return;
+		}
+	}
 	
 }
 ?>

@@ -194,7 +194,7 @@ class Jazamila extends CI_Controller {
 	
 	// 詳細
 	public function detail($res_id)
-	{	
+	{
 		// 載入地區與類型設定檔
 		require(APPPATH .'rf_config/type.inc.php');
 		require(APPPATH .'rf_config/area.inc.php');
@@ -509,6 +509,18 @@ class Jazamila extends CI_Controller {
 		{
 			header('Location:'.base_url().'/post?save=fail');
 		}
+	}
+
+	// API 使用
+	public function jsonapi()
+	{
+		$url = "http://jazamila.com/jaz/assets/pics/";
+		$data = $this->random_model->api_all_list();
+		$json = $data;
+		foreach ($data as $key => $value) {
+			$json[$key]['res_img_url'] = $url.$value['res_img_url'];
+		}
+		echo json_encode($json);
 	}
 	
 	// 圖片驗證

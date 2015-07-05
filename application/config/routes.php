@@ -93,5 +93,8 @@ $route['CaptchaImg']						= 'jazamila/CaptchaImg';
 $route['save_post_data']					= 'jazamila/save_post_data';
 $route['(:any)']							= '';
 
+// API for APP
+$route['jsonapi']							= 'jazamila/jsonapi';
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
