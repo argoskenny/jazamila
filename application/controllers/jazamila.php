@@ -514,7 +514,7 @@ class Jazamila extends CI_Controller {
 	// API 使用
 	public function jsonapi()
 	{
-		$url = "http://jazamila.com/jaz/assets/pics/";
+		$url = "http://jazamila.com/assets/pics/";
 		$data = $this->random_model->api_all_list();
 		$json = $data;
 		foreach ($data as $key => $value) {
