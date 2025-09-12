@@ -138,8 +138,8 @@
 					<div class="msg" id="msg_captcha">請輸入驗證碼</div>
 					<div class="msg" id="msg_captcha_error">驗證碼錯誤</div>
 					-->
-					<div class="g-recaptcha" data-sitekey="6LdH9gATAAAAAIGxel7yPewJbIhC5xwUA0ZUJAgz"></div>
-				</div>
+                                       <div class="g-recaptcha" data-sitekey="<?php echo getenv('RECAPTCHA_SITE_KEY'); ?>"></div>
+                               </div>
 				<div class="form_submit">
 					<button type="button" id="post_submit" data-loading-text="儲存中..." class="btn">確定送出</button>
 				</div>

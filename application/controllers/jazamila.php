@@ -388,17 +388,13 @@ class Jazamila extends CI_Controller {
 	{
 		$this->load->library('recaptcha');
 
-		// Register API keys at https://www.google.com/recaptcha/admin
-		$siteKey = "6LdH9gATAAAAAIGxel7yPewJbIhC5xwUA0ZUJAgz";
-		$secret = "6LdH9gATAAAAALcTCdsNj_iBplsuWEZZWWKJ_yQH";
-		// reCAPTCHA supported 40+ languages listed here: https://developers.google.com/recaptcha/docs/language
-		$lang = "zh-TW";
-		// The response from reCAPTCHA
-		$resp = null;
-		// The error code from reCAPTCHA, if any
-		$error = null;
-		$this->recaptcha->ReCaptcha();
-		// Was there a reCAPTCHA response?
+                // reCAPTCHA supported 40+ languages listed here: https://developers.google.com/recaptcha/docs/language
+                $lang = "zh-TW";
+                // The response from reCAPTCHA
+                $resp = null;
+                // The error code from reCAPTCHA, if any
+                $error = null;
+                // Was there a reCAPTCHA response?
 		if ($_POST["g-recaptcha-response"]) {
 		    $resp = $this->recaptcha->verifyResponse(
 		        $_SERVER["REMOTE_ADDR"],
