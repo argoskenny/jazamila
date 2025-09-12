@@ -13,8 +13,8 @@
 	
 	<meta property="og:title" content="JAZAMILA - {{ $res_data['res_name'] }}" />
 	<meta property="og:type" content="restaurant.restaurant" />
-	<meta property="og:image" content="{{ url('/') }}assets/pics/{{ $res_data['res_img_url']?>"/>
-	<meta property="og:url" content="<?php echo base_url().'detail/'.$res_data['id'] }}" />
+        <meta property="og:image" content="{{ asset('assets/pics/' . $res_data['res_img_url']) }}"/>
+        <meta property="og:url" content="{{ url('detail/' . $res_data['id']) }}" />
 	<meta property="og:description" content="{{ $res_data['res_name'] }}的餐廳詳細資料。電話：<?php 
 											if($res_data['res_area_num'] == '00' && $res_data['res_tel_num'] == '0')
 											{
@@ -26,12 +26,12 @@
 											}?>，地址：{{ $res_data['res_region'].$res_data['res_address'] }}，類型：{{ $res_data['res_foodtype'] }}" />
 	
 	<title>JAZAMILA - {{ $res_data['res_name'] }}</title>
-	<base href="{{ url('/') }}"/>
-	
-	<link rel="shortcut icon" href="{{ url('/') }}assets/img/jazamila/logo/jazamila.ico" >
-	<link href="assets/css/common/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="assets/css/jazamila/header_footer.css" rel="stylesheet" type="text/css" />
-	<link href="assets/css/jazamila/detail.css" rel="stylesheet" type="text/css" />
+        <base href="{{ url('/') }}/"/>
+
+        <link rel="shortcut icon" href="{{ asset('assets/img/jazamila/logo/jazamila.ico') }}" >
+        <link href="{{ asset('assets/css/common/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/css/jazamila/header_footer.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/css/jazamila/detail.css') }}" rel="stylesheet" type="text/css" />
 </head>
 
 <body ontouchstart="">
@@ -43,7 +43,7 @@
 				  <span class="icon-bar"></span>
 				  <span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="{{ url('/') }}"><img src="assets/img/jazamila/logo/jazamila_logo.png" alt="JAZAMILA logo"></a>
+                                <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ asset('assets/img/jazamila/logo/jazamila_logo.png') }}" alt="JAZAMILA logo"></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
@@ -60,11 +60,11 @@
 			<div class="col-lg-12 main_title">{{ $res_data['res_name'] }}</div>
 		<?php if( !empty($res_data['res_img_url']) )
 			{?>
-				<div class="col-xs-12 col-md-6 res_pic"><img src="assets/pics/{{ $res_data['res_img_url']?>" alt="<?php echo $res_data['res_name'] }}"></div>
+                                <div class="col-xs-12 col-md-6 res_pic"><img src="{{ asset('assets/pics/' . $res_data['res_img_url']) }}" alt="{{ $res_data['res_name'] }}"></div>
 		<?php }
 			else
 			{ ?>
-				<div class="col-xs-12 col-md-6 res_pic"><img src="assets/imgs/default_res_pic.jpg" alt="{{ $res_data['res_name'] }}" title="未提供餐廳照片"></div>
+                                <div class="col-xs-12 col-md-6 res_pic"><img src="{{ asset('assets/imgs/default_res_pic.jpg') }}" alt="{{ $res_data['res_name'] }}" title="未提供餐廳照片"></div>
 		<?php }?>
 			<div class="col-xs-12 col-md-6 res_detail">
 				<div class="basic_info">
@@ -114,22 +114,22 @@
 				<div class="share_info">
 					<div class="col-xs-6 col-sm-3 share_links">
 						<a href="javascript:;" onclick='window.open("https://www.facebook.com/sharer.php?u={{ url('/') }}detail/{{ $res_data['id'] }}", "facebook_frm","height=450,width=540");' title="分享至Facebook">
-							<img src="assets/img/jazamila/icon/fb_share.png" title="分享至Facebook" alt="Facebook share"/>
+                                                        <img src="{{ asset('assets/img/jazamila/icon/fb_share.png') }}" title="分享至Facebook" alt="Facebook share"/>
 						</a>
 					</div>
 					<div class="col-xs-6 col-sm-3 share_links">
 						<a href="javascript:desc='';if(window.getSelection)desc=window.getSelection();if(document.getSelection)desc=document.getSelection();if(document.selection)desc=document.selection.createRange().text;void(open('http://twitter.com/?status='+encodeURIComponent(location.href+' ('+document.title.split('@')[0].replace(/([\s]*$)/g,'')+')')));" title="分享至twitter">
-							<img src="assets/img/jazamila/icon/tweet_share.png" title="分享至Twitter" alt="Twitter share"/>
+                                                        <img src="{{ asset('assets/img/jazamila/icon/tweet_share.png') }}" title="分享至Twitter" alt="Twitter share"/>
 						</a>
 					</div>
 					<div class="col-xs-6 col-sm-3 share_links">
 						<a href="javascript:desc='';if(window.getSelection)desc=window.getSelection();if(document.getSelection)desc=document.getSelection();if(document.selection)desc=document.selection.createRange().text;void(open('http://www.plurk.com/?qualifier=shares&amp;status='+encodeURIComponent(location.href+' ('+document.title.split('@')[0].replace(/([\s]*$)/g,'')+')')));" title="分享至PLURK">
-							<img src="assets/img/jazamila/icon/plurk_share.png" title="分享至Plurk" alt="Plurk share"/>
+                                                        <img src="{{ asset('assets/img/jazamila/icon/plurk_share.png') }}" title="分享至Plurk" alt="Plurk share"/>
 						</a>
 					</div>
 					<div class="col-xs-6 col-sm-3 share_links">
 						<a target="_blank" href="javascript:void(window.open('https://plus.google.com/share?url='.concat(encodeURIComponent(location.href)), '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'));">
-							<img src="assets/img/jazamila/icon/google_share.png" title="分享至Google+" alt="Google Plus share"/>
+                                                        <img src="{{ asset('assets/img/jazamila/icon/google_share.png') }}" title="分享至Google+" alt="Google Plus share"/>
 						</a>
 					</div>
 				</div>
@@ -145,7 +145,7 @@
 			<div class="row recommend_area">
 				<div class="col-xs-12 col-sm-3 recommend">
 					<?php foreach ($recommend_res1 as $rec_res_data1): ?>
-						<a class="td_a" href="detail/{{ $rec_res_data1['id'] }}"><img src="assets/pics/{{ $rec_res_data1['res_img_url']?>"></a><br />
+                                            <a class="td_a" href="detail/{{ $rec_res_data1['id'] }}"><img src="{{ asset('assets/pics/' . $rec_res_data1['res_img_url']) }}"></a><br />
 						<?php echo $rec_res_data1['res_name'] }}<br />
 						{{ $rec_res_data1['res_area_num'] }} - {{ $rec_res_data1['res_tel_num'] }}<br />
 						<a href="http://maps.google.com/maps?q={{ $rec_res_data1['res_region'].$rec_res_data1['res_address'] }}" target="_blank">{{ $rec_res_data1['res_region'].$rec_res_data1['res_address'] }}</a>
@@ -153,7 +153,7 @@
 				</div>
 				<div class="col-xs-12 col-sm-3 recommend">
 					<?php foreach ($recommend_res2 as $rec_res_data2): ?>
-						<a class="td_a" href="detail/{{ $rec_res_data2['id'] }}"><img src="assets/pics/{{ $rec_res_data2['res_img_url']?>"></a><br />
+                                            <a class="td_a" href="detail/{{ $rec_res_data2['id'] }}"><img src="{{ asset('assets/pics/' . $rec_res_data2['res_img_url']) }}"></a><br />
 						<?php echo $rec_res_data2['res_name'] }}<br />
 						{{ $rec_res_data2['res_area_num'] }} - {{ $rec_res_data2['res_tel_num'] }}<br />
 						<a href="http://maps.google.com/maps?q={{ $rec_res_data2['res_region'].$rec_res_data2['res_address'] }}" target="_blank">{{ $rec_res_data2['res_region'].$rec_res_data2['res_address'] }}</a>
@@ -161,7 +161,7 @@
 				</div>
 				<div class="col-xs-12 col-sm-3 recommend">
 					<?php foreach ($recommend_res3 as $rec_res_data3): ?>
-						<a class="td_a" href="detail/{{ $rec_res_data3['id'] }}"><img src="assets/pics/{{ $rec_res_data3['res_img_url']?>"></a><br />
+                                            <a class="td_a" href="detail/{{ $rec_res_data3['id'] }}"><img src="{{ asset('assets/pics/' . $rec_res_data3['res_img_url']) }}"></a><br />
 						<?php echo $rec_res_data3['res_name'] }}<br />
 						{{ $rec_res_data3['res_area_num'] }} - {{ $rec_res_data3['res_tel_num'] }}<br />
 						<a href="http://maps.google.com/maps?q={{ $rec_res_data3['res_region'].$rec_res_data3['res_address'] }}" target="_blank">{{ $rec_res_data3['res_region'].$rec_res_data3['res_address'] }}</a>
@@ -169,7 +169,7 @@
 				</div>
 				<div class="col-xs-12 col-sm-3 recommend">
 					<?php foreach ($recommend_res4 as $rec_res_data4): ?>
-						<a class="td_a" href="detail/{{ $rec_res_data4['id'] }}"><img src="assets/pics/{{ $rec_res_data4['res_img_url']?>"></a><br />
+                                            <a class="td_a" href="detail/{{ $rec_res_data4['id'] }}"><img src="{{ asset('assets/pics/' . $rec_res_data4['res_img_url']) }}"></a><br />
 						<?php echo $rec_res_data4['res_name'] }}<br />
 						{{ $rec_res_data4['res_area_num'] }} - {{ $rec_res_data4['res_tel_num'] }}<br />
 						<a href="http://maps.google.com/maps?q={{ $rec_res_data4['res_region'].$rec_res_data4['res_address'] }}" target="_blank">{{ $rec_res_data4['res_region'].$rec_res_data4['res_address'] }}</a>
@@ -186,7 +186,7 @@
 			</div>
 			<div class="col-lg-12 main_option">
 				<div class="circle_btn">
-					<img src="assets/img/jazamila/icon/option_btn.png">
+                                    <img src="{{ asset('assets/img/jazamila/icon/option_btn.png') }}">
 				</div>
 			</div>
 			<div id="option_choose">
@@ -283,9 +283,9 @@
 		</div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
 
-<script type="text/javascript" src="assets/js/common/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="assets/js/common/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{ asset('assets/js/common/jquery-1.10.2.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/common/bootstrap.min.js') }}"></script>
 <script type="text/javascript">var BASE = '{{ url('/') }}';</script>
-<script type="text/javascript" src="assets/js/jazamila/detail.js"></script> 
+<script type="text/javascript" src="{{ asset('assets/js/jazamila/detail.js') }}"></script>
 </body>
 </html>

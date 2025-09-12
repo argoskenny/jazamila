@@ -4,14 +4,15 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\JazamilaController;
 use App\Http\Controllers\JazamilaAjaxController;
+use App\Http\Controllers\StaticPageController;
 use App\Http\Controllers\Admin\{DashboardController,AuthController,RestaurantController,PostController,BlogController,FeedbackController,UtilityController};
 
 Route::get('/', [JazamilaController::class, 'index']);
 Route::get('/listdata/{any?}', [JazamilaController::class, 'listdata']);
 Route::get('/detail/{any?}', [JazamilaController::class, 'detail']);
-Route::get('/map', [JazamilaController::class, 'map']);
-Route::get('/about', [JazamilaController::class, 'about']);
-Route::get('/post', [JazamilaController::class, 'post']);
+Route::get('/map', [StaticPageController::class, 'map']);
+Route::get('/about', [StaticPageController::class, 'about']);
+Route::get('/post', [StaticPageController::class, 'post']);
 
 Route::prefix('jazamila_ajax')->group(function () {
     Route::post('/pick', [JazamilaAjaxController::class, 'pick']);

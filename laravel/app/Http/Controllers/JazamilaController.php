@@ -7,20 +7,23 @@ namespace App\Http\Controllers {
 
 use App\Models\Restaurant;
 use App\Models\Blog;
+use Illuminate\Http\Request;
+use Illuminate\View\View;
 
-class JazamilaController
-{ 
-    public function index(array $cookies = []): array
+class JazamilaController extends Controller
+{
+    public function index(Request $request): View
     {
-        $data = $this->cookieOption($cookies);
+        $data = $this->cookieOption($request->cookies->all());
         $data['config']['regionid'] = $this->getRegions();
         $data['config']['foodtype'] = $this->getFoodTypes();
         $data['title'] = 'JAZAMILA';
-        return $data;
+        return view('jazamila.index', $data);
     }
 
-    public function listdata($location, $type, $max, $min, $page, array $query = []): array
+    public function listdata($location, $type, $max, $min, $page, Request $request): View
     {
+        $query = $request->query();
         $this->checkSegment($type);
         $this->checkSegment($max);
         $this->checkSegment($min);
@@ -131,12 +134,13 @@ class JazamilaController
         $data['current_num'] = $total_rows;
         $data['search_keyword_value'] = $search_keyword_value;
         $data['title'] = 'JAZAMILA - 餐廳列表';
-        return $data;
+        return view('jazamila.listdata', $data);
     }
 
-    public function detail($id, array $query = [], array $cookies = []): array
+    public function detail($id, Request $request): View
     {
-        $data = [];
+        $query = $request->query();
+        $cookies = $request->cookies->all();
         if (($cookies['remember'] ?? 0) == 1) {
             $data = $this->cookieOption($cookies);
             $data['cookie_flag'] = 1;
@@ -163,7 +167,7 @@ class JazamilaController
         $currentPage = $query['p'] ?? 1;
         $data['list_record'] = $url_location . '/' . $url_type . '/' . $url_maxmoney . '/' . $url_minmoney . '/' . $currentPage;
         $data['title'] = 'JAZAMILA - 餐廳詳細資料';
-        return $data;
+        return view('jazamila.detail', $data);
     }
 
     public function jsonapi(): array
