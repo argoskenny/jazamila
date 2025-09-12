@@ -51,4 +51,19 @@ class JazamilaController extends Controller
         // TODO: Return restaurant data as JSON
         return response()->json([]);
     }
+ 
+    public function map()
+    {
+        return view('jazamila.map');
+    }
+
+    public function about()
+    {
+        return view('jazamila.about');
+    }
+
+    public function post()
+    {
+        return view('jazamila.post');
+    }
 }

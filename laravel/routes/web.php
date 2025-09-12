@@ -1,7 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\JazamilaController;
 use App\Http\Controllers\Admin\{DashboardController,AuthController,RestaurantController,PostController,BlogController,FeedbackController,UtilityController};
+
+Route::get('/', [JazamilaController::class, 'index']);
+Route::get('/listdata/{any?}', [JazamilaController::class, 'listdata']);
+Route::get('/detail/{any?}', [JazamilaController::class, 'detail']);
+Route::get('/map', [JazamilaController::class, 'map']);
+Route::get('/about', [JazamilaController::class, 'about']);
+Route::get('/post', [JazamilaController::class, 'post']);
 
 Route::prefix('admin')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('admin.index');
