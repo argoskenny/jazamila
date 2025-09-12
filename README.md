@@ -31,3 +31,12 @@ FAQ
 <br>License
 <br>除CI本身的License之外，其餘部份採用WTFPL License。
 <br>http://en.wikipedia.org/wiki/WTFPL
+
+Laravel Migration
+-----------------
+The repository now contains a Laravel skeleton under `laravel/` that maps existing CodeIgniter admin routes to Laravel controllers.
+
+Rollback Steps
+--------------
+* To revert to the original CodeIgniter application, point the web server's document root back to the repository root instead of `laravel/public`.
+* Alternatively, remove the routes defined in `laravel/routes/web.php` and delete the `laravel/` directory.
