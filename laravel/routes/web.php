@@ -39,4 +39,3 @@ Route::prefix('admin')->group(function () {
         Route::post('/fix_address', [UtilityController::class, 'fixAddress'])->name('admin.fix_address');
     });
 });
-
