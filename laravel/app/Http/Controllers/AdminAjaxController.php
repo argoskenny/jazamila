@@ -1,6 +1,9 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Models\Admin\Restaurant as RestaurantModel;
+use App\Models\Admin\Blog as BlogModel;
+
 class AdminAjaxController
 {
     private array $adminList;
@@ -16,7 +19,7 @@ class AdminAjaxController
             }
         }
         if (session_status() === PHP_SESSION_NONE) {
-            session_start();
+            @session_start();
         }
     }
 
@@ -62,7 +65,25 @@ class AdminAjaxController
         $closeTime = ($closeHr !== null && $closeMin !== null) ? strtotime($closeHr . ':' . $closeMin . ':00') : '';
         $resAreaNum = str_pad($input['res_area_num'] ?? '', 2, '0', STR_PAD_LEFT);
         $resNote = !empty($input['res_note']) ? nl2br($input['res_note']) : '';
-        // Database operations would occur here.
+
+        $data = [
+            'res_name' => $input['res_name'],
+            'res_area_num' => $resAreaNum,
+            'res_tel_num' => $input['res_tel_num'] ?? '',
+            'res_region' => $input['res_region'] ?? '',
+            'res_address' => $input['res_address'] ?? '',
+            'res_foodtype' => $input['res_foodtype'] ?? '',
+            'res_price' => $input['res_price'] ?? '',
+            'res_open_time' => $openTime,
+            'res_close_time' => $closeTime,
+            'res_note' => $resNote,
+        ];
+
+        if (!empty($input['edit_id'])) {
+            RestaurantModel::update((int)$input['edit_id'], $data);
+        } else {
+            RestaurantModel::create($data);
+        }
         return $this->response(['status' => 'success']);
     }
 
@@ -94,7 +115,6 @@ class AdminAjaxController
         $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
         $resizeImg = 'preview_' . time() . '.' . $ext;
         copy($tmpFile, $picsDir . '/' . $resizeImg);
-        // Database update would happen here.
         return $this->response(['status' => 'success', 'img' => $resizeImg]);
     }
 
@@ -103,6 +123,18 @@ class AdminAjaxController
         if (!$this->authorized()) {
             return $this->response(['status' => 'unauthorized'], 401);
         }
+        $id = $input['id'] ?? null;
+        if (!$id || !BlogModel::find((int)$id)) {
+            return $this->response(['status' => 'fail'], 422);
+        }
+        $update = [];
+        if (!empty($input['b_blogname'])) {
+            $update['b_blogname'] = $input['b_blogname'];
+        }
+        if (!empty($input['b_bloglink'])) {
+            $update['b_bloglink'] = $input['b_bloglink'];
+        }
+        BlogModel::update((int)$id, $update);
         return $this->response(['status' => 'success']);
     }
 
@@ -111,6 +143,10 @@ class AdminAjaxController
         if (!$this->authorized()) {
             return $this->response(['status' => 'unauthorized'], 401);
         }
+        $id = $input['id'] ?? null;
+        if (!$id || !BlogModel::update((int)$id, ['b_blog_show' => '1'])) {
+            return $this->response(['status' => 'fail'], 422);
+        }
         return $this->response(['status' => 'success']);
     }
 
@@ -118,6 +154,10 @@ class AdminAjaxController
     {
         if (!$this->authorized()) {
             return $this->response(['status' => 'unauthorized'], 401);
+        }
+        $id = $input['id'] ?? null;
+        if (!$id || !BlogModel::update((int)$id, ['b_blog_show' => '0'])) {
+            return $this->response(['status' => 'fail'], 422);
         }
         return $this->response(['status' => 'success']);
     }
