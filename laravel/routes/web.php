@@ -8,7 +8,22 @@ use App\Http\Controllers\StaticPageController;
 use App\Http\Controllers\Admin\{DashboardController,AuthController,RestaurantController,PostController,BlogController,FeedbackController,UtilityController};
 
 Route::get('/', [JazamilaController::class, 'index']);
-Route::get('/listdata/{any?}', [JazamilaController::class, 'listdata']);
+Route::get(
+    '/listdata/{location?}/{type?}/{max?}/{min?}/{page?}',
+    [JazamilaController::class, 'listdata']
+)->where([
+    'location' => '(?:[0-9]+X[0-9]+|0)',
+    'type' => '[0-9]+',
+    'max' => '[0-9]+',
+    'min' => '[0-9]+',
+    'page' => '[0-9]+',
+])->defaults([
+    'location' => 0,
+    'type' => 0,
+    'max' => 0,
+    'min' => 0,
+    'page' => 0,
+]);
 Route::get('/detail/{any?}', [JazamilaController::class, 'detail']);
 Route::get('/map', [StaticPageController::class, 'map']);
 Route::get('/about', [StaticPageController::class, 'about']);
