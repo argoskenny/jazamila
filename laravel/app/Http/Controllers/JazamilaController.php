@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -27,11 +26,11 @@ class JazamilaController extends Controller
     {
         // TODO: Implement filtering and pagination
         return response()->view('jazamila.listdata', [
-            'url_region' => $location,
-            'url_type' => $type,
+            'url_region'   => $location,
+            'url_type'     => $type,
             'url_maxmoney' => $max,
             'url_minmoney' => $min,
-            'url_page' => $page,
+            'url_page'     => $page,
         ]);
     }
 
