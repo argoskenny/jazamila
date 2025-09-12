@@ -1,10 +1,81 @@
-.DS_Store
+# Laravel 專案 .gitignore
 
+# 系統文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE 和編輯器
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Laravel 核心忽略項目
+/vendor/
+/node_modules/
+/public/hot
+/public/storage
+/storage/*.key
+/storage/app/public/*
+!/storage/app/public/.gitkeep
+/storage/framework/cache/*
+!/storage/framework/cache/.gitkeep
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitkeep
+/storage/framework/testing/*
+!/storage/framework/testing/.gitkeep
+/storage/framework/views/*
+!/storage/framework/views/.gitkeep
+/storage/logs/*
+!/storage/logs/.gitkeep
+/bootstrap/cache/*
+!/bootstrap/cache/.gitkeep
+
+# 環境配置文件
+.env
+.env.backup
+.env.production
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+npm-debug.log
+yarn-error.log
+
+# 測試和覆蓋率
+/coverage/
+/.phpunit.cache
+/.phpunit.result.cache
+
+# 專案特定文件
 assets/pics/*
 !assets/pics/.gitkeep
 assets/post/*
 assets/tmp/*
 !assets/tmp/.gitkeep
 
-# Environment files
-.env
+# Composer
+composer.phar
+composer.lock
+
+# 日誌文件
+*.log
+
+# 臨時文件
+*.tmp
+*.temp
+
+# 備份文件
+*.bak
+*.backup
+
+# 壓縮文件
+*.zip
+*.tar.gz
+*.rar

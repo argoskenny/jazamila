@@ -1,11 +1,16 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AuthController;
 
-use App\Http\Controllers\JazamilaController;
-use App\Http\Controllers\JazamilaAjaxController;
-use App\Http\Controllers\StaticPageController;
-use App\Http\Controllers\Admin\{DashboardController,AuthController,RestaurantController,PostController,BlogController,FeedbackController,UtilityController};
+use App\Http\Controllers\Admin\BlogController;
+
+use App\Http\Controllers\Admin\DashboardController;
+
+use App\Http\Controllers\Admin\FeedbackController;
+
+use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\Admin\RestaurantController;
+use App\Http\Controllers\Admin\UtilityController;use App\Http\Controllers\JazamilaAjaxController;use App\Http\Controllers\JazamilaController;use App\Http\Controllers\StaticPageController;use Illuminate\Support\Facades\Route;
 
 Route::get('/', [JazamilaController::class, 'index']);
 Route::get(
@@ -13,17 +18,15 @@ Route::get(
     [JazamilaController::class, 'listdata']
 )->where([
     'location' => '(?:[0-9]+X[0-9]+|0)',
-    'type' => '[0-9]+',
-    'max' => '[0-9]+',
-    'min' => '[0-9]+',
-    'page' => '[0-9]+',
-])->defaults([
-    'location' => 0,
-    'type' => 0,
-    'max' => 0,
-    'min' => 0,
-    'page' => 0,
-]);
+    'type'     => '[0-9]+',
+    'max'      => '[0-9]+',
+    'min'      => '[0-9]+',
+    'page'     => '[0-9]+',
+])->defaults('location', 0)
+    ->defaults('type', 0)
+    ->defaults('max', 0)
+    ->defaults('min', 0)
+    ->defaults('page', 0);
 Route::get('/detail/{any?}', [JazamilaController::class, 'detail']);
 Route::get('/map', [StaticPageController::class, 'map']);
 Route::get('/about', [StaticPageController::class, 'about']);
