@@ -1,65 +1,31 @@
 <?php
+
 namespace App\Models\Admin;
 
-/**
- * Simplified in-memory model representing a restaurant record.
- * Acts as a very small subset of Eloquent functionality used
- * by the admin controllers and tests.
- */
-class Restaurant
+use Illuminate\Database\Eloquent\Model;
+
+class Restaurant extends Model
 {
-    /** @var array<int,array<string,mixed>> */
-    private static array $data = [];
+    protected $table = 'r_restaurant';
+    protected $primaryKey = 'id';
+    public $timestamps = false;
 
-    private static int $autoId = 1;
-
-    /**
-     * Create a new restaurant record.
-     *
-     * @param array<string,mixed> $attributes
-     * @return array<string,mixed>
-     */
-    public static function create(array $attributes): array
-    {
-        $attributes['id'] = self::$autoId++;
-        self::$data[$attributes['id']] = $attributes;
-        return $attributes;
-    }
-
-    /**
-     * Update an existing restaurant by id.
-     *
-     * @param int $id
-     * @param array<string,mixed> $attributes
-     * @return array<string,mixed>|null
-     */
-    public static function update(int $id, array $attributes): ?array
-    {
-        if (!isset(self::$data[$id])) {
-            return null;
-        }
-        self::$data[$id] = array_merge(self::$data[$id], $attributes);
-        return self::$data[$id];
-    }
-
-    /**
-     * Find a restaurant by id.
-     *
-     * @param int $id
-     * @return array<string,mixed>|null
-     */
-    public static function find(int $id): ?array
-    {
-        return self::$data[$id] ?? null;
-    }
-
-    /**
-     * Return all restaurants.
-     *
-     * @return array<int,array<string,mixed>>
-     */
-    public static function all(): array
-    {
-        return array_values(self::$data);
-    }
+    protected $fillable = [
+        'res_name',
+        'res_area_num',
+        'res_tel_num',
+        'res_region',
+        'res_section',
+        'res_address',
+        'res_foodtype',
+        'res_price',
+        'res_open_time',
+        'res_close_time',
+        'res_note',
+        'res_img_url',
+        'res_img_ori_url',
+        'res_updatetime',
+        'res_post_id',
+        'res_close',
+    ];
 }

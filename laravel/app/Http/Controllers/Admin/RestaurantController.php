@@ -8,8 +8,8 @@ use App\Models\Admin\Restaurant as RestaurantModel;
 
 /**
  * Controller providing basic CRUD actions for restaurants in the admin panel.
- * The implementation uses an in-memory model to mimic database interaction
- * which is sufficient for unit testing within this kata environment.
+ * Now backed by an actual Eloquent model instead of the previous in-memory
+ * array implementation.
  */
 class RestaurantController extends Controller
 {
@@ -19,7 +19,12 @@ class RestaurantController extends Controller
      */
     public function list($set)
     {
-        return RestaurantModel::all();
+        $page = max(1, (int) $set);
+        return RestaurantModel::orderBy('id')
+            ->skip(($page - 1) * 10)
+            ->take(10)
+            ->get()
+            ->toArray();
     }
 
     /**
@@ -27,7 +32,7 @@ class RestaurantController extends Controller
      */
     public function detail($res_id)
     {
-        return RestaurantModel::find((int)$res_id);
+        return optional(RestaurantModel::find((int) $res_id))->toArray();
     }
 
     /**
@@ -43,7 +48,7 @@ class RestaurantController extends Controller
      */
     public function edit($res_id)
     {
-        return RestaurantModel::find((int)$res_id);
+        return optional(RestaurantModel::find((int) $res_id))->toArray();
     }
 
     /**
@@ -82,11 +87,14 @@ class RestaurantController extends Controller
         }
 
         if ($request->input('id')) {
-            RestaurantModel::update((int)$request->input('id'), $data);
+            $restaurant = RestaurantModel::find((int) $request->input('id'));
+            if ($restaurant) {
+                $restaurant->update($data);
+            }
         } else {
             RestaurantModel::create($data);
         }
 
-        return RestaurantModel::all();
+        return RestaurantModel::all()->toArray();
     }
 }
