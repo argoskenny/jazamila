@@ -1,17 +1,21 @@
 <?php
-
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
-class Blog extends Model
+class Blog
 {
-    protected $table = 'r_bloglink';
-    public $timestamps = false;
-    protected $primaryKey = 'id';
+    /**
+     * In-memory blog records.
+     * @var array<int,array<string,mixed>>
+     */
+    private static array $data = [
+        ['id' => 1, 'b_res_id' => 1, 'b_blog_show' => '1', 'b_blogname' => 'Sushi Blog', 'b_bloglink' => 'http://blog1'],
+        ['id' => 2, 'b_res_id' => 2, 'b_blog_show' => '1', 'b_blogname' => 'Burger Blog', 'b_bloglink' => 'http://blog2'],
+    ];
 
-    public static function forRestaurant($res_id)
+    public static function forRestaurant($res_id): array
     {
-        return static::query()->where(['b_res_id' => $res_id, 'b_blog_show' => '1'])->get()->toArray();
+        return array_values(array_filter(self::$data, function ($row) use ($res_id) {
+            return $row['b_res_id'] == $res_id && $row['b_blog_show'] === '1';
+        }));
     }
 }

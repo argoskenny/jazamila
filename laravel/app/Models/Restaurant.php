@@ -1,87 +1,130 @@
 <?php
-
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
-class Restaurant extends Model
+class Restaurant
 {
-    protected $table = 'r_restaurant';
-    public $timestamps = false;
-    protected $primaryKey = 'id';
+    /**
+     * In-memory restaurant records mimicking database rows.
+     * @var array<int,array<string,mixed>>
+     */
+    private static array $data = [
+        [
+            'id' => 1,
+            'res_name' => 'Sushi House',
+            'res_region' => 1,
+            'res_section' => 2,
+            'res_price' => 100,
+            'res_foodtype' => 1,
+            'res_address' => 'Addr1',
+            'res_area_num' => '2',
+            'res_tel_num' => '1234567',
+            'res_img_url' => 'sushi.jpg',
+            'res_note' => 'nice sushi',
+            'res_open_time' => 0,
+            'res_close_time' => 0,
+        ],
+        [
+            'id' => 2,
+            'res_name' => 'Burger Place',
+            'res_region' => 1,
+            'res_section' => 3,
+            'res_price' => 200,
+            'res_foodtype' => 2,
+            'res_address' => 'Addr2',
+            'res_area_num' => '2',
+            'res_tel_num' => '7654321',
+            'res_img_url' => 'burger.jpg',
+            'res_note' => 'tasty burger',
+            'res_open_time' => 0,
+            'res_close_time' => 0,
+        ],
+        [
+            'id' => 3,
+            'res_name' => 'Pasta Corner',
+            'res_region' => 2,
+            'res_section' => 1,
+            'res_price' => 300,
+            'res_foodtype' => 1,
+            'res_address' => 'Addr3',
+            'res_area_num' => '3',
+            'res_tel_num' => '1111111',
+            'res_img_url' => 'pasta.jpg',
+            'res_note' => 'italian pasta',
+            'res_open_time' => 0,
+            'res_close_time' => 0,
+        ],
+    ];
 
-    public static function countWhere($where = [], $keyword = '')
+    private static function filter(array $where, string $keyword): array
     {
-        $query = static::query();
-        if(!empty($where)) {
-            foreach($where as $key => $val) {
-                if(is_array($val)) {
-                    $query->where($val[0], $val[1], $val[2]);
+        return array_values(array_filter(self::$data, function ($row) use ($where, $keyword) {
+            foreach ($where as $key => $val) {
+                if (strpos($key, ' ') !== false) {
+                    [$field, $op] = explode(' ', $key);
                 } else {
-                    $query->where($key, $val);
+                    $field = $key; $op = '=';
+                }
+                $rowVal = $row[$field];
+                switch ($op) {
+                    case '<=':
+                        if ($rowVal > $val) return false;
+                        break;
+                    case '>=':
+                        if ($rowVal < $val) return false;
+                        break;
+                    default:
+                        if ($rowVal != $val) return false;
                 }
             }
-        }
-        if($keyword !== '') {
-            $query->where(function($q) use ($keyword){
-                $q->where('res_name','like',"%$keyword%")
-                  ->orWhere('res_note','like',"%$keyword%");
-            });
-        }
-        return $query->count();
-    }
-
-    public static function showList($set_id, $where = [], $keyword = '')
-    {
-        $offset = ($set_id==1)?0:(($set_id-1)*10);
-        $query = static::query();
-        if(!empty($where)) {
-            foreach($where as $key => $val) {
-                if(is_array($val)) {
-                    $query->where($val[0], $val[1], $val[2]);
-                } else {
-                    $query->where($key, $val);
+            if ($keyword !== '') {
+                if (strpos($row['res_name'], $keyword) === false && strpos($row['res_note'], $keyword) === false) {
+                    return false;
                 }
             }
-        }
-        if($keyword !== '') {
-            $query->where(function($q) use ($keyword){
-                $q->where('res_name','like',"%$keyword%")
-                  ->orWhere('res_note','like',"%$keyword%");
-            });
-        }
-        $query->orderBy('res_region','ASC')->orderBy('res_section','ASC')->offset($offset)->limit(10);
-        $results = $query->get()->toArray();
-        return static::resDataSwitch($results);
+            return true;
+        }));
     }
 
-    public static function detail($res_id)
+    public static function countWhere(array $where = [], string $keyword = ''): int
     {
-        $query = static::query()->where('id',$res_id)->get()->toArray();
-        return static::resDataSwitch($query);
+        return count(self::filter($where, $keyword));
     }
 
-    public static function apiAllList()
+    public static function showList($page, array $where = [], string $keyword = ''): array
     {
-        $query = static::query()->orderBy('res_region','ASC')->orderBy('res_section','ASC')->limit(100)->get()->toArray();
-        return static::resDataSwitch($query);
+        $all = self::filter($where, $keyword);
+        $offset = ($page - 1) * 10;
+        $slice = array_slice($all, $offset, 10);
+        return self::resDataSwitch($slice);
     }
 
-    protected static function resDataSwitch($query_arr)
+    public static function detail($id): array
     {
-        require base_path('application/rf_config/area.inc.php');
-        require base_path('application/rf_config/type.inc.php');
+        $arr = array_values(array_filter(self::$data, fn($r) => $r['id'] == $id));
+        return self::resDataSwitch($arr);
+    }
+
+    public static function apiAllList(): array
+    {
+        return self::resDataSwitch(array_slice(self::$data, 0, 100));
+    }
+
+    private static function resDataSwitch(array $rows): array
+    {
+        $Regionid = [1 => '台北市', 2 => '基隆市'];
+        $Sectionid = [1 => '中正區', 2 => '大同區', 3 => '中山區'];
+        $Foodtype = [1 => '日式', 2 => '美式'];
         $data = [];
-        foreach($query_arr as $data_arr) {
-            $data_arr['res_area_num'] = str_pad($data_arr['res_area_num'], 2, '0', STR_PAD_LEFT);
-            $data_arr['res_region'] = $Regionid[$data_arr['res_region']];
-            $data_arr['res_section'] = $Sectionid[$data_arr['res_section']];
-            $data_arr['res_foodtype'] = $Foodtype[$data_arr['res_foodtype']];
-            $data_arr['res_open_time_hr'] = ($data_arr['res_open_time'] != 0) ? date('H',$data_arr['res_open_time']) : '';
-            $data_arr['res_open_time_min'] = ($data_arr['res_open_time'] != 0) ? date('i',$data_arr['res_open_time']) : '';
-            $data_arr['res_close_time_hr'] = ($data_arr['res_close_time'] != 0) ? date('H',$data_arr['res_close_time']) : '';
-            $data_arr['res_close_time_min'] = ($data_arr['res_close_time'] != 0) ? date('i',$data_arr['res_close_time']) : '';
-            $data[] = $data_arr;
+        foreach ($rows as $row) {
+            $row['res_area_num'] = str_pad($row['res_area_num'], 2, '0', STR_PAD_LEFT);
+            $row['res_region'] = $Regionid[$row['res_region']] ?? $row['res_region'];
+            $row['res_section'] = $Sectionid[$row['res_section']] ?? $row['res_section'];
+            $row['res_foodtype'] = $Foodtype[$row['res_foodtype']] ?? $row['res_foodtype'];
+            $row['res_open_time_hr'] = $row['res_open_time'] ? date('H', $row['res_open_time']) : '';
+            $row['res_open_time_min'] = $row['res_open_time'] ? date('i', $row['res_open_time']) : '';
+            $row['res_close_time_hr'] = $row['res_close_time'] ? date('H', $row['res_close_time']) : '';
+            $row['res_close_time_min'] = $row['res_close_time'] ? date('i', $row['res_close_time']) : '';
+            $data[] = $row;
         }
         return $data;
     }
