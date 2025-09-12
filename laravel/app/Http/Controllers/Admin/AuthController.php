@@ -9,6 +9,7 @@ class AuthController extends Controller
 {
     public function login()
     {
+        // Render login form using Blade template
         return view('admin.login');
     }
 

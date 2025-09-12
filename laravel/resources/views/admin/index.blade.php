@@ -3,9 +3,9 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-	<title><?php echo $title;?></title>
-	<base href="<?php echo base_url();?>"/>
-	<link rel="shortcut icon" href="<?php echo base_url();?>assets/img/admin/logo/admin.ico" >
+	<title>{{ $title }}</title>
+	<base href="{{ url('/') }}"/>
+	<link rel="shortcut icon" href="{{ url('/') }}assets/img/admin/logo/admin.ico" >
 	<link href="assets/css/common/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<style type="text/css">
 	body {
@@ -36,7 +36,7 @@
 <body ontouchstart="">
 <div class="container">
 	
-	<?php $this->load->view('admin/admin_menu'); ?>
+	@include('admin.admin_menu')
 	
 	<div class="jumbotron">
 		<h1>歡迎</h1>
