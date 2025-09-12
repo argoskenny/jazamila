@@ -14,7 +14,8 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "laravel/app/"
+            "App\\": "laravel/app/",
+            "App\\Models\\": "laravel/app/Models/"
         }
     },
     "autoload-dev": {
