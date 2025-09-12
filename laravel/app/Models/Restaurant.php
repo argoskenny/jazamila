@@ -1,8 +1,12 @@
 <?php
-namespace App\Models;
+namespace {
+    require_once __DIR__ . '/../helpers.php';
+}
+
+namespace App\Models {
 
 class Restaurant
-{
+{ 
     /**
      * In-memory restaurant records mimicking database rows.
      * @var array<int,array<string,mixed>>
@@ -111,9 +115,9 @@ class Restaurant
 
     private static function resDataSwitch(array $rows): array
     {
-        $Regionid = [1 => '台北市', 2 => '基隆市'];
-        $Sectionid = [1 => '中正區', 2 => '大同區', 3 => '中山區'];
-        $Foodtype = [1 => '日式', 2 => '美式'];
+        $Regionid = config('area.Regionid', []);
+        $Sectionid = config('area.Sectionid', []);
+        $Foodtype = config('type', []);
         $data = [];
         foreach ($rows as $row) {
             $row['res_area_num'] = str_pad($row['res_area_num'], 2, '0', STR_PAD_LEFT);
@@ -128,4 +132,5 @@ class Restaurant
         }
         return $data;
     }
+}
 }
