@@ -1,96 +1,17 @@
 <?php
+
 namespace App\Http\Controllers;
 
-/**
- * Simple Request object used for tests.
- */
-class SimpleRequest
-{
-    public array $post;
-    public array $cookies;
-    public array $session;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Cookie;
 
-    public function __construct(array $post = [], array $cookies = [], array &$session = [])
-    {
-        $this->post = $post;
-        $this->cookies = $cookies;
-        $this->session = &$session;
-    }
-
-    public function input(string $key, $default = null)
-    {
-        return $this->post[$key] ?? $default;
-    }
-}
-
-/**
- * Simple Response object to hold content, headers and cookies.
- */
-class SimpleResponse
-{
-    private string $content;
-    private int $status;
-    private array $headers = [];
-
-    public function __construct(string $content = '', int $status = 200, array $headers = [])
-    {
-        $this->content = $content;
-        $this->status = $status;
-        $this->headers = $headers;
-    }
-
-    public function setContent(string $content): void
-    {
-        $this->content = $content;
-    }
-
-    public function getContent(): string
-    {
-        return $this->content;
-    }
-
-    public function getStatus(): int
-    {
-        return $this->status;
-    }
-
-    public function header(string $name, string $value): void
-    {
-        $this->headers[$name] = $value;
-    }
-
-    public function addCookie(string $name, string $value, int $expire): void
-    {
-        $cookie = sprintf('%s=%s; expires=%s; path=/',
-            $name,
-            rawurlencode($value),
-            gmdate('D, d M Y H:i:s', $expire) . ' GMT'
-        );
-        $this->headers['Set-Cookie'][] = $cookie;
-    }
-
-    public function getHeader(string $name)
-    {
-        return $this->headers[$name] ?? null;
-    }
-
-    /**
-     * @return array<int,string>
-     */
-    public function getCookies(): array
-    {
-        return $this->headers['Set-Cookie'] ?? [];
-    }
-}
-
-/**
- * Controller ported from CodeIgniter to a simple PHP implementation
- * to facilitate testing without the full Laravel framework.
- */
 class JazamilaAjaxController
 {
     /**
      * Hardcoded restaurant data used for random selection tests.
+     *
      * @var array<int,array<string,int>>
      */
     private array $restaurants = [
@@ -100,44 +21,52 @@ class JazamilaAjaxController
     ];
 
     /**
+     * Simplified section data for ajax endpoints.
+     *
+     * @var array<int,array<int,string>> region => [sectionId => sectionName]
+     */
+    private array $sections = [
+        1 => [
+            2 => '大同區',
+            3 => '中山區',
+        ],
+    ];
+
+    /**
      * Random restaurant selection with cookie handling.
      */
-    public function pick(SimpleRequest $request): SimpleResponse
+    public function pick(Request $request): JsonResponse
     {
-        $foodwhere_region = (int)$request->input('foodwhere_region', 0);
-        $foodwhere_section = (int)$request->input('foodwhere_section', 0);
-        $foodmoney_max = (int)$request->input('foodmoney_max', 0);
-        $foodmoney_min = (int)$request->input('foodmoney_min', 0);
-        $foodtype = (int)$request->input('foodtype', 0);
-        $remember = (int)$request->input('remember', 0);
-
-        $response = new SimpleResponse('', 200, ['Content-Type' => 'application/json']);
-
-        // Handle cookies similar to CodeIgniter implementation
-        if ($remember === 1) {
-            $expire = time() + 8650000;
-            $this->setRememberCookies($response, [
-                'remember' => $remember,
-                'foodwhere_region' => $foodwhere_region,
-                'foodwhere_section' => $foodwhere_section,
-                'foodmoney_max' => $foodmoney_max,
-                'foodmoney_min' => $foodmoney_min,
-                'foodtype' => $foodtype,
-            ], $expire);
-        } else {
-            // Clear cookies when remember is not set
-            foreach (['remember', 'foodwhere_region', 'foodwhere_section', 'foodmoney_max', 'foodmoney_min', 'foodtype'] as $name) {
-                $response->addCookie($name, '', time() - 3600);
-            }
-        }
+        $foodwhere_region = (int) $request->input('foodwhere_region', 0);
+        $foodwhere_section = (int) $request->input('foodwhere_section', 0);
+        $foodmoney_max = (int) $request->input('foodmoney_max', 0);
+        $foodmoney_min = (int) $request->input('foodmoney_min', 0);
+        $foodtype = (int) $request->input('foodtype', 0);
+        $remember = (int) $request->input('remember', 0);
 
         // Filter restaurants based on conditions
-        $candidates = array_filter($this->restaurants, function ($res) use ($foodwhere_region, $foodwhere_section, $foodmoney_max, $foodmoney_min, $foodtype) {
-            if ($foodwhere_region && $res['res_region'] != $foodwhere_region) return false;
-            if ($foodwhere_section && $res['res_section'] != $foodwhere_section) return false;
-            if ($foodmoney_max && $res['res_price'] > $foodmoney_max) return false;
-            if ($foodmoney_min && $res['res_price'] < $foodmoney_min) return false;
-            if ($foodtype && $res['res_foodtype'] != $foodtype) return false;
+        $candidates = array_filter($this->restaurants, function ($res) use (
+            $foodwhere_region,
+            $foodwhere_section,
+            $foodmoney_max,
+            $foodmoney_min,
+            $foodtype
+        ) {
+            if ($foodwhere_region && $res['res_region'] != $foodwhere_region) {
+                return false;
+            }
+            if ($foodwhere_section && $res['res_section'] != $foodwhere_section) {
+                return false;
+            }
+            if ($foodmoney_max && $res['res_price'] > $foodmoney_max) {
+                return false;
+            }
+            if ($foodmoney_min && $res['res_price'] < $foodmoney_min) {
+                return false;
+            }
+            if ($foodtype && $res['res_foodtype'] != $foodtype) {
+                return false;
+            }
             return true;
         });
 
@@ -147,37 +76,50 @@ class JazamilaAjaxController
             $res_id = $res['id'];
         }
 
-        $response->setContent(json_encode(['status' => 'success', 'res_id' => $res_id]));
-        return $response;
-    }
+        $response = response()->json(['status' => 'success', 'res_id' => $res_id]);
 
-    private function setRememberCookies(SimpleResponse $response, array $values, int $expire): void
-    {
-        foreach ($values as $name => $value) {
-            $response->addCookie($name, (string)$value, $expire);
+        if ($remember === 1) {
+            $minutes = (int) (8650000 / 60); // mimic CI expiration
+            $cookies = [
+                'remember' => $remember,
+                'foodwhere_region' => $foodwhere_region,
+                'foodwhere_section' => $foodwhere_section,
+                'foodmoney_max' => $foodmoney_max,
+                'foodmoney_min' => $foodmoney_min,
+                'foodtype' => $foodtype,
+            ];
+            foreach ($cookies as $name => $value) {
+                $response->cookie($name, (string) $value, $minutes);
+            }
+        } else {
+            foreach (['remember', 'foodwhere_region', 'foodwhere_section', 'foodmoney_max', 'foodmoney_min', 'foodtype'] as $name) {
+                $response->cookie(Cookie::forget($name));
+            }
         }
+
+        return $response;
     }
 
     /**
      * Captcha validation using session value.
      */
-    public function checkCaptcha(SimpleRequest $request): SimpleResponse
+    public function checkCaptcha(Request $request): Response
     {
-        $captcha = (string)$request->input('captcha', '');
-        $sessionNumber = $request->session['check_number'] ?? null;
+        $captcha = (string) $request->input('captcha', '');
+        $sessionNumber = $request->session()->get('check_number');
         $result = ($captcha !== '' && $captcha === $sessionNumber) ? 'success' : 'fail';
-        return new SimpleResponse($result, 200, ['Content-Type' => 'text/html']);
+        return response($result, 200)->header('Content-Type', 'text/html');
     }
 
     /**
      * Store user feedback to a temporary JSON file.
      */
-    public function saveFeedbackPost(SimpleRequest $request): SimpleResponse
+    public function saveFeedbackPost(Request $request): Response
     {
         $entry = [
-            'f_name' => (string)$request->input('name', ''),
-            'f_email' => (string)$request->input('email', ''),
-            'f_content' => (string)$request->input('content', ''),
+            'f_name' => (string) $request->input('name', ''),
+            'f_email' => (string) $request->input('email', ''),
+            'f_content' => (string) $request->input('content', ''),
             'f_time' => time(),
         ];
         $file = sys_get_temp_dir() . '/feedback.json';
@@ -187,18 +129,18 @@ class JazamilaAjaxController
         }
         $data[] = $entry;
         $ok = file_put_contents($file, json_encode($data)) !== false;
-        return new SimpleResponse($ok ? 'success' : 'fail', 200, ['Content-Type' => 'text/html']);
+        return response($ok ? 'success' : 'fail', 200)->header('Content-Type', 'text/html');
     }
 
     /**
      * Save blog information to a temporary JSON file.
      */
-    public function blogSave(SimpleRequest $request): SimpleResponse
+    public function blogSave(Request $request): JsonResponse
     {
         $entry = [
-            'b_blogname' => (string)$request->input('res_blogname', ''),
-            'b_bloglink' => (string)$request->input('res_bloglink', ''),
-            'b_res_id' => (string)$request->input('res_id', ''),
+            'b_blogname' => (string) $request->input('res_blogname', ''),
+            'b_bloglink' => (string) $request->input('res_bloglink', ''),
+            'b_res_id' => (string) $request->input('res_id', ''),
         ];
         $file = sys_get_temp_dir() . '/blog.json';
         $data = [];
@@ -207,9 +149,48 @@ class JazamilaAjaxController
         }
         $data[] = $entry;
         $ok = file_put_contents($file, json_encode($data)) !== false;
-        $content = json_encode(['status' => $ok ? 'success' : 'fail']);
-        return new SimpleResponse($content, 200, ['Content-Type' => 'application/json']);
+        return response()->json(['status' => $ok ? 'success' : 'fail']);
+    }
+
+    /**
+     * Provide section options based on region id.
+     */
+    public function getSection(Request $request): Response
+    {
+        $regionId = (int) $request->input('regionid', 0);
+        $html = '';
+        foreach ($this->sections[$regionId] ?? [] as $id => $name) {
+            $html .= "<option value=\"{$id}\">{$name}</option>";
+        }
+        return response($html, 200)->header('Content-Type', 'text/html');
+    }
+
+    /**
+     * Provide section options with cookie pre-selection.
+     */
+    public function getSectionCookie(Request $request): Response
+    {
+        $regionId = (int) $request->input('regionid', 0);
+        $selected = (int) $request->cookie('foodwhere_section', 0);
+        $html = '';
+        foreach ($this->sections[$regionId] ?? [] as $id => $name) {
+            $sel = $selected === $id ? ' selected="selected"' : '';
+            $html .= "<option value=\"{$id}\"{$sel}>{$name}</option>";
+        }
+        return response($html, 200)->header('Content-Type', 'text/html');
+    }
+
+    /**
+     * Provide section list for restaurant listing.
+     */
+    public function listdataGetSection(Request $request): Response
+    {
+        $regionId = (int) $request->input('regionid', 0);
+        $html = "<li><a href=\"javascript:void(0);\" onclick=\"section_click('0','全區');\">全區</a></li>";
+        foreach ($this->sections[$regionId] ?? [] as $id => $name) {
+            $html .= "<li><a href=\"javascript:void(0);\" onclick=\"section_click('{$id}','{$name}');\">{$name}</a></li>";
+        }
+        return response($html, 200)->header('Content-Type', 'text/html');
     }
 }
 
-?>

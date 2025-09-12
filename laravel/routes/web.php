@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\JazamilaController;
+use App\Http\Controllers\JazamilaAjaxController;
 use App\Http\Controllers\Admin\{DashboardController,AuthController,RestaurantController,PostController,BlogController,FeedbackController,UtilityController};
 
 Route::get('/', [JazamilaController::class, 'index']);
@@ -11,6 +12,16 @@ Route::get('/detail/{any?}', [JazamilaController::class, 'detail']);
 Route::get('/map', [JazamilaController::class, 'map']);
 Route::get('/about', [JazamilaController::class, 'about']);
 Route::get('/post', [JazamilaController::class, 'post']);
+
+Route::prefix('jazamila_ajax')->group(function () {
+    Route::post('/pick', [JazamilaAjaxController::class, 'pick']);
+    Route::post('/check_captcha', [JazamilaAjaxController::class, 'checkCaptcha']);
+    Route::post('/save_feedback_post', [JazamilaAjaxController::class, 'saveFeedbackPost']);
+    Route::post('/get_section', [JazamilaAjaxController::class, 'getSection']);
+    Route::post('/get_section_cookie', [JazamilaAjaxController::class, 'getSectionCookie']);
+    Route::post('/listdata_get_section', [JazamilaAjaxController::class, 'listdataGetSection']);
+    Route::post('/blog_save', [JazamilaAjaxController::class, 'blogSave']);
+});
 
 Route::prefix('admin')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('admin.index');
