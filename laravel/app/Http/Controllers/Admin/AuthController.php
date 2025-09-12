@@ -20,7 +20,7 @@ class AuthController extends Controller
             'pass' => 'required|string',
         ]);
 
-        $admins = include base_path('laravel/config/admin.php');
+        $admins = config('admin', []);
         if (isset($admins[$data['id']]) && $admins[$data['id']] === $data['pass']) {
             $request->session()->put('id', $data['id']);
             return redirect()->route('admin.index');
