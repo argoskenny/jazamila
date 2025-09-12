@@ -1,20 +1,10 @@
 .DS_Store
 
-application/cache/*
-!application/cache/index.html
-!application/cache/.htaccess
-
-application/logs/*
-!application/logs/index.html
-!application/logs/.htaccess
-
 assets/pics/*
 !assets/pics/.gitkeep
 assets/post/*
 assets/tmp/*
 !assets/tmp/.gitkeep
-application/config/production/*
-application/config/development/*
 
 # Environment files
 .env
