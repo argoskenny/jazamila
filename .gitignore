@@ -13,3 +13,6 @@ assets/post/*
 assets/tmp/*
 application/config/production/*
 application/config/development/*
+
+# Composer dependencies
+vendor/
