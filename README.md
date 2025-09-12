@@ -30,15 +30,14 @@ FAQ
 
 <br>License
 <br>除CI本身的License之外，其餘部份採用WTFPL License。
+
 <br>http://en.wikipedia.org/wiki/WTFPL
 
+Laravel Migration
+-----------------
+The repository now contains a Laravel skeleton under `laravel/` that maps existing CodeIgniter admin routes to Laravel controllers.
 
-Environment Variables
-----------------------
-Copy `.env.example` to `.env` and provide values for the keys below:
-
-* `RECAPTCHA_SITE_KEY` and `RECAPTCHA_SECRET_KEY`
-* SMTP settings: `SMTP_PROTOCOL`, `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `SMTP_ENCRYPTION`
-* Queue connection: `QUEUE_DRIVER`, `QUEUE_HOST`, `QUEUE_PORT`
-
-The `.env` file is ignored by Git to prevent accidental exposure of secrets. Never commit real credentials and ensure filesystem permissions restrict access to the file on production servers.
+Rollback Steps
+--------------
+* To revert to the original CodeIgniter application, point the web server's document root back to the repository root instead of `laravel/public`.
+* Alternatively, remove the routes defined in `laravel/routes/web.php` and delete the `laravel/` directory.

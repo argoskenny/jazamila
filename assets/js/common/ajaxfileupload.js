@@ -1,6 +1,18 @@
 
 jQuery.extend({
-	
+
+    // Global defaults for all ajax file upload requests
+    ajaxFileUploadSettings: {
+        data: {},
+        headers: {},
+        success: null,
+        error: null,
+        complete: null
+    },
+    ajaxFileUploadSetup: function(settings) {
+        jQuery.extend(true, jQuery.ajaxFileUploadSettings, settings);
+    },
+
 
     createUploadIframe: function(id, uri)
 	{
@@ -23,24 +35,31 @@ jQuery.extend({
 
             return jQuery('#' + frameId).get(0);			
     },
-    createUploadForm: function(id, fileElementId, data)
-	{
-		//create form	
-		var formId = 'jUploadForm' + id;
-		var fileId = 'jUploadFile' + id;
-		var form = jQuery('<form  action="" method="POST" name="' + formId + '" id="' + formId + '" enctype="multipart/form-data"></form>');	
-		if(data)
-		{
-			for(var i in data)
-			{
-				jQuery('<input type="hidden" name="' + i + '" value="' + data[i] + '" />').appendTo(form);
-			}			
-		}		
-		var oldElement = jQuery('#' + fileElementId);
-		var newElement = jQuery(oldElement).clone();
-		jQuery(oldElement).attr('id', fileId);
-		jQuery(oldElement).before(newElement);
-		jQuery(oldElement).appendTo(form);
+    createUploadForm: function(id, fileElementId, data, headers)
+        {
+                //create form
+                var formId = 'jUploadForm' + id;
+                var fileId = 'jUploadFile' + id;
+                var form = jQuery('<form  action="" method="POST" name="' + formId + '" id="' + formId + '" enctype="multipart/form-data"></form>');
+                if(data)
+                {
+                        for(var i in data)
+                        {
+                                jQuery('<input type="hidden" name="' + i + '" value="' + data[i] + '" />').appendTo(form);
+                        }
+                }
+                if(headers)
+                {
+                        for(var j in headers)
+                        {
+                                jQuery('<input type="hidden" name="' + j + '" value="' + headers[j] + '" />').appendTo(form);
+                        }
+                }
+                var oldElement = jQuery('#' + fileElementId);
+                var newElement = jQuery(oldElement).clone();
+                jQuery(oldElement).attr('id', fileId);
+                jQuery(oldElement).before(newElement);
+                jQuery(oldElement).appendTo(form);
 
 
 		
@@ -53,11 +72,11 @@ jQuery.extend({
     },
 
     ajaxFileUpload: function(s) {
-        // TODO introduce global settings, allowing the client to modify them for all requests, not only timeout		
-        s = jQuery.extend({}, jQuery.ajaxSettings, s);
-        var id = new Date().getTime()        
-		var form = jQuery.createUploadForm(id, s.fileElementId, (typeof(s.data)=='undefined'?false:s.data));
-		var io = jQuery.createUploadIframe(id, s.secureuri);
+        // allow global overrides for all upload requests
+        s = jQuery.extend(true, {}, jQuery.ajaxSettings, jQuery.ajaxFileUploadSettings, s);
+        var id = new Date().getTime()
+                var form = jQuery.createUploadForm(id, s.fileElementId, (typeof(s.data)=='undefined'?false:s.data), (typeof(s.headers)=='undefined'?false:s.headers));
+                var io = jQuery.createUploadIframe(id, s.secureuri);
 		var frameId = 'jUploadFrame' + id;
 		var formId = 'jUploadForm' + id;		
         // Watch for a new set of requests
