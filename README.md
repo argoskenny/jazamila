@@ -30,6 +30,7 @@ FAQ
 
 <br>License
 <br>除CI本身的License之外，其餘部份採用WTFPL License。
+
 <br>http://en.wikipedia.org/wiki/WTFPL
 
 Laravel Migration

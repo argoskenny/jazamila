@@ -44,12 +44,11 @@ class ReCaptcha
      *
      * @param string $secret shared secret between site and ReCAPTCHA server.
      */
-    function ReCaptcha()
+    function __construct()
     {
-        $secret = '6LdH9gATAAAAALcTCdsNj_iBplsuWEZZWWKJ_yQH';
+        $secret = getenv('RECAPTCHA_SECRET_KEY');
         if ($secret == null || $secret == "") {
-            die("To use reCAPTCHA you must get an API key from <a href='"
-                . self::$_signupUrl . "'>" . self::$_signupUrl . "</a>");
+            die("To use reCAPTCHA you must set RECAPTCHA_SECRET_KEY in your environment.");
         }
         $this->_secret=$secret;
     }

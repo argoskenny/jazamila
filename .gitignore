@@ -9,10 +9,12 @@ application/logs/*
 !application/logs/.htaccess
 
 assets/pics/*
+!assets/pics/.gitkeep
 assets/post/*
 assets/tmp/*
+!assets/tmp/.gitkeep
 application/config/production/*
 application/config/development/*
 
-# Composer dependencies
-vendor/
+# Environment files
+.env
