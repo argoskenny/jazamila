@@ -11,12 +11,12 @@
 	<meta name="googlebot" content="all" />
 	
 	<title>{{ $title }}</title>
-	<base href="{{ url('/') }}"/>
-	
-	<link rel="shortcut icon" href="{{ url('/') }}assets/img/jazamila/logo/jazamila.ico" >
-	<link href="assets/css/common/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="assets/css/jazamila/header_footer.css" rel="stylesheet" type="text/css" />
-	<link href="assets/css/jazamila/post.css" rel="stylesheet" type="text/css" />
+        <base href="{{ url('/') }}/"/>
+
+        <link rel="shortcut icon" href="{{ asset('assets/img/jazamila/logo/jazamila.ico') }}" >
+        <link href="{{ asset('assets/css/common/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/css/jazamila/header_footer.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/css/jazamila/post.css') }}" rel="stylesheet" type="text/css" />
 
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
@@ -30,7 +30,7 @@
 				  <span class="icon-bar"></span>
 				  <span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="{{ url('/') }}"><img src="assets/img/jazamila/logo/jazamila_logo.png"></a>
+                                <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ asset('assets/img/jazamila/logo/jazamila_logo.png') }}"></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
@@ -186,9 +186,9 @@
 	</div><!-- /.modal -->
 	<input type="hidden" id="save_status" name="save_status" value="{{ $save }}">
 	
-<script type="text/javascript" src="assets/js/common/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="assets/js/common/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{ asset('assets/js/common/jquery-1.10.2.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/common/bootstrap.min.js') }}"></script>
 <script type="text/javascript">var BASE = '{{ url('/') }}';</script>
-<script type="text/javascript" src="assets/js/jazamila/post.js"></script> 
+<script type="text/javascript" src="{{ asset('assets/js/jazamila/post.js') }}"></script>
 </body>
 </html>

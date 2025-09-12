@@ -12,17 +12,17 @@
 	
 	<meta property="og:title" content="JAZAMILA"/>
 	<meta property="og:type" content="restaurant.restaurant"/>
-	<meta property="og:image" content="{{ url('/') }}assets/img/jazamila/logo/oglogo.png"/>
-	<meta property="og:url" content="{{ url('/') }}"/>
+        <meta property="og:image" content="{{ asset('assets/img/jazamila/logo/oglogo.png') }}"/>
+        <meta property="og:url" content="{{ url('/') }}"/>
 	<meta property="og:description" content="不知該吃什麼好？JAZAMILA幫您解決這個看似無足輕重、但卻又異常惱人的小問題！"/>
 	
 	<title>{{ $title }}</title>
-	<base href="{{ url('/') }}"/>
-	
-	<link rel="shortcut icon" href="{{ url('/') }}assets/img/jazamila/logo/jazamila.ico" >
-	<link href="assets/css/common/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="assets/css/jazamila/header_footer.css" rel="stylesheet" type="text/css" />
-	<link href="assets/css/jazamila/index.css" rel="stylesheet" type="text/css" />
+        <base href="{{ url('/') }}/"/>
+
+        <link rel="shortcut icon" href="{{ asset('assets/img/jazamila/logo/jazamila.ico') }}" >
+        <link href="{{ asset('assets/css/common/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/css/jazamila/header_footer.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/css/jazamila/index.css') }}" rel="stylesheet" type="text/css" />
 </head>
 
 <body ontouchstart="">
@@ -34,7 +34,7 @@
 				  <span class="icon-bar"></span>
 				  <span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="{{ url('/') }}"><img src="assets/img/jazamila/logo/jazamila_logo.png" alt="JAZAMILA logo"></a>
+                                <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ asset('assets/img/jazamila/logo/jazamila_logo.png') }}" alt="JAZAMILA logo"></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
@@ -55,7 +55,7 @@
 			</div>
 			<div class="col-lg-12 main_option">
 				<div class="circle_btn">
-					<img src="assets/img/jazamila/icon/option_btn.png" alt="option button">
+                                        <img src="{{ asset('assets/img/jazamila/icon/option_btn.png') }}" alt="option button">
 				</div>
 			</div>
 			<div id="option_choose">
@@ -112,22 +112,22 @@
 			<div class="row share_list">
 				<div class="col-xs-6 col-sm-3 share_links">
 					<a href="javascript:;" onclick='window.open("https://www.facebook.com/sharer.php?u={{ url('/') }}", "facebook_frm","height=450,width=540");' title="分享至Facebook">
-						<img src="assets/img/jazamila/icon/fb_share.png" title="分享至Facebook" alt="Facebook share"/>
+                                                <img src="{{ asset('assets/img/jazamila/icon/fb_share.png') }}" title="分享至Facebook" alt="Facebook share"/>
 					</a>
 				</div>
 				<div class="col-xs-6 col-sm-3 share_links">
 					<a href="javascript:desc='';if(window.getSelection)desc=window.getSelection();if(document.getSelection)desc=document.getSelection();if(document.selection)desc=document.selection.createRange().text;void(open('http://twitter.com/?status='+encodeURIComponent(location.href+' ('+document.title.split('@')[0].replace(/([\s]*$)/g,'')+')')));" title="分享至twitter">
-						<img src="assets/img/jazamila/icon/tweet_share.png" title="分享至Twitter" alt="Twitter share"/>
+                                                <img src="{{ asset('assets/img/jazamila/icon/tweet_share.png') }}" title="分享至Twitter" alt="Twitter share"/>
 					</a>
 				</div>
 				<div class="col-xs-6 col-sm-3 share_links">
 					<a href="javascript:desc='';if(window.getSelection)desc=window.getSelection();if(document.getSelection)desc=document.getSelection();if(document.selection)desc=document.selection.createRange().text;void(open('http://www.plurk.com/?qualifier=shares&amp;status='+encodeURIComponent(location.href+' ('+document.title.split('@')[0].replace(/([\s]*$)/g,'')+')')));" title="分享至PLURK">
-						<img src="assets/img/jazamila/icon/plurk_share.png" title="分享至Plurk" alt="Plurk share"/>
+                                                <img src="{{ asset('assets/img/jazamila/icon/plurk_share.png') }}" title="分享至Plurk" alt="Plurk share"/>
 					</a>
 				</div>
 				<div class="col-xs-6 col-sm-3 share_links">
 					<a target="_blank" href="javascript:void(window.open('https://plus.google.com/share?url='.concat(encodeURIComponent(location.href)), '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'));">
-						<img src="assets/img/jazamila/icon/google_share.png" title="分享至Google+" alt="Google PLus share"/>
+                                                <img src="{{ asset('assets/img/jazamila/icon/google_share.png') }}" title="分享至Google+" alt="Google PLus share"/>
 					</a>
 				</div>
 			</div>
@@ -143,9 +143,9 @@
 			<div class="col-xs-2 col-md-1"><a href="javascript:void(0)" onclick="gotop();">TOP</a></div>
 		</div>
 	</div>
-<script type="text/javascript" src="assets/js/common/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="assets/js/common/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{ asset('assets/js/common/jquery-1.10.2.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/common/bootstrap.min.js') }}"></script>
 <script type="text/javascript">var BASE = '{{ url('/') }}';</script>
-<script type="text/javascript" src="assets/js/jazamila/index.js"></script> 
+<script type="text/javascript" src="{{ asset('assets/js/jazamila/index.js') }}"></script>
 </body> 
 </html>
