@@ -3,12 +3,12 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-	<title><?php echo $title;?></title>
-	<base href="<?php echo base_url();?>"/>
+	<title>{{ $title }}</title>
+	<base href="{{ url('/') }}"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/common/jquery.pageslide.css" />
 	<link href="assets/css/common/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<link href="assets/css/admin/admin_login.css" rel="stylesheet" type="text/css" />
-	<link rel="shortcut icon" href="<?php echo base_url();?>assets/img/admin/logo/admin.ico" >
+	<link rel="shortcut icon" href="{{ url('/') }}assets/img/admin/logo/admin.ico" >
 </head>
 
 <body ontouchstart="">
