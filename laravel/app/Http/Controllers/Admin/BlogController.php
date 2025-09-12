@@ -12,21 +12,21 @@ class BlogController extends Controller
 {
     public function unreview($set)
     {
-        return array_values(array_filter(BlogModel::all(), fn($row) => $row['b_blog_show'] === '0'));
+        return BlogModel::where('b_blog_show', 0)->get()->toArray();
     }
 
     public function passed($set)
     {
-        return array_values(array_filter(BlogModel::all(), fn($row) => $row['b_blog_show'] === '1'));
+        return BlogModel::where('b_blog_show', 1)->get()->toArray();
     }
 
     public function unpass($set)
     {
-        return array_values(array_filter(BlogModel::all(), fn($row) => $row['b_blog_show'] === '2'));
+        return BlogModel::where('b_blog_show', 2)->get()->toArray();
     }
 
     public function edit($id)
     {
-        return BlogModel::find((int)$id);
+        return optional(BlogModel::find((int) $id))->toArray();
     }
 }

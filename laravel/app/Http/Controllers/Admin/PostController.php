@@ -13,38 +13,42 @@ class PostController extends Controller
 {
     public function unreview($set)
     {
-        return PostModel::byStatus('pending');
+        return PostModel::where('post_prove', 0)->get()->toArray();
     }
 
     public function passed($set)
     {
-        return PostModel::byStatus('passed');
+        return PostModel::where('post_prove', 1)->get()->toArray();
     }
 
     public function unpass($set)
     {
-        return PostModel::byStatus('rejected');
+        return PostModel::where('post_prove', 2)->get()->toArray();
     }
 
     public function edit($post_id)
     {
-        return PostModel::find((int)$post_id);
+        return optional(PostModel::find((int) $post_id))->toArray();
     }
 
     public function save(Request $request)
     {
         $data = $request->validate([
             'post_name' => 'required|string',
-            'status' => 'nullable|string',
+            'post_prove' => 'nullable|integer',
         ]);
 
+        $data['post_prove'] = $data['post_prove'] ?? 0;
+
         if ($request->input('id')) {
-            PostModel::update((int)$request->input('id'), $data);
+            $post = PostModel::find((int) $request->input('id'));
+            if ($post) {
+                $post->update($data);
+            }
         } else {
-            $data['status'] = $data['status'] ?? 'pending';
             PostModel::create($data);
         }
 
-        return PostModel::all();
+        return PostModel::all()->toArray();
     }
 }
