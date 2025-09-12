@@ -1,26 +1,57 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class JazamilaController extends Controller
 {
-    public function index()
+    /**
+     * Display the homepage.
+     *
+     * Mirrors CI's Jazamila@index behavior.
+     */
+    public function index(Request $request)
     {
-        return view('jazamila.index');
+        // TODO: Port cookie and configuration logic
+        return response()->view('jazamila.index', []);
     }
 
-    public function listdata()
+    /**
+     * List restaurants based on filters.
+     *
+     * Mirrors CI's Jazamila@listdata.
+     */
+    public function listdata($location, $type, $max, $min, $page, Request $request)
     {
-        return view('jazamila.listdata');
+        // TODO: Implement filtering and pagination
+        return response()->view('jazamila.listdata', [
+            'url_region'   => $location,
+            'url_type'     => $type,
+            'url_maxmoney' => $max,
+            'url_minmoney' => $min,
+            'url_page'     => $page,
+        ]);
     }
 
-    public function detail()
+    /**
+     * Show a restaurant detail.
+     */
+    public function detail($id, Request $request)
     {
-        return view('jazamila.detail');
+        // TODO: Fetch restaurant and blog data
+        return response()->view('jazamila.detail', ['res_id' => $id]);
     }
 
+    /**
+     * JSON API placeholder.
+     */
+    public function jsonapi(Request $request)
+    {
+        // TODO: Return restaurant data as JSON
+        return response()->json([]);
+    }
+ 
     public function map()
     {
         return view('jazamila.map');
