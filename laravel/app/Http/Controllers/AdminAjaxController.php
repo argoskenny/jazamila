@@ -1,5 +1,9 @@
 <?php
-namespace App\Http\Controllers;
+namespace {
+    require_once __DIR__ . '/../../helpers.php';
+}
+
+namespace App\Http\Controllers {
 
 use App\Models\Admin\Restaurant as RestaurantModel;
 use App\Models\Admin\Blog as BlogModel;
@@ -10,14 +14,7 @@ class AdminAjaxController
 
     public function __construct()
     {
-        $file = dirname(__DIR__, 4) . '/application/rf_config/admin.inc.php';
-        $this->adminList = [];
-        if (file_exists($file)) {
-            require $file;
-            if (isset($admin_list)) {
-                $this->adminList = $admin_list;
-            }
-        }
+        $this->adminList = config('admin', []);
         if (session_status() === PHP_SESSION_NONE) {
             @session_start();
         }
@@ -161,4 +158,5 @@ class AdminAjaxController
         }
         return $this->response(['status' => 'success']);
     }
+}
 }

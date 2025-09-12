@@ -1,11 +1,15 @@
 <?php
-namespace App\Http\Controllers;
+namespace {
+    require_once __DIR__ . '/../../helpers.php';
+}
+
+namespace App\Http\Controllers {
 
 use App\Models\Restaurant;
 use App\Models\Blog;
 
 class JazamilaController
-{
+{ 
     public function index(array $cookies = []): array
     {
         $data = $this->cookieOption($cookies);
@@ -244,16 +248,17 @@ class JazamilaController
 
     private function getRegions(): array
     {
-        return [1 => '台北市', 2 => '基隆市'];
+        return config('area.Regionid', []);
     }
 
     private function getSections(): array
     {
-        return [1 => '中正區', 2 => '大同區', 3 => '中山區'];
+        return config('area.Sectionid', []);
     }
 
     private function getFoodTypes(): array
     {
-        return [1 => '日式', 2 => '美式'];
+        return config('type', []);
     }
+}
 }
