@@ -15,7 +15,7 @@
 		
 		@include('admin.admin_menu')
 		
-		<div class="jumbotron">
+		<div class="jumbotron bg-light p-5 rounded">
 			<h3>{{ $title }}</h3>
 			<p>{{ $detail_title_eng }}</p>
 			列表切換
@@ -83,7 +83,7 @@
 								<button type="button" class="btn btn-warning" name="btn_unpass_{{ $blog_data['id'] }}" id="btn_unpass_{{ $blog_data['id'] }}" onclick="unpass_blog('{{ $blog_data['id'] }}');">不通過</button>
 								<button type="button" class="btn btn-primary" name="btn_edit_{{ $blog_data['id'] }}" id="btn_edit_{{ $blog_data['id'] }}" onclick="edit_blog('{{ $blog_data['id'] }}');">編輯</button>
 								<button type="button" class="btn btn-primary" style="display:none;" name="btn_fix_{{ $blog_data['id'] }}" id="btn_fix_{{ $blog_data['id'] }}" onclick="fix_blog('{{ $blog_data['id'] }}');">修改</button>
-								<button type="button" class="btn btn-default" style="display:none;" name="btn_cancel_{{ $blog_data['id'] }}" id="btn_cancel_{{ $blog_data['id'] }}" onclick="cancel_blog('{{ $blog_data['id'] }}');">取消</button>
+								<button type="button" class="btn btn-secondary" style="display:none;" name="btn_cancel_{{ $blog_data['id'] }}" id="btn_cancel_{{ $blog_data['id'] }}" onclick="cancel_blog('{{ $blog_data['id'] }}');">取消</button>
 							</p>
 						</div>
 						<div>
@@ -127,7 +127,7 @@
 		{{ $pages }}
 		</div>
 	</div>
-<script type="text/javascript" src="assets/js/common/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="assets/js/common/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="assets/js/common/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/js/admin/newdata.js"></script>
 </body>

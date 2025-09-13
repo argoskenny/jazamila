@@ -15,7 +15,7 @@
 	
 	@include('admin.admin_menu')
 	
-	<div class="jumbotron">
+	<div class="jumbotron bg-light p-5 rounded">
 		<h3>{{ $title }}</h3>
 		<p>{{ $detail_title_eng }}</p>
 	</div>
@@ -136,12 +136,12 @@
 		</div>
 	<?php endforeach ?>
 		
-		<a href="admin/{{ $list_url }}/{{ $list_record }}"><button type="button" class="btn btn-default" name="cancel" id="cancel">取消</button></a>
+		<a href="admin/{{ $list_url }}/{{ $list_record }}"><button type="button" class="btn btn-secondary" name="cancel" id="cancel">取消</button></a>
 		<button type="button" class="btn btn-success" name="send_pass" id="send_pass" onClick="javascript:checkPostForm('1');">通過</button>
 		<button type="button" class="btn btn-warning" name="send_unpass" id="send_unpass" onClick="javascript:checkPostForm('2');">不通過</button>
 	</form>
 </div>
-<script type="text/javascript" src="assets/js/common/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="assets/js/common/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="assets/js/common/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/js/admin/newdata.js"></script>
 </body>

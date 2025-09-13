@@ -21,13 +21,13 @@
 <body ontouchstart="">
 	<div class="container">
 		<form class="form-signin">
-			<div class="alert alert-block alert-success fade in">
+			<div class="alert alert alert-success fade show">
 				<h4><b>儲存成功</b></h4>
 				<p>已正確儲存資料</p>
 			</div>
 		</form>	
     </div>
 </body>
-<script type="text/javascript" src="assets/js/common/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="assets/js/common/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="assets/js/admin/newdata.js"></script>
 </html>

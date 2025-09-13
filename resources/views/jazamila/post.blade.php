@@ -1,54 +1,16 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+@include('components.head', [
+    'title' => $title ?? 'JAZAMILA - 餐廳分享',
+    'description' => 'JAZAMILA網站介紹。',
+    'additional_css' => ['assets/css/jazamila/post.css'],
+])
 
-    <meta name="author" content="JAZAMILA" />
-    <meta name="dcterms.rightsHolder" content="jazamila.com" />
-    <meta name="description" content="JAZAMILA網站介紹。" />
-    <meta name="robots" content="all" />
-    <meta name="googlebot" content="all" />
-
-    <title>{{ $title ?? 'JAZAMILA - 餐廳分享' }}</title>
-    <base href="{{ url('/') }}/" />
-
-    <link rel="shortcut icon" href="{{ asset('assets/img/jazamila/logo/jazamila.ico') }}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="{{ asset('assets/css/common/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/css/jazamila/header_footer.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/css/jazamila/post.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/css/theme.css') }}" rel="stylesheet" type="text/css" />
-
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-</head>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 
 <body ontouchstart="">
-    <div class="navbar navbar-default header">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="{{ url('/') }}"><img
-                        src="{{ asset('assets/img/jazamila/logo/jazamila_logo.png') }}" alt="JAZAMILA logo"></a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="listdata/0/0/0/0/1">餐廳列表</a></li>
-                    <li><a href="about">關於本站</a></li>
-                    <li class="active"><a href="post">餐廳分享</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    @include('components.header', ['active_nav' => 'post'])
 
     <div class="main" id="post">
         <div class="container">
@@ -146,32 +108,32 @@
                         value="請輸入食記網址" alt="請輸入食記網址">
                     <input type="text" class="form-control blogname hiding" id="res_blogname2"
                         name="res_blogname2"
-                        onfocus="if(this.value=='請輸入食記名稱'){this.value=''; $(this).css('color','black');}"
+                        onfocus="if(this.value=='請輸入食記名稱'){this.value=''; $(this).css('color','黑色');}"
                         onblur="if(this.value==''){this.value='請輸入食記名稱'; $(this).css('color','#999');}"
                         value="請輸入食記名稱" alt="請輸入食記名稱">
                     <input type="text" class="form-control bloglink hiding" id="res_bloglink2"
                         name="res_bloglink2"
-                        onfocus="if(this.value=='請輸入食記網址'){this.value=''; $(this).css('color','black');}"
+                        onfocus="if(this.value=='請輸入食記網址'){this.value=''; $(this).css('color','黑色');}"
                         onblur="if(this.value==''){this.value='請輸入食記網址'; $(this).css('color','#999');}"
                         value="請輸入食記網址" alt="請輸入食記網址">
                     <input type="text" class="form-control blogname hiding" id="res_blogname3"
                         name="res_blogname3"
-                        onfocus="if(this.value=='請輸入食記名稱'){this.value=''; $(this).css('color','black');}"
+                        onfocus="if(this.value=='請輸入食記名稱'){this.value=''; $(this).css('color','黑色');}"
                         onblur="if(this.value==''){this.value='請輸入食記名稱'; $(this).css('color','#999');}"
                         value="請輸入食記名稱" alt="請輸入食記名稱">
                     <input type="text" class="form-control bloglink hiding" id="res_bloglink3"
                         name="res_bloglink3"
-                        onfocus="if(this.value=='請輸入食記網址'){this.value=''; $(this).css('color','black');}"
+                        onfocus="if(this.value=='請輸入食記網址'){this.value=''; $(this).css('color','黑色');}"
                         onblur="if(this.value==''){this.value='請輸入食記網址'; $(this).css('color','#999');}"
                         value="請輸入食記網址" alt="請輸入食記網址">
                     <input type="text" class="form-control blogname hiding" id="res_blogname4"
                         name="res_blogname4"
-                        onfocus="if(this.value=='請輸入食記名稱'){this.value=''; $(this).css('color','black');}"
+                        onfocus="if(this.value=='請輸入食記名稱'){this.value=''; $(this).css('color','黑色');}"
                         onblur="if(this.value==''){this.value='請輸入食記名稱'; $(this).css('color','#999');}"
                         value="請輸入食記名稱" alt="請輸入食記名稱">
                     <input type="text" class="form-control bloglink hiding" id="res_bloglink4"
                         name="res_bloglink4"
-                        onfocus="if(this.value=='請輸入食記網址'){this.value=''; $(this).css('color','black');}"
+                        onfocus="if(this.value=='請輸入食記網址'){this.value=''; $(this).css('color','黑色');}"
                         onblur="if(this.value==''){this.value='請輸入食記網址'; $(this).css('color','#999');}"
                         value="請輸入食記網址" alt="請輸入食記網址">
                     <span id="add_blog" class="blog_adjust">+</span>
@@ -217,31 +179,20 @@
         </div>
     </div>
 
-    <div class="footer">
-        <div class="container">
-            <div class="col-xs-10 col-md-11">2013 JAZAMILA</div>
-            <div class="col-xs-2 col-md-1"><a href="javascript:void(0)" onclick="gotop();">TOP</a></div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="save_success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="save_success" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content p-3">
                 已儲存成功，感謝你的分享！<br />
-                <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+                <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">關閉</button>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
     <input type="hidden" id="save_status" name="save_status" value="{{ $save ?? '0' }}">
 
-    <script type="text/javascript" src="{{ asset('assets/js/common/jquery-1.10.2.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/common/bootstrap.min.js') }}"></script>
-    <script type="text/javascript">
-        var BASE = '{{ url('/') }}';
-    </script>
-    <script type="text/javascript" src="{{ asset('assets/js/jazamila/post.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/theme.js') }}"></script>
+    @include('components.footer')
+    @include('components.scripts', [
+        'additional_js' => ['assets/js/jazamila/post.js'],
+    ])
 </body>
 
 </html>

@@ -9,6 +9,7 @@
 
 <body ontouchstart="">
     @include('components.header', ['active_nav' => 'listdata'])
+
     <form action="listdata/0/{{ $url_type }}/{{ $url_maxmoney }}/{{ $url_minmoney }}/1" method="get"
         id="form_keyword" name="form_keyword">
         <div class="main">
@@ -28,7 +29,7 @@
     </form>
     <div class="share">
         <div class="container">
-            <div class="col-xs-12 col-sm-3 option_title">
+            <div class="col-12 col-sm-3 option_title">
                 <div class="option_title_content">
                     縮小列表範圍
                 </div>

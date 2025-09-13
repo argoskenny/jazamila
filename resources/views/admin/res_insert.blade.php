@@ -15,7 +15,7 @@
 		
 		@include('admin.admin_menu')
 		
-		<div class="jumbotron">
+		<div class="jumbotron bg-light p-5 rounded">
 			<h3>{{ $title }}</h3>
 			<p>{{ $detail_title_eng }}</p>
 		</div>
@@ -84,7 +84,7 @@
 		</form>
 	</div>
 </body>
-<script type="text/javascript" src="assets/js/common/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="assets/js/common/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="assets/js/common/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/js/admin/newdata.js"></script> 
 </html>

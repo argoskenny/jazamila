@@ -1,52 +1,14 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-
-    <meta name="author" content="JAZAMILA" />
-    <meta name="dcterms.rightsHolder" content="jazamila.com" />
-    <meta name="description" content="JAZAMILA網站介紹。" />
-    <meta name="robots" content="all" />
-    <meta name="googlebot" content="all" />
-
-    <title>{{ $title ?? 'JAZAMILA - 關於本站' }}</title>
-    <base href="{{ url('/') }}/" />
-
-    <link rel="shortcut icon" href="{{ asset('assets/img/jazamila/logo/jazamila.ico') }}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="{{ asset('assets/css/common/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/css/jazamila/header_footer.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/css/jazamila/about.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/css/theme.css') }}" rel="stylesheet" type="text/css" />
-</head>
+@include('components.head', [
+    'title' => $title ?? 'JAZAMILA - 關於本站',
+    'description' => 'JAZAMILA網站介紹。',
+    'additional_css' => ['assets/css/jazamila/about.css'],
+])
 
 <body ontouchstart="">
-    <div class="navbar navbar-default header">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="{{ url('/') }}"><img
-                        src="{{ asset('assets/img/jazamila/logo/jazamila_logo.png') }}" alt="JAZAMILA logo"></a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="listdata/0/0/0/0/1">餐廳列表</a></li>
-                    <li class="active"><a href="about">關於本站</a></li>
-                    <li><a href="post">餐廳分享</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    @include('components.header', ['active_nav' => 'about'])
 
     <div class="main" id="about">
         <div class="container">
@@ -109,8 +71,8 @@
                 </div>
                 <div class="form-group">
                     <label for="captcha">驗證碼 *</label><span style="color:#666;">（有大小寫之分）</span><br />
-                    <img src="CaptchaImg" name="IM1" id="IM1" onclick="IMCHEN();return false;"
-                        alt="" title="看不清楚？按我變換圖片" />
+                    <img src="CaptchaImg" name="IM1" id="IM1" onclick="IMCHEN();return false;" alt=""
+                        title="看不清楚？按我變換圖片" />
                     <input type="text" class="form-control" id="captcha" name="captcha" maxlength="4">
                     <div class="msg" id="msg_captcha">請輸入驗證碼</div>
                     <div class="msg" id="msg_captcha_error">驗證碼錯誤</div>
@@ -124,19 +86,10 @@
             </div>
         </div>
     </div>
-    <div class="footer">
-        <div class="container">
-            <div class="col-xs-10 col-md-11">2013 JAZAMILA</div>
-            <div class="col-xs-2 col-md-1"><a href="javascript:void(0)" onclick="gotop();">TOP</a></div>
-        </div>
-    </div>
-    <script type="text/javascript" src="{{ asset('assets/js/common/jquery-1.10.2.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/common/bootstrap.min.js') }}"></script>
-    <script type="text/javascript">
-        var BASE = '{{ url('/') }}';
-    </script>
-    <script type="text/javascript" src="{{ asset('assets/js/jazamila/about.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/theme.js') }}"></script>
+    @include('components.footer')
+    @include('components.scripts', [
+        'additional_js' => ['assets/js/jazamila/about.js'],
+    ])
 </body>
 
 </html>
