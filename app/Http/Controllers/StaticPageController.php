@@ -18,18 +18,26 @@ class StaticPageController extends Controller
 
     public function post()
     {
-        return view('jazamila.post');
+        $data = [
+            'title'  => 'JAZAMILA - 餐廳分享',
+            'config' => [
+                'regionid' => config('area.Regionid', []),
+                'foodtype' => config('type', []),
+            ],
+            'save'   => '0'
+        ];
+        return view('jazamila.post', $data);
     }
 
     public function captchaImg(Request $request)
     {
-        $im = imagecreate(60, 30);
-        $bg = imagecolorallocate($im, 249, 112, 92);
+        $im        = imagecreate(60, 30);
+        $bg        = imagecolorallocate($im, 249, 112, 92);
         $textcolor = imagecolorallocate($im, 255, 255, 255);
 
-        $text = '';
-        $textAll = array_merge(range('A','Z'), range('a','z'), range('0','9'));
-        $length = 4;
+        $text    = '';
+        $textAll = array_merge(range('A', 'Z'), range('a', 'z'), range('0', '9'));
+        $length  = 4;
         for ($i = 1; $i <= $length;) {
             $val = $textAll[rand(0, 61)];
             if ($val !== 'O' && $val !== 'o' && $val !== '0') {

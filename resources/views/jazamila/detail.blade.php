@@ -29,9 +29,13 @@
         <base href="{{ url('/') }}/"/>
 
         <link rel="shortcut icon" href="{{ asset('assets/img/jazamila/logo/jazamila.ico') }}" >
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
         <link href="{{ asset('assets/css/common/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('assets/css/jazamila/header_footer.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('assets/css/jazamila/detail.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/css/theme.css') }}" rel="stylesheet" type="text/css" />
 </head>
 
 <body ontouchstart="">
@@ -54,17 +58,17 @@
 			</div>
 		</div>
 	</div>
-	<div class="main">
+	<div class="main" id="detail">
 		<div class="container">
-			<div class="col-lg-12 main_text">今天就吃...</div>
-			<div class="col-lg-12 main_title">{{ $res_data['res_name'] }}</div>
+			<div class="col-lg-12 main_text reveal">今天就吃...</div>
+			<div class="col-lg-12 main_title reveal">{{ $res_data['res_name'] }}</div>
 		<?php if( !empty($res_data['res_img_url']) )
 			{?>
-                                <div class="col-xs-12 col-md-6 res_pic"><img src="{{ asset('assets/pics/' . $res_data['res_img_url']) }}" alt="{{ $res_data['res_name'] }}"></div>
+                                <div class="col-xs-12 col-md-6 res_pic"><img src="{{ asset('assets/pics/' . $res_data['res_img_url']) }}" alt="{{ $res_data['res_name'] }}" loading="lazy" decoding="async"></div>
 		<?php }
 			else
 			{ ?>
-                                <div class="col-xs-12 col-md-6 res_pic"><img src="{{ asset('assets/imgs/default_res_pic.jpg') }}" alt="{{ $res_data['res_name'] }}" title="未提供餐廳照片"></div>
+                                <div class="col-xs-12 col-md-6 res_pic"><img src="{{ asset('assets/imgs/default_res_pic.jpg') }}" alt="{{ $res_data['res_name'] }}" title="未提供餐廳照片" loading="lazy" decoding="async"></div>
 		<?php }?>
 			<div class="col-xs-12 col-md-6 res_detail">
 				<div class="basic_info">
@@ -114,22 +118,22 @@
 				<div class="share_info">
 					<div class="col-xs-6 col-sm-3 share_links">
 						<a href="javascript:;" onclick='window.open("https://www.facebook.com/sharer.php?u={{ url('/') }}detail/{{ $res_data['id'] }}", "facebook_frm","height=450,width=540");' title="分享至Facebook">
-                                                        <img src="{{ asset('assets/img/jazamila/icon/fb_share.png') }}" title="分享至Facebook" alt="Facebook share"/>
+                                                        <img src="{{ asset('assets/img/jazamila/icon/fb_share.png') }}" title="分享至Facebook" alt="Facebook share" loading="lazy" decoding="async"/>
 						</a>
 					</div>
 					<div class="col-xs-6 col-sm-3 share_links">
 						<a href="javascript:desc='';if(window.getSelection)desc=window.getSelection();if(document.getSelection)desc=document.getSelection();if(document.selection)desc=document.selection.createRange().text;void(open('http://twitter.com/?status='+encodeURIComponent(location.href+' ('+document.title.split('@')[0].replace(/([\s]*$)/g,'')+')')));" title="分享至twitter">
-                                                        <img src="{{ asset('assets/img/jazamila/icon/tweet_share.png') }}" title="分享至Twitter" alt="Twitter share"/>
+                                                        <img src="{{ asset('assets/img/jazamila/icon/tweet_share.png') }}" title="分享至Twitter" alt="Twitter share" loading="lazy" decoding="async"/>
 						</a>
 					</div>
 					<div class="col-xs-6 col-sm-3 share_links">
 						<a href="javascript:desc='';if(window.getSelection)desc=window.getSelection();if(document.getSelection)desc=document.getSelection();if(document.selection)desc=document.selection.createRange().text;void(open('http://www.plurk.com/?qualifier=shares&amp;status='+encodeURIComponent(location.href+' ('+document.title.split('@')[0].replace(/([\s]*$)/g,'')+')')));" title="分享至PLURK">
-                                                        <img src="{{ asset('assets/img/jazamila/icon/plurk_share.png') }}" title="分享至Plurk" alt="Plurk share"/>
+                                                        <img src="{{ asset('assets/img/jazamila/icon/plurk_share.png') }}" title="分享至Plurk" alt="Plurk share" loading="lazy" decoding="async"/>
 						</a>
 					</div>
 					<div class="col-xs-6 col-sm-3 share_links">
 						<a target="_blank" href="javascript:void(window.open('https://plus.google.com/share?url='.concat(encodeURIComponent(location.href)), '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'));">
-                                                        <img src="{{ asset('assets/img/jazamila/icon/google_share.png') }}" title="分享至Google+" alt="Google Plus share"/>
+                                                        <img src="{{ asset('assets/img/jazamila/icon/google_share.png') }}" title="分享至Google+" alt="Google Plus share" loading="lazy" decoding="async"/>
 						</a>
 					</div>
 				</div>
@@ -287,5 +291,6 @@
 <script type="text/javascript" src="{{ asset('assets/js/common/bootstrap.min.js') }}"></script>
 <script type="text/javascript">var BASE = '{{ url('/') }}';</script>
 <script type="text/javascript" src="{{ asset('assets/js/jazamila/detail.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/theme.js') }}"></script>
 </body>
 </html>
