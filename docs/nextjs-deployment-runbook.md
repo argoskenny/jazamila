@@ -2,7 +2,7 @@
 
 ## 1. 目的
 
-本文件定義 `next-app` 的 staging / production 部署流程、環境變數、SQLite 資料庫初始化、legacy import、健康檢查、備份與 rollback plan。
+本文件定義 repository root 的 staging / production 部署流程、環境變數、SQLite 資料庫初始化、legacy import、健康檢查、備份與 rollback plan。
 
 本專案目前採用 SQLite-first production 方案。部署目標必須提供 persistent filesystem，不適合直接部署到沒有持久磁碟的 serverless runtime。
 
@@ -108,7 +108,7 @@ mkdir -p /var/lib/jazamila-staging/backups
 部署程式碼到 release 目錄後：
 
 ```bash
-cd /srv/jazamila-staging/releases/<release>/next-app
+cd /srv/jazamila-staging/releases/<release>
 npm ci
 cp /srv/jazamila-staging/shared/.env.production .env.production
 DATABASE_URL="file:/var/lib/jazamila-staging/jazamila.sqlite" npm run db:push:prod
@@ -126,7 +126,7 @@ ln -sfn /srv/jazamila-staging/releases/<release> /srv/jazamila-staging/current
 啟動：
 
 ```bash
-cd /srv/jazamila-staging/current/next-app
+cd /srv/jazamila-staging/current
 NODE_ENV=production npm run start
 ```
 
@@ -145,7 +145,7 @@ mkdir -p /var/lib/jazamila/backups
 部署程式碼到 release 目錄後：
 
 ```bash
-cd /srv/jazamila/releases/<release>/next-app
+cd /srv/jazamila/releases/<release>
 npm ci
 cp /srv/jazamila/shared/.env.production .env.production
 DATABASE_URL="file:/var/lib/jazamila/jazamila.sqlite" npm run db:push:prod
@@ -163,7 +163,7 @@ ln -sfn /srv/jazamila/releases/<release> /srv/jazamila/current
 啟動：
 
 ```bash
-cd /srv/jazamila/current/next-app
+cd /srv/jazamila/current
 NODE_ENV=production npm run start
 ```
 
@@ -174,7 +174,7 @@ Legacy import 只應在 staging 先跑完。
 Staging dry-run：
 
 ```bash
-cd /srv/jazamila-staging/current/next-app
+cd /srv/jazamila-staging/current
 DATABASE_URL="file:/var/lib/jazamila-staging/jazamila.sqlite" \
 LEGACY_DATABASE_URL="mysql://legacy_user:password@host:3306/jazamila_legacy" \
   npm run db:import:legacy:dry
@@ -197,7 +197,7 @@ sqlite3 /var/lib/jazamila/jazamila.sqlite ".backup '/var/lib/jazamila/backups/pr
 Production import：
 
 ```bash
-cd /srv/jazamila/current/next-app
+cd /srv/jazamila/current
 DATABASE_URL="file:/var/lib/jazamila/jazamila.sqlite" \
 LEGACY_DATABASE_URL="mysql://legacy_user:password@host:3306/jazamila_legacy" \
   npm run db:import:legacy
@@ -300,14 +300,14 @@ ln -sfn /srv/jazamila/releases/<previous-release> /srv/jazamila/current
 systemctl start jazamila
 ```
 
-### 11.3 Full fallback to legacy
+### 11.3 Full fallback to archived legacy site
 
 適用：Next.js production 無法快速恢復。
 
-1. 將 reverse proxy upstream 切回 legacy Laravel/PHP 站。
+1. 將 reverse proxy upstream 切回已備份的舊站或上一個 production image。
 2. 將 Next.js production 停止寫入。
 3. 保留 SQLite 現場檔案供事後分析。
-4. 公告回到 legacy fallback。
+4. 公告回到 fallback 狀態。
 
 ## 12. Reverse Proxy 範例
 
@@ -338,7 +338,7 @@ After=network.target
 
 [Service]
 Type=simple
-WorkingDirectory=/srv/jazamila/current/next-app
+WorkingDirectory=/srv/jazamila/current
 Environment=NODE_ENV=production
 EnvironmentFile=/srv/jazamila/shared/.env.production
 ExecStart=/usr/bin/npm run start
@@ -361,7 +361,7 @@ WantedBy=multi-user.target
 - [ ] SQLite DB backup 已建立。
 - [ ] uploads/assets 已備份。
 - [ ] rollback release 已確認。
-- [ ] reverse proxy config 可切回 legacy。
+- [ ] reverse proxy config 可切回上一個穩定 upstream。
 
 ## 15. 部署後 Checklist
 

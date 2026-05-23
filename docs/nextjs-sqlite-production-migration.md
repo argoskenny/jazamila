@@ -2,7 +2,7 @@
 
 ## 1. 目標
 
-將 `next-app` 統一為 SQLite-first persistence：development、test、production 都使用同一份 Prisma SQLite schema。
+將 repository root 統一為 SQLite-first persistence：development、test、production 都使用同一份 Prisma SQLite schema。
 
 本方案適合 JAZAMILA 目前的使用情境：
 
@@ -13,11 +13,11 @@
 
 ## 2. 檔案
 
-- SQLite Prisma schema: `next-app/prisma/schema.prisma`
-- Production env 範本: `next-app/.env.production.example`
-- SQLite 建檔工具: `next-app/prisma/ensure-sqlite.cjs`
-- Local seed: `next-app/prisma/seed.cjs`
-- Legacy MySQL 匯入 SQLite script: `next-app/scripts/import-legacy-mysql-to-sqlite.cjs`
+- SQLite Prisma schema: `prisma/schema.prisma`
+- Production env 範本: `.env.production.example`
+- SQLite 建檔工具: `prisma/ensure-sqlite.cjs`
+- Local seed: `prisma/seed.cjs`
+- Legacy MySQL 匯入 SQLite script: `scripts/import-legacy-mysql-to-sqlite.cjs`
 
 ## 3. Production SQLite 注意事項
 
@@ -46,7 +46,6 @@ DATABASE_URL="file:/var/lib/jazamila/jazamila.sqlite"
 ## 4. Production 初始化流程
 
 ```bash
-cd next-app
 cp .env.production.example .env.production
 ```
 
@@ -116,7 +115,7 @@ Prisma 欄位透過 `@map` 對應舊欄位，例如：
 - `BlogLink.restaurantId` -> `b_res_id`
 - `Feedback.timeUnix` -> `f_time`
 
-完整對照以 `next-app/prisma/schema.prisma` 為準。
+完整對照以 `prisma/schema.prisma` 為準。
 
 ## 7. 校驗
 

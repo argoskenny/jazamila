@@ -1,10 +1,11 @@
-# Next.js 重寫實作狀態
+# JAZAMILA Next.js 實作狀態
 
 ## 已完成
 
-- 建立 `next-app/`，保留既有 Laravel 專案不動。
+- 將專案根目錄整理為可直接執行的 Next.js App Router 專案。
+- 移除舊 Laravel 程式與舊版遷移文件。
 - 建立 Next.js App Router + TypeScript 專案骨架。
-- 加入 Prisma schema 草稿，欄位對應現有 Laravel migrations。
+- 加入 Prisma schema，欄位對應舊站資料表。
 - 建立 Prisma persistence，使用本機 SQLite 作為 development/test DB。
 - 完成前台頁面：
   - `/`
@@ -51,7 +52,6 @@
 ## 已驗證
 
 ```bash
-cd next-app
 npm run db:setup
 npm run typecheck
 npm test

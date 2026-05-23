@@ -1,5 +1,5 @@
 {
-  "name": "jazamila-next",
+  "name": "jazamila",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,11 +8,11 @@
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "test": "DATABASE_URL=file:./test.db node prisma/ensure-sqlite.cjs && DATABASE_URL=file:./test.db prisma db push --force-reset --skip-generate && DATABASE_URL=file:./test.db node prisma/seed.cjs && DATABASE_URL=file:./test.db vitest run",
-    "db:generate": "prisma generate",
-    "db:push": "prisma db push",
+    "db:generate": "DATABASE_URL=${DATABASE_URL:-file:./dev.db} prisma generate",
+    "db:push": "DATABASE_URL=${DATABASE_URL:-file:./dev.db} prisma db push",
     "db:push:prod": "node prisma/ensure-sqlite.cjs && prisma db push",
-    "db:seed": "node prisma/seed.cjs",
-    "db:setup": "node prisma/ensure-sqlite.cjs && prisma db push && node prisma/seed.cjs",
+    "db:seed": "DATABASE_URL=${DATABASE_URL:-file:./dev.db} node prisma/seed.cjs",
+    "db:setup": "DATABASE_URL=${DATABASE_URL:-file:./dev.db} node prisma/ensure-sqlite.cjs && DATABASE_URL=${DATABASE_URL:-file:./dev.db} prisma db push && DATABASE_URL=${DATABASE_URL:-file:./dev.db} node prisma/seed.cjs",
     "db:import:legacy:dry": "node scripts/import-legacy-mysql-to-sqlite.cjs --dry-run",
     "db:import:legacy": "node scripts/import-legacy-mysql-to-sqlite.cjs"
   },
