@@ -70,6 +70,7 @@ composer.lock
 # 臨時文件
 *.tmp
 *.temp
+.superpowers/
 
 # 備份文件
 *.bak

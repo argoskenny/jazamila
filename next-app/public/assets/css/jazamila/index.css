@@ -1,0 +1,216 @@
+@charset "utf-8";
+/* 去除連結虛線*/
+a, a:hover, a:focus
+{
+	outline: none; /* for Firefox */
+	behavior:expression(this.onFocus=this.blur());
+}
+.main
+{
+	padding-bottom:100px;
+	background-color:#D9EFEC;
+	text-align:center;
+}
+.main_title
+{
+	color:#34AC98;
+	font-size:60px;
+	padding-top:80px;
+}
+.main_text
+{
+	color:#34AC98;
+	font-size:28px;
+}
+.main .whattoeat
+{
+	background-color:#F97062;
+	border-style:none;
+	margin-top:80px;
+	width:350px;
+	height:90px;
+	font-size:34px;
+}
+.main .whattoeat:hover,.main .whattoeat:active
+{
+	background-color:#F25851;
+}
+
+/* 【吃什麼】條件選單 */
+.main_option
+{
+	margin-top:30px;
+}
+.circle_btn
+{
+	width:30px;
+	height:30px;
+	border-radius:15px;
+	color:#FFF;
+	display:block;
+	margin:0px auto;
+	background-color:#F97062;
+	text-align:center;
+}
+.circle_btn img
+{
+	width:20px;
+	height:20px;
+	margin-top: 5px;
+}
+.circle_btn:hover
+{
+	background-color:#F25851;
+	border-color:#F25851;
+	cursor:pointer;
+}
+#option_choose
+{
+	display:none;	
+}
+.option_select
+{
+	text-align:left;
+	margin:20px auto;
+}
+.option_select b
+{
+	color:#34AC98;
+	font-size:15px;
+	padding-left:14px;
+	line-height:35px;
+}
+.not_found
+{
+	margin:20px auto 0px auto;
+	color:#FFF;
+	font-size:15px;
+	line-height:30px;
+	background-color:#34AC98;
+	border-radius:5px;
+	width:97%;
+	display:none;
+}
+.remember_option
+{
+	color:#34AC98;
+	font-size:15px;
+	margin-top:20px;
+	font-weight:bold;
+}
+.form-control
+{
+	border-style:none;
+	font-size:15px;
+	height:45px;
+	
+}
+.form-control:focus
+{
+	border:#fdb0a8 solid 1px;
+	box-shadow:0px 0px 10px 1px #fdb0a8;
+	-webkit-box-shadow:0px 0px 10px 1px #fdb0a8;
+}
+/* 分享區塊 */
+.share
+{
+	height:450px;
+	text-align:center;
+}
+.share_list
+{
+	width:60%;
+	margin:0px auto;
+}
+.share_links img
+{
+	width:50px;
+	height:50px;
+}
+.share_links a
+{
+	background-color:#F97062;
+	width:50px;
+	height:50px;
+	border-radius:5px;
+	display:block;
+	margin:20px auto;
+}
+.share_links a:hover,.share_links a:active
+{
+	background-color:#F25851;
+	color:#000;
+}
+.plz-share
+{
+	font-size:60px;
+	padding-top:80px;
+}
+.dont_like
+{
+	color:#999;
+	font-size:15px;
+	margin-top:70px;
+}
+.dont_like a
+{
+	color:#F97062;
+}
+.dont_like a:hover
+{
+	color:#F25851;
+}
+
+@Media (max-width: 767px)
+{
+	.main
+	{
+		padding-bottom:50px;
+	}
+	.main_title
+	{
+		font-size:28px;
+		padding-top:50px;
+	}
+	.main_text
+	{
+		font-size:15px;
+	}
+	.main .whattoeat
+	{
+		margin-top:50px;
+		width:100%;
+		height:45px;
+		font-size:18px;
+	}
+	/* 修正bootstrap padding*/
+	.col-lg-12
+	{
+		padding-left:0px;
+		padding-right:0px;
+	}
+	
+	.share
+	{
+		height:300px;
+	}
+	.share_links a
+	{	
+		margin:10px auto;
+	}
+	.plz-share
+	{
+		font-size:28px;
+		padding-top:40px;
+	}
+	.dont_like
+	{
+		font-size:12px;
+		margin-top:20px;
+	}
+	.not_found
+	{
+		font-size:12px;
+		width:90%;
+	}
+}

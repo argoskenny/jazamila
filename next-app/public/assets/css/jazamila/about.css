@@ -1,0 +1,214 @@
+@charset "utf-8";
+/* 去除連結虛線*/
+a, a:hover, a:focus
+{
+	outline: none; /* for Firefox */
+	behavior:expression(this.onFocus=this.blur());
+}
+.main
+{
+	padding-bottom:80px;
+	background-color:#D9EFEC;
+	text-align:center;
+}
+.main_title
+{
+	color:#34AC98;
+	font-size:60px;
+	padding-top:80px;
+}
+.main_text
+{
+	color:#34AC98;
+	font-size:28px;
+}
+.share a
+{
+	color:#F97062;
+}
+.share a:hover,.share a:active
+{
+	color:#F25851;
+}
+.faq_title
+{
+	font-size:60px;
+	text-align:center;
+	margin-top:80px;
+	margin-bottom:40px;
+}
+.faq_q
+{
+	margin-bottom:20px;
+	font-size:15px;
+	font-weight:bold;
+}
+.faq_a
+{
+	margin-bottom:60px;
+	font-size:15px;
+}
+.main form
+{
+	text-align:left;
+	font-size:15px;
+	line-height:30px;
+	width:70%;
+	margin:0px auto;
+}
+#captcha
+{
+	width:90px;
+	display:inline-block;
+	height:30px;
+	text-align:center;
+	margin-left:10px;
+}
+#msg_captcha, #msg_captcha_error
+{
+	width:165px;
+}
+.form-group img
+{
+	height:30px;
+	width:60px;
+	border-radius:5px;
+	cursor:pointer;
+}
+.form-control
+{
+	border-style:none;
+	font-size:15px;
+	height:45px;
+	
+}
+.form-control:focus
+{
+	border:#fdb0a8 solid 1px;
+	box-shadow:0px 0px 10px 1px #fdb0a8;
+	-webkit-box-shadow:0px 0px 10px 1px #fdb0a8;
+}
+.form-group
+{
+	margin:40px 0px;
+}
+.form-group label
+{
+	color:#34AC98;
+	padding-left:14px;
+}
+.form_submit
+{
+	text-align:center;
+}
+form .btn
+{
+	background-color:#F97062;
+	border-style:none;
+	width:250px;
+	height:45px;
+	font-size:15px;
+	color:#FFF;
+}
+form .btn:hover, form .btn:active
+{
+	background-color:#F25851;
+	color:#FFF;
+}
+
+.msg
+{
+	margin-top:10px;
+	color:#FFF;
+	font-size:15px;
+	line-height:30px;
+	background-color:#34AC98;
+	border-radius:5px;
+	display:none;
+	text-align:center;
+}
+/* 感謝回覆 */
+.thank_feedback
+{
+	margin-top:200px;
+	margin-bottom:170px;
+	margin-left:auto;
+	margin-right:auto;
+	width:250px;
+	color:#FFF;
+	font-size:15px;
+	line-height:45px;
+	background-color:#34AC98;
+	border-radius:4px;
+	display:none;
+	text-align:center;
+}
+@Media (max-width: 767px)
+{ 
+	/* 修正 bootstrap padding */
+	.col-lg-12
+	{
+		padding-left:0px;
+		padding-right:0px;
+	}
+	.main
+	{
+		padding-bottom:50px;
+	}
+	.main_title
+	{
+		font-size:32px;
+		padding-top:40px;
+	}
+	.main_text
+	{
+		font-size:15px;
+	}
+	.main .whattoeat
+	{
+		margin-top:50px;
+		width:350px;
+		height:60px;
+		font-size:18px;
+	}
+	.faq_title
+	{
+		text-align:center;
+		padding:0px;
+		font-size:32px;
+		margin-top:30px;
+		margin-bottom:30px;
+	}
+	.faq_q
+	{
+		text-align:center;
+		margin-bottom:20px;
+		font-size:15px;
+	}
+	.faq_a
+	{
+		text-align:center;
+		margin-bottom:60px;
+		font-size:15px;
+	}
+	.contact_title
+	{
+		font-size:32px;
+		text-align:center;
+		margin-top:30px;
+		margin-bottom:30px;
+	}
+	.main form
+	{
+		line-height:30px;
+		width:100%;
+	}
+	.form-group
+	{
+		margin:20px 0px;
+	}
+	form .btn
+	{
+		width:100%;
+	}
+}

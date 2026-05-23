@@ -1,0 +1,86 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          Int      @id @default(autoincrement())
+  account     String   @unique
+  password    String
+  email       String   @unique
+  name        String?
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("users")
+}
+
+model Restaurant {
+  id            Int     @id @default(autoincrement())
+  name          String  @map("res_name")
+  areaNum       String? @map("res_area_num")
+  telNum        String? @map("res_tel_num")
+  region        Int     @default(0) @map("res_region")
+  section       Int     @default(0) @map("res_section")
+  address       String? @map("res_address")
+  foodType      Int     @default(0) @map("res_foodtype")
+  price         Int     @default(0) @map("res_price")
+  openTime      Int     @default(0) @map("res_open_time")
+  closeTime     Int     @default(0) @map("res_close_time")
+  note          String? @map("res_note")
+  imageUrl      String? @map("res_img_url")
+  originalImage String? @map("res_img_ori_url")
+  updatedAtUnix Int?    @map("res_updatetime")
+  postId        Int     @default(0) @map("res_post_id")
+  closed        Int     @default(0) @map("res_close")
+
+  @@map("r_restaurant")
+}
+
+model Post {
+  id            Int     @id @default(autoincrement())
+  name          String  @map("post_name")
+  areaNum       String? @map("post_area_num")
+  telNum        String? @map("post_tel_num")
+  region        Int     @default(0) @map("post_region")
+  section       Int     @default(0) @map("post_section")
+  address       String? @map("post_address")
+  foodType      Int     @default(0) @map("post_foodtype")
+  price         Int     @default(0) @map("post_price")
+  openTime      Int     @default(0) @map("post_open_time")
+  closeTime     Int     @default(0) @map("post_close_time")
+  note          String? @map("post_note")
+  updatedAtUnix Int     @default(0) @map("post_updatetime")
+  imageUrl      String? @map("post_img_url")
+  originalImage String? @map("post_img_ori_url")
+  status        Int     @default(0) @map("post_prove")
+
+  @@map("r_post")
+}
+
+model BlogLink {
+  id           Int         @id @default(autoincrement())
+  restaurantId Int         @default(0) @map("b_res_id")
+  postId       Int         @default(0) @map("b_post_id")
+  name         String?     @map("b_blogname")
+  url          String?     @map("b_bloglink")
+  status       Int         @default(0) @map("b_blog_show")
+
+  @@map("r_bloglink")
+}
+
+model Feedback {
+  id        Int    @id @default(autoincrement())
+  name      String? @map("f_name")
+  email     String? @map("f_email")
+  content   String? @map("f_content")
+  timeUnix  Int     @default(0) @map("f_time")
+  isRead    Int     @default(0) @map("f_isread")
+
+  @@map("r_feedback")
+}
