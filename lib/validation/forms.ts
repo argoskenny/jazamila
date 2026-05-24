@@ -36,26 +36,3 @@ export const restaurantAdminSchema = z.object({
   res_note: z.string().trim().max(4000).default(""),
   res_img_url: z.string().trim().max(255).default("preview_1380970870.jpg")
 });
-
-export const meetRegisterSchema = z
-  .object({
-    account: z.string().trim().regex(/^[A-Za-z0-9]+$/, "帳號只能使用英文字母與數字").min(3).max(40),
-    password: z.string().regex(/^[A-Za-z0-9]+$/, "密碼只能使用英文字母與數字").min(4).max(120),
-    password_confirmation: z.string().min(4).max(120),
-    email: z.string().trim().email().max(191)
-  })
-  .refine((data) => data.password === data.password_confirmation, {
-    message: "兩次密碼輸入不一致",
-    path: ["password_confirmation"]
-  });
-
-export const meetLoginSchema = z.object({
-  account: z.string().trim().min(1).max(40),
-  password: z.string().min(1).max(120)
-});
-
-export const meetProfileSchema = z.object({
-  name: z.string().trim().max(191).optional().default(""),
-  email: z.string().trim().email().max(191),
-  description: z.string().trim().max(4000).optional().default("")
-});

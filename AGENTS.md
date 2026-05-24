@@ -9,7 +9,6 @@ Main areas:
 - Public restaurant pages under `app/`, including `/`, `/listdata/...`, `/detail/[id]`, `/about`, `/map`, and `/post`.
 - Legacy-compatible Ajax endpoints under `app/jazamila_ajax/` and `app/save_post_data/`.
 - Admin pages under `app/admin/`.
-- Meet member pages under `app/meet/`, `app/meet_ajax/`, and `app/member/[id]/`.
 
 Static assets live in `public/assets/`. Persistence uses Prisma with SQLite.
 
@@ -49,10 +48,6 @@ Local demo accounts:
 Admin:
 username: admin
 password: password
-
-Meet:
-username: demo
-password: demo1234
 ```
 
 ## Verification

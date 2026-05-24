@@ -22,7 +22,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <Link href="/about">關於本站</Link>
             <Link href="/post">餐廳分享</Link>
             <Link href="/map">美食地圖</Link>
-            <Link href="/meet">Meet</Link>
           </nav>
         </header>
         <main>{children}</main>

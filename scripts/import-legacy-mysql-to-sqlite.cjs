@@ -36,11 +36,6 @@ function toStringOrNull(value) {
   return string === "" ? null : string;
 }
 
-async function tableExists(connection, tableName) {
-  const [rows] = await connection.query("SHOW TABLES LIKE ?", [tableName]);
-  return rows.length > 0;
-}
-
 async function fetchAll(connection, tableName) {
   const [rows] = await connection.query(`SELECT * FROM \`${tableName}\` ORDER BY id ASC`);
   return rows;
@@ -140,33 +135,11 @@ async function migrateFeedback(connection) {
   await replaceTable(prisma.feedback, data, "r_feedback");
 }
 
-async function migrateUsers(connection) {
-  if (!(await tableExists(connection, "users"))) {
-    console.log("users: skipped, legacy table not found");
-    return;
-  }
-
-  const rows = await fetchAll(connection, "users");
-  const data = rows.map((row) => ({
-    id: toInt(row.id),
-    account: String(row.account || ""),
-    password: String(row.password || ""),
-    email: String(row.email || ""),
-    name: toStringOrNull(row.name),
-    description: toStringOrNull(row.description),
-    createdAt: row.created_at ? new Date(row.created_at) : new Date(),
-    updatedAt: row.updated_at ? new Date(row.updated_at) : new Date()
-  }));
-
-  await replaceTable(prisma.user, data, "users");
-}
-
 async function clearTarget() {
   await prisma.blogLink.deleteMany();
   await prisma.feedback.deleteMany();
   await prisma.post.deleteMany();
   await prisma.restaurant.deleteMany();
-  await prisma.user.deleteMany();
 }
 
 async function validateCounts(connection) {
@@ -196,7 +169,6 @@ async function main() {
     await migratePosts(legacy);
     await migrateBlogLinks(legacy);
     await migrateFeedback(legacy);
-    await migrateUsers(legacy);
     await validateCounts(legacy);
   } finally {
     await legacy.end();

@@ -67,7 +67,6 @@ DATABASE_URL="file:/var/lib/jazamila/jazamila.sqlite"
 ADMIN_USERNAME="admin"
 ADMIN_PASSWORD="replace-with-a-strong-password"
 ADMIN_SESSION_SECRET="replace-with-at-least-32-random-bytes"
-MEET_SESSION_SECRET="replace-with-at-least-32-random-bytes"
 NEXT_PUBLIC_APP_URL="https://jazamila.example.com"
 ```
 
@@ -84,7 +83,6 @@ DATABASE_URL="file:/var/lib/jazamila-staging/jazamila.sqlite"
 ADMIN_USERNAME="admin"
 ADMIN_PASSWORD="replace-with-a-staging-password"
 ADMIN_SESSION_SECRET="replace-with-staging-secret"
-MEET_SESSION_SECRET="replace-with-staging-meet-secret"
 NEXT_PUBLIC_APP_URL="https://staging.jazamila.example.com"
 LEGACY_DATABASE_URL="mysql://legacy_user:password@host:3306/jazamila_legacy"
 ```
@@ -92,7 +90,7 @@ LEGACY_DATABASE_URL="mysql://legacy_user:password@host:3306/jazamila_legacy"
 注意：
 
 - 不要提交 `.env.production`。
-- `ADMIN_SESSION_SECRET` 與 `MEET_SESSION_SECRET` 不要共用 production/staging。
+- `ADMIN_SESSION_SECRET` 不要共用 production/staging。
 - `DATABASE_URL` 指向的目錄必須可被 Node.js process 寫入。
 
 ## 5. 首次 Staging 部署
@@ -226,7 +224,6 @@ Production smoke tests：
 curl -I https://jazamila.example.com/
 curl -I https://jazamila.example.com/listdata/0/0/0/0/1
 curl -I https://jazamila.example.com/detail/1
-curl -I https://jazamila.example.com/meet
 curl -I https://jazamila.example.com/admin/login
 curl -s https://jazamila.example.com/jsonapi | head
 ```
@@ -369,7 +366,6 @@ WantedBy=multi-user.target
 - [ ] `/listdata/0/0/0/0/1` 200。
 - [ ] `/detail/1` 200 或抽樣餐廳 ID 200。
 - [ ] `/jsonapi` 回傳 JSON。
-- [ ] `/meet` 200。
 - [ ] `/admin/login` 200。
 - [ ] logs 無持續錯誤。
 - [ ] SQLite backup job 正常。

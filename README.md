@@ -36,20 +36,13 @@ npm run build
 - `tests/unit/` - Vitest unit tests.
 - `docs/` - deployment and data migration notes.
 
-## Local Accounts
+## Local Account
 
 Admin:
 
 ```text
 username: admin
 password: password
-```
-
-Meet demo member:
-
-```text
-username: demo
-password: demo1234
 ```
 
 ## Production Notes
@@ -60,11 +53,11 @@ Production uses SQLite-first deployment planning. Start with:
 - `docs/nextjs-deployment-runbook.md`
 - `docs/nextjs-sqlite-production-migration.md`
 
-Production must set real values for `ADMIN_USERNAME`, `ADMIN_PASSWORD`, `ADMIN_SESSION_SECRET`, and `MEET_SESSION_SECRET`.
+Production must set real values for `ADMIN_USERNAME`, `ADMIN_PASSWORD`, and `ADMIN_SESSION_SECRET`.
 
 ## Remaining Decisions
 
 - Run the SQLite import plan against a staging copy of the legacy database.
 - Confirm production persistent volume and backup strategy.
 - Replace local image filename handling with object storage or a persistent upload volume if needed.
-- Add Playwright E2E coverage for the public, admin, and Meet flows.
+- Add Playwright E2E coverage for the public and admin flows.

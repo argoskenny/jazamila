@@ -69,16 +69,6 @@ export type Post = {
   post_prove: number;
 };
 
-export type MeetUser = {
-  id: number;
-  account: string;
-  email: string;
-  name: string;
-  description: string;
-  createdAt: Date;
-  updatedAt: Date;
-};
-
 export type HomePreferences = {
   remember: number;
   foodwhere_region: number;

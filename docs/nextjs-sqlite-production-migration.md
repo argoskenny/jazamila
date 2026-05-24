@@ -94,7 +94,6 @@ LEGACY_DATABASE_URL="mysql://legacy_user:password@host:3306/jazamila_legacy" \
 - `r_feedback`
 - `r_post`
 - `r_restaurant`
-- `users`
 
 再從 legacy MySQL 依表匯入。
 
@@ -102,7 +101,6 @@ LEGACY_DATABASE_URL="mysql://legacy_user:password@host:3306/jazamila_legacy" \
 
 SQLite schema 保留既有 table names：
 
-- `users`
 - `r_restaurant`
 - `r_post`
 - `r_bloglink`

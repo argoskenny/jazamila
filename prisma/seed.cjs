@@ -1,5 +1,4 @@
 const { PrismaClient } = require("@prisma/client");
-const bcrypt = require("bcryptjs");
 
 process.env.DATABASE_URL ||= "file:./dev.db";
 
@@ -10,7 +9,6 @@ async function main() {
   await prisma.feedback.deleteMany();
   await prisma.post.deleteMany();
   await prisma.restaurant.deleteMany();
-  await prisma.user.deleteMany();
 
   await prisma.restaurant.createMany({
     data: [
@@ -127,16 +125,6 @@ async function main() {
     }
   });
 
-  await prisma.user.create({
-    data: {
-      id: 1,
-      account: "demo",
-      password: await bcrypt.hash("demo1234", 12),
-      email: "demo@example.com",
-      name: "Demo Member",
-      description: "Meet 模組示範會員。"
-    }
-  });
 }
 
 main()
