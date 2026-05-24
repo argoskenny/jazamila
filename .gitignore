@@ -1,32 +1,51 @@
-# dependencies
+# Dependencies
 node_modules/
 
-# Next.js
+# Next.js build output
 .next/
 out/
 dist/
 
-# test/build output
-coverage/
+# TypeScript and test output
 *.tsbuildinfo
+coverage/
 
-# local env
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production
-.env.production.local
+# Environment files
+.env*
+!.env.example
+!.env.production.example
 
-# local SQLite/runtime data
-*.db
-*.db-journal
-*.sqlite
-*.sqlite-journal
+# Prisma / SQLite local databases
+prisma/*.db
+prisma/*.db-journal
+prisma/*.db-shm
+prisma/*.db-wal
+prisma/*.sqlite
+prisma/*.sqlite-journal
+prisma/*.sqlite-shm
+prisma/*.sqlite-wal
+prisma/*.sqlite3
+prisma/*.sqlite3-journal
+prisma/*.sqlite3-shm
+prisma/*.sqlite3-wal
 
-# local tooling
-.DS_Store
-.superpowers/
+# Runtime uploads and generated user assets
+public/assets/pics/*
+public/assets/post/*
+public/assets/tmp/*
+!public/assets/pics/.gitkeep
+!public/assets/post/.gitkeep
+!public/assets/tmp/.gitkeep
+
+# Package manager logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+
+# Local tooling and OS/editor files
+.DS_Store
+.superpowers/
+.vercel/
+.vscode/
+.idea/

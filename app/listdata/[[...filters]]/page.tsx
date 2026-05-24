@@ -32,7 +32,7 @@ export default async function ListDataPage({ params, searchParams }: Props) {
       <div className="restaurant-list">
         {result.restaurants.map((restaurant) => (
           <article className="restaurant-card" key={restaurant.id}>
-            <img src={restaurant.imagePath} alt="" />
+            <img src={restaurant.imagePath} alt={restaurant.res_name} />
             <div>
               <h2>
                 <Link href={`/detail/${restaurant.id}?ul=${filters.location}&ut=${filters.foodType}&umx=${filters.maxPrice}&umi=${filters.minPrice}&p=${result.page}`}>

@@ -64,9 +64,9 @@ Production `.env.production` 必填：
 
 ```env
 DATABASE_URL="file:/var/lib/jazamila/jazamila.sqlite"
-ADMIN_USERNAME="admin"
+ADMIN_USERNAME="replace-with-private-admin-username"
 ADMIN_PASSWORD="replace-with-a-strong-password"
-ADMIN_SESSION_SECRET="replace-with-at-least-32-random-bytes"
+ADMIN_SESSION_SECRET="replace-with-at-least-32-random-characters"
 NEXT_PUBLIC_APP_URL="https://jazamila.example.com"
 ```
 
@@ -80,9 +80,9 @@ Staging `.env.production` 範例：
 
 ```env
 DATABASE_URL="file:/var/lib/jazamila-staging/jazamila.sqlite"
-ADMIN_USERNAME="admin"
+ADMIN_USERNAME="replace-with-private-staging-admin-username"
 ADMIN_PASSWORD="replace-with-a-staging-password"
-ADMIN_SESSION_SECRET="replace-with-staging-secret"
+ADMIN_SESSION_SECRET="replace-with-at-least-32-random-characters"
 NEXT_PUBLIC_APP_URL="https://staging.jazamila.example.com"
 LEGACY_DATABASE_URL="mysql://legacy_user:password@host:3306/jazamila_legacy"
 ```
@@ -90,7 +90,8 @@ LEGACY_DATABASE_URL="mysql://legacy_user:password@host:3306/jazamila_legacy"
 注意：
 
 - 不要提交 `.env.production`。
-- `ADMIN_SESSION_SECRET` 不要共用 production/staging。
+- `ADMIN_PASSWORD` 正式環境至少 16 字元，不能使用開發預設密碼。
+- `ADMIN_SESSION_SECRET` 正式環境至少 32 字元，不要共用 production/staging。
 - `DATABASE_URL` 指向的目錄必須可被 Node.js process 寫入。
 
 ## 5. 首次 Staging 部署

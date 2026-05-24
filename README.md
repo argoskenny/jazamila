@@ -54,6 +54,7 @@ Production uses SQLite-first deployment planning. Start with:
 - `docs/nextjs-sqlite-production-migration.md`
 
 Production must set real values for `ADMIN_USERNAME`, `ADMIN_PASSWORD`, and `ADMIN_SESSION_SECRET`.
+In production, the app rejects missing admin credentials, the development password, short admin passwords, and short session secrets.
 
 ## Remaining Decisions
 

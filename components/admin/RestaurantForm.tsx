@@ -20,11 +20,11 @@ export function RestaurantForm({ action, restaurant, submitLabel }: Props) {
       </label>
       <label className="field">
         <span>電話區碼</span>
-        <input className="input" name="res_area_num" defaultValue={restaurant?.res_area_num ?? "02"} />
+        <input className="input" name="res_area_num" defaultValue={restaurant?.res_area_num ?? "02"} inputMode="numeric" />
       </label>
       <label className="field">
         <span>電話</span>
-        <input className="input" name="res_tel_num" defaultValue={restaurant?.res_tel_num} />
+        <input className="input" name="res_tel_num" defaultValue={restaurant?.res_tel_num} inputMode="numeric" />
       </label>
       <label className="field">
         <span>縣市</span>
@@ -62,7 +62,7 @@ export function RestaurantForm({ action, restaurant, submitLabel }: Props) {
       </label>
       <label className="field">
         <span>平均價位</span>
-        <input className="input" name="res_price" type="number" min={0} defaultValue={restaurant?.res_price ?? 100} />
+        <input className="input" name="res_price" type="number" min={0} defaultValue={restaurant?.res_price ?? 100} inputMode="numeric" />
       </label>
       <label className="field">
         <span>圖片檔名</span>

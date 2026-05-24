@@ -16,7 +16,7 @@ export default async function MapPage() {
       <div className="restaurant-list">
         {restaurants.map((restaurant) => (
           <article className="restaurant-card" key={restaurant.id}>
-            <img src={restaurant.imagePath} alt="" />
+            <img src={restaurant.imagePath} alt={restaurant.res_name} />
             <div>
               <h2>{restaurant.res_name}</h2>
               <p>{restaurant.res_address}</p>

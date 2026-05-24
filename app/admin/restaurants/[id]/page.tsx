@@ -16,7 +16,7 @@ export default async function AdminRestaurantDetailPage({ params }: Props) {
   return (
     <div className="detail-grid">
       <div className="detail-media">
-        <img src={restaurant.imagePath} alt="" />
+        <img src={restaurant.imagePath} alt={restaurant.res_name} />
       </div>
       <div className="panel">
         <h1 className="page-title">{restaurant.res_name}</h1>

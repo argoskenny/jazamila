@@ -100,6 +100,17 @@ function fromPrismaRestaurant(restaurant: PrismaRestaurant): Restaurant {
   };
 }
 
+function imagePathForFoodType(foodType: number): string {
+  const images: Record<number, string> = {
+    1: "/assets/img/jazamila/generated/cuisine-japanese.png",
+    2: "/assets/img/jazamila/generated/cuisine-american.png",
+    3: "/assets/img/jazamila/generated/cuisine-italian.png",
+    4: "/assets/img/jazamila/generated/cuisine-street-food.png"
+  };
+
+  return images[foodType] ?? "/assets/img/jazamila/generated/cuisine-street-food.png";
+}
+
 export function toRestaurantView(restaurant: Restaurant): RestaurantView {
   const tel = restaurant.res_tel_num ? `(${restaurant.res_area_num}) ${restaurant.res_tel_num}` : "未提供";
 
@@ -110,7 +121,7 @@ export function toRestaurantView(restaurant: Restaurant): RestaurantView {
     foodTypeLabel: labelFor(foodTypes, restaurant.res_foodtype, "未分類"),
     telLabel: tel,
     priceLabel: restaurant.res_price > 0 ? `${restaurant.res_price} 元左右` : "價格彈性",
-    imagePath: `/assets/post/${restaurant.res_img_url}`
+    imagePath: imagePathForFoodType(restaurant.res_foodtype)
   };
 }
 

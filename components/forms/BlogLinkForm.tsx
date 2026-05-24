@@ -38,7 +38,7 @@ export function BlogLinkForm({ restaurantId }: { restaurantId: number }) {
       <button className="button secondary" type="submit" disabled={isSubmitting}>
         送出
       </button>
-      {status ? <p className="status">{status}</p> : null}
+      {status ? <p className="status" role="status">{status}</p> : null}
     </form>
   );
 }

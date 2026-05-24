@@ -5,9 +5,48 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
 const cookieName = "jazamila_admin";
+const sessionMaxAgeSeconds = 60 * 60 * 8;
+const sessionMaxAgeMs = sessionMaxAgeSeconds * 1000;
+const minProductionPasswordLength = 16;
+const minProductionSecretLength = 32;
+
+function isProduction(): boolean {
+  return process.env.NODE_ENV === "production";
+}
+
+function requiredProductionEnv(name: string): string {
+  const value = process.env[name]?.trim();
+  if (value) return value;
+  if (!isProduction()) return "";
+  throw new Error(`${name} must be set in production`);
+}
+
+function adminUsername(): string {
+  return requiredProductionEnv("ADMIN_USERNAME") || "admin";
+}
+
+function adminPassword(): string {
+  const password = requiredProductionEnv("ADMIN_PASSWORD") || "password";
+  if (isProduction()) {
+    if (password === "password") throw new Error("ADMIN_PASSWORD must not use the development default");
+    if (password.length < minProductionPasswordLength) {
+      throw new Error(`ADMIN_PASSWORD must be at least ${minProductionPasswordLength} characters in production`);
+    }
+  }
+  return password;
+}
 
 function secret(): string {
-  return process.env.ADMIN_SESSION_SECRET || "jazamila-local-development-secret";
+  const value = requiredProductionEnv("ADMIN_SESSION_SECRET") || "jazamila-local-development-secret";
+  if (isProduction()) {
+    if (value === "jazamila-local-development-secret") {
+      throw new Error("ADMIN_SESSION_SECRET must not use the development default");
+    }
+    if (value.length < minProductionSecretLength) {
+      throw new Error(`ADMIN_SESSION_SECRET must be at least ${minProductionSecretLength} characters in production`);
+    }
+  }
+  return value;
 }
 
 function sign(payload: string): string {
@@ -21,13 +60,13 @@ function safeEqual(a: string, b: string): boolean {
 }
 
 export function verifyAdminCredentials(username: string, password: string): boolean {
-  const expectedUsername = process.env.ADMIN_USERNAME || "admin";
-  const expectedPassword = process.env.ADMIN_PASSWORD || "password";
+  const expectedUsername = adminUsername();
+  const expectedPassword = adminPassword();
   return safeEqual(username, expectedUsername) && safeEqual(password, expectedPassword);
 }
 
-export function createAdminToken(username: string): string {
-  const payload = Buffer.from(JSON.stringify({ username, issuedAt: Date.now() })).toString("base64url");
+export function createAdminToken(username: string, issuedAt = Date.now()): string {
+  const payload = Buffer.from(JSON.stringify({ username, issuedAt })).toString("base64url");
   return `${payload}.${sign(payload)}`;
 }
 
@@ -42,6 +81,9 @@ export function verifyAdminToken(token: string | undefined): { username: string 
       issuedAt?: number;
     };
     if (!data.username || !data.issuedAt) return null;
+    if (!Number.isFinite(data.issuedAt)) return null;
+    if (data.issuedAt > Date.now() + 60 * 1000) return null;
+    if (Date.now() - data.issuedAt > sessionMaxAgeMs) return null;
     return { username: data.username };
   } catch {
     return null;
@@ -66,7 +108,7 @@ export async function setAdminSession(username: string): Promise<void> {
     sameSite: "lax",
     secure: process.env.NODE_ENV === "production",
     path: "/",
-    maxAge: 60 * 60 * 8
+    maxAge: sessionMaxAgeSeconds
   });
 }
 

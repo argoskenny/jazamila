@@ -44,7 +44,7 @@ export function PickRestaurantForm({ preferences, regions, sectionsByRegion, foo
   }
 
   return (
-    <form className="panel form-grid" onSubmit={onSubmit}>
+    <form className="panel form-grid decision-form" aria-busy={isSubmitting} onSubmit={onSubmit}>
       <h2>吃什麼？</h2>
       <label className="field">
         <span>吃哪邊？</span>
@@ -77,27 +77,29 @@ export function PickRestaurantForm({ preferences, regions, sectionsByRegion, foo
         </select>
       </label>
 
-      <label className="field">
-        <span>吃多少？</span>
-        <select className="select" name="foodmoney_min" defaultValue={preferences.foodmoney_min}>
-          {moneyOptions.map((option) => (
-            <option key={option.id} value={option.id}>
-              {option.id === 0 ? "0元" : option.label}
-            </option>
-          ))}
-        </select>
-      </label>
+      <div className="form-row">
+        <label className="field">
+          <span>吃多少？</span>
+          <select className="select" name="foodmoney_min" defaultValue={preferences.foodmoney_min}>
+            {moneyOptions.map((option) => (
+              <option key={option.id} value={option.id}>
+                {option.id === 0 ? "0元" : option.label}
+              </option>
+            ))}
+          </select>
+        </label>
 
-      <label className="field">
-        <span>至</span>
-        <select className="select" name="foodmoney_max" defaultValue={preferences.foodmoney_max}>
-          {moneyOptions.map((option) => (
-            <option key={option.id} value={option.id}>
-              {option.label}
-            </option>
-          ))}
-        </select>
-      </label>
+        <label className="field">
+          <span>至</span>
+          <select className="select" name="foodmoney_max" defaultValue={preferences.foodmoney_max}>
+            {moneyOptions.map((option) => (
+              <option key={option.id} value={option.id}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
 
       <label className="field">
         <span>吃哪種？</span>
@@ -123,7 +125,7 @@ export function PickRestaurantForm({ preferences, regions, sectionsByRegion, foo
           看全部
         </a>
       </div>
-      {status ? <p className="status">{status}</p> : null}
+      {status ? <p className="status" role="alert">{status}</p> : null}
     </form>
   );
 }

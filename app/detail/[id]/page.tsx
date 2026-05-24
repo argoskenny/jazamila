@@ -34,7 +34,7 @@ export default async function DetailPage({ params, searchParams }: Props) {
   return (
     <section className="page-shell detail-grid">
       <div className="detail-media">
-        <img src={restaurant.imagePath} alt="" />
+        <img src={restaurant.imagePath} alt={restaurant.res_name} />
       </div>
       <div className="form-grid">
         <div className="panel">

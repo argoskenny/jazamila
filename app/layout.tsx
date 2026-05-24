@@ -4,7 +4,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "JAZAMILA",
-  description: "JAZAMILA內有許多美食、餐廳的資料，幫你解決不知該吃哪間餐廳的煩惱。"
+  description: "JAZAMILA內有許多美食、餐廳的資料，幫你解決不知該吃哪間餐廳的煩惱。",
+  icons: {
+    icon: "/assets/img/jazamila/logo/jazamila.ico"
+  }
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -13,7 +16,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <header className="site-header">
           <Link href="/" className="brand" aria-label="JAZAMILA 首頁">
-            <img src="/assets/img/jazamila/logo/jazamila_logo.png" alt="" className="brand-logo" />
+            <span className="brand-mark" aria-hidden="true">J</span>
             <span>JAZAMILA</span>
           </Link>
           <nav className="site-nav" aria-label="主要導覽">

@@ -69,11 +69,11 @@ export function RestaurantPostForm({ regions, sectionsByRegion, foodTypes }: Pro
       </label>
       <label className="field">
         <span>餐廳電話區碼</span>
-        <input className="input" name="post_area_num" />
+        <input className="input" name="post_area_num" inputMode="numeric" />
       </label>
       <label className="field">
         <span>餐廳電話</span>
-        <input className="input" name="post_tel_num" />
+        <input className="input" name="post_tel_num" inputMode="numeric" />
       </label>
       <label className="field">
         <span>美食類別 *</span>
@@ -87,7 +87,7 @@ export function RestaurantPostForm({ regions, sectionsByRegion, foodTypes }: Pro
       </label>
       <label className="field">
         <span>平均價位</span>
-        <input className="input" name="post_price" type="number" min={0} />
+        <input className="input" name="post_price" type="number" min={0} inputMode="numeric" />
       </label>
       <label className="field">
         <span>餐廳介紹</span>
@@ -96,7 +96,7 @@ export function RestaurantPostForm({ regions, sectionsByRegion, foodTypes }: Pro
       <button className="button" type="submit" disabled={isSubmitting}>
         確定送出
       </button>
-      {status ? <p className="status">{status}</p> : null}
+      {status ? <p className="status" role="status">{status}</p> : null}
     </form>
   );
 }
