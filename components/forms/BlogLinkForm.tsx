@@ -19,24 +19,24 @@ export function BlogLinkForm({ restaurantId }: { restaurantId: number }) {
       body: formData
     });
     const data = (await response.json()) as { status: string };
-    setStatus(data.status === "success" ? "已送出，待後台審核。" : "送出失敗，請確認網址。");
+    setStatus(data.status === "success" ? "已儲存成功，感謝你的分享！" : "送出失敗，請確認網址。");
     setIsSubmitting(false);
     if (data.status === "success") event.currentTarget.reset();
   }
 
   return (
     <form className="panel form-grid" onSubmit={onSubmit}>
-      <h2>分享食記</h2>
+      <h2>新增食記</h2>
       <label className="field">
         <span>食記名稱</span>
-        <input className="input" name="res_blogname" required />
+        <input className="input" name="res_blogname" placeholder="請輸入食記名稱" required />
       </label>
       <label className="field">
-        <span>網址</span>
-        <input className="input" name="res_bloglink" type="url" required />
+        <span>食記網址</span>
+        <input className="input" name="res_bloglink" placeholder="請輸入食記網址" type="url" required />
       </label>
       <button className="button secondary" type="submit" disabled={isSubmitting}>
-        送出食記
+        送出
       </button>
       {status ? <p className="status">{status}</p> : null}
     </form>

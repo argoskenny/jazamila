@@ -22,7 +22,7 @@ export function PickRestaurantForm({ preferences, regions, sectionsByRegion, foo
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setIsSubmitting(true);
-    setStatus("正在挑一間餐廳...");
+    setStatus("");
 
     const form = new FormData(event.currentTarget);
     form.set("foodwhere_section", String(sectionId));
@@ -39,15 +39,15 @@ export function PickRestaurantForm({ preferences, regions, sectionsByRegion, foo
       return;
     }
 
-    setStatus("這組條件暫時挑不到餐廳，放寬一點再試試。");
+    setStatus("找不到餐廳耶...也許你該換個條件試試？");
     setIsSubmitting(false);
   }
 
   return (
     <form className="panel form-grid" onSubmit={onSubmit}>
-      <h2>今天吃什麼？</h2>
+      <h2>吃什麼？</h2>
       <label className="field">
-        <span>縣市</span>
+        <span>吃哪邊？</span>
         <select
           className="select"
           name="foodwhere_region"
@@ -66,7 +66,7 @@ export function PickRestaurantForm({ preferences, regions, sectionsByRegion, foo
       </label>
 
       <label className="field">
-        <span>區域</span>
+        <span>地區或商圈</span>
         <select className="select" value={sectionId} onChange={(event) => setSectionId(Number(event.target.value))}>
           <option value={0}>全區</option>
           {sections.map((section) => (
@@ -78,7 +78,7 @@ export function PickRestaurantForm({ preferences, regions, sectionsByRegion, foo
       </label>
 
       <label className="field">
-        <span>最低價位</span>
+        <span>吃多少？</span>
         <select className="select" name="foodmoney_min" defaultValue={preferences.foodmoney_min}>
           {moneyOptions.map((option) => (
             <option key={option.id} value={option.id}>
@@ -89,7 +89,7 @@ export function PickRestaurantForm({ preferences, regions, sectionsByRegion, foo
       </label>
 
       <label className="field">
-        <span>最高價位</span>
+        <span>至</span>
         <select className="select" name="foodmoney_max" defaultValue={preferences.foodmoney_max}>
           {moneyOptions.map((option) => (
             <option key={option.id} value={option.id}>
@@ -100,7 +100,7 @@ export function PickRestaurantForm({ preferences, regions, sectionsByRegion, foo
       </label>
 
       <label className="field">
-        <span>美食類型</span>
+        <span>吃哪種？</span>
         <select className="select" name="foodtype" defaultValue={preferences.foodtype}>
           {foodTypes.map((foodType) => (
             <option key={foodType.id} value={foodType.id}>
@@ -112,7 +112,7 @@ export function PickRestaurantForm({ preferences, regions, sectionsByRegion, foo
 
       <label className="checkbox-row">
         <input name="remember" value="1" type="checkbox" defaultChecked={preferences.remember === 1} />
-        記得我選的條件
+        記得我選的條件。
       </label>
 
       <div className="actions">

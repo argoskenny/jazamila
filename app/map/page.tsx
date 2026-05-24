@@ -11,7 +11,6 @@ export default async function MapPage() {
       <div className="list-header">
         <div>
           <h1 className="page-title">美食地圖</h1>
-          <p className="lead">第一版先以餐廳位置清單呈現，後續可接地圖服務。</p>
         </div>
       </div>
       <div className="restaurant-list">

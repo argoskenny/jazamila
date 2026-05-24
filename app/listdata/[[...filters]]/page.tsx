@@ -22,7 +22,7 @@ export default async function ListDataPage({ params, searchParams }: Props) {
           <p className="lead">{describeFilters(filters)}</p>
         </div>
         <form className="actions" action="/listdata/0/0/0/0/1">
-          <input className="input" name="search_keyword" defaultValue={filters.keyword} placeholder="搜尋餐廳" />
+          <input className="input" name="search_keyword" defaultValue={filters.keyword} placeholder="請輸入關鍵字" />
           <button className="button secondary" type="submit">
             搜尋
           </button>
@@ -49,14 +49,19 @@ export default async function ListDataPage({ params, searchParams }: Props) {
                 className="text-link"
                 href={`/detail/${restaurant.id}?ul=${filters.location}&ut=${filters.foodType}&umx=${filters.maxPrice}&umi=${filters.minPrice}&p=${result.page}`}
               >
-                查看詳細
+                查看詳細資料
               </Link>
             </div>
           </article>
         ))}
       </div>
 
-      {result.restaurants.length === 0 ? <p className="panel">目前沒有符合條件的餐廳。</p> : null}
+      {result.restaurants.length === 0 ? (
+        <p className="panel">
+          暫時沒有符合的搜尋結果。<br />
+          建議您輸入其他的關鍵字，或重新選擇縮小列表範圍的條件。
+        </p>
+      ) : null}
 
       <nav className="pagination" aria-label="分頁">
         {pagination.map((item, index) =>

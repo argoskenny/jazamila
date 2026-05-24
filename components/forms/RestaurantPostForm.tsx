@@ -25,7 +25,7 @@ export function RestaurantPostForm({ regions, sectionsByRegion, foodTypes }: Pro
       body: new FormData(event.currentTarget)
     });
     const data = (await response.json()) as { status: string };
-    setStatus(data.status === "success" ? "投稿已送出，待後台審核。" : "投稿失敗，請確認必填欄位。");
+    setStatus(data.status === "success" ? "已儲存成功，感謝你的分享！" : "投稿失敗，請確認必填欄位。");
     setIsSubmitting(false);
     if (data.status === "success") event.currentTarget.reset();
   }
@@ -34,11 +34,11 @@ export function RestaurantPostForm({ regions, sectionsByRegion, foodTypes }: Pro
     <form className="panel form-grid" onSubmit={onSubmit}>
       <h2>餐廳分享</h2>
       <label className="field">
-        <span>餐廳名稱</span>
-        <input className="input" name="post_name" required />
+        <span>餐廳名稱 *</span>
+        <input className="input" name="post_name" placeholder="請輸入餐廳名稱" required />
       </label>
       <label className="field">
-        <span>縣市</span>
+        <span>縣市 *</span>
         <select
           className="select"
           name="post_region"
@@ -53,7 +53,7 @@ export function RestaurantPostForm({ regions, sectionsByRegion, foodTypes }: Pro
         </select>
       </label>
       <label className="field">
-        <span>區域</span>
+        <span>地區 *</span>
         <select className="select" name="post_section">
           <option value={0}>全區</option>
           {sections.map((section) => (
@@ -64,19 +64,19 @@ export function RestaurantPostForm({ regions, sectionsByRegion, foodTypes }: Pro
         </select>
       </label>
       <label className="field">
-        <span>地址</span>
-        <input className="input" name="post_address" />
+        <span>餐廳地址 *</span>
+        <input className="input" name="post_address" placeholder="請輸入餐廳地址" />
       </label>
       <label className="field">
-        <span>電話區碼</span>
+        <span>餐廳電話區碼</span>
         <input className="input" name="post_area_num" />
       </label>
       <label className="field">
-        <span>電話</span>
+        <span>餐廳電話</span>
         <input className="input" name="post_tel_num" />
       </label>
       <label className="field">
-        <span>美食類型</span>
+        <span>美食類別 *</span>
         <select className="select" name="post_foodtype">
           {foodTypes.map((foodType) => (
             <option key={foodType.id} value={foodType.id}>
@@ -90,11 +90,11 @@ export function RestaurantPostForm({ regions, sectionsByRegion, foodTypes }: Pro
         <input className="input" name="post_price" type="number" min={0} />
       </label>
       <label className="field">
-        <span>備註</span>
-        <textarea className="textarea" name="post_note" />
+        <span>餐廳介紹</span>
+        <textarea className="textarea" name="post_note" placeholder="請輸入餐廳介紹" />
       </label>
       <button className="button" type="submit" disabled={isSubmitting}>
-        送出分享
+        確定送出
       </button>
       {status ? <p className="status">{status}</p> : null}
     </form>

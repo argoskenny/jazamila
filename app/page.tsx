@@ -10,10 +10,8 @@ export default async function HomePage() {
   return (
     <section className="page-shell hero-grid">
       <div className="hero-copy">
-        <h1>JAZAMILA</h1>
-        <p>
-          選擇生活，選擇今天別再把午餐想成一場會議。條件填一填，剩下交給站長當年留下來的精神。
-        </p>
+        <h1>生活總有太多選擇</h1>
+        <p>無法作出決定？別擔心，我可以幫你</p>
       </div>
       <PickRestaurantForm
         preferences={preferences}

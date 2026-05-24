@@ -38,6 +38,7 @@ export default async function DetailPage({ params, searchParams }: Props) {
       </div>
       <div className="form-grid">
         <div className="panel">
+          <p className="lead">今天就吃...</p>
           <h1 className="page-title">{restaurant.res_name}</h1>
           <p className="meta">
             <span className="tag">{restaurant.regionLabel}{restaurant.sectionLabel}</span>
@@ -50,16 +51,16 @@ export default async function DetailPage({ params, searchParams }: Props) {
             {restaurant.res_address}
           </p>
           <p>
-            <strong>電話：</strong>
+            <strong>餐廳電話：</strong>
             {restaurant.telLabel}
           </p>
           <Link className="text-link" href={`/listdata/${listRecord}`}>
-            回餐廳列表
+            返回列表
           </Link>
         </div>
 
         <div className="panel">
-          <h2>相關食記</h2>
+          <h2>食記介紹</h2>
           <div className="blog-list">
             {blogLinks.map((blog) => (
               <a className="text-link" href={blog.b_bloglink} key={blog.id} rel="noreferrer" target="_blank">
