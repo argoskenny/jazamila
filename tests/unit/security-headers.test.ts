@@ -14,5 +14,8 @@ describe("security headers", () => {
         { key: "X-Frame-Options", value: "DENY" }
       ])
     );
+    expect(allRoutes?.headers.find((header) => header.key === "Content-Security-Policy")?.value).toContain(
+      "https://www.google.com/recaptcha/"
+    );
   });
 });

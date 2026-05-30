@@ -68,6 +68,9 @@ ADMIN_USERNAME="replace-with-private-admin-username"
 ADMIN_PASSWORD="replace-with-a-strong-password"
 ADMIN_SESSION_SECRET="replace-with-at-least-32-random-characters"
 NEXT_PUBLIC_APP_URL="https://jazamila.example.com"
+NEXT_PUBLIC_RECAPTCHA_SITE_KEY="replace-with-recaptcha-site-key"
+RECAPTCHA_SECRET_KEY="replace-with-recaptcha-secret-key"
+RECAPTCHA_MIN_SCORE="0.5"
 ```
 
 Legacy import 時才需要：
@@ -84,6 +87,9 @@ ADMIN_USERNAME="replace-with-private-staging-admin-username"
 ADMIN_PASSWORD="replace-with-a-staging-password"
 ADMIN_SESSION_SECRET="replace-with-at-least-32-random-characters"
 NEXT_PUBLIC_APP_URL="https://staging.jazamila.example.com"
+NEXT_PUBLIC_RECAPTCHA_SITE_KEY="replace-with-staging-recaptcha-site-key"
+RECAPTCHA_SECRET_KEY="replace-with-staging-recaptcha-secret-key"
+RECAPTCHA_MIN_SCORE="0.5"
 LEGACY_DATABASE_URL="mysql://legacy_user:password@host:3306/jazamila_legacy"
 ```
 
@@ -93,6 +99,8 @@ LEGACY_DATABASE_URL="mysql://legacy_user:password@host:3306/jazamila_legacy"
 - `ADMIN_PASSWORD` 正式環境至少 16 字元，不能使用開發預設密碼。
 - `ADMIN_SESSION_SECRET` 正式環境至少 32 字元，不要共用 production/staging。
 - `DATABASE_URL` 指向的目錄必須可被 Node.js process 寫入。
+- `RECAPTCHA_SECRET_KEY` 不可提交到 Git，也不可放進前端程式碼。
+- staging 與 production 建議使用不同 reCAPTCHA key。
 
 ## 5. 首次 Staging 部署
 

@@ -13,6 +13,9 @@ ADMIN_USERNAME="replace-with-private-admin-username"
 ADMIN_PASSWORD="replace-with-a-strong-password"
 ADMIN_SESSION_SECRET="replace-with-at-least-32-random-characters"
 NEXT_PUBLIC_APP_URL="https://jazamila.example.com"
+NEXT_PUBLIC_RECAPTCHA_SITE_KEY="replace-with-recaptcha-site-key"
+RECAPTCHA_SECRET_KEY="replace-with-recaptcha-secret-key"
+RECAPTCHA_MIN_SCORE="0.5"
 ```
 
 注意事項：
@@ -22,6 +25,8 @@ NEXT_PUBLIC_APP_URL="https://jazamila.example.com"
 - `ADMIN_SESSION_SECRET` 至少 32 字元，production 和 staging 不可共用。
 - `.env.production` 不可 commit 到 Git。
 - `DATABASE_URL` 指到的 SQLite 目錄必須可被 Node.js process 讀寫。
+- `RECAPTCHA_SECRET_KEY` 只能放在 server-side env，不可放在頁面或 Git。
+- reCAPTCHA key 的允許網域要包含正式網域，staging 建議用另一組 key。
 
 產生 secret：
 

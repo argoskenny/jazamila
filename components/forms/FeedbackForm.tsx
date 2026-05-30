@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { executeRecaptcha } from "@/components/forms/recaptcha";
 
 export function FeedbackForm() {
   const [status, setStatus] = useState("");
@@ -11,14 +12,21 @@ export function FeedbackForm() {
     setIsSubmitting(true);
     setStatus("");
 
-    const response = await fetch("/jazamila_ajax/save_feedback_post", {
-      method: "POST",
-      body: new FormData(event.currentTarget)
-    });
-    const text = await response.text();
-    setStatus(text === "success" ? "已送出你的問題或建議，感謝你。" : "送出失敗，請稍後再試。");
+    try {
+      const formData = new FormData(event.currentTarget);
+      formData.set("recaptcha_token", await executeRecaptcha("feedback"));
+
+      const response = await fetch("/jazamila_ajax/save_feedback_post", {
+        method: "POST",
+        body: formData
+      });
+      const text = await response.text();
+      setStatus(text === "success" ? "已送出你的問題或建議，感謝你。" : "送出失敗，請稍後再試。");
+      if (text === "success") event.currentTarget.reset();
+    } catch {
+      setStatus("驗證失敗，請稍後再試。");
+    }
     setIsSubmitting(false);
-    if (text === "success") event.currentTarget.reset();
   }
 
   return (

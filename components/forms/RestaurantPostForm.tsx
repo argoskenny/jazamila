@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { executeRecaptcha } from "@/components/forms/recaptcha";
 import type { Option } from "@/lib/domain/types";
 
 type Props = {
@@ -20,14 +21,21 @@ export function RestaurantPostForm({ regions, sectionsByRegion, foodTypes }: Pro
     setIsSubmitting(true);
     setStatus("");
 
-    const response = await fetch("/save_post_data", {
-      method: "POST",
-      body: new FormData(event.currentTarget)
-    });
-    const data = (await response.json()) as { status: string };
-    setStatus(data.status === "success" ? "已儲存成功，感謝你的分享！" : "投稿失敗，請確認必填欄位。");
+    try {
+      const formData = new FormData(event.currentTarget);
+      formData.set("recaptcha_token", await executeRecaptcha("restaurant_post"));
+
+      const response = await fetch("/save_post_data", {
+        method: "POST",
+        body: formData
+      });
+      const data = (await response.json()) as { status: string };
+      setStatus(data.status === "success" ? "已儲存成功，感謝你的分享！" : "投稿失敗，請確認必填欄位。");
+      if (data.status === "success") event.currentTarget.reset();
+    } catch {
+      setStatus("驗證失敗，請稍後再試。");
+    }
     setIsSubmitting(false);
-    if (data.status === "success") event.currentTarget.reset();
   }
 
   return (

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { executeRecaptcha } from "@/components/forms/recaptcha";
 
 export function BlogLinkForm({ restaurantId }: { restaurantId: number }) {
   const [status, setStatus] = useState("");
@@ -11,17 +12,22 @@ export function BlogLinkForm({ restaurantId }: { restaurantId: number }) {
     setIsSubmitting(true);
     setStatus("");
 
-    const formData = new FormData(event.currentTarget);
-    formData.set("res_id", String(restaurantId));
+    try {
+      const formData = new FormData(event.currentTarget);
+      formData.set("res_id", String(restaurantId));
+      formData.set("recaptcha_token", await executeRecaptcha("blog_save"));
 
-    const response = await fetch("/jazamila_ajax/blog_save", {
-      method: "POST",
-      body: formData
-    });
-    const data = (await response.json()) as { status: string };
-    setStatus(data.status === "success" ? "已儲存成功，感謝你的分享！" : "送出失敗，請確認網址。");
+      const response = await fetch("/jazamila_ajax/blog_save", {
+        method: "POST",
+        body: formData
+      });
+      const data = (await response.json()) as { status: string };
+      setStatus(data.status === "success" ? "已儲存成功，感謝你的分享！" : "送出失敗，請確認網址。");
+      if (data.status === "success") event.currentTarget.reset();
+    } catch {
+      setStatus("驗證失敗，請稍後再試。");
+    }
     setIsSubmitting(false);
-    if (data.status === "success") event.currentTarget.reset();
   }
 
   return (
