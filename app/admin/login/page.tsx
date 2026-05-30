@@ -7,6 +7,7 @@ type Props = {
 export default async function AdminLoginPage({ searchParams }: Props) {
   const query = await searchParams;
   const hasError = query.error === "1";
+  const isRateLimited = query.error === "rate_limit";
 
   return (
     <div className="page-shell" style={{ maxWidth: 460 }}>
@@ -24,6 +25,7 @@ export default async function AdminLoginPage({ searchParams }: Props) {
           登入
         </button>
         {hasError ? <p className="status">帳號或密碼不正確。</p> : null}
+        {isRateLimited ? <p className="status">登入嘗試過於頻繁，請稍後再試。</p> : null}
       </form>
     </div>
   );
