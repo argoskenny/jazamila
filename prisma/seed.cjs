@@ -68,6 +68,25 @@ async function main() {
         updatedAtUnix: 0,
         postId: 0,
         closed: 0
+      },
+      {
+        id: 4,
+        name: "Closed Diner",
+        areaNum: "02",
+        telNum: "33334444",
+        region: 1,
+        section: 2,
+        address: "台北市大同區封存路 1 號",
+        foodType: 1,
+        price: 100,
+        openTime: 0,
+        closeTime: 0,
+        note: "這筆資料用來確認公開頁面不顯示已關閉餐廳。",
+        imageUrl: "preview_1380970870.jpg",
+        originalImage: "",
+        updatedAtUnix: 0,
+        postId: 0,
+        closed: 1
       }
     ]
   });

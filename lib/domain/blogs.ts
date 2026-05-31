@@ -1,4 +1,5 @@
 import type { Prisma } from "@prisma/client";
+import { ZodError } from "zod";
 import { prisma } from "@/lib/db/prisma";
 import type { BlogLink } from "@/lib/domain/types";
 import { blogLinkSchema } from "@/lib/validation/forms";
@@ -37,6 +38,24 @@ export async function listBlogLinksForAdmin(status?: number): Promise<BlogLink[]
 
 export async function createBlogLinkSubmission(input: unknown): Promise<BlogLink> {
   const data = blogLinkSchema.parse(input);
+  const restaurant = await prisma.restaurant.findFirst({
+    where: {
+      id: data.res_id,
+      closed: { not: 1 }
+    },
+    select: { id: true }
+  });
+
+  if (!restaurant) {
+    throw new ZodError([
+      {
+        code: "custom",
+        path: ["res_id"],
+        message: "餐廳不存在或未開放"
+      }
+    ]);
+  }
+
   const blogLink = await prisma.blogLink.create({
     data: {
       restaurantId: data.res_id,

@@ -65,7 +65,7 @@ export async function verifyRecaptcha({
     secret,
     response: token
   });
-  if (remoteIp) body.set("remoteip", remoteIp);
+  if (remoteIp && remoteIp !== "unknown") body.set("remoteip", remoteIp);
 
   const response = await fetch("https://www.google.com/recaptcha/api/siteverify", {
     method: "POST",

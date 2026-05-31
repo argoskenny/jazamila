@@ -1,5 +1,9 @@
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import { createRateLimiter, getClientIp } from "@/lib/rate-limit";
+
+afterEach(() => {
+  vi.unstubAllEnvs();
+});
 
 describe("rate limit", () => {
   it("blocks a key after the allowed attempts until the window resets", () => {
@@ -14,7 +18,7 @@ describe("rate limit", () => {
     expect(limiter.check("client-a", 1001)).toMatchObject({ allowed: true });
   });
 
-  it("prefers forwarded client IP headers over the fallback", () => {
+  it("does not trust forwarded client IP headers unless proxy trust is enabled", () => {
     const request = new Request("https://example.test", {
       headers: {
         "x-forwarded-for": "203.0.113.10, 10.0.0.2",
@@ -22,6 +26,21 @@ describe("rate limit", () => {
       }
     });
 
+    expect(getClientIp(request)).toBe("unknown");
+
+    vi.stubEnv("TRUST_PROXY_HEADERS", "true");
     expect(getClientIp(request)).toBe("203.0.113.10");
+  });
+
+  it("removes expired entries while checking new keys", () => {
+    const limiter = createRateLimiter({ maxRequests: 2, windowMs: 1000 });
+
+    expect(limiter.check("client-a", 0)).toMatchObject({ allowed: true });
+    expect(limiter.check("client-b", 100)).toMatchObject({ allowed: true });
+    expect(limiter.activeEntryCount()).toBe(2);
+
+    expect(limiter.check("client-c", 1101)).toMatchObject({ allowed: true });
+
+    expect(limiter.activeEntryCount()).toBe(1);
   });
 });

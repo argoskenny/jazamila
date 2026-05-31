@@ -1,27 +1,21 @@
+import lookupData from "@/lib/domain/lookup-data.json";
 import type { Option } from "@/lib/domain/types";
 
-export const regions: Option[] = [
-  { id: 0, label: "都可以" },
-  { id: 1, label: "台北市" },
-  { id: 2, label: "新北市" }
-];
-
-export const sectionsByRegion: Record<number, Option[]> = {
-  1: [
-    { id: 2, label: "大同區" },
-    { id: 3, label: "中山區" },
-    { id: 4, label: "萬華區" }
-  ],
-  2: [{ id: 1, label: "板橋區" }]
+type LookupData = {
+  regions: Option[];
+  sectionsByRegion: Record<string, Option[]>;
+  foodTypes: Option[];
 };
 
-export const foodTypes: Option[] = [
-  { id: 0, label: "都可以" },
-  { id: 1, label: "日式料理" },
-  { id: 2, label: "美式料理" },
-  { id: 3, label: "義式料理" },
-  { id: 4, label: "小吃" }
-];
+const data = lookupData as LookupData;
+
+export const regions: Option[] = data.regions;
+
+export const sectionsByRegion: Record<number, Option[]> = Object.fromEntries(
+  Object.entries(data.sectionsByRegion).map(([regionId, sections]) => [Number(regionId), sections])
+);
+
+export const foodTypes: Option[] = data.foodTypes;
 
 export const moneyOptions: Option[] = Array.from({ length: 12 }, (_, index) => {
   const value = index * 100;

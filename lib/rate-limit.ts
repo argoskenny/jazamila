@@ -15,16 +15,24 @@ export type RateLimitResult = {
 
 export type RateLimiter = {
   check: (key: string, now?: number) => RateLimitResult;
+  activeEntryCount: () => number;
 };
 
 export function createRateLimiter({ maxRequests, windowMs }: RateLimitOptions): RateLimiter {
   const entries = new Map<string, RateLimitEntry>();
 
+  function cleanupExpired(now: number): void {
+    for (const [key, entry] of entries) {
+      if (entry.resetAt <= now) entries.delete(key);
+    }
+  }
+
   return {
     check(key: string, now = Date.now()): RateLimitResult {
+      cleanupExpired(now);
       const existing = entries.get(key);
 
-      if (!existing || existing.resetAt <= now) {
+      if (!existing) {
         entries.set(key, { count: 1, resetAt: now + windowMs });
         return { allowed: true, retryAfterSeconds: 0 };
       }
@@ -38,12 +46,21 @@ export function createRateLimiter({ maxRequests, windowMs }: RateLimitOptions): 
 
       existing.count += 1;
       return { allowed: true, retryAfterSeconds: 0 };
+    },
+    activeEntryCount(): number {
+      return entries.size;
     }
   };
 }
 
+function trustProxyHeaders(): boolean {
+  return ["1", "true", "yes"].includes((process.env.TRUST_PROXY_HEADERS ?? "").toLowerCase());
+}
+
 export function getClientIp(source: Request | Headers): string {
   const headers = source instanceof Request ? source.headers : source;
+  if (!trustProxyHeaders()) return "unknown";
+
   const forwardedFor = headers.get("x-forwarded-for")?.split(",")[0]?.trim();
   return (
     forwardedFor ||

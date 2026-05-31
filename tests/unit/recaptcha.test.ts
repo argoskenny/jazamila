@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { verifyRecaptcha } from "@/lib/recaptcha";
+import { verifyRecaptcha, verifyRequestRecaptcha } from "@/lib/recaptcha";
 
 vi.mock("server-only", () => ({}));
 
@@ -57,5 +57,33 @@ describe("recaptcha verification", () => {
     await expect(verifyRecaptcha({ token: "token", expectedAction: "feedback" })).rejects.toThrow(
       "RECAPTCHA_SECRET_KEY"
     );
+  });
+
+  it("omits remoteip when the client IP is unknown", async () => {
+    vi.stubEnv("RECAPTCHA_SECRET_KEY", "secret");
+    const fetchMock = vi.fn(async () =>
+      Response.json({
+        success: true,
+        score: 0.9,
+        action: "feedback"
+      })
+    );
+    vi.stubGlobal("fetch", fetchMock);
+
+    await verifyRequestRecaptcha(
+      new Request("https://example.test", {
+        headers: {
+          "x-forwarded-for": "203.0.113.10"
+        }
+      }),
+      {
+        recaptcha_token: "token"
+      },
+      "feedback"
+    );
+
+    const calls = fetchMock.mock.calls as unknown as Array<[string, { body: URLSearchParams }]>;
+    const body = calls[0][1].body;
+    expect(body.has("remoteip")).toBe(false);
   });
 });

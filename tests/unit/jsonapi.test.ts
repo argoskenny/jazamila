@@ -15,4 +15,11 @@ describe("jsonapi", () => {
     expect(data[0].res_img_url).toBe("https://www.jazamila.test/assets/pics/preview_1380970870.jpg");
     expect(data[0].res_img_url).not.toContain("http://jazamila.com");
   });
+
+  it("does not expose closed restaurants", async () => {
+    const response = await GET();
+    const data = (await response.json()) as Array<{ res_name: string }>;
+
+    expect(data.map((restaurant) => restaurant.res_name)).not.toContain("Closed Diner");
+  });
 });

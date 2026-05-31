@@ -56,18 +56,6 @@ a, a:hover, a:focus
 	width:70%;
 	margin:0px auto;
 }
-#captcha
-{
-	width:90px;
-	display:inline-block;
-	height:30px;
-	text-align:center;
-	margin-left:10px;
-}
-#msg_captcha, #msg_captcha_error
-{
-	width:165px;
-}
 .form-group img
 {
 	height:30px;

@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { RestaurantForm } from "@/components/admin/RestaurantForm";
 import { updateRestaurantAction } from "@/app/admin/restaurants/actions";
 import { requireAdmin } from "@/lib/auth/admin";
-import { getRestaurantDetail } from "@/lib/domain/restaurants";
+import { getRestaurantForAdmin } from "@/lib/domain/restaurants";
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -11,7 +11,7 @@ type Props = {
 export default async function EditRestaurantPage({ params }: Props) {
   await requireAdmin();
   const { id } = await params;
-  const restaurant = await getRestaurantDetail(Number.parseInt(id, 10));
+  const restaurant = await getRestaurantForAdmin(Number.parseInt(id, 10));
   if (!restaurant) notFound();
 
   return (

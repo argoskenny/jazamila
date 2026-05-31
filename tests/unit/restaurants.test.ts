@@ -1,5 +1,15 @@
 import { describe, expect, it } from "vitest";
-import { describeFilters, listRestaurants, parseListFilters, pickRestaurant } from "@/lib/domain/restaurants";
+import {
+  describeFilters,
+  getRestaurantForAdmin,
+  getRestaurantDetail,
+  listPublicRestaurants,
+  listRestaurants,
+  parseListFilters,
+  pickRestaurant,
+  restaurantFromAdminForm,
+  toRestaurantView
+} from "@/lib/domain/restaurants";
 
 describe("restaurant domain", () => {
   it("parses legacy listdata segments", () => {
@@ -36,5 +46,66 @@ describe("restaurant domain", () => {
     });
 
     expect(restaurant?.id).toBe(1);
+  });
+
+  it("lists only open public restaurants with an explicit limit", async () => {
+    const restaurants = await listPublicRestaurants({ limit: 2 });
+
+    expect(restaurants).toHaveLength(2);
+    expect(restaurants.map((restaurant) => restaurant.res_name)).not.toContain("Closed Diner");
+  });
+
+  it("keeps closed restaurants hidden publicly but available to admin lookups", async () => {
+    await expect(getRestaurantDetail(4)).resolves.toBeNull();
+    await expect(getRestaurantForAdmin(4)).resolves.toMatchObject({ res_name: "Closed Diner", res_close: 1 });
+  });
+
+  it("uses custom restaurant image filenames when present", () => {
+    const restaurant = toRestaurantView({
+      id: 99,
+      res_name: "有圖餐廳",
+      res_area_num: "02",
+      res_tel_num: "12345678",
+      res_region: 1,
+      res_section: 2,
+      res_address: "台北市",
+      res_foodtype: 1,
+      res_price: 100,
+      res_open_time: 0,
+      res_close_time: 0,
+      res_note: "",
+      res_img_url: "custom photo.jpg",
+      res_img_ori_url: "",
+      res_updatetime: 0,
+      res_post_id: 0,
+      res_close: 0
+    });
+
+    expect(restaurant.imagePath).toBe("/assets/pics/custom%20photo.jpg");
+  });
+
+  it("builds admin restaurant input from parsed schema values", () => {
+    const restaurant = restaurantFromAdminForm({
+      res_name: "  修剪餐廳  ",
+      res_area_num: "2",
+      res_tel_num: "  1234567  ",
+      res_region: "1",
+      res_section: "2",
+      res_address: "  台北市  ",
+      res_foodtype: "1",
+      res_price: "120",
+      res_note: "  備註  ",
+      res_img_url: "  custom.jpg  "
+    });
+
+    expect(restaurant).toMatchObject({
+      res_name: "修剪餐廳",
+      res_area_num: "02",
+      res_tel_num: "1234567",
+      res_address: "台北市",
+      res_note: "備註",
+      res_img_url: "custom.jpg",
+      res_price: 120
+    });
   });
 });

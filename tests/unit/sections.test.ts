@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { renderListSectionLinks, renderSectionOptions } from "@/lib/domain/sections";
+import lookupData from "@/lib/domain/lookup-data.json";
+import { getFoodTypes, getRegions, renderListSectionLinks, renderSectionOptions, sectionsByRegion } from "@/lib/domain/sections";
 
 describe("section compatibility helpers", () => {
   it("renders legacy select options", () => {
@@ -12,5 +13,11 @@ describe("section compatibility helpers", () => {
 
     expect(html).toContain("section_click('0','全區')");
     expect(html).toContain("section_click('2','大同區')");
+  });
+
+  it("loads lookup options from the data file", () => {
+    expect(getRegions()).toEqual(lookupData.regions);
+    expect(getFoodTypes()).toEqual(lookupData.foodTypes);
+    expect(sectionsByRegion[1]).toEqual(lookupData.sectionsByRegion["1"]);
   });
 });

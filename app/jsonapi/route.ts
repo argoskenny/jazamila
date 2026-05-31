@@ -1,4 +1,4 @@
-import { listAllRestaurants } from "@/lib/domain/restaurants";
+import { listPublicRestaurants } from "@/lib/domain/restaurants";
 
 function publicAssetUrl(path: string): string {
   const appUrl = process.env.NEXT_PUBLIC_APP_URL?.trim().replace(/\/+$/, "");
@@ -6,7 +6,7 @@ function publicAssetUrl(path: string): string {
 }
 
 export async function GET() {
-  const restaurants = await listAllRestaurants();
+  const restaurants = await listPublicRestaurants();
   const data = restaurants.map((restaurant) => ({
     id: restaurant.id,
     res_name: restaurant.res_name,

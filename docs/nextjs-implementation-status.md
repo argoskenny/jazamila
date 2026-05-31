@@ -16,7 +16,6 @@
   - `/post`
 - 完成舊 Ajax 相容端點：
   - `/jazamila_ajax/pick`
-  - `/jazamila_ajax/check_captcha`
   - `/jazamila_ajax/save_feedback_post`
   - `/jazamila_ajax/get_section`
   - `/jazamila_ajax/get_section_cookie`

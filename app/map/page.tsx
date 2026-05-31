@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { listAllRestaurants } from "@/lib/domain/restaurants";
+import { listPublicRestaurants } from "@/lib/domain/restaurants";
 
 export const dynamic = "force-dynamic";
 
 export default async function MapPage() {
-  const restaurants = await listAllRestaurants();
+  const restaurants = await listPublicRestaurants();
 
   return (
     <section className="page-shell">

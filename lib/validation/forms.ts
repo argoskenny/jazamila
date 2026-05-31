@@ -1,5 +1,19 @@
 import { z } from "zod";
 
+const httpUrlSchema = z
+  .string()
+  .trim()
+  .url("請輸入正確網址")
+  .max(500)
+  .refine((value) => {
+    try {
+      const url = new URL(value);
+      return url.protocol === "http:" || url.protocol === "https:";
+    } catch {
+      return false;
+    }
+  }, "網址只支援 http 或 https");
+
 export const feedbackSchema = z.object({
   name: z.string().trim().min(1, "請留下稱呼").max(80),
   email: z.string().trim().email("請輸入正確 email").max(120),
@@ -9,17 +23,17 @@ export const feedbackSchema = z.object({
 export const blogLinkSchema = z.object({
   res_id: z.coerce.number().int().nonnegative(),
   res_blogname: z.string().trim().min(1, "請填寫食記名稱").max(120),
-  res_bloglink: z.string().trim().url("請輸入正確網址").max(500)
+  res_bloglink: httpUrlSchema
 });
 
 export const restaurantPostSchema = z.object({
   post_name: z.string().trim().min(1, "請填寫餐廳名稱").max(120),
   post_area_num: z.string().trim().max(10).default(""),
   post_tel_num: z.string().trim().max(20).default(""),
-  post_region: z.coerce.number().int().nonnegative().default(0),
-  post_section: z.coerce.number().int().nonnegative().default(0),
-  post_address: z.string().trim().max(255).default(""),
-  post_foodtype: z.coerce.number().int().nonnegative().default(0),
+  post_region: z.coerce.number().int().min(1, "請選擇縣市"),
+  post_section: z.coerce.number().int().min(1, "請選擇地區"),
+  post_address: z.string().trim().min(1, "請填寫餐廳地址").max(255),
+  post_foodtype: z.coerce.number().int().min(1, "請選擇美食類別"),
   post_price: z.coerce.number().int().nonnegative().default(0),
   post_note: z.string().trim().max(4000).default("")
 });

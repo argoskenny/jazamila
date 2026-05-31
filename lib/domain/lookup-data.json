@@ -1,0 +1,22 @@
+{
+  "regions": [
+    { "id": 0, "label": "都可以" },
+    { "id": 1, "label": "台北市" },
+    { "id": 2, "label": "新北市" }
+  ],
+  "sectionsByRegion": {
+    "1": [
+      { "id": 2, "label": "大同區" },
+      { "id": 3, "label": "中山區" },
+      { "id": 4, "label": "萬華區" }
+    ],
+    "2": [{ "id": 1, "label": "板橋區" }]
+  },
+  "foodTypes": [
+    { "id": 0, "label": "都可以" },
+    { "id": 1, "label": "日式料理" },
+    { "id": 2, "label": "美式料理" },
+    { "id": 3, "label": "義式料理" },
+    { "id": 4, "label": "小吃" }
+  ]
+}

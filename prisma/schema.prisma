@@ -25,7 +25,9 @@ model Restaurant {
   updatedAtUnix Int?    @map("res_updatetime")
   postId        Int     @default(0) @map("res_post_id")
   closed        Int     @default(0) @map("res_close")
+  blogLinks     BlogLink[]
 
+  @@index([closed, region, section, foodType, price])
   @@map("r_restaurant")
 }
 
@@ -47,17 +49,21 @@ model Post {
   originalImage String? @map("post_img_ori_url")
   status        Int     @default(0) @map("post_prove")
 
+  @@index([status])
   @@map("r_post")
 }
 
 model BlogLink {
-  id           Int         @id @default(autoincrement())
-  restaurantId Int         @default(0) @map("b_res_id")
-  postId       Int         @default(0) @map("b_post_id")
-  name         String?     @map("b_blogname")
-  url          String?     @map("b_bloglink")
-  status       Int         @default(0) @map("b_blog_show")
+  id           Int        @id @default(autoincrement())
+  restaurantId Int        @default(0) @map("b_res_id")
+  restaurant   Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+  postId       Int        @default(0) @map("b_post_id")
+  name         String?    @map("b_blogname")
+  url          String?    @map("b_bloglink")
+  status       Int        @default(0) @map("b_blog_show")
 
+  @@index([restaurantId, status])
+  @@index([status])
   @@map("r_bloglink")
 }
 
@@ -69,5 +75,6 @@ model Feedback {
   timeUnix  Int     @default(0) @map("f_time")
   isRead    Int     @default(0) @map("f_isread")
 
+  @@index([isRead])
   @@map("r_feedback")
 }

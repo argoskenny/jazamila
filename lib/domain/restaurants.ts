@@ -3,8 +3,10 @@ import { prisma } from "@/lib/db/prisma";
 import { clampPage } from "@/lib/pagination";
 import { foodTypes, getSections, labelFor, regions } from "@/lib/domain/sections";
 import type { ListFilters, Restaurant, RestaurantCriteria, RestaurantView } from "@/lib/domain/types";
+import { restaurantAdminSchema } from "@/lib/validation/forms";
 
 const perPage = 10;
+const defaultPublicListLimit = 500;
 
 type PrismaRestaurant = Prisma.RestaurantGetPayload<object>;
 
@@ -111,6 +113,12 @@ function imagePathForFoodType(foodType: number): string {
   return images[foodType] ?? "/assets/img/jazamila/generated/cuisine-street-food.png";
 }
 
+function imagePathForRestaurant(restaurant: Restaurant): string {
+  const filename = restaurant.res_img_url.trim().split(/[\\/]/).pop() ?? "";
+  if (!filename || filename === "." || filename === "..") return imagePathForFoodType(restaurant.res_foodtype);
+  return `/assets/pics/${encodeURIComponent(filename)}`;
+}
+
 export function toRestaurantView(restaurant: Restaurant): RestaurantView {
   const tel = restaurant.res_tel_num ? `(${restaurant.res_area_num}) ${restaurant.res_tel_num}` : "未提供";
 
@@ -121,7 +129,7 @@ export function toRestaurantView(restaurant: Restaurant): RestaurantView {
     foodTypeLabel: labelFor(foodTypes, restaurant.res_foodtype, "未分類"),
     telLabel: tel,
     priceLabel: restaurant.res_price > 0 ? `${restaurant.res_price} 元左右` : "價格彈性",
-    imagePath: imagePathForFoodType(restaurant.res_foodtype)
+    imagePath: imagePathForRestaurant(restaurant)
   };
 }
 
@@ -181,6 +189,13 @@ export async function getRestaurantDetail(id: number): Promise<RestaurantView | 
   return restaurant ? toRestaurantViewFromPrisma(restaurant) : null;
 }
 
+export async function getRestaurantForAdmin(id: number): Promise<RestaurantView | null> {
+  const restaurant = await prisma.restaurant.findUnique({
+    where: { id }
+  });
+  return restaurant ? toRestaurantViewFromPrisma(restaurant) : null;
+}
+
 export async function pickRestaurant(criteria: RestaurantCriteria): Promise<RestaurantView | null> {
   const where = criteriaWhere(criteria);
   const candidateCount = await prisma.restaurant.count({ where });
@@ -199,6 +214,17 @@ export async function pickRestaurant(criteria: RestaurantCriteria): Promise<Rest
 export async function listAllRestaurants(): Promise<RestaurantView[]> {
   const restaurants = await prisma.restaurant.findMany({
     orderBy: { id: "asc" }
+  });
+  return restaurants.map(toRestaurantViewFromPrisma);
+}
+
+export async function listPublicRestaurants({ limit = defaultPublicListLimit } = {}): Promise<RestaurantView[]> {
+  const restaurants = await prisma.restaurant.findMany({
+    where: {
+      closed: { not: 1 }
+    },
+    orderBy: { id: "asc" },
+    take: Math.min(Math.max(1, limit), defaultPublicListLimit)
   });
   return restaurants.map(toRestaurantViewFromPrisma);
 }
@@ -273,6 +299,30 @@ export function restaurantFromForm(input: Record<string, FormDataEntryValue>): O
     res_close_time: 0,
     res_note: String(input.res_note ?? ""),
     res_img_url: String(input.res_img_url ?? "preview_1380970870.jpg"),
+    res_img_ori_url: "",
+    res_updatetime: Math.floor(Date.now() / 1000),
+    res_post_id: 0,
+    res_close: 0
+  };
+}
+
+export function restaurantFromAdminForm(input: unknown): Omit<Restaurant, "id"> {
+  const data = restaurantAdminSchema.parse(input);
+  const areaNum = data.res_area_num || "02";
+
+  return {
+    res_name: data.res_name,
+    res_area_num: areaNum.padStart(2, "0"),
+    res_tel_num: data.res_tel_num,
+    res_region: data.res_region,
+    res_section: data.res_section,
+    res_address: data.res_address,
+    res_foodtype: data.res_foodtype,
+    res_price: data.res_price,
+    res_open_time: 0,
+    res_close_time: 0,
+    res_note: data.res_note,
+    res_img_url: data.res_img_url || "preview_1380970870.jpg",
     res_img_ori_url: "",
     res_updatetime: Math.floor(Date.now() / 1000),
     res_post_id: 0,
