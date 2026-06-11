@@ -16,6 +16,16 @@ describe("jsonapi", () => {
     expect(data[0].res_img_url).not.toContain("http://jazamila.com");
   });
 
+  it("uses the same encoded image path as public restaurant views", async () => {
+    vi.stubEnv("NEXT_PUBLIC_APP_URL", "https://www.jazamila.test/");
+
+    const response = await GET();
+    const data = (await response.json()) as Array<{ res_name: string; res_img_url: string }>;
+    const burger = data.find((restaurant) => restaurant.res_name === "Burger Place");
+
+    expect(burger?.res_img_url).toBe("https://www.jazamila.test/assets/pics/preview%20burger.jpg");
+  });
+
   it("does not expose closed restaurants", async () => {
     const response = await GET();
     const data = (await response.json()) as Array<{ res_name: string }>;

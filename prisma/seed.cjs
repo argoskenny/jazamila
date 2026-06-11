@@ -44,7 +44,7 @@ async function main() {
         openTime: 0,
         closeTime: 0,
         note: "漢堡、薯條和不用想太多的快樂。",
-        imageUrl: "preview_1380978779.jpg",
+        imageUrl: "preview burger.jpg",
         originalImage: "",
         updatedAtUnix: 0,
         postId: 0,

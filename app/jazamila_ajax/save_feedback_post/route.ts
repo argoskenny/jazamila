@@ -1,5 +1,5 @@
 import { createFeedback } from "@/lib/domain/feedback";
-import { htmlResponse, readRequestInput } from "@/lib/http";
+import { htmlRequestError, htmlResponse, readRequestInput } from "@/lib/http";
 import { publicWriteRateLimiter, rateLimitedHtmlResponse, rateLimitKey } from "@/lib/rate-limit";
 import { verifyRequestRecaptcha } from "@/lib/recaptcha";
 
@@ -18,7 +18,7 @@ export async function POST(request: Request) {
       content: input.content
     });
     return htmlResponse("success");
-  } catch {
-    return htmlResponse("fail", { status: 422 });
+  } catch (error) {
+    return htmlRequestError(error);
   }
 }

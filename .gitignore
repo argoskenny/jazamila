@@ -9,6 +9,8 @@ dist/
 # TypeScript and test output
 *.tsbuildinfo
 coverage/
+test-results/
+playwright-report/
 
 # Environment files
 .env*

@@ -8,6 +8,7 @@ import {
   parseListFilters,
   pickRestaurant,
   restaurantFromAdminForm,
+  updateRestaurant,
   toRestaurantView
 } from "@/lib/domain/restaurants";
 
@@ -106,6 +107,29 @@ describe("restaurant domain", () => {
       res_note: "備註",
       res_img_url: "custom.jpg",
       res_price: 120
+    });
+  });
+
+  it("preserves closed status when editing an existing closed restaurant", async () => {
+    const input = restaurantFromAdminForm({
+      res_name: "Closed Diner Updated",
+      res_area_num: "02",
+      res_tel_num: "33334444",
+      res_region: "1",
+      res_section: "2",
+      res_address: "台北市大同區封存路 1 號",
+      res_foodtype: "1",
+      res_price: "100",
+      res_note: "仍然關閉",
+      res_img_url: "preview_1380970870.jpg",
+      res_close: "1"
+    });
+
+    const updated = await updateRestaurant(4, input);
+
+    expect(updated).toMatchObject({
+      res_name: "Closed Diner Updated",
+      res_close: 1
     });
   });
 });

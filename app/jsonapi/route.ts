@@ -15,7 +15,7 @@ export async function GET() {
     res_price: restaurant.res_price,
     res_foodtype: restaurant.foodTypeLabel,
     res_address: restaurant.res_address,
-    res_img_url: publicAssetUrl(`/assets/pics/${restaurant.res_img_url}`)
+    res_img_url: publicAssetUrl(restaurant.imagePath)
   }));
 
   return Response.json(data);

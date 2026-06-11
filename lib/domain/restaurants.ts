@@ -133,7 +133,7 @@ export function toRestaurantView(restaurant: Restaurant): RestaurantView {
   };
 }
 
-function toRestaurantViewFromPrisma(restaurant: PrismaRestaurant): RestaurantView {
+export function toRestaurantViewFromPrisma(restaurant: PrismaRestaurant): RestaurantView {
   return toRestaurantView(fromPrismaRestaurant(restaurant));
 }
 
@@ -326,6 +326,6 @@ export function restaurantFromAdminForm(input: unknown): Omit<Restaurant, "id"> 
     res_img_ori_url: "",
     res_updatetime: Math.floor(Date.now() / 1000),
     res_post_id: 0,
-    res_close: 0
+    res_close: data.res_close
   };
 }

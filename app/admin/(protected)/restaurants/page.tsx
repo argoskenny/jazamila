@@ -1,17 +1,27 @@
 import Link from "next/link";
-import { requireAdmin } from "@/lib/auth/admin";
-import { listAllRestaurants } from "@/lib/domain/restaurants";
+import { listRestaurantsForAdmin } from "@/lib/domain/admin";
 
-export default async function AdminRestaurantsPage() {
-  await requireAdmin();
-  const restaurants = await listAllRestaurants();
+type Props = {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+};
+
+function first(value: string | string[] | undefined): string | undefined {
+  return Array.isArray(value) ? value[0] : value;
+}
+
+export default async function AdminRestaurantsPage({ searchParams }: Props) {
+  const query = await searchParams;
+  const requestedPage = Number.parseInt(first(query.page) ?? first(query.set) ?? "1", 10);
+  const result = await listRestaurantsForAdmin({
+    page: Number.isFinite(requestedPage) ? requestedPage : 1
+  });
 
   return (
     <div className="form-grid">
       <div className="list-header">
         <div>
           <h1 className="page-title">餐廳管理</h1>
-          <p className="lead">管理公開餐廳資料。</p>
+          <p className="lead">管理公開餐廳資料，共 {result.totalRows} 筆。</p>
         </div>
         <Link className="button" href="/admin/restaurants/new">
           新增餐廳
@@ -30,7 +40,7 @@ export default async function AdminRestaurantsPage() {
             </tr>
           </thead>
           <tbody>
-            {restaurants.map((restaurant) => (
+            {result.restaurants.map((restaurant) => (
               <tr key={restaurant.id}>
                 <td>{restaurant.id}</td>
                 <td>{restaurant.res_name}</td>
@@ -50,6 +60,21 @@ export default async function AdminRestaurantsPage() {
           </tbody>
         </table>
       </div>
+      <nav className="pagination" aria-label="後台餐廳分頁">
+        {result.page > 1 ? (
+          <Link href={`/admin/restaurants?page=${result.page - 1}`}>上一頁</Link>
+        ) : (
+          <span>上一頁</span>
+        )}
+        <span className="active">
+          {result.page} / {result.totalPages}
+        </span>
+        {result.page < result.totalPages ? (
+          <Link href={`/admin/restaurants?page=${result.page + 1}`}>下一頁</Link>
+        ) : (
+          <span>下一頁</span>
+        )}
+      </nav>
     </div>
   );
 }

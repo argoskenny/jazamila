@@ -1,5 +1,4 @@
 import { approvePostAction, rejectPostAction } from "@/app/admin/posts/actions";
-import { requireAdmin } from "@/lib/auth/admin";
 import { foodTypes, getSections, labelFor, regions } from "@/lib/domain/sections";
 import { listPostsForAdmin } from "@/lib/domain/posts";
 
@@ -14,7 +13,6 @@ function statusLabel(status: number): string {
 }
 
 export default async function AdminPostsPage({ searchParams }: Props) {
-  await requireAdmin();
   const query = await searchParams;
   const status = query.status === undefined ? undefined : Number.parseInt(String(query.status), 10);
   const posts = await listPostsForAdmin(Number.isFinite(status) ? status : undefined);

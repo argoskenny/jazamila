@@ -1,5 +1,4 @@
 import { approveBlogAction, rejectBlogAction } from "@/app/admin/blogs/actions";
-import { requireAdmin } from "@/lib/auth/admin";
 import { listBlogLinksForAdmin } from "@/lib/domain/blogs";
 
 type Props = {
@@ -13,7 +12,6 @@ function statusLabel(status: number): string {
 }
 
 export default async function AdminBlogsPage({ searchParams }: Props) {
-  await requireAdmin();
   const query = await searchParams;
   const status = query.status === undefined ? undefined : Number.parseInt(String(query.status), 10);
   const blogLinks = await listBlogLinksForAdmin(Number.isFinite(status) ? status : undefined);

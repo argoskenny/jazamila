@@ -1,18 +1,8 @@
 import Link from "next/link";
-import { requireAdmin } from "@/lib/auth/admin";
-import { listBlogLinksForAdmin } from "@/lib/domain/blogs";
-import { listFeedbackForAdmin } from "@/lib/domain/feedback";
-import { listPostsForAdmin } from "@/lib/domain/posts";
-import { listAllRestaurants } from "@/lib/domain/restaurants";
+import { countAdminDashboardStats } from "@/lib/domain/admin";
 
 export default async function AdminDashboardPage() {
-  await requireAdmin();
-  const [restaurants, posts, blogs, feedback] = await Promise.all([
-    listAllRestaurants(),
-    listPostsForAdmin(),
-    listBlogLinksForAdmin(),
-    listFeedbackForAdmin()
-  ]);
+  const stats = await countAdminDashboardStats();
 
   return (
     <div className="form-grid">
@@ -20,19 +10,19 @@ export default async function AdminDashboardPage() {
       <div className="stat-grid">
         <Link className="stat" href="/admin/restaurants">
           <span>餐廳</span>
-          <strong>{restaurants.length}</strong>
+          <strong>{stats.restaurants}</strong>
         </Link>
         <Link className="stat" href="/admin/posts">
           <span>投稿</span>
-          <strong>{posts.length}</strong>
+          <strong>{stats.posts}</strong>
         </Link>
         <Link className="stat" href="/admin/blogs">
           <span>食記</span>
-          <strong>{blogs.length}</strong>
+          <strong>{stats.blogs}</strong>
         </Link>
         <Link className="stat" href="/admin/feedback">
           <span>回饋</span>
-          <strong>{feedback.length}</strong>
+          <strong>{stats.feedback}</strong>
         </Link>
       </div>
     </div>

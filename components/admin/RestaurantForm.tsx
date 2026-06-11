@@ -69,6 +69,13 @@ export function RestaurantForm({ action, restaurant, submitLabel }: Props) {
         <input className="input" name="res_img_url" defaultValue={restaurant?.res_img_url ?? "preview_1380970870.jpg"} />
       </label>
       <label className="field">
+        <span>餐廳狀態</span>
+        <select className="select" name="res_close" defaultValue={restaurant?.res_close ?? 0}>
+          <option value={0}>公開</option>
+          <option value={1}>關閉</option>
+        </select>
+      </label>
+      <label className="field">
         <span>備註</span>
         <textarea className="textarea" name="res_note" defaultValue={restaurant?.res_note} />
       </label>

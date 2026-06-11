@@ -1,9 +1,7 @@
 import { markFeedbackReadAction } from "@/app/admin/feedback/actions";
-import { requireAdmin } from "@/lib/auth/admin";
 import { listFeedbackForAdmin } from "@/lib/domain/feedback";
 
 export default async function AdminFeedbackPage() {
-  await requireAdmin();
   const feedback = await listFeedbackForAdmin();
 
   return (

@@ -26,4 +26,13 @@ describe("admin routing", () => {
 
     expect(ungroupedPages).toEqual(["login/page.tsx"]);
   });
+
+  it("does not duplicate requireAdmin calls in protected page components", () => {
+    const protectedDir = path.join(process.cwd(), "app/admin/(protected)");
+    const protectedPages = walk(protectedDir).filter((file) => file.endsWith("page.tsx"));
+
+    for (const file of protectedPages) {
+      expect(fs.readFileSync(file, "utf8"), path.relative(process.cwd(), file)).not.toContain("requireAdmin");
+    }
+  });
 });

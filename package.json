@@ -6,6 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "lint": "eslint . --max-warnings=0",
+    "e2e": "playwright test --reporter=line",
     "typecheck": "tsc --noEmit",
     "test": "DATABASE_URL=file:./test.db node prisma/ensure-sqlite.cjs && DATABASE_URL=file:./test.db prisma db push --force-reset --skip-generate && DATABASE_URL=file:./test.db node prisma/seed.cjs && DATABASE_URL=file:./test.db vitest run",
     "db:generate": "DATABASE_URL=${DATABASE_URL:-file:./dev.db} prisma generate",
@@ -26,12 +28,17 @@
     "zod": "^3.24.0"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.60.0",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "eslint": "^10.4.1",
+    "playwright": "^1.60.0",
     "prisma": "^6.0.0",
     "typescript": "^5.7.0",
-    "vitest": "^2.1.0"
+    "typescript-eslint": "^8.61.0",
+    "vitest": "^4.1.8"
   },
   "overrides": {
     "postcss": "^8.5.15"

@@ -48,5 +48,6 @@ export const restaurantAdminSchema = z.object({
   res_foodtype: z.coerce.number().int().nonnegative().default(0),
   res_price: z.coerce.number().int().nonnegative().default(0),
   res_note: z.string().trim().max(4000).default(""),
-  res_img_url: z.string().trim().max(255).default("preview_1380970870.jpg")
+  res_img_url: z.string().trim().max(255).default("preview_1380970870.jpg"),
+  res_close: z.coerce.number().int().min(0).max(1).default(0)
 });

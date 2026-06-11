@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { requireAdmin } from "@/lib/auth/admin";
 import { getRestaurantForAdmin } from "@/lib/domain/restaurants";
 
 type Props = {
@@ -8,7 +7,6 @@ type Props = {
 };
 
 export default async function AdminRestaurantDetailPage({ params }: Props) {
-  await requireAdmin();
   const { id } = await params;
   const restaurant = await getRestaurantForAdmin(Number.parseInt(id, 10));
   if (!restaurant) notFound();
