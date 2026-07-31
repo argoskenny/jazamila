@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import nextConfig from "@/next.config";
+import nextConfig, { contentSecurityPolicy } from "@/next.config";
 
 describe("security headers", () => {
   it("applies baseline browser security headers to all routes", async () => {
@@ -17,5 +17,10 @@ describe("security headers", () => {
     expect(allRoutes?.headers.find((header) => header.key === "Content-Security-Policy")?.value).toContain(
       "https://www.google.com/recaptcha/"
     );
+  });
+
+  it("allows React development debugging without weakening the production policy", () => {
+    expect(contentSecurityPolicy("development")).toContain("script-src 'self' 'unsafe-inline' 'unsafe-eval'");
+    expect(contentSecurityPolicy("production")).not.toContain("'unsafe-eval'");
   });
 });

@@ -1,5 +1,27 @@
 import type { NextConfig } from "next";
 
+export function contentSecurityPolicy(environment = process.env.NODE_ENV): string {
+  const scriptSources = [
+    "'self'",
+    "'unsafe-inline'",
+    ...(environment === "development" ? ["'unsafe-eval'"] : []),
+    "https://www.google.com/recaptcha/",
+    "https://www.gstatic.com/recaptcha/"
+  ];
+
+  return [
+    "default-src 'self'",
+    "base-uri 'self'",
+    "frame-ancestors 'none'",
+    "form-action 'self'",
+    "img-src 'self' data:",
+    `script-src ${scriptSources.join(" ")}`,
+    "style-src 'self' 'unsafe-inline'",
+    "connect-src 'self' https://www.google.com/recaptcha/",
+    "frame-src https://www.google.com/recaptcha/"
+  ].join("; ");
+}
+
 const nextConfig: NextConfig = {
   async headers() {
     return [
@@ -24,17 +46,7 @@ const nextConfig: NextConfig = {
           },
           {
             key: "Content-Security-Policy",
-            value: [
-              "default-src 'self'",
-              "base-uri 'self'",
-              "frame-ancestors 'none'",
-              "form-action 'self'",
-              "img-src 'self' data:",
-              "script-src 'self' 'unsafe-inline' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/",
-              "style-src 'self' 'unsafe-inline'",
-              "connect-src 'self' https://www.google.com/recaptcha/",
-              "frame-src https://www.google.com/recaptcha/"
-            ].join("; ")
+            value: contentSecurityPolicy()
           }
         ]
       }

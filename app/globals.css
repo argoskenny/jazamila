@@ -285,9 +285,88 @@ img {
 
 .decision-form {
   align-self: center;
+  gap: 20px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 243, 207, 0.86)),
     var(--surface);
+}
+
+.decision-primary {
+  display: grid;
+  gap: 12px;
+  text-align: center;
+}
+
+.decision-primary p {
+  margin: 0;
+}
+
+.decision-kicker {
+  color: var(--red-dark) !important;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.decision-hint {
+  font-size: 14px;
+}
+
+.decision-button {
+  width: 100%;
+  min-height: 86px;
+  border-width: 3px;
+  box-shadow: 6px 6px 0 var(--line);
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(28px, 4vw, 40px);
+}
+
+.decision-button:hover {
+  box-shadow: 7px 7px 0 var(--line);
+}
+
+.filter-disclosure {
+  border-top: 2px solid var(--line-soft);
+  padding-top: 16px;
+}
+
+.filter-disclosure summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: var(--radius);
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  list-style: none;
+}
+
+.filter-disclosure summary::-webkit-details-marker {
+  display: none;
+}
+
+.filter-disclosure summary::after {
+  content: "+";
+  color: var(--red-dark);
+  font-size: 22px;
+  line-height: 1;
+}
+
+.filter-disclosure[open] summary::after {
+  content: "−";
+}
+
+.filter-disclosure summary:hover {
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--red-dark);
+}
+
+.filter-fields {
+  display: grid;
+  gap: 16px;
+  padding-top: 18px;
 }
 
 .field {
