@@ -51,3 +51,5 @@ pnpm-debug.log*
 .vercel/
 .vscode/
 .idea/
+
+docs/res_data/*
