@@ -1,9 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { BlogLinkForm } from "@/components/forms/BlogLinkForm";
 import { PickAgainButton } from "@/components/forms/PickAgainButton";
 import { RestaurantImage } from "@/components/restaurants/RestaurantImage";
-import { listBlogLinksForRestaurant } from "@/lib/domain/blogs";
 import { getRestaurantDetail } from "@/lib/domain/restaurants";
 
 type Props = {
@@ -35,7 +33,7 @@ export default async function DetailPage({ params, searchParams }: Props) {
     .split("-")
     .map((value) => Number.parseInt(value, 10))
     .filter((value) => Number.isFinite(value) && value > 0);
-  const blogLinks = await listBlogLinksForRestaurant(restaurant.id);
+  const restaurantNameMapHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(restaurant.res_name)}`;
 
   return (
     <section className="page-shell detail-grid">
@@ -50,18 +48,21 @@ export default async function DetailPage({ params, searchParams }: Props) {
       </div>
       <div className="form-grid">
         <div className="panel detail-restaurant-panel">
-          <h1 className="page-title">{restaurant.res_name}</h1>
-          <p className="detail-location">{[restaurant.cityLabel, restaurant.districtLabel].filter(Boolean).join("・")}</p>
-          <p className="detail-restaurant-address">
+          <h1 className="page-title">
+            <a className="detail-restaurant-name-link" href={restaurantNameMapHref} target="_blank" rel="noreferrer">
+              {restaurant.res_name}
+            </a>
+          </h1>
+          <p className="detail-restaurant-contact">
             {restaurant.mapHref ? (
-              <a className="text-link" href={restaurant.mapHref} target="_blank" rel="noreferrer">
+              <a className="detail-restaurant-contact-link" href={restaurant.mapHref} target="_blank" rel="noreferrer">
                 {restaurant.res_address || "地址未提供"}
               </a>
             ) : restaurant.res_address || "地址未提供"}
           </p>
-          <p className="detail-restaurant-phone">
+          <p className="detail-restaurant-contact">
             <strong>電話：</strong>
-            {restaurant.phoneHref ? <a className="text-link" href={restaurant.phoneHref}>{restaurant.telLabel}</a> : restaurant.telLabel}
+            {restaurant.phoneHref ? <a className="detail-restaurant-contact-link" href={restaurant.phoneHref}>{restaurant.telLabel}</a> : restaurant.telLabel}
           </p>
           <div className="detail-facts" aria-label="餐廳摘要">
             {restaurant.ratingScore != null ? (
@@ -76,7 +77,6 @@ export default async function DetailPage({ params, searchParams }: Props) {
               <span className="restaurant-tag restaurant-tag-feature" key={tag}>{tag}</span>
             ))}
           </p>
-          {restaurant.res_note ? <p className="detail-restaurant-note">{restaurant.res_note}</p> : null}
           {restaurant.reviewSummaries.length > 0 ? (
             <div className="review-summary">
               <h2>評論摘要</h2>
@@ -95,20 +95,6 @@ export default async function DetailPage({ params, searchParams }: Props) {
             <Link className="button ghost" href={`/listdata/${listRecord}`}>返回列表</Link>
           </div>
         </div>
-
-        <div className="panel">
-          <h2>食記介紹</h2>
-          <div className="blog-list">
-            {blogLinks.map((blog) => (
-              <a className="text-link" href={blog.b_bloglink} key={blog.id} rel="noreferrer" target="_blank">
-                {blog.b_blogname}
-              </a>
-            ))}
-            {blogLinks.length === 0 ? <p>目前還沒有食記。</p> : null}
-          </div>
-        </div>
-
-        <BlogLinkForm restaurantId={restaurant.id} />
       </div>
     </section>
   );

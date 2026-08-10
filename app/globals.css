@@ -672,9 +672,11 @@ img {
 }
 
 .list-count {
-  margin: -8px 0 18px;
+  align-self: flex-end;
+  margin: 0;
   color: var(--muted);
   font-weight: 800;
+  text-align: right;
 }
 
 .list-header .actions {
@@ -794,14 +796,6 @@ img {
   color: var(--muted);
 }
 
-.restaurant-card .restaurant-note {
-  margin-bottom: 0;
-  display: -webkit-box;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
-
 .meta {
   display: flex;
   flex-wrap: wrap;
@@ -871,23 +865,32 @@ img {
   box-shadow: var(--shadow-hard);
 }
 
-.detail-restaurant-address {
-  margin: 14px 0 3px;
+.detail-restaurant-name-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.detail-restaurant-name-link:hover {
+  color: var(--red-dark);
+}
+
+.detail-restaurant-contact {
+  margin: 14px 0 0;
   color: var(--muted);
   font-weight: 700;
 }
 
-.detail-location {
-  margin: 12px 0 2px;
-  color: var(--green);
-  font-size: 14px;
-  font-weight: 900;
+.detail-restaurant-contact + .detail-restaurant-contact {
+  margin-top: 3px;
+  margin-bottom: 14px;
 }
 
-.detail-restaurant-phone {
-  margin: 0 0 14px;
-  color: var(--muted);
-  font-weight: 700;
+.detail-restaurant-contact-link {
+  color: inherit;
+}
+
+.detail-restaurant-contact-link:hover {
+  color: var(--red-dark);
 }
 
 .detail-restaurant-panel .restaurant-tags {
@@ -957,12 +960,6 @@ img {
 .pick-again .status {
   max-width: 420px;
   margin: 0;
-}
-
-.detail-restaurant-note {
-  margin: 0 0 20px;
-  color: var(--muted);
-  line-height: 1.75;
 }
 
 .blog-list,

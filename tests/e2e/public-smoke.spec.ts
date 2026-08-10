@@ -42,6 +42,12 @@ test("loads the public decision and list pages", async ({ page }) => {
 
   await page.goto("/listdata/0/0/0/0/1");
   await expect(page.getByRole("heading", { name: "餐廳列表" })).toBeVisible();
+  const listCount = page.locator(".list-header > .list-count");
+  await expect(listCount).toHaveText(/共 [\d,]+ 間餐廳/);
+  await expect(listCount).toHaveCSS("align-self", "flex-end");
+  await expect(listCount).toHaveCSS("text-align", "right");
+  await expect(page.locator(".restaurant-note")).toHaveCount(0);
+  await expect(page.getByText(/料理與特色：/)).toHaveCount(0);
   await expect(page.getByText("所有的餐廳", { exact: true })).toHaveCount(0);
   await page.getByRole("button", { name: "篩選", exact: true }).click();
   await expect(page.getByLabel("城市")).toBeVisible();
@@ -57,12 +63,19 @@ test("loads the public decision and list pages", async ({ page }) => {
   await restaurantCard.click();
   await expect(page).toHaveURL(/\/detail\/1\?/);
   const detailPanel = page.locator(".detail-restaurant-panel");
-  await expect(detailPanel.getByRole("heading", { name: "Sushi House", exact: true })).toBeVisible();
+  const restaurantNameLink = detailPanel.getByRole("link", { name: "Sushi House", exact: true });
+  await expect(restaurantNameLink).toBeVisible();
+  await expect(restaurantNameLink).toHaveAttribute("href", "https://www.google.com/maps/search/?api=1&query=Sushi%20House");
+  await expect(restaurantNameLink).toHaveAttribute("target", "_blank");
+  await expect(detailPanel.getByText("台北市・大同區", { exact: true })).toHaveCount(0);
   await expect(detailPanel.getByText("台北市大同區民生西路 100 號", { exact: true })).toBeVisible();
   await expect(detailPanel.getByText("電話：(02) 1234567", { exact: true })).toBeVisible();
   await expect(detailPanel.getByText("日式料理", { exact: true })).toBeVisible();
   await expect(detailPanel.getByText("100 元左右", { exact: true })).toBeVisible();
   await expect(detailPanel.locator(".tag")).toHaveCount(0);
+  await expect(detailPanel.locator(".detail-restaurant-note")).toHaveCount(0);
+  await expect(page.getByRole("heading", { name: "食記介紹" })).toHaveCount(0);
+  await expect(page.getByRole("heading", { name: "新增食記" })).toHaveCount(0);
 });
 
 test("supports multiple cuisine tags and saves filters automatically", async ({ page, context }) => {

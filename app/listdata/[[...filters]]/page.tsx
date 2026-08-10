@@ -22,9 +22,6 @@ export default async function ListDataPage({ params, searchParams }: Props) {
       <div className="list-header">
         <div>
           <h1 className="page-title">餐廳列表</h1>
-          <p className="list-count" aria-live="polite">
-            共 {result.totalRows.toLocaleString("zh-TW")} 間餐廳
-          </p>
           <RestaurantListFilter
             filters={filters}
             regions={getRegions()}
@@ -33,6 +30,9 @@ export default async function ListDataPage({ params, searchParams }: Props) {
             moneyOptions={moneyOptions}
           />
         </div>
+        <p className="list-count" aria-live="polite">
+          共 {result.totalRows.toLocaleString("zh-TW")} 間餐廳
+        </p>
       </div>
 
       <div className="restaurant-list">
@@ -71,7 +71,6 @@ export default async function ListDataPage({ params, searchParams }: Props) {
                       <span className="restaurant-tag restaurant-tag-more">+{tagSummary.hiddenCount}</span>
                     ) : null}
                   </p>
-                  {restaurant.res_note ? <p className="restaurant-note">{restaurant.res_note}</p> : null}
                 </div>
               </Link>
             </article>
