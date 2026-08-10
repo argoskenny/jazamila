@@ -1,6 +1,7 @@
 import { listPublicRestaurants } from "@/lib/domain/restaurants";
 
-function publicAssetUrl(path: string): string {
+function publicImageUrl(path: string): string {
+  if (/^https?:\/\//i.test(path)) return path;
   const appUrl = process.env.NEXT_PUBLIC_APP_URL?.trim().replace(/\/+$/, "");
   return appUrl ? `${appUrl}${path}` : path;
 }
@@ -15,7 +16,7 @@ export async function GET() {
     res_price: restaurant.res_price,
     res_foodtype: restaurant.foodTypeLabel,
     res_address: restaurant.res_address,
-    res_img_url: publicAssetUrl(restaurant.imagePath)
+    res_img_url: publicImageUrl(restaurant.imagePath)
   }));
 
   return Response.json(data);

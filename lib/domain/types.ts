@@ -30,6 +30,17 @@ export type RestaurantView = Restaurant & {
   telLabel: string;
   priceLabel: string;
   imagePath: string;
+  fallbackImagePath: string;
+  cityLabel: string;
+  districtLabel: string;
+  tags: string[];
+  ratingPlatform: string;
+  ratingScore: number | null;
+  ratingReviewCount: number | null;
+  reviewSummaries: string[];
+  businessHoursLabel: string;
+  phoneHref: string | null;
+  mapHref: string | null;
 };
 
 export type BlogLink = {
@@ -84,6 +95,7 @@ export type RestaurantCriteria = {
   minPrice: number;
   foodType: number;
   foodTypes?: number[];
+  excludeIds?: number[];
 };
 
 export type ListFilters = RestaurantCriteria & {

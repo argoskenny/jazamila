@@ -49,7 +49,10 @@ export function PickRestaurantForm({ preferences, regions, sectionsByRegion, foo
       const data = (await response.json()) as { status: string; res_id: number };
 
       if (data.status === "success" && data.res_id > 0) {
-        window.location.href = `/detail/${data.res_id}`;
+        const location = regionId === 0 ? "0" : `${regionId}X${sectionId}`;
+        const minPrice = Number(form.get("foodmoney_min") ?? 0);
+        const maxPrice = Number(form.get("foodmoney_max") ?? 0);
+        window.location.href = `/detail/${data.res_id}?ul=${encodeURIComponent(location)}&ut=0&uft=${selectedFoodTypes.join("-")}&umx=${maxPrice}&umi=${minPrice}`;
         return;
       }
 

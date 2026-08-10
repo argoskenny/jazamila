@@ -43,7 +43,8 @@ for (const [prefix, [city, expectedCount]] of Object.entries(expected)) {
     if (collection.target_count !== 200) errors.push(`${short}: collection.target_count is not 200`);
     if (collection.record_count !== restaurants.length) errors.push(`${short}: record_count mismatch`);
     if (!['complete', 'partial'].includes(collection.status)) errors.push(`${short}: invalid status ${collection.status}`);
-    if (collection.status === "complete" && restaurants.length !== 200) errors.push(`${short}: complete but has ${restaurants.length}`);
+    const operationFiltered = Boolean(collection.operation_status_checked_at && Object.prototype.hasOwnProperty.call(collection, "record_count_after_operation_check"));
+    if (collection.status === "complete" && restaurants.length !== 200 && !operationFiltered) errors.push(`${short}: complete but has ${restaurants.length}`);
     if (collection.status === "partial" && restaurants.length >= 200) errors.push(`${short}: partial but has ${restaurants.length}`);
     const ids = new Set();
     const keys = new Set();

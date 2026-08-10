@@ -671,6 +671,12 @@ img {
   margin-bottom: 24px;
 }
 
+.list-count {
+  margin: -8px 0 18px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
 .list-header .actions {
   min-width: min(100%, 430px);
   margin-top: 0;
@@ -678,14 +684,19 @@ img {
 
 .restaurant-list {
   display: grid;
-  gap: 18px;
+  gap: 14px;
+}
+
+.restaurant-list article {
+  content-visibility: auto;
+  contain-intrinsic-size: 220px;
 }
 
 .restaurant-card {
   display: grid;
   grid-template-columns: minmax(150px, 190px) minmax(0, 1fr);
   gap: 20px;
-  padding: 14px;
+  padding: 12px;
   transition: box-shadow 180ms ease, transform 180ms ease, background-color 180ms ease;
 }
 
@@ -713,7 +724,7 @@ img {
 .restaurant-card h3 {
   margin: 0 0 9px;
   color: var(--ink);
-  font-size: clamp(22px, 3vw, 30px);
+  font-size: clamp(21px, 2.5vw, 27px);
   line-height: 1.22;
 }
 
@@ -731,6 +742,13 @@ img {
   color: var(--muted);
   font-size: 14px;
   font-weight: 700;
+}
+
+.restaurant-rating {
+  margin: -4px 0 10px;
+  color: #8a4b00 !important;
+  font-size: 14px;
+  font-weight: 900;
 }
 
 .restaurant-tags {
@@ -764,8 +782,24 @@ img {
   color: var(--blue);
 }
 
+.restaurant-tag-feature {
+  border-color: var(--line-soft);
+  background: var(--paper-strong);
+  color: var(--ink);
+}
+
+.restaurant-tag-more {
+  border-color: var(--line-soft);
+  background: transparent;
+  color: var(--muted);
+}
+
 .restaurant-card .restaurant-note {
   margin-bottom: 0;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .meta {
@@ -843,6 +877,13 @@ img {
   font-weight: 700;
 }
 
+.detail-location {
+  margin: 12px 0 2px;
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 900;
+}
+
 .detail-restaurant-phone {
   margin: 0 0 14px;
   color: var(--muted);
@@ -851,6 +892,71 @@ img {
 
 .detail-restaurant-panel .restaurant-tags {
   margin-bottom: 18px;
+}
+
+.detail-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.detail-facts p {
+  display: grid;
+  align-content: start;
+  gap: 4px;
+  min-height: 84px;
+  margin: 0;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  background: var(--paper-strong);
+  padding: 12px;
+}
+
+.detail-facts strong {
+  color: var(--ink);
+  line-height: 1.35;
+}
+
+.detail-facts span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.review-summary {
+  margin: 22px 0;
+  border-top: 1px solid var(--line-soft);
+  padding-top: 18px;
+}
+
+.review-summary h2 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.review-summary ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.pick-again {
+  display: grid;
+  gap: 8px;
+}
+
+.pick-again .status {
+  max-width: 420px;
+  margin: 0;
 }
 
 .detail-restaurant-note {
@@ -1075,6 +1181,20 @@ td p {
 
   .button,
   .actions .input {
+    width: 100%;
+  }
+
+  .detail-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-facts p {
+    min-height: auto;
+  }
+
+  .detail-actions,
+  .detail-actions .button,
+  .detail-actions .pick-again {
     width: 100%;
   }
 }

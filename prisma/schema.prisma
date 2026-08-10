@@ -7,28 +7,130 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// Existing compatibility table kept in the schema so `prisma db push` never
+// drops local legacy accounts while restaurant data is synchronized.
+model User {
+  id          Int      @id @default(autoincrement())
+  account     String   @unique
+  password    String
+  email       String   @unique
+  name        String?
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("users")
+}
+
 model Restaurant {
-  id            Int     @id @default(autoincrement())
-  name          String  @map("res_name")
-  areaNum       String? @map("res_area_num")
-  telNum        String? @map("res_tel_num")
-  region        Int     @default(0) @map("res_region")
-  section       Int     @default(0) @map("res_section")
-  address       String? @map("res_address")
-  foodType      Int     @default(0) @map("res_foodtype")
-  price         Int     @default(0) @map("res_price")
-  openTime      Int     @default(0) @map("res_open_time")
-  closeTime     Int     @default(0) @map("res_close_time")
-  note          String? @map("res_note")
-  imageUrl      String? @map("res_img_url")
-  originalImage String? @map("res_img_ori_url")
-  updatedAtUnix Int?    @map("res_updatetime")
-  postId        Int     @default(0) @map("res_post_id")
-  closed        Int     @default(0) @map("res_close")
-  blogLinks     BlogLink[]
+  id                   Int             @id @default(autoincrement())
+  name                 String          @map("res_name")
+  areaNum              String?         @map("res_area_num")
+  telNum               String?         @map("res_tel_num")
+  region               Int             @default(0) @map("res_region")
+  section              Int             @default(0) @map("res_section")
+  address              String?         @map("res_address")
+  foodType             Int             @default(0) @map("res_foodtype")
+  price                Int             @default(0) @map("res_price")
+  openTime             Int             @default(0) @map("res_open_time")
+  closeTime            Int             @default(0) @map("res_close_time")
+  note                 String?         @map("res_note")
+  imageUrl             String?         @map("res_img_url")
+  originalImage        String?         @map("res_img_ori_url")
+  updatedAtUnix        Int?            @map("res_updatetime")
+  postId               Int             @default(0) @map("res_post_id")
+  closed               Int             @default(0) @map("res_close")
+  importKey            String?         @unique @map("import_key")
+  sourceId             String?         @map("source_id")
+  sourceFile           String?         @map("source_file")
+  sourceRefsJson       String?         @map("source_refs_json")
+  phone                String?         @map("phone")
+  priceMin             Int?            @map("res_price_min")
+  priceMax             Int?            @map("res_price_max")
+  ratingPlatform       String?         @map("rating_platform")
+  ratingScore          Float?          @map("rating_score")
+  ratingReviewCount    Int?            @map("rating_review_count")
+  reviewSummaryJson    String?         @map("review_summary_json")
+  businessOpenTime     String?         @map("business_open_time")
+  businessCloseTime    String?         @map("business_close_time")
+  externalImageUrl     String?         @map("external_image_url")
+  manualOverrideFields String?         @map("manual_override_fields")
+  cityId               Int?            @map("city_id")
+  districtId           Int?            @map("district_id")
+  city                 City?           @relation(fields: [cityId], references: [id], onDelete: SetNull)
+  district             District?       @relation(fields: [districtId], references: [id], onDelete: SetNull)
+  blogLinks            BlogLink[]
+  tags                 RestaurantTag[]
 
   @@index([closed, region, section, foodType, price])
+  @@index([cityId, districtId])
+  @@index([sourceId])
   @@map("r_restaurant")
+}
+
+model City {
+  id           Int          @id @default(autoincrement())
+  code         String       @unique
+  name         String       @unique
+  legacyRegion Int?         @unique @map("legacy_region")
+  districts    District[]
+  restaurants  Restaurant[]
+
+  @@map("r_city")
+}
+
+model District {
+  id            Int          @id @default(autoincrement())
+  cityId        Int          @map("city_id")
+  city          City         @relation(fields: [cityId], references: [id], onDelete: Cascade)
+  code          String
+  name          String
+  legacySection Int?         @map("legacy_section")
+  restaurants   Restaurant[]
+
+  @@unique([cityId, code])
+  @@unique([cityId, name])
+  @@unique([cityId, legacySection])
+  @@index([cityId])
+  @@map("r_district")
+}
+
+model Tag {
+  id             Int             @id @default(autoincrement())
+  name           String
+  normalizedName String          @unique @map("normalized_name")
+  restaurants    RestaurantTag[]
+
+  @@map("r_tag")
+}
+
+model RestaurantTag {
+  restaurantId Int        @map("restaurant_id")
+  tagId        Int        @map("tag_id")
+  position     Int        @default(0)
+  restaurant   Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+  tag          Tag        @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([restaurantId, tagId])
+  @@index([tagId])
+  @@map("r_restaurant_tag")
+}
+
+model RestaurantImportIssue {
+  issueKey      String  @id @map("issue_key")
+  status        String
+  severity      String
+  reasonCode    String  @map("reason_code")
+  sourceFile    String  @map("source_file")
+  sourceId      String? @map("source_id")
+  importKey     String? @map("import_key")
+  details       String
+  payloadJson   String  @map("payload_json")
+  updatedAtUnix Int     @map("updated_at_unix")
+
+  @@index([status, reasonCode])
+  @@index([importKey])
+  @@map("r_restaurant_import_issue")
 }
 
 model Post {
@@ -68,12 +170,12 @@ model BlogLink {
 }
 
 model Feedback {
-  id        Int    @id @default(autoincrement())
-  name      String? @map("f_name")
-  email     String? @map("f_email")
-  content   String? @map("f_content")
-  timeUnix  Int     @default(0) @map("f_time")
-  isRead    Int     @default(0) @map("f_isread")
+  id       Int     @id @default(autoincrement())
+  name     String? @map("f_name")
+  email    String? @map("f_email")
+  content  String? @map("f_content")
+  timeUnix Int     @default(0) @map("f_time")
+  isRead   Int     @default(0) @map("f_isread")
 
   @@index([isRead])
   @@map("r_feedback")

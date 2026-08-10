@@ -14,7 +14,7 @@ describe("admin data queries", () => {
     const stats = await countAdminDashboardStats();
 
     expect(stats).toMatchObject({
-      restaurants: 4,
+      restaurants: 5,
       posts: 1,
       blogs: 2,
       feedback: 1

@@ -8,7 +8,40 @@ import { restaurantAdminSchema } from "@/lib/validation/forms";
 const perPage = 10;
 const defaultPublicListLimit = 500;
 
-type PrismaRestaurant = Prisma.RestaurantGetPayload<object>;
+type PrismaRestaurant = Prisma.RestaurantGetPayload<object> & {
+  city?: { name: string } | null;
+  district?: { name: string } | null;
+  tags?: Array<{ position: number; tag: { name: string } }>;
+};
+
+const publicRestaurantInclude = {
+  city: { select: { name: true } },
+  district: { select: { name: true } },
+  tags: {
+    orderBy: { position: "asc" as const },
+    include: { tag: { select: { name: true } } }
+  }
+};
+
+const cuisineTagTerms: Record<number, string[]> = {
+  1: ["日式", "日本", "壽司", "拉麵", "丼飯", "居酒屋", "和食"],
+  2: ["美式", "漢堡", "美國"],
+  3: ["義式", "義大利", "披薩", "燉飯", "pasta"],
+  4: ["小吃"]
+};
+
+function cuisinePredicates(cuisineId: number): Prisma.RestaurantWhereInput[] {
+  const legacyFoodType: Prisma.RestaurantWhereInput = cuisineId === 4
+    ? { AND: [{ foodType: 4 }, { importKey: null }] }
+    : { foodType: cuisineId };
+
+  return [
+    legacyFoodType,
+    ...(cuisineTagTerms[cuisineId] ?? []).map((term) => ({
+      tags: { some: { tag: { name: { contains: term } } } }
+    }))
+  ];
+}
 
 function toInt(value: string | number | undefined, fallback = 0): number {
   const parsed = typeof value === "number" ? value : Number.parseInt(value ?? "", 10);
@@ -57,16 +90,46 @@ function criteriaWhere(criteria: RestaurantCriteria): Prisma.RestaurantWhereInpu
     closed: { not: 1 }
   };
   const selectedFoodTypes = criteria.foodTypes?.filter((foodType) => foodType > 0) ?? [];
+  const conditions: Prisma.RestaurantWhereInput[] = [];
 
-  if (criteria.regionId) where.region = criteria.regionId;
-  if (criteria.sectionId) where.section = criteria.sectionId;
-  if (selectedFoodTypes.length > 0) {
-    where.foodType = { in: selectedFoodTypes };
-  } else if (criteria.foodType) {
-    where.foodType = criteria.foodType;
+  if (criteria.regionId) {
+    conditions.push({
+      OR: [{ region: criteria.regionId }, { city: { legacyRegion: criteria.regionId } }]
+    });
   }
-  if (criteria.maxPrice && criteria.maxPrice < 1100) where.price = { ...(where.price as object), lte: criteria.maxPrice };
-  if (criteria.minPrice) where.price = { ...(where.price as object), gte: criteria.minPrice };
+  if (criteria.sectionId) {
+    conditions.push({
+      OR: [{ section: criteria.sectionId }, { district: { legacySection: criteria.sectionId } }]
+    });
+  }
+
+  const cuisineIds = selectedFoodTypes.length > 0 ? selectedFoodTypes : criteria.foodType ? [criteria.foodType] : [];
+  if (cuisineIds.length > 0) {
+    conditions.push({
+      OR: cuisineIds.flatMap(cuisinePredicates)
+    });
+  }
+
+  const hasUpperBound = criteria.maxPrice > 0 && criteria.maxPrice < 1100;
+  if (hasUpperBound || criteria.minPrice > 0) {
+    const rangeConditions: Prisma.RestaurantWhereInput[] = [];
+    if (hasUpperBound) rangeConditions.push({ priceMin: { lte: criteria.maxPrice } });
+    if (criteria.minPrice > 0) rangeConditions.push({ priceMax: { gte: criteria.minPrice } });
+
+    const legacyPrice: Prisma.IntFilter = {};
+    if (hasUpperBound) legacyPrice.lte = criteria.maxPrice;
+    if (criteria.minPrice > 0) legacyPrice.gte = criteria.minPrice;
+
+    conditions.push({
+      OR: [
+        { AND: rangeConditions },
+        { priceMin: null, priceMax: null, price: legacyPrice }
+      ]
+    });
+  }
+
+  if (criteria.excludeIds?.length) conditions.push({ id: { notIn: criteria.excludeIds } });
+  if (conditions.length > 0) where.AND = conditions;
 
   return where;
 }
@@ -78,7 +141,10 @@ function listWhere(filters: ListFilters): Prisma.RestaurantWhereInput {
     where.OR = [
       { name: { contains: filters.keyword } },
       { address: { contains: filters.keyword } },
-      { note: { contains: filters.keyword } }
+      { note: { contains: filters.keyword } },
+      { city: { name: { contains: filters.keyword } } },
+      { district: { name: { contains: filters.keyword } } },
+      { tags: { some: { tag: { name: { contains: filters.keyword } } } } }
     ];
   }
 
@@ -99,7 +165,7 @@ function fromPrismaRestaurant(restaurant: PrismaRestaurant): Restaurant {
     res_open_time: Number(restaurant.openTime),
     res_close_time: Number(restaurant.closeTime),
     res_note: restaurant.note ?? "",
-    res_img_url: restaurant.imageUrl ?? "preview_1380970870.jpg",
+    res_img_url: restaurant.imageUrl ?? "",
     res_img_ori_url: restaurant.originalImage ?? "",
     res_updatetime: restaurant.updatedAtUnix === null ? 0 : Number(restaurant.updatedAtUnix),
     res_post_id: Number(restaurant.postId),
@@ -107,25 +173,56 @@ function fromPrismaRestaurant(restaurant: PrismaRestaurant): Restaurant {
   };
 }
 
-function imagePathForFoodType(foodType: number): string {
-  const images: Record<number, string> = {
-    1: "/assets/img/jazamila/generated/cuisine-japanese.png",
-    2: "/assets/img/jazamila/generated/cuisine-american.png",
-    3: "/assets/img/jazamila/generated/cuisine-italian.png",
-    4: "/assets/img/jazamila/generated/cuisine-street-food.png"
-  };
+export const defaultRestaurantImagePath = "/assets/img/jazamila/generated/restaurant-default.jpg";
 
-  return images[foodType] ?? "/assets/img/jazamila/generated/cuisine-street-food.png";
+export function summarizeRestaurantTags(tags: string[], foodTypeLabel: string, visibleLimit = 3) {
+  const featureTags = tags.filter((tag) => tag !== foodTypeLabel);
+  const visibleTags = featureTags.slice(0, visibleLimit);
+  return {
+    visibleTags,
+    hiddenCount: Math.max(0, featureTags.length - visibleTags.length)
+  };
 }
 
 function imagePathForRestaurant(restaurant: Restaurant): string {
   const filename = restaurant.res_img_url.trim().split(/[\\/]/).pop() ?? "";
-  if (!filename || filename === "." || filename === "..") return imagePathForFoodType(restaurant.res_foodtype);
+  if (!filename || filename === "." || filename === "..") return defaultRestaurantImagePath;
   return `/assets/pics/${encodeURIComponent(filename)}`;
 }
 
+function parseStringArray(value: string | null | undefined): string[] {
+  if (!value) return [];
+  try {
+    const parsed = JSON.parse(value);
+    return Array.isArray(parsed) ? parsed.filter((item): item is string => typeof item === "string" && item.trim().length > 0) : [];
+  } catch {
+    return [];
+  }
+}
+
+function formatPriceRange(priceMin: number | null | undefined, priceMax: number | null | undefined, fallback: number) {
+  if (priceMin != null && priceMax != null) {
+    if (priceMin === priceMax) return `每人約 ${priceMin.toLocaleString("zh-TW")} 元`;
+    return `每人 ${priceMin.toLocaleString("zh-TW")}–${priceMax.toLocaleString("zh-TW")} 元`;
+  }
+  if (priceMin != null) return `每人 ${priceMin.toLocaleString("zh-TW")} 元起`;
+  if (priceMax != null) return `每人 ${priceMax.toLocaleString("zh-TW")} 元內`;
+  return fallback > 0 ? `${fallback.toLocaleString("zh-TW")} 元左右` : "價格彈性";
+}
+
+function formatBusinessHours(openTime: string | null | undefined, closeTime: string | null | undefined) {
+  if (openTime && closeTime) return `平均 ${openTime}–${closeTime}`;
+  if (openTime) return `平均 ${openTime} 開始營業`;
+  if (closeTime) return `平均營業至 ${closeTime}`;
+  return "營業時間未提供";
+}
+
 export function toRestaurantView(restaurant: Restaurant): RestaurantView {
-  const tel = restaurant.res_tel_num ? `(${restaurant.res_area_num}) ${restaurant.res_tel_num}` : "未提供";
+  const tel = restaurant.res_tel_num
+    ? restaurant.res_area_num
+      ? `(${restaurant.res_area_num}) ${restaurant.res_tel_num}`
+      : restaurant.res_tel_num
+    : "未提供";
 
   return {
     ...restaurant,
@@ -134,12 +231,47 @@ export function toRestaurantView(restaurant: Restaurant): RestaurantView {
     foodTypeLabel: labelFor(foodTypes, restaurant.res_foodtype, "未分類"),
     telLabel: tel,
     priceLabel: restaurant.res_price > 0 ? `${restaurant.res_price} 元左右` : "價格彈性",
-    imagePath: imagePathForRestaurant(restaurant)
+    imagePath: imagePathForRestaurant(restaurant),
+    fallbackImagePath: defaultRestaurantImagePath,
+    cityLabel: labelFor(regions, restaurant.res_region, "未知縣市"),
+    districtLabel: labelFor(getSections(restaurant.res_region), restaurant.res_section, ""),
+    tags: [],
+    ratingPlatform: "",
+    ratingScore: null,
+    ratingReviewCount: null,
+    reviewSummaries: [],
+    businessHoursLabel: "營業時間未提供",
+    phoneHref: restaurant.res_tel_num ? `tel:${`${restaurant.res_area_num}${restaurant.res_tel_num}`.replace(/[^\d+]/g, "")}` : null,
+    mapHref: restaurant.res_address ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(restaurant.res_address)}` : null
   };
 }
 
 export function toRestaurantViewFromPrisma(restaurant: PrismaRestaurant): RestaurantView {
-  return toRestaurantView(fromPrismaRestaurant(restaurant));
+  const legacy = fromPrismaRestaurant(restaurant);
+  const base = toRestaurantView(legacy);
+  const fallbackImagePath = defaultRestaurantImagePath;
+  const externalImageUrl = restaurant.externalImageUrl?.trim();
+  const tags = restaurant.tags?.map((relation) => relation.tag.name).filter(Boolean) ?? [];
+  const phone = restaurant.phone?.trim() || base.telLabel;
+  const phoneDigits = phone === "未提供" ? "" : phone.replace(/[^\d+]/g, "");
+
+  return {
+    ...base,
+    telLabel: phone,
+    phoneHref: phoneDigits ? `tel:${phoneDigits}` : null,
+    priceLabel: formatPriceRange(restaurant.priceMin, restaurant.priceMax, legacy.res_price),
+    imagePath: externalImageUrl && /^https?:\/\//i.test(externalImageUrl) ? externalImageUrl : base.imagePath,
+    fallbackImagePath,
+    cityLabel: restaurant.city?.name || base.regionLabel,
+    districtLabel: restaurant.district?.name || base.sectionLabel,
+    foodTypeLabel: legacy.res_foodtype > 0 ? base.foodTypeLabel : tags[0] || "其他餐飲",
+    tags,
+    ratingPlatform: restaurant.ratingPlatform ?? "",
+    ratingScore: restaurant.ratingScore,
+    ratingReviewCount: restaurant.ratingReviewCount,
+    reviewSummaries: parseStringArray(restaurant.reviewSummaryJson),
+    businessHoursLabel: formatBusinessHours(restaurant.businessOpenTime, restaurant.businessCloseTime)
+  };
 }
 
 export async function listRestaurants(filters: ListFilters) {
@@ -149,6 +281,7 @@ export async function listRestaurants(filters: ListFilters) {
   const page = clampPage(filters.page, totalPages);
   const restaurants = await prisma.restaurant.findMany({
     where,
+    include: publicRestaurantInclude,
     orderBy: { id: "asc" },
     skip: (page - 1) * perPage,
     take: perPage
@@ -189,7 +322,8 @@ export async function getRestaurantDetail(id: number): Promise<RestaurantView | 
     where: {
       id,
       closed: { not: 1 }
-    }
+    },
+    include: publicRestaurantInclude
   });
   return restaurant ? toRestaurantViewFromPrisma(restaurant) : null;
 }
@@ -208,6 +342,7 @@ export async function pickRestaurant(criteria: RestaurantCriteria): Promise<Rest
 
   const [selected] = await prisma.restaurant.findMany({
     where,
+    include: publicRestaurantInclude,
     orderBy: { id: "asc" },
     skip: Math.floor(Math.random() * candidateCount),
     take: 1
@@ -218,6 +353,7 @@ export async function pickRestaurant(criteria: RestaurantCriteria): Promise<Rest
 
 export async function listAllRestaurants(): Promise<RestaurantView[]> {
   const restaurants = await prisma.restaurant.findMany({
+    include: publicRestaurantInclude,
     orderBy: { id: "asc" }
   });
   return restaurants.map(toRestaurantViewFromPrisma);
@@ -228,6 +364,7 @@ export async function listPublicRestaurants({ limit = defaultPublicListLimit } =
     where: {
       closed: { not: 1 }
     },
+    include: publicRestaurantInclude,
     orderBy: { id: "asc" },
     take: Math.min(Math.max(1, limit), defaultPublicListLimit)
   });
@@ -263,25 +400,57 @@ export async function updateRestaurant(
   input: Partial<Omit<Restaurant, "id">>
 ): Promise<RestaurantView | null> {
   try {
+    const existing = await prisma.restaurant.findUnique({ where: { id } });
+    if (!existing) return null;
+    const city = input.res_region === undefined
+      ? null
+      : await prisma.city.findUnique({ where: { legacyRegion: input.res_region } });
+    const district = city && input.res_section !== undefined
+      ? await prisma.district.findUnique({
+          where: { cityId_legacySection: { cityId: city.id, legacySection: input.res_section } }
+        })
+      : null;
+    const phoneArea = input.res_area_num ?? existing.areaNum ?? "";
+    const phoneNumber = input.res_tel_num ?? existing.telNum ?? "";
+    const adminData = {
+      name: input.res_name,
+      areaNum: input.res_area_num,
+      telNum: input.res_tel_num,
+      region: input.res_region,
+      section: input.res_section,
+      address: input.res_address,
+      foodType: input.res_foodtype,
+      price: input.res_price,
+      note: input.res_note,
+      imageUrl: input.res_img_url,
+      closed: input.res_close
+    } as const;
+    let manualOverrideFields: string | null | undefined;
+    if (existing.importKey) {
+      let previous: string[] = [];
+      try {
+        const parsed = JSON.parse(existing.manualOverrideFields ?? "[]");
+        if (Array.isArray(parsed)) previous = parsed.filter((field): field is string => typeof field === "string");
+      } catch {
+        previous = [];
+      }
+      const changed = Object.entries(adminData)
+        .filter(([, value]) => value !== undefined)
+        .filter(([field, value]) => existing[field as keyof typeof existing] !== value)
+        .map(([field]) => field);
+      manualOverrideFields = JSON.stringify([...new Set([...previous, ...changed])].sort());
+    }
     const restaurant = await prisma.restaurant.update({
       where: { id },
       data: {
-        name: input.res_name,
-        areaNum: input.res_area_num,
-        telNum: input.res_tel_num,
-        region: input.res_region,
-        section: input.res_section,
-        address: input.res_address,
-        foodType: input.res_foodtype,
-        price: input.res_price,
-        openTime: input.res_open_time,
-        closeTime: input.res_close_time,
-        note: input.res_note,
-        imageUrl: input.res_img_url,
-        originalImage: input.res_img_ori_url,
+        ...adminData,
+        phone: input.res_area_num !== undefined || input.res_tel_num !== undefined
+          ? phoneNumber ? `${phoneArea} ${phoneNumber}`.trim() : null
+          : undefined,
+        cityId: city?.id,
+        districtId: district?.id,
         updatedAtUnix: input.res_updatetime,
-        postId: input.res_post_id,
-        closed: input.res_close
+        manualOverrideFields
       }
     });
     return toRestaurantViewFromPrisma(restaurant);
@@ -327,7 +496,7 @@ export function restaurantFromAdminForm(input: unknown): Omit<Restaurant, "id"> 
     res_open_time: 0,
     res_close_time: 0,
     res_note: data.res_note,
-    res_img_url: data.res_img_url || "preview_1380970870.jpg",
+    res_img_url: data.res_img_url,
     res_img_ori_url: "",
     res_updatetime: Math.floor(Date.now() / 1000),
     res_post_id: 0,

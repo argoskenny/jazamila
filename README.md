@@ -23,6 +23,7 @@ Useful checks:
 npm run typecheck
 npm test
 npm run build
+npm run e2e
 ```
 
 ## Project Layout
@@ -61,4 +62,4 @@ In production, the app rejects missing admin credentials, the development passwo
 - Run the SQLite import plan against a staging copy of the legacy database.
 - Confirm production persistent volume and backup strategy.
 - Replace local image filename handling with object storage or a persistent upload volume if needed.
-- Add Playwright E2E coverage for the public and admin flows.
+- Extend the production-mode Playwright gate from the current public smoke flows to authenticated admin flows.

@@ -1,0 +1,2602 @@
+{
+  "checked_at": "2026-08-10",
+  "provider": "替代網路搜尋（web search）",
+  "rule": "若 Google 搜尋不可用，改用替代網路搜尋；近一個月無歇業相關訊息則通過；近六個月找不到任何可辨識公開資料則移除。",
+  "totals": {
+    "files": 170,
+    "checked": 31670,
+    "before": 31670,
+    "after": 31660,
+    "fallback_evidence_applied": 94,
+    "removed": 10,
+    "unresolved": 0,
+    "hours_found": 10776,
+    "hours_missing": 20884
+  },
+  "files": {
+    "chiayi-city-dong-restaurants.json": {
+      "before": 174,
+      "after": 174,
+      "checked": 174,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 164,
+      "hours_missing": 10,
+      "removed_records": []
+    },
+    "chiayi-city-xi-restaurants.json": {
+      "before": 197,
+      "after": 197,
+      "checked": 197,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 151,
+      "hours_missing": 46,
+      "removed_records": []
+    },
+    "hsinchu-city-bei-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 139,
+      "hours_missing": 61,
+      "removed_records": []
+    },
+    "hsinchu-city-dong-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 197,
+      "hours_missing": 3,
+      "removed_records": []
+    },
+    "hsinchu-city-xiangshan-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 22,
+      "hours_missing": 178,
+      "removed_records": []
+    },
+    "kaohsiung-alian-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 6,
+      "hours_missing": 194,
+      "removed_records": []
+    },
+    "kaohsiung-daliao-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 10,
+      "hours_missing": 190,
+      "removed_records": []
+    },
+    "kaohsiung-dashe-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 14,
+      "hours_missing": 186,
+      "removed_records": []
+    },
+    "kaohsiung-dashu-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 23,
+      "hours_missing": 177,
+      "removed_records": []
+    },
+    "kaohsiung-fengshan-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 109,
+      "hours_missing": 91,
+      "removed_records": []
+    },
+    "kaohsiung-gangshan-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 53,
+      "hours_missing": 147,
+      "removed_records": []
+    },
+    "kaohsiung-gushan-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 136,
+      "hours_missing": 64,
+      "removed_records": []
+    },
+    "kaohsiung-hunei-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 4,
+      "hours_missing": 196,
+      "removed_records": []
+    },
+    "kaohsiung-jiaxian-restaurants.json": {
+      "before": 101,
+      "after": 101,
+      "checked": 101,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 6,
+      "hours_missing": 95,
+      "removed_records": []
+    },
+    "kaohsiung-lingya-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 150,
+      "hours_missing": 50,
+      "removed_records": []
+    },
+    "kaohsiung-linyuan-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 7,
+      "hours_missing": 193,
+      "removed_records": []
+    },
+    "kaohsiung-liugui-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 5,
+      "hours_missing": 195,
+      "removed_records": []
+    },
+    "kaohsiung-luzhu-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 9,
+      "hours_missing": 191,
+      "removed_records": []
+    },
+    "kaohsiung-maolin-restaurants.json": {
+      "before": 54,
+      "after": 54,
+      "checked": 54,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 2,
+      "hours_missing": 52,
+      "removed_records": []
+    },
+    "kaohsiung-meinong-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 26,
+      "hours_missing": 174,
+      "removed_records": []
+    },
+    "kaohsiung-mituo-restaurants.json": {
+      "before": 191,
+      "after": 191,
+      "checked": 191,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 3,
+      "hours_missing": 188,
+      "removed_records": []
+    },
+    "kaohsiung-namaxia-restaurants.json": {
+      "before": 74,
+      "after": 65,
+      "checked": 74,
+      "fallback_evidence_applied": 18,
+      "removed": 9,
+      "unresolved": 0,
+      "hours_found": 3,
+      "hours_missing": 62,
+      "removed_records": [
+        {
+          "source_id": "googlemaps-773c3b6536e1",
+          "id": "kaohsiung-namaxia-002",
+          "name": "達妮芙山地古早味 （那瑪夏店）",
+          "address": "高雄市那瑪夏區達卡努瓦里秀嶺巷205-1號斜對面7-11",
+          "reason": "替代網路搜尋已完成以店名、地址及名稱變體查詢；近六個月沒有任何可辨識、可對應該店面的公開資料，依規則移除。",
+          "source": null,
+          "sources": [],
+          "checked_at": "2026-08-10",
+          "evidence_freshness": "unavailable",
+          "evidence_kind": "alternative-web-search-no-data",
+          "evidence_excerpt": "已以店名、地址及名稱變體查詢替代網路搜尋；在查核日前六個月內找不到可辨識、可對應該店面的公開資料，亦未找到可供近一個月判斷營運的店家頁面。",
+          "original": {
+            "source_id": "googlemaps-773c3b6536e1",
+            "name": "達妮芙山地古早味 （那瑪夏店）",
+            "address": "高雄市那瑪夏區達卡努瓦里秀嶺巷205-1號斜對面7-11",
+            "phone": "0973 770 395",
+            "physical_store": true,
+            "price_range_twd_per_person": {
+              "min": 150,
+              "max": 800,
+              "display": "約 NT$150–800/人",
+              "basis": "Google Maps 公開頁面未列完整價位，依料理分類估算；實際以店家最新菜單為準"
+            },
+            "cuisine_types": [
+              "其他餐飲"
+            ],
+            "online_rating": {
+              "platform": "Google Maps",
+              "score": 5,
+              "review_count": null,
+              "source_snapshot": "Google Maps 公開店家頁面快照（2026-08-10）",
+              "food_diary_count": null,
+              "review_summary": [
+                "Google Maps 公開頁面提供評分",
+                "評論數與完整評論摘要僅在頁面可解析時保留,未自行推估。"
+              ]
+            },
+            "store_status_check": "已於 2026-08-10 嘗試 Yahoo 替代搜尋，但查詢服務錯誤、驗證或結果不完整；未依半年無資料規則移除。",
+            "sources": [
+              "https://www.google.com/maps/place/%E9%81%94%E5%A6%AE%E8%8A%99%E5%B1%B1%E5%9C%B0%E5%8F%A4%E6%97%A9%E5%91%B3+%EF%BC%88%E9%82%A3%E7%91%AA%E5%A4%8F%E5%BA%97%EF%BC%89/data=!4m7!3m6!1s0x346efbaf6f79b161:0x4bd77bd3dffcda1b!8m2!3d23.2720513!4d120.7193296!16s%2Fg%2F11z2lp46fc!19sChIJYbF5b6_7bjQRG9r839N710s?authuser=0&hl=zh-TW&rclk=1"
+            ],
+            "id": "kaohsiung-namaxia-002",
+            "image_url": null,
+            "image_source_url": null,
+            "image_source_type": null,
+            "image_usage_status": "no_candidate_found",
+            "image_checked_at": "2026-08-10",
+            "operation_status": "uncertain",
+            "operation_status_checked_at": "2026-08-10",
+            "operation_status_sources": [
+              "https://www.google.com/maps/place/%E9%81%94%E5%A6%AE%E8%8A%99%E5%B1%B1%E5%9C%B0%E5%8F%A4%E6%97%A9%E5%91%B3+%EF%BC%88%E9%82%A3%E7%91%AA%E5%A4%8F%E5%BA%97%EF%BC%89/data=!4m7!3m6!1s0x346efbaf6f79b161:0x4bd77bd3dffcda1b!8m2!3d23.2720513!4d120.7193296!16s%2Fg%2F11z2lp46fc!19sChIJYbF5b6_7bjQRG9r839N710s?authuser=0&hl=zh-TW&rclk=1"
+            ],
+            "operation_status_reason": "既有公開來源頁面目前無法取得或缺少可辨識店家資料；未依半年無資料規則移除。",
+            "business_hours": {
+              "average_open_time": null,
+              "average_close_time": null,
+              "display": null,
+              "source": null,
+              "open_days_considered": 0,
+              "note": "已檢查公開來源，但未找到可可靠解析的營業時間；未以今日是否營業推估。"
+            },
+            "operation_status_fallback_checked_at": "2026-08-10",
+            "operation_status_fallback_provider": "Yahoo 搜尋",
+            "operation_status_fallback_freshness": "unavailable",
+            "operation_status_fallback_sources": [
+              "https://www.google.com/maps/place/%E9%81%94%E5%A6%AE%E8%8A%99%E5%B1%B1%E5%9C%B0%E5%8F%A4%E6%97%A9%E5%91%B3+%EF%BC%88%E9%82%A3%E7%91%AA%E5%A4%8F%E5%BA%97%EF%BC%89/data=!4m7!3m6!1s0x346efbaf6f79b161:0x4bd77bd3dffcda1b!8m2!3d23.2720513!4d120.7193296!16s%2Fg%2F11z2lp46fc!19sChIJYbF5b6_7bjQRG9r839N710s?authuser=0&hl=zh-TW&rclk=1"
+            ]
+          }
+        },
+        {
+          "source_id": "googlemaps-fcf3510fee3e",
+          "id": "kaohsiung-namaxia-006",
+          "name": "那瑪夏八里香碳烤",
+          "address": "高雄市那瑪夏區達卡努瓦里秀嶺巷209號",
+          "reason": "替代網路搜尋已完成以店名、地址及名稱變體查詢；近六個月沒有任何可辨識、可對應該店面的公開資料，依規則移除。",
+          "source": null,
+          "sources": [],
+          "checked_at": "2026-08-10",
+          "evidence_freshness": "unavailable",
+          "evidence_kind": "alternative-web-search-no-data",
+          "evidence_excerpt": "已以店名、地址及名稱變體查詢替代網路搜尋；在查核日前六個月內找不到可辨識、可對應該店面的公開資料，亦未找到可供近一個月判斷營運的店家頁面。",
+          "original": {
+            "source_id": "googlemaps-fcf3510fee3e",
+            "name": "那瑪夏八里香碳烤",
+            "address": "高雄市那瑪夏區達卡努瓦里秀嶺巷209號",
+            "phone": "0989 192 486",
+            "physical_store": true,
+            "price_range_twd_per_person": {
+              "min": 150,
+              "max": 800,
+              "display": "約 NT$150–800/人",
+              "basis": "Google Maps 公開頁面未列完整價位，依料理分類估算；實際以店家最新菜單為準"
+            },
+            "cuisine_types": [
+              "其他餐飲"
+            ],
+            "online_rating": {
+              "platform": "Google Maps",
+              "score": 5,
+              "review_count": null,
+              "source_snapshot": "Google Maps 公開店家頁面快照（2026-08-10）",
+              "food_diary_count": null,
+              "review_summary": [
+                "Google Maps 公開頁面提供評分",
+                "評論數與完整評論摘要僅在頁面可解析時保留,未自行推估。"
+              ]
+            },
+            "store_status_check": "已於 2026-08-10 嘗試 Yahoo 替代搜尋，但查詢服務錯誤、驗證或結果不完整；未依半年無資料規則移除。",
+            "sources": [
+              "https://www.google.com/maps/place/%E9%82%A3%E7%91%AA%E5%A4%8F%E5%85%AB%E9%87%8C%E9%A6%99%E7%A2%B3%E7%83%A4/data=!4m7!3m6!1s0x346efb00206c5143:0x1476a24481f849de!8m2!3d23.2726456!4d120.7194374!16s%2Fg%2F11x865xbfp!19sChIJQ1FsIAD7bjQR3kn4gUSidhQ?authuser=0&hl=zh-TW&rclk=1"
+            ],
+            "id": "kaohsiung-namaxia-006",
+            "image_url": null,
+            "image_source_url": null,
+            "image_source_type": null,
+            "image_usage_status": "no_candidate_found",
+            "image_checked_at": "2026-08-10",
+            "operation_status": "uncertain",
+            "operation_status_checked_at": "2026-08-10",
+            "operation_status_sources": [
+              "https://www.google.com/maps/place/%E9%82%A3%E7%91%AA%E5%A4%8F%E5%85%AB%E9%87%8C%E9%A6%99%E7%A2%B3%E7%83%A4/data=!4m7!3m6!1s0x346efb00206c5143:0x1476a24481f849de!8m2!3d23.2726456!4d120.7194374!16s%2Fg%2F11x865xbfp!19sChIJQ1FsIAD7bjQR3kn4gUSidhQ?authuser=0&hl=zh-TW&rclk=1"
+            ],
+            "operation_status_reason": "既有公開來源頁面目前無法取得或缺少可辨識店家資料；未依半年無資料規則移除。",
+            "business_hours": {
+              "average_open_time": null,
+              "average_close_time": null,
+              "display": null,
+              "source": null,
+              "open_days_considered": 0,
+              "note": "已檢查公開來源，但未找到可可靠解析的營業時間；未以今日是否營業推估。"
+            },
+            "operation_status_fallback_checked_at": "2026-08-10",
+            "operation_status_fallback_provider": "Yahoo 搜尋",
+            "operation_status_fallback_freshness": "unavailable",
+            "operation_status_fallback_sources": [
+              "https://www.google.com/maps/place/%E9%82%A3%E7%91%AA%E5%A4%8F%E5%85%AB%E9%87%8C%E9%A6%99%E7%A2%B3%E7%83%A4/data=!4m7!3m6!1s0x346efb00206c5143:0x1476a24481f849de!8m2!3d23.2726456!4d120.7194374!16s%2Fg%2F11x865xbfp!19sChIJQ1FsIAD7bjQR3kn4gUSidhQ?authuser=0&hl=zh-TW&rclk=1"
+            ]
+          }
+        },
+        {
+          "source_id": "googlemaps-d0c7014b9fd2",
+          "id": "kaohsiung-namaxia-012",
+          "name": "花兒咖啡 -那瑪夏",
+          "address": "高雄市那瑪夏區達卡努瓦里大光巷188號",
+          "reason": "替代網路搜尋已完成以店名、地址及名稱變體查詢；近六個月沒有任何可辨識、可對應該店面的公開資料，依規則移除。",
+          "source": null,
+          "sources": [],
+          "checked_at": "2026-08-10",
+          "evidence_freshness": "unavailable",
+          "evidence_kind": "alternative-web-search-no-data",
+          "evidence_excerpt": "已以店名、地址及名稱變體查詢替代網路搜尋；在查核日前六個月內找不到可辨識、可對應該店面的公開資料，亦未找到可供近一個月判斷營運的店家頁面。",
+          "original": {
+            "source_id": "googlemaps-d0c7014b9fd2",
+            "name": "花兒咖啡 -那瑪夏",
+            "address": "高雄市那瑪夏區達卡努瓦里大光巷188號",
+            "phone": "0932 738 474",
+            "physical_store": true,
+            "price_range_twd_per_person": {
+              "min": 150,
+              "max": 800,
+              "display": "約 NT$150–800/人",
+              "basis": "Google Maps 公開頁面未列完整價位，依料理分類估算；實際以店家最新菜單為準"
+            },
+            "cuisine_types": [
+              "其他餐飲"
+            ],
+            "online_rating": {
+              "platform": "Google Maps",
+              "score": 5,
+              "review_count": null,
+              "source_snapshot": "Google Maps 公開店家頁面快照（2026-08-10）",
+              "food_diary_count": null,
+              "review_summary": [
+                "Google Maps 公開頁面提供評分",
+                "評論數與完整評論摘要僅在頁面可解析時保留,未自行推估。"
+              ]
+            },
+            "store_status_check": "已於 2026-08-10 嘗試 Yahoo 替代搜尋，但查詢服務錯誤、驗證或結果不完整；未依半年無資料規則移除。",
+            "sources": [
+              "https://www.google.com/maps/place/%E8%8A%B1%E5%85%92%E5%92%96%E5%95%A1+-%E9%82%A3%E7%91%AA%E5%A4%8F/data=!4m7!3m6!1s0x346efb00591838b1:0x35fba0c32874cd9!8m2!3d23.273994!4d120.7192978!16s%2Fg%2F11y3q9lb39!19sChIJsTgYWQD7bjQR2UyHMgy6XwM?authuser=0&hl=zh-TW&rclk=1"
+            ],
+            "id": "kaohsiung-namaxia-012",
+            "image_url": null,
+            "image_source_url": null,
+            "image_source_type": null,
+            "image_usage_status": "no_candidate_found",
+            "image_checked_at": "2026-08-10",
+            "operation_status": "uncertain",
+            "operation_status_checked_at": "2026-08-10",
+            "operation_status_sources": [
+              "https://www.google.com/maps/place/%E8%8A%B1%E5%85%92%E5%92%96%E5%95%A1+-%E9%82%A3%E7%91%AA%E5%A4%8F/data=!4m7!3m6!1s0x346efb00591838b1:0x35fba0c32874cd9!8m2!3d23.273994!4d120.7192978!16s%2Fg%2F11y3q9lb39!19sChIJsTgYWQD7bjQR2UyHMgy6XwM?authuser=0&hl=zh-TW&rclk=1"
+            ],
+            "operation_status_reason": "既有公開來源頁面目前無法取得或缺少可辨識店家資料；未依半年無資料規則移除。",
+            "business_hours": {
+              "average_open_time": null,
+              "average_close_time": null,
+              "display": null,
+              "source": null,
+              "open_days_considered": 0,
+              "note": "已檢查公開來源，但未找到可可靠解析的營業時間；未以今日是否營業推估。"
+            },
+            "operation_status_fallback_checked_at": "2026-08-10",
+            "operation_status_fallback_provider": "Yahoo 搜尋",
+            "operation_status_fallback_freshness": "unavailable",
+            "operation_status_fallback_sources": [
+              "https://www.google.com/maps/place/%E8%8A%B1%E5%85%92%E5%92%96%E5%95%A1+-%E9%82%A3%E7%91%AA%E5%A4%8F/data=!4m7!3m6!1s0x346efb00591838b1:0x35fba0c32874cd9!8m2!3d23.273994!4d120.7192978!16s%2Fg%2F11y3q9lb39!19sChIJsTgYWQD7bjQR2UyHMgy6XwM?authuser=0&hl=zh-TW&rclk=1"
+            ]
+          }
+        },
+        {
+          "source_id": "googlemaps-823b7e3b755a",
+          "id": "kaohsiung-namaxia-013",
+          "name": "山地古早味烤肉",
+          "address": "高雄市那瑪夏區達卡努瓦里大光巷203號",
+          "reason": "替代網路搜尋已完成以店名、地址及名稱變體查詢；近六個月沒有任何可辨識、可對應該店面的公開資料，依規則移除。",
+          "source": null,
+          "sources": [],
+          "checked_at": "2026-08-10",
+          "evidence_freshness": "unavailable",
+          "evidence_kind": "alternative-web-search-no-data",
+          "evidence_excerpt": "已以店名、地址及名稱變體查詢替代網路搜尋；在查核日前六個月內找不到可辨識、可對應該店面的公開資料，亦未找到可供近一個月判斷營運的店家頁面。",
+          "original": {
+            "source_id": "googlemaps-823b7e3b755a",
+            "name": "山地古早味烤肉",
+            "address": "高雄市那瑪夏區達卡努瓦里大光巷203號",
+            "phone": null,
+            "physical_store": true,
+            "price_range_twd_per_person": {
+              "min": 150,
+              "max": 800,
+              "display": "約 NT$150–800/人",
+              "basis": "Google Maps 公開頁面未列完整價位，依料理分類估算；實際以店家最新菜單為準"
+            },
+            "cuisine_types": [
+              "燒烤餐廳"
+            ],
+            "online_rating": {
+              "platform": "Google Maps",
+              "score": 4.7,
+              "review_count": null,
+              "source_snapshot": "Google Maps 公開店家頁面快照（2026-08-10）",
+              "food_diary_count": null,
+              "review_summary": [
+                "Google Maps 公開頁面提供評分",
+                "評論數與完整評論摘要僅在頁面可解析時保留,未自行推估。"
+              ]
+            },
+            "store_status_check": "已於 2026-08-10 嘗試 Yahoo 替代搜尋，但查詢服務錯誤、驗證或結果不完整；未依半年無資料規則移除。",
+            "sources": [
+              "https://www.google.com/maps/place/%E5%B1%B1%E5%9C%B0%E5%8F%A4%E6%97%A9%E5%91%B3%E7%83%A4%E8%82%89/data=!4m7!3m6!1s0x346efbe8a1a1728d:0x57eb72f8015c933a!8m2!3d23.2720116!4d120.7193242!16s%2Fg%2F11ssd3m7dk!19sChIJjXKhoej7bjQROpNcAfhy61c?authuser=0&hl=zh-TW&rclk=1"
+            ],
+            "id": "kaohsiung-namaxia-013",
+            "image_url": null,
+            "image_source_url": null,
+            "image_source_type": null,
+            "image_usage_status": "no_candidate_found",
+            "image_checked_at": "2026-08-10",
+            "operation_status": "uncertain",
+            "operation_status_checked_at": "2026-08-10",
+            "operation_status_sources": [
+              "https://www.google.com/maps/place/%E5%B1%B1%E5%9C%B0%E5%8F%A4%E6%97%A9%E5%91%B3%E7%83%A4%E8%82%89/data=!4m7!3m6!1s0x346efbe8a1a1728d:0x57eb72f8015c933a!8m2!3d23.2720116!4d120.7193242!16s%2Fg%2F11ssd3m7dk!19sChIJjXKhoej7bjQROpNcAfhy61c?authuser=0&hl=zh-TW&rclk=1"
+            ],
+            "operation_status_reason": "既有公開來源頁面目前無法取得或缺少可辨識店家資料；未依半年無資料規則移除。",
+            "business_hours": {
+              "average_open_time": null,
+              "average_close_time": null,
+              "display": null,
+              "source": null,
+              "open_days_considered": 0,
+              "note": "已檢查公開來源，但未找到可可靠解析的營業時間；未以今日是否營業推估。"
+            },
+            "operation_status_fallback_checked_at": "2026-08-10",
+            "operation_status_fallback_provider": "Yahoo 搜尋",
+            "operation_status_fallback_freshness": "unavailable",
+            "operation_status_fallback_sources": [
+              "https://www.google.com/maps/place/%E5%B1%B1%E5%9C%B0%E5%8F%A4%E6%97%A9%E5%91%B3%E7%83%A4%E8%82%89/data=!4m7!3m6!1s0x346efbe8a1a1728d:0x57eb72f8015c933a!8m2!3d23.2720116!4d120.7193242!16s%2Fg%2F11ssd3m7dk!19sChIJjXKhoej7bjQROpNcAfhy61c?authuser=0&hl=zh-TW&rclk=1"
+            ]
+          }
+        },
+        {
+          "source_id": "googlemaps-b3c6fe289243",
+          "id": "kaohsiung-namaxia-018",
+          "name": "咪咪麵食",
+          "address": "高雄市那瑪夏區達卡努瓦里大光巷57號",
+          "reason": "替代網路搜尋已完成以店名、地址及名稱變體查詢；近六個月沒有任何可辨識、可對應該店面的公開資料，依規則移除。",
+          "source": null,
+          "sources": [],
+          "checked_at": "2026-08-10",
+          "evidence_freshness": "unavailable",
+          "evidence_kind": "alternative-web-search-no-data",
+          "evidence_excerpt": "已以店名、地址及名稱變體查詢替代網路搜尋；在查核日前六個月內找不到可辨識、可對應該店面的公開資料，亦未找到可供近一個月判斷營運的店家頁面。",
+          "original": {
+            "source_id": "googlemaps-b3c6fe289243",
+            "name": "咪咪麵食",
+            "address": "高雄市那瑪夏區達卡努瓦里大光巷57號",
+            "phone": "07 670 1814",
+            "physical_store": true,
+            "price_range_twd_per_person": {
+              "min": 80,
+              "max": 400,
+              "display": "約 NT$80–400/人",
+              "basis": "Google Maps 公開頁面未列完整價位，依料理分類估算；實際以店家最新菜單為準"
+            },
+            "cuisine_types": [
+              "麵店"
+            ],
+            "online_rating": {
+              "platform": "Google Maps",
+              "score": 4.2,
+              "review_count": null,
+              "source_snapshot": "Google Maps 公開店家頁面快照（2026-08-10）",
+              "food_diary_count": null,
+              "review_summary": [
+                "Google Maps 公開頁面提供評分",
+                "評論數與完整評論摘要僅在頁面可解析時保留,未自行推估。"
+              ]
+            },
+            "store_status_check": "已於 2026-08-10 嘗試 Yahoo 替代搜尋，但查詢服務錯誤、驗證或結果不完整；未依半年無資料規則移除。",
+            "sources": [
+              "https://www.google.com/maps/place/%E5%92%AA%E5%92%AA%E9%BA%B5%E9%A3%9F/data=!4m7!3m6!1s0x346efaa23eb16673:0x462d786771df84b3!8m2!3d23.2793179!4d120.7189627!16s%2Fg%2F11b7tsy7vv!19sChIJc2axPqL6bjQRs4TfcWd4LUY?authuser=0&hl=zh-TW&rclk=1"
+            ],
+            "id": "kaohsiung-namaxia-018",
+            "image_url": null,
+            "image_source_url": null,
+            "image_source_type": null,
+            "image_usage_status": "no_candidate_found",
+            "image_checked_at": "2026-08-10",
+            "operation_status": "uncertain",
+            "operation_status_checked_at": "2026-08-10",
+            "operation_status_sources": [
+              "https://www.google.com/maps/place/%E5%92%AA%E5%92%AA%E9%BA%B5%E9%A3%9F/data=!4m7!3m6!1s0x346efaa23eb16673:0x462d786771df84b3!8m2!3d23.2793179!4d120.7189627!16s%2Fg%2F11b7tsy7vv!19sChIJc2axPqL6bjQRs4TfcWd4LUY?authuser=0&hl=zh-TW&rclk=1"
+            ],
+            "operation_status_reason": "既有公開來源頁面目前無法取得或缺少可辨識店家資料；未依半年無資料規則移除。",
+            "business_hours": {
+              "average_open_time": null,
+              "average_close_time": null,
+              "display": null,
+              "source": null,
+              "open_days_considered": 0,
+              "note": "已檢查公開來源，但未找到可可靠解析的營業時間；未以今日是否營業推估。"
+            },
+            "operation_status_fallback_checked_at": "2026-08-10",
+            "operation_status_fallback_provider": "Yahoo 搜尋",
+            "operation_status_fallback_freshness": "unavailable",
+            "operation_status_fallback_sources": [
+              "https://www.google.com/maps/place/%E5%92%AA%E5%92%AA%E9%BA%B5%E9%A3%9F/data=!4m7!3m6!1s0x346efaa23eb16673:0x462d786771df84b3!8m2!3d23.2793179!4d120.7189627!16s%2Fg%2F11b7tsy7vv!19sChIJc2axPqL6bjQRs4TfcWd4LUY?authuser=0&hl=zh-TW&rclk=1"
+            ]
+          }
+        },
+        {
+          "source_id": "googlemaps-14dc02ff01d3",
+          "id": "kaohsiung-namaxia-019",
+          "name": "那瑪夏909龍鬚菜",
+          "address": "高雄市那瑪夏區青山巷",
+          "reason": "替代網路搜尋已完成以店名、地址及名稱變體查詢；近六個月沒有任何可辨識、可對應該店面的公開資料，依規則移除。",
+          "source": null,
+          "sources": [],
+          "checked_at": "2026-08-10",
+          "evidence_freshness": "unavailable",
+          "evidence_kind": "alternative-web-search-no-data",
+          "evidence_excerpt": "已以店名、地址及名稱變體查詢替代網路搜尋；在查核日前六個月內找不到可辨識、可對應該店面的公開資料，亦未找到可供近一個月判斷營運的店家頁面。",
+          "original": {
+            "source_id": "googlemaps-14dc02ff01d3",
+            "name": "那瑪夏909龍鬚菜",
+            "address": "高雄市那瑪夏區青山巷",
+            "phone": "07 670 1909",
+            "physical_store": true,
+            "price_range_twd_per_person": {
+              "min": 150,
+              "max": 800,
+              "display": "約 NT$150–800/人",
+              "basis": "Google Maps 公開頁面未列完整價位，依料理分類估算；實際以店家最新菜單為準"
+            },
+            "cuisine_types": [
+              "其他餐飲"
+            ],
+            "online_rating": {
+              "platform": "Google Maps",
+              "score": 4.5,
+              "review_count": null,
+              "source_snapshot": "Google Maps 公開店家頁面快照（2026-08-10）",
+              "food_diary_count": null,
+              "review_summary": [
+                "Google Maps 公開頁面提供評分",
+                "評論數與完整評論摘要僅在頁面可解析時保留,未自行推估。"
+              ]
+            },
+            "store_status_check": "已於 2026-08-10 嘗試 Yahoo 替代搜尋，但查詢服務錯誤、驗證或結果不完整；未依半年無資料規則移除。",
+            "sources": [
+              "https://www.google.com/maps/place/%E9%82%A3%E7%91%AA%E5%A4%8F909%E9%BE%8D%E9%AC%9A%E8%8F%9C/data=!4m7!3m6!1s0x346efbe4ef76e73b:0xfa651c3c21151b5a!8m2!3d23.2714372!4d120.7129809!16s%2Fg%2F11r40x0bdr!19sChIJO-d27-T7bjQRWhsVITwcZfo?authuser=0&hl=zh-TW&rclk=1"
+            ],
+            "id": "kaohsiung-namaxia-019",
+            "image_url": null,
+            "image_source_url": null,
+            "image_source_type": null,
+            "image_usage_status": "no_candidate_found",
+            "image_checked_at": "2026-08-10",
+            "operation_status": "uncertain",
+            "operation_status_checked_at": "2026-08-10",
+            "operation_status_sources": [
+              "https://www.google.com/maps/place/%E9%82%A3%E7%91%AA%E5%A4%8F909%E9%BE%8D%E9%AC%9A%E8%8F%9C/data=!4m7!3m6!1s0x346efbe4ef76e73b:0xfa651c3c21151b5a!8m2!3d23.2714372!4d120.7129809!16s%2Fg%2F11r40x0bdr!19sChIJO-d27-T7bjQRWhsVITwcZfo?authuser=0&hl=zh-TW&rclk=1"
+            ],
+            "operation_status_reason": "既有公開來源頁面目前無法取得或缺少可辨識店家資料；未依半年無資料規則移除。",
+            "business_hours": {
+              "average_open_time": null,
+              "average_close_time": null,
+              "display": null,
+              "source": null,
+              "open_days_considered": 0,
+              "note": "已檢查公開來源，但未找到可可靠解析的營業時間；未以今日是否營業推估。"
+            },
+            "operation_status_fallback_checked_at": "2026-08-10",
+            "operation_status_fallback_provider": "Yahoo 搜尋",
+            "operation_status_fallback_freshness": "unavailable",
+            "operation_status_fallback_sources": [
+              "https://www.google.com/maps/place/%E9%82%A3%E7%91%AA%E5%A4%8F909%E9%BE%8D%E9%AC%9A%E8%8F%9C/data=!4m7!3m6!1s0x346efbe4ef76e73b:0xfa651c3c21151b5a!8m2!3d23.2714372!4d120.7129809!16s%2Fg%2F11r40x0bdr!19sChIJO-d27-T7bjQRWhsVITwcZfo?authuser=0&hl=zh-TW&rclk=1"
+            ]
+          }
+        },
+        {
+          "source_id": "googlemaps-20d8a64c9299",
+          "id": "kaohsiung-namaxia-021",
+          "name": "南台灣水蜜桃",
+          "address": "高雄市那瑪夏區瑪雅里平和巷39-1號",
+          "reason": "替代網路搜尋已完成以店名、地址及名稱變體查詢；近六個月沒有任何可辨識、可對應該店面的公開資料，依規則移除。",
+          "source": null,
+          "sources": [],
+          "checked_at": "2026-08-10",
+          "evidence_freshness": "unavailable",
+          "evidence_kind": "alternative-web-search-no-data",
+          "evidence_excerpt": "已以店名、地址及名稱變體查詢替代網路搜尋；在查核日前六個月內找不到可辨識、可對應該店面的公開資料，亦未找到可供近一個月判斷營運的店家頁面。",
+          "original": {
+            "source_id": "googlemaps-20d8a64c9299",
+            "name": "南台灣水蜜桃",
+            "address": "高雄市那瑪夏區瑪雅里平和巷39-1號",
+            "phone": "0936 379 502",
+            "physical_store": true,
+            "price_range_twd_per_person": {
+              "min": 150,
+              "max": 800,
+              "display": "約 NT$150–800/人",
+              "basis": "Google Maps 公開頁面未列完整價位，依料理分類估算；實際以店家最新菜單為準"
+            },
+            "cuisine_types": [
+              "其他餐飲"
+            ],
+            "online_rating": {
+              "platform": "Google Maps",
+              "score": 5,
+              "review_count": null,
+              "source_snapshot": "Google Maps 公開店家頁面快照（2026-08-10）",
+              "food_diary_count": null,
+              "review_summary": [
+                "Google Maps 公開頁面提供評分",
+                "評論數與完整評論摘要僅在頁面可解析時保留,未自行推估。"
+              ]
+            },
+            "store_status_check": "已於 2026-08-10 嘗試 Yahoo 替代搜尋，但查詢服務錯誤、驗證或結果不完整；未依半年無資料規則移除。",
+            "sources": [
+              "https://www.google.com/maps/place/%E5%8D%97%E5%8F%B0%E7%81%A3%E6%B0%B4%E8%9C%9C%E6%A1%83/data=!4m7!3m6!1s0x346ef16aae2188b3:0xb8fa7cc9c41b687a!8m2!3d23.2387395!4d120.6977752!16s%2Fg%2F11vz499m__!19sChIJs4ghrmrxbjQRemgbxMl8-rg?authuser=0&hl=zh-TW&rclk=1"
+            ],
+            "id": "kaohsiung-namaxia-021",
+            "image_url": null,
+            "image_source_url": null,
+            "image_source_type": null,
+            "image_usage_status": "no_candidate_found",
+            "image_checked_at": "2026-08-10",
+            "operation_status": "uncertain",
+            "operation_status_checked_at": "2026-08-10",
+            "operation_status_sources": [
+              "https://www.google.com/maps/place/%E5%8D%97%E5%8F%B0%E7%81%A3%E6%B0%B4%E8%9C%9C%E6%A1%83/data=!4m7!3m6!1s0x346ef16aae2188b3:0xb8fa7cc9c41b687a!8m2!3d23.2387395!4d120.6977752!16s%2Fg%2F11vz499m__!19sChIJs4ghrmrxbjQRemgbxMl8-rg?authuser=0&hl=zh-TW&rclk=1"
+            ],
+            "operation_status_reason": "既有公開來源頁面目前無法取得或缺少可辨識店家資料；未依半年無資料規則移除。",
+            "business_hours": {
+              "average_open_time": null,
+              "average_close_time": null,
+              "display": null,
+              "source": null,
+              "open_days_considered": 0,
+              "note": "已檢查公開來源，但未找到可可靠解析的營業時間；未以今日是否營業推估。"
+            },
+            "operation_status_fallback_checked_at": "2026-08-10",
+            "operation_status_fallback_provider": "Yahoo 搜尋",
+            "operation_status_fallback_freshness": "unavailable",
+            "operation_status_fallback_sources": [
+              "https://www.google.com/maps/place/%E5%8D%97%E5%8F%B0%E7%81%A3%E6%B0%B4%E8%9C%9C%E6%A1%83/data=!4m7!3m6!1s0x346ef16aae2188b3:0xb8fa7cc9c41b687a!8m2!3d23.2387395!4d120.6977752!16s%2Fg%2F11vz499m__!19sChIJs4ghrmrxbjQRemgbxMl8-rg?authuser=0&hl=zh-TW&rclk=1"
+            ]
+          }
+        },
+        {
+          "source_id": "googlemaps-19db9fbe3b6e",
+          "id": "kaohsiung-namaxia-024",
+          "name": "好芯情早餐",
+          "address": "高雄市那瑪夏區達卡努瓦里秀嶺巷194號",
+          "reason": "替代網路搜尋已完成以店名、地址及名稱變體查詢；近六個月沒有任何可辨識、可對應該店面的公開資料，依規則移除。",
+          "source": null,
+          "sources": [],
+          "checked_at": "2026-08-10",
+          "evidence_freshness": "unavailable",
+          "evidence_kind": "alternative-web-search-no-data",
+          "evidence_excerpt": "已以店名、地址及名稱變體查詢替代網路搜尋；在查核日前六個月內找不到可辨識、可對應該店面的公開資料，亦未找到可供近一個月判斷營運的店家頁面。",
+          "original": {
+            "source_id": "googlemaps-19db9fbe3b6e",
+            "name": "好芯情早餐",
+            "address": "高雄市那瑪夏區達卡努瓦里秀嶺巷194號",
+            "phone": null,
+            "physical_store": true,
+            "price_range_twd_per_person": {
+              "min": 150,
+              "max": 800,
+              "display": "約 NT$150–800/人",
+              "basis": "Google Maps 公開頁面未列完整價位，依料理分類估算；實際以店家最新菜單為準"
+            },
+            "cuisine_types": [
+              "其他餐飲"
+            ],
+            "online_rating": {
+              "platform": "Google Maps",
+              "score": 5,
+              "review_count": null,
+              "source_snapshot": "Google Maps 公開店家頁面快照（2026-08-10）",
+              "food_diary_count": null,
+              "review_summary": [
+                "Google Maps 公開頁面提供評分",
+                "評論數與完整評論摘要僅在頁面可解析時保留,未自行推估。"
+              ]
+            },
+            "store_status_check": "已於 2026-08-10 嘗試 Yahoo 替代搜尋，但查詢服務錯誤、驗證或結果不完整；未依半年無資料規則移除。",
+            "sources": [
+              "https://www.google.com/maps/place/%E5%A5%BD%E8%8A%AF%E6%83%85%E6%97%A9%E9%A4%90/data=!4m7!3m6!1s0x346efb00120799b5:0xfa3026e5106bac15!8m2!3d23.270635!4d120.7201538!16s%2Fg%2F11yl_qbfnm!19sChIJtZkHEgD7bjQRFaxrEOUmMPo?authuser=0&hl=zh-TW&rclk=1"
+            ],
+            "id": "kaohsiung-namaxia-024",
+            "image_url": null,
+            "image_source_url": null,
+            "image_source_type": null,
+            "image_usage_status": "no_candidate_found",
+            "image_checked_at": "2026-08-10",
+            "operation_status": "uncertain",
+            "operation_status_checked_at": "2026-08-10",
+            "operation_status_sources": [
+              "https://www.google.com/maps/place/%E5%A5%BD%E8%8A%AF%E6%83%85%E6%97%A9%E9%A4%90/data=!4m7!3m6!1s0x346efb00120799b5:0xfa3026e5106bac15!8m2!3d23.270635!4d120.7201538!16s%2Fg%2F11yl_qbfnm!19sChIJtZkHEgD7bjQRFaxrEOUmMPo?authuser=0&hl=zh-TW&rclk=1"
+            ],
+            "operation_status_reason": "既有公開來源頁面目前無法取得或缺少可辨識店家資料；未依半年無資料規則移除。",
+            "business_hours": {
+              "average_open_time": null,
+              "average_close_time": null,
+              "display": null,
+              "source": null,
+              "open_days_considered": 0,
+              "note": "已檢查公開來源，但未找到可可靠解析的營業時間；未以今日是否營業推估。"
+            },
+            "operation_status_fallback_checked_at": "2026-08-10",
+            "operation_status_fallback_provider": "Yahoo 搜尋",
+            "operation_status_fallback_freshness": "unavailable",
+            "operation_status_fallback_sources": [
+              "https://www.google.com/maps/place/%E5%A5%BD%E8%8A%AF%E6%83%85%E6%97%A9%E9%A4%90/data=!4m7!3m6!1s0x346efb00120799b5:0xfa3026e5106bac15!8m2!3d23.270635!4d120.7201538!16s%2Fg%2F11yl_qbfnm!19sChIJtZkHEgD7bjQRFaxrEOUmMPo?authuser=0&hl=zh-TW&rclk=1"
+            ]
+          }
+        },
+        {
+          "source_id": "googlemaps-e289b8c28e59",
+          "id": "kaohsiung-namaxia-025",
+          "name": "妲娜娜小棧",
+          "address": "高雄市那瑪夏區瑪雅里平和巷20號",
+          "reason": "替代網路搜尋已完成以店名、地址及名稱變體查詢；近六個月沒有任何可辨識、可對應該店面的公開資料，依規則移除。",
+          "source": null,
+          "sources": [],
+          "checked_at": "2026-08-10",
+          "evidence_freshness": "unavailable",
+          "evidence_kind": "alternative-web-search-no-data",
+          "evidence_excerpt": "已以店名、地址及名稱變體查詢替代網路搜尋；在查核日前六個月內找不到可辨識、可對應該店面的公開資料，亦未找到可供近一個月判斷營運的店家頁面。",
+          "original": {
+            "source_id": "googlemaps-e289b8c28e59",
+            "name": "妲娜娜小棧",
+            "address": "高雄市那瑪夏區瑪雅里平和巷20號",
+            "phone": "0913 630 632",
+            "physical_store": true,
+            "price_range_twd_per_person": {
+              "min": 150,
+              "max": 800,
+              "display": "約 NT$150–800/人",
+              "basis": "Google Maps 公開頁面未列完整價位，依料理分類估算；實際以店家最新菜單為準"
+            },
+            "cuisine_types": [
+              "其他餐飲"
+            ],
+            "online_rating": {
+              "platform": "Google Maps",
+              "score": 5,
+              "review_count": null,
+              "source_snapshot": "Google Maps 公開店家頁面快照（2026-08-10）",
+              "food_diary_count": null,
+              "review_summary": [
+                "Google Maps 公開頁面提供評分",
+                "評論數與完整評論摘要僅在頁面可解析時保留,未自行推估。"
+              ]
+            },
+            "store_status_check": "已於 2026-08-10 嘗試 Yahoo 替代搜尋，但查詢服務錯誤、驗證或結果不完整；未依半年無資料規則移除。",
+            "sources": [
+              "https://www.google.com/maps/place/%E5%A6%B2%E5%A8%9C%E5%A8%9C%E5%B0%8F%E6%A3%A7/data=!4m7!3m6!1s0x346ef1000863a12d:0x5358487437e74f7d!8m2!3d23.2376631!4d120.697456!16s%2Fg%2F11xnfb03ht!19sChIJLaFjCADxbjQRfU_nN3RIWFM?authuser=0&hl=zh-TW&rclk=1"
+            ],
+            "id": "kaohsiung-namaxia-025",
+            "image_url": null,
+            "image_source_url": null,
+            "image_source_type": null,
+            "image_usage_status": "no_candidate_found",
+            "image_checked_at": "2026-08-10",
+            "operation_status": "uncertain",
+            "operation_status_checked_at": "2026-08-10",
+            "operation_status_sources": [
+              "https://www.google.com/maps/place/%E5%A6%B2%E5%A8%9C%E5%A8%9C%E5%B0%8F%E6%A3%A7/data=!4m7!3m6!1s0x346ef1000863a12d:0x5358487437e74f7d!8m2!3d23.2376631!4d120.697456!16s%2Fg%2F11xnfb03ht!19sChIJLaFjCADxbjQRfU_nN3RIWFM?authuser=0&hl=zh-TW&rclk=1"
+            ],
+            "operation_status_reason": "既有公開來源頁面目前無法取得或缺少可辨識店家資料；未依半年無資料規則移除。",
+            "business_hours": {
+              "average_open_time": null,
+              "average_close_time": null,
+              "display": null,
+              "source": null,
+              "open_days_considered": 0,
+              "note": "已檢查公開來源，但未找到可可靠解析的營業時間；未以今日是否營業推估。"
+            },
+            "operation_status_fallback_checked_at": "2026-08-10",
+            "operation_status_fallback_provider": "Yahoo 搜尋",
+            "operation_status_fallback_freshness": "unavailable",
+            "operation_status_fallback_sources": [
+              "https://www.google.com/maps/place/%E5%A6%B2%E5%A8%9C%E5%A8%9C%E5%B0%8F%E6%A3%A7/data=!4m7!3m6!1s0x346ef1000863a12d:0x5358487437e74f7d!8m2!3d23.2376631!4d120.697456!16s%2Fg%2F11xnfb03ht!19sChIJLaFjCADxbjQRfU_nN3RIWFM?authuser=0&hl=zh-TW&rclk=1"
+            ]
+          }
+        }
+      ]
+    },
+    "kaohsiung-nanzi-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 69,
+      "hours_missing": 131,
+      "removed_records": []
+    },
+    "kaohsiung-neimen-restaurants.json": {
+      "before": 94,
+      "after": 94,
+      "checked": 94,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 2,
+      "hours_missing": 92,
+      "removed_records": []
+    },
+    "kaohsiung-niaosong-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 10,
+      "hours_missing": 190,
+      "removed_records": []
+    },
+    "kaohsiung-qianjin-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 95,
+      "hours_missing": 105,
+      "removed_records": []
+    },
+    "kaohsiung-qianzhen-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 160,
+      "hours_missing": 40,
+      "removed_records": []
+    },
+    "kaohsiung-qiaotou-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 10,
+      "hours_missing": 190,
+      "removed_records": []
+    },
+    "kaohsiung-qieding-restaurants.json": {
+      "before": 199,
+      "after": 199,
+      "checked": 199,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 5,
+      "hours_missing": 194,
+      "removed_records": []
+    },
+    "kaohsiung-qijin-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 13,
+      "hours_missing": 187,
+      "removed_records": []
+    },
+    "kaohsiung-qishan-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 24,
+      "hours_missing": 176,
+      "removed_records": []
+    },
+    "kaohsiung-renwu-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 22,
+      "hours_missing": 178,
+      "removed_records": []
+    },
+    "kaohsiung-sanmin-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 169,
+      "hours_missing": 31,
+      "removed_records": []
+    },
+    "kaohsiung-shanlin-restaurants.json": {
+      "before": 58,
+      "after": 58,
+      "checked": 58,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 1,
+      "hours_missing": 57,
+      "removed_records": []
+    },
+    "kaohsiung-taoyuan-restaurants.json": {
+      "before": 63,
+      "after": 63,
+      "checked": 63,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 1,
+      "hours_missing": 62,
+      "removed_records": []
+    },
+    "kaohsiung-tianliao-restaurants.json": {
+      "before": 93,
+      "after": 93,
+      "checked": 93,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 2,
+      "hours_missing": 91,
+      "removed_records": []
+    },
+    "kaohsiung-xiaogang-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 21,
+      "hours_missing": 179,
+      "removed_records": []
+    },
+    "kaohsiung-xinxing-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 106,
+      "hours_missing": 94,
+      "removed_records": []
+    },
+    "kaohsiung-yanchao-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 6,
+      "hours_missing": 194,
+      "removed_records": []
+    },
+    "kaohsiung-yancheng-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 68,
+      "hours_missing": 132,
+      "removed_records": []
+    },
+    "kaohsiung-yongan-restaurants.json": {
+      "before": 130,
+      "after": 130,
+      "checked": 130,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 0,
+      "hours_missing": 130,
+      "removed_records": []
+    },
+    "kaohsiung-ziguan-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 7,
+      "hours_missing": 193,
+      "removed_records": []
+    },
+    "kaohsiung-zuoying-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 184,
+      "hours_missing": 16,
+      "removed_records": []
+    },
+    "keelung-anle-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 18,
+      "hours_missing": 182,
+      "removed_records": []
+    },
+    "keelung-nuannuan-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 16,
+      "hours_missing": 184,
+      "removed_records": []
+    },
+    "keelung-qidu-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 11,
+      "hours_missing": 189,
+      "removed_records": []
+    },
+    "keelung-renai-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 109,
+      "hours_missing": 91,
+      "removed_records": []
+    },
+    "keelung-xinyi-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 30,
+      "hours_missing": 170,
+      "removed_records": []
+    },
+    "keelung-zhongshan-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 24,
+      "hours_missing": 176,
+      "removed_records": []
+    },
+    "keelung-zhongzheng-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 86,
+      "hours_missing": 114,
+      "removed_records": []
+    },
+    "newtaipei-bali-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 30,
+      "hours_missing": 170,
+      "removed_records": []
+    },
+    "newtaipei-banqiao-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 193,
+      "hours_missing": 7,
+      "removed_records": []
+    },
+    "newtaipei-gongliao-restaurants.json": {
+      "before": 198,
+      "after": 198,
+      "checked": 198,
+      "fallback_evidence_applied": 2,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 34,
+      "hours_missing": 164,
+      "removed_records": []
+    },
+    "newtaipei-jinshan-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 37,
+      "hours_missing": 163,
+      "removed_records": []
+    },
+    "newtaipei-linkou-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 118,
+      "hours_missing": 82,
+      "removed_records": []
+    },
+    "newtaipei-luzhou-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 132,
+      "hours_missing": 68,
+      "removed_records": []
+    },
+    "newtaipei-pinglin-restaurants.json": {
+      "before": 94,
+      "after": 94,
+      "checked": 94,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 11,
+      "hours_missing": 83,
+      "removed_records": []
+    },
+    "newtaipei-pingxi-restaurants.json": {
+      "before": 159,
+      "after": 159,
+      "checked": 159,
+      "fallback_evidence_applied": 1,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 12,
+      "hours_missing": 147,
+      "removed_records": []
+    },
+    "newtaipei-ruifang-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 60,
+      "hours_missing": 140,
+      "removed_records": []
+    },
+    "newtaipei-sanchong-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 180,
+      "hours_missing": 20,
+      "removed_records": []
+    },
+    "newtaipei-sanxia-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 69,
+      "hours_missing": 131,
+      "removed_records": []
+    },
+    "newtaipei-sanzhi-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 51,
+      "hours_missing": 149,
+      "removed_records": []
+    },
+    "newtaipei-shenkeng-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 17,
+      "hours_missing": 183,
+      "removed_records": []
+    },
+    "newtaipei-shiding-restaurants.json": {
+      "before": 124,
+      "after": 124,
+      "checked": 124,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 11,
+      "hours_missing": 113,
+      "removed_records": []
+    },
+    "newtaipei-shimen-restaurants.json": {
+      "before": 144,
+      "after": 144,
+      "checked": 144,
+      "fallback_evidence_applied": 1,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 33,
+      "hours_missing": 111,
+      "removed_records": []
+    },
+    "newtaipei-shuangxi-restaurants.json": {
+      "before": 95,
+      "after": 95,
+      "checked": 95,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 6,
+      "hours_missing": 89,
+      "removed_records": []
+    },
+    "newtaipei-shulin-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 50,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 69,
+      "hours_missing": 131,
+      "removed_records": []
+    },
+    "newtaipei-taishan-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 13,
+      "hours_missing": 187,
+      "removed_records": []
+    },
+    "newtaipei-tamsui-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 165,
+      "hours_missing": 35,
+      "removed_records": []
+    },
+    "newtaipei-tucheng-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 90,
+      "hours_missing": 110,
+      "removed_records": []
+    },
+    "newtaipei-wanli-restaurants.json": {
+      "before": 197,
+      "after": 197,
+      "checked": 197,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 43,
+      "hours_missing": 154,
+      "removed_records": []
+    },
+    "newtaipei-wugu-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 23,
+      "hours_missing": 177,
+      "removed_records": []
+    },
+    "newtaipei-wulai-restaurants.json": {
+      "before": 170,
+      "after": 170,
+      "checked": 170,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 10,
+      "hours_missing": 160,
+      "removed_records": []
+    },
+    "newtaipei-xindian-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 185,
+      "hours_missing": 15,
+      "removed_records": []
+    },
+    "newtaipei-xinzhuang-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 180,
+      "hours_missing": 20,
+      "removed_records": []
+    },
+    "newtaipei-xizhi-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 64,
+      "hours_missing": 136,
+      "removed_records": []
+    },
+    "newtaipei-yingge-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 28,
+      "hours_missing": 172,
+      "removed_records": []
+    },
+    "newtaipei-yonghe-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 154,
+      "hours_missing": 46,
+      "removed_records": []
+    },
+    "newtaipei-zhonghe-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 152,
+      "hours_missing": 48,
+      "removed_records": []
+    },
+    "taichung-bei-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 178,
+      "hours_missing": 22,
+      "removed_records": []
+    },
+    "taichung-beitun-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 196,
+      "hours_missing": 4,
+      "removed_records": []
+    },
+    "taichung-daan-restaurants.json": {
+      "before": 97,
+      "after": 97,
+      "checked": 97,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 1,
+      "hours_missing": 96,
+      "removed_records": []
+    },
+    "taichung-dadu-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 10,
+      "hours_missing": 190,
+      "removed_records": []
+    },
+    "taichung-dajia-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 24,
+      "hours_missing": 176,
+      "removed_records": []
+    },
+    "taichung-dali-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 84,
+      "hours_missing": 116,
+      "removed_records": []
+    },
+    "taichung-daya-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 26,
+      "hours_missing": 174,
+      "removed_records": []
+    },
+    "taichung-dong-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 105,
+      "hours_missing": 95,
+      "removed_records": []
+    },
+    "taichung-dongshi-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 25,
+      "hours_missing": 175,
+      "removed_records": []
+    },
+    "taichung-fengyuan-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 98,
+      "hours_missing": 102,
+      "removed_records": []
+    },
+    "taichung-heping-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 6,
+      "hours_missing": 194,
+      "removed_records": []
+    },
+    "taichung-houli-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 30,
+      "hours_missing": 170,
+      "removed_records": []
+    },
+    "taichung-longjing-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 30,
+      "hours_missing": 170,
+      "removed_records": []
+    },
+    "taichung-nan-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 76,
+      "hours_missing": 124,
+      "removed_records": []
+    },
+    "taichung-nantun-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 193,
+      "hours_missing": 7,
+      "removed_records": []
+    },
+    "taichung-qingshui-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 32,
+      "hours_missing": 168,
+      "removed_records": []
+    },
+    "taichung-shalu-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 48,
+      "hours_missing": 152,
+      "removed_records": []
+    },
+    "taichung-shengang-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 10,
+      "hours_missing": 190,
+      "removed_records": []
+    },
+    "taichung-shigang-restaurants.json": {
+      "before": 142,
+      "after": 142,
+      "checked": 142,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 3,
+      "hours_missing": 139,
+      "removed_records": []
+    },
+    "taichung-taiping-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 43,
+      "hours_missing": 157,
+      "removed_records": []
+    },
+    "taichung-tanzi-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 25,
+      "hours_missing": 175,
+      "removed_records": []
+    },
+    "taichung-waipu-restaurants.json": {
+      "before": 187,
+      "after": 187,
+      "checked": 187,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 3,
+      "hours_missing": 184,
+      "removed_records": []
+    },
+    "taichung-wufeng-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 26,
+      "hours_missing": 174,
+      "removed_records": []
+    },
+    "taichung-wuqi-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 29,
+      "hours_missing": 171,
+      "removed_records": []
+    },
+    "taichung-wuri-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 27,
+      "hours_missing": 173,
+      "removed_records": []
+    },
+    "taichung-xi-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 190,
+      "hours_missing": 10,
+      "removed_records": []
+    },
+    "taichung-xinshe-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 18,
+      "hours_missing": 182,
+      "removed_records": []
+    },
+    "taichung-xitun-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 196,
+      "hours_missing": 4,
+      "removed_records": []
+    },
+    "taichung-zhong-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 50,
+      "hours_missing": 150,
+      "removed_records": []
+    },
+    "tainan-anding-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 1,
+      "hours_missing": 199,
+      "removed_records": []
+    },
+    "tainan-annan-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 29,
+      "hours_missing": 171,
+      "removed_records": []
+    },
+    "tainan-anping-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 119,
+      "hours_missing": 81,
+      "removed_records": []
+    },
+    "tainan-baihe-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 10,
+      "hours_missing": 190,
+      "removed_records": []
+    },
+    "tainan-bei-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 108,
+      "hours_missing": 92,
+      "removed_records": []
+    },
+    "tainan-beimen-restaurants.json": {
+      "before": 97,
+      "after": 97,
+      "checked": 97,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 1,
+      "hours_missing": 96,
+      "removed_records": []
+    },
+    "tainan-danei-restaurants.json": {
+      "before": 120,
+      "after": 120,
+      "checked": 120,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 2,
+      "hours_missing": 118,
+      "removed_records": []
+    },
+    "tainan-dong-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 187,
+      "hours_missing": 13,
+      "removed_records": []
+    },
+    "tainan-dongshan-restaurants.json": {
+      "before": 200,
+      "after": 199,
+      "checked": 200,
+      "fallback_evidence_applied": 16,
+      "removed": 1,
+      "unresolved": 0,
+      "hours_found": 17,
+      "hours_missing": 182,
+      "removed_records": [
+        {
+          "source_id": "googlemaps-card-bcaa213e5ee7",
+          "id": "tainan-dongshan-025",
+          "name": "水井羅家",
+          "address": "臺南市東山區市東山區高原43-1好",
+          "reason": "替代網路搜尋已完成以店名、地址及名稱變體查詢；近六個月沒有任何可辨識、可對應該店面的公開資料，依規則移除。",
+          "source": null,
+          "sources": [],
+          "checked_at": "2026-08-10",
+          "evidence_freshness": "unavailable",
+          "evidence_kind": "alternative-web-search-no-data",
+          "evidence_excerpt": "已以店名、地址及名稱變體查詢替代網路搜尋；在查核日前六個月內找不到可辨識、可對應該店面的公開資料，亦未找到可供近一個月判斷營運的店家頁面。",
+          "original": {
+            "source_id": "googlemaps-card-bcaa213e5ee7",
+            "name": "水井羅家",
+            "address": "臺南市東山區市東山區高原43-1好",
+            "phone": null,
+            "physical_store": true,
+            "price_range_twd_per_person": {
+              "min": 150,
+              "max": 800,
+              "display": "約 NT$150–800/人",
+              "basis": "Google Maps 搜尋卡片未列完整價位，依料理分類估算；實際以店家最新菜單為準"
+            },
+            "cuisine_types": [
+              "融合菜式餐廳"
+            ],
+            "online_rating": {
+              "platform": "Google Maps",
+              "score": 4.7,
+              "review_count": null,
+              "source_snapshot": "Google Maps 公開搜尋卡片快照（2026-08-10）",
+              "food_diary_count": null,
+              "review_summary": [
+                "搜尋卡片提供店名、料理分類與評分",
+                "卡片未提供可解析的電話、評論數與完整評論摘要。"
+              ]
+            },
+            "store_status_check": "已於 2026-08-10 嘗試 Yahoo 替代搜尋，但查詢服務錯誤、驗證或結果不完整；未依半年無資料規則移除。",
+            "sources": [
+              "https://www.google.com/maps/place/%E6%B0%B4%E4%BA%95%E7%BE%85%E5%AE%B6/data=!4m7!3m6!1s0x346e8c67d50fe7b1:0xfa8bea543bb94b7a!8m2!3d23.285595!4d120.4706246!16s%2Fg%2F11c30q114q!19sChIJsecP1WeMbjQReku5O1Tqi_o?authuser=0&hl=zh-TW&rclk=1"
+            ],
+            "id": "tainan-dongshan-025",
+            "image_url": null,
+            "image_source_url": null,
+            "image_source_type": null,
+            "image_usage_status": "no_candidate_found",
+            "image_checked_at": "2026-08-10",
+            "operation_status": "uncertain",
+            "operation_status_checked_at": "2026-08-10",
+            "operation_status_sources": [
+              "https://www.google.com/maps/place/%E6%B0%B4%E4%BA%95%E7%BE%85%E5%AE%B6/data=!4m7!3m6!1s0x346e8c67d50fe7b1:0xfa8bea543bb94b7a!8m2!3d23.285595!4d120.4706246!16s%2Fg%2F11c30q114q!19sChIJsecP1WeMbjQReku5O1Tqi_o?authuser=0&hl=zh-TW&rclk=1"
+            ],
+            "operation_status_reason": "既有公開來源頁面目前無法取得或缺少可辨識店家資料；未依半年無資料規則移除。",
+            "business_hours": {
+              "average_open_time": null,
+              "average_close_time": null,
+              "display": null,
+              "source": null,
+              "open_days_considered": 0,
+              "note": "已檢查公開來源，但未找到可可靠解析的營業時間；未以今日是否營業推估。"
+            },
+            "operation_status_fallback_checked_at": "2026-08-10",
+            "operation_status_fallback_provider": "Yahoo 搜尋",
+            "operation_status_fallback_freshness": "unavailable",
+            "operation_status_fallback_sources": [
+              "https://www.google.com/maps/place/%E6%B0%B4%E4%BA%95%E7%BE%85%E5%AE%B6/data=!4m7!3m6!1s0x346e8c67d50fe7b1:0xfa8bea543bb94b7a!8m2!3d23.285595!4d120.4706246!16s%2Fg%2F11c30q114q!19sChIJsecP1WeMbjQReku5O1Tqi_o?authuser=0&hl=zh-TW&rclk=1"
+            ]
+          }
+        }
+      ]
+    },
+    "tainan-guanmiao-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 5,
+      "hours_missing": 195,
+      "removed_records": []
+    },
+    "tainan-guantian-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 3,
+      "hours_missing": 197,
+      "removed_records": []
+    },
+    "tainan-guiren-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 43,
+      "hours_missing": 157,
+      "removed_records": []
+    },
+    "tainan-houbi-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 4,
+      "hours_missing": 196,
+      "removed_records": []
+    },
+    "tainan-jiali-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 17,
+      "hours_missing": 183,
+      "removed_records": []
+    },
+    "tainan-jiangjun-restaurants.json": {
+      "before": 199,
+      "after": 199,
+      "checked": 199,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 6,
+      "hours_missing": 193,
+      "removed_records": []
+    },
+    "tainan-liujia-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 2,
+      "hours_missing": 198,
+      "removed_records": []
+    },
+    "tainan-liuying-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 2,
+      "hours_missing": 198,
+      "removed_records": []
+    },
+    "tainan-longqi-restaurants.json": {
+      "before": 49,
+      "after": 49,
+      "checked": 49,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 0,
+      "hours_missing": 49,
+      "removed_records": []
+    },
+    "tainan-madou-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 21,
+      "hours_missing": 179,
+      "removed_records": []
+    },
+    "tainan-nan-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 50,
+      "hours_missing": 150,
+      "removed_records": []
+    },
+    "tainan-nanhua-restaurants.json": {
+      "before": 46,
+      "after": 46,
+      "checked": 46,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 3,
+      "hours_missing": 43,
+      "removed_records": []
+    },
+    "tainan-nanxi-restaurants.json": {
+      "before": 140,
+      "after": 140,
+      "checked": 140,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 9,
+      "hours_missing": 131,
+      "removed_records": []
+    },
+    "tainan-qigu-restaurants.json": {
+      "before": 171,
+      "after": 171,
+      "checked": 171,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 14,
+      "hours_missing": 157,
+      "removed_records": []
+    },
+    "tainan-rende-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 35,
+      "hours_missing": 165,
+      "removed_records": []
+    },
+    "tainan-shanhua-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 29,
+      "hours_missing": 171,
+      "removed_records": []
+    },
+    "tainan-shanshang-restaurants.json": {
+      "before": 94,
+      "after": 94,
+      "checked": 94,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 1,
+      "hours_missing": 93,
+      "removed_records": []
+    },
+    "tainan-xiaying-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 1,
+      "hours_missing": 199,
+      "removed_records": []
+    },
+    "tainan-xigang-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 2,
+      "hours_missing": 198,
+      "removed_records": []
+    },
+    "tainan-xinhua-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 14,
+      "hours_missing": 186,
+      "removed_records": []
+    },
+    "tainan-xinshi-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 21,
+      "hours_missing": 179,
+      "removed_records": []
+    },
+    "tainan-xinying-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 43,
+      "hours_missing": 157,
+      "removed_records": []
+    },
+    "tainan-xuejia-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 6,
+      "hours_missing": 194,
+      "removed_records": []
+    },
+    "tainan-yanshui-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 5,
+      "hours_missing": 195,
+      "removed_records": []
+    },
+    "tainan-yongkang-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 84,
+      "hours_missing": 116,
+      "removed_records": []
+    },
+    "tainan-yujing-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 16,
+      "hours_missing": 184,
+      "removed_records": []
+    },
+    "tainan-zhongxi-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 192,
+      "hours_missing": 8,
+      "removed_records": []
+    },
+    "tainan-zuozhen-restaurants.json": {
+      "before": 44,
+      "after": 44,
+      "checked": 44,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 1,
+      "hours_missing": 43,
+      "removed_records": []
+    },
+    "taipei-beitou-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 162,
+      "hours_missing": 38,
+      "removed_records": []
+    },
+    "taipei-daan-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 199,
+      "hours_missing": 1,
+      "removed_records": []
+    },
+    "taipei-datong-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 191,
+      "hours_missing": 9,
+      "removed_records": []
+    },
+    "taipei-nangang-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 136,
+      "hours_missing": 64,
+      "removed_records": []
+    },
+    "taipei-neihu-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 179,
+      "hours_missing": 21,
+      "removed_records": []
+    },
+    "taipei-shilin-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 192,
+      "hours_missing": 8,
+      "removed_records": []
+    },
+    "taipei-songshan-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 194,
+      "hours_missing": 6,
+      "removed_records": []
+    },
+    "taipei-wanhua-restaurants.json": {
+      "before": 276,
+      "after": 276,
+      "checked": 276,
+      "fallback_evidence_applied": 6,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 256,
+      "hours_missing": 20,
+      "removed_records": []
+    },
+    "taipei-wenshan-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 123,
+      "hours_missing": 77,
+      "removed_records": []
+    },
+    "taipei-xinyi-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 195,
+      "hours_missing": 5,
+      "removed_records": []
+    },
+    "taipei-zhongshan-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 195,
+      "hours_missing": 5,
+      "removed_records": []
+    },
+    "taipei-zhongzheng-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 197,
+      "hours_missing": 3,
+      "removed_records": []
+    },
+    "taoyuan-bade-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 59,
+      "hours_missing": 141,
+      "removed_records": []
+    },
+    "taoyuan-daxi-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 57,
+      "hours_missing": 143,
+      "removed_records": []
+    },
+    "taoyuan-dayuan-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 27,
+      "hours_missing": 173,
+      "removed_records": []
+    },
+    "taoyuan-fuxing-restaurants.json": {
+      "before": 199,
+      "after": 199,
+      "checked": 199,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 20,
+      "hours_missing": 179,
+      "removed_records": []
+    },
+    "taoyuan-guanyin-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 21,
+      "hours_missing": 179,
+      "removed_records": []
+    },
+    "taoyuan-guishan-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 99,
+      "hours_missing": 101,
+      "removed_records": []
+    },
+    "taoyuan-longtan-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 103,
+      "hours_missing": 97,
+      "removed_records": []
+    },
+    "taoyuan-luzhu-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 104,
+      "hours_missing": 96,
+      "removed_records": []
+    },
+    "taoyuan-pingzhen-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 69,
+      "hours_missing": 131,
+      "removed_records": []
+    },
+    "taoyuan-taoyuan-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 191,
+      "hours_missing": 9,
+      "removed_records": []
+    },
+    "taoyuan-xinwu-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 12,
+      "hours_missing": 188,
+      "removed_records": []
+    },
+    "taoyuan-yangmei-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 36,
+      "hours_missing": 164,
+      "removed_records": []
+    },
+    "taoyuan-zhongli-restaurants.json": {
+      "before": 200,
+      "after": 200,
+      "checked": 200,
+      "fallback_evidence_applied": 0,
+      "removed": 0,
+      "unresolved": 0,
+      "hours_found": 196,
+      "hours_missing": 4,
+      "removed_records": []
+    }
+  },
+  "removal_ids": [
+    "kaohsiung-namaxia-002",
+    "kaohsiung-namaxia-006",
+    "kaohsiung-namaxia-012",
+    "kaohsiung-namaxia-013",
+    "kaohsiung-namaxia-018",
+    "kaohsiung-namaxia-019",
+    "kaohsiung-namaxia-021",
+    "kaohsiung-namaxia-024",
+    "kaohsiung-namaxia-025",
+    "tainan-dongshan-025"
+  ]
+}

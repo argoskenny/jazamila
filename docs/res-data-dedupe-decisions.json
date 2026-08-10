@@ -1,0 +1,3934 @@
+{
+  "generatedAt": "2026-08-10T13:20:00.000Z",
+  "methodology": "以正規化後的完整地址與純數字電話作為嚴格身份鍵；逐組以地址與電話反查。verified 表示搜尋證據可直接對應店名，fallback 表示公開證據不足，保守採來源中較完整名稱。所有組別只保留一筆，原始名稱保留於 sourceNames 供稽核。",
+  "entries": [
+    {
+      "identityKey": "台北市中正區忠孝東路一段12號2樓|0223211818",
+      "address": "台北市中正區忠孝東路一段12號2樓",
+      "phone": "02 2321 1818",
+      "sourceNames": [
+        "【台北喜來登大飯店】SUKHOTHAI 泰式料理",
+        "【台北喜來登大飯店】安東廳",
+        "【台北喜來登大飯店】桃山日本料理"
+      ],
+      "canonicalName": "【台北喜來登大飯店】安東廳",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/493896073199229341",
+      "verificationTitle": "安東廳 Antoine Room-台北喜來登大飯店 - LINE熱點",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 2321 1818\" \"台北市中正區忠孝東路一段12號2樓\""
+    },
+    {
+      "identityKey": "台北市信義區松仁路38號|0266228018",
+      "address": "台北市信義區松仁路38號",
+      "phone": "02 6622 8018",
+      "sourceNames": [
+        "【台北寒舍艾美酒店】探索廚房",
+        "【台北寒舍艾美酒店】北緯二十五"
+      ],
+      "canonicalName": "【台北寒舍艾美酒店】探索廚房",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/497463212183133370",
+      "verificationTitle": "北緯二十五 Latitude 25 - LINE熱點",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 6622 8018\" \"台北市信義區松仁路38號\""
+    },
+    {
+      "identityKey": "台北市信義區松壽路2號|0227201230",
+      "address": "台北市信義區松壽路2號",
+      "phone": "02 2720 1230",
+      "sourceNames": [
+        "【台北君悅酒店】Cheers 歡飲廊",
+        "【台北君悅酒店】ZIGA ZAGA"
+      ],
+      "canonicalName": "【台北君悅酒店】ZIGA ZAGA",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.mobile01.com/topicdetail.php?f=189&t=4952172",
+      "verificationTitle": "[食記] 台北 信義 寶艾西餐廳Bel Air - Bar & Grill - 台北經典西餐廳，約會求婚好去處（君悅酒店） - Mobile01",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 2720 1230\" \"台北市信義區松壽路2號\""
+    },
+    {
+      "identityKey": "台北市內湖區內湖路一段285巷69弄5號|0226590868",
+      "address": "台北市內湖區內湖路一段285巷69弄5號",
+      "phone": "02 2659 0868",
+      "sourceNames": [
+        "胖老爹美式炸雞(台北西湖店)",
+        "胖老爹美式炸雞(西湖店)"
+      ],
+      "canonicalName": "胖老爹美式炸雞(西湖店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/4137893",
+      "verificationTitle": "胖老爹美式炸雞(西湖店)菜單：雞塊、雞腿、雞翅、胖老爹炸雞、洋蔥圈...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2659 0868\" \"台北市內湖區內湖路一段285巷69弄5號\""
+    },
+    {
+      "identityKey": "台北市內湖區成功路五段67號|0226305206",
+      "address": "台北市內湖區成功路五段67號",
+      "phone": "02 2630 5206",
+      "sourceNames": [
+        "龍府小鍋",
+        "柳記螺螄粉火鍋"
+      ],
+      "canonicalName": "龍府小鍋",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.shop1688.com.tw/aom20180331122/contact.html",
+      "verificationTitle": "聯絡我們│龍府小鍋│台北內湖麻辣火鍋、涮涮鍋店、個人精緻鍋物",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2630 5206\" \"台北市內湖區成功路五段67號\""
+    },
+    {
+      "identityKey": "台北市內湖區成功路四段30巷40號|0227923128",
+      "address": "台北市內湖區成功路四段30巷40號",
+      "phone": "02 2792 3128",
+      "sourceNames": [
+        "火鍋世家(內湖成功店)",
+        "火鍋世家(台北東湖店)"
+      ],
+      "canonicalName": "火鍋世家(內湖成功店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://guide.easytravel.com.tw/scenic/61374",
+      "verificationTitle": "火鍋世家-內湖成功店 | 台灣旅遊景點行程",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2792 3128\" \"台北市內湖區成功路四段30巷40號\""
+    },
+    {
+      "identityKey": "台北市內湖區民權東路六段137號|0227912727",
+      "address": "台北市內湖區民權東路六段137號",
+      "phone": "02 2791 2727",
+      "sourceNames": [
+        "BUNA CAF'E 布納咖啡館(內湖館)",
+        "布納咖啡(台北內湖店)"
+      ],
+      "canonicalName": "BUNA CAF'E 布納咖啡館(內湖館)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.walkerland.com.tw/article/view/238001",
+      "verificationTitle": "〖台北不限時咖啡廳-內湖〗BUNA CAFE布納咖啡館-早午餐/下午茶/晚餐|美食|WalkerLand窩客島",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 2791 2727\" \"台北市內湖區民權東路六段137號\""
+    },
+    {
+      "identityKey": "台北市內湖區江南街112巷2號|0226580115",
+      "address": "台北市內湖區江南街112巷2號",
+      "phone": "02 2658 0115",
+      "sourceNames": [
+        "喜魚 小酸菜魚(內湖店)",
+        "赤初小酸菜魚(內湖店)"
+      ],
+      "canonicalName": "喜魚 小酸菜魚(內湖店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.walkerland.com.tw/article/view/391270",
+      "verificationTitle": "台北市內湖區〖台北〗內湖｜喜魚小酸菜魚，個人果香酸菜魚，鹽滷豆花入菜，米飯飲料無限供應|美食|WalkerLand窩客島",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 2658 0115\" \"台北市內湖區江南街112巷2號\""
+    },
+    {
+      "identityKey": "台北市內湖區瑞光路583巷24號|0287513227",
+      "address": "台北市內湖區瑞光路583巷24號",
+      "phone": "02 8751 3227",
+      "sourceNames": [
+        "覺旅咖啡(西湖店)",
+        "Journey Kaffe"
+      ],
+      "canonicalName": "覺旅咖啡(西湖店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.ptt.cc/bbs/Neihu/M.1617765987.A.B64.html",
+      "verificationTitle": "[食記] 台北內湖—覺旅咖啡｜工作與唸書的強力應援團｜西湖站 - 看板 Neihu - 批踢踢實業坊",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 8751 3227\" \"台北市內湖區瑞光路583巷24號\""
+    },
+    {
+      "identityKey": "台北市內湖區瑞光路601號|0226593918",
+      "address": "台北市內湖區瑞光路601號",
+      "phone": "02 2659 3918",
+      "sourceNames": [
+        "Miacucina 內湖店",
+        "MiaCucina 義式蔬食料理(內湖店)"
+      ],
+      "canonicalName": "Miacucina 內湖店",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/6290567",
+      "verificationTitle": "Miacucina 內湖店菜單：布里乾酪混合野菇燉飯、漢堡、芒果檸檬泡泡、曬乾番茄蘑菇肉醬麵、羅勒青醬麵...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2659 3918\" \"台北市內湖區瑞光路601號\""
+    },
+    {
+      "identityKey": "台北市北投區光明路2巷9號|0228941169",
+      "address": "台北市北投區光明路2巷9號",
+      "phone": "02 2894 1169",
+      "sourceNames": [
+        "VIVACE 薇瓦琪義式餐酒館",
+        "vivace 義式餐酒館"
+      ],
+      "canonicalName": "VIVACE 薇瓦琪義式餐酒館",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ifoodie.tw/post/5c346c7123679c012daba228",
+      "verificationTitle": "vivace義式餐酒館～結合傳統義式料理和東西方食材，搭配自製醬料，給咱們健康美味的無國界料理！北投餐酒館推薦』| VIVACE 薇瓦琪義式餐酒館 - 愛食記",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2894 1169\" \"台北市北投區光明路2巷9號\""
+    },
+    {
+      "identityKey": "台北市北投區北投路二段7號|0228942866",
+      "address": "台北市北投區北投路二段7號",
+      "phone": "02 2894 2866",
+      "sourceNames": [
+        "蒔蘿香草蔬食餐廳",
+        "蒔蘿香草餐廳 Dill Herbs Restaurant(北投店)"
+      ],
+      "canonicalName": "蒔蘿香草蔬食餐廳",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://vegemap.merit-times.com/restaurant_detail/%E8%92%94%E8%98%BF%E9%A6%99%E8%8D%89%E8%94%AC%E9%A3%9F%E9%A4%90%E5%BB%B3-%E5%8C%97%E6%8A%95%E5%BA%97?list=6",
+      "verificationTitle": "蒔蘿香草蔬食餐廳-北投店 in 台北市，聯絡我們 - 蔬福生活",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2894 2866\" \"台北市北投區北投路二段7號\""
+    },
+    {
+      "identityKey": "台北市北投區大業路516巷2號|0228951125",
+      "address": "台北市北投區大業路516巷2號",
+      "phone": "02 2895 1125",
+      "sourceNames": [
+        "阿馬非Coffee",
+        "阿馬非餐廳",
+        "阿馬非咖啡坊"
+      ],
+      "canonicalName": "阿馬非Coffee",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.ptt.cc/bbs/BigPeitou/M.1320420640.A.87C.html",
+      "verificationTitle": "[食記] 阿馬非Coffee, Pizza, Pasta - 看板 BigPeitou - 批踢踢實業坊",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2895 1125\" \"台北市北投區大業路516巷2號\""
+    },
+    {
+      "identityKey": "台北市北投區幽雅路30號|0228988888",
+      "address": "台北市北投區幽雅路30號",
+      "phone": "02 2898 8888",
+      "sourceNames": [
+        "【北投麗禧溫泉酒店】歐陸餐廳 C'est Bon",
+        "【北投麗禧溫泉酒店】雍翠庭"
+      ],
+      "canonicalName": "【北投麗禧溫泉酒店】雍翠庭",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://twanga.mohist.com.tw/LIKEGO/QueryTicketInfo.php?GetStore=GVR",
+      "verificationTitle": "北投麗禧線上旅展",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 2898 8888\" \"台北市北投區幽雅路30號\""
+    },
+    {
+      "identityKey": "台北市北投區新市街22之1號|0228972858",
+      "address": "台北市北投區新市街22之1號",
+      "phone": "02 2897 2858",
+      "sourceNames": [
+        "陳家剉冰",
+        "【北投市場】陳家挫冰"
+      ],
+      "canonicalName": "陳家剉冰",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.ptt.cc/bbs/BigPeitou/M.1577257336.A.E5B.html",
+      "verificationTitle": "Fw: [食記] 陳家剉冰 - 看板 BigPeitou - 批踢踢實業坊",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2897 2858\" \"台北市北投區新市街22之1號\""
+    },
+    {
+      "identityKey": "台北市北投區明德路365號2樓|0228286828",
+      "address": "台北市北投區明德路365號2樓",
+      "phone": "02 2828 6828",
+      "sourceNames": [
+        "蘇杭餐廳(振興店)",
+        "蘇杭365(北投店)"
+      ],
+      "canonicalName": "蘇杭365(北投店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/870069563058820899",
+      "verificationTitle": "蘇杭365 - LINE熱點",
+      "confidence": "medium",
+      "resolution": "verified",
+      "query": "\"02 2828 6828\" \"台北市北投區明德路365號2樓\""
+    },
+    {
+      "identityKey": "台北市南港區南港路一段265號|0226533098",
+      "address": "台北市南港區南港路一段265號",
+      "phone": "02 2653 3098",
+      "sourceNames": [
+        "Neverland Lite Bakery & Coffee",
+        "NEVERLAND Bakery Cafe"
+      ],
+      "canonicalName": "NEVERLAND Bakery Cafe",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.nland.com.tw/lite/",
+      "verificationTitle": "NEVERLAND Bakery Cafe",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2653 3098\" \"台北市南港區南港路一段265號\""
+    },
+    {
+      "identityKey": "台北市南港區南港路一段271號|0226533606",
+      "address": "台北市南港區南港路一段271號",
+      "phone": "02 2653 3606",
+      "sourceNames": [
+        "Neverland Noodle Bar 麵吧",
+        "Neverland Noodle Bar"
+      ],
+      "canonicalName": "Neverland Noodle Bar 麵吧",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.ptt.cc/bbs/Food/M.1642004309.A.DD3.html",
+      "verificationTitle": "[食記] 台北南港車站 NEVERLAND NOODLE BAR 麵吧 - 看板 Food - 批踢踢實業坊",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2653 3606\" \"台北市南港區南港路一段271號\""
+    },
+    {
+      "identityKey": "台北市南港區忠孝東路七段299號9樓|0226518080",
+      "address": "台北市南港區忠孝東路七段299號9樓",
+      "phone": "02 2651 8080",
+      "sourceNames": [
+        "PIZZA HUT 必勝客歡樂吧(南港餐廳店)",
+        "PIZZA HUT必勝客(南港餐廳店-歡樂吧)"
+      ],
+      "canonicalName": "PIZZA HUT必勝客(南港餐廳店-歡樂吧)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.findcoupon.tw/store-1189.htm",
+      "verificationTitle": "必勝客 (南港餐廳店)，02-2651-8080 - 找優惠",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 2651 8080\" \"台北市南港區忠孝東路七段299號9樓\""
+    },
+    {
+      "identityKey": "台北市南港區忠孝東路六段372號|0226538189",
+      "address": "台北市南港區忠孝東路六段372號",
+      "phone": "02 2653 8189",
+      "sourceNames": [
+        "金春發牛肉店(南港店)",
+        "金春發牛肉店(松山店)"
+      ],
+      "canonicalName": "金春發牛肉店(南港店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/537404396049275550",
+      "verificationTitle": "金春發牛肉店 - LINE熱點",
+      "confidence": "medium",
+      "resolution": "verified",
+      "query": "\"02 2653 8189\" \"台北市南港區忠孝東路六段372號\""
+    },
+    {
+      "identityKey": "台北市南港區昆陽街164號|0226530033",
+      "address": "台北市南港區昆陽街164號",
+      "phone": "02 2653 0033",
+      "sourceNames": [
+        "松山療養所所長宿舍(靜心苑-療癒古蹟)",
+        "靜心苑"
+      ],
+      "canonicalName": "靜心苑",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ifoodie.tw/post/65dfdde1927f80bc5074e4a2",
+      "verificationTitle": "台北南港美食推薦︱ 靜心苑日式百年老宅餐廳︱原松山療養所所長宿舍藝文療癒古蹟』| 靜心苑-療癒古蹟 (松山療養所所長宿舍) - 愛食記",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2653 0033\" \"台北市南港區昆陽街164號\""
+    },
+    {
+      "identityKey": "台北市南港區研究院路一段88號|0958787898",
+      "address": "台北市南港區研究院路一段88號",
+      "phone": "0958 787 898",
+      "sourceNames": [
+        "板前屋炭烤鰻魚飯",
+        "串香珍板前日式料理"
+      ],
+      "canonicalName": "板前屋炭烤鰻魚飯",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/458692082828055514",
+      "verificationTitle": "板前屋 炭烤鰻魚飯 - LINE熱點",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"0958 787 898\" \"台北市南港區研究院路一段88號\""
+    },
+    {
+      "identityKey": "台北市南港區經貿一路168號3f|0227881618",
+      "address": "台北市南港區經貿一路168號3F",
+      "phone": "02 2788 1618",
+      "sourceNames": [
+        "東方樓 頂級粵菜",
+        "【南港漢來大飯店】東方樓 頂級粵菜"
+      ],
+      "canonicalName": "東方樓 頂級粵菜",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.opentable.com.tw/restaurant/profile/264740",
+      "verificationTitle": "東方樓頂級粵菜 南港店 - Taipei City | OpenTable",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2788 1618\" \"台北市南港區經貿一路168號3F\""
+    },
+    {
+      "identityKey": "台北市南港區經貿二路66-2號|0227868077",
+      "address": "台北市南港區經貿二路66-2號",
+      "phone": "02 2786 8077",
+      "sourceNames": [
+        "小高玉迴轉壽司(高樂鐵板燒)(經貿店)",
+        "小高玉迴轉壽司(南港)"
+      ],
+      "canonicalName": "小高玉迴轉壽司(南港)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ifoodie.tw/post/560a2187716a856599000040",
+      "verificationTitle": "『南港園區』 高樂餐飲-鐵板料理 與 小高玉迴轉壽司....除了活跳生猛的海鮮生食..更多了熱食的好手藝』| 高樂餐飲 - 愛食記",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 2786 8077\" \"台北市南港區經貿二路66-2號\""
+    },
+    {
+      "identityKey": "台北市大同區寧夏路67號|0225573775",
+      "address": "台北市大同區寧夏路67號",
+      "phone": "02 2557 3775",
+      "sourceNames": [
+        "富樂台式涮涮鍋(西寧店)",
+        "富樂台式涮涮鍋(寧夏店)"
+      ],
+      "canonicalName": "富樂台式涮涮鍋(寧夏店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/315027",
+      "verificationTitle": "富樂台式涮涮鍋(寧夏店)菜單：菜盤、滷肉飯、富樂台式涮涮鍋、鮮蝦牛肉鍋、鮮蚵...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2557 3775\" \"台北市大同區寧夏路67號\""
+    },
+    {
+      "identityKey": "台北市大同區迪化街一段247號|0225539553",
+      "address": "台北市大同區迪化街一段247號",
+      "phone": "02 2553 9553",
+      "sourceNames": [
+        "滋養製菓",
+        "滋養和菓子"
+      ],
+      "canonicalName": "滋養和菓子",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://travel.yam.com/place/532",
+      "verificationTitle": "滋養和菓子 - 地點資訊 - 輕旅行",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2553 9553\" \"台北市大同區迪化街一段247號\""
+    },
+    {
+      "identityKey": "台北市大安區仁愛路四段345巷4弄7號|0227111102",
+      "address": "台北市大安區仁愛路四段345巷4弄7號",
+      "phone": "02 2711 1102",
+      "sourceNames": [
+        "某某甜點 Quelques Pâtisseries",
+        "某某。Quelques Pâtisseries 法式甜點外帶"
+      ],
+      "canonicalName": "某某。Quelques Pâtisseries 法式甜點外帶",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://travel.yam.com/place/21633",
+      "verificationTitle": "quelques pâtisseries某某甜點（法式甜點外帶店） - 地點資訊 - 輕旅行",
+      "confidence": "medium",
+      "resolution": "verified",
+      "query": "\"02 2711 1102\" \"台北市大安區仁愛路四段345巷4弄7號\""
+    },
+    {
+      "identityKey": "台北市大安區敦化南路二段201號6樓|0277112080",
+      "address": "台北市大安區敦化南路二段201號6樓",
+      "phone": "02 7711 2080",
+      "sourceNames": [
+        "【台北遠東香格里拉】遠東CAFÉ",
+        "【台北遠東香格里拉】香宮 Shang Palace"
+      ],
+      "canonicalName": "【台北遠東香格里拉】香宮 Shang Palace",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.ptt.cc/bbs/EatToDie/M.1637258480.A.668.html",
+      "verificationTitle": "[食記] 台北 遠東cafe自助餐廳，改裝後有變好 - 看板 EatToDie - 批踢踢實業坊",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 7711 2080\" \"台北市大安區敦化南路二段201號6樓\""
+    },
+    {
+      "identityKey": "台北市文山區指南路二段205號|0286616436",
+      "address": "台北市文山區指南路二段205號",
+      "phone": "02 8661 6436",
+      "sourceNames": [
+        "金鮨日式料理",
+        "金鰭日式料理"
+      ],
+      "canonicalName": "金鮨日式料理",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/486254162229596578",
+      "verificationTitle": "金鮨日式料理 - LINE熱點",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 8661 6436\" \"台北市文山區指南路二段205號\""
+    },
+    {
+      "identityKey": "台北市文山區木新路二段252號|0229365566",
+      "address": "台北市文山區木新路二段252號",
+      "phone": "02 2936 5566",
+      "sourceNames": [
+        "焱鬼鍋燒專門店(文山三番店)",
+        "炎鬼鍋燒專門店"
+      ],
+      "canonicalName": "焱鬼鍋燒專門店(文山三番店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/486254289677719485",
+      "verificationTitle": "焱鬼鍋燒專門店-文山三番店 - LINE熱點",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2936 5566\" \"台北市文山區木新路二段252號\""
+    },
+    {
+      "identityKey": "台北市文山區羅斯福路六段311號|0229312411",
+      "address": "台北市文山區羅斯福路六段311號",
+      "phone": "02 2931 2411",
+      "sourceNames": [
+        "Tenshima 天島咖啡",
+        "天島咖啡"
+      ],
+      "canonicalName": "Tenshima 天島咖啡",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://tenshima.com/",
+      "verificationTitle": "天島・Tenshima – Experience like no other!",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 2931 2411\" \"台北市文山區羅斯福路六段311號\""
+    },
+    {
+      "identityKey": "台北市文山區萬壽路6號|0222341088",
+      "address": "台北市文山區萬壽路6號",
+      "phone": "02 2234 1088",
+      "sourceNames": [
+        "舒曼六號餐館 Schumann's Bistro No. 6",
+        "Schumann's Bistro No 6 舒曼六號餐館(政大店)"
+      ],
+      "canonicalName": "舒曼六號餐館 Schumann's Bistro No. 6",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ifoodie.tw/post/58f422eaf524687a88357458",
+      "verificationTitle": "舒曼六號餐館 Schumann's Bistro No. 6|台北文山區木柵．政大周邊美食．德式豬腳．義大利麵．燉飯．披薩．啤酒．餐酒館．聚餐首選』| 舒曼六號餐館 政大店 - 愛食記",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2234 1088\" \"台北市文山區萬壽路6號\""
+    },
+    {
+      "identityKey": "台北市松山區敦化北路102號|0227135288",
+      "address": "台北市松山區敦化北路102號",
+      "phone": "02 2713 5288",
+      "sourceNames": [
+        "吉比鮮釀餐廳(敦北店)",
+        "Gordon Biersch GB鮮釀 美式餐廳(台北敦北店)"
+      ],
+      "canonicalName": "吉比鮮釀餐廳(敦北店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.walkerland.com.tw/poi/view/10218",
+      "verificationTitle": "鮮釀餐廳 Gordon Biersch（敦北店） – 旅遊美食情報|WalkerLand窩客島",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 2713 5288\" \"台北市松山區敦化北路102號\""
+    },
+    {
+      "identityKey": "台北市萬華區康定路25巷42之1號|0223119908",
+      "address": "台北市萬華區康定路25巷42之1號",
+      "phone": "02 2311 9908",
+      "sourceNames": [
+        "【西門町】真川味",
+        "真川味"
+      ],
+      "canonicalName": "【西門町】真川味",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/400361",
+      "verificationTitle": "〖西門町〗真川味菜單：五更腸旺、老皮嫩肉、蟹黃豆腐、蔥爆牛肉、紅燒子排...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2311 9908\" \"台北市萬華區康定路25巷42之1號\""
+    },
+    {
+      "identityKey": "台北市萬華區成都路81號4樓|0223115656",
+      "address": "台北市萬華區成都路81號4 樓",
+      "phone": "02 2311 5656",
+      "sourceNames": [
+        "新大戈壁蒙古烤肉",
+        "新大戈壁蒙古烤肉(西門旗艦店)"
+      ],
+      "canonicalName": "新大戈壁蒙古烤肉",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.ptt.cc/bbs/EatToDie/M.1720748964.A.2C9.html",
+      "verificationTitle": "Fw: [食記] 台北 新大戈壁蒙古烤肉、火鍋剉冰吃到飽 - 看板 EatToDie - 批踢踢實業坊",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2311 5656\" \"台北市萬華區成都路81號4 樓\""
+    },
+    {
+      "identityKey": "台北市萬華區昆明街46號|0223313677",
+      "address": "台北市萬華區昆明街46號",
+      "phone": "02 2331 3677",
+      "sourceNames": [
+        "打狗霸 TAKAO 1972(昆明店)",
+        "前鎮水產超市火鍋-海霸王(昆明店)"
+      ],
+      "canonicalName": "打狗霸 TAKAO 1972(昆明店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.takaosuper.com/",
+      "verificationTitle": "TAKAO SUPER - TAKAO SUPER",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 2331 3677\" \"台北市萬華區昆明街46號\""
+    },
+    {
+      "identityKey": "台北市萬華區西寧南路117號2樓|0223751158",
+      "address": "台北市萬華區西寧南路117號2樓",
+      "phone": "02- 23751158",
+      "sourceNames": [
+        "辛野火鍋",
+        "小牛匠西式餐廳"
+      ],
+      "canonicalName": "辛野火鍋",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.iyp.com.tw/0223751158",
+      "verificationTitle": "辛野火鍋有限公司的電話,地址,公司介紹 - 台北市餐廳推薦 - 中華黃頁網路電話簿",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02- 23751158\" \"台北市萬華區西寧南路117號2樓\""
+    },
+    {
+      "identityKey": "台北市萬華區西寧南路157號1樓|0223111721",
+      "address": "台北市萬華區西寧南路157號1樓",
+      "phone": "02 2311 1721",
+      "sourceNames": [
+        "問鼎 ‧ 皇上吉祥 宮廷火鍋(西門店)",
+        "問鼎・皇上吉祥宮廷火鍋(西門店)"
+      ],
+      "canonicalName": "問鼎 ‧ 皇上吉祥 宮廷火鍋(西門店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.ptt.cc/bbs/EatToDie/M.1724289961.A.C5F.html",
+      "verificationTitle": "[食記] 台北 西門 問鼎 吃到飽 - 看板 EatToDie - 批踢踢實業坊",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 2311 1721\" \"台北市萬華區西寧南路157號1樓\""
+    },
+    {
+      "identityKey": "台北市萬華區西寧南路161號1樓|0223112501",
+      "address": "台北市萬華區西寧南路161號1樓",
+      "phone": "02 2311 2501",
+      "sourceNames": [
+        "燒肉ChaCha 個人和牛燒肉專賣(西門店)",
+        "燒肉ChaCha 個人和牛燒肉(西門店)"
+      ],
+      "canonicalName": "燒肉ChaCha 個人和牛燒肉(西門店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.mala.com.tw/Home/StoreInformation?verificationCode=51610364AB13E4E4DC2F2165CF06D6F2",
+      "verificationTitle": "馬辣國際餐飲集團",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 2311 2501\" \"台北市萬華區西寧南路161號1樓\""
+    },
+    {
+      "identityKey": "台北市萬華區西寧南路36號10樓|0223122675",
+      "address": "台北市萬華區西寧南路36號10樓",
+      "phone": "02 2312 2675",
+      "sourceNames": [
+        "金獅樓",
+        "金獅大酒樓"
+      ],
+      "canonicalName": "金獅大酒樓",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.goldenlion.com.tw/contact-us.html",
+      "verificationTitle": "聯絡我們 - 金獅大酒樓",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2312 2675\" \"台北市萬華區西寧南路36號10樓\""
+    },
+    {
+      "identityKey": "嘉義市東區垂楊路40號|052762000",
+      "address": "嘉義市東區垂楊路40號",
+      "phone": "05 276 2000",
+      "sourceNames": [
+        "野村日式碳火燒肉(嘉義店)",
+        "野村燒肉"
+      ],
+      "canonicalName": "野村日式碳火燒肉(嘉義店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/575398364338727497",
+      "verificationTitle": "野村日式燒肉-嘉義店 - LINE熱點",
+      "confidence": "medium",
+      "resolution": "verified",
+      "query": "\"05 276 2000\" \"嘉義市東區垂楊路40號\""
+    },
+    {
+      "identityKey": "嘉義市東區忠孝路106號|052236660",
+      "address": "嘉義市東區忠孝路106號",
+      "phone": "05 223 6660",
+      "sourceNames": [
+        "嘉義王媽媽牛雜湯",
+        "王家祖傳本產牛雜湯"
+      ],
+      "canonicalName": "王家祖傳本產牛雜湯",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://travel.yam.com/place/1182",
+      "verificationTitle": "王家祖傳本產牛雜湯 - 地點資訊 - 輕旅行",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"05 223 6660\" \"嘉義市東區忠孝路106號\""
+    },
+    {
+      "identityKey": "嘉義市東區維新路7號|052756111",
+      "address": "嘉義市東區維新路7號",
+      "phone": "052756111",
+      "sourceNames": [
+        "鈺通大飯店",
+        "樂朋義法廚房"
+      ],
+      "canonicalName": "鈺通大飯店",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.ptt.cc/bbs/Hotel/M.1444396748.A.C61.html",
+      "verificationTitle": "[心得] 嘉義 鈺通大飯店~房間寬敞舒適且早餐豐盛 - 看板 Hotel - 批踢踢實業坊",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"052756111\" \"嘉義市東區維新路7號\""
+    },
+    {
+      "identityKey": "嘉義市東區興業東路387號|052162626",
+      "address": "嘉義市東區興業東路387號",
+      "phone": "05 216 2626",
+      "sourceNames": [
+        "玖咖啡",
+        "玖CAFÉ"
+      ],
+      "canonicalName": "玖CAFÉ",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.readkong.com/page/chiayi-good-food-teahouses-in-taipei-taiwan-tourismus-7437953",
+      "verificationTitle": "Chiayi GOOD FOOD TEAHOUSES IN TAIPEI - Taiwan Tourismus",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"05 216 2626\" \"嘉義市東區興業東路387號\""
+    },
+    {
+      "identityKey": "嘉義市西區仁愛路356號|052243177",
+      "address": "嘉義市西區仁愛路356號",
+      "phone": "05 224 3177",
+      "sourceNames": [
+        "阿溪火雞肉飯",
+        "阿溪雞肉飯"
+      ],
+      "canonicalName": "阿溪雞肉飯",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/8800912",
+      "verificationTitle": "阿溪雞肉飯菜單：雞片飯、雞肉飯、火雞肉飯、味噌湯、滷豆腐...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"05 224 3177\" \"嘉義市西區仁愛路356號\""
+    },
+    {
+      "identityKey": "嘉義市西區友忠路511號|052810012",
+      "address": "嘉義市西區友忠路511號",
+      "phone": "05 281 0012",
+      "sourceNames": [
+        "阿宏海鮮熱炒",
+        "阿宏海產"
+      ],
+      "canonicalName": "阿宏海產",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/25952",
+      "verificationTitle": "阿宏海產：嘉義必訪海鮮熱炒，新鮮魚貨，聚餐好去處！(內含菜單價位) | 嘉義西區",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"05 281 0012\" \"嘉義市西區友忠路511號\""
+    },
+    {
+      "identityKey": "嘉義市西區民生北路179號|052253991",
+      "address": "嘉義市西區民生北路179號",
+      "phone": "05 225 3991",
+      "sourceNames": [
+        "20元大飯店",
+        "15元大飯店"
+      ],
+      "canonicalName": "20元大飯店",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/6922015",
+      "verificationTitle": "20元大飯店菜單：魯肉飯、香菇雞湯、鹽菜鴨、豆腐、15元大飯店...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"05 225 3991\" \"嘉義市西區民生北路179號\""
+    },
+    {
+      "identityKey": "基隆市七堵區明德一路156號|0224555050",
+      "address": "基隆市七堵區明德一路156號",
+      "phone": "02 2455 5050",
+      "sourceNames": [
+        "築間幸福鍋物(基隆七堵店)",
+        "無拘無束地中海風石頭火鍋"
+      ],
+      "canonicalName": "築間幸福鍋物(基隆七堵店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/486251322710954740",
+      "verificationTitle": "築間幸福鍋物-基隆七堵店 - LINE熱點",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2455 5050\" \"基隆市七堵區明德一路156號\""
+    },
+    {
+      "identityKey": "基隆市七堵區福一街129號|0224523732",
+      "address": "基隆市七堵區福一街129號",
+      "phone": "(02)24523732",
+      "sourceNames": [
+        "蔡技食品",
+        "蔡技企業有限公司-蔡技食品"
+      ],
+      "canonicalName": "蔡技食品",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://trade.1111.com.tw/company/264041/goods",
+      "verificationTitle": "商品介紹︱蔡技食品有限公司",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"(02)24523732\" \"基隆市七堵區福一街129號\""
+    },
+    {
+      "identityKey": "基隆市中山區中山二路47號|0224294106",
+      "address": "基隆市中山區中山二路47號",
+      "phone": "02 2429 4106",
+      "sourceNames": [
+        "基隆五層豬腸湯",
+        "西六號碼頭麵店"
+      ],
+      "canonicalName": "基隆五層豬腸湯",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/486256899872792344",
+      "verificationTitle": "西六號碼頭麵店(基隆五層豬腸湯) - LINE熱點",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2429 4106\" \"基隆市中山區中山二路47號\""
+    },
+    {
+      "identityKey": "基隆市中正區中正路34號|0224282812",
+      "address": "基隆市中正區中正路34號",
+      "phone": "02 2428 2812",
+      "sourceNames": [
+        "陞豪火鍋",
+        "陞豪鍋物"
+      ],
+      "canonicalName": "陞豪火鍋",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/7445733",
+      "verificationTitle": "陞豪火鍋菜單：飛魚卵泡菜、黑糖凍、冰淇淋、奶酪、長壽珍果...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2428 2812\" \"基隆市中正區中正路34號\""
+    },
+    {
+      "identityKey": "基隆市中正區中正路579-1號|0224631112",
+      "address": "基隆市中正區中正路579-1號",
+      "phone": "02 2463 1112",
+      "sourceNames": [
+        "熊豆咖啡店",
+        "熊豆咖啡"
+      ],
+      "canonicalName": "熊豆咖啡店",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://theme.northguan-nsa.gov.tw/crowncoast/storecontent.aspx?l=1&sno=03008018&t=",
+      "verificationTitle": "皇冠海岸觀光圈",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 2463 1112\" \"基隆市中正區中正路579-1號\""
+    },
+    {
+      "identityKey": "基隆市中正區信二路303號|0224227236",
+      "address": "基隆市中正區信二路303號",
+      "phone": "02 2422 7236",
+      "sourceNames": [
+        "義美自助火鍋城",
+        "義美石頭火鍋"
+      ],
+      "canonicalName": "義美自助火鍋城",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://iurl.tw/place/uIh1S2",
+      "verificationTitle": "義美自助火鍋城 - 4.3★(3984) - Google地點/商家 評論資訊 @iUrl",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2422 7236\" \"基隆市中正區信二路303號\""
+    },
+    {
+      "identityKey": "基隆市中正區北寧路369巷50號|0224698000",
+      "address": "基隆市中正區北寧路369巷50號",
+      "phone": "02 2469 8000",
+      "sourceNames": [
+        "希臘天空海景景觀餐廳",
+        "希臘天空景觀餐廳"
+      ],
+      "canonicalName": "希臘天空海景景觀餐廳",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/486249038270697498",
+      "verificationTitle": "希臘天空 - LINE熱點",
+      "confidence": "medium",
+      "resolution": "verified",
+      "query": "\"02 2469 8000\" \"基隆市中正區北寧路369巷50號\""
+    },
+    {
+      "identityKey": "基隆市中正區平一路360號|0224635452",
+      "address": "基隆市中正區平一路360號",
+      "phone": "(02)24635452",
+      "sourceNames": [
+        "禾口丘",
+        "享蒔物語"
+      ],
+      "canonicalName": "享蒔物語",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.northguan-nsa.gov.tw/user/article.aspx?lang=1&sno=04006810",
+      "verificationTitle": "享蒔物語",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"(02)24635452\" \"基隆市中正區平一路360號\""
+    },
+    {
+      "identityKey": "基隆市中正區義一路14號|0224278583",
+      "address": "基隆市中正區義一路14號",
+      "phone": "02 2427 8583",
+      "sourceNames": [
+        "星巴克 基隆義14迴味門市",
+        "Starbucks統一星巴克(義14門市)"
+      ],
+      "canonicalName": "Starbucks統一星巴克(義14門市)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.findcoupon.tw/store-4150.htm",
+      "verificationTitle": "星巴克 (義14門市)，02-2427-8583 - 找優惠",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 2427 8583\" \"基隆市中正區義一路14號\""
+    },
+    {
+      "identityKey": "基隆市中正區義二路2巷4號|0224272300",
+      "address": "基隆市中正區義二路2巷4號",
+      "phone": "02 2427 2300",
+      "sourceNames": [
+        "貓町珈琲",
+        "猫町珈琲"
+      ],
+      "canonicalName": "貓町珈琲",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://temples.tw/place/MyPcWSMAiK",
+      "verificationTitle": "貓町珈琲 Cattown : Coffee Stand|宮廟周邊美食及店家探索-台灣好廟網",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2427 2300\" \"基隆市中正區義二路2巷4號\""
+    },
+    {
+      "identityKey": "基隆市仁愛區仁二路182號|0224254507",
+      "address": "基隆市仁愛區仁二路182號",
+      "phone": "02 2425 4507",
+      "sourceNames": [
+        "牛丁次郎坊(基隆廟口支店)",
+        "牛丁次郎坊(基隆廟口店)"
+      ],
+      "canonicalName": "牛丁次郎坊(基隆廟口支店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.walkerland.com.tw/poi/view/98122",
+      "verificationTitle": "小牛丁次郎坊 – 旅遊美食情報|WalkerLand窩客島",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 2425 4507\" \"基隆市仁愛區仁二路182號\""
+    },
+    {
+      "identityKey": "基隆市仁愛區孝二路107號2樓|0224256878",
+      "address": "基隆市仁愛區孝二路107號2樓",
+      "phone": "02 2425 6878",
+      "sourceNames": [
+        "199.9Days Cafe / 一九九點九日咖啡館",
+        "暖日咖啡 warm day café"
+      ],
+      "canonicalName": "199.9Days Cafe / 一九九點九日咖啡館",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/6689417",
+      "verificationTitle": "199.9Days Cafe ／ 一九九點九日咖啡館菜單：桂花蜜烏龍、黑糖拿鐵、麻糬鬆餅、麻吉蜂蜜鬆餅、招牌麻糬鬆餅...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2425 6878\" \"基隆市仁愛區孝二路107號2樓\""
+    },
+    {
+      "identityKey": "基隆市仁愛區忠二路63號|0224232861",
+      "address": "基隆市仁愛區忠二路63號",
+      "phone": "02 2423 2861",
+      "sourceNames": [
+        "麗香的店阿本伯燒賣",
+        "阿本排骨燒賣"
+      ],
+      "canonicalName": "麗香的店阿本伯燒賣",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/2236226",
+      "verificationTitle": "麗香的店阿本伯燒賣菜單：吉古拉、燒賣、排骨湯、乾麵、排骨酥...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2423 2861\" \"基隆市仁愛區忠二路63號\""
+    },
+    {
+      "identityKey": "基隆市仁愛區愛二路23號|0224211885",
+      "address": "基隆市仁愛區愛二路23號",
+      "phone": "02 2421 1885",
+      "sourceNames": [
+        "滿滿燒肉",
+        "滿滿炭火燒肉"
+      ],
+      "canonicalName": "滿滿燒肉",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/554763",
+      "verificationTitle": "滿滿燒肉菜單：泡菜、滿蛋拉麵、酥炸黃金魚塊、制霸豚燒肉日式拉麵、玉米筍...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2421 1885\" \"基隆市仁愛區愛二路23號\""
+    },
+    {
+      "identityKey": "基隆市仁愛區愛二路54巷2號|0224223317",
+      "address": "基隆市仁愛區愛二路54巷2號",
+      "phone": "02 2422 3317",
+      "sourceNames": [
+        "三奇壹號咖啡館x築甜製菓",
+        "三奇壹號咖啡館"
+      ],
+      "canonicalName": "三奇壹號咖啡館x築甜製菓",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": null,
+      "verificationTitle": "市",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 2422 3317\" \"基隆市仁愛區愛二路54巷2號\""
+    },
+    {
+      "identityKey": "基隆市信義區信一路96巷7號|0224278886",
+      "address": "基隆市信義區信一路96巷7號",
+      "phone": "02 2427 8886",
+      "sourceNames": [
+        "不老田咖啡坊",
+        "不老田蔬食咖啡坊"
+      ],
+      "canonicalName": "不老田咖啡坊",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/486255617833440314",
+      "verificationTitle": "不老田咖啡坊 - LINE熱點",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2427 8886\" \"基隆市信義區信一路96巷7號\""
+    },
+    {
+      "identityKey": "基隆市暖暖區暖暖街379巷125號1樓|0224588895",
+      "address": "基隆市暖暖區暖暖街379巷125號1樓",
+      "phone": "02 2458 8895",
+      "sourceNames": [
+        "暖暖的義式餐廳",
+        "暖暖的"
+      ],
+      "canonicalName": "暖暖的義式餐廳",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.klcg.gov.tw/tw/klcg1/4599-308649.html",
+      "verificationTitle": "基隆市政府－健康飲食地圖－114年健康飲食餐廳地圖",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 2458 8895\" \"基隆市暖暖區暖暖街379巷125號1樓\""
+    },
+    {
+      "identityKey": "新北市三峽區竹崙路238號|0226726686",
+      "address": "新北市三峽區竹崙路238號",
+      "phone": "02 2672 6686",
+      "sourceNames": [
+        "台灣農林熊空茶園",
+        "禾煦熊空休閒農場"
+      ],
+      "canonicalName": "台灣農林熊空茶園",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.ttch.com.tw/zh/tea/content/ff8080816759635d0167597339050008",
+      "verificationTitle": "台灣農林股份有限公司 - 休閒茶園",
+      "confidence": "medium",
+      "resolution": "verified",
+      "query": "\"02 2672 6686\" \"新北市三峽區竹崙路238號\""
+    },
+    {
+      "identityKey": "新北市三芝區北勢子41號|0226366751",
+      "address": "新北市三芝區北勢子41號",
+      "phone": "02 2636 6751",
+      "sourceNames": [
+        "夢想地圖Café海景會館",
+        "【三芝】陽光舞浪"
+      ],
+      "canonicalName": "夢想地圖Café海景會館",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ifoodie.tw/post/61172370cd99577e43dfbc5b",
+      "verificationTitle": "新北三芝咖啡廳 北海岸夢想地圖Cafe海景會館｜傳遞愛心的淺水灣海景咖啡廳！』| 夢想地圖Café海景會館 - 愛食記",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2636 6751\" \"新北市三芝區北勢子41號\""
+    },
+    {
+      "identityKey": "新北市三重區三民街300巷3號|0289852990",
+      "address": "新北市三重區三民街300巷3號",
+      "phone": "02 8985 2990",
+      "sourceNames": [
+        "胖老爹美式炸雞(三民店)",
+        "胖老爹美式炸雞(三重三民店)"
+      ],
+      "canonicalName": "胖老爹美式炸雞(三重三民店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.ifoodie.tw/blog/5818a79c23679c3ff82a9cd8",
+      "verificationTitle": "新北市美食推薦 胖老爹美式炸雞三重店『[新北三重]胖老爹美式炸雞(三重店)|全家餐(雞腿*2+雞塊*3+雞翅*3)只要$259、...』 三重菜菜子 | 愛食記",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 8985 2990\" \"新北市三重區三民街300巷3號\""
+    },
+    {
+      "identityKey": "新北市三重區溪尾街206號|0222875997",
+      "address": "新北市三重區溪尾街206號",
+      "phone": "02 2287 5997",
+      "sourceNames": [
+        "33年知高飯(玉知高華知高飯)",
+        "33年老店知高飯"
+      ],
+      "canonicalName": "33年知高飯(玉知高華知高飯)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.ptt.cc/bbs/Food/M.1648208826.A.8B5.html",
+      "verificationTitle": "[食記] 新北三重 33年知高飯(玉知高華知高飯) - 看板 Food - 批踢踢實業坊",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2287 5997\" \"新北市三重區溪尾街206號\""
+    },
+    {
+      "identityKey": "新北市三重區重新路四段55號|0229816939",
+      "address": "新北市三重區重新路四段55號",
+      "phone": "02 2981 6939",
+      "sourceNames": [
+        "胖老爹美式炸雞(重新橋店)",
+        "胖老爹美式炸雞(三重重新店)"
+      ],
+      "canonicalName": "胖老爹美式炸雞(重新橋店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/448826",
+      "verificationTitle": "胖老爹美式炸雞(重新橋店)菜單：雞塊、雞腿、雞翅、炸雞、胖老爹炸雞...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2981 6939\" \"新北市三重區重新路四段55號\""
+    },
+    {
+      "identityKey": "新北市中和區中山路二段228號2樓|0222433063",
+      "address": "新北市中和區中山路二段228號2樓",
+      "phone": "02 2243 3063",
+      "sourceNames": [
+        "老窩咖啡(迪卡儂三重店)",
+        "老窩咖啡(迪卡儂中和店)"
+      ],
+      "canonicalName": "老窩咖啡(迪卡儂中和店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/691337491273224890",
+      "verificationTitle": "老窩咖啡-迪卡儂中和店 - LINE熱點",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2243 3063\" \"新北市中和區中山路二段228號2樓\""
+    },
+    {
+      "identityKey": "新北市中和區德光路9號|0289646969",
+      "address": "新北市中和區德光路9號",
+      "phone": "(02)8964 6969",
+      "sourceNames": [
+        "川耗子麻辣火鍋",
+        "川頁居酒屋"
+      ],
+      "canonicalName": "川耗子麻辣火鍋",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://winny700810.pixnet.net/blog/post/149006106",
+      "verificationTitle": "〖邀約試吃〗新北/中和〖現流海鮮~新鮮端上桌!!〗川頁日本料理 | ♥只溶妮口不溶妮手♥の下一站幸福~♥ | 美食情報分享 | 痞客邦 | PIXNET",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"(02)8964 6969\" \"新北市中和區德光路9號\""
+    },
+    {
+      "identityKey": "新北市中和區景安路23號1f|0229412255",
+      "address": "新北市中和區景安路23號1F",
+      "phone": "02 2941 2255",
+      "sourceNames": [
+        "宜蘭麥田現釀啤酒(中和店)",
+        "麥田活力早午餐"
+      ],
+      "canonicalName": "麥田活力早午餐",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.ifoodie.tw/blog/5f68442e8c906d6e5ae92216",
+      "verificationTitle": "新北市美食推薦 麥田複合式餐飲Beer&Brunch『麥田活力早午餐,永安市場早午餐,近永安市場站,中永和早餐店,選用原形肉，以新鮮水果取代醬料...』 小噗扒飯食記 | 愛食記",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2941 2255\" \"新北市中和區景安路23號1F\""
+    },
+    {
+      "identityKey": "新北市五股區新五路二段70號|0222922466",
+      "address": "新北市五股區新五路二段70號",
+      "phone": "02 2292 2466",
+      "sourceNames": [
+        "準園休閒生態農場",
+        "準休閒農場 生態小溪(螢火蟲復育實驗棲地)"
+      ],
+      "canonicalName": "準園休閒生態農場",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ezgo.ardswc.gov.tw/zh-tw/spot/94/",
+      "verificationTitle": "準休閒農場－農業易遊網",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 2292 2466\" \"新北市五股區新五路二段70號\""
+    },
+    {
+      "identityKey": "新北市八里區博物館路202巷46號|0226191908",
+      "address": "新北市八里區博物館路202巷46號",
+      "phone": "02 2619 1908",
+      "sourceNames": [
+        "TO HOUSE 兔子餐廳",
+        "TO House兔子庭園餐廳"
+      ],
+      "canonicalName": "TO House兔子庭園餐廳",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/8590043",
+      "verificationTitle": "TO House兔子庭園餐廳菜單：沙拉、明太子義大利麵、濃湯、釋迦冰、兒童套餐...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2619 1908\" \"新北市八里區博物館路202巷46號\""
+    },
+    {
+      "identityKey": "新北市八里區觀海大道29號|0226104560",
+      "address": "新北市八里區觀海大道29號",
+      "phone": "02 2610 4560",
+      "sourceNames": [
+        "亞米小鎮(八里店)",
+        "亞米小鎮"
+      ],
+      "canonicalName": "亞米小鎮(八里店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.northguan-nsa.gov.tw/common/down.ashx?Lang=1&SNo=10006086",
+      "verificationTitle": "北觀處-卡滋借問資訊站折頁-中日",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 2610 4560\" \"新北市八里區觀海大道29號\""
+    },
+    {
+      "identityKey": "新北市八里區觀海大道93號|0286303193",
+      "address": "新北市八里區觀海大道93號",
+      "phone": "02 8630 3193",
+      "sourceNames": [
+        "93寵物咖啡複合餐飲",
+        "CREMA 93 cafe"
+      ],
+      "canonicalName": "93寵物咖啡複合餐飲",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.eaters.tw/place/cafe/newtaipei/1738",
+      "verificationTitle": "93寵物咖啡複合餐飲 | 營業時間、菜單、評價",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 8630 3193\" \"新北市八里區觀海大道93號\""
+    },
+    {
+      "identityKey": "新北市土城區中山路51號|0222682655",
+      "address": "新北市土城區中山路51號",
+      "phone": "(02)2268-2655",
+      "sourceNames": [
+        "enjoy 享樂天然酵母麵包(土城店)",
+        "享樂烘培(土城總店)"
+      ],
+      "canonicalName": "enjoy 享樂天然酵母麵包(土城店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/486247264885413111",
+      "verificationTitle": "享樂烘焙 - LINE熱點",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"(02)2268-2655\" \"新北市土城區中山路51號\""
+    },
+    {
+      "identityKey": "新北市土城區廣興街14號|0289667998",
+      "address": "新北市土城區廣興街14號",
+      "phone": "02 8966 7998",
+      "sourceNames": [
+        "鹿港柑仔店懷舊餐廳",
+        "鹿港甘仔店"
+      ],
+      "canonicalName": "鹿港柑仔店懷舊餐廳",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://news.ustv.com.tw/food/shop/11922",
+      "verificationTitle": "鹿港柑仔店懷舊餐廳",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 8966 7998\" \"新北市土城區廣興街14號\""
+    },
+    {
+      "identityKey": "新北市新店區中興路三段70號4樓|0289147050",
+      "address": "新北市新店區中興路三段70號4樓",
+      "phone": "02 8914 7050",
+      "sourceNames": [
+        "KAMEKONA HAWAII 鐵板燒(誠品新店店)",
+        "Kamekona Hawaii 夏威夷鐵板燒(誠品新店店)"
+      ],
+      "canonicalName": "Kamekona Hawaii 夏威夷鐵板燒(誠品新店店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.ptt.cc/bbs/HsinTien/M.1741264342.A.C88.html",
+      "verificationTitle": "[食記] 新北 新店區｜Kamekona 夏威夷鐵板燒 - 看板 HsinTien - 批踢踢實業坊",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 8914 7050\" \"新北市新店區中興路三段70號4樓\""
+    },
+    {
+      "identityKey": "新北市新莊區中和街145號1-3樓|0229906937",
+      "address": "新北市新莊區中和街145號1-3樓",
+      "phone": "02 2990 6937",
+      "sourceNames": [
+        "義美食品(理園門市)",
+        "義美食品(新莊幸福門市)"
+      ],
+      "canonicalName": "義美食品(新莊幸福門市)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/3441218",
+      "verificationTitle": "義美食品(新莊幸福門市)菜單：巧克力酥片、咖啡、鳳梨酥、珍珠奶茶雪糕、蜂蜜蛋糕...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2990 6937\" \"新北市新莊區中和街145號1-3樓\""
+    },
+    {
+      "identityKey": "新北市新莊區後港一路127號|0222050832",
+      "address": "新北市新莊區後港一路127號",
+      "phone": "02 2205 0832",
+      "sourceNames": [
+        "港宏燒臘",
+        "【新莊】香城燒臘小館"
+      ],
+      "canonicalName": "港宏燒臘",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ifoodie.tw/ko/post/6409df01e94eda3ec7ad86e3",
+      "verificationTitle": "粉麵飯品 號稱下新莊最強燒臘老店 排長龍-新莊丹鳳』| 港宏燒臘 - 愛食記",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2205 0832\" \"新北市新莊區後港一路127號\""
+    },
+    {
+      "identityKey": "新北市新莊區福壽街7號|0955589188",
+      "address": "新北市新莊區福壽街7號",
+      "phone": "0955 589 188",
+      "sourceNames": [
+        "黑武藏10元壽司(福壽店)",
+        "黑武藏10元壽司(新莊福壽店)"
+      ],
+      "canonicalName": "黑武藏10元壽司(福壽店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/324233/branch",
+      "verificationTitle": "黑武藏10元壽司-分店門市(共27家,2024更新)",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"0955 589 188\" \"新北市新莊區福壽街7號\""
+    },
+    {
+      "identityKey": "新北市林口區文化二路一段214-1號|0226095288",
+      "address": "新北市林口區文化二路一段214-1號",
+      "phone": "02 2609 5288",
+      "sourceNames": [
+        "胖老爹美式炸雞(林口文化店)",
+        "胖老爹美式炸雞(文化店)"
+      ],
+      "canonicalName": "胖老爹美式炸雞(林口文化店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/456873608099142750",
+      "verificationTitle": "胖老爹-林口文化 - LINE熱點",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 2609 5288\" \"新北市林口區文化二路一段214-1號\""
+    },
+    {
+      "identityKey": "新北市樹林區樹新路40-6號7樓|0226867988",
+      "address": "新北市樹林區樹新路40-6號7樓",
+      "phone": "02 2686 7988",
+      "sourceNames": [
+        "瓦城泰國料理(樹林秀泰店)",
+        "瓦城泰國料理-樹林秀泰店(新北樹林區必吃特色午晚餐 / 秀泰廣場泰式料理美食推薦 / 樹林區家庭聚餐餐廳)"
+      ],
+      "canonicalName": "瓦城泰國料理(樹林秀泰店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://msn.sgs.com/others/HM_explanation.aspx?CstNo=HM000003",
+      "verificationTitle": "瓦城泰國料理-HM餐飲衛生標章專區 ｜SGS安心資訊平台",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 2686 7988\" \"新北市樹林區樹新路40-6號7樓\""
+    },
+    {
+      "identityKey": "新北市永和區安樂路202號|0286601887",
+      "address": "新北市永和區安樂路202號",
+      "phone": "(02)8660-1887",
+      "sourceNames": [
+        "Chef's Waffle 比利時列日鬆餅",
+        "Chefs Waffle 瓦福 鬆餅"
+      ],
+      "canonicalName": "Chef's Waffle 比利時列日鬆餅",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.ttv.com.tw/cuisine/Detail.aspx?rid=982",
+      "verificationTitle": "比利時列日鬆餅 口感外脆內軟 - 消費美食筆記本 - 台視網站",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"(02)8660-1887\" \"新北市永和區安樂路202號\""
+    },
+    {
+      "identityKey": "新北市永和區文化路90巷14號|0229294104",
+      "address": "新北市永和區文化路90巷14號",
+      "phone": "(02) 2929-4104",
+      "sourceNames": [
+        "馮記上海小館",
+        "永和上海小館"
+      ],
+      "canonicalName": "馮記上海小館",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/458682348976741908",
+      "verificationTitle": "馮記上海小館 - LINE熱點",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"(02) 2929-4104\" \"新北市永和區文化路90巷14號\""
+    },
+    {
+      "identityKey": "新北市永和區永利路108號1樓|0222326006",
+      "address": "新北市永和區永利路108號1樓",
+      "phone": "02 2232 6006",
+      "sourceNames": [
+        "艷紅酒咖哩",
+        "艷紅酒咖喱"
+      ],
+      "canonicalName": "艷紅酒咖哩",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ifoodie.tw/post/6253cd4382828737ba109a97",
+      "verificationTitle": "艷紅酒咖哩,永和美食,復興商工,最美復古文青咖哩店,紅酒香料咖哩唇齒留香,果泥香料咖哩好清新,大推廣島炸牡蠣、Q彈牛肉丸』| 艷紅酒咖喱 - 愛食記",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2232 6006\" \"新北市永和區永利路108號1樓\""
+    },
+    {
+      "identityKey": "新北市永和區永和路一段117號|0229241314",
+      "address": "新北市永和區永和路一段117號",
+      "phone": "02 2924 1314",
+      "sourceNames": [
+        "阿里小廚美式牛排餐廳",
+        "阿里小廚"
+      ],
+      "canonicalName": "阿里小廚美式牛排餐廳",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/458680690020457066",
+      "verificationTitle": "阿里小廚美式牛排餐廳 - LINE熱點",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2924 1314\" \"新北市永和區永和路一段117號\""
+    },
+    {
+      "identityKey": "新北市永和區福和路288號|0229282598",
+      "address": "新北市永和區福和路288號",
+      "phone": "02 2928 2598",
+      "sourceNames": [
+        "燙燙極緻涮涮鍋 FEITENG Shabu Shabu(永和店)",
+        "沸騰涮涮鍋 Boiling Shabu Shabu(永和店)"
+      ],
+      "canonicalName": "燙燙極緻涮涮鍋 FEITENG Shabu Shabu(永和店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ifoodie.tw/en/post/63119f77873d7945b7ccfbed",
+      "verificationTitle": "燙燙極緻涮涮鍋 永和店,永和火鍋,近永安市場站,高CP值高級肉品、海鮮,肉肉控不可錯過,九種美味湯頭可選擇,開鍋送肉盤,平日午間開鍋免服務費』| 燙燙極緻涮涮鍋 FEITENG Shabu Shabu 永和店 - 愛食記",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2928 2598\" \"新北市永和區福和路288號\""
+    },
+    {
+      "identityKey": "新北市汐止區建成路160巷8號|0226474081",
+      "address": "新北市汐止區建成路160巷8號",
+      "phone": "02-26474081",
+      "sourceNames": [
+        "微想咖哩(汐止店)",
+        "味一番日式咖哩"
+      ],
+      "canonicalName": "味一番日式咖哩",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/452803",
+      "verificationTitle": "味一番日式咖哩：平價美食必吃推薦(內含菜單價位) | 新北汐止",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02-26474081\" \"新北市汐止區建成路160巷8號\""
+    },
+    {
+      "identityKey": "新北市淡水區中正路257號|0226228529",
+      "address": "新北市淡水區中正路257號",
+      "phone": "02 2622 8529",
+      "sourceNames": [
+        "淡水領事館咖啡 Consulate",
+        "領事館餐廳"
+      ],
+      "canonicalName": "淡水領事館咖啡 Consulate",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/61135",
+      "verificationTitle": "淡水河畔的浪漫下午茶｜領事館咖啡館(內含菜單價位) | 淡水老街",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 2622 8529\" \"新北市淡水區中正路257號\""
+    },
+    {
+      "identityKey": "新北市淡水區中正路一段6巷32-1號|0228055247",
+      "address": "新北市淡水區中正路一段6巷32-1號",
+      "phone": "02 2805 5247",
+      "sourceNames": [
+        "星巴克 淡水雲門門市",
+        "Starbucks統一星巴克(淡水雲門門市)"
+      ],
+      "canonicalName": "星巴克 淡水雲門門市",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/6811872",
+      "verificationTitle": "星巴克 淡水雲門門市菜單：咖啡、星巴克、糕點、中杯飲品、焦糖瑪其朵...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2805 5247\" \"新北市淡水區中正路一段6巷32-1號\""
+    },
+    {
+      "identityKey": "新北市淡水區北新路147號|0226232301",
+      "address": "新北市淡水區北新路147號",
+      "phone": "02 2623 2301",
+      "sourceNames": [
+        "源味滷肉飯",
+        "源味魯肉飯"
+      ],
+      "canonicalName": "源味滷肉飯",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/547563081476083882",
+      "verificationTitle": "源味滷肉飯 - LINE熱點",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2623 2301\" \"新北市淡水區北新路147號\""
+    },
+    {
+      "identityKey": "新北市石門區頭圍段八甲小段1-101號|0226383957",
+      "address": "新北市石門區頭圍段八甲小段1-101號",
+      "phone": "02 2638 3957",
+      "sourceNames": [
+        "米詩堤極北藍點",
+        "米詩堤甜點王國(極北藍點)"
+      ],
+      "canonicalName": "米詩堤極北藍點",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.economic.ntpc.gov.tw/Specialty/gift",
+      "verificationTitle": "新北嚴選 - 新北市經濟發展局",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 2638 3957\" \"新北市石門區頭圍段八甲小段1-101號\""
+    },
+    {
+      "identityKey": "新北市萬里區瑪鋉路127-5號|0224926359",
+      "address": "新北市萬里區瑪鋉路127-5號",
+      "phone": "02 2492 6359",
+      "sourceNames": [
+        "亞尼克果子工房(萬里創始店)",
+        "亞尼克菓子工房"
+      ],
+      "canonicalName": "亞尼克果子工房(萬里創始店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.economic.ntpc.gov.tw/Specialty/gift",
+      "verificationTitle": "新北嚴選 - 新北市經濟發展局",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"02 2492 6359\" \"新北市萬里區瑪鋉路127-5號\""
+    },
+    {
+      "identityKey": "新北市蘆洲區三民路110巷6號|0937707517",
+      "address": "新北市蘆洲區三民路110巷6號",
+      "phone": "0937 707 517",
+      "sourceNames": [
+        "鏊屋",
+        "鏊屋 串燒.壽司.酒場(蘆洲店)"
+      ],
+      "canonicalName": "鏊屋",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://page.line.me/heh5470b",
+      "verificationTitle": "鏊屋 | LINE Official Account",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"0937 707 517\" \"新北市蘆洲區三民路110巷6號\""
+    },
+    {
+      "identityKey": "新北市蘆洲區中正路110號|0282859745",
+      "address": "新北市蘆洲區中正路110號",
+      "phone": "02-8285-9745",
+      "sourceNames": [
+        "嗨福食堂 HI FOOD",
+        "嗨福食堂"
+      ],
+      "canonicalName": "嗨福食堂",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.walkerland.com.tw/article/view/194423",
+      "verificationTitle": "新北市蘆洲區-嗨福食堂|美食|WalkerLand窩客島",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02-8285-9745\" \"新北市蘆洲區中正路110號\""
+    },
+    {
+      "identityKey": "新北市蘆洲區中正路383號|0282861782",
+      "address": "新北市蘆洲區中正路383號",
+      "phone": "02-82861782",
+      "sourceNames": [
+        "九川堂",
+        "九川堂鍋物"
+      ],
+      "canonicalName": "九川堂",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://trade.1111.com.tw/Comp_Info?vNo=535622",
+      "verificationTitle": "九川堂有限公司",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02-82861782\" \"新北市蘆洲區中正路383號\""
+    },
+    {
+      "identityKey": "新北市蘆洲區得勝街20號|0282854148",
+      "address": "新北市蘆洲區得勝街20號",
+      "phone": "02 8285 4148",
+      "sourceNames": [
+        "草香弄堂",
+        "香草弄堂"
+      ],
+      "canonicalName": "草香弄堂",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/8652287",
+      "verificationTitle": "草香弄堂菜單：沙拉、泰式海鮮義大利麵、全雞套餐、麵包湯、飲料...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 8285 4148\" \"新北市蘆洲區得勝街20號\""
+    },
+    {
+      "identityKey": "新北市蘆洲區長樂路70號|0222835666",
+      "address": "新北市蘆洲區長樂路70號",
+      "phone": "(02)2283-5666",
+      "sourceNames": [
+        "麵工坊義大利麵(蘆洲店)",
+        "‎GRASSO胖肚子小館"
+      ],
+      "canonicalName": "‎GRASSO胖肚子小館",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/495687",
+      "verificationTitle": "‎GRASSO胖肚子小館菜單：白酒蒜炒當季菇、香蔥魚子醬干貝海鮮義大利麵、主廚私房湯、巧克力布朗尼、法式紅酒牛肉焗烤飯...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"(02)2283-5666\" \"新北市蘆洲區長樂路70號\""
+    },
+    {
+      "identityKey": "新北市貢寮區仁和路188號|0224901001",
+      "address": "新北市貢寮區仁和路188號",
+      "phone": "02 2490 1001",
+      "sourceNames": [
+        "貢寮龍蝦大王",
+        "龍蝦大王餐廳"
+      ],
+      "canonicalName": "貢寮龍蝦大王",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/850911",
+      "verificationTitle": "貢寮龍蝦大王菜單：乾煎鮑魚、佛跳牆、炒海菜、軟絲五味醬、龍蝦生魚片...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2490 1001\" \"新北市貢寮區仁和路188號\""
+    },
+    {
+      "identityKey": "新北市貢寮區美艷山街70之3號|0970250060",
+      "address": "新北市貢寮區美艷山街70之3號",
+      "phone": "0970 250 060",
+      "sourceNames": [
+        "92k週末食堂",
+        "92k週末食堂-九恩商行"
+      ],
+      "canonicalName": "92k週末食堂",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ifoodie.tw/post/62777ebb7cc7fc4c4651f022",
+      "verificationTitle": "新北貢寮美食 92k週末食堂｜賞海景配日本料理的寵物友善餐廳 · 海葡萄丼飯、海戰車、藍帶甜點必吃！ 』| 92k週末食堂 - 愛食記",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"0970 250 060\" \"新北市貢寮區美艷山街70之3號\""
+    },
+    {
+      "identityKey": "新北市金山區海興路174號|0224082332",
+      "address": "新北市金山區海興路174號",
+      "phone": "02 2408 2332",
+      "sourceNames": [
+        "Quiet B. Days靠北過日子",
+        "Q.B.DAYS 靠北過日子"
+      ],
+      "canonicalName": "Q.B.DAYS 靠北過日子",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/486258852711372993",
+      "verificationTitle": "Q.B.Days靠北過日子 - LINE熱點",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 2408 2332\" \"新北市金山區海興路174號\""
+    },
+    {
+      "identityKey": "新北市鶯歌區育英街67號|0286773608",
+      "address": "新北市鶯歌區育英街67號",
+      "phone": "02 8677 3608",
+      "sourceNames": [
+        "星巴克 鶯歌門市",
+        "Starbucks統一星巴克(鶯歌門市)"
+      ],
+      "canonicalName": "星巴克 鶯歌門市",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.eaters.tw/place/cafe/newtaipei/3111",
+      "verificationTitle": "STARBUCKS 星巴克 (鶯歌門市) | 營業時間、菜單、評價",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"02 8677 3608\" \"新北市鶯歌區育英街67號\""
+    },
+    {
+      "identityKey": "新竹市北區大同路135號|035253158",
+      "address": "新竹市北區大同路135號",
+      "phone": "03-5253158",
+      "sourceNames": [
+        "井町日式蔬食料理(大同店)",
+        "井町日式蔬食料理"
+      ],
+      "canonicalName": "井町日式蔬食料理",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://vegemap.merit-times.com/restaurant_detail/%E4%BA%95%E7%94%BA%E6%97%A5%E5%BC%8F%E8%94%AC%E9%A3%9F%E6%96%99%E7%90%86-%E5%A4%A7%E5%90%8C%E8%B7%AF?list=6",
+      "verificationTitle": "井町日式蔬食料理-大同路 in 新竹市，聯絡我們 - 蔬福生活",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03-5253158\" \"新竹市北區大同路135號\""
+    },
+    {
+      "identityKey": "新竹市北區武陵路22號|035320029",
+      "address": "新竹市北區武陵路22號",
+      "phone": "03 532 0029",
+      "sourceNames": [
+        "城咖 Urban Tribe",
+        "城咖 牛排精釀餐廳"
+      ],
+      "canonicalName": "城咖 Urban Tribe",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.gomaji.com/store/113807",
+      "verificationTitle": "Urban Tribe 城咖| 異國、咖啡輕食、免預約優惠券、抵用券| Gomaji 懂生活的好麻吉",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"03 532 0029\" \"新竹市北區武陵路22號\""
+    },
+    {
+      "identityKey": "新竹市北區武陵路96號|035408165",
+      "address": "新竹市北區武陵路96號",
+      "phone": "03 540 8165",
+      "sourceNames": [
+        "段純貞牛肉麵(空軍一村店)",
+        "段純貞牛肉麵(武陵店)",
+        "段純貞牛肉麵"
+      ],
+      "canonicalName": "段純貞牛肉麵(武陵店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/486256951563391501",
+      "verificationTitle": "四川段純貞牛肉麵武陵店 - LINE熱點",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03 540 8165\" \"新竹市北區武陵路96號\""
+    },
+    {
+      "identityKey": "新竹市香山區長興街498號|035375181",
+      "address": "新竹市香山區長興街498號",
+      "phone": "03-537-5181",
+      "sourceNames": [
+        "長興釣蝦場",
+        "長興釣蝦場之特級麻辣臭豆腐"
+      ],
+      "canonicalName": "長興釣蝦場",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.waze.com/zh-TW/live-map/directions/tw/%E6%96%B0%E7%AB%B9%E5%B8%82/%E9%95%B7%E8%88%88%E9%87%A3%E8%9D%A6%E5%A0%B4%EF%BC%88%E7%84%A1%E9%87%A3%E8%9D%A6%EF%BC%89?to=place.ChIJwyFJvy9LaDQREXva_8xWMdM",
+      "verificationTitle": "前往 長興釣蝦場（無釣蝦）, 長興街, 498號 的行車路線 - Waze",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03-537-5181\" \"新竹市香山區長興街498號\""
+    },
+    {
+      "identityKey": "桃園市八德區東勇北路148號|033775701",
+      "address": "桃園市八德區東勇北路148號",
+      "phone": "03 377 5701",
+      "sourceNames": [
+        "蘿拉咖啡廳",
+        "蘿拉咖啡"
+      ],
+      "canonicalName": "蘿拉咖啡廳",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.eaters.tw/place/cafe/taoyuan/15294",
+      "verificationTitle": "蘿拉咖啡廳 | 營業時間、菜單、評價",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03 377 5701\" \"桃園市八德區東勇北路148號\""
+    },
+    {
+      "identityKey": "桃園市八德區東勇街276號|032183686",
+      "address": "桃園市八德區東勇街276號",
+      "phone": "03-218-3686",
+      "sourceNames": [
+        "來福星宴會館(東勇店)",
+        "來福星花園大飯店"
+      ],
+      "canonicalName": "來福星宴會館(東勇店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/304416",
+      "verificationTitle": "來福星宴會館(東勇店)菜單：綜合生魚片、叉燒酥、澎湖冰卷、紅帽子喜餅、蜇絲...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03-218-3686\" \"桃園市八德區東勇街276號\""
+    },
+    {
+      "identityKey": "桃園市八德區興豐路1315號|033650329",
+      "address": "桃園市八德區興豐路1315號",
+      "phone": "03 365 0329",
+      "sourceNames": [
+        "TINA廚房(八德店)",
+        "蕃薯藤有機專賣店(八德店)",
+        "蕃薯藤有機專賣-八德埤塘店"
+      ],
+      "canonicalName": "蕃薯藤有機專賣店(八德店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://recycle.tyoem.gov.tw/F_bring_cutlery.aspx",
+      "verificationTitle": "自備餐具享優惠店家名單 – 桃園市政府環境保護局",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"03 365 0329\" \"桃園市八德區興豐路1315號\""
+    },
+    {
+      "identityKey": "桃園市大溪區中山路19號|033871801",
+      "address": "桃園市大溪區中山路19號",
+      "phone": "03 387 1801",
+      "sourceNames": [
+        "解放咖啡企業社",
+        "解放咖啡館"
+      ],
+      "canonicalName": "解放咖啡館",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/484479353271382720",
+      "verificationTitle": "解放咖啡館 - LINE熱點",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03 387 1801\" \"桃園市大溪區中山路19號\""
+    },
+    {
+      "identityKey": "桃園市大溪區中正路41號|033872059",
+      "address": "桃園市大溪區中正路41號",
+      "phone": "03 387 2059",
+      "sourceNames": [
+        "快樂天堂義式咖啡館",
+        "快樂天堂自家烘焙咖啡館"
+      ],
+      "canonicalName": "快樂天堂義式咖啡館",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://temples.tw/place/xlkcsxVegK",
+      "verificationTitle": "快樂天堂義式咖啡館|宮廟周邊美食及店家探索-台灣好廟網",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03 387 2059\" \"桃園市大溪區中正路41號\""
+    },
+    {
+      "identityKey": "桃園市大溪區仁愛路9號|033877769",
+      "address": "桃園市大溪區仁愛路9號",
+      "phone": "03-387-7769",
+      "sourceNames": [
+        "溪友緣庭園餐廳(二店)",
+        "溪友緣風味料理店"
+      ],
+      "canonicalName": "溪友緣風味料理店",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://typass.tycg.gov.tw/store/view/f49a648e-6dd5-4b24-8f09-bae7ca1c8693?list=true",
+      "verificationTitle": "",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03-387-7769\" \"桃園市大溪區仁愛路9號\""
+    },
+    {
+      "identityKey": "桃園市大溪區和平路56號|033882055",
+      "address": "桃園市大溪區和平路56號",
+      "phone": "03-388-2055",
+      "sourceNames": [
+        "黃日香豆干(本店)",
+        "黃日香(股)公司"
+      ],
+      "canonicalName": "黃日香豆干(本店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://typass.tycg.gov.tw/store/view?uuid=98af0b8b-cbb1-4b7d-96a2-6625fde4e891",
+      "verificationTitle": "",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03-388-2055\" \"桃園市大溪區和平路56號\""
+    },
+    {
+      "identityKey": "桃園市大溪區和平路91號|033882567",
+      "address": "桃園市大溪區和平路91號",
+      "phone": "03-388-2567",
+      "sourceNames": [
+        "姚茶館",
+        "姚茶館私房料理"
+      ],
+      "canonicalName": "姚茶館",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/484479322380333686",
+      "verificationTitle": "姚茶館 - LINE熱點",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03-388-2567\" \"桃園市大溪區和平路91號\""
+    },
+    {
+      "identityKey": "桃園市大溪區康莊路三段225號|033889689",
+      "address": "桃園市大溪區康莊路三段225號",
+      "phone": "03-388-9689",
+      "sourceNames": [
+        "好時節農莊",
+        "好時節休閒農場(好時節農莊)"
+      ],
+      "canonicalName": "好時節農莊",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.luckytime.com.tw/preschool",
+      "verificationTitle": "幼兒園 | 好時節休閒農場 Goodtimes",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"03-388-9689\" \"桃園市大溪區康莊路三段225號\""
+    },
+    {
+      "identityKey": "桃園市大溪區復興路152號|033871088",
+      "address": "桃園市大溪區復興路152號",
+      "phone": "03 387 1088",
+      "sourceNames": [
+        "大溪紅樓餐廳",
+        "大溪紅樓懷舊餐廳"
+      ],
+      "canonicalName": "大溪紅樓餐廳",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://temples.tw/place/UrzeODRG97",
+      "verificationTitle": "大溪紅樓餐廳|宮廟周邊美食及店家探索-台灣好廟網",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03 387 1088\" \"桃園市大溪區復興路152號\""
+    },
+    {
+      "identityKey": "桃園市大溪區復興路二段650號|033825716",
+      "address": "桃園市大溪區復興路二段650號",
+      "phone": "03 382 5716",
+      "sourceNames": [
+        "豆麥私房菜 復興店",
+        "阿義農莊"
+      ],
+      "canonicalName": "豆麥私房菜 復興店",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/484479491540808712",
+      "verificationTitle": "豆麥私房菜復興店 - LINE熱點",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03 382 5716\" \"桃園市大溪區復興路二段650號\""
+    },
+    {
+      "identityKey": "桃園市大溪區瑞安路一段308號|033076008",
+      "address": "桃園市大溪區瑞安路一段308號",
+      "phone": "03 307 6008",
+      "sourceNames": [
+        "全家福海鮮餐廳(大溪分店)",
+        "大溪全家福海鮮餐廳"
+      ],
+      "canonicalName": "大溪全家福海鮮餐廳",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/484479495823193106",
+      "verificationTitle": "大溪全家福海鮮餐廳 - LINE熱點",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03 307 6008\" \"桃園市大溪區瑞安路一段308號\""
+    },
+    {
+      "identityKey": "桃園市平鎮區工業五路8號|034697388",
+      "address": "桃園市平鎮區工業五路8號",
+      "phone": "03 469 7388",
+      "sourceNames": [
+        "CAFE!N 硬咖啡(桃園總廠店)",
+        "Alpha coffee & tea 咖啡館"
+      ],
+      "canonicalName": "CAFE!N 硬咖啡(桃園總廠店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.eaters.tw/place/cafe/taoyuan/16873",
+      "verificationTitle": "CAFE!N 硬咖啡 桃園總廠店 ( DICKIES 聯名咖啡觀光工廠 ) | 營業時間、菜單、評價",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03 469 7388\" \"桃園市平鎮區工業五路8號\""
+    },
+    {
+      "identityKey": "桃園市平鎮區平東路25號|034608088",
+      "address": "桃園市平鎮區平東路25號",
+      "phone": "03-460-8088",
+      "sourceNames": [
+        "釀香居",
+        "釀香居懷舊餐廳"
+      ],
+      "canonicalName": "釀香居",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/234295",
+      "verificationTitle": "釀香居懷舊客家料理，嚐鮮蟹黃豆腐和鴨肉(內含菜單價位) | 桃園平鎮",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03-460-8088\" \"桃園市平鎮區平東路25號\""
+    },
+    {
+      "identityKey": "桃園市平鎮區延平路一段207號|034943838",
+      "address": "桃園市平鎮區延平路一段207號",
+      "phone": "03 494 3838",
+      "sourceNames": [
+        "宴川秋-創意·麻辣 麻辣火鍋 麻辣烤魚鍋",
+        "宴川秋創意‧麻辣"
+      ],
+      "canonicalName": "宴川秋創意‧麻辣",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/484482037156182725",
+      "verificationTitle": "宴川秋 - LINE熱點",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"03 494 3838\" \"桃園市平鎮區延平路一段207號\""
+    },
+    {
+      "identityKey": "桃園市平鎮區延平路二段371號|034951375",
+      "address": "桃園市平鎮區延平路二段371號",
+      "phone": "03 495 1375",
+      "sourceNames": [
+        "Amour阿沐",
+        "Amour 阿沐(原 茂園和漢美食館)"
+      ],
+      "canonicalName": "Amour阿沐",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://amour371.com.tw/contact/",
+      "verificationTitle": "交通資訊-Amour阿沐婚宴會館",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03 495 1375\" \"桃園市平鎮區延平路二段371號\""
+    },
+    {
+      "identityKey": "桃園市平鎮區金陵路四段26巷89-1號|034503930",
+      "address": "桃園市平鎮區金陵路四段26巷89-1號",
+      "phone": "03 450 3930",
+      "sourceNames": [
+        "台灣番鴨園區",
+        "台灣番鴨牧場(平鎮店)"
+      ],
+      "canonicalName": "台灣番鴨園區",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://supertaste.tvbs.com.tw/triplecoupon/348014",
+      "verificationTitle": "靠口耳相傳暴紅！桃園隱藏版「大鋼盆薑母鴨」，麵線免費吃到飽超佛心 | 食尚玩家",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"03 450 3930\" \"桃園市平鎮區金陵路四段26巷89-1號\""
+    },
+    {
+      "identityKey": "桃園市新屋區中山路404號|034772226",
+      "address": "桃園市新屋區中山路404號",
+      "phone": "03 477 2226",
+      "sourceNames": [
+        "信宏鵝肉老店",
+        "信宏鵝肉"
+      ],
+      "canonicalName": "信宏鵝肉老店",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://temples.tw/place/cufIypunFo",
+      "verificationTitle": "信宏鵝肉老店|宮廟周邊美食及店家探索-台灣好廟網",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03 477 2226\" \"桃園市新屋區中山路404號\""
+    },
+    {
+      "identityKey": "桃園市新屋區濱海路永安段355巷10號|0976546861",
+      "address": "桃園市新屋區濱海路永安段355巷10號",
+      "phone": "0976 546 861",
+      "sourceNames": [
+        "永安61庭園咖啡(生態農場)",
+        "永安61庭園咖啡"
+      ],
+      "canonicalName": "永安61庭園咖啡",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.life-information.com.tw/yi_shi_wei_tian/food_info.php?ids=Ht21013116123153",
+      "verificationTitle": "永安61庭園咖啡 | 以食為天",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"0976 546 861\" \"桃園市新屋區濱海路永安段355巷10號\""
+    },
+    {
+      "identityKey": "桃園市桃園區經國路336巷86號|033169988",
+      "address": "桃園市桃園區經國路336巷86號",
+      "phone": "03 316 9988",
+      "sourceNames": [
+        "森日式料理",
+        "森料理桃園店"
+      ],
+      "canonicalName": "森日式料理",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/486254423383743500",
+      "verificationTitle": "森日式料理 - LINE熱點",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03 316 9988\" \"桃園市桃園區經國路336巷86號\""
+    },
+    {
+      "identityKey": "桃園市楊梅區中山北路二段209號|034813389",
+      "address": "桃園市楊梅區中山北路二段209號",
+      "phone": "03 481 3389",
+      "sourceNames": [
+        "大楊梅鵝莊(埔心店)",
+        "【楊梅】金饌餐廳"
+      ],
+      "canonicalName": "大楊梅鵝莊(埔心店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/5159657",
+      "verificationTitle": "大楊梅鵝莊(埔心店)",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03 481 3389\" \"桃園市楊梅區中山北路二段209號\""
+    },
+    {
+      "identityKey": "桃園市楊梅區四維路47號|034821166",
+      "address": "桃園市楊梅區四維路47號",
+      "phone": "(03)482-1166",
+      "sourceNames": [
+        "甘泉魚麵(埔心店)",
+        "甘泉魚麵"
+      ],
+      "canonicalName": "甘泉魚麵(埔心店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/456606097352954988",
+      "verificationTitle": "甘泉魚麵-埔心店 - LINE熱點",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"(03)482-1166\" \"桃園市楊梅區四維路47號\""
+    },
+    {
+      "identityKey": "桃園市楊梅區新農街282號|034881653",
+      "address": "桃園市楊梅區新農街282號",
+      "phone": "03-4881653",
+      "sourceNames": [
+        "安賀斯Cafe'",
+        "安賀斯café"
+      ],
+      "canonicalName": "安賀斯café",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://travel.tycg.gov.tw/zh-tw/consume/detail/1880",
+      "verificationTitle": "安賀斯café",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03-4881653\" \"桃園市楊梅區新農街282號\""
+    },
+    {
+      "identityKey": "桃園市楊梅區校前路580號|034784735",
+      "address": "桃園市楊梅區校前路580號",
+      "phone": "03 478 4735",
+      "sourceNames": [
+        "八方園百年三合院景觀餐廳",
+        "八方園客家餐館"
+      ],
+      "canonicalName": "八方園百年三合院景觀餐廳",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://meethakka.tycg.gov.tw/docDetail.aspx?docid=40104&pid=8&uid=8",
+      "verificationTitle": "桃園客家美食餐廳網_一站擁有",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"03 478 4735\" \"桃園市楊梅區校前路580號\""
+    },
+    {
+      "identityKey": "桃園市楊梅區環東路110巷15弄2號|034853000",
+      "address": "桃園市楊梅區環東路110巷15弄2號",
+      "phone": "03-485-3000",
+      "sourceNames": [
+        "君洋城堡",
+        "法國天空。君洋城堡"
+      ],
+      "canonicalName": "君洋城堡",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/118111",
+      "verificationTitle": "君洋城堡：寫真與婚紗夢幻取景地(內含菜單價位) | 桃園楊梅",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03-485-3000\" \"桃園市楊梅區環東路110巷15弄2號\""
+    },
+    {
+      "identityKey": "桃園市楊梅區環東路31-1號|034756132",
+      "address": "桃園市楊梅區環東路31-1號",
+      "phone": "03 475 6132",
+      "sourceNames": [
+        "台灣一品雞",
+        "紅雞公客家菜館"
+      ],
+      "canonicalName": "台灣一品雞",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://fonfood.com/store/3130484",
+      "verificationTitle": "台灣一品雞：楊梅必嚐合菜，招牌烤雞搭配免費雞油拌飯(內含菜單價位) | 桃園楊梅",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03 475 6132\" \"桃園市楊梅區環東路31-1號\""
+    },
+    {
+      "identityKey": "桃園市楊梅區萬大路177號|034312343",
+      "address": "桃園市楊梅區萬大路177號",
+      "phone": "03 431 2343",
+      "sourceNames": [
+        "香蕉星球 Café & Bar",
+        "香蕉星球"
+      ],
+      "canonicalName": "香蕉星球 Café & Bar",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/7149421",
+      "verificationTitle": "香蕉星球 Café & Bar菜單：薯條、創意鐵鍋、提拉米蘇、巧克力冰淇淋、香蕉巧克力鬆餅...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03 431 2343\" \"桃園市楊梅區萬大路177號\""
+    },
+    {
+      "identityKey": "桃園市蘆竹區南崁路一段112號b2|033112955",
+      "address": "桃園市蘆竹區南崁路一段112號B2",
+      "phone": "03 311 2955",
+      "sourceNames": [
+        "肯德基(桃園台茂餐廳)",
+        "肯德基(桃園台茂店)"
+      ],
+      "canonicalName": "肯德基(桃園台茂店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.findcoupon.tw/store-26895.htm",
+      "verificationTitle": "肯德基 (桃園台茂店)，03-311-2955 - 找優惠",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03 311 2955\" \"桃園市蘆竹區南崁路一段112號B2\""
+    },
+    {
+      "identityKey": "桃園市蘆竹區南平街58號|033120433",
+      "address": "桃園市蘆竹區南平街58號",
+      "phone": "03 312 0433",
+      "sourceNames": [
+        "野上麵包坊",
+        "野上麵包(桃園店)"
+      ],
+      "canonicalName": "野上麵包坊",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/1788651",
+      "verificationTitle": "野上麵包坊菜單：可麗露、可頌、吐司、丹麥麵包、布里歐修五寶豆抹茶風味麵包...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03 312 0433\" \"桃園市蘆竹區南平街58號\""
+    },
+    {
+      "identityKey": "桃園市觀音區大富路221號|034980753",
+      "address": "桃園市觀音區大富路221號",
+      "phone": "03 498 0753",
+      "sourceNames": [
+        "林家古厝休閒農場",
+        "西荷食堂"
+      ],
+      "canonicalName": "林家古厝休閒農場",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ezgo.ardswc.gov.tw/zh-tw/spot/139/",
+      "verificationTitle": "林家古厝休閒農場－農業易遊網",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03 498 0753\" \"桃園市觀音區大富路221號\""
+    },
+    {
+      "identityKey": "桃園市觀音區大觀路二段240號|0903886666",
+      "address": "桃園市觀音區大觀路二段240號",
+      "phone": "0903 886 666",
+      "sourceNames": [
+        "胖老爹美式炸雞(桃園觀音店)",
+        "胖老爹美式炸雞(觀音店)"
+      ],
+      "canonicalName": "胖老爹美式炸雞(桃園觀音店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/2974304",
+      "verificationTitle": "胖老爹美式炸雞(桃園觀音店)菜單：雞塊、雞腿、雞翅、炸雞、胖老爹炸雞...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"0903 886 666\" \"桃園市觀音區大觀路二段240號\""
+    },
+    {
+      "identityKey": "桃園市龍潭區中正路三坑段546號|034711359",
+      "address": "桃園市龍潭區中正路三坑段546號",
+      "phone": "03 471 1359",
+      "sourceNames": [
+        "龍潭 老頭擺客家菜",
+        "老頭擺客家餐廳(桃園龍潭)",
+        "老頭擺客家菜"
+      ],
+      "canonicalName": "老頭擺客家菜",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://news.ustv.com.tw/food/shop/7741",
+      "verificationTitle": "老頭擺客家餐廳",
+      "confidence": "medium",
+      "resolution": "verified",
+      "query": "\"03 471 1359\" \"桃園市龍潭區中正路三坑段546號\""
+    },
+    {
+      "identityKey": "桃園市龍潭區中正路三坑段779號|034713279",
+      "address": "桃園市龍潭區中正路三坑段779號",
+      "phone": "03 471 3279",
+      "sourceNames": [
+        "祥和園餐館 石門活魚",
+        "祥和園活魚餐廳"
+      ],
+      "canonicalName": "祥和園活魚餐廳",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://meethakka.tycg.gov.tw/docDetail.aspx?docid=10045&pid=17&uid=19",
+      "verificationTitle": "桃園客家美食餐廳網_一站擁有",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"03 471 3279\" \"桃園市龍潭區中正路三坑段779號\""
+    },
+    {
+      "identityKey": "桃園市龍潭區文化路1095號|034111003",
+      "address": "桃園市龍潭區文化路1095號",
+      "phone": "03 411 1003",
+      "sourceNames": [
+        "小橋流水餐廳",
+        "小橋流水活魚餐廳"
+      ],
+      "canonicalName": "小橋流水餐廳",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://flowingbridge.com/contact/",
+      "verificationTitle": "即刻預約 - 小橋流水餐廳-石門活魚，龍潭在地超過三十年老字號活魚餐廳",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03 411 1003\" \"桃園市龍潭區文化路1095號\""
+    },
+    {
+      "identityKey": "桃園市龍潭區楊銅路二段712號|034990311",
+      "address": "桃園市龍潭區楊銅路二段712號",
+      "phone": "03 499 0311",
+      "sourceNames": [
+        "觀天下咖啡庭園景觀餐廳",
+        "觀天下景觀餐廳"
+      ],
+      "canonicalName": "觀天下咖啡庭園景觀餐廳",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/1032398361208035396",
+      "verificationTitle": "嶺空 Mountain Peak - LINE熱點",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"03 499 0311\" \"桃園市龍潭區楊銅路二段712號\""
+    },
+    {
+      "identityKey": "桃園市龍潭區聖亭路八德段22號|034793598",
+      "address": "桃園市龍潭區聖亭路八德段22號",
+      "phone": "03 479 3598",
+      "sourceNames": [
+        "年輕的老頭咖啡 Young Oldie Coffee",
+        "年輕的老頭 自家烘焙咖啡"
+      ],
+      "canonicalName": "年輕的老頭咖啡 Young Oldie Coffee",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/4539696",
+      "verificationTitle": "年輕的老頭咖啡 Young Oldie Coffee菜單：鬆餅、義式咖啡、卡布奇諾、單品咖啡、耶加雪菲...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03 479 3598\" \"桃園市龍潭區聖亭路八德段22號\""
+    },
+    {
+      "identityKey": "桃園市龍潭區高原路891號|034716635",
+      "address": "桃園市龍潭區高原路891號",
+      "phone": "03 471 6635",
+      "sourceNames": [
+        "蔣府宴 Chiang Fu Yan",
+        "蔣府宴"
+      ],
+      "canonicalName": "蔣府宴 Chiang Fu Yan",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://rankedfood.com/restaurant/%E8%94%A3-%E5%BA%9C-%E5%AE%B4chiang-fu-yan/",
+      "verificationTitle": "〖桃園美食〗蔣 府 宴｜Chiang Fu Yan 中式料理推薦",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03 471 6635\" \"桃園市龍潭區高原路891號\""
+    },
+    {
+      "identityKey": "桃園市龜山區復興一路243-1號|033273380",
+      "address": "桃園市龜山區復興一路243-1號",
+      "phone": "03 327 3380",
+      "sourceNames": [
+        "BUNA CAF'E 布納咖啡館(林口館)",
+        "布納咖啡(桃園林口店)"
+      ],
+      "canonicalName": "BUNA CAF'E 布納咖啡館(林口館)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.eaters.tw/place/cafe/taoyuan/17412",
+      "verificationTitle": "BUNA CAF'E 布納咖啡館 林口館 | 營業時間、菜單、評價",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"03 327 3380\" \"桃園市龜山區復興一路243-1號\""
+    },
+    {
+      "identityKey": "臺中市中區三民路二段1之7號|0422204335",
+      "address": "臺中市中區三民路二段1之7號",
+      "phone": "04 2220 4335",
+      "sourceNames": [
+        "台中第二市場 三代福州意麵老店",
+        "阿棋 三代福州意麵老店"
+      ],
+      "canonicalName": "阿棋 三代福州意麵老店",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ifoodie.tw/post/601d31c38c906d6081820c24",
+      "verificationTitle": "台中美食．三代福州意麵｜台中第二市場傳承五代的手工意麵，懷念的古早味』| 三代福州意麵老店 - 愛食記",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"04 2220 4335\" \"臺中市中區三民路二段1之7號\""
+    },
+    {
+      "identityKey": "臺中市中區中山路20號|0422271927",
+      "address": "臺中市中區中山路20號",
+      "phone": "04 2227 1927",
+      "sourceNames": [
+        "宮原眼科冰淇淋",
+        "日出乳酪蛋糕(宮原眼科)"
+      ],
+      "canonicalName": "宮原眼科冰淇淋",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ifoodie.tw/blog/578ea948699b6e1dc06cc457/link",
+      "verificationTitle": "台中市美食推薦 宮原眼科『宮原眼科．歷史悠久的台中指標冰店～好吃、大份量冰淇淋，多款甜點配料任選！ @貪吃里昂』 貪吃里昂 | 愛食記",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"04 2227 1927\" \"臺中市中區中山路20號\""
+    },
+    {
+      "identityKey": "臺中市中區台灣大道一段129號|0422200735",
+      "address": "臺中市中區台灣大道一段129號",
+      "phone": "04 2220 0735",
+      "sourceNames": [
+        "沁園春(創始店)",
+        "沁園春"
+      ],
+      "canonicalName": "沁園春",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.tripadvisor.com.tw/LocationPhotoDirectLink-g13792757-d6150590-i499207883-Qin_Yuan_Chun-Central_District_Taichung.html",
+      "verificationTitle": "🔹Facebook▸https://pse.is/3l2vgf 歡迎至沁園春 Facebook 粉絲專頁下訂冷凍宅配產品 ☎ 貴賓服務專線：04-2220-0735 📣地址：40045臺中市中區臺灣大道一段129號 - 中區沁園春的圖片 - Tripadvisor",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"04 2220 0735\" \"臺中市中區台灣大道一段129號\""
+    },
+    {
+      "identityKey": "臺中市中區成功路92號|0422211595",
+      "address": "臺中市中區成功路92號",
+      "phone": "04 2221 1595",
+      "sourceNames": [
+        "越南你好 Hello Vietnam 河內美食",
+        "Hello Vietnam 河內美食 成功店"
+      ],
+      "canonicalName": "Hello Vietnam 河內美食 成功店",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ifoodie.tw/post/69de354c927f8012936295d4-%E5%8F%B0%E4%B8%AD%E7%BE%8E%E9%A3%9F-Hello-Vietnam-%E7%B1%B3",
+      "verificationTitle": "台中美食｜Hello Vietnam：米其林推薦的河內美食，推薦給沒去過越南的朋友！』| Hello Vietnam 河內美食 成功店 - 愛食記",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"04 2221 1595\" \"臺中市中區成功路92號\""
+    },
+    {
+      "identityKey": "臺中市北區健行路748號|0422085888",
+      "address": "臺中市北區健行路748號",
+      "phone": "04 2208 5888",
+      "sourceNames": [
+        "台中 肉蛋吐司",
+        "肉蛋吐司"
+      ],
+      "canonicalName": "肉蛋吐司",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ifoodie.tw/post/63fe290dd20d872d3a7a484a",
+      "verificationTitle": "肉蛋土司創始店，店名直接變成專有名詞有夠屌@鯊魚大口咬』| 肉蛋土司 - 愛食記",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"04 2208 5888\" \"臺中市北區健行路748號\""
+    },
+    {
+      "identityKey": "臺中市北區光大街26號|0422015520",
+      "address": "臺中市北區光大街26號",
+      "phone": "04-22015520",
+      "sourceNames": [
+        "Michaelis 執事喫茶",
+        "執事喫茶"
+      ],
+      "canonicalName": "Michaelis 執事喫茶",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": null,
+      "verificationTitle": "Empty search results",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"04-22015520\" \"臺中市北區光大街26號\""
+    },
+    {
+      "identityKey": "臺中市北區育才街3號1樓|0422211166",
+      "address": "臺中市北區育才街3號1樓",
+      "phone": "04 2221 1166",
+      "sourceNames": [
+        "焼肉スマイル 燒肉Smile(一中益民店)",
+        "焼肉スマイル 燒肉Smile(台中一中店)"
+      ],
+      "canonicalName": "焼肉スマイル 燒肉Smile(台中一中店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ifoodie.tw/ja/post/600c3369d6895d526d645405",
+      "verificationTitle": "燒肉 Smile 台中一中店 - 最低只要180元起就能獨享的燒肉套餐，築間幸福鍋物集團旗下的燒肉品牌』| 焼肉スマイル（燒肉Smile）台中一中店 - 愛食記",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"04 2221 1166\" \"臺中市北區育才街3號1樓\""
+    },
+    {
+      "identityKey": "臺中市北屯區崇德路一段596號|0422333308",
+      "address": "臺中市北屯區崇德路一段596號",
+      "phone": "04 2233 3308",
+      "sourceNames": [
+        "這一鍋皇室祕藏鍋物(台中崇德殿)",
+        "這一鍋皇室祕藏鍋物(台中麗寶殿)"
+      ],
+      "canonicalName": "這一鍋皇室祕藏鍋物(台中崇德殿)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/636304489418070524",
+      "verificationTitle": "這一鍋-台中崇德殿 - LINE熱點",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"04 2233 3308\" \"臺中市北屯區崇德路一段596號\""
+    },
+    {
+      "identityKey": "臺中市北屯區敦化路一段490號|0960518899",
+      "address": "臺中市北屯區敦化路一段490號",
+      "phone": "0960 518 899",
+      "sourceNames": [
+        "胖老爹美式炸雞(台中敦化店)",
+        "胖老爹美式炸雞(敦化店)"
+      ],
+      "canonicalName": "胖老爹美式炸雞(台中敦化店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": null,
+      "verificationTitle": "Empty search results",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"0960 518 899\" \"臺中市北屯區敦化路一段490號\""
+    },
+    {
+      "identityKey": "臺中市北屯區東山路二段96-8號|0422391782",
+      "address": "臺中市北屯區東山路二段96-8號",
+      "phone": "04 2239 1782",
+      "sourceNames": [
+        "豬頭三",
+        "豬頭三 大坑炸粿蚵嗲"
+      ],
+      "canonicalName": "豬頭三 大坑炸粿蚵嗲",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ifoodie.tw/post/63f7923fb4478b480b6c0f5e",
+      "verificationTitle": "豬頭三，什麼都炸，炸香菜、炸茴香、炸韭菜、炸香菇 @鯊魚大口咬』| 豬頭三 大坑炸粿蚵嗲 - 愛食記",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"04 2239 1782\" \"臺中市北屯區東山路二段96-8號\""
+    },
+    {
+      "identityKey": "臺中市南區學府路81號|0422873011",
+      "address": "臺中市南區學府路81號",
+      "phone": "04 2287 3011",
+      "sourceNames": [
+        "聞香牛肉麵(成功店)",
+        "聞香牛肉麵(學府店)"
+      ],
+      "canonicalName": "聞香牛肉麵(學府店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/460258",
+      "verificationTitle": "聞香牛肉麵(學府店)菜單：牛肉麵、榨菜肉絲麵、牛肉湯麵、牛肚麵、滿漢牛肉麵...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"04 2287 3011\" \"臺中市南區學府路81號\""
+    },
+    {
+      "identityKey": "臺中市南區工學北路376號|0422631303",
+      "address": "臺中市南區工學北路376號",
+      "phone": "04 2263 1303",
+      "sourceNames": [
+        "樂湜手作料理",
+        "樂湜餐廳"
+      ],
+      "canonicalName": "樂湜手作料理",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": null,
+      "verificationTitle": "Empty search results",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"04 2263 1303\" \"臺中市南區工學北路376號\""
+    },
+    {
+      "identityKey": "臺中市南區工學路86號|0422637022",
+      "address": "臺中市南區工學路86號",
+      "phone": "04 2263 7022",
+      "sourceNames": [
+        "老鑼牛肉麵",
+        "老羅牛肉麵"
+      ],
+      "canonicalName": "老鑼牛肉麵",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ifoodie.tw/post/66501f387be9c3fe6efea186",
+      "verificationTitle": "在地老字號的牛肉麵店，必吃內用限定的生涮牛肉麵，還有老饕最愛的麻辣鴨血泡飯 @果果愛Fruitlove』| 老鑼牛肉麵 - 愛食記",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"04 2263 7022\" \"臺中市南區工學路86號\""
+    },
+    {
+      "identityKey": "臺中市南區忠孝路208號|0422850233",
+      "address": "臺中市南區忠孝路208號",
+      "phone": "04 2285 0233",
+      "sourceNames": [
+        "養鍋Yang Guo石頭涮涮鍋(台中忠孝夜市店)",
+        "品味迷你涮涮鍋"
+      ],
+      "canonicalName": "品味迷你涮涮鍋",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://poi.zhupiter.com/p/cht-86208/%E5%93%81%E5%91%B3%E8%BF%B7%E4%BD%A0%E6%B6%AE%E6%B6%AE%E9%8D%8B%E5%BF%A0%E5%AD%9D%E5%BA%97/",
+      "verificationTitle": "品味迷你涮涮鍋(忠孝店)電話號碼04-2285-0233 - 台中市涮涮鍋",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"04 2285 0233\" \"臺中市南區忠孝路208號\""
+    },
+    {
+      "identityKey": "臺中市南區忠明南路788號|0422607038",
+      "address": "臺中市南區忠明南路788號",
+      "phone": "04 2260 7038",
+      "sourceNames": [
+        "水母手沖茶飲(清泉店)",
+        "水母手沖茶飲(台中店)"
+      ],
+      "canonicalName": "水母手沖茶飲(清泉店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ifoodie.tw/post/62957f7e781cc00d2ce88cee",
+      "verificationTitle": "台中南區美食|水母手沖茶飲一杯+餐盒+整顆哈密瓜，百元有找』| 水母手沖茶飲 - 愛食記",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"04 2260 7038\" \"臺中市南區忠明南路788號\""
+    },
+    {
+      "identityKey": "臺中市南屯區文心路一段546號|0423290288",
+      "address": "臺中市南屯區文心路一段546號",
+      "phone": "04 2329 0288",
+      "sourceNames": [
+        "燒肉眾精緻炭火燒肉(台中文心店)",
+        "燒肉眾二代目(台中文心店)"
+      ],
+      "canonicalName": "燒肉眾精緻炭火燒肉(台中文心店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://roo.cash/blog/taichung-barbecue-recommendation-article/",
+      "verificationTitle": "2026 台中燒肉指南：滿足燒肉控味蕾必吃 13 名店，米其林星級到平價美食！ - Roo.Cash",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"04 2329 0288\" \"臺中市南屯區文心路一段546號\""
+    },
+    {
+      "identityKey": "臺中市大甲區五福街51號|0426886879",
+      "address": "臺中市大甲區五福街51號",
+      "phone": "04 2688 6879",
+      "sourceNames": [
+        "三媽臭臭鍋(台中大甲店)",
+        "三媽臭臭鍋-大甲店"
+      ],
+      "canonicalName": "三媽臭臭鍋(台中大甲店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": null,
+      "verificationTitle": "Empty search results",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"04 2688 6879\" \"臺中市大甲區五福街51號\""
+    },
+    {
+      "identityKey": "臺中市大甲區光明路67號|0426872559",
+      "address": "臺中市大甲區光明路67號",
+      "phone": "04-2687-2559",
+      "sourceNames": [
+        "裕珍馨食品行(光明旗艦店)",
+        "裕珍馨/光明旗艦店"
+      ],
+      "canonicalName": "裕珍馨/光明旗艦店",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://bussiness.tw/company/84560224",
+      "verificationTitle": "裕珍馨食品股份有限公司<!-- --> | 台灣公司商工登記網",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"04-2687-2559\" \"臺中市大甲區光明路67號\""
+    },
+    {
+      "identityKey": "臺中市大里區塗城路630號|0424939602",
+      "address": "臺中市大里區塗城路630號",
+      "phone": "04-24939602",
+      "sourceNames": [
+        "兩披索個人靚鍋( TWO PESOS)(台中大里店)",
+        "兩批索靚鍋(台中大里店)"
+      ],
+      "canonicalName": "兩披索個人靚鍋( TWO PESOS)(台中大里店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": null,
+      "verificationTitle": "Empty search results",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"04-24939602\" \"臺中市大里區塗城路630號\""
+    },
+    {
+      "identityKey": "臺中市大里區大里路109號|0424851983",
+      "address": "臺中市大里區大里路109號",
+      "phone": "04 2485 1983",
+      "sourceNames": [
+        "貓老闆咖啡【寵物主題友善餐廳】",
+        "貓老闆咖啡"
+      ],
+      "canonicalName": "貓老闆咖啡",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://bloggerkelly.com/catboss/",
+      "verificationTitle": "《美食分享》台中大里寵物友善〖貓老闆〗餐廳｜貓咪店長 寵物友善 義式料理 – 我是Kelly奈醬子",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"04 2485 1983\" \"臺中市大里區大里路109號\""
+    },
+    {
+      "identityKey": "臺中市大里區德芳南路470號|0424821129",
+      "address": "臺中市大里區德芳南路470號",
+      "phone": "04 2482 1129",
+      "sourceNames": [
+        "北澤壽喜燒吃到飽(台中大里店)",
+        "北澤壽喜燒-大里店"
+      ],
+      "canonicalName": "北澤壽喜燒-大里店",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ifoodie.tw/post/5f202f3c02935e1b8294c435-%E5%8C%97%E6%BE%A4%E5%A3%BD%E5%96%9C%E7%87%92-%E5%8F%B0%E4%B8%AD%E5%A4%A7%E9%87%8C%E5%BA%97-%E8%BC%95%E5%A5%A2%E8%B6%85%E5%80%BC%E5%92%8C%E7%89%9B%E9%A5%97%E5%AE%B4",
+      "verificationTitle": "北澤壽喜燒 台中大里店~輕奢超值和牛饗宴，肉食主義者的最愛，不用花千元就能吃和牛！壽喜燒+火鍋吃到飽推薦』| 北澤壽喜燒 大里店 - 愛食記",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"04 2482 1129\" \"臺中市大里區德芳南路470號\""
+    },
+    {
+      "identityKey": "臺中市大里區德芳南路472-1號|0424810000",
+      "address": "臺中市大里區德芳南路472-1號",
+      "phone": "04 2481 0000",
+      "sourceNames": [
+        "本格和牛燒肉放題(大里店)",
+        "築間燒肉本命(台中大里店)"
+      ],
+      "canonicalName": "築間燒肉本命(台中大里店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://dealradar.tw/brands/honmei-yakiniku",
+      "verificationTitle": "築間燒肉本命 台中大里店",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"04 2481 0000\" \"臺中市大里區德芳南路472-1號\""
+    },
+    {
+      "identityKey": "臺中市大里區德芳南路472號|0424810081",
+      "address": "臺中市大里區德芳南路472號",
+      "phone": "04 2481 0081",
+      "sourceNames": [
+        "築間幸福鍋物(台中大里二店)",
+        "築間幸福鍋物(台中大里一店)"
+      ],
+      "canonicalName": "築間幸福鍋物(台中大里一店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://rachel.tw/hsichendimsum/",
+      "verificationTitle": "喜辰港式點心茶餐廳 台中大里店｜台中新開幕！三十年港點功力，手工港點現點現蒸，一籠一口超到味！ – 貪食瑞秋a口袋名單",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"04 2481 0081\" \"臺中市大里區德芳南路472號\""
+    },
+    {
+      "identityKey": "臺中市大雅區中清路三段928號|0968319380",
+      "address": "臺中市大雅區中清路三段928號",
+      "phone": "0968 319 380",
+      "sourceNames": [
+        "味市 お料理 割烹-大雅無菜單料理",
+        "味市 お料理-割鮮"
+      ],
+      "canonicalName": "味市 お料理 割烹-大雅無菜單料理",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.opentable.com.tw/restaurant/profile/209345",
+      "verificationTitle": "味市 お料理 - Taichung City | OpenTable",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"0968 319 380\" \"臺中市大雅區中清路三段928號\""
+    },
+    {
+      "identityKey": "臺中市太平區中山路三段22號|0931223779",
+      "address": "臺中市太平區中山路三段22號",
+      "phone": "0931 223 779",
+      "sourceNames": [
+        "太平 原味鴨肉飯",
+        "原味鴨肉飯"
+      ],
+      "canonicalName": "原味鴨肉飯",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": null,
+      "verificationTitle": "OCT 2021",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"0931 223 779\" \"臺中市太平區中山路三段22號\""
+    },
+    {
+      "identityKey": "臺中市太平區山田路長青巷26號|0422766060",
+      "address": "臺中市太平區山田路長青巷26號",
+      "phone": "04 2276 6060",
+      "sourceNames": [
+        "法蝶Lafatte",
+        "法蝶藝術廚房"
+      ],
+      "canonicalName": "法蝶藝術廚房",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.17travel.tw/2018/06/5520200313.html",
+      "verificationTitle": "台中太平景點62個、太平一日遊、太平旅遊，20231207更新 - 17旅行",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"04 2276 6060\" \"臺中市太平區山田路長青巷26號\""
+    },
+    {
+      "identityKey": "臺中市新社區中興街223號|0425931567",
+      "address": "臺中市新社區中興街223號",
+      "phone": "04 2593 1567",
+      "sourceNames": [
+        "安妮公主花園餐廳",
+        "安妮公主花園"
+      ],
+      "canonicalName": "安妮公主花園",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ezgo.ardswc.gov.tw/zh-tw/spot/3150/",
+      "verificationTitle": "安妮公主花園－農業易遊網",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"04 2593 1567\" \"臺中市新社區中興街223號\""
+    },
+    {
+      "identityKey": "臺中市東勢區中山路34號|0425770828",
+      "address": "臺中市東勢區中山路34號",
+      "phone": "04 2577 0828",
+      "sourceNames": [
+        "DIDI DOMO複合式餐飲咖啡店",
+        "DIDI DOMO複合式餐廳"
+      ],
+      "canonicalName": "DIDI DOMO複合式餐飲咖啡店",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/3270415",
+      "verificationTitle": "DIDI DOMO複合式餐飲咖啡店菜單：紅茶、炸地瓜、綠茶...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"04 2577 0828\" \"臺中市東勢區中山路34號\""
+    },
+    {
+      "identityKey": "臺中市梧棲區台灣大道八段699號25樓|0426562293",
+      "address": "臺中市梧棲區台灣大道八段699號25樓",
+      "phone": "04 2656 2293",
+      "sourceNames": [
+        "丹堤咖啡旋轉餐廳",
+        "丹堤咖啡(台中童綜合店)"
+      ],
+      "canonicalName": "丹堤咖啡(台中童綜合店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/451449827826344624",
+      "verificationTitle": "丹堤旋轉餐廳-台中童綜合店 - LINE熱點",
+      "confidence": "medium",
+      "resolution": "verified",
+      "query": "\"04 2656 2293\" \"臺中市梧棲區台灣大道八段699號25樓\""
+    },
+    {
+      "identityKey": "臺中市沙鹿區光大路147號|0426625309",
+      "address": "臺中市沙鹿區光大路147號",
+      "phone": "04 2662 5309",
+      "sourceNames": [
+        "野宴日式炭火燒肉(台中沙鹿店)",
+        "野宴日式炭火燒肉沙鹿店"
+      ],
+      "canonicalName": "野宴日式炭火燒肉(台中沙鹿店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.findcoupon.tw/store-2539.htm",
+      "verificationTitle": "野宴日式炭火燒肉 (台中沙鹿店)，04-2662-5309 - 找優惠",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"04 2662 5309\" \"臺中市沙鹿區光大路147號\""
+    },
+    {
+      "identityKey": "臺中市清水區鎮南街81-2號|0426221812",
+      "address": "臺中市清水區鎮南街81-2號",
+      "phone": "(04) 2622-1812",
+      "sourceNames": [
+        "Yorimichi",
+        "Yorimichi 順道菓子店"
+      ],
+      "canonicalName": "Yorimichi",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.yorimichipatisserie.com/",
+      "verificationTitle": "順道菓子店 | 彌月禮盒 | 台中市",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"(04) 2622-1812\" \"臺中市清水區鎮南街81-2號\""
+    },
+    {
+      "identityKey": "臺中市潭子區雅潭路三段東寶巷9號|0425314368",
+      "address": "臺中市潭子區雅潭路三段東寶巷9號",
+      "phone": "04 2531 4368",
+      "sourceNames": [
+        "東喜堂花園茶館",
+        "東喜堂"
+      ],
+      "canonicalName": "東喜堂花園茶館",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://travel.yam.com/place/22471",
+      "verificationTitle": "東喜堂花園茶館 - 地點資訊 - 輕旅行",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"04 2531 4368\" \"臺中市潭子區雅潭路三段東寶巷9號\""
+    },
+    {
+      "identityKey": "臺中市烏日區溫泉路2號|0423829888",
+      "address": "臺中市烏日區溫泉路2號",
+      "phone": "04 2382 9888",
+      "sourceNames": [
+        "【清新溫泉飯店】天地一家中餐廳",
+        "天地一家中餐廳",
+        "新采西餐廳"
+      ],
+      "canonicalName": "天地一家中餐廳",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://travel.taichung.gov.tw/zh-tw/shop/consume/4221",
+      "verificationTitle": "臺中市觀光旅遊網",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"04 2382 9888\" \"臺中市烏日區溫泉路2號\""
+    },
+    {
+      "identityKey": "臺中市西區五權七街122號|0423756858",
+      "address": "臺中市西區五權七街122號",
+      "phone": "04 2375 6858",
+      "sourceNames": [
+        "旅禾泡芙之家(總店)",
+        "旅禾烘焙(五權門市)"
+      ],
+      "canonicalName": "旅禾泡芙之家(總店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://taget.talmud.com.tw/latest/2023%E9%81%8E%E5%B9%B4%E9%80%81%E7%A6%AE%E6%8E%A8%E8%96%A6%EF%BD%9C%E5%85%AC%E5%8F%B8%E7%A6%8F%E5%A7%94%E6%9C%83%E7%9C%8B%E9%81%8E%E4%BE%86%EF%BC%81%E9%80%81%E5%BB%A0%E5%95%86%E4%BB%80%E9%BA%BC/",
+      "verificationTitle": "2023過年送禮推薦｜公司福委會看過來！送廠商什麼禮盒好？ - 塔木德豐旅匯",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"04 2375 6858\" \"臺中市西區五權七街122號\""
+    },
+    {
+      "identityKey": "臺中市西區公益路68號b1|0423295911",
+      "address": "臺中市西區公益路68號B1",
+      "phone": "04 2329 5911",
+      "sourceNames": [
+        "金色三麥(台中勤美誠品店)",
+        "金色三麥(台中勤美店)"
+      ],
+      "canonicalName": "金色三麥(台中勤美誠品店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://eatgether.com/en/meetup/7d0879e0-5f19-4c30-b1ec-e93615ffea1b",
+      "verificationTitle": "一起看tpbl職籃總冠軍直播派對｜Eatgether",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"04 2329 5911\" \"臺中市西區公益路68號B1\""
+    },
+    {
+      "identityKey": "臺中市西區忠明南路190號|0423787666",
+      "address": "臺中市西區忠明南路190號",
+      "phone": "04 2378 7666",
+      "sourceNames": [
+        "旅禾泡芙之家(忠明店)",
+        "旅禾烘焙(忠明門市)"
+      ],
+      "canonicalName": "旅禾泡芙之家(忠明店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://fullfenblog.tw/taichung-free/",
+      "verificationTitle": "〖2026台中免費景點懶人包〗TOP50台中免門票景點推薦.觀光工廠.情侶約會.親子景點,小資省荷包就醬玩！",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"04 2378 7666\" \"臺中市西區忠明南路190號\""
+    },
+    {
+      "identityKey": "臺中市西區民生路358號|0423011911",
+      "address": "臺中市西區民生路358號",
+      "phone": "04 2301 1911",
+      "sourceNames": [
+        "旅禾泡芙之家(審計園區店)",
+        "旅禾烘焙(審計園區門市)"
+      ],
+      "canonicalName": "旅禾泡芙之家(審計園區店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://hippolife.tw/taichung-food-dessert-all",
+      "verificationTitle": "〖台中甜點推薦〗甜點控請進，28間必買的熱門甜點店評比！ | 河馬體驗",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"04 2301 1911\" \"臺中市西區民生路358號\""
+    },
+    {
+      "identityKey": "臺中市西區美村路一段343號|0423010808",
+      "address": "臺中市西區美村路一段343號",
+      "phone": "04 2301 0808",
+      "sourceNames": [
+        "旅禾泡芙之家(美村旗艦店)",
+        "旅禾烘焙(美村旗艦門市)"
+      ],
+      "canonicalName": "旅禾泡芙之家(美村旗艦店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ifoodie.tw/post/5dce350f8c906d282abeff46",
+      "verificationTitle": "旅禾泡芙之家審計旗艦店 網美最愛拍萌萌噠泡芙三輪車 IG拍照打卡熱點 台中必拜』| 旅禾泡芙之家 審計旗艦店 - 愛食記",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"04 2301 0808\" \"臺中市西區美村路一段343號\""
+    },
+    {
+      "identityKey": "臺中市西屯區文心路二段207號2樓|0422517882",
+      "address": "臺中市西屯區文心路二段207號2樓",
+      "phone": "04 2251 7882",
+      "sourceNames": [
+        "黑毛屋(台中市政店)",
+        "黑毛屋本家(台中市政店)"
+      ],
+      "canonicalName": "黑毛屋(台中市政店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.opentable.com.tw/restaurant/profile/186893",
+      "verificationTitle": "黑毛屋 台中市政店 - Taichung City, TXG | OpenTable",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"04 2251 7882\" \"臺中市西屯區文心路二段207號2樓\""
+    },
+    {
+      "identityKey": "臺中市西屯區朝富路137號|0422555525",
+      "address": "臺中市西屯區朝富路137號",
+      "phone": "04 2255 5525",
+      "sourceNames": [
+        "The Wang Prime Steak House",
+        "THE WANG 台中國家商貿一號店"
+      ],
+      "canonicalName": "The Wang Prime Steak House",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.gq.com.tw/events/2021/hennessytastinglab/",
+      "verificationTitle": "",
+      "confidence": "medium",
+      "resolution": "verified",
+      "query": "\"04 2255 5525\" \"臺中市西屯區朝富路137號\""
+    },
+    {
+      "identityKey": "臺中市豐原區豐勢路一段468號|0425131390",
+      "address": "臺中市豐原區豐勢路一段468號",
+      "phone": "04 2513 1390",
+      "sourceNames": [
+        "寶泉 甘味手造所",
+        "寶泉百年餅舖(甘味手造所旗艦店)"
+      ],
+      "canonicalName": "寶泉 甘味手造所",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.hakkacoin.com.tw/en/store/3131",
+      "verificationTitle": "宝泉_甘味手造所 - 客家幣活動網頁｜探索客庄、用數位幣享在地體驗",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"04 2513 1390\" \"臺中市豐原區豐勢路一段468號\""
+    },
+    {
+      "identityKey": "臺中市龍井區新興路11巷3號|0426520806",
+      "address": "臺中市龍井區新興路11巷3號",
+      "phone": "04 2652 0806",
+      "sourceNames": [
+        "胖老爹美式炸雞(台中東海店)",
+        "胖老爹美式炸雞(東海新興店)"
+      ],
+      "canonicalName": "胖老爹美式炸雞(東海新興店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://footinder.com.tw/%E5%8F%B0%E4%B8%AD%E5%B8%82%E9%BE%8D%E4%BA%95%E5%8D%80/146228/",
+      "verificationTitle": "台中市龍井區 胖老爹美式炸雞 東海新興店 - 台灣餐廳推薦 手搖推薦 甜點推薦 買一送一 優惠訊息",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"04 2652 0806\" \"臺中市龍井區新興路11巷3號\""
+    },
+    {
+      "identityKey": "臺中市龍井區藝術街33號|0426310836",
+      "address": "臺中市龍井區藝術街33號",
+      "phone": "04-2631-0836",
+      "sourceNames": [
+        "艾凡里咖啡",
+        "艾凡里咖啡美食"
+      ],
+      "canonicalName": "艾凡里咖啡",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://travel.yam.com/place/28985",
+      "verificationTitle": "〖艾凡里咖啡〗 - 地點資訊 - 輕旅行",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"04-2631-0836\" \"臺中市龍井區藝術街33號\""
+    },
+    {
+      "identityKey": "臺中市龍井區藝術街48號|0426528288",
+      "address": "臺中市龍井區藝術街48號",
+      "phone": "04 2652 8288",
+      "sourceNames": [
+        "春水堂人文茶館(國際店)",
+        "春水堂-國際店"
+      ],
+      "canonicalName": "春水堂人文茶館(國際店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://poi.zhupiter.com/p/cht-85004/%E6%98%A5%E6%B0%B4%E5%A0%82%E4%BA%BA%E6%96%87%E8%8C%B6%E9%A4%A8%E5%9C%8B%E9%9A%9B%E5%BA%97/",
+      "verificationTitle": "春水堂人文茶館國際店電話號碼04-2652-8288 - 台中縣茶藝館",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"04 2652 8288\" \"臺中市龍井區藝術街48號\""
+    },
+    {
+      "identityKey": "臺南市七股區龍山村209-9號|067873293",
+      "address": "臺南市七股區龍山村209-9號",
+      "phone": "06 787 3293",
+      "sourceNames": [
+        "阿宗蚵嗲",
+        "龍山阿宗蚵嗲蚵仔麵線"
+      ],
+      "canonicalName": "阿宗蚵嗲",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://fonghu0217.pixnet.net/blog/post/38069873",
+      "verificationTitle": "七股網仔寮汕 | 河畔小築 | 休閒旅遊分享 | 痞客邦 | PIXNET",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"06 787 3293\" \"臺南市七股區龍山村209-9號\""
+    },
+    {
+      "identityKey": "臺南市中西區府前路二段378號|062974567",
+      "address": "臺南市中西區府前路二段378號",
+      "phone": "06 297 4567",
+      "sourceNames": [
+        "CHUJU雛菊餐桌",
+        "雛菊見 DAISY HOUSE(台南府前店)"
+      ],
+      "canonicalName": "CHUJU雛菊餐桌",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.opentable.com.tw/restaurant/profile/187274",
+      "verificationTitle": "CHUJU雛菊餐桌 台南店 - Tainan City, TNN | OpenTable",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"06 297 4567\" \"臺南市中西區府前路二段378號\""
+    },
+    {
+      "identityKey": "臺南市仁德區仁義一街55號|062791359",
+      "address": "臺南市仁德區仁義一街55號",
+      "phone": "06-279-1359",
+      "sourceNames": [
+        "忠味麵館(仁義店)",
+        "忠味麵館"
+      ],
+      "canonicalName": "忠味麵館",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://footinder.com.tw/%E5%8F%B0%E5%8D%97%E5%B8%82%E4%BB%81%E5%BE%B7%E5%8D%80/67063/",
+      "verificationTitle": "台南市仁德區 忠味麵館 - 台灣餐廳推薦 手搖推薦 甜點推薦 買一送一 優惠訊息",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"06-279-1359\" \"臺南市仁德區仁義一街55號\""
+    },
+    {
+      "identityKey": "臺南市佳里區光復路290號|067220467",
+      "address": "臺南市佳里區光復路290號",
+      "phone": "06-722-0467",
+      "sourceNames": [
+        "【台南縣佳里鎮】老鄧牛肉麵",
+        "老鄧牛肉麵"
+      ],
+      "canonicalName": "老鄧牛肉麵",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ji.zhupiter.com/p-6400-%E8%80%81%E9%84%A7%E7%89%9B%E8%82%89%E9%BA%B5.html",
+      "verificationTitle": "老鄧牛肉麵地址: 台南市佳里區光復路290號",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"06-722-0467\" \"臺南市佳里區光復路290號\""
+    },
+    {
+      "identityKey": "臺南市佳里區延平路324號|067212845",
+      "address": "臺南市佳里區延平路324號",
+      "phone": "06 721 2845",
+      "sourceNames": [
+        "順福土產牛肉湯",
+        "順福牛肉湯"
+      ],
+      "canonicalName": "順福土產牛肉湯",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/484159107079609548",
+      "verificationTitle": "順福溫體牛肉湯 - LINE熱點",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"06 721 2845\" \"臺南市佳里區延平路324號\""
+    },
+    {
+      "identityKey": "臺南市北區富北街50號|062210110",
+      "address": "臺南市北區富北街50號",
+      "phone": "06-2210110",
+      "sourceNames": [
+        "延齡堂 酸菜老爺の店",
+        "延齡堂-高粱酸白菜火鍋"
+      ],
+      "canonicalName": "延齡堂-高粱酸白菜火鍋",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://opendatatw.com/company/19378406/",
+      "verificationTitle": "女兒紅",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"06-2210110\" \"臺南市北區富北街50號\""
+    },
+    {
+      "identityKey": "臺南市北區西門路三段45巷42弄10號|062217282",
+      "address": "臺南市北區西門路三段45巷42弄10號",
+      "phone": "06-2217282",
+      "sourceNames": [
+        "裏葉咖啡",
+        "裏葉"
+      ],
+      "canonicalName": "裏葉",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ifoodie.tw/post/61a84a938282872b58db7d98",
+      "verificationTitle": "吃 台南北區  裏葉  早午餐  IG打卡熱點  獨特用餐氛圍 裏葉』| 裏葉 - 愛食記",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"06-2217282\" \"臺南市北區西門路三段45巷42弄10號\""
+    },
+    {
+      "identityKey": "臺南市南區大同路二段184號|062152385",
+      "address": "臺南市南區大同路二段184號",
+      "phone": "06 215 2385",
+      "sourceNames": [
+        "松村燻之味(大同店)",
+        "松村燻之味(總店)"
+      ],
+      "canonicalName": "松村燻之味(大同店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ez3c.tw/search/%E5%8F%B0%E5%8D%97%E6%9D%BE%E6%9D%91%E7%85%99%E7%87%BB%E6%BB%B7%E5%91%B3%E5%9C%B0%E5%9D%80/aChNP01",
+      "verificationTitle": "[var.media_title;onformat=retitle] :: 哇哇3C日誌",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"06 215 2385\" \"臺南市南區大同路二段184號\""
+    },
+    {
+      "identityKey": "臺南市南區新興路419-1號|0932813566",
+      "address": "臺南市南區新興路419-1號",
+      "phone": "0932-813566",
+      "sourceNames": [
+        "阿美鮮牛肉湯",
+        "美鮮牛肉湯"
+      ],
+      "canonicalName": "美鮮牛肉湯",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://mei30530.pixnet.net/blog/posts/9453941267",
+      "verificationTitle": "〖臺南〗2016清燙牛肉節踩線團活動 - 吃遍台南牛肉湯，玩遍台南一日遊 - 美鮮牛肉湯/大觀音亭祀典興濟宮/廟廟市集/ Lovi's 巷弄手工雪糕鋪 | 鄭小柔Charlene❤食尚嬉遊記 | 生活綜合分享 | 痞客邦 | PIXNET",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"0932-813566\" \"臺南市南區新興路419-1號\""
+    },
+    {
+      "identityKey": "臺南市善化區中山路480號|065811989",
+      "address": "臺南市善化區中山路480號",
+      "phone": "06-5811989",
+      "sourceNames": [
+        "宏昌現宰羊肉",
+        "宏昌本產羊肉"
+      ],
+      "canonicalName": "宏昌本產羊肉",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/484201247776200169",
+      "verificationTitle": "宏昌本產羊肉 - LINE熱點",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"06-5811989\" \"臺南市善化區中山路480號\""
+    },
+    {
+      "identityKey": "臺南市善化區大成路266號|065834877",
+      "address": "臺南市善化區大成路266號",
+      "phone": "06 583 4877",
+      "sourceNames": [
+        "泰味食足A Taste of Thailand",
+        "泰味食足"
+      ],
+      "canonicalName": "泰味食足A Taste of Thailand",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://footinder.com.tw/%E5%8F%B0%E5%8D%97%E5%B8%82%E5%96%84%E5%8C%96%E5%8D%80/11211/",
+      "verificationTitle": "台南市善化區 泰味食足A Taste of Thailand - 台灣餐廳推薦 手搖推薦 甜點推薦 買一送一 優惠訊息",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"06 583 4877\" \"臺南市善化區大成路266號\""
+    },
+    {
+      "identityKey": "臺南市安平區國平路180號|062955002",
+      "address": "臺南市安平區國平路180號",
+      "phone": "(06)295-5002",
+      "sourceNames": [
+        "G蛋食研所X會中Cafe",
+        "二鬼麵舖(台南安平旗艦店)"
+      ],
+      "canonicalName": "G蛋食研所X會中Cafe",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://riossay.pixnet.net/blog",
+      "verificationTitle": "AVAYA電話交換機~ 0953-362909 | 不設分類分享 | 痞客邦 | PIXNET",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"(06)295-5002\" \"臺南市安平區國平路180號\""
+    },
+    {
+      "identityKey": "臺南市安平區安北路433號|063915385",
+      "address": "臺南市安平區安北路433號",
+      "phone": "06 391 5385",
+      "sourceNames": [
+        "同記安平豆花(安平總店)",
+        "同記安平豆花(台南中山店)",
+        "同記安平豆花"
+      ],
+      "canonicalName": "同記安平豆花",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://blog.easylife.tw/refer/t12561845.KOHZJ4",
+      "verificationTitle": "同 記 安平豆花有限公司 > 分店介紹 - 同記安平豆花",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"06 391 5385\" \"臺南市安平區安北路433號\""
+    },
+    {
+      "identityKey": "臺南市安平區安平路125號|062292618",
+      "address": "臺南市安平區安平路125號",
+      "phone": "06 229 2618",
+      "sourceNames": [
+        "周氏蝦捲(創始店)",
+        "周氏蝦捲"
+      ],
+      "canonicalName": "周氏蝦捲",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ji.zhupiter.com/p-61890-%E5%AF%A6%E5%84%84%E7%BE%8E%E9%A3%9F%E5%9D%8A.html",
+      "verificationTitle": "實億美食坊地址: 台南市安平區安平路125號",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"06 229 2618\" \"臺南市安平區安平路125號\""
+    },
+    {
+      "identityKey": "臺南市安平區安平路462號|062216285",
+      "address": "臺南市安平區安平路462號",
+      "phone": "06 221 6285",
+      "sourceNames": [
+        "銀波布丁 台南安平總店",
+        "銀波布丁"
+      ],
+      "canonicalName": "銀波布丁",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://pai0916.pixnet.net/blog/posts/10356975092",
+      "verificationTitle": "精選13間台南伴手禮 台南布丁/千層蛋糕/夏威夷豆塔等經典台南伴手禮 | 飯桶家族的吃喝玩樂 | 美食情報分享 | 痞客邦 | PIXNET",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"06 221 6285\" \"臺南市安平區安平路462號\""
+    },
+    {
+      "identityKey": "臺南市安平區效忠街85號|062266035",
+      "address": "臺南市安平區效忠街85號",
+      "phone": "06 226 6035",
+      "sourceNames": [
+        "古堡蚵仔煎",
+        "古堡蚵仔煎專賣店"
+      ],
+      "canonicalName": "古堡蚵仔煎",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": null,
+      "verificationTitle": "Empty search results",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"06 226 6035\" \"臺南市安平區效忠街85號\""
+    },
+    {
+      "identityKey": "臺南市安平區育平路345號|062989586",
+      "address": "臺南市安平區育平路345號",
+      "phone": "06-2989586",
+      "sourceNames": [
+        "阿水伯傳統手工包子",
+        "安平阿水伯手工包子"
+      ],
+      "canonicalName": "安平阿水伯手工包子",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://civilcard.tainan.gov.tw/store.asp?mainid=B37839BF-BABF-4935-B3F1-47050D3FDF20",
+      "verificationTitle": "臺南市市民卡",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"06-2989586\" \"臺南市安平區育平路345號\""
+    },
+    {
+      "identityKey": "臺南市安平區華平路152號|062951000",
+      "address": "臺南市安平區華平路152號",
+      "phone": "06 295 1000",
+      "sourceNames": [
+        "府城食府正宗台南料理(安平總店)",
+        "府城食府正宗台南料理"
+      ],
+      "canonicalName": "府城食府正宗台南料理(安平總店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://michelinstar.twtainan.net.haoyumarketing.com/mcl_zone/%E5%BA%9C%E5%9F%8E%E9%A3%9F%E5%BA%9C%E5%AE%89%E5%B9%B3/",
+      "verificationTitle": "府城食府(安平) – 台南米其林 美食特搜站",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"06 295 1000\" \"臺南市安平區華平路152號\""
+    },
+    {
+      "identityKey": "臺南市將軍區鯤溟里鯤溟100號|067920886",
+      "address": "臺南市將軍區鯤溟里鯤溟100號",
+      "phone": "06 792 0886",
+      "sourceNames": [
+        "秀里蚵嗲",
+        "青鯤鯓秀里蚵嗲"
+      ],
+      "canonicalName": "秀里蚵嗲",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://fnc.ebc.net.tw/travelfood/program/2/351",
+      "verificationTitle": "旅遊美食｜東森財經新聞",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"06 792 0886\" \"臺南市將軍區鯤溟里鯤溟100號\""
+    },
+    {
+      "identityKey": "臺南市新化區中山路110-1號|065801379",
+      "address": "臺南市新化區中山路110-1號",
+      "phone": "06 580 1379",
+      "sourceNames": [
+        "農舍庭園餐廳",
+        "農舍庭園茶坊"
+      ],
+      "canonicalName": "農舍庭園餐廳",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://13blog.tw/tainan-tourism-200907/",
+      "verificationTitle": "〖台南兩天一夜行程〗搜羅台南山海小鎮網美景點！台南安平新化兩天一夜深度遊｜旅讀在地老文化｜品嚐台南家常美食｜大目降文化園區｜新化景點｜安平景點 – 13's幸福食光",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"06 580 1379\" \"臺南市新化區中山路110-1號\""
+    },
+    {
+      "identityKey": "臺南市新化區中正路500號|065905599",
+      "address": "臺南市新化區中正路500號",
+      "phone": "06 590 5599",
+      "sourceNames": [
+        "街役場古蹟餐坊",
+        "街役場古蹟餐坊 Historical Township Office Restaurant"
+      ],
+      "canonicalName": "街役場古蹟餐坊",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://civilcard.tainan.gov.tw/store.asp?mainid=72226202-A037-416F-8A7E-602B1682FC83",
+      "verificationTitle": "臺南市市民卡",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"06 590 5599\" \"臺南市新化區中正路500號\""
+    },
+    {
+      "identityKey": "臺南市新化區中興路293號|065801919",
+      "address": "臺南市新化區中興路293號",
+      "phone": "06 580 1919",
+      "sourceNames": [
+        "東成會館",
+        "新化~東成醬油會館"
+      ],
+      "canonicalName": "新化~東成醬油會館",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.walkerland.com.tw/article/view/41513",
+      "verificationTitle": "台南.新化-老攤紅豆餅+武德殿+東成醬油會館 |旅遊|WalkerLand窩客島",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"06 580 1919\" \"臺南市新化區中興路293號\""
+    },
+    {
+      "identityKey": "臺南市新化區忠孝路19號|065909198",
+      "address": "臺南市新化區忠孝路19號",
+      "phone": "06 590 9198",
+      "sourceNames": [
+        "所長茶葉蛋(新化門市)",
+        "所長茶葉蛋 (新化店)"
+      ],
+      "canonicalName": "所長茶葉蛋(新化門市)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": null,
+      "verificationTitle": "Empty search results",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"06 590 9198\" \"臺南市新化區忠孝路19號\""
+    },
+    {
+      "identityKey": "臺南市新營區民治路31號|066353698",
+      "address": "臺南市新營區民治路31號",
+      "phone": "06 635 3698",
+      "sourceNames": [
+        "華味香鴨肉羹(民治店)",
+        "華味香鴨肉羹三店"
+      ],
+      "canonicalName": "華味香鴨肉羹(民治店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://tnntasty.howkno.com/850/",
+      "verificationTitle": "臺南市新營區〖華味香鴨肉羹-民治店〗遊食趣 | 台南美食吃透透 :: 台南美食吃透透",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"06 635 3698\" \"臺南市新營區民治路31號\""
+    },
+    {
+      "identityKey": "臺南市新營區長榮路二段1020號|066569292",
+      "address": "臺南市新營區長榮路二段1020號",
+      "phone": "06 656 9292",
+      "sourceNames": [
+        "華味香景觀宴會餐廳",
+        "華味香旗艦店"
+      ],
+      "canonicalName": "華味香景觀宴會餐廳",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ifoodie.tw/post/636a212c658aba08860c8a25-%E8%8F%AF%E5%91%B3%E9%A6%99%E6%99%AF%E8%A7%80%E5%AE%B4%E6%9C%83%E9%A4%90%E5%BB%B3-%E6%96%B0%E7%87%9F%E5%85%AB%E5%8D%81%E5%B9%B4%E9%B4%A8%E8%82%89%E7%BE%B9-%E5%BA%AD",
+      "verificationTitle": "華味香景觀宴會餐廳～新營八十年鴨肉羹／庭園景觀／旗艦店』| 華味香旗艦店 - 愛食記",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"06 656 9292\" \"臺南市新營區長榮路二段1020號\""
+    },
+    {
+      "identityKey": "臺南市東區大同路一段111號|062144720",
+      "address": "臺南市東區大同路一段111號",
+      "phone": "06 214 4720",
+      "sourceNames": [
+        "兜齊私廚餐酒館 Dotch Bistro",
+        "Dotch Bistro 兜齊餐酒館"
+      ],
+      "canonicalName": "兜齊私廚餐酒館 Dotch Bistro",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ifoodie.tw/post/61cd9dc88282872c26a60096",
+      "verificationTitle": "兜齊私廚餐酒館 Dotch Bistro 台南東區 海鮮、排餐、美酒，餐點齊全、包君滿意的美味佳餚餐酒館』| 兜齊餐酒館Dotch Bistro - 愛食記",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"06 214 4720\" \"臺南市東區大同路一段111號\""
+    },
+    {
+      "identityKey": "臺南市東區東門路一段235號|062091235",
+      "address": "臺南市東區東門路一段235號",
+      "phone": "06 209 1235",
+      "sourceNames": [
+        "城邊真味鱔魚意麵",
+        "城邊真味炒鱔魚專家"
+      ],
+      "canonicalName": "城邊真味鱔魚意麵",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://poi.zhupiter.com/p/cht-95241/%E5%9F%8E%E9%82%8A%E9%B1%94%E9%AD%9A%E6%84%8F%E9%BA%B5%E5%B0%88%E5%AE%B6/",
+      "verificationTitle": "城邊鱔魚意麵專家電話號碼06-209-1235 - 台南市傳統美食",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"06 209 1235\" \"臺南市東區東門路一段235號\""
+    },
+    {
+      "identityKey": "臺南市歸仁區中山路一段486號|062305279",
+      "address": "臺南市歸仁區中山路一段486號",
+      "phone": "06 230 5279",
+      "sourceNames": [
+        "胖老爹美式炸雞(台南歸仁店)",
+        "胖老爹美式炸雞(歸仁店)"
+      ],
+      "canonicalName": "胖老爹美式炸雞(台南歸仁店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/483793309962082247",
+      "verificationTitle": "胖老爹美式炸雞-台南歸仁店 - LINE熱點",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"06 230 5279\" \"臺南市歸仁區中山路一段486號\""
+    },
+    {
+      "identityKey": "臺南市歸仁區民族北街30號|063387709",
+      "address": "臺南市歸仁區民族北街30號",
+      "phone": "06 338 7709",
+      "sourceNames": [
+        "芫朗手作早午餐(歸仁忠孝店)",
+        "芫朗手作早午餐(歸仁民族店)"
+      ],
+      "canonicalName": "芫朗手作早午餐(歸仁忠孝店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://footinder.com.tw/%E5%8F%B0%E5%8D%97%E5%B8%82%E6%AD%B8%E4%BB%81%E5%8D%80/108892/",
+      "verificationTitle": "台南市歸仁區 芫朗手作.早午餐 - 台灣餐廳推薦 手搖推薦 甜點推薦 買一送一 優惠訊息",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"06 338 7709\" \"臺南市歸仁區民族北街30號\""
+    },
+    {
+      "identityKey": "臺南市永康區大橋一街328號|063029366",
+      "address": "臺南市永康區大橋一街328號",
+      "phone": "06 302 9366",
+      "sourceNames": [
+        "St.1 Cafe' / Work Room 一街咖啡",
+        "St.1 Cafe/Work Room。工業風設計咖啡店"
+      ],
+      "canonicalName": "St.1 Cafe' / Work Room 一街咖啡",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://ifoodie.tw/post/651642768d3df398e2be2389",
+      "verificationTitle": "St.1 Cafe' / Work Room 一街咖啡|台南永康咖啡|手沖咖啡、單品咖啡|職人咖啡豆 - 凱開式的熱情人生』| ST.1 Cafe' - 愛食記",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"06 302 9366\" \"臺南市永康區大橋一街328號\""
+    },
+    {
+      "identityKey": "臺南市永康區永安路175號|062430832",
+      "address": "臺南市永康區永安路175號",
+      "phone": "06-2430832",
+      "sourceNames": [
+        "金大坊-家常媽媽菜",
+        "金大坊美食餐廳"
+      ],
+      "canonicalName": "金大坊-家常媽媽菜",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": null,
+      "verificationTitle": "Empty search results",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"06-2430832\" \"臺南市永康區永安路175號\""
+    },
+    {
+      "identityKey": "臺南市玉井區沙田25-66號|065747666",
+      "address": "臺南市玉井區沙田25-66號",
+      "phone": "06 574 7666",
+      "sourceNames": [
+        "玉井 綠色空間",
+        "綠色空間"
+      ],
+      "canonicalName": "綠色空間",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/484196938485355566",
+      "verificationTitle": "綠色空間景觀餐廳 - LINE熱點",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"06 574 7666\" \"臺南市玉井區沙田25-66號\""
+    },
+    {
+      "identityKey": "臺南市玉井區沙田里25-66號|065746809",
+      "address": "臺南市玉井區沙田里25-66號",
+      "phone": "(06)5746809",
+      "sourceNames": [
+        "瑪莎園",
+        "瑪莎園-景觀庭園咖啡餐廳"
+      ],
+      "canonicalName": "瑪莎園-景觀庭園咖啡餐廳",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.siraya-nsa.gov.tw/zh-tw/shop/detail/48",
+      "verificationTitle": "瑪莎園-景觀庭園咖啡餐廳",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"(06)5746809\" \"臺南市玉井區沙田里25-66號\""
+    },
+    {
+      "identityKey": "臺南市白河區關嶺里關子嶺41-5號|0933669759",
+      "address": "臺南市白河區關嶺里關子嶺41-5號",
+      "phone": "0933669759",
+      "sourceNames": [
+        "香菇蛋",
+        "關子嶺香菇蛋"
+      ],
+      "canonicalName": "香菇蛋",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://media.taiwan.net.tw/zh-tw/portal/travel?Keyword=%E9%97%9C%E5%AD%90%E5%B6%BA&dir=ascending&sort=time",
+      "verificationTitle": "關子嶺 - 觀光遊憩主題資料集 :: 觀光多媒體開放資料—Open Multimedia Data in Tourism",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"0933669759\" \"臺南市白河區關嶺里關子嶺41-5號\""
+    },
+    {
+      "identityKey": "臺南市鹽水區中山路1號|066522202",
+      "address": "臺南市鹽水區中山路1號",
+      "phone": "06 652 2202",
+      "sourceNames": [
+        "銀鋒冰果室",
+        "顏清安鹽水意麵"
+      ],
+      "canonicalName": "銀鋒冰菓室",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://w3fs.tainan.gov.tw/Download.ashx?n=5Y%2Bw5Y2X5ZWG5ZyI5o6o6Jam5aW954mp5LiA6Ka96KGoIDEwMTcucGRm&u=LzAwMS9VcGxvYWQvMjIvcmVsZmlsZS8xMDA3OC84NzcwNjM0LzVlMDY4ODhhLTFjZTEtNDBhZC04OGY0LTMzMzZhOTU0NzZmMi5wZGY%3D",
+      "verificationTitle": "台南商圈推薦好物一覽表：銀鋒冰菓室",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"06 652 2202\" \"臺南市鹽水區中山路1號\""
+    },
+    {
+      "identityKey": "臺南市麻豆區中山路179-8號|065724035",
+      "address": "臺南市麻豆區中山路179-8號",
+      "phone": "06 572 4035",
+      "sourceNames": [
+        "阿蘭碗粿(碗粿蘭)",
+        "碗粿蘭"
+      ],
+      "canonicalName": "阿蘭碗粿(碗粿蘭)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/5631472",
+      "verificationTitle": "阿蘭碗粿(碗粿蘭)菜單：碗粿、炒飯、豬血湯、虱目魚丸湯、花生豬腳湯...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"06 572 4035\" \"臺南市麻豆區中山路179-8號\""
+    },
+    {
+      "identityKey": "臺南市麻豆區信義路10號|065720199",
+      "address": "臺南市麻豆區信義路10號",
+      "phone": "06 572 0199",
+      "sourceNames": [
+        "胖老爹美式炸雞(台南麻豆店)",
+        "胖老爹美式炸雞(麻豆店)"
+      ],
+      "canonicalName": "胖老爹美式炸雞(台南麻豆店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": null,
+      "verificationTitle": "Empty search results",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"06 572 0199\" \"臺南市麻豆區信義路10號\""
+    },
+    {
+      "identityKey": "高雄市三民區文濱路53號|077677238",
+      "address": "高雄市三民區文濱路53號",
+      "phone": "07 767 7238",
+      "sourceNames": [
+        "喜憨兒創作料理",
+        "喜憨兒烘焙餐廳(高雄-創作料理)"
+      ],
+      "canonicalName": "喜憨兒創作料理",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.c-are-us.org.tw/info/news/201906/102124",
+      "verificationTitle": "盛夏好食光~清爽上市 | 喜憨兒社會福利基金會",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"07 767 7238\" \"高雄市三民區文濱路53號\""
+    },
+    {
+      "identityKey": "高雄市三民區澄清路536號|077776435",
+      "address": "高雄市三民區澄清路536號",
+      "phone": "07 777 6435",
+      "sourceNames": [
+        "聚北海道鍋物(澄清文衡店)",
+        "聚北海道鍋物(高雄澄清店)"
+      ],
+      "canonicalName": "聚北海道鍋物(澄清文衡店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://spot.line.me/detail/709090652691897938",
+      "verificationTitle": "聚北海道鍋物-澄清文衡店 - LINE熱點",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"07 777 6435\" \"高雄市三民區澄清路536號\""
+    },
+    {
+      "identityKey": "高雄市三民區綏遠二街188號|073229576",
+      "address": "高雄市三民區綏遠二街188號",
+      "phone": "07-322-9576",
+      "sourceNames": [
+        "鹿仔草冰店",
+        "鹿草冰店"
+      ],
+      "canonicalName": "鹿仔草冰店",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://footinder.com.tw/%E9%AB%98%E9%9B%84%E5%B8%82%E4%B8%89%E6%B0%91%E5%8D%80/28338/",
+      "verificationTitle": "高雄市三民區 鹿仔草冰店－綏遠總店 - 台灣餐廳推薦 手搖推薦 甜點推薦 買一送一 優惠訊息",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"07-322-9576\" \"高雄市三民區綏遠二街188號\""
+    },
+    {
+      "identityKey": "高雄市三民區興隆街21號|073809876",
+      "address": "高雄市三民區興隆街21號",
+      "phone": "07-3809876",
+      "sourceNames": [
+        "和。好珈琲店",
+        "和。好珈琲"
+      ],
+      "canonicalName": "和。好珈琲店",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://lifeofjpa.blogspot.com/2013/09/blog-post.html",
+      "verificationTitle": "[高雄 三民 咖啡] 和。好珈琲店 悠閒時光 @ J 爸的吃喝玩樂不全記錄",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"07-3809876\" \"高雄市三民區興隆街21號\""
+    },
+    {
+      "identityKey": "高雄市前金區中華四路314號|072010016",
+      "address": "高雄市前金區中華四路314號",
+      "phone": "07 201 0016",
+      "sourceNames": [
+        "金漢城韓國料理",
+        "金漢城小吃店"
+      ],
+      "canonicalName": "金漢城韓國料理",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/2935780",
+      "verificationTitle": "金漢城韓國料理菜單：海鮮煎餅、韓式烤肉、生菜、五花豬肉、石鍋拌飯...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"07 201 0016\" \"高雄市前金區中華四路314號\""
+    },
+    {
+      "identityKey": "高雄市前金區五福三路62號|072415419",
+      "address": "高雄市前金區五福三路62號",
+      "phone": "07 241 5419",
+      "sourceNames": [
+        "金城鴨肉専門店",
+        "泰和正鴨肉飯"
+      ],
+      "canonicalName": "金城鴨肉専門店",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://south.1111.com.tw/food/food.asp?fNo=705&kit=",
+      "verificationTitle": "高雄美食：古早味黃麵 ✖ 金城鴨肉專賣店－1111南台灣美食集 | 台南、高雄與屏東美食推薦",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"07 241 5419\" \"高雄市前金區五福三路62號\""
+    },
+    {
+      "identityKey": "高雄市前鎮區中華五路789號|079631238",
+      "address": "高雄市前鎮區中華五路789號",
+      "phone": "07 963 1238",
+      "sourceNames": [
+        "勝博殿日式豬排專賣(夢時代店)",
+        "勝博殿日式豬排專賣(大魯閣草衙道店)"
+      ],
+      "canonicalName": "勝博殿日式豬排專賣(夢時代店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.saboten.com.tw/store.php?act=view&id=18",
+      "verificationTitle": "夢時代店 (搬新家在7F藍鯨館!歡迎線上訂位)_南部_店鋪情報 | 勝博殿-日式豬排",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"07 963 1238\" \"高雄市前鎮區中華五路789號\""
+    },
+    {
+      "identityKey": "高雄市左營區博愛二路767號9f|075559168",
+      "address": "高雄市左營區博愛二路767號9F",
+      "phone": "07 555 9168",
+      "sourceNames": [
+        "翠園粵菜餐廳(巨蛋店)",
+        "【漢來大飯店巨蛋會館】翠園餐廳"
+      ],
+      "canonicalName": "翠園粵菜餐廳(巨蛋店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.ptt.cc/bbs/Kaohsiung/M.1573312863.A.CC4.html",
+      "verificationTitle": "[食記] 漢來翠園粵菜餐廳 巨蛋店 好吃的港式飲茶 - 看板 Kaohsiung - 批踢踢實業坊",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"07 555 9168\" \"高雄市左營區博愛二路767號9F\""
+    },
+    {
+      "identityKey": "高雄市左營區安吉街468號|075506811",
+      "address": "高雄市左營區安吉街468號",
+      "phone": "07 550 6811",
+      "sourceNames": [
+        "花花世界鍋物(高雄左營旗艦店)",
+        "梨花 A5和牛放題"
+      ],
+      "canonicalName": "花花世界鍋物(高雄左營旗艦店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/2400927",
+      "verificationTitle": "花花世界鍋物(高雄左營旗艦店)菜單：冬粉、梅花豬、科學麵、廣島牡蠣、蛤蠣...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"07 550 6811\" \"高雄市左營區安吉街468號\""
+    },
+    {
+      "identityKey": "高雄市左營區明華一路166號|075566696",
+      "address": "高雄市左營區明華一路166號",
+      "phone": "07 556 6696",
+      "sourceNames": [
+        "VEGETEJIYA 菜豚屋(高雄左營店)",
+        "富士山龍燒烤(高雄店)"
+      ],
+      "canonicalName": "彩豚屋 高雄店",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.opentable.com.tw/restaurant/profile/186170",
+      "verificationTitle": "彩豚屋 高雄店",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"07 556 6696\" \"高雄市左營區明華一路166號\""
+    },
+    {
+      "identityKey": "高雄市左營區高鐵路123號b2|073104090",
+      "address": "高雄市左營區高鐵路123號b2",
+      "phone": "07 310 4090",
+      "sourceNames": [
+        "樺達奶茶(左營環球店)",
+        "樺達奶茶(新光三越左營店)"
+      ],
+      "canonicalName": "樺達奶茶(左營環球店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://blog.footinder.app/%E9%AB%98%E9%9B%84%E5%B8%82%E5%B7%A6%E7%87%9F%E5%8D%80-2/651a9f8c652c61e1a761d568/",
+      "verificationTitle": "高雄市左營區 樺達奶茶 - FooTinder 美食推薦 美食App",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"07 310 4090\" \"高雄市左營區高鐵路123號b2\""
+    },
+    {
+      "identityKey": "高雄市新興區中正四路53號|072412068",
+      "address": "高雄市新興區中正四路53號",
+      "phone": "07-241-2068",
+      "sourceNames": [
+        "高盧專廚餐廳",
+        "高廬法式專廚餐廳"
+      ],
+      "canonicalName": "高廬法式專廚餐廳",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/477636",
+      "verificationTitle": "高廬法式專廚餐廳菜單：麵包、美國枕頭牛排佐西班牙蒜味醬、牛肉清湯、特製雪霜、開胃菜...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"07-241-2068\" \"高雄市新興區中正四路53號\""
+    },
+    {
+      "identityKey": "高雄市新興區復興二路286號|072238990",
+      "address": "高雄市新興區復興二路286號",
+      "phone": "07-223-8990",
+      "sourceNames": [
+        "喜憨兒烘焙餐廳(高雄-桔香草鍋物專賣店)",
+        "桔香草鍋物專賣店"
+      ],
+      "canonicalName": "喜憨兒烘焙餐廳(高雄-桔香草鍋物專賣店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.c-are-us.org.tw/about/service_area/102724",
+      "verificationTitle": "喜憨兒鍋物料理 | 喜憨兒社會福利基金會",
+      "confidence": "low",
+      "resolution": "fallback",
+      "query": "\"07-223-8990\" \"高雄市新興區復興二路286號\""
+    },
+    {
+      "identityKey": "高雄市茄萣區順漁路100號|076987882",
+      "address": "高雄市茄萣區順漁路100號",
+      "phone": "07 698 7882",
+      "sourceNames": [
+        "頤夫日式海上音樂餐廳",
+        "愛法蘿i-faro海上音樂餐廳"
+      ],
+      "canonicalName": "頤夫日式海上音樂餐廳",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.fonfood.com/store/6913801",
+      "verificationTitle": "頤夫日式海上音樂餐廳菜單：烤黑輪、菜盤、蛤蠣、烤澎湖軟絲、鐵板系列...",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"07 698 7882\" \"高雄市茄萣區順漁路100號\""
+    },
+    {
+      "identityKey": "高雄市鳳山區國泰路一段288號|077405999",
+      "address": "高雄市鳳山區國泰路一段288號",
+      "phone": "07 740 5999",
+      "sourceNames": [
+        "凱宴自助百匯",
+        "【皇家金宸大飯店】阿雷佐牛排館"
+      ],
+      "canonicalName": "金宸火鍋",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.facebook.com/RGhotel.tw/",
+      "verificationTitle": "皇家金宸大飯店近期公開資訊：金宸火鍋",
+      "confidence": "medium",
+      "resolution": "verified",
+      "query": "\"07 740 5999\" \"高雄市鳳山區國泰路一段288號\""
+    },
+    {
+      "identityKey": "高雄市鹽埕區新樂街163巷1號|075511378",
+      "address": "高雄市鹽埕區新樂街163巷1號",
+      "phone": "07 551 1378",
+      "sourceNames": [
+        "金記溫州餛飩大王",
+        "金溫洲餛飩大王"
+      ],
+      "canonicalName": "金記溫州餛飩大王",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://rankedfood.com/restaurant/%E9%87%91%E6%BA%AB%E5%B7%9E%E9%A4%9B%E9%A3%A9%E5%A4%A7%E7%8E%8B/",
+      "verificationTitle": "〖高雄美食〗金溫州餛飩大王 小吃推薦",
+      "confidence": "medium",
+      "resolution": "verified",
+      "query": "\"07 551 1378\" \"高雄市鹽埕區新樂街163巷1號\""
+    },
+    {
+      "identityKey": "高雄市鼓山區河西一路1477號|075559722",
+      "address": "高雄市鼓山區河西一路1477號",
+      "phone": "07 555 9722",
+      "sourceNames": [
+        "鄧師傅功夫菜(美術館店)",
+        "鄧師傅滷味(美術館店)"
+      ],
+      "canonicalName": "鄧師傅功夫菜(美術館店)",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://www.kinnso.ai/zh-tw/explore/dining/tw_restaurant_6013",
+      "verificationTitle": "鄧師傅功夫菜 美術館店 - Kinnso",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"07 555 9722\" \"高雄市鼓山區河西一路1477號\""
+    },
+    {
+      "identityKey": "高雄市鼓山區蓬萊路17號|075517799",
+      "address": "高雄市鼓山區蓬萊路17號",
+      "phone": "07 551 7799",
+      "sourceNames": [
+        "掌門精釀啤酒(棧貳庫店)",
+        "掌門精釀啤酒餐廳-棧貳庫店"
+      ],
+      "canonicalName": "掌門精釀啤酒餐廳-棧貳庫店",
+      "verifiedAt": "2026-08-10",
+      "verificationUrl": "https://travel.yam.com/place/30449",
+      "verificationTitle": "掌門精釀啤酒餐廳-棧貳庫店 - 地點資訊 - 輕旅行",
+      "confidence": "high",
+      "resolution": "verified",
+      "query": "\"07 551 7799\" \"高雄市鼓山區蓬萊路17號\""
+    }
+  ]
+}
+

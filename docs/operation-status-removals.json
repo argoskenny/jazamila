@@ -1,0 +1,2524 @@
+[
+  {
+    "source_id": "625284",
+    "id": "chiayi-city-dong-023",
+    "name": "嘉義劉里長火雞肉飯",
+    "address": "嘉義市東區公明路197號",
+    "reason": "Google Maps 明確標示「永久歇業」",
+    "source": "https://www.google.com/maps/search/%E5%98%89%E7%BE%A9%E5%8A%89%E9%87%8C%E9%95%B7%E7%81%AB%E9%9B%9E%E8%82%89%E9%A3%AF%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%85%AC%E6%98%8E%E8%B7%AF197%E8%99%9F?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "625284",
+      "name": "嘉義劉里長火雞肉飯",
+      "address": "嘉義市東區公明路197號",
+      "phone": "05 222 7669",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 30,
+        "max": 65,
+        "display": "約 NT$30–65/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "在地美食",
+        "小吃",
+        "排隊"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 3.7,
+        "review_count": 8387,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 343,
+        "review_summary": [
+          "滿6000折6000元折扣碼",
+          "火雞肉飯是35元",
+          "火雞片飯是55元",
+          "這樣子一份排骨才30元",
+          "20元的味噌湯就中規中矩",
+          "高鐵75折元來是這樣子訂喔"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/625284"
+      ],
+      "id": "chiayi-city-dong-023",
+      "image_url": "https://lh3.googleusercontent.com/zsaVdHdCrW-8Dpk_nQHRg-x8Bdj5XKnrCgMZcyuoNpUBqpWY5olkVXuoQmTQEV2yekbzucQBz5WAjdkn1GuTLA=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/625284",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "1694243",
+    "id": "chiayi-city-dong-066",
+    "name": "劉里長雞肉飯",
+    "address": "嘉義市東區公明路197號",
+    "reason": "Google Maps 明確標示「永久歇業」",
+    "source": "https://www.google.com/maps/search/%E5%8A%89%E9%87%8C%E9%95%B7%E9%9B%9E%E8%82%89%E9%A3%AF%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%85%AC%E6%98%8E%E8%B7%AF197%E8%99%9F?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "1694243",
+      "name": "劉里長雞肉飯",
+      "address": "嘉義市東區公明路197號",
+      "phone": "05 222 7669",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 30,
+        "max": 75,
+        "display": "約 NT$30–75/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "排隊",
+        "人氣"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 3.7,
+        "review_count": 8496,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 41,
+        "review_summary": [
+          "嘉義便宜雞肉飯推薦小菜又多榮獲500碗嘉義美食外帶",
+          "藏在嘉義東市場超便宜嘉義雞肉飯",
+          "然後再排隊結帳",
+          "樹小編有吃過覺得還是沒現場好吃",
+          "雖然比雞絲飯稍微貴一些些"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/1694243"
+      ],
+      "id": "chiayi-city-dong-066",
+      "image_url": "https://lh3.googleusercontent.com/TnLS2VrRrX_iSwAPpNuV4etwUIIXMuqOb3lViEI1HAky8hymVDf4_nn7WOSDhaYmk9IRKLgmtiwDVaOxx-F-jIUvwvCOlv8th28Q=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/1694243",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "944958",
+    "id": "chiayi-city-dong-069",
+    "name": "魔樹屋親子餐廳",
+    "address": "嘉義市東區大雅路二段558號",
+    "reason": "Google Maps 明確標示「永久歇業」",
+    "source": "https://www.google.com/maps/search/%E9%AD%94%E6%A8%B9%E5%B1%8B%E8%A6%AA%E5%AD%90%E9%A4%90%E5%BB%B3%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%A4%A7%E9%9B%85%E8%B7%AF%E4%BA%8C%E6%AE%B5558%E8%99%9F?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "944958",
+      "name": "魔樹屋親子餐廳",
+      "address": "嘉義市東區大雅路二段558號",
+      "phone": "05 275 0908",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 300,
+        "max": 300,
+        "display": "約 NT$300/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "親子",
+        "遊戲區"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.1,
+        "review_count": 878,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 78,
+        "review_summary": [
+          "裝飾的好有節日氣氛啊",
+          "而且價格很親民",
+          "主廚在菜色的料理非常用心",
+          "每樣食材都處理得乾乾淨淨的",
+          "而且這肉醬義大利麵真的很好吃",
+          "咖哩也是小朋友偏愛的日式口味",
+          "這披薩好吃耶"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/944958"
+      ],
+      "id": "chiayi-city-dong-069",
+      "image_url": "https://lh3.googleusercontent.com/wQRIkrs-h2aHb47NBfpudARCOpKySguegjH9HPd1hpyy7TDPLgX7pB_gX4Rq4FDLSMz-POIyID9B_Jok5kkoy1rk6a8uxI9a1Vg=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/944958",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "1501662",
+    "id": "chiayi-city-dong-085",
+    "name": "美好咖啡店ＭihoCoffee",
+    "address": "嘉義市東區啟明路146號",
+    "reason": "Google Maps 明確標示「暫時關閉」",
+    "source": "https://www.google.com/maps/search/%E7%BE%8E%E5%A5%BD%E5%92%96%E5%95%A1%E5%BA%97%EF%BC%ADihoCoffee%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%95%9F%E6%98%8E%E8%B7%AF146%E8%99%9F?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "1501662",
+      "name": "美好咖啡店ＭihoCoffee",
+      "address": "嘉義市東區啟明路146號",
+      "phone": "0965 060 288",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 65,
+        "max": 300,
+        "display": "約 NT$65–300/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "景觀咖啡",
+        "早午餐",
+        "咖啡",
+        "甜點"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.6,
+        "review_count": 478,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 32,
+        "review_summary": [
+          "宅配團購美食",
+          "網路好物推薦",
+          "裝潢也走溫暖居家的氣氛",
+          "嚴選台灣農產品製成各式各樣口味",
+          "很推海苔與芝麻口味",
+          "高雄吃到飽"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/1501662"
+      ],
+      "id": "chiayi-city-dong-085",
+      "image_url": "https://lh3.googleusercontent.com/mNw0eszIYqotELwd_9nK65JhFwVXxkj_JwhlyB29BnExpBqdFdBMZN8R6ZwkNEn8_oEMGsL_sEvMGPqrxJe2igw83RrGvUJdgvA=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/1501662",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "2143459",
+    "id": "chiayi-city-dong-097",
+    "name": "肉多多火鍋(嘉義中山店)",
+    "address": "嘉義市東區中山路271號一樓",
+    "reason": "Google Maps 明確標示「暫時關閉」",
+    "source": "https://www.google.com/maps/search/%E8%82%89%E5%A4%9A%E5%A4%9A%E7%81%AB%E9%8D%8B(%E5%98%89%E7%BE%A9%E4%B8%AD%E5%B1%B1%E5%BA%97)%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E4%B8%AD%E5%B1%B1%E8%B7%AF271%E8%99%9F%E4%B8%80%E6%A8%93?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "2143459",
+      "name": "肉多多火鍋(嘉義中山店)",
+      "address": "嘉義市東區中山路271號一樓",
+      "phone": "05 227 6808",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 268,
+        "max": 910,
+        "display": "約 NT$268–910/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "火鍋",
+        "素食",
+        "吃到飽",
+        "人氣",
+        "排隊"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.3,
+        "review_count": 611,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 1318,
+        "review_summary": [
+          "自助區飲料喝得到露易莎咖啡",
+          "飲料霜淇淋自助吧",
+          "貴州紅酸湯",
+          "常常看見一樓有客人開始排隊",
+          "又不用起身去自助區拿",
+          "只要消費700元就能換購一枚代幣夾娃娃機"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/2143459"
+      ],
+      "id": "chiayi-city-dong-097",
+      "image_url": "https://lh3.googleusercontent.com/oth783nSnZxh2CEB1UTZFNk7VX5QhioCowpaNyjS7KjYgXRBBnxVQi4dKHC044uttpWtJbaEzJvla_s3imeovuSKN3ZmD1wLnk8=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/2143459",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "692996",
+    "id": "chiayi-city-dong-099",
+    "name": "【耐斯王子大飯店】萬國百匯",
+    "address": "嘉義市東區忠孝路600號",
+    "reason": "Google Maps 明確標示「永久歇業」",
+    "source": "https://www.google.com/maps/search/%E3%80%90%E8%80%90%E6%96%AF%E7%8E%8B%E5%AD%90%E5%A4%A7%E9%A3%AF%E5%BA%97%E3%80%91%E8%90%AC%E5%9C%8B%E7%99%BE%E5%8C%AF%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%BF%A0%E5%AD%9D%E8%B7%AF600%E8%99%9F?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "692996",
+      "name": "【耐斯王子大飯店】萬國百匯",
+      "address": "嘉義市東區忠孝路600號",
+      "phone": "05 277 1999",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 400,
+        "max": 1500,
+        "display": "約 NT$400–1500/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式料理",
+        "港式料理",
+        "法式料理",
+        "甜點",
+        "麵包"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 3.7,
+        "review_count": 912,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 39,
+        "review_summary": [
+          "全家人一起吃飯",
+          "吃到飽就不太划算",
+          "是全家可以聚在一起吃飯",
+          "吃飽了就好了",
+          "吃到飽餐廳",
+          "餐廳菜色豐富",
+          "熱食種類也很多"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/692996"
+      ],
+      "id": "chiayi-city-dong-099",
+      "image_url": "https://lh3.googleusercontent.com/TOz5TAvt8aZ9M-zO6acsbMl5-_52hytamdKJ5bLekeNRwYgyJeg-fsERGo3blKupHki_rSUDd4LKvzJJSut97w=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/692996",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "7753619",
+    "id": "chiayi-city-dong-102",
+    "name": "豬對有韓式烤肉吃到飽(嘉義店)",
+    "address": "嘉義市東區民族路184號",
+    "reason": "Google Maps 明確標示「永久歇業」",
+    "source": "https://www.google.com/maps/search/%E8%B1%AC%E5%B0%8D%E6%9C%89%E9%9F%93%E5%BC%8F%E7%83%A4%E8%82%89%E5%90%83%E5%88%B0%E9%A3%BD(%E5%98%89%E7%BE%A9%E5%BA%97)%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E6%B0%91%E6%97%8F%E8%B7%AF184%E8%99%9F?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "7753619",
+      "name": "豬對有韓式烤肉吃到飽(嘉義店)",
+      "address": "嘉義市東區民族路184號",
+      "phone": "05 227 3147",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 400,
+        "max": 1500,
+        "display": "約 NT$400–1500/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "燒肉吃到飽",
+        "吃到飽",
+        "韓式",
+        "燒肉",
+        "火鍋",
+        "平價"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 3.9,
+        "review_count": 1139,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 150,
+        "review_summary": [
+          "豬對有燒烤吃到飽有林口文化店",
+          "也可以肉品升級成頂級饗宴689元",
+          "689元兩種價位吃到飽",
+          "439元吃到飽可以無限享用自助吧的所有食材",
+          "而選擇689元吃到飽除了自助吧的所有食材外"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/7753619"
+      ],
+      "id": "chiayi-city-dong-102",
+      "image_url": "https://lh3.googleusercontent.com/z55H6_xIGknZWxsnQSiGIOd_jM4Yu_pEfieZgjlWe6R3IN1tbkJ1f4-iKUHcSV5LbrID_Wrjmj-zQzy6XgZdZHvquW0n6Jy6aQ=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/7753619",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "846519",
+    "id": "chiayi-city-dong-115",
+    "name": "所長茶葉蛋(檜意門市)",
+    "address": "嘉義市東區林森東路38號",
+    "reason": "Google Maps 明確標示「停止營業」",
+    "source": "https://www.google.com/maps/search/%E6%89%80%E9%95%B7%E8%8C%B6%E8%91%89%E8%9B%8B(%E6%AA%9C%E6%84%8F%E9%96%80%E5%B8%82)%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E6%9E%97%E6%A3%AE%E6%9D%B1%E8%B7%AF38%E8%99%9F?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "846519",
+      "name": "所長茶葉蛋(檜意門市)",
+      "address": "嘉義市東區林森東路38號",
+      "phone": "05 276 1113",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 12,
+        "max": 12,
+        "display": "約 NT$12/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式料理",
+        "泰式料理",
+        "甜點"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.1,
+        "review_count": 256,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 316,
+        "review_summary": [
+          "超好吃的所長豆干堡竟然50元有找",
+          "一吃驚覺怎麼可以這麼好吃",
+          "還是店面的好吃",
+          "像這種好吃的豆干也是必買",
+          "當然要吃好吃滿啦",
+          "直接買了兩種口味的茶葉蛋",
+          "來看看哪個好吃吧"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/846519"
+      ],
+      "id": "chiayi-city-dong-115",
+      "image_url": "https://lh3.googleusercontent.com/eueq6AfkWtEgxGeUm-R1b1ZMbFu1nzaFYyKz758fDqp-xXyftcBfjLKbjVFAn0dEP9m2CpavhW8KTviPnaAmqoM=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/846519",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "4827564",
+    "id": "chiayi-city-dong-122",
+    "name": "野瘦派低卡便當 健康餐盒-嘉義店(嘉義店)",
+    "address": "嘉義市東區吳鳳北路49號",
+    "reason": "Google Maps 明確標示「永久歇業」",
+    "source": "https://www.google.com/maps/search/%E9%87%8E%E7%98%A6%E6%B4%BE%E4%BD%8E%E5%8D%A1%E4%BE%BF%E7%95%B6%20%E5%81%A5%E5%BA%B7%E9%A4%90%E7%9B%92-%E5%98%89%E7%BE%A9%E5%BA%97(%E5%98%89%E7%BE%A9%E5%BA%97)%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%90%B3%E9%B3%B3%E5%8C%97%E8%B7%AF49%E8%99%9F?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "4827564",
+      "name": "野瘦派低卡便當 健康餐盒-嘉義店(嘉義店)",
+      "address": "嘉義市東區吳鳳北路49號",
+      "phone": "05 227 6799",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 80,
+        "max": 400,
+        "display": "約 NT$80–400/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "便當"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.6,
+        "review_count": 183,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 2,
+        "review_summary": [
+          "野瘦派低卡便當"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/4827564"
+      ],
+      "id": "chiayi-city-dong-122",
+      "image_url": "https://lh3.googleusercontent.com/2gOootguJjPWOWIj7rTDXISCmhUNlcI1qSepi-RkJrrp-8Uk34TvW2IVwqEs2mIn6GlRFvLZqhkmX_N8DDN62xhW5IvpipOC5eZQ=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/4827564",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "4695107",
+    "id": "chiayi-city-dong-125",
+    "name": "橡果廚房",
+    "address": "嘉義市東區民樂街135號",
+    "reason": "Google Maps 明確標示「永久歇業」",
+    "source": "https://www.google.com/maps/search/%E6%A9%A1%E6%9E%9C%E5%BB%9A%E6%88%BF%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E6%B0%91%E6%A8%82%E8%A1%97135%E8%99%9F?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "4695107",
+      "name": "橡果廚房",
+      "address": "嘉義市東區民樂街135號",
+      "phone": "05 225 2123",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 80,
+        "max": 400,
+        "display": "約 NT$80–400/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "美式料理",
+        "咖啡",
+        "茶飲"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.6,
+        "review_count": 109,
+        "source_snapshot": "來源頁面標註1年前",
+        "food_diary_count": 2,
+        "review_summary": [
+          "會附一杯80元飲品",
+          "口味比較重",
+          "小愛越南料理的很好吃唷",
+          "每個人口味喜好不同",
+          "排餐價格338元起",
+          "主餐含吃到飽自助沙拉吧",
+          "口味多樣化"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/4695107"
+      ],
+      "id": "chiayi-city-dong-125",
+      "image_url": "https://lh3.googleusercontent.com/vHFNUdVhNgMLaUYSOb83CXLihVuI-tw2FT9PQZBteSJySNaKFBN84_c0YONyjuaOtdCDioFRX9OJ7P77ojD1TXCh9HJbEDMFVFg=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/4695107",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "8109476",
+    "id": "chiayi-city-dong-126",
+    "name": "Fun Tower日式可麗餅(嘉義店)",
+    "address": "嘉義市東區興中街2-1號",
+    "reason": "Google Maps 明確標示「暫時關閉」",
+    "source": "https://www.google.com/maps/search/Fun%20Tower%E6%97%A5%E5%BC%8F%E5%8F%AF%E9%BA%97%E9%A4%85(%E5%98%89%E7%BE%A9%E5%BA%97)%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E8%88%88%E4%B8%AD%E8%A1%972-1%E8%99%9F?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "8109476",
+      "name": "Fun Tower日式可麗餅(嘉義店)",
+      "address": "嘉義市東區興中街2-1號",
+      "phone": "05 228 5678",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 160,
+        "max": 239,
+        "display": "約 NT$160–239/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "甜點"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.1,
+        "review_count": 211,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 126,
+        "review_summary": [
+          "冰淇淋口味還蠻多",
+          "可麗餅口味也很多",
+          "朋友點的草莓布朗尼口味",
+          "選擇卡士達焦糖烤布蕾口味",
+          "竟還有老梅干菜口味",
+          "餐點口味有用心可頌豪好吃"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/8109476"
+      ],
+      "id": "chiayi-city-dong-126",
+      "image_url": "https://lh3.googleusercontent.com/uPyL5Cvwl0kfX-vhX-Ex-elRdM9Mp79L1K1b1-BZphXlzdPpdrBGTVw-9r-hDOjkvIh0cp1EREqwBrBJeO6ILy1IFEigqinnCg=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/8109476",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "4316528",
+    "id": "chiayi-city-dong-129",
+    "name": "心詩甜點",
+    "address": "嘉義市東區長榮街233號",
+    "reason": "Google Maps 明確標示「永久歇業」",
+    "source": "https://www.google.com/maps/search/%E5%BF%83%E8%A9%A9%E7%94%9C%E9%BB%9E%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E9%95%B7%E6%A6%AE%E8%A1%97233%E8%99%9F?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "4316528",
+      "name": "心詩甜點",
+      "address": "嘉義市東區長榮街233號",
+      "phone": "05 277 1165",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 90,
+        "max": 120,
+        "display": "約 NT$90–120/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "甜點"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.3,
+        "review_count": 108,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 9,
+        "review_summary": [
+          "一份甜點只要90元起跳",
+          "這份為最人氣的紅茶戚風蛋糕100元",
+          "這份為OERO焦糖香蕉蛋糕100元",
+          "這份為季節限定水果綠葡萄蛋糕120元",
+          "這份為提拉米蘇110元"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/4316528"
+      ],
+      "id": "chiayi-city-dong-129",
+      "image_url": "https://lh3.googleusercontent.com/lyodzLqD3pxJbR0tjgqbSvKxrz-H7tlKI1g6tu0L14LJBYNR6cj3hTvMazeE2HSDdNpenwG-4ua5w-ClAIu9Y7A6dLo5T6bxxUA=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/4316528",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "2238089",
+    "id": "chiayi-city-dong-133",
+    "name": "異人館咖啡部屋(嘉雅店)",
+    "address": "嘉義市東區大雅路二段563-3號",
+    "reason": "Google Maps 明確標示「永久歇業」",
+    "source": "https://www.google.com/maps/search/%E7%95%B0%E4%BA%BA%E9%A4%A8%E5%92%96%E5%95%A1%E9%83%A8%E5%B1%8B(%E5%98%89%E9%9B%85%E5%BA%97)%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%A4%A7%E9%9B%85%E8%B7%AF%E4%BA%8C%E6%AE%B5563-3%E8%99%9F?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "2238089",
+      "name": "異人館咖啡部屋(嘉雅店)",
+      "address": "嘉義市東區大雅路二段563-3號",
+      "phone": "05 276 2137",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 29,
+        "max": 29,
+        "display": "約 NT$29/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "火鍋",
+        "下午茶",
+        "咖啡",
+        "聚餐"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 3.8,
+        "review_count": 438,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 228,
+        "review_summary": [
+          "如果再有太陽的日子來吃下午茶感覺很貴婦",
+          "店內有自助的醬料",
+          "但整個裝潢至少走溫馨的路線",
+          "超過30種以上蔬食飯麵飲料冰品都自助吃到飽",
+          "500元平價無菜單料理"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/2238089"
+      ],
+      "id": "chiayi-city-dong-133",
+      "image_url": "https://lh3.googleusercontent.com/12SKbete3VvoAM4EPRZpZcwbLewljr-X4dCquFkx3CcuCx0UGPeGpr5MG2EQz9vZILXnUvOgN7qgZquHoYWKWc8=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/2238089",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "6995656",
+    "id": "chiayi-city-dong-140",
+    "name": "根亭日式小吃",
+    "address": "嘉義市東區興業東路233號",
+    "reason": "Google Maps 明確標示「暫時關閉」",
+    "source": "https://www.google.com/maps/search/%E6%A0%B9%E4%BA%AD%E6%97%A5%E5%BC%8F%E5%B0%8F%E5%90%83%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E8%88%88%E6%A5%AD%E6%9D%B1%E8%B7%AF233%E8%99%9F?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "6995656",
+      "name": "根亭日式小吃",
+      "address": "嘉義市東區興業東路233號",
+      "phone": "05 227 1848",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 30,
+        "max": 240,
+        "display": "約 NT$30–240/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "小吃"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 3.9,
+        "review_count": 141,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 4,
+        "review_summary": [
+          "經濟實惠的日式小吃",
+          "消費同時享受現金回饋",
+          "走經濟實惠路線",
+          "圓桌很適合家庭聚餐",
+          "綜合生魚片180元",
+          "生魚片很新鮮好吃",
+          "雞串燒1串90元"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/6995656"
+      ],
+      "id": "chiayi-city-dong-140",
+      "image_url": "https://lh3.googleusercontent.com/Sse0RCJDUxXcQo25FXTB4k3WaS1G0DnDaepO8YZFKyrRDc9ZvBelL1ObKN4aBU4jWUTh8uAmW4RHmuANh8qQkZorG6XCl6nMDFI=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/6995656",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "435202",
+    "id": "chiayi-city-dong-142",
+    "name": "我家牛排(嘉義光彩店)",
+    "address": "嘉義市東區光彩街396號",
+    "reason": "Google Maps 明確標示「永久歇業」",
+    "source": "https://www.google.com/maps/search/%E6%88%91%E5%AE%B6%E7%89%9B%E6%8E%92(%E5%98%89%E7%BE%A9%E5%85%89%E5%BD%A9%E5%BA%97)%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%85%89%E5%BD%A9%E8%A1%97396%E8%99%9F?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "435202",
+      "name": "我家牛排(嘉義光彩店)",
+      "address": "嘉義市東區光彩街396號",
+      "phone": "05 229 2770",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 55,
+        "max": 380,
+        "display": "約 NT$55–380/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "美式",
+        "牛排",
+        "訂位",
+        "平價"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 3.2,
+        "review_count": 203,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 394,
+        "review_summary": [
+          "板橋牛排推薦~\"我家牛排 板橋三民店\",擁有35年老品牌的\"我家牛排\",主打平價、超高CP值牛排+海陸自助吧吃到飽,主餐排餐最低價只要$400起,堅持35年都使用原肉、呈現肉質的原汁原味,口感也特別軟"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/435202"
+      ],
+      "id": "chiayi-city-dong-142",
+      "image_url": "https://lh5.ggpht.com/ds3-PYRJdmXiLg_ZnYeZX8VZqZXBWfy-pQcYYKlaPVnJY9Fgqua6I15fybT_dXB4BStKPiX4a6h6ry541tKYG-c=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/435202",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "5114504",
+    "id": "chiayi-city-dong-151",
+    "name": "安禾伍食事処(燒肉丼專賣)",
+    "address": "嘉義市東區安和街5號",
+    "reason": "Google Maps 明確標示「永久歇業」",
+    "source": "https://www.google.com/maps/search/%E5%AE%89%E7%A6%BE%E4%BC%8D%E9%A3%9F%E4%BA%8B%E5%87%A6(%E7%87%92%E8%82%89%E4%B8%BC%E5%B0%88%E8%B3%A3)%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%AE%89%E5%92%8C%E8%A1%975%E8%99%9F?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "5114504",
+      "name": "安禾伍食事処(燒肉丼專賣)",
+      "address": "嘉義市東區安和街5號",
+      "phone": "05 277 5580",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 40,
+        "max": 180,
+        "display": "約 NT$40–180/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "燒肉"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.3,
+        "review_count": 460,
+        "source_snapshot": "來源頁面標註詳情",
+        "food_diary_count": 22,
+        "review_summary": [
+          "價位也不會太高",
+          "外觀類似日本小店的裝潢",
+          "採用大量的木頭裝潢",
+          "看得出來很努力營造日式氣氛",
+          "海苔玉子燒NT40",
+          "麻婆雞腿丼NT195"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/5114504"
+      ],
+      "id": "chiayi-city-dong-151",
+      "image_url": "https://www.fonfood.com/store/undefined",
+      "image_source_url": "https://www.fonfood.com/store/5114504",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "1107043",
+    "id": "chiayi-city-dong-155",
+    "name": "R5小餐館",
+    "address": "嘉義市東區忠孝路205號",
+    "reason": "Google Maps 明確標示「永久歇業」",
+    "source": "https://www.google.com/maps/search/R5%E5%B0%8F%E9%A4%90%E9%A4%A8%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%BF%A0%E5%AD%9D%E8%B7%AF205%E8%99%9F?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "1107043",
+      "name": "R5小餐館",
+      "address": "嘉義市東區忠孝路205號",
+      "phone": "05 277 0250",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 70,
+        "max": 270,
+        "display": "約 NT$70–270/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "美式",
+        "義式",
+        "漢堡",
+        "義大利麵",
+        "文青"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.2,
+        "review_count": 297,
+        "source_snapshot": "來源頁面標註詳情",
+        "food_diary_count": 27,
+        "review_summary": [
+          "下午茶甜點",
+          "採自助式點餐",
+          "個人感覺有點小貴",
+          "主餐加點折扣30元",
+          "整體都滿美味的",
+          "價格也小貴"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/1107043"
+      ],
+      "id": "chiayi-city-dong-155",
+      "image_url": "https://lh3.googleusercontent.com/EXeSirQ2VRuum-2cjehRvsvvGYVzbz0U88CNKflscDAMf5LlaQ0p9RtxrTvP7FXFE7bZBFkUK8li8m-L224fvQ=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/1107043",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "8605610",
+    "id": "chiayi-city-dong-156",
+    "name": "夢露冰菓室",
+    "address": "嘉義市東區中山路203號",
+    "reason": "Google Maps 明確標示「永久歇業」",
+    "source": "https://www.google.com/maps/search/%E5%A4%A2%E9%9C%B2%E5%86%B0%E8%8F%93%E5%AE%A4%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E4%B8%AD%E5%B1%B1%E8%B7%AF203%E8%99%9F?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "8605610",
+      "name": "夢露冰菓室",
+      "address": "嘉義市東區中山路203號",
+      "phone": "(05)224-6000",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 80,
+        "max": 90,
+        "display": "約 NT$80–90/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "冰品",
+        "文青",
+        "網美打卡",
+        "復古"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4,
+        "review_count": 121,
+        "source_snapshot": "來源頁面標註詳情",
+        "food_diary_count": 42,
+        "review_summary": [
+          "裝潢清一色白色磁磚",
+          "烏龍茶與台式抹茶口味",
+          "還有抹茶口味的",
+          "我們點得是夢露剉冰80元",
+          "其實小郭與安妮覺得不便宜",
+          "整體來說珍珠和芋圓口感也偏硬"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/8605610"
+      ],
+      "id": "chiayi-city-dong-156",
+      "image_url": "https://lh3.googleusercontent.com/BokqLVs0GhbILPLtOl-V8b9i6XBz9F_U9KDKmoT-q9uOTXnpOKx51771hRNMc81PXOZKq3quaX6CA6iRXPg42FU=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/8605610",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "1478874",
+    "id": "chiayi-city-dong-160",
+    "name": "鴻豆王國台灣精品咖啡館(檜意村門市)",
+    "address": "嘉義市東區共和路378巷2號T14C館",
+    "reason": "Google Maps 明確標示「永久歇業」",
+    "source": "https://www.google.com/maps/search/%E9%B4%BB%E8%B1%86%E7%8E%8B%E5%9C%8B%E5%8F%B0%E7%81%A3%E7%B2%BE%E5%93%81%E5%92%96%E5%95%A1%E9%A4%A8(%E6%AA%9C%E6%84%8F%E6%9D%91%E9%96%80%E5%B8%82)%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%85%B1%E5%92%8C%E8%B7%AF378%E5%B7%B72%E8%99%9FT14C%E9%A4%A8?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "1478874",
+      "name": "鴻豆王國台灣精品咖啡館(檜意村門市)",
+      "address": "嘉義市東區共和路378巷2號T14C館",
+      "phone": "05-5378759",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 80,
+        "max": 400,
+        "display": "約 NT$80–400/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "早午餐",
+        "下午茶",
+        "咖啡",
+        "甜點"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.3,
+        "review_count": 15,
+        "source_snapshot": "來源頁面標註詳情",
+        "food_diary_count": 59,
+        "review_summary": [
+          "尤其是鳳凰酥融合了多樣化的口味",
+          "所以口味上又多了葡萄乾的香甜風味",
+          "口味很有層次感",
+          "這個好好吃",
+          "寮國自助行程攻略",
+          "士搭到飽只要日幣14000元",
+          "長灘島自助"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/1478874"
+      ],
+      "id": "chiayi-city-dong-160",
+      "image_url": "https://lh3.googleusercontent.com/Y-mvKcO8y2J7PQQk-3I2R7GzOLMxhZg-Wjr6W7KHGYBPb0HFKlxyey7bnupj_7wqjpNKOlAnSv4Nswam288Po-LJ=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/1478874",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "3999964",
+    "id": "chiayi-city-dong-171",
+    "name": "二奶巷星馬叻沙",
+    "address": "嘉義市東區興中街24號",
+    "reason": "Google Maps 明確標示「永久歇業」",
+    "source": "https://www.google.com/maps/search/%E4%BA%8C%E5%A5%B6%E5%B7%B7%E6%98%9F%E9%A6%AC%E5%8F%BB%E6%B2%99%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E8%88%88%E4%B8%AD%E8%A1%9724%E8%99%9F?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "3999964",
+      "name": "二奶巷星馬叻沙",
+      "address": "嘉義市東區興中街24號",
+      "phone": "0970 508 883",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 80,
+        "max": 400,
+        "display": "約 NT$80–400/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.6,
+        "review_count": 92,
+        "source_snapshot": "來源頁面標註詳情",
+        "food_diary_count": 1,
+        "review_summary": [
+          "異國美食又來囉",
+          "以星馬叻沙為招牌",
+          "海鮮可以選擇",
+          "也有提供小菜單點",
+          "內用環境簡約風",
+          "紅油抄手好吃",
+          "也是很好吃"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/3999964"
+      ],
+      "id": "chiayi-city-dong-171",
+      "image_url": "https://lh3.googleusercontent.com/d_pkBOWPLOL2m18jUV0ABt5TWSq6gdVIImXnT1ux4clIiJpQCZ34PHeZ3exCCQFXhvOEYEWiPJMMDtMOUtqXA1UV0_DncAGritjJ=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/3999964",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "5048396",
+    "id": "chiayi-city-dong-174",
+    "name": "濰克早午餐(嘉義大雅店)",
+    "address": "嘉義市東區大雅路二段430號",
+    "reason": "Google Maps 明確標示「永久歇業」",
+    "source": "https://www.google.com/maps/search/%E6%BF%B0%E5%85%8B%E6%97%A9%E5%8D%88%E9%A4%90(%E5%98%89%E7%BE%A9%E5%A4%A7%E9%9B%85%E5%BA%97)%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%A4%A7%E9%9B%85%E8%B7%AF%E4%BA%8C%E6%AE%B5430%E8%99%9F?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "5048396",
+      "name": "濰克早午餐(嘉義大雅店)",
+      "address": "嘉義市東區大雅路二段430號",
+      "phone": "05 276 3352",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 99,
+        "max": 265,
+        "display": "約 NT$99–265/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "早午餐",
+        "平價",
+        "人氣"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.1,
+        "review_count": 434,
+        "source_snapshot": "來源頁面標註詳情",
+        "food_diary_count": 329,
+        "review_summary": [
+          "麵包通通好好吃",
+          "濰克早午餐楠梓旗艦店非常注意衛生跟消毒",
+          "紫金地瓜球通通超好吃",
+          "清爽義式炒麵炸雞拼盤189元",
+          "超划算的價格",
+          "楠梓超高cp值大份量早午餐",
+          "店內乾淨明亮"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/5048396"
+      ],
+      "id": "chiayi-city-dong-174",
+      "image_url": "https://lh3.googleusercontent.com/vlEo2KUxtJuiAquu07VZdMARnbmdF-UG9OWbVmpgpQDIU6Ts05EbjM6Jl46M273XKIE4LHf40c89t0PAgo0q3Sk=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/5048396",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "7225720",
+    "id": "chiayi-city-dong-176",
+    "name": "麻古茶坊(嘉義民族店)",
+    "address": "嘉義市東區民族路422號",
+    "reason": "Google Maps 明確標示「永久歇業」",
+    "source": "https://www.google.com/maps/search/%E9%BA%BB%E5%8F%A4%E8%8C%B6%E5%9D%8A(%E5%98%89%E7%BE%A9%E6%B0%91%E6%97%8F%E5%BA%97)%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E6%B0%91%E6%97%8F%E8%B7%AF422%E8%99%9F?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "7225720",
+      "name": "麻古茶坊(嘉義民族店)",
+      "address": "嘉義市東區民族路422號",
+      "phone": "05-2223338",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 200,
+        "max": 800,
+        "display": "約 NT$200–800/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "人氣"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.6,
+        "review_count": 11,
+        "source_snapshot": "來源頁面標註詳情",
+        "food_diary_count": 241,
+        "review_summary": [
+          "平均一杯20元",
+          "一杯是要請彩券行老闆娘喝ㄉ",
+          "連老闆娘喝ㄌ也說ㄅ甜"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/7225720"
+      ],
+      "id": "chiayi-city-dong-176",
+      "image_url": "https://lh3.googleusercontent.com/h9GUgP7IV-vWkeBqpiE5SdcocqaS4rSbfGI9WwsD6WsPiBw1JQdm9l5mBoE3_oHvqLoBOip-H6PBxs0H_4f-rA=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/7225720",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "782110",
+    "id": "chiayi-city-dong-186",
+    "name": "蕃茄村漢堡(嘉義彌陀店)",
+    "address": "嘉義市東區彌陀路164號",
+    "reason": "Google Maps 明確標示「永久歇業」",
+    "source": "https://www.google.com/maps/search/%E8%95%83%E8%8C%84%E6%9D%91%E6%BC%A2%E5%A0%A1(%E5%98%89%E7%BE%A9%E5%BD%8C%E9%99%80%E5%BA%97)%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%BD%8C%E9%99%80%E8%B7%AF164%E8%99%9F?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "782110",
+      "name": "蕃茄村漢堡(嘉義彌陀店)",
+      "address": "嘉義市東區彌陀路164號",
+      "phone": "05-2768678",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 200,
+        "max": 800,
+        "display": "約 NT$200–800/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "美式",
+        "早午餐",
+        "漢堡"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.3,
+        "review_count": 39,
+        "source_snapshot": "來源頁面標註詳情",
+        "food_diary_count": 35,
+        "review_summary": [
+          "所以就來這間之前就想吃吃看的蕃茄村漢堡",
+          "而且用餐環境從外面看起來就很不錯耶",
+          "說實在的",
+          "這間的用餐座位比較少",
+          "跟可可熊比起來是比較貴的",
+          "每週套餐(60元)",
+          "簡單好吃的套餐"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/782110"
+      ],
+      "id": "chiayi-city-dong-186",
+      "image_url": "https://lh3.googleusercontent.com/sYr5DemCPNcs1mcuGqyh95zW_fYJRlseT15OegjSG3Txf_OTf7BTiHDiy8tKSL0-DoajXmooqAftz6b0dhOlY4hr=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/782110",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "8874131",
+    "id": "chiayi-city-dong-188",
+    "name": "大目黑山寨飯(嘉義北門店)",
+    "address": "嘉義市東區忠孝路346巷21號",
+    "reason": "Google Maps 明確標示「永久歇業」",
+    "source": "https://www.google.com/maps/search/%E5%A4%A7%E7%9B%AE%E9%BB%91%E5%B1%B1%E5%AF%A8%E9%A3%AF(%E5%98%89%E7%BE%A9%E5%8C%97%E9%96%80%E5%BA%97)%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%BF%A0%E5%AD%9D%E8%B7%AF346%E5%B7%B721%E8%99%9F?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "8874131",
+      "name": "大目黑山寨飯(嘉義北門店)",
+      "address": "嘉義市東區忠孝路346巷21號",
+      "phone": "05-2767576",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 12,
+        "max": 12,
+        "display": "約 NT$12/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "火鍋",
+        "小吃"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4,
+        "review_count": 174,
+        "source_snapshot": "來源頁面標註詳情",
+        "food_diary_count": 22,
+        "review_summary": [
+          "分享店家菜單與價位",
+          "口感Q彈養顏又好味",
+          "走平價路線",
+          "裝潢以土匪風做佈置",
+          "很少會有店家有小菜吃到飽",
+          "不過CP值比牛肉好一些",
+          "大台中地區滿500元即可外送"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/8874131"
+      ],
+      "id": "chiayi-city-dong-188",
+      "image_url": "https://lh3.googleusercontent.com/AWFqUHZ2yDYUpdnNHBFyiFmDx8LUNuNNkYc6QzvQ69oqXGU9nw1Orh1gs_MeGOUGH3dbZT2oi3FF8hLVlA-b_JbZ=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/8874131",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "556735",
+    "id": "chiayi-city-dong-194",
+    "name": "紅豬呷火鍋",
+    "address": "嘉義市東區新生路483號",
+    "reason": "Google Maps 明確標示「永久歇業」",
+    "source": "https://www.google.com/maps/search/%E7%B4%85%E8%B1%AC%E5%91%B7%E7%81%AB%E9%8D%8B%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E6%96%B0%E7%94%9F%E8%B7%AF483%E8%99%9F?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "556735",
+      "name": "紅豬呷火鍋",
+      "address": "嘉義市東區新生路483號",
+      "phone": "05-2755405",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 200,
+        "max": 800,
+        "display": "約 NT$200–800/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "火鍋"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.1,
+        "review_count": 68,
+        "source_snapshot": "來源頁面標註詳情",
+        "food_diary_count": 2,
+        "review_summary": [
+          "CP值到整體環境服務",
+          "所以口味替換也快",
+          "這次則是有布丁口味",
+          "幾乎是我每週都要吃一次的喜好口味",
+          "可說是做出自己的特色又不失經典王道口味",
+          "咕嚕滑過齒間的特殊口感趣味好吃"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/556735"
+      ],
+      "id": "chiayi-city-dong-194",
+      "image_url": "https://lh3.googleusercontent.com/Vh1FqYrHQq88UYT_4fnEcQLexjn1Oel-TyC08TKiBNqiMzfIFJkP5hV0ZG9g0DbzYAEL-EGpsJLEgoo68fkNx2I=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/556735",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "743902",
+    "id": "chiayi-city-dong-199",
+    "name": "板塊牛排(嘉義店)",
+    "address": "嘉義市東區民族路184號",
+    "reason": "Google Maps 明確標示「永久歇業」",
+    "source": "https://www.google.com/maps/search/%E6%9D%BF%E5%A1%8A%E7%89%9B%E6%8E%92(%E5%98%89%E7%BE%A9%E5%BA%97)%20%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E6%B0%91%E6%97%8F%E8%B7%AF184%E8%99%9F?hl=zh-TW",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "743902",
+      "name": "板塊牛排(嘉義店)",
+      "address": "嘉義市東區民族路184號",
+      "phone": "(05) 222-9298",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 170,
+        "max": 300,
+        "display": "約 NT$170–300/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "美式",
+        "牛排",
+        "平價"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 3.5,
+        "review_count": 297,
+        "source_snapshot": "來源頁面標註詳情",
+        "food_diary_count": 78,
+        "review_summary": [
+          "板塊跟孫東寶都是台灣有名的連鎖平價牛排店",
+          "三家的價格",
+          "男友說口味滿甜的",
+          "口味上中規中矩",
+          "貴族世家董事長",
+          "重新詮釋平價牛排",
+          "下次消費就可以折抵300元"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/743902"
+      ],
+      "id": "chiayi-city-dong-199",
+      "image_url": "https://lh3.googleusercontent.com/iyyVP85bzN1jHiWeMZkd5MEUwTgf4Z4vPoZHpcY-OSUdsRpAakLg0ZLLNwPfR6Vz1cNHB2-nsxPe66aJ6WbrAlU=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/743902",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "business-47833314",
+    "id": "kaohsiung-mituo-086",
+    "name": "恩珠商行",
+    "address": "高雄市彌陀區漯底路61巷51弄1號",
+    "reason": "商業登記狀態為「遷他縣市」",
+    "source": "經濟部商業登記資料",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "business-47833314",
+      "name": "恩珠商行",
+      "address": "高雄市彌陀區漯底路61巷51弄1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "kaohsiung-mituo-086",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "business-93296653",
+    "id": "kaohsiung-qieding-140",
+    "name": "品御企業社",
+    "address": "高雄市茄萣區信義路三段156巷1號",
+    "reason": "商業登記狀態為「歇業／撤銷」",
+    "source": "經濟部商業登記資料",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "business-93296653",
+      "name": "品御企業社",
+      "address": "高雄市茄萣區信義路三段156巷1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "kaohsiung-qieding-140",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "business-17633824",
+    "id": "newtaipei-wanli-161",
+    "name": "亞尼克菓子工房",
+    "address": "新北市萬里區瑪鋉路127之6、7號1樓",
+    "reason": "商業登記狀態為「歇業／撤銷」",
+    "source": "經濟部商業登記資料",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "business-17633824",
+      "name": "亞尼克菓子工房",
+      "address": "新北市萬里區瑪鋉路127之6、7號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "newtaipei-wanli-161",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "business-48997433",
+    "id": "newtaipei-wanli-189",
+    "name": "御寶園企業社",
+    "address": "新北市萬里區大鵬里萬里加投250之5號",
+    "reason": "商業登記狀態為「遷他縣市」",
+    "source": "經濟部商業登記資料",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "business-48997433",
+      "name": "御寶園企業社",
+      "address": "新北市萬里區大鵬里萬里加投250之5號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "newtaipei-wanli-189",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "business-60069610",
+    "id": "newtaipei-wanli-194",
+    "name": "一粒沙咖啡館",
+    "address": "新北市萬里區野柳里東澳66號",
+    "reason": "商業登記狀態為「歇業／撤銷」",
+    "source": "經濟部商業登記資料",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "business-60069610",
+      "name": "一粒沙咖啡館",
+      "address": "新北市萬里區野柳里東澳66號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "newtaipei-wanli-194",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "business-87593661",
+    "id": "taoyuan-fuxing-154",
+    "name": "米媽創意廚房",
+    "address": "桃園市復興區澤仁里仁愛路2號(4樓 )",
+    "reason": "商業登記狀態為「歇業／撤銷」",
+    "source": "經濟部商業登記資料",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "business-87593661",
+      "name": "米媽創意廚房",
+      "address": "桃園市復興區澤仁里仁愛路2號(4樓 )",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "taoyuan-fuxing-154",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    }
+  },
+  {
+    "source_id": "7746560",
+    "id": "chiayi-city-xi-001",
+    "name": "好客燒烤(嘉義秀泰店)",
+    "address": "嘉義市西區文化路299號3樓",
+    "reason": "Google 搜尋結果與愛食記頁面均標示該地址的好客燒烤嘉義秀泰店已歇業。",
+    "source": "https://ifoodie.com.tw/review/64b40519e94eda31e0b5e2d2",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "7746560",
+      "name": "好客燒烤(嘉義秀泰店)",
+      "address": "嘉義市西區文化路299號3樓",
+      "phone": "05 227 0353",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 400,
+        "max": 1500,
+        "display": "約 NT$400–1500/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "燒肉吃到飽",
+        "燒肉",
+        "吃到飽",
+        "火鍋",
+        "海鮮",
+        "和牛",
+        "帝王蟹"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.7,
+        "review_count": 7361,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 825,
+        "review_summary": [
+          "平日最高上限180元",
+          "平假日最高上限30元",
+          "628元仍然有牛",
+          "喜歡火烤二吃的朋友則是可以每人加99元點火鍋",
+          "單杯只要89元",
+          "單人用餐酌收150元開桌費"
+        ]
+      },
+      "store_status_check": "已於 2026-08-10 檢查公開來源，未發現已歇業、停業中或永久關閉標記；本次未以今日是否營業作為判斷。",
+      "sources": [
+        "https://www.fonfood.com/store/7746560"
+      ],
+      "id": "chiayi-city-xi-001",
+      "image_url": "https://lh3.googleusercontent.com/BNCIcXMZFpYRBqnddQi8RBQ95bffYW2LkPkBJ3LQWX-0BskYN8olXJl_XCA1mI1woOJ_k8nGnhGOQaEqy-WI3SvF=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/7746560",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10",
+      "operation_status": "operating",
+      "operation_status_checked_at": "2026-08-10",
+      "operation_status_sources": [
+        "FonFood 公開店家頁面"
+      ],
+      "operation_status_reason": "FonFood 公開店家頁仍可取得店家主頁與店址；未把食記內文的歇業文字當作店家狀態。",
+      "business_hours": {
+        "average_open_time": "11:00",
+        "average_close_time": "22:00",
+        "display": "約 11:00–22:00",
+        "source": "FonFood 公開店家頁面",
+        "open_days_considered": 1
+      }
+    }
+  },
+  {
+    "source_id": "373707",
+    "id": "chiayi-city-xi-015",
+    "name": "老洋房1931",
+    "address": "嘉義市西區民生北路228號",
+    "reason": "Google 搜尋店家資訊面板在相符地址標示「永久歇業」。",
+    "source": "https://www.google.com.tw/search?hl=zh-TW&gl=tw&q=%22%E8%80%81%E6%B4%8B%E6%88%BF1931%22+%22%E5%98%89%E7%BE%A9%E5%B8%82%E8%A5%BF%E5%8D%80%E6%B0%91%E7%94%9F%E5%8C%97%E8%B7%AF228%E8%99%9F%22+%E6%B0%B8%E4%B9%85%E6%AD%87%E6%A5%AD",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "373707",
+      "name": "老洋房1931",
+      "address": "嘉義市西區民生北路228號",
+      "phone": "05 228 1931",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 50,
+        "max": 380,
+        "display": "約 NT$50–380/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "景觀咖啡",
+        "景觀餐廳",
+        "懷舊",
+        "鄉村"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.3,
+        "review_count": 894,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 108,
+        "review_summary": [
+          "每次回嘉總是會有不一樣的發現與感動",
+          "主餐的價格在270",
+          "單點每杯100元",
+          "而且每個食材看起來都處理得乾乾淨淨的",
+          "還蠻好吃的耶",
+          "今天點的三份餐點也好吃"
+        ]
+      },
+      "store_status_check": "已於 2026-08-10 檢查公開來源，未發現已歇業、停業中或永久關閉標記；本次未以今日是否營業作為判斷。",
+      "sources": [
+        "https://www.fonfood.com/store/373707"
+      ],
+      "id": "chiayi-city-xi-015",
+      "image_url": "https://lh3.googleusercontent.com/27FFWaqQZvSgNk9zLGNZop3Jzj9rSV384R8FWIPsxUUS7_LuBwg9lV_xYTed7zLBH4WgoW5Wi_smdoHSfcVseR98UaysJsg4iW0=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/373707",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10",
+      "operation_status": "operating",
+      "operation_status_checked_at": "2026-08-10",
+      "operation_status_sources": [
+        "FonFood 公開店家頁面"
+      ],
+      "operation_status_reason": "FonFood 公開店家頁仍可取得店家主頁與店址；未把食記內文的歇業文字當作店家狀態。",
+      "business_hours": {
+        "average_open_time": "11:10",
+        "average_close_time": "21:00",
+        "display": "約 11:10–21:00",
+        "source": "FonFood 公開店家頁面",
+        "open_days_considered": 1
+      }
+    }
+  },
+  {
+    "source_id": "773344",
+    "id": "chiayi-city-xi-016",
+    "name": "小蒙牛頂級麻辣養生鍋(家樂福嘉義店)",
+    "address": "嘉義市西區博愛路二段461號",
+    "reason": "Google 搜尋店家資訊面板在相符地址標示「永久歇業」。",
+    "source": "https://www.google.com.tw/search?hl=zh-TW&gl=tw&q=%22%E5%B0%8F%E8%92%99%E7%89%9B%E9%A0%82%E7%B4%9A%E9%BA%BB%E8%BE%A3%E9%A4%8A%E7%94%9F%E9%8D%8B%22+%22%E5%98%89%E7%BE%A9%E5%B8%82%E8%A5%BF%E5%8D%80%E5%8D%9A%E6%84%9B%E8%B7%AF%E4%BA%8C%E6%AE%B5461%E8%99%9F%22+%E6%B0%B8%E4%B9%85%E6%AD%87%E6%A5%AD",
+    "checked_at": "2026-08-10",
+    "original": {
+      "source_id": "773344",
+      "name": "小蒙牛頂級麻辣養生鍋(家樂福嘉義店)",
+      "address": "嘉義市西區博愛路二段461號",
+      "phone": "05 284 0202",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 400,
+        "max": 1500,
+        "display": "約 NT$400–1500/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "火鍋",
+        "吃到飽",
+        "燒肉",
+        "和牛",
+        "海鮮",
+        "冰品"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.4,
+        "review_count": 2077,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 571,
+        "review_summary": [
+          "台中吃到飽",
+          "啤酒無限吃到飽",
+          "小蒙牛頂級麻辣養生鍋為全台連鎖火鍋吃到飽餐廳",
+          "霸王蝦吃到飽",
+          "難怪在吃到飽餐廳屹立不搖",
+          "平日午餐699元",
+          "銅板價只要50元"
+        ]
+      },
+      "store_status_check": "已於 2026-08-10 檢查公開來源，未發現已歇業、停業中或永久關閉標記；本次未以今日是否營業作為判斷。",
+      "sources": [
+        "https://www.fonfood.com/store/773344"
+      ],
+      "id": "chiayi-city-xi-016",
+      "image_url": "https://lh3.googleusercontent.com/OIic5nXRjdetRGN4u7Vgql0RBKgytAbLQYOTtRbuEXY6Rn1F5Crs1TZNe-1zRu0yaRG4yg8uvwEf8Aa8ywlTXmpTkwA9e22kfQ=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/773344",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10",
+      "operation_status": "operating",
+      "operation_status_checked_at": "2026-08-10",
+      "operation_status_sources": [
+        "FonFood 公開店家頁面"
+      ],
+      "operation_status_reason": "FonFood 公開店家頁仍可取得店家主頁與店址；未把食記內文的歇業文字當作店家狀態。",
+      "business_hours": {
+        "average_open_time": null,
+        "average_close_time": null,
+        "display": null,
+        "source": null,
+        "open_days_considered": 0,
+        "note": "已檢查公開來源，但未找到可可靠解析的營業時間；未以今日是否營業推估。"
+      }
+    }
+  },
+  {
+    "source_id": "googlemaps-773c3b6536e1",
+    "id": "kaohsiung-namaxia-002",
+    "name": "達妮芙山地古早味 （那瑪夏店）",
+    "address": "高雄市那瑪夏區達卡努瓦里秀嶺巷205-1號斜對面7-11",
+    "reason": "替代網路搜尋已完成以店名、地址及名稱變體查詢；近六個月沒有任何可辨識、可對應該店面的公開資料，依規則移除。",
+    "source": null,
+    "sources": [],
+    "checked_at": "2026-08-10",
+    "evidence_freshness": "unavailable",
+    "evidence_kind": "alternative-web-search-no-data",
+    "evidence_excerpt": "已以店名、地址及名稱變體查詢替代網路搜尋；在查核日前六個月內找不到可辨識、可對應該店面的公開資料，亦未找到可供近一個月判斷營運的店家頁面。",
+    "original": {
+      "source_id": "googlemaps-773c3b6536e1",
+      "name": "達妮芙山地古早味 （那瑪夏店）",
+      "address": "高雄市那瑪夏區達卡努瓦里秀嶺巷205-1號斜對面7-11",
+      "phone": "0973 770 395",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 800,
+        "display": "約 NT$150–800/人",
+        "basis": "Google Maps 公開頁面未列完整價位，依料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "Google Maps",
+        "score": 5,
+        "review_count": null,
+        "source_snapshot": "Google Maps 公開店家頁面快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "Google Maps 公開頁面提供評分",
+          "評論數與完整評論摘要僅在頁面可解析時保留,未自行推估。"
+        ]
+      },
+      "store_status_check": "已於 2026-08-10 嘗試 Yahoo 替代搜尋，但查詢服務錯誤、驗證或結果不完整；未依半年無資料規則移除。",
+      "sources": [
+        "https://www.google.com/maps/place/%E9%81%94%E5%A6%AE%E8%8A%99%E5%B1%B1%E5%9C%B0%E5%8F%A4%E6%97%A9%E5%91%B3+%EF%BC%88%E9%82%A3%E7%91%AA%E5%A4%8F%E5%BA%97%EF%BC%89/data=!4m7!3m6!1s0x346efbaf6f79b161:0x4bd77bd3dffcda1b!8m2!3d23.2720513!4d120.7193296!16s%2Fg%2F11z2lp46fc!19sChIJYbF5b6_7bjQRG9r839N710s?authuser=0&hl=zh-TW&rclk=1"
+      ],
+      "id": "kaohsiung-namaxia-002",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10",
+      "operation_status": "uncertain",
+      "operation_status_checked_at": "2026-08-10",
+      "operation_status_sources": [
+        "https://www.google.com/maps/place/%E9%81%94%E5%A6%AE%E8%8A%99%E5%B1%B1%E5%9C%B0%E5%8F%A4%E6%97%A9%E5%91%B3+%EF%BC%88%E9%82%A3%E7%91%AA%E5%A4%8F%E5%BA%97%EF%BC%89/data=!4m7!3m6!1s0x346efbaf6f79b161:0x4bd77bd3dffcda1b!8m2!3d23.2720513!4d120.7193296!16s%2Fg%2F11z2lp46fc!19sChIJYbF5b6_7bjQRG9r839N710s?authuser=0&hl=zh-TW&rclk=1"
+      ],
+      "operation_status_reason": "既有公開來源頁面目前無法取得或缺少可辨識店家資料；未依半年無資料規則移除。",
+      "business_hours": {
+        "average_open_time": null,
+        "average_close_time": null,
+        "display": null,
+        "source": null,
+        "open_days_considered": 0,
+        "note": "已檢查公開來源，但未找到可可靠解析的營業時間；未以今日是否營業推估。"
+      },
+      "operation_status_fallback_checked_at": "2026-08-10",
+      "operation_status_fallback_provider": "Yahoo 搜尋",
+      "operation_status_fallback_freshness": "unavailable",
+      "operation_status_fallback_sources": [
+        "https://www.google.com/maps/place/%E9%81%94%E5%A6%AE%E8%8A%99%E5%B1%B1%E5%9C%B0%E5%8F%A4%E6%97%A9%E5%91%B3+%EF%BC%88%E9%82%A3%E7%91%AA%E5%A4%8F%E5%BA%97%EF%BC%89/data=!4m7!3m6!1s0x346efbaf6f79b161:0x4bd77bd3dffcda1b!8m2!3d23.2720513!4d120.7193296!16s%2Fg%2F11z2lp46fc!19sChIJYbF5b6_7bjQRG9r839N710s?authuser=0&hl=zh-TW&rclk=1"
+      ]
+    }
+  },
+  {
+    "source_id": "googlemaps-fcf3510fee3e",
+    "id": "kaohsiung-namaxia-006",
+    "name": "那瑪夏八里香碳烤",
+    "address": "高雄市那瑪夏區達卡努瓦里秀嶺巷209號",
+    "reason": "替代網路搜尋已完成以店名、地址及名稱變體查詢；近六個月沒有任何可辨識、可對應該店面的公開資料，依規則移除。",
+    "source": null,
+    "sources": [],
+    "checked_at": "2026-08-10",
+    "evidence_freshness": "unavailable",
+    "evidence_kind": "alternative-web-search-no-data",
+    "evidence_excerpt": "已以店名、地址及名稱變體查詢替代網路搜尋；在查核日前六個月內找不到可辨識、可對應該店面的公開資料，亦未找到可供近一個月判斷營運的店家頁面。",
+    "original": {
+      "source_id": "googlemaps-fcf3510fee3e",
+      "name": "那瑪夏八里香碳烤",
+      "address": "高雄市那瑪夏區達卡努瓦里秀嶺巷209號",
+      "phone": "0989 192 486",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 800,
+        "display": "約 NT$150–800/人",
+        "basis": "Google Maps 公開頁面未列完整價位，依料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "Google Maps",
+        "score": 5,
+        "review_count": null,
+        "source_snapshot": "Google Maps 公開店家頁面快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "Google Maps 公開頁面提供評分",
+          "評論數與完整評論摘要僅在頁面可解析時保留,未自行推估。"
+        ]
+      },
+      "store_status_check": "已於 2026-08-10 嘗試 Yahoo 替代搜尋，但查詢服務錯誤、驗證或結果不完整；未依半年無資料規則移除。",
+      "sources": [
+        "https://www.google.com/maps/place/%E9%82%A3%E7%91%AA%E5%A4%8F%E5%85%AB%E9%87%8C%E9%A6%99%E7%A2%B3%E7%83%A4/data=!4m7!3m6!1s0x346efb00206c5143:0x1476a24481f849de!8m2!3d23.2726456!4d120.7194374!16s%2Fg%2F11x865xbfp!19sChIJQ1FsIAD7bjQR3kn4gUSidhQ?authuser=0&hl=zh-TW&rclk=1"
+      ],
+      "id": "kaohsiung-namaxia-006",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10",
+      "operation_status": "uncertain",
+      "operation_status_checked_at": "2026-08-10",
+      "operation_status_sources": [
+        "https://www.google.com/maps/place/%E9%82%A3%E7%91%AA%E5%A4%8F%E5%85%AB%E9%87%8C%E9%A6%99%E7%A2%B3%E7%83%A4/data=!4m7!3m6!1s0x346efb00206c5143:0x1476a24481f849de!8m2!3d23.2726456!4d120.7194374!16s%2Fg%2F11x865xbfp!19sChIJQ1FsIAD7bjQR3kn4gUSidhQ?authuser=0&hl=zh-TW&rclk=1"
+      ],
+      "operation_status_reason": "既有公開來源頁面目前無法取得或缺少可辨識店家資料；未依半年無資料規則移除。",
+      "business_hours": {
+        "average_open_time": null,
+        "average_close_time": null,
+        "display": null,
+        "source": null,
+        "open_days_considered": 0,
+        "note": "已檢查公開來源，但未找到可可靠解析的營業時間；未以今日是否營業推估。"
+      },
+      "operation_status_fallback_checked_at": "2026-08-10",
+      "operation_status_fallback_provider": "Yahoo 搜尋",
+      "operation_status_fallback_freshness": "unavailable",
+      "operation_status_fallback_sources": [
+        "https://www.google.com/maps/place/%E9%82%A3%E7%91%AA%E5%A4%8F%E5%85%AB%E9%87%8C%E9%A6%99%E7%A2%B3%E7%83%A4/data=!4m7!3m6!1s0x346efb00206c5143:0x1476a24481f849de!8m2!3d23.2726456!4d120.7194374!16s%2Fg%2F11x865xbfp!19sChIJQ1FsIAD7bjQR3kn4gUSidhQ?authuser=0&hl=zh-TW&rclk=1"
+      ]
+    }
+  },
+  {
+    "source_id": "googlemaps-d0c7014b9fd2",
+    "id": "kaohsiung-namaxia-012",
+    "name": "花兒咖啡 -那瑪夏",
+    "address": "高雄市那瑪夏區達卡努瓦里大光巷188號",
+    "reason": "替代網路搜尋已完成以店名、地址及名稱變體查詢；近六個月沒有任何可辨識、可對應該店面的公開資料，依規則移除。",
+    "source": null,
+    "sources": [],
+    "checked_at": "2026-08-10",
+    "evidence_freshness": "unavailable",
+    "evidence_kind": "alternative-web-search-no-data",
+    "evidence_excerpt": "已以店名、地址及名稱變體查詢替代網路搜尋；在查核日前六個月內找不到可辨識、可對應該店面的公開資料，亦未找到可供近一個月判斷營運的店家頁面。",
+    "original": {
+      "source_id": "googlemaps-d0c7014b9fd2",
+      "name": "花兒咖啡 -那瑪夏",
+      "address": "高雄市那瑪夏區達卡努瓦里大光巷188號",
+      "phone": "0932 738 474",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 800,
+        "display": "約 NT$150–800/人",
+        "basis": "Google Maps 公開頁面未列完整價位，依料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "Google Maps",
+        "score": 5,
+        "review_count": null,
+        "source_snapshot": "Google Maps 公開店家頁面快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "Google Maps 公開頁面提供評分",
+          "評論數與完整評論摘要僅在頁面可解析時保留,未自行推估。"
+        ]
+      },
+      "store_status_check": "已於 2026-08-10 嘗試 Yahoo 替代搜尋，但查詢服務錯誤、驗證或結果不完整；未依半年無資料規則移除。",
+      "sources": [
+        "https://www.google.com/maps/place/%E8%8A%B1%E5%85%92%E5%92%96%E5%95%A1+-%E9%82%A3%E7%91%AA%E5%A4%8F/data=!4m7!3m6!1s0x346efb00591838b1:0x35fba0c32874cd9!8m2!3d23.273994!4d120.7192978!16s%2Fg%2F11y3q9lb39!19sChIJsTgYWQD7bjQR2UyHMgy6XwM?authuser=0&hl=zh-TW&rclk=1"
+      ],
+      "id": "kaohsiung-namaxia-012",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10",
+      "operation_status": "uncertain",
+      "operation_status_checked_at": "2026-08-10",
+      "operation_status_sources": [
+        "https://www.google.com/maps/place/%E8%8A%B1%E5%85%92%E5%92%96%E5%95%A1+-%E9%82%A3%E7%91%AA%E5%A4%8F/data=!4m7!3m6!1s0x346efb00591838b1:0x35fba0c32874cd9!8m2!3d23.273994!4d120.7192978!16s%2Fg%2F11y3q9lb39!19sChIJsTgYWQD7bjQR2UyHMgy6XwM?authuser=0&hl=zh-TW&rclk=1"
+      ],
+      "operation_status_reason": "既有公開來源頁面目前無法取得或缺少可辨識店家資料；未依半年無資料規則移除。",
+      "business_hours": {
+        "average_open_time": null,
+        "average_close_time": null,
+        "display": null,
+        "source": null,
+        "open_days_considered": 0,
+        "note": "已檢查公開來源，但未找到可可靠解析的營業時間；未以今日是否營業推估。"
+      },
+      "operation_status_fallback_checked_at": "2026-08-10",
+      "operation_status_fallback_provider": "Yahoo 搜尋",
+      "operation_status_fallback_freshness": "unavailable",
+      "operation_status_fallback_sources": [
+        "https://www.google.com/maps/place/%E8%8A%B1%E5%85%92%E5%92%96%E5%95%A1+-%E9%82%A3%E7%91%AA%E5%A4%8F/data=!4m7!3m6!1s0x346efb00591838b1:0x35fba0c32874cd9!8m2!3d23.273994!4d120.7192978!16s%2Fg%2F11y3q9lb39!19sChIJsTgYWQD7bjQR2UyHMgy6XwM?authuser=0&hl=zh-TW&rclk=1"
+      ]
+    }
+  },
+  {
+    "source_id": "googlemaps-823b7e3b755a",
+    "id": "kaohsiung-namaxia-013",
+    "name": "山地古早味烤肉",
+    "address": "高雄市那瑪夏區達卡努瓦里大光巷203號",
+    "reason": "替代網路搜尋已完成以店名、地址及名稱變體查詢；近六個月沒有任何可辨識、可對應該店面的公開資料，依規則移除。",
+    "source": null,
+    "sources": [],
+    "checked_at": "2026-08-10",
+    "evidence_freshness": "unavailable",
+    "evidence_kind": "alternative-web-search-no-data",
+    "evidence_excerpt": "已以店名、地址及名稱變體查詢替代網路搜尋；在查核日前六個月內找不到可辨識、可對應該店面的公開資料，亦未找到可供近一個月判斷營運的店家頁面。",
+    "original": {
+      "source_id": "googlemaps-823b7e3b755a",
+      "name": "山地古早味烤肉",
+      "address": "高雄市那瑪夏區達卡努瓦里大光巷203號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 800,
+        "display": "約 NT$150–800/人",
+        "basis": "Google Maps 公開頁面未列完整價位，依料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "燒烤餐廳"
+      ],
+      "online_rating": {
+        "platform": "Google Maps",
+        "score": 4.7,
+        "review_count": null,
+        "source_snapshot": "Google Maps 公開店家頁面快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "Google Maps 公開頁面提供評分",
+          "評論數與完整評論摘要僅在頁面可解析時保留,未自行推估。"
+        ]
+      },
+      "store_status_check": "已於 2026-08-10 嘗試 Yahoo 替代搜尋，但查詢服務錯誤、驗證或結果不完整；未依半年無資料規則移除。",
+      "sources": [
+        "https://www.google.com/maps/place/%E5%B1%B1%E5%9C%B0%E5%8F%A4%E6%97%A9%E5%91%B3%E7%83%A4%E8%82%89/data=!4m7!3m6!1s0x346efbe8a1a1728d:0x57eb72f8015c933a!8m2!3d23.2720116!4d120.7193242!16s%2Fg%2F11ssd3m7dk!19sChIJjXKhoej7bjQROpNcAfhy61c?authuser=0&hl=zh-TW&rclk=1"
+      ],
+      "id": "kaohsiung-namaxia-013",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10",
+      "operation_status": "uncertain",
+      "operation_status_checked_at": "2026-08-10",
+      "operation_status_sources": [
+        "https://www.google.com/maps/place/%E5%B1%B1%E5%9C%B0%E5%8F%A4%E6%97%A9%E5%91%B3%E7%83%A4%E8%82%89/data=!4m7!3m6!1s0x346efbe8a1a1728d:0x57eb72f8015c933a!8m2!3d23.2720116!4d120.7193242!16s%2Fg%2F11ssd3m7dk!19sChIJjXKhoej7bjQROpNcAfhy61c?authuser=0&hl=zh-TW&rclk=1"
+      ],
+      "operation_status_reason": "既有公開來源頁面目前無法取得或缺少可辨識店家資料；未依半年無資料規則移除。",
+      "business_hours": {
+        "average_open_time": null,
+        "average_close_time": null,
+        "display": null,
+        "source": null,
+        "open_days_considered": 0,
+        "note": "已檢查公開來源，但未找到可可靠解析的營業時間；未以今日是否營業推估。"
+      },
+      "operation_status_fallback_checked_at": "2026-08-10",
+      "operation_status_fallback_provider": "Yahoo 搜尋",
+      "operation_status_fallback_freshness": "unavailable",
+      "operation_status_fallback_sources": [
+        "https://www.google.com/maps/place/%E5%B1%B1%E5%9C%B0%E5%8F%A4%E6%97%A9%E5%91%B3%E7%83%A4%E8%82%89/data=!4m7!3m6!1s0x346efbe8a1a1728d:0x57eb72f8015c933a!8m2!3d23.2720116!4d120.7193242!16s%2Fg%2F11ssd3m7dk!19sChIJjXKhoej7bjQROpNcAfhy61c?authuser=0&hl=zh-TW&rclk=1"
+      ]
+    }
+  },
+  {
+    "source_id": "googlemaps-b3c6fe289243",
+    "id": "kaohsiung-namaxia-018",
+    "name": "咪咪麵食",
+    "address": "高雄市那瑪夏區達卡努瓦里大光巷57號",
+    "reason": "替代網路搜尋已完成以店名、地址及名稱變體查詢；近六個月沒有任何可辨識、可對應該店面的公開資料，依規則移除。",
+    "source": null,
+    "sources": [],
+    "checked_at": "2026-08-10",
+    "evidence_freshness": "unavailable",
+    "evidence_kind": "alternative-web-search-no-data",
+    "evidence_excerpt": "已以店名、地址及名稱變體查詢替代網路搜尋；在查核日前六個月內找不到可辨識、可對應該店面的公開資料，亦未找到可供近一個月判斷營運的店家頁面。",
+    "original": {
+      "source_id": "googlemaps-b3c6fe289243",
+      "name": "咪咪麵食",
+      "address": "高雄市那瑪夏區達卡努瓦里大光巷57號",
+      "phone": "07 670 1814",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 80,
+        "max": 400,
+        "display": "約 NT$80–400/人",
+        "basis": "Google Maps 公開頁面未列完整價位，依料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵店"
+      ],
+      "online_rating": {
+        "platform": "Google Maps",
+        "score": 4.2,
+        "review_count": null,
+        "source_snapshot": "Google Maps 公開店家頁面快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "Google Maps 公開頁面提供評分",
+          "評論數與完整評論摘要僅在頁面可解析時保留,未自行推估。"
+        ]
+      },
+      "store_status_check": "已於 2026-08-10 嘗試 Yahoo 替代搜尋，但查詢服務錯誤、驗證或結果不完整；未依半年無資料規則移除。",
+      "sources": [
+        "https://www.google.com/maps/place/%E5%92%AA%E5%92%AA%E9%BA%B5%E9%A3%9F/data=!4m7!3m6!1s0x346efaa23eb16673:0x462d786771df84b3!8m2!3d23.2793179!4d120.7189627!16s%2Fg%2F11b7tsy7vv!19sChIJc2axPqL6bjQRs4TfcWd4LUY?authuser=0&hl=zh-TW&rclk=1"
+      ],
+      "id": "kaohsiung-namaxia-018",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10",
+      "operation_status": "uncertain",
+      "operation_status_checked_at": "2026-08-10",
+      "operation_status_sources": [
+        "https://www.google.com/maps/place/%E5%92%AA%E5%92%AA%E9%BA%B5%E9%A3%9F/data=!4m7!3m6!1s0x346efaa23eb16673:0x462d786771df84b3!8m2!3d23.2793179!4d120.7189627!16s%2Fg%2F11b7tsy7vv!19sChIJc2axPqL6bjQRs4TfcWd4LUY?authuser=0&hl=zh-TW&rclk=1"
+      ],
+      "operation_status_reason": "既有公開來源頁面目前無法取得或缺少可辨識店家資料；未依半年無資料規則移除。",
+      "business_hours": {
+        "average_open_time": null,
+        "average_close_time": null,
+        "display": null,
+        "source": null,
+        "open_days_considered": 0,
+        "note": "已檢查公開來源，但未找到可可靠解析的營業時間；未以今日是否營業推估。"
+      },
+      "operation_status_fallback_checked_at": "2026-08-10",
+      "operation_status_fallback_provider": "Yahoo 搜尋",
+      "operation_status_fallback_freshness": "unavailable",
+      "operation_status_fallback_sources": [
+        "https://www.google.com/maps/place/%E5%92%AA%E5%92%AA%E9%BA%B5%E9%A3%9F/data=!4m7!3m6!1s0x346efaa23eb16673:0x462d786771df84b3!8m2!3d23.2793179!4d120.7189627!16s%2Fg%2F11b7tsy7vv!19sChIJc2axPqL6bjQRs4TfcWd4LUY?authuser=0&hl=zh-TW&rclk=1"
+      ]
+    }
+  },
+  {
+    "source_id": "googlemaps-14dc02ff01d3",
+    "id": "kaohsiung-namaxia-019",
+    "name": "那瑪夏909龍鬚菜",
+    "address": "高雄市那瑪夏區青山巷",
+    "reason": "替代網路搜尋已完成以店名、地址及名稱變體查詢；近六個月沒有任何可辨識、可對應該店面的公開資料，依規則移除。",
+    "source": null,
+    "sources": [],
+    "checked_at": "2026-08-10",
+    "evidence_freshness": "unavailable",
+    "evidence_kind": "alternative-web-search-no-data",
+    "evidence_excerpt": "已以店名、地址及名稱變體查詢替代網路搜尋；在查核日前六個月內找不到可辨識、可對應該店面的公開資料，亦未找到可供近一個月判斷營運的店家頁面。",
+    "original": {
+      "source_id": "googlemaps-14dc02ff01d3",
+      "name": "那瑪夏909龍鬚菜",
+      "address": "高雄市那瑪夏區青山巷",
+      "phone": "07 670 1909",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 800,
+        "display": "約 NT$150–800/人",
+        "basis": "Google Maps 公開頁面未列完整價位，依料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "Google Maps",
+        "score": 4.5,
+        "review_count": null,
+        "source_snapshot": "Google Maps 公開店家頁面快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "Google Maps 公開頁面提供評分",
+          "評論數與完整評論摘要僅在頁面可解析時保留,未自行推估。"
+        ]
+      },
+      "store_status_check": "已於 2026-08-10 嘗試 Yahoo 替代搜尋，但查詢服務錯誤、驗證或結果不完整；未依半年無資料規則移除。",
+      "sources": [
+        "https://www.google.com/maps/place/%E9%82%A3%E7%91%AA%E5%A4%8F909%E9%BE%8D%E9%AC%9A%E8%8F%9C/data=!4m7!3m6!1s0x346efbe4ef76e73b:0xfa651c3c21151b5a!8m2!3d23.2714372!4d120.7129809!16s%2Fg%2F11r40x0bdr!19sChIJO-d27-T7bjQRWhsVITwcZfo?authuser=0&hl=zh-TW&rclk=1"
+      ],
+      "id": "kaohsiung-namaxia-019",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10",
+      "operation_status": "uncertain",
+      "operation_status_checked_at": "2026-08-10",
+      "operation_status_sources": [
+        "https://www.google.com/maps/place/%E9%82%A3%E7%91%AA%E5%A4%8F909%E9%BE%8D%E9%AC%9A%E8%8F%9C/data=!4m7!3m6!1s0x346efbe4ef76e73b:0xfa651c3c21151b5a!8m2!3d23.2714372!4d120.7129809!16s%2Fg%2F11r40x0bdr!19sChIJO-d27-T7bjQRWhsVITwcZfo?authuser=0&hl=zh-TW&rclk=1"
+      ],
+      "operation_status_reason": "既有公開來源頁面目前無法取得或缺少可辨識店家資料；未依半年無資料規則移除。",
+      "business_hours": {
+        "average_open_time": null,
+        "average_close_time": null,
+        "display": null,
+        "source": null,
+        "open_days_considered": 0,
+        "note": "已檢查公開來源，但未找到可可靠解析的營業時間；未以今日是否營業推估。"
+      },
+      "operation_status_fallback_checked_at": "2026-08-10",
+      "operation_status_fallback_provider": "Yahoo 搜尋",
+      "operation_status_fallback_freshness": "unavailable",
+      "operation_status_fallback_sources": [
+        "https://www.google.com/maps/place/%E9%82%A3%E7%91%AA%E5%A4%8F909%E9%BE%8D%E9%AC%9A%E8%8F%9C/data=!4m7!3m6!1s0x346efbe4ef76e73b:0xfa651c3c21151b5a!8m2!3d23.2714372!4d120.7129809!16s%2Fg%2F11r40x0bdr!19sChIJO-d27-T7bjQRWhsVITwcZfo?authuser=0&hl=zh-TW&rclk=1"
+      ]
+    }
+  },
+  {
+    "source_id": "googlemaps-20d8a64c9299",
+    "id": "kaohsiung-namaxia-021",
+    "name": "南台灣水蜜桃",
+    "address": "高雄市那瑪夏區瑪雅里平和巷39-1號",
+    "reason": "替代網路搜尋已完成以店名、地址及名稱變體查詢；近六個月沒有任何可辨識、可對應該店面的公開資料，依規則移除。",
+    "source": null,
+    "sources": [],
+    "checked_at": "2026-08-10",
+    "evidence_freshness": "unavailable",
+    "evidence_kind": "alternative-web-search-no-data",
+    "evidence_excerpt": "已以店名、地址及名稱變體查詢替代網路搜尋；在查核日前六個月內找不到可辨識、可對應該店面的公開資料，亦未找到可供近一個月判斷營運的店家頁面。",
+    "original": {
+      "source_id": "googlemaps-20d8a64c9299",
+      "name": "南台灣水蜜桃",
+      "address": "高雄市那瑪夏區瑪雅里平和巷39-1號",
+      "phone": "0936 379 502",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 800,
+        "display": "約 NT$150–800/人",
+        "basis": "Google Maps 公開頁面未列完整價位，依料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "Google Maps",
+        "score": 5,
+        "review_count": null,
+        "source_snapshot": "Google Maps 公開店家頁面快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "Google Maps 公開頁面提供評分",
+          "評論數與完整評論摘要僅在頁面可解析時保留,未自行推估。"
+        ]
+      },
+      "store_status_check": "已於 2026-08-10 嘗試 Yahoo 替代搜尋，但查詢服務錯誤、驗證或結果不完整；未依半年無資料規則移除。",
+      "sources": [
+        "https://www.google.com/maps/place/%E5%8D%97%E5%8F%B0%E7%81%A3%E6%B0%B4%E8%9C%9C%E6%A1%83/data=!4m7!3m6!1s0x346ef16aae2188b3:0xb8fa7cc9c41b687a!8m2!3d23.2387395!4d120.6977752!16s%2Fg%2F11vz499m__!19sChIJs4ghrmrxbjQRemgbxMl8-rg?authuser=0&hl=zh-TW&rclk=1"
+      ],
+      "id": "kaohsiung-namaxia-021",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10",
+      "operation_status": "uncertain",
+      "operation_status_checked_at": "2026-08-10",
+      "operation_status_sources": [
+        "https://www.google.com/maps/place/%E5%8D%97%E5%8F%B0%E7%81%A3%E6%B0%B4%E8%9C%9C%E6%A1%83/data=!4m7!3m6!1s0x346ef16aae2188b3:0xb8fa7cc9c41b687a!8m2!3d23.2387395!4d120.6977752!16s%2Fg%2F11vz499m__!19sChIJs4ghrmrxbjQRemgbxMl8-rg?authuser=0&hl=zh-TW&rclk=1"
+      ],
+      "operation_status_reason": "既有公開來源頁面目前無法取得或缺少可辨識店家資料；未依半年無資料規則移除。",
+      "business_hours": {
+        "average_open_time": null,
+        "average_close_time": null,
+        "display": null,
+        "source": null,
+        "open_days_considered": 0,
+        "note": "已檢查公開來源，但未找到可可靠解析的營業時間；未以今日是否營業推估。"
+      },
+      "operation_status_fallback_checked_at": "2026-08-10",
+      "operation_status_fallback_provider": "Yahoo 搜尋",
+      "operation_status_fallback_freshness": "unavailable",
+      "operation_status_fallback_sources": [
+        "https://www.google.com/maps/place/%E5%8D%97%E5%8F%B0%E7%81%A3%E6%B0%B4%E8%9C%9C%E6%A1%83/data=!4m7!3m6!1s0x346ef16aae2188b3:0xb8fa7cc9c41b687a!8m2!3d23.2387395!4d120.6977752!16s%2Fg%2F11vz499m__!19sChIJs4ghrmrxbjQRemgbxMl8-rg?authuser=0&hl=zh-TW&rclk=1"
+      ]
+    }
+  },
+  {
+    "source_id": "googlemaps-19db9fbe3b6e",
+    "id": "kaohsiung-namaxia-024",
+    "name": "好芯情早餐",
+    "address": "高雄市那瑪夏區達卡努瓦里秀嶺巷194號",
+    "reason": "替代網路搜尋已完成以店名、地址及名稱變體查詢；近六個月沒有任何可辨識、可對應該店面的公開資料，依規則移除。",
+    "source": null,
+    "sources": [],
+    "checked_at": "2026-08-10",
+    "evidence_freshness": "unavailable",
+    "evidence_kind": "alternative-web-search-no-data",
+    "evidence_excerpt": "已以店名、地址及名稱變體查詢替代網路搜尋；在查核日前六個月內找不到可辨識、可對應該店面的公開資料，亦未找到可供近一個月判斷營運的店家頁面。",
+    "original": {
+      "source_id": "googlemaps-19db9fbe3b6e",
+      "name": "好芯情早餐",
+      "address": "高雄市那瑪夏區達卡努瓦里秀嶺巷194號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 800,
+        "display": "約 NT$150–800/人",
+        "basis": "Google Maps 公開頁面未列完整價位，依料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "Google Maps",
+        "score": 5,
+        "review_count": null,
+        "source_snapshot": "Google Maps 公開店家頁面快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "Google Maps 公開頁面提供評分",
+          "評論數與完整評論摘要僅在頁面可解析時保留,未自行推估。"
+        ]
+      },
+      "store_status_check": "已於 2026-08-10 嘗試 Yahoo 替代搜尋，但查詢服務錯誤、驗證或結果不完整；未依半年無資料規則移除。",
+      "sources": [
+        "https://www.google.com/maps/place/%E5%A5%BD%E8%8A%AF%E6%83%85%E6%97%A9%E9%A4%90/data=!4m7!3m6!1s0x346efb00120799b5:0xfa3026e5106bac15!8m2!3d23.270635!4d120.7201538!16s%2Fg%2F11yl_qbfnm!19sChIJtZkHEgD7bjQRFaxrEOUmMPo?authuser=0&hl=zh-TW&rclk=1"
+      ],
+      "id": "kaohsiung-namaxia-024",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10",
+      "operation_status": "uncertain",
+      "operation_status_checked_at": "2026-08-10",
+      "operation_status_sources": [
+        "https://www.google.com/maps/place/%E5%A5%BD%E8%8A%AF%E6%83%85%E6%97%A9%E9%A4%90/data=!4m7!3m6!1s0x346efb00120799b5:0xfa3026e5106bac15!8m2!3d23.270635!4d120.7201538!16s%2Fg%2F11yl_qbfnm!19sChIJtZkHEgD7bjQRFaxrEOUmMPo?authuser=0&hl=zh-TW&rclk=1"
+      ],
+      "operation_status_reason": "既有公開來源頁面目前無法取得或缺少可辨識店家資料；未依半年無資料規則移除。",
+      "business_hours": {
+        "average_open_time": null,
+        "average_close_time": null,
+        "display": null,
+        "source": null,
+        "open_days_considered": 0,
+        "note": "已檢查公開來源，但未找到可可靠解析的營業時間；未以今日是否營業推估。"
+      },
+      "operation_status_fallback_checked_at": "2026-08-10",
+      "operation_status_fallback_provider": "Yahoo 搜尋",
+      "operation_status_fallback_freshness": "unavailable",
+      "operation_status_fallback_sources": [
+        "https://www.google.com/maps/place/%E5%A5%BD%E8%8A%AF%E6%83%85%E6%97%A9%E9%A4%90/data=!4m7!3m6!1s0x346efb00120799b5:0xfa3026e5106bac15!8m2!3d23.270635!4d120.7201538!16s%2Fg%2F11yl_qbfnm!19sChIJtZkHEgD7bjQRFaxrEOUmMPo?authuser=0&hl=zh-TW&rclk=1"
+      ]
+    }
+  },
+  {
+    "source_id": "googlemaps-e289b8c28e59",
+    "id": "kaohsiung-namaxia-025",
+    "name": "妲娜娜小棧",
+    "address": "高雄市那瑪夏區瑪雅里平和巷20號",
+    "reason": "替代網路搜尋已完成以店名、地址及名稱變體查詢；近六個月沒有任何可辨識、可對應該店面的公開資料，依規則移除。",
+    "source": null,
+    "sources": [],
+    "checked_at": "2026-08-10",
+    "evidence_freshness": "unavailable",
+    "evidence_kind": "alternative-web-search-no-data",
+    "evidence_excerpt": "已以店名、地址及名稱變體查詢替代網路搜尋；在查核日前六個月內找不到可辨識、可對應該店面的公開資料，亦未找到可供近一個月判斷營運的店家頁面。",
+    "original": {
+      "source_id": "googlemaps-e289b8c28e59",
+      "name": "妲娜娜小棧",
+      "address": "高雄市那瑪夏區瑪雅里平和巷20號",
+      "phone": "0913 630 632",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 800,
+        "display": "約 NT$150–800/人",
+        "basis": "Google Maps 公開頁面未列完整價位，依料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "Google Maps",
+        "score": 5,
+        "review_count": null,
+        "source_snapshot": "Google Maps 公開店家頁面快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "Google Maps 公開頁面提供評分",
+          "評論數與完整評論摘要僅在頁面可解析時保留,未自行推估。"
+        ]
+      },
+      "store_status_check": "已於 2026-08-10 嘗試 Yahoo 替代搜尋，但查詢服務錯誤、驗證或結果不完整；未依半年無資料規則移除。",
+      "sources": [
+        "https://www.google.com/maps/place/%E5%A6%B2%E5%A8%9C%E5%A8%9C%E5%B0%8F%E6%A3%A7/data=!4m7!3m6!1s0x346ef1000863a12d:0x5358487437e74f7d!8m2!3d23.2376631!4d120.697456!16s%2Fg%2F11xnfb03ht!19sChIJLaFjCADxbjQRfU_nN3RIWFM?authuser=0&hl=zh-TW&rclk=1"
+      ],
+      "id": "kaohsiung-namaxia-025",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10",
+      "operation_status": "uncertain",
+      "operation_status_checked_at": "2026-08-10",
+      "operation_status_sources": [
+        "https://www.google.com/maps/place/%E5%A6%B2%E5%A8%9C%E5%A8%9C%E5%B0%8F%E6%A3%A7/data=!4m7!3m6!1s0x346ef1000863a12d:0x5358487437e74f7d!8m2!3d23.2376631!4d120.697456!16s%2Fg%2F11xnfb03ht!19sChIJLaFjCADxbjQRfU_nN3RIWFM?authuser=0&hl=zh-TW&rclk=1"
+      ],
+      "operation_status_reason": "既有公開來源頁面目前無法取得或缺少可辨識店家資料；未依半年無資料規則移除。",
+      "business_hours": {
+        "average_open_time": null,
+        "average_close_time": null,
+        "display": null,
+        "source": null,
+        "open_days_considered": 0,
+        "note": "已檢查公開來源，但未找到可可靠解析的營業時間；未以今日是否營業推估。"
+      },
+      "operation_status_fallback_checked_at": "2026-08-10",
+      "operation_status_fallback_provider": "Yahoo 搜尋",
+      "operation_status_fallback_freshness": "unavailable",
+      "operation_status_fallback_sources": [
+        "https://www.google.com/maps/place/%E5%A6%B2%E5%A8%9C%E5%A8%9C%E5%B0%8F%E6%A3%A7/data=!4m7!3m6!1s0x346ef1000863a12d:0x5358487437e74f7d!8m2!3d23.2376631!4d120.697456!16s%2Fg%2F11xnfb03ht!19sChIJLaFjCADxbjQRfU_nN3RIWFM?authuser=0&hl=zh-TW&rclk=1"
+      ]
+    }
+  },
+  {
+    "source_id": "googlemaps-card-bcaa213e5ee7",
+    "id": "tainan-dongshan-025",
+    "name": "水井羅家",
+    "address": "臺南市東山區市東山區高原43-1好",
+    "reason": "替代網路搜尋已完成以店名、地址及名稱變體查詢；近六個月沒有任何可辨識、可對應該店面的公開資料，依規則移除。",
+    "source": null,
+    "sources": [],
+    "checked_at": "2026-08-10",
+    "evidence_freshness": "unavailable",
+    "evidence_kind": "alternative-web-search-no-data",
+    "evidence_excerpt": "已以店名、地址及名稱變體查詢替代網路搜尋；在查核日前六個月內找不到可辨識、可對應該店面的公開資料，亦未找到可供近一個月判斷營運的店家頁面。",
+    "original": {
+      "source_id": "googlemaps-card-bcaa213e5ee7",
+      "name": "水井羅家",
+      "address": "臺南市東山區市東山區高原43-1好",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 800,
+        "display": "約 NT$150–800/人",
+        "basis": "Google Maps 搜尋卡片未列完整價位，依料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "融合菜式餐廳"
+      ],
+      "online_rating": {
+        "platform": "Google Maps",
+        "score": 4.7,
+        "review_count": null,
+        "source_snapshot": "Google Maps 公開搜尋卡片快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "搜尋卡片提供店名、料理分類與評分",
+          "卡片未提供可解析的電話、評論數與完整評論摘要。"
+        ]
+      },
+      "store_status_check": "已於 2026-08-10 嘗試 Yahoo 替代搜尋，但查詢服務錯誤、驗證或結果不完整；未依半年無資料規則移除。",
+      "sources": [
+        "https://www.google.com/maps/place/%E6%B0%B4%E4%BA%95%E7%BE%85%E5%AE%B6/data=!4m7!3m6!1s0x346e8c67d50fe7b1:0xfa8bea543bb94b7a!8m2!3d23.285595!4d120.4706246!16s%2Fg%2F11c30q114q!19sChIJsecP1WeMbjQReku5O1Tqi_o?authuser=0&hl=zh-TW&rclk=1"
+      ],
+      "id": "tainan-dongshan-025",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10",
+      "operation_status": "uncertain",
+      "operation_status_checked_at": "2026-08-10",
+      "operation_status_sources": [
+        "https://www.google.com/maps/place/%E6%B0%B4%E4%BA%95%E7%BE%85%E5%AE%B6/data=!4m7!3m6!1s0x346e8c67d50fe7b1:0xfa8bea543bb94b7a!8m2!3d23.285595!4d120.4706246!16s%2Fg%2F11c30q114q!19sChIJsecP1WeMbjQReku5O1Tqi_o?authuser=0&hl=zh-TW&rclk=1"
+      ],
+      "operation_status_reason": "既有公開來源頁面目前無法取得或缺少可辨識店家資料；未依半年無資料規則移除。",
+      "business_hours": {
+        "average_open_time": null,
+        "average_close_time": null,
+        "display": null,
+        "source": null,
+        "open_days_considered": 0,
+        "note": "已檢查公開來源，但未找到可可靠解析的營業時間；未以今日是否營業推估。"
+      },
+      "operation_status_fallback_checked_at": "2026-08-10",
+      "operation_status_fallback_provider": "Yahoo 搜尋",
+      "operation_status_fallback_freshness": "unavailable",
+      "operation_status_fallback_sources": [
+        "https://www.google.com/maps/place/%E6%B0%B4%E4%BA%95%E7%BE%85%E5%AE%B6/data=!4m7!3m6!1s0x346e8c67d50fe7b1:0xfa8bea543bb94b7a!8m2!3d23.285595!4d120.4706246!16s%2Fg%2F11c30q114q!19sChIJsecP1WeMbjQReku5O1Tqi_o?authuser=0&hl=zh-TW&rclk=1"
+      ]
+    }
+  }
+]

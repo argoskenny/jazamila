@@ -23,4 +23,11 @@ describe("security headers", () => {
     expect(contentSecurityPolicy("development")).toContain("script-src 'self' 'unsafe-inline' 'unsafe-eval'");
     expect(contentSecurityPolicy("production")).not.toContain("'unsafe-eval'");
   });
+
+  it("allows the configured Google Fonts stylesheet and font files", () => {
+    const policy = contentSecurityPolicy("production");
+
+    expect(policy).toContain("style-src 'self' 'unsafe-inline' https://fonts.googleapis.com");
+    expect(policy).toContain("font-src 'self' data: https://fonts.gstatic.com");
+  });
 });

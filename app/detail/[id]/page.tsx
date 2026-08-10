@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BlogLinkForm } from "@/components/forms/BlogLinkForm";
+import { PickAgainButton } from "@/components/forms/PickAgainButton";
+import { RestaurantImage } from "@/components/restaurants/RestaurantImage";
 import { listBlogLinksForRestaurant } from "@/lib/domain/blogs";
 import { getRestaurantDetail } from "@/lib/domain/restaurants";
 
@@ -29,29 +31,69 @@ export default async function DetailPage({ params, searchParams }: Props) {
     first(query.umi, "0"),
     first(query.p, "1")
   ].join("/");
+  const foodTypes = first(query.uft, "")
+    .split("-")
+    .map((value) => Number.parseInt(value, 10))
+    .filter((value) => Number.isFinite(value) && value > 0);
   const blogLinks = await listBlogLinksForRestaurant(restaurant.id);
 
   return (
     <section className="page-shell detail-grid">
       <div className="detail-media">
-        <img src={restaurant.imagePath} alt={restaurant.res_name} />
+        <RestaurantImage
+          key={restaurant.id}
+          src={restaurant.imagePath}
+          fallbackSrc={restaurant.fallbackImagePath}
+          alt={`${restaurant.res_name}餐廳照片`}
+          eager
+        />
       </div>
       <div className="form-grid">
         <div className="panel detail-restaurant-panel">
           <h1 className="page-title">{restaurant.res_name}</h1>
-          <p className="detail-restaurant-address">{restaurant.res_address || "地址未提供"}</p>
+          <p className="detail-location">{[restaurant.cityLabel, restaurant.districtLabel].filter(Boolean).join("・")}</p>
+          <p className="detail-restaurant-address">
+            {restaurant.mapHref ? (
+              <a className="text-link" href={restaurant.mapHref} target="_blank" rel="noreferrer">
+                {restaurant.res_address || "地址未提供"}
+              </a>
+            ) : restaurant.res_address || "地址未提供"}
+          </p>
           <p className="detail-restaurant-phone">
             <strong>電話：</strong>
-            {restaurant.telLabel}
+            {restaurant.phoneHref ? <a className="text-link" href={restaurant.phoneHref}>{restaurant.telLabel}</a> : restaurant.telLabel}
           </p>
+          <div className="detail-facts" aria-label="餐廳摘要">
+            {restaurant.ratingScore != null ? (
+              <p><strong><span aria-hidden="true">★</span> {restaurant.ratingScore.toFixed(1)}</strong><span>{restaurant.ratingReviewCount != null ? `${restaurant.ratingReviewCount.toLocaleString("zh-TW")} 則評論` : restaurant.ratingPlatform}</span></p>
+            ) : null}
+            <p><strong>{restaurant.priceLabel}</strong><span>平均消費</span></p>
+            <p><strong>{restaurant.businessHoursLabel}</strong><span>營業時間</span></p>
+          </div>
           <p className="restaurant-tags">
             <span className="restaurant-tag restaurant-tag-cuisine">{restaurant.foodTypeLabel}</span>
-            <span className="restaurant-tag restaurant-tag-price">{restaurant.priceLabel}</span>
+            {restaurant.tags.filter((tag) => tag !== restaurant.foodTypeLabel).map((tag) => (
+              <span className="restaurant-tag restaurant-tag-feature" key={tag}>{tag}</span>
+            ))}
           </p>
-          <p className="detail-restaurant-note">{restaurant.res_note}</p>
-          <Link className="text-link" href={`/listdata/${listRecord}`}>
-            返回列表
-          </Link>
+          {restaurant.res_note ? <p className="detail-restaurant-note">{restaurant.res_note}</p> : null}
+          {restaurant.reviewSummaries.length > 0 ? (
+            <div className="review-summary">
+              <h2>評論摘要</h2>
+              <ul>{restaurant.reviewSummaries.slice(0, 4).map((summary) => <li key={summary}>{summary}</li>)}</ul>
+            </div>
+          ) : null}
+          <div className="detail-actions">
+            <PickAgainButton
+              currentRestaurantId={restaurant.id}
+              location={first(query.ul, "0")}
+              foodType={Number.parseInt(first(query.ut, "0"), 10) || 0}
+              foodTypes={foodTypes}
+              maxPrice={Number.parseInt(first(query.umx, "0"), 10) || 0}
+              minPrice={Number.parseInt(first(query.umi, "0"), 10) || 0}
+            />
+            <Link className="button ghost" href={`/listdata/${listRecord}`}>返回列表</Link>
+          </div>
         </div>
 
         <div className="panel">

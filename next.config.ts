@@ -14,9 +14,10 @@ export function contentSecurityPolicy(environment = process.env.NODE_ENV): strin
     "base-uri 'self'",
     "frame-ancestors 'none'",
     "form-action 'self'",
-    "img-src 'self' data:",
+    "img-src 'self' data: https:",
     `script-src ${scriptSources.join(" ")}`,
-    "style-src 'self' 'unsafe-inline'",
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+    "font-src 'self' data: https://fonts.gstatic.com",
     "connect-src 'self' https://www.google.com/recaptcha/",
     "frame-src https://www.google.com/recaptcha/"
   ].join("; ");
