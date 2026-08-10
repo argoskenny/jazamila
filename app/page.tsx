@@ -10,16 +10,18 @@ export default async function HomePage() {
   return (
     <section className="page-shell hero-grid">
       <div className="hero-copy">
-        <h1>等一下吃什麼？</h1>
-        <p>不用再想了，交給 JAZAMILA 幫你選一間。</p>
+        <div className="hero-heading">
+          <h1>等一下吃什麼？</h1>
+          <p>不用再想了，交給 JAZAMILA 幫你選一間。</p>
+        </div>
+        <PickRestaurantForm
+          preferences={preferences}
+          regions={getRegions()}
+          sectionsByRegion={sectionsByRegion}
+          foodTypes={foodTypes}
+          moneyOptions={moneyOptions}
+        />
       </div>
-      <PickRestaurantForm
-        preferences={preferences}
-        regions={getRegions()}
-        sectionsByRegion={sectionsByRegion}
-        foodTypes={foodTypes}
-        moneyOptions={moneyOptions}
-      />
     </section>
   );
 }

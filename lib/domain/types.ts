@@ -70,12 +70,11 @@ export type Post = {
 };
 
 export type HomePreferences = {
-  remember: number;
   foodwhere_region: number;
   foodwhere_section: number;
   foodmoney_max: number;
   foodmoney_min: number;
-  foodtype: number;
+  foodtypes: number[];
 };
 
 export type RestaurantCriteria = {
@@ -84,6 +83,7 @@ export type RestaurantCriteria = {
   maxPrice: number;
   minPrice: number;
   foodType: number;
+  foodTypes?: number[];
 };
 
 export type ListFilters = RestaurantCriteria & {

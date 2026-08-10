@@ -6,7 +6,7 @@ JAZAMILA is now a root-level Next.js application for choosing and browsing resta
 
 Main areas:
 
-- Public restaurant pages under `app/`, including `/`, `/listdata/...`, `/detail/[id]`, `/about`, `/map`, and `/post`.
+- Public restaurant pages under `app/`, including `/`, `/listdata/...`, `/detail/[id]`, `/about`, and `/post`.
 - Legacy-compatible Ajax endpoints under `app/jazamila_ajax/` and `app/save_post_data/`.
 - Admin pages under `app/admin/`.
 

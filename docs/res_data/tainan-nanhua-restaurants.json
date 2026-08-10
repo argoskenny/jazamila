@@ -1,0 +1,1855 @@
+{
+  "collection": {
+    "title": "臺南市南化實體餐廳資料（含愛食記補充資料）",
+    "city": "臺南市",
+    "district": "南化區",
+    "scope": "從 FonFood「台南市南化區－美食餐廳」公開列表與料理分類頁取得候選店家，再逐頁核對店家地址、電話、料理分類、Google 評價快照、推薦菜單價位與食記摘要；僅保留地址屬於南化區且未見歇業標記的有店面店家。 不足筆數再以觀光署餐飲資料、食藥署「餐飲場所」登錄資料及經濟部核准設立餐廳餐館資料補充；官方資料未提供網路評分時保留 null 與來源說明。 不足筆數再以觀光署餐飲資料、食藥署「餐飲場所」登錄資料及經濟部核准設立餐廳餐館資料補充；官方資料未提供網路評分時保留 null 與來源說明。 不足筆數再以觀光署餐飲資料、食藥署「餐飲場所」登錄資料及經濟部核准設立餐廳餐館資料補充；官方資料未提供網路評分時保留 null 與來源說明。 不足筆數再以觀光署餐飲資料、食藥署「餐飲場所」登錄資料、經濟部核准設立餐廳餐館資料及財政部營業稅籍餐飲分類資料補充；官方資料未提供網路評分時保留 null 與來源說明。 再以愛食記公開行政區列表補充可核對地址的店家；偏遠或人口較少行政區若公開資料不足，保留實際可找到的筆數。 再以愛食記公開行政區列表補充可核對地址的店家；偏遠或人口較少行政區若公開資料不足，保留實際可找到的筆數。 再以愛食記公開行政區列表補充可核對地址的店家；偏遠或人口較少行政區若公開資料不足，保留實際可找到的筆數。 再以愛食記公開行政區列表補充可核對地址的店家；偏遠或人口較少行政區若公開資料不足，保留實際可找到的筆數。",
+    "collected_at": "2026-08-10",
+    "status": "partial",
+    "target_count": 200,
+    "record_count": 46,
+    "source_platform": "FonFood public restaurant pages; Tourism Administration restaurant data; FDA food business registration data; MOEA restaurant business registration data; Ministry of Finance active tax registration data; iFoodie public district restaurant lists; iFoodie public district restaurant lists; iFoodie public district restaurant lists; iFoodie public district restaurant lists",
+    "rating_note": "愛食記補充資料保留列表顯示的評分與評論數；未顯示評分時以 null 與來源說明表示，未自行推估。",
+    "review_note": "review_summary 僅保存列表可公開解析的評分與評論數說明，未把完整評論全文寫入資料檔。",
+    "price_note": "價位是每人約略消費範圍（新台幣）；優先取 FonFood 公開菜單，官方補充資料沒有菜單時依店名與料理分類估算，實際仍以店家最新菜單為準。",
+    "dedupe_rule": "以店名加地址作為唯一鍵；同品牌不同地址視為不同實體門市，同一地址不重複收錄。",
+    "source_list_pages": [
+      "https://www.fonfood.com/台南市南化區",
+      "https://www.fonfood.com/台南市南化區/2",
+      "https://www.fonfood.com/台南市",
+      "https://www.fonfood.com/台南市/2",
+      "https://www.fonfood.com/台南市/3",
+      "https://www.fonfood.com/台南市/4",
+      "https://www.fonfood.com/台南市/5",
+      "https://www.fonfood.com/台南市南化區/景觀餐廳",
+      "https://www.fonfood.com/台南市南化區/景觀咖啡",
+      "https://www.fonfood.com/台南市南化區/buffet",
+      "https://www.fonfood.com/台南市南化區/早午餐",
+      "https://www.fonfood.com/台南市南化區/下午茶",
+      "https://www.fonfood.com/台南市南化區/海鮮餐廳",
+      "https://www.fonfood.com/台南市南化區/必比登",
+      "https://www.fonfood.com/台南市南化區/米其林",
+      "https://www.fonfood.com/台南市南化區/燒肉吃到飽",
+      "https://www.fonfood.com/台南市南化區/日式",
+      "https://www.fonfood.com/台南市南化區/韓式",
+      "https://www.fonfood.com/台南市南化區/法式",
+      "https://www.fonfood.com/台南市南化區/義式",
+      "https://www.fonfood.com/台南市南化區/西班牙",
+      "https://www.fonfood.com/台南市南化區/美式",
+      "https://www.fonfood.com/台南市南化區/港式",
+      "https://www.fonfood.com/台南市南化區/泰式",
+      "https://www.fonfood.com/台南市南化區/越式",
+      "https://www.fonfood.com/台南市南化區/印度",
+      "https://www.fonfood.com/台南市南化區/小吃",
+      "https://www.fonfood.com/台南市南化區/古早味",
+      "https://www.fonfood.com/台南市南化區/冰品",
+      "https://www.fonfood.com/台南市南化區/輕食",
+      "https://www.fonfood.com/台南市南化區/拉麵",
+      "https://www.fonfood.com/台南市南化區/漢堡",
+      "https://www.fonfood.com/台南市南化區/牛排",
+      "https://www.fonfood.com/台南市南化區/燉飯",
+      "https://www.fonfood.com/台南市南化區/披薩",
+      "https://www.fonfood.com/台南市南化區/義大利麵",
+      "https://www.fonfood.com/台南市南化區/帝王蟹",
+      "https://www.fonfood.com/台南市南化區/龍蝦",
+      "https://www.fonfood.com/台南市南化區/和牛",
+      "https://www.fonfood.com/台南市南化區/烤鴨",
+      "https://www.fonfood.com/台南市南化區/牛肉麵",
+      "https://www.fonfood.com/台南市南化區/舒芙蕾",
+      "https://www.fonfood.com/台南市南化區/鬆餅",
+      "https://www.fonfood.com/台南市南化區/吐司",
+      "https://www.fonfood.com/台南市南化區/蛋糕",
+      "https://www.fonfood.com/台南市南化區/咖啡",
+      "https://www.fonfood.com/台南市南化區/平價",
+      "https://www.fonfood.com/台南市南化區/人氣",
+      "https://www.fonfood.com/台南市南化區/網美打卡",
+      "https://www.fonfood.com/台南市南化區/約會",
+      "https://www.fonfood.com/台南市南化區/聚餐",
+      "https://www.fonfood.com/台南市南化區/不限時",
+      "https://www.fonfood.com/台南市南化區/動物",
+      "https://www.fonfood.com/台南市南化區/庭園",
+      "https://www.fonfood.com/台南市南化區/老宅",
+      "https://www.fonfood.com/台南市南化區/異國",
+      "https://data.gov.tw/dataset/7779",
+      "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip",
+      "https://data.gov.tw/dataset/8938",
+      "https://data.fda.gov.tw/data/opendata/export/97/json",
+      "https://data.gov.tw/dataset/108355",
+      "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB",
+      "https://data.gov.tw/dataset/9400",
+      "https://eip.fia.gov.tw/data/BGMOPEN1.zip",
+      "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%8D%97%E5%8C%96"
+    ],
+    "collection_stats": {
+      "list_pages_fetched": 2,
+      "city_list_pages_fetched": 5,
+      "category_pages_fetched": 3,
+      "candidate_count": 113,
+      "detail_pages_parsed": 113,
+      "valid_count": 46,
+      "invalid_reason_counts": {
+        "district": 110,
+        "phone": 7
+      },
+      "fonfood_base_count": 3,
+      "official_candidates": {
+        "tourism": 7,
+        "fda_food_service": 19,
+        "business_registered": 3,
+        "tax_registered_food_service": 13
+      },
+      "official_added": {
+        "tourism": 6,
+        "fda": 18,
+        "business": 3,
+        "tax": 12
+      },
+      "official_added_total": 39,
+      "ifoodie_card_count": 7,
+      "ifoodie_supplement_added": 4
+    },
+    "image_collection_note": "每家最多保留一張公開圖片網址；只跳過來源頁面明文禁止外部引用或明確拒絕的來源，不下載圖片。未發現明文禁止不等同於取得圖片著作權授權；收到下架通知時應移除網址。"
+  },
+  "restaurants": [
+    {
+      "source_id": "2187118",
+      "name": "小歇冰舖-義式鮮果冰淇淋專門店",
+      "address": "台南市南化區49號",
+      "phone": "0965 742 291",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 40,
+        "max": 240,
+        "display": "約 NT$40–240/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "景觀咖啡",
+        "冰品",
+        "咖啡"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.9,
+        "review_count": 1057,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 8,
+        "review_summary": [
+          "在地薑黃雞販240元",
+          "小歇紅燒燉牛楠飯240元",
+          "主餐價格約介於160至300元之間",
+          "套餐加購僅需50元"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/2187118"
+      ],
+      "id": "tainan-nanhua-001",
+      "image_url": "https://lh3.googleusercontent.com/hyD3j-lO-WTONAdkiwP62qHnWVJi1pfPkTfvXRk0byvs19sXze0VpSWMhJi7zmMc1YkIadRGRMFSgl0VwF5nKP-6JBL7XKgvlpf3=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/2187118",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "1753988",
+      "name": "烏山咖啡",
+      "address": "台南市南化區南176鄉道",
+      "phone": "06 577 3304",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 80,
+        "max": 400,
+        "display": "約 NT$80–400/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "景觀咖啡",
+        "咖啡"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.3,
+        "review_count": 276,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 13,
+        "review_summary": [
+          "所以建議先打電話來問看看",
+          "烏山咖啡的菜單",
+          "迷迭香雞腿排或是義大利麵",
+          "所以可以吃很飽",
+          "是也不錯喝",
+          "會變得比較甘甜",
+          "咖啡味道非常的香濃"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/1753988"
+      ],
+      "id": "tainan-nanhua-002",
+      "image_url": "https://lh3.googleusercontent.com/kg4Xm0POKeMOjyg0xT0_zGrtpd0db8Lv34DPf3OyOAEha-p4PA5Ojybs7U5m9Zl4IQ5P4SlnBLw8Wo6l13OPJH1qQMENsqV5CAY=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/1753988",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "414671",
+      "name": "香榭彎咖啡簡餐",
+      "address": "台南市南化區297",
+      "phone": "0933 501 818",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 230,
+        "max": 300,
+        "display": "約 NT$230–300/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "景觀咖啡",
+        "景觀餐廳",
+        "咖啡"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.5,
+        "review_count": 214,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 5,
+        "review_summary": [
+          "喵爸來到了南化來享受大自然",
+          "南化這裡交通非常方便",
+          "路況相當不錯",
+          "因為沒有停車場",
+          "態度也非常親切",
+          "能在山上吃到這麼好吃的火鍋真是難得",
+          "料理也好吃"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/414671"
+      ],
+      "id": "tainan-nanhua-003",
+      "image_url": "https://lh3.googleusercontent.com/KVprbmm9Iq3r7T4maII4YwRZKSp2xOmyNhPMbFtoxxrdcIzf2v0c1t9tCDUVCmTbz2fgH4ccmkfMlV_CDS5kPJHlhw7dV1MqhA=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/414671",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_395000000A_001776",
+      "name": "紅屋頂",
+      "address": "臺南市南化區297-1號",
+      "phone": "(06)5775267",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡",
+        "火鍋"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-nanhua-004",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_395000000A_001839",
+      "name": "山友餐廳",
+      "address": "臺南市南化區297-3號",
+      "phone": "(06)6353226",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-nanhua-005",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_395000000A_001887",
+      "name": "南化阿蘭餐廳",
+      "address": "臺南市南化區西埔里6號之5",
+      "phone": "(06)5773917",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "客家料理",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-nanhua-006",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_395000000A_002073",
+      "name": "香榭彎咖啡簡餐",
+      "address": "臺南市南化區南化里297號",
+      "phone": "(06)5775123",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-nanhua-007",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_395000000A_002140",
+      "name": "景好園咖啡庭園",
+      "address": "臺南市南化區南化里290號",
+      "phone": "(06)5773259",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡",
+        "火鍋"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-nanhua-008",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_A15011200H_000086",
+      "name": "小歇冰舖",
+      "address": "臺南市南化區北寮里49號",
+      "phone": "0965742291",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡",
+        "義式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-nanhua-009",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-173507547-00001-0",
+      "name": "臺南市南化區南化國中",
+      "address": "臺南市南化區南化里227號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-nanhua-010",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-173633360-00001-3",
+      "name": "臺南市南化區玉山國小",
+      "address": "臺南市南化區玉山里48-1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-nanhua-011",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-173633805-00001-7",
+      "name": "臺南市南化區瑞峰國小",
+      "address": "臺南市南化區關山里96號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-nanhua-012",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-173636227-00001-8",
+      "name": "臺南市南化區北寮國小",
+      "address": "臺南市南化區北寮里110-27號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-nanhua-013",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-173658869-00001-4",
+      "name": "臺南市南化區南化國小",
+      "address": "臺南市南化區南化里17號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-nanhua-014",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-173659001-00001-3",
+      "name": "臺南市南化區西埔國小",
+      "address": "臺南市南化區西埔里117號(西埔國小)",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-nanhua-015",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-122853565-45915-1",
+      "name": "富達零售股份有限公司",
+      "address": "臺南市南化區南化里128號1樓(南化區農會)",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-nanhua-016",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200006741-00001-1",
+      "name": "阿蘭小吃部",
+      "address": "臺南市南化區西埔里6-5號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-nanhua-017",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200006771-00001-4",
+      "name": "茶的哲學",
+      "address": "臺南市南化區小崙里一號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-nanhua-018",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200006808-00001-5",
+      "name": "龍記商行",
+      "address": "臺南市南化區南化里174之2號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-nanhua-019",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200006867-00001-0",
+      "name": "陳景導",
+      "address": "臺南市南化區南化里297-1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-nanhua-020",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200006901-00001-9",
+      "name": "南化美芝城",
+      "address": "臺南市南化區南化里153號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-nanhua-021",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200006942-00001-4",
+      "name": "謝文偉",
+      "address": "臺南市南化區南化里168號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-nanhua-022",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200006984-00003-2",
+      "name": "古早味紅茶冰",
+      "address": "臺南市南化區南化里250-17號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-nanhua-023",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200007914-00001-4",
+      "name": "南遊山莊行",
+      "address": "臺南市南化區南化里39之1號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-nanhua-024",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-122555003-44975-2",
+      "name": "統一超商股份有限公司",
+      "address": "臺南市南化區南化里128號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-nanhua-025",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200016750-00001-2",
+      "name": "安琪媽媽",
+      "address": "臺南市南化區南化里54之1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-nanhua-026",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-123285582-94954-7",
+      "name": "萊爾富國際股份有限公司",
+      "address": "臺南市南化區北寮里1鄰北寮11號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-nanhua-027",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-00282150",
+      "name": "新新麵食館",
+      "address": "臺南市南化區南化里南化242號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "tainan-nanhua-028",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-36830260",
+      "name": "小歇農產行",
+      "address": "臺南市南化區北寮里北寮110之14號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "tainan-nanhua-029",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-88998015",
+      "name": "炸香園香酥雞店",
+      "address": "臺南市南化區小崙里小崙47之5號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "tainan-nanhua-030",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-21667304",
+      "name": "蔡永忠",
+      "address": "臺南市南化區北寮里北寮107-2號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-nanhua-031",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-85628405",
+      "name": "矮屋頂商行",
+      "address": "臺南市南化區北寮里3鄰北寮58號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "茶飲／冰品"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「手搖飲店」（563115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-nanhua-032",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-47722464",
+      "name": "古早味傳統美食",
+      "address": "臺南市南化區北寮里5鄰北寮2-15號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "早餐"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「早餐店」（561111），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-nanhua-033",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-47886450",
+      "name": "謝文偉",
+      "address": "臺南市南化區南化里南化168號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-nanhua-034",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-14989738",
+      "name": "龍記商行",
+      "address": "臺南市南化區南化里南化174-2號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-nanhua-035",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-37631681",
+      "name": "廣式鮮肉包",
+      "address": "臺南市南化區南化里南化245號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "早餐"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「早餐店」（561111），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-nanhua-036",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-14987859",
+      "name": "第一麵攤",
+      "address": "臺南市南化區南化里南化54-1號前面",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-nanhua-037",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-40816944",
+      "name": "瑞美冰菓室",
+      "address": "臺南市南化區南化里6鄰南化82號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "茶飲／冰品"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「手搖飲店」（563115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-nanhua-038",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-62965221",
+      "name": "南化美芝城",
+      "address": "臺南市南化區南化里8鄰南化153號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "早餐"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「早餐店」（561111），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-nanhua-039",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-62961317",
+      "name": "茶的哲學",
+      "address": "臺南市南化區小崙里小崙1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "茶飲／冰品"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「手搖飲店」（563115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-nanhua-040",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-88998015",
+      "name": "炸香園香酥雞店",
+      "address": "臺南市南化區小崙里小崙47-5號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-nanhua-041",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-67913455",
+      "name": "阿蘭小吃部",
+      "address": "臺南市南化區西埔里西埔10-3號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-nanhua-042",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-624d8a6fbaf6d32a8abd6baf",
+      "name": "小歇冰舖/鮮果冰淇淋/咖啡/簡餐",
+      "address": "臺南市南化區49號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 240,
+        "max": 360,
+        "display": "約 NT$240–360/人（愛食記均消約 NT$300）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡",
+        "甜點／烘焙",
+        "茶飲／飲料"
+      ],
+      "online_rating": {
+        "platform": "愛食記",
+        "score": 4.5,
+        "review_count": 3,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表顯示 4.5 分、3 則評論",
+          "未把完整評論全文寫入資料檔。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%8D%97%E5%8C%96",
+        "https://ifoodie.tw/restaurant/624d8a6fbaf6d32a8abd6baf-%E5%B0%8F%E6%AD%87%E5%86%B0%E8%88%96-%E9%AE%AE%E6%9E%9C%E5%86%B0%E6%B7%87%E6%B7%8B-%E5%92%96%E5%95%A1-%E7%B0%A1%E9%A4%90"
+      ],
+      "id": "tainan-nanhua-043",
+      "image_url": "https://lh3.googleusercontent.com/FBQjeQ07tqz7WF75UXVWkfUDkadGuUi-30E4J7vzD1qJfcT4Cuyth17bFxZCIt2cy7NHlsKdmiyeK0e7G7D2FgpSSrd45DoWKfLiBK_9Se_L=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%8D%97%E5%8C%96",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-6432bcc401ba333e0c7a825a",
+      "name": "一貫道玉山寶光聖堂",
+      "address": "臺南市南化區玉山裏17之1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "愛食記列表未提供均消時，依料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表收錄此店家,但未顯示可解析的評分",
+          "列表顯示評論數為 未知。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%8D%97%E5%8C%96",
+        "https://ifoodie.tw/restaurant/6432bcc401ba333e0c7a825a-%E4%B8%80%E8%B2%AB%E9%81%93%E7%8E%89%E5%B1%B1%E5%AF%B6%E5%85%89%E8%81%96%E5%A0%82"
+      ],
+      "id": "tainan-nanhua-044",
+      "image_url": "https://lh3.googleusercontent.com/FBQjeQ07tqz7WF75UXVWkfUDkadGuUi-30E4J7vzD1qJfcT4Cuyth17bFxZCIt2cy7NHlsKdmiyeK0e7G7D2FgpSSrd45DoWKfLiBK_9Se_L=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%8D%97%E5%8C%96",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-5639b0cd2756dd5d6810fd1d",
+      "name": "錢記香腸",
+      "address": "臺南市南化區南化",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 80,
+        "max": 120,
+        "display": "約 NT$80–120/人（愛食記均消約 NT$100）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "中式／台式料理",
+        "小吃"
+      ],
+      "online_rating": {
+        "platform": "愛食記",
+        "score": 5,
+        "review_count": 3,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表顯示 5 分、3 則評論",
+          "未把完整評論全文寫入資料檔。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%8D%97%E5%8C%96",
+        "https://ifoodie.tw/restaurant/5639b0cd2756dd5d6810fd1d-%E9%8C%A2%E8%A8%98%E9%A6%99%E8%85%B8"
+      ],
+      "id": "tainan-nanhua-045",
+      "image_url": "https://lh3.googleusercontent.com/FBQjeQ07tqz7WF75UXVWkfUDkadGuUi-30E4J7vzD1qJfcT4Cuyth17bFxZCIt2cy7NHlsKdmiyeK0e7G7D2FgpSSrd45DoWKfLiBK_9Se_L=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%8D%97%E5%8C%96",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-60d1b726873d7923e7f8ff57",
+      "name": "侯家果園",
+      "address": "臺南市南化區48之2號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 240,
+        "max": 360,
+        "display": "約 NT$240–360/人（愛食記均消約 NT$300）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "中式／台式料理",
+        "小吃"
+      ],
+      "online_rating": {
+        "platform": "愛食記",
+        "score": 5,
+        "review_count": 1,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表顯示 5 分、1 則評論",
+          "未把完整評論全文寫入資料檔。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%8D%97%E5%8C%96",
+        "https://ifoodie.tw/restaurant/60d1b726873d7923e7f8ff57-%E4%BE%AF%E5%AE%B6%E6%9E%9C%E5%9C%92"
+      ],
+      "id": "tainan-nanhua-046",
+      "image_url": "https://lh3.googleusercontent.com/FBQjeQ07tqz7WF75UXVWkfUDkadGuUi-30E4J7vzD1qJfcT4Cuyth17bFxZCIt2cy7NHlsKdmiyeK0e7G7D2FgpSSrd45DoWKfLiBK_9Se_L=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%8D%97%E5%8C%96",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  ]
+}

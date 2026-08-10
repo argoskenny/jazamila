@@ -1,0 +1,5708 @@
+{
+  "collection": {
+    "title": "新北市石門實體餐廳資料（含愛食記補充資料）",
+    "city": "新北市",
+    "district": "石門區",
+    "scope": "從 FonFood「新北市石門區－美食餐廳」公開列表與料理分類頁取得候選店家，再逐頁核對店家地址、電話、料理分類、Google 評價快照、推薦菜單價位與食記摘要；僅保留地址屬於石門區且未見歇業標記的有店面店家。 不足筆數再以觀光署餐飲資料、食藥署「餐飲場所」登錄資料及經濟部核准設立餐廳餐館資料補充；官方資料未提供網路評分時保留 null 與來源說明。 不足筆數再以觀光署餐飲資料、食藥署「餐飲場所」登錄資料及經濟部核准設立餐廳餐館資料補充；官方資料未提供網路評分時保留 null 與來源說明。 不足筆數再以觀光署餐飲資料、食藥署「餐飲場所」登錄資料及經濟部核准設立餐廳餐館資料補充；官方資料未提供網路評分時保留 null 與來源說明。 不足筆數再以觀光署餐飲資料、食藥署「餐飲場所」登錄資料、經濟部核准設立餐廳餐館資料及財政部營業稅籍餐飲分類資料補充；官方資料未提供網路評分時保留 null 與來源說明。 再以愛食記公開行政區列表補充可核對地址的店家；偏遠或人口較少行政區若公開資料不足，保留實際可找到的筆數。 再以愛食記公開行政區列表補充可核對地址的店家；偏遠或人口較少行政區若公開資料不足，保留實際可找到的筆數。 再以愛食記公開行政區列表補充可核對地址的店家；偏遠或人口較少行政區若公開資料不足，保留實際可找到的筆數。 再以愛食記公開行政區列表補充可核對地址的店家；偏遠或人口較少行政區若公開資料不足，保留實際可找到的筆數。",
+    "collected_at": "2026-08-10",
+    "status": "partial",
+    "target_count": 200,
+    "record_count": 144,
+    "source_platform": "FonFood public restaurant pages; Tourism Administration restaurant data; FDA food business registration data; MOEA restaurant business registration data; Ministry of Finance active tax registration data; iFoodie public district restaurant lists; iFoodie public district restaurant lists; iFoodie public district restaurant lists; iFoodie public district restaurant lists",
+    "rating_note": "愛食記補充資料保留列表顯示的評分與評論數；未顯示評分時以 null 與來源說明表示，未自行推估。",
+    "review_note": "review_summary 僅保存列表可公開解析的評分與評論數說明，未把完整評論全文寫入資料檔。",
+    "price_note": "價位是每人約略消費範圍（新台幣）；優先取 FonFood 公開菜單，官方補充資料沒有菜單時依店名與料理分類估算，實際仍以店家最新菜單為準。",
+    "dedupe_rule": "以店名加地址作為唯一鍵；同品牌不同地址視為不同實體門市，同一地址不重複收錄。",
+    "source_list_pages": [
+      "https://www.fonfood.com/新北市石門區",
+      "https://www.fonfood.com/新北市石門區/2",
+      "https://www.fonfood.com/新北市石門區/3",
+      "https://www.fonfood.com/新北市",
+      "https://www.fonfood.com/新北市/2",
+      "https://www.fonfood.com/新北市/3",
+      "https://www.fonfood.com/新北市/4",
+      "https://www.fonfood.com/新北市/5",
+      "https://www.fonfood.com/新北市石門區/聚餐",
+      "https://www.fonfood.com/新北市石門區/排隊",
+      "https://www.fonfood.com/新北市石門區/在地美食",
+      "https://www.fonfood.com/新北市石門區/景觀餐廳",
+      "https://www.fonfood.com/新北市石門區/景觀咖啡",
+      "https://www.fonfood.com/新北市石門區/buffet",
+      "https://www.fonfood.com/新北市石門區/早午餐",
+      "https://www.fonfood.com/新北市石門區/下午茶",
+      "https://www.fonfood.com/新北市石門區/海鮮餐廳",
+      "https://www.fonfood.com/新北市石門區/必比登",
+      "https://www.fonfood.com/新北市石門區/米其林",
+      "https://www.fonfood.com/新北市石門區/燒肉吃到飽",
+      "https://www.fonfood.com/新北市石門區/日式",
+      "https://www.fonfood.com/新北市石門區/韓式",
+      "https://www.fonfood.com/新北市石門區/法式",
+      "https://www.fonfood.com/新北市石門區/義式",
+      "https://www.fonfood.com/新北市石門區/西班牙",
+      "https://www.fonfood.com/新北市石門區/美式",
+      "https://www.fonfood.com/新北市石門區/港式",
+      "https://www.fonfood.com/新北市石門區/泰式",
+      "https://www.fonfood.com/新北市石門區/越式",
+      "https://www.fonfood.com/新北市石門區/印度",
+      "https://www.fonfood.com/新北市石門區/小吃",
+      "https://www.fonfood.com/新北市石門區/古早味",
+      "https://www.fonfood.com/新北市石門區/冰品",
+      "https://www.fonfood.com/新北市石門區/輕食",
+      "https://www.fonfood.com/新北市石門區/拉麵",
+      "https://www.fonfood.com/新北市石門區/漢堡",
+      "https://www.fonfood.com/新北市石門區/牛排",
+      "https://www.fonfood.com/新北市石門區/燉飯",
+      "https://www.fonfood.com/新北市石門區/披薩",
+      "https://www.fonfood.com/新北市石門區/義大利麵",
+      "https://www.fonfood.com/新北市石門區/帝王蟹",
+      "https://www.fonfood.com/新北市石門區/龍蝦",
+      "https://www.fonfood.com/新北市石門區/和牛",
+      "https://www.fonfood.com/新北市石門區/烤鴨",
+      "https://www.fonfood.com/新北市石門區/牛肉麵",
+      "https://www.fonfood.com/新北市石門區/舒芙蕾",
+      "https://www.fonfood.com/新北市石門區/鬆餅",
+      "https://www.fonfood.com/新北市石門區/吐司",
+      "https://www.fonfood.com/新北市石門區/蛋糕",
+      "https://www.fonfood.com/新北市石門區/咖啡",
+      "https://www.fonfood.com/新北市石門區/平價",
+      "https://www.fonfood.com/新北市石門區/人氣",
+      "https://www.fonfood.com/新北市石門區/網美打卡",
+      "https://www.fonfood.com/新北市石門區/約會",
+      "https://www.fonfood.com/新北市石門區/不限時",
+      "https://www.fonfood.com/新北市石門區/動物",
+      "https://www.fonfood.com/新北市石門區/庭園",
+      "https://www.fonfood.com/新北市石門區/老宅",
+      "https://www.fonfood.com/新北市石門區/異國",
+      "https://data.gov.tw/dataset/7779",
+      "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip",
+      "https://data.gov.tw/dataset/8938",
+      "https://data.fda.gov.tw/data/opendata/export/97/json",
+      "https://data.gov.tw/dataset/108355",
+      "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB",
+      "https://data.gov.tw/dataset/9400",
+      "https://eip.fia.gov.tw/data/BGMOPEN1.zip",
+      "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80"
+    ],
+    "collection_stats": {
+      "list_pages_fetched": 3,
+      "city_list_pages_fetched": 5,
+      "category_pages_fetched": 3,
+      "candidate_count": 144,
+      "detail_pages_parsed": 144,
+      "valid_count": 144,
+      "invalid_reason_counts": {
+        "phone": 3,
+        "district": 109,
+        "closed": 3,
+        "rating": 2
+      },
+      "fonfood_base_count": 31,
+      "official_candidates": {
+        "tourism": 4,
+        "fda_food_service": 49,
+        "business_registered": 27,
+        "tax_registered_food_service": 45
+      },
+      "official_added": {
+        "tourism": 3,
+        "fda": 49,
+        "business": 21,
+        "tax": 27
+      },
+      "official_added_total": 100,
+      "ifoodie_card_count": 15,
+      "ifoodie_supplement_added": 13
+    },
+    "image_collection_note": "每家最多保留一張公開圖片網址；只跳過來源頁面明文禁止外部引用或明確拒絕的來源，不下載圖片。未發現明文禁止不等同於取得圖片著作權授權；收到下架通知時應移除網址。"
+  },
+  "restaurants": [
+    {
+      "source_id": "5808450",
+      "name": "白日夢 Tea & Café",
+      "address": "新北市石門區阿里荖47-2號",
+      "phone": "02 2638 0045",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 100,
+        "max": 180,
+        "display": "約 NT$100–180/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "景觀咖啡",
+        "咖啡",
+        "海景"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.4,
+        "review_count": 2161,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 156,
+        "review_summary": [
+          "老友帶我們來石門區他最喜歡的愛店喝咖啡",
+          "天氣超讚的下午",
+          "很好停車的一間店",
+          "可愛的課桌椅",
+          "運氣很好有靠窗的位置",
+          "冰拿鐵微苦",
+          "好喜歡這間店"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/5808450"
+      ],
+      "id": "newtaipei-shimen-001",
+      "image_url": "https://lh3.googleusercontent.com/umQ_Ni5pdTjW6ddyxhNhFqSPTddAoM8qivAO-lHnT6tr0DZLN_-1iSQZ6s_OQiEgOhD3PMPozdNWoqdskD9PBS487vZnggoEO_8=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/5808450",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "5331408",
+      "name": "米詩堤極北藍點",
+      "address": "新北市石門區頭圍段八甲小段1-101號",
+      "phone": "02 2638 3957",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 300,
+        "display": "約 NT$60–300/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "下午茶",
+        "咖啡",
+        "甜點",
+        "泡芙",
+        "海景"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.2,
+        "review_count": 3592,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 73,
+        "review_summary": [
+          "台北票券便宜優惠",
+          "每人低消90元",
+          "米詩堤極北藍點甜點的價格相當親民",
+          "惡魔生乳好好吃喔",
+          "內用低消一個人只要90元",
+          "富貴角打卡趣",
+          "KLOOK住宿買貴不用怕"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/5331408"
+      ],
+      "id": "newtaipei-shimen-002",
+      "image_url": "https://lh3.googleusercontent.com/N7qHWKbhUHEodIKUMpJvnqsyq_0e6Z-fOZFHS4Do81tujk4vi8b_ekwTUF0Ps8FyEYKrKN-dbIZae1plj03nVOL0YhP8OOMi1fc=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/5331408",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "659029",
+      "name": "伊莎貝拉海灘咖啡館",
+      "address": "新北市石門區15號",
+      "phone": "02 8635 2262",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 220,
+        "max": 280,
+        "display": "約 NT$220–280/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "景觀咖啡",
+        "親子",
+        "咖啡",
+        "希臘",
+        "約會",
+        "浪漫",
+        "海景",
+        "遊戲區"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 3.6,
+        "review_count": 2027,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 119,
+        "review_summary": [
+          "水杯都為自助模式",
+          "紅磡車仔麵店排隊1小時隊先有得食",
+          "原來真係需要排隊超過1小時方能入座",
+          "時間上就等同食一餐火鍋或自助餐",
+          "時尚雅緻貴族級咖啡店",
+          "元朗36間尚存本土餐廳推介"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/659029"
+      ],
+      "id": "newtaipei-shimen-003",
+      "image_url": "https://lh3.googleusercontent.com/HishjCaudMOX5QKbz4jESZfPL4xHeYm6u3hlkzOXQ8owl-0QK25hX5nYEwhLn0vHXe8WIIL94b7hh3Jk_v-07a0=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/659029",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "6345409",
+      "name": "米詩堤甜點王國(極北藍點)",
+      "address": "新北市石門區頭圍段八甲小段1-101號",
+      "phone": "02 2638 3957",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 150,
+        "display": "約 NT$60–150/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "甜點",
+        "泡芙",
+        "蛋糕",
+        "咖啡",
+        "人氣",
+        "海景"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.2,
+        "review_count": 3592,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 162,
+        "review_summary": [
+          "生乳泡芙65元",
+          "現在居然還有多達五種口味可選",
+          "四個特價240元",
+          "點了季節限定草莓塔105元",
+          "草莓獨享杯190元",
+          "超澎湃海鮮大餐2人700元"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/6345409"
+      ],
+      "id": "newtaipei-shimen-004",
+      "image_url": "https://lh3.googleusercontent.com/naqyipgC8EfXz1BO_utVZ5kgYSUBenR43G5kKXSJ2Uddx-dNL7l_1NRodzQ0pvLD8sAmc2lri9_g1dCxGy11TQ=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/6345409",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "606578",
+      "name": "石門劉家肉粽(富基店)",
+      "address": "新北市石門區號",
+      "phone": "02 2638 0888",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 30,
+        "max": 45,
+        "display": "約 NT$30–45/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4,
+        "review_count": 8776,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 182,
+        "review_summary": [
+          "赫然發現劉家肉粽排隊的人很少",
+          "怎麼門口沒有排隊",
+          "大家都很守秩序的排隊選購",
+          "鮑魚粽一顆要140元",
+          "價格真的跟用料都相符",
+          "別因為太好吃而一口接一口",
+          "生意也是好到要排隊"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/606578"
+      ],
+      "id": "newtaipei-shimen-005",
+      "image_url": "https://lh3.googleusercontent.com/h9hoRzLwaczloN5kLEcAIXp4fO8ixi4OXRFrFfmVKgJRYkcEMWFjh0gFxPvMhEqKgVaMSy5HnF7QbN5V3MUJ=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/606578",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "1697916",
+      "name": "俞家肉粽",
+      "address": "新北市石門區104號",
+      "phone": "02 2638 3961",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 30,
+        "max": 40,
+        "display": "約 NT$30–40/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "在地美食"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.2,
+        "review_count": 2502,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 26,
+        "review_summary": [
+          "以及能一次買到多種口味的肉粽聞名",
+          "還有適合遊客淺嘗口味的小肉粽",
+          "台北票券便宜優惠",
+          "俞家肉粽總共有6總口味",
+          "除了肉粽之外還有茶葉蛋15元",
+          "一顆小肉粽15元"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/1697916"
+      ],
+      "id": "newtaipei-shimen-006",
+      "image_url": "https://lh3.googleusercontent.com/u78MrBJXHwLCDl-tG1swiRc5fQfGNLJYTx_OVoREsZPYc8capiapWLT-zQ9Buda3KGt1-SS1gp08MfZ27tXQXDazFmns3R7SvA=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/1697916",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "2178944",
+      "name": "富基漁港 來來活海鮮",
+      "address": "新北市石門區富基里楓林14號富基漁港",
+      "phone": "02 2638 3024",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 70,
+        "max": 2000,
+        "display": "約 NT$70–2000/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮餐廳",
+        "海鮮",
+        "海景"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.2,
+        "review_count": 2053,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 19,
+        "review_summary": [
+          "食材新鮮價格合理",
+          "但餐點偏貴也吃不飽",
+          "每種價格都不同",
+          "還好這家價格公開透明化",
+          "沒有什麼特別的裝潢",
+          "但整體還算乾淨明亮",
+          "但別問我好不好吃"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/2178944"
+      ],
+      "id": "newtaipei-shimen-007",
+      "image_url": "https://lh3.googleusercontent.com/2I432cUQfzD3laRZg0-l0XDDwDHl4pUePyYgJYAmtBtLgX6CovEwZ6ejafmINqfxyhXgKsxu_Lqbof5RYp3An2nMzecaYnaVQKk=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/2178944",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "7200854",
+      "name": "春金活海產",
+      "address": "新北市石門區楓林路17-8號",
+      "phone": "02 2638 2189",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 200,
+        "max": 800,
+        "display": "約 NT$200–800/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮餐廳",
+        "海鮮"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.4,
+        "review_count": 1609,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 24,
+        "review_summary": [
+          "品牌與商品意涵具有環境永續及歷史文化意義",
+          "預計再增加推薦八里",
+          "桃樂絲柚香農場",
+          "的優質商品",
+          "讓客人能夠輕鬆地購入皇冠海岸內的特色伴手禮",
+          "將捷金鬱金香酒店"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/7200854"
+      ],
+      "id": "newtaipei-shimen-008",
+      "image_url": "https://lh3.googleusercontent.com/4JPZKZv6gw0OxMiC_tUsvvyx5QKa7s_zVlfbtx3mhm38DhltPyXa61uCeXY1JhPRGTsL9StrYcoxm8-J4evLgj_pwK3liuiitXY=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/7200854",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "146521",
+      "name": "石門168海鮮超市餐廳",
+      "address": "新北市石門區中央路2之1號",
+      "phone": "02 2638 3761",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 160,
+        "max": 300,
+        "display": "約 NT$160–300/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮餐廳",
+        "海鮮"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.3,
+        "review_count": 1861,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 13,
+        "review_summary": [
+          "今天要來和大家分享一間我覺得很貼心又好吃的餐廳",
+          "價格都很透明",
+          "吃來乾淨又滿足",
+          "重點是他的炸鰻魚也太好吃拉",
+          "多道料理只要100元",
+          "平價高品質的海鮮饗宴"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/146521"
+      ],
+      "id": "newtaipei-shimen-009",
+      "image_url": "https://lh6.ggpht.com/PGvOLZpl-EvQZv1ZmGV3nBXLAbd_SI5AQ7vQ1IdAhFXZwl8G_J0TgZgfkljrH7kisi1osSeU18Nnkm3blk5SpA=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/146521",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "529813",
+      "name": "海灣綠洲 bay & oasis 景觀餐廳",
+      "address": "新北市石門區楓林25-1號",
+      "phone": "02 2638 3250",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 80,
+        "max": 400,
+        "display": "約 NT$80–400/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "景觀咖啡",
+        "景觀餐廳",
+        "親子",
+        "咖啡",
+        "秘境",
+        "海景"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.1,
+        "review_count": 1229,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 53,
+        "review_summary": [
+          "整個台灣社會瀰漫著一種不安的氣氛",
+          "老梅迷宮藏身在台灣的北海岸富貴公園裡",
+          "100元升等套餐",
+          "整體口味還不錯",
+          "干貝超好吃",
+          "雞腿多汁好吃",
+          "口味就一般般且無法做外帶杯"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/529813"
+      ],
+      "id": "newtaipei-shimen-010",
+      "image_url": "https://lh3.googleusercontent.com/tAL3MPug-HEO_jbEalL98Re14v_4iRTHGDH5g_1gGNUSM1rP0Y3huS6RzPVNutvNZTnxEk6NRIJJQfpBRjBxWA=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/529813",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "7092269",
+      "name": "鹿邊咖啡Deer cafe",
+      "address": "新北市石門區台2線",
+      "phone": "0963 339 402",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 80,
+        "max": 400,
+        "display": "約 NT$80–400/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "景觀咖啡",
+        "咖啡",
+        "海景",
+        "夜景",
+        "夕陽",
+        "聚餐",
+        "貓咪"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.4,
+        "review_count": 1824,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 21,
+        "review_summary": [
+          "而且停車場超大",
+          "非常適合車聚或夜衝的朋友",
+          "cafe都會是一個選擇",
+          "每人平均價位",
+          "位於新北市石門區台2線旁的鹿邊咖啡有著引人注目的大招牌",
+          "戶外種植了可愛的仙人掌"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/7092269"
+      ],
+      "id": "newtaipei-shimen-011",
+      "image_url": "https://lh3.googleusercontent.com/4_M30oDcwln-7BWZqo6PvwSoveMrgHXclLUkcsLSXWfS_Z3wmn4ewougu_Pt9MqCc6hv-4WW3GL9_hAEFmwa2IzNOI7DOnxdHRNr=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/7092269",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "6754496",
+      "name": "海角一樂園景觀餐廳",
+      "address": "新北市石門區別墅23號",
+      "phone": "02 2636 3465",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 680,
+        "max": 680,
+        "display": "約 NT$680/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "景觀餐廳",
+        "美式",
+        "牛排",
+        "漢堡",
+        "海景",
+        "秘境"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.4,
+        "review_count": 1417,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 20,
+        "review_summary": [
+          "可惜當日天候欠佳",
+          "也是座位空間",
+          "加了玉米脆片及各式水果特別好吃",
+          "海鮮套餐680元",
+          "德國酸菜脆皮豬腳680元",
+          "海角羊肩排680元",
+          "瓜達魯沛沙朗牛排780元"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/6754496"
+      ],
+      "id": "newtaipei-shimen-012",
+      "image_url": "https://lh3.googleusercontent.com/YSQcyaVxhqXsBXYL8Ex4DjE0cp0X-Bg6T3_NQBK9l-NH5u2HYcFQtGLvbdGlH37FZ98ZTI-NQnMYmf1JVmqXntM2haVV-9YmDNY=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/6754496",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "33305",
+      "name": "主悅海鮮料理",
+      "address": "新北市石門區崁子腳路41之2號",
+      "phone": "0980 012 230",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 350,
+        "max": 350,
+        "display": "約 NT$350/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "景觀餐廳",
+        "海鮮餐廳",
+        "海鮮",
+        "聚餐"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.6,
+        "review_count": 691,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 41,
+        "review_summary": [
+          "雖然沒有華麗氣派的裝潢",
+          "但用餐的人潮不少",
+          "特別一提的是",
+          "菜單以套參為主",
+          "想要單點也可以",
+          "烤魚下巴非常的入味好吃",
+          "口味偏家常菜居多"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/33305"
+      ],
+      "id": "newtaipei-shimen-013",
+      "image_url": "https://lh3.googleusercontent.com/rW1xbNjFnrr0IG9IE96I5wM_F8aoItZlcLzA4wqdacYf6IYolua3gjh6OmaH-CGbSX4NUE-_ADcNhOZ9UsDQxtja=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/33305",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "129993",
+      "name": "豹豹咖啡 • 海邊館",
+      "address": "新北市石門區下員坑33之6號",
+      "phone": "02 8635 1111",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 80,
+        "max": 290,
+        "display": "約 NT$80–290/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "景觀咖啡",
+        "下午茶",
+        "咖啡",
+        "玻璃屋",
+        "貓咪",
+        "療癒",
+        "海景"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.6,
+        "review_count": 179,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 60,
+        "review_summary": [
+          "是以豹貓為主題的咖啡廳",
+          "現在有森林館和海邊館兩間分館",
+          "豹豹咖啡海邊館位在白沙灣遊客中心旁",
+          "今天到來的森林館",
+          "環境明亮乾淨",
+          "焦糖海鹽拿鐵和烏龍奶茶都不錯"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/129993"
+      ],
+      "id": "newtaipei-shimen-014",
+      "image_url": "https://lh3.googleusercontent.com/Ur_oLFdJ_dl7Kgq0r5WRkJ790UZE2z2Fp_KLeLR92VlYeO_ESOwThcEIE2nSC-qynOyQYqFvlhheX4GHJePd1LbQE8rznOqzuk6K=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/129993",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "467882",
+      "name": "海堤咖啡",
+      "address": "新北市石門區6之2號",
+      "phone": "02 2638 3232",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 300,
+        "max": 300,
+        "display": "約 NT$300/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "景觀咖啡",
+        "下午茶",
+        "咖啡",
+        "海景"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.3,
+        "review_count": 1158,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 20,
+        "review_summary": [
+          "安妮的天空推薦",
+          "室內用餐環境雖然沒有過多的裝潢",
+          "整體空間的寬闊與不受拘束",
+          "整體還不錯",
+          "整體環境我覺得很舒適",
+          "富貴角公園",
+          "伊頓自助婚紗"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/467882"
+      ],
+      "id": "newtaipei-shimen-015",
+      "image_url": "https://lh3.googleusercontent.com/Q1VVjy9PmQ2VKowb_NsSs3WZbRbO3QM2f5Gf1kplSNvEFwRw8WpZz6BO8lpLT7aAgqtjXWcooyrS40Jiqd2WneLbv8lCd6iRp5I=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/467882",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "2179025",
+      "name": "伊莉莎海灘咖啡館",
+      "address": "新北市石門區號",
+      "phone": "02 8635 2262",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 100,
+        "max": 100,
+        "display": "約 NT$100/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "親子",
+        "咖啡",
+        "海景"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 3.6,
+        "review_count": 2027,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 9,
+        "review_summary": [
+          "超級有夠大份量",
+          "當下就覺得要帶家人來這品嚐一番",
+          "感受一下大份量的餐點",
+          "所有的菜色也都很大一份哦",
+          "是我喜歡的",
+          "薯條也超多",
+          "覺得特好吃"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/2179025"
+      ],
+      "id": "newtaipei-shimen-016",
+      "image_url": "https://lh3.googleusercontent.com/r-D3bzIzUkZ5ElhoaD9mUoiIUXcq1wVqYGJOLojVHX3qCZfJDDcufrxCgMFzr_eHW0stf7usipBey93a8Ul1KP57BItWIgaORTs=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/2179025",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "82033",
+      "name": "熊媽媽海鮮餐廳",
+      "address": "新北市石門區楓林路17之3號",
+      "phone": "02 2638 0645",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 200,
+        "max": 800,
+        "display": "約 NT$200–800/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮餐廳",
+        "海鮮"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.4,
+        "review_count": 1093,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 6,
+        "review_summary": [
+          "每一道上桌的菜色",
+          "擺盤精巧好吃又超值",
+          "並進行解說合菜的幾種價位",
+          "以及菜色的差別",
+          "餐廳內的裝潢",
+          "能迅速一包將桌上的殘渣魚骨之類的收拾乾淨",
+          "能否滿足所有客人的口味偏好"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/82033"
+      ],
+      "id": "newtaipei-shimen-017",
+      "image_url": "https://lh3.googleusercontent.com/S6xsxayee7B9XsDDmH2lRGDbEAvaxD_Y33-4zMGB-nIFpfbva3Wz4gFVFM_dHtgAduLDiF5LLdmjdfiaDGyAKH8=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/82033",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "246320",
+      "name": "【石門】大熊海鮮餐廳",
+      "address": "新北市石門區楓林路17-4號",
+      "phone": "02 2638 3906",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 200,
+        "max": 800,
+        "display": "約 NT$200–800/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮餐廳",
+        "海鮮"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.3,
+        "review_count": 900,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 8,
+        "review_summary": [
+          "大熊餐廳是北部親友間好評推薦的口袋餐廳來富基漁港",
+          "大熊海鮮餐廳就在富基漁港停車場前",
+          "停車非常方便",
+          "搭公車來也方便",
+          "厲害的海鮮饕客",
+          "盤盤新鮮美味",
+          "環境乾淨整潔"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/246320"
+      ],
+      "id": "newtaipei-shimen-018",
+      "image_url": "https://lh3.googleusercontent.com/BJ7wmGf2-g9T0epPK20uJMJCUA1gpnvsoQEMBzTDsMBbGmroaASbNrpTOBG_hapX7rd_uE3oaQ43ZpDw4Sjj=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/246320",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "3386984",
+      "name": "英芳飯店",
+      "address": "新北市石門區中央路臨9號",
+      "phone": "02 2638 1023",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 80,
+        "max": 400,
+        "display": "約 NT$80–400/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.2,
+        "review_count": 1085,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 4,
+        "review_summary": [
+          "見識到這家海產老店3000元合菜",
+          "價格真是平實",
+          "英芳飯店合菜價位",
+          "英芳飯店3000元合菜",
+          "北海岸自助行程推薦"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/3386984"
+      ],
+      "id": "newtaipei-shimen-019",
+      "image_url": "https://lh3.googleusercontent.com/a9TQZix7rauD0Luxiwa7PEvJtzqVIpfcyunauYVX4xsa0UQ_kq-r_0oEiABVOBrq486aCnS-c_-RLrwNwrfCn6Uj3oIIhMvgT_I=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/3386984",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "2006532",
+      "name": "拾浪咖啡",
+      "address": "新北市石門區阿里荖10號",
+      "phone": "0975 875 133",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 80,
+        "max": 400,
+        "display": "約 NT$80–400/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡",
+        "海景",
+        "網美打卡"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.3,
+        "review_count": 425,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 15,
+        "review_summary": [
+          "每人低消250元",
+          "首次搭乘折抵NT250",
+          "首2次享折扣NT100",
+          "領取NT100享樂金",
+          "拾浪咖啡每人低消250元",
+          "自助旅行近30個國家"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/2006532"
+      ],
+      "id": "newtaipei-shimen-020",
+      "image_url": "https://lh3.googleusercontent.com/b45NRzCJCXPeYnJetMh0SrLaw_jiD4sqiPQZzys2OOCqFVGRl9UXB592nZBMm-TZdhIRNlbQEUMJGkkBdyAVpk0L1xaPoDGFVA=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/2006532",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "2040029",
+      "name": "石門咖啡公園",
+      "address": "新北市石門區台2線28K",
+      "phone": "0910 268 255",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 80,
+        "max": 400,
+        "display": "約 NT$80–400/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "景觀咖啡",
+        "咖啡"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 3.8,
+        "review_count": 1090,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 5,
+        "review_summary": [
+          "桑葚冰沙140元",
+          "香濃巧克力冰沙150元",
+          "摩卡咖啡冰沙140元",
+          "炸洋蔥圈100元",
+          "麥克雞塊100元",
+          "黃金脆薯100元",
+          "巧克力厚片60元"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/2040029"
+      ],
+      "id": "newtaipei-shimen-021",
+      "image_url": "https://lh3.googleusercontent.com/G9BE9XI15ZiIcLZiQS0fDGdFoHa7MwzmKZwk-MbF1Y20K3yW0-v8Ty_lfxLeNb_VuW4hBeEPJjUwsQAuya8eNf-topb46jfw8A=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/2040029",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "2851778",
+      "name": "富基漁港-美美海鮮餐廳",
+      "address": "新北市石門區楓林路15號4號",
+      "phone": "0937 005 605",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 300,
+        "max": 300,
+        "display": "約 NT$300/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮餐廳",
+        "海鮮"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.2,
+        "review_count": 656,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 4,
+        "review_summary": [
+          "到處走走的時光",
+          "這邊的停車場要收費",
+          "店面雖然不大",
+          "生魚片吃起來口感還可以",
+          "價錢也不貴",
+          "吃一兩口還算好吃",
+          "個人覺得食物還算好吃"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/2851778"
+      ],
+      "id": "newtaipei-shimen-022",
+      "image_url": "https://lh3.googleusercontent.com/YIPbAKNEyCaqv_BwpzhxGqRjoGNYsA6r9xY4zpKsofCj1yk1UuRlGKi7K44PramvARRgkcb4-aWdmxl5L2kKeNK1DeQ_SBPnTJs=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/2851778",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "933426",
+      "name": "【富基漁港】張記專業生魚片",
+      "address": "新北市石門區富基魚港B9區",
+      "phone": "0932 272 690",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 300,
+        "max": 1300,
+        "display": "約 NT$300–1300/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮餐廳",
+        "生魚片"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.5,
+        "review_count": 234,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 7,
+        "review_summary": [
+          "乾脆直接殺至用餐區,到自己喜歡的張專業生魚片,全部一次到位,價位合理且又新鮮。",
+          "價位的話建議能事先跟老闆說,免得超出自己預算,覺得冤枉。其實到這種漁港的海產店"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/933426"
+      ],
+      "id": "newtaipei-shimen-023",
+      "image_url": "https://lh3.googleusercontent.com/rGWtv19hy-BCi8N2n4QvivASknWOJKGf59vm7WnKwh4bx6pGJYqAum6zt4Z3KNAbpu9Dqp1wCYI0qTIgUK4Dy2E=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/933426",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "5632044",
+      "name": "青山小棧",
+      "address": "新北市石門區45號",
+      "phone": "0926 673 857",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 80,
+        "max": 400,
+        "display": "約 NT$80–400/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "景觀咖啡",
+        "景觀餐廳",
+        "庭園"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.5,
+        "review_count": 179,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 5,
+        "review_summary": [
+          "整體環境滿清幽的",
+          "查看完整菜色資訊唷",
+          "價格都是包含套餐",
+          "整體用料實在",
+          "也是屬於一道比較下飯的口味",
+          "所有餐點中就屬我點的奶油蘑菇雞最不合口味",
+          "平價海鮮丼180元起"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/5632044"
+      ],
+      "id": "newtaipei-shimen-024",
+      "image_url": "https://lh3.googleusercontent.com/ajW873M3bn-00DAbSaVcf7O-_VCZUKnULPqYYFZnsub8aHMU5au6hNGPd6FVlY6od4US8oLibDhjaC4wzew6UVnapgGgHxca8SU=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/5632044",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "59156",
+      "name": "【富基漁港】阿達活海產",
+      "address": "新北市石門區號",
+      "phone": "02 2638 0658",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 80,
+        "max": 2800,
+        "display": "約 NT$80–2800/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮餐廳",
+        "海鮮"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4,
+        "review_count": 110,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 31,
+        "review_summary": [
+          "燙蝦子好吃",
+          "真的好好吃",
+          "不在乎餐廳氣氛的人可以來嚐試看看",
+          "味道夠味好吃",
+          "炒飯不好吃",
+          "價錢太高cp值低",
+          "P值不高感覺有點偏貴"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/59156"
+      ],
+      "id": "newtaipei-shimen-025",
+      "image_url": "https://lh3.googleusercontent.com/s0OJCIBz2slk8f-oMjWMbTe04AJUswEgDdG8kmAhINozFV_Rof9krnPKMZooHrOButTVAjQhnhU74tFYYaQ_R6w=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/59156",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "5595890",
+      "name": "白沙灣哈那海邊咖啡屋Hana Beach Cafe",
+      "address": "新北市石門區八甲路1-10號",
+      "phone": "02 2638 0772",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 80,
+        "max": 400,
+        "display": "約 NT$80–400/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "景觀咖啡",
+        "咖啡"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.3,
+        "review_count": 288,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 4,
+        "review_summary": [
+          "風和日麗又有舒服的海風",
+          "不過卻從來不知他有那麼好的用餐環境",
+          "享受的風景",
+          "美味的餐點",
+          "欣賞著風景",
+          "裡面簡單的裝潢",
+          "這間的東西真的好吃"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/5595890"
+      ],
+      "id": "newtaipei-shimen-026",
+      "image_url": "https://lh3.googleusercontent.com/y74x6VVt3aDZ6xPfHNFupYnK4-9gDlFVjzojiPsZnM0T07s1tqIbAD4CXtkecUJNqMuw966MfRHCKHKuoKMMxxMOSo0r8e3WcJc=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/5595890",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "2101095",
+      "name": "靠北邊叢山曉",
+      "address": "新北市石門區老崩山3號",
+      "phone": "02 2638 3132",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 80,
+        "max": 400,
+        "display": "約 NT$80–400/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "景觀咖啡",
+        "咖啡"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.3,
+        "review_count": 158,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 8,
+        "review_summary": [
+          "而室內裝潢算是很隨興混搭風",
+          "用料實在又好吃",
+          "台中鍋物吃到飽",
+          "分享瑞芳排隊必吃美食小吃",
+          "桃園燒烤吃到飽",
+          "鮑魚無限吃到飽",
+          "日式豬排好吃又多汁"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/2101095"
+      ],
+      "id": "newtaipei-shimen-027",
+      "image_url": "https://lh3.googleusercontent.com/JzOJ5Rxqx_-aesJ_0xiqYLPnEPlzj1Li9IW4KOWPBCcSaQbczL29AzGJLfpo0fZYalabGuH18Htpqc4V87WyRlSjb08RbpYHF2Q=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/2101095",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "806503",
+      "name": "北海岸石門旗艦會館",
+      "address": "新北市石門區中央路1-25號",
+      "phone": "(02)2638-2233",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 200,
+        "max": 800,
+        "display": "約 NT$200–800/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "下午茶"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 3.8,
+        "review_count": 545,
+        "source_snapshot": "來源頁面標註詳情",
+        "food_diary_count": 237,
+        "review_summary": [
+          "電話:02-26382233",
+          "一路上老爺就很明確的說要去富貴角燈塔那",
+          "結果我就說想去那附近的一間景觀餐廳用餐",
+          "雙人下午茶餐$600",
+          "來到這麼有氣氛的地方,不喝一下怎麼行呢~哈"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/806503"
+      ],
+      "id": "newtaipei-shimen-028",
+      "image_url": "https://lh3.googleusercontent.com/zolW5sPiJpk1Fb2v3pmpL7_YXy-9xoPZgpcpwSWv_QxsGBBEPWL5PTB-Fb5GMeBpT_F1IinPg9IBEvJMPplyw1ow=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/806503",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "843658",
+      "name": "練家蜂蜜石花凍",
+      "address": "新北市石門區中央路28號",
+      "phone": "(02)2638-1166",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 200,
+        "max": 800,
+        "display": "約 NT$200–800/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.4,
+        "review_count": 38,
+        "source_snapshot": "來源頁面標註詳情",
+        "food_diary_count": 6,
+        "review_summary": [
+          "看完請記得幫忙按個讚給我鼓勵喔",
+          "可以按讚",
+          "石門中央路這邊不好停車",
+          "假日區公所沒開前方又有許多停車格",
+          "南部粽等口味",
+          "店內也有一個銷售排行榜,第一名竟然是最便宜的小肉粽耶"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/843658"
+      ],
+      "id": "newtaipei-shimen-029",
+      "image_url": "https://lh3.googleusercontent.com/tM-paAQoD2z73YbHXB7XYayW9YTFiSU24aVEKFY5B4A5PP9YpAcXkrsY4oj8Z4CeH9qx-Wa146xWXUnI0a7xRQ=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/843658",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "94446",
+      "name": "【富基漁港】海口味海景餐廳",
+      "address": "新北市石門區富基村楓林路15-9號",
+      "phone": "02-2638-0478",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 200,
+        "max": 800,
+        "display": "約 NT$200–800/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮",
+        "海景"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4,
+        "review_count": 1,
+        "source_snapshot": "來源頁面標註詳情",
+        "food_diary_count": 27,
+        "review_summary": [
+          "是必然的。這次就再訪價格實惠、水產",
+          "清燙活蝦NT390",
+          "炒海瓜子NT310",
+          "酥炸水晶魚NT200",
+          "清蒸大花蟹NT2800/3",
+          "清蒸龍虎斑NT560"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/94446"
+      ],
+      "id": "newtaipei-shimen-030",
+      "image_url": "https://lh3.googleusercontent.com/7twkNUndP-2Z4z53LAa1HCosaJCoMCZhxgbjE1enPy4YzHj4bTlEdocLYa1Y-kvTPZRkgzRJfzfLGZsz4-AB97Rf=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/94446",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "866752",
+      "name": "中葉飯店",
+      "address": "新北市石門區德茂村下員坑30號",
+      "phone": "02-26362990",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 80,
+        "max": 400,
+        "display": "約 NT$80–400/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 3.8,
+        "review_count": 62,
+        "source_snapshot": "來源頁面標註詳情",
+        "food_diary_count": 3,
+        "review_summary": [
+          "中葉飯店不但曾獲得2008新北市優質特色餐廳的殊榮",
+          "其產品的精緻和美味值得遊客親自來品嚐",
+          "推薦菜色",
+          "130元"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/866752"
+      ],
+      "id": "newtaipei-shimen-031",
+      "image_url": "https://lh3.googleusercontent.com/dEpl9D4YMYhVTrAeM_PvAViMHWoc_k8woNNdni6ZTNDxw9imBIX7dXfhYALM_8OSDA7LB0Y-T_h6RlZ3h8Ww9w=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/866752",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_A15011000H_000066",
+      "name": "豹豹咖啡館BoBoCafe 海邊館",
+      "address": "新北市石門區德茂里下員坑33-6號",
+      "phone": "(02)26366760",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡",
+        "甜點／烘焙",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "newtaipei-shimen-032",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_A15011000H_000096",
+      "name": "劉家肉粽",
+      "address": "新北市石門區崁子腳路58-18號",
+      "phone": "(02)26380888",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "newtaipei-shimen-033",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_A15011000H_000243",
+      "name": "春金活海產",
+      "address": "新北市石門區富基里楓林17-8號",
+      "phone": "(02)26382189",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "newtaipei-shimen-034",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-C-128877157-00009-4",
+      "name": "米詩堤甜點王國有限公司",
+      "address": "新北市石門區頭圍段8甲小段1-101號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "甜點／烘焙"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-035",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-120278003-00001-6",
+      "name": "春金活海產",
+      "address": "新北市石門區富基里楓林17之8號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-036",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-123060248-13694-1",
+      "name": "全家便利商店股份有限公司",
+      "address": "新北市石門區德茂里下員坑30號之8",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-037",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-123060248-09000-7",
+      "name": "全家便利商店股份有限公司",
+      "address": "新北市石門區中央路24號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-038",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-127439784-00002-9",
+      "name": "劉家肉粽股份有限公司",
+      "address": "新北市石門區崁子腳58-18號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-039",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-122853565-46168-4",
+      "name": "富達零售股份有限公司",
+      "address": "新北市石門區中央路2號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-040",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-122821240-00001-5",
+      "name": "北海育樂股份有限公司",
+      "address": "新北市石門區草里里草埔尾5號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-041",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-122555003-57627-2",
+      "name": "統一超商股份有限公司",
+      "address": "新北市石門區下員坑39之1號1樓與下員坑39之2號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-042",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-137300417-00001-9",
+      "name": "新北市石門區石門實驗國中",
+      "address": "新北市石門區中央路1-9號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-043",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-122555003-56421-3",
+      "name": "統一超商股份有限公司",
+      "address": "新北市石門區大溪墘2-1號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-044",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-124365129-00001-6",
+      "name": "拜寧奈米生物科技股份有限公司",
+      "address": "新北市石門區石門區下員坑22號之3",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-045",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-124391111-00002-7",
+      "name": "劉家肉粽股份有限公司富基分公司",
+      "address": "新北市石門區富基村崁子腳58-16號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-046",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-122555003-28531-4",
+      "name": "統一超商股份有限公司",
+      "address": "新北市石門區中山路78號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-047",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-123285582-94911-2",
+      "name": "萊爾富國際股份有限公司",
+      "address": "新北市石門區草里里1鄰阿里荖6之2號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-048",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-172658790-00001-8",
+      "name": "人魚空間小吃店",
+      "address": "新北市石門區德茂里下員坑16號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-049",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-172658807-00001-7",
+      "name": "嗨老屋營業中小吃店",
+      "address": "新北市石門區下員坑16號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-050",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-200129351-00001-6",
+      "name": "富基漁港阿達活海產",
+      "address": "新北市石門區富基里楓林17-10號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 400,
+        "max": 1800,
+        "display": "約 NT$400–1800/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-051",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-200059814-00001-2",
+      "name": "阿秋海產店",
+      "address": "新北市石門區楓林15之16號(富基漁港魚貨直銷中心)",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-052",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-200057014-00001-2",
+      "name": "漁人碼頭代客料理",
+      "address": "新北市石門區富基里楓林路17-3號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-053",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-200055295-00001-1",
+      "name": "阿瑞小吃店",
+      "address": "新北市石門區楓林15之16號(漁獲直銷中心B棟I櫃位)",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-054",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-200055995-00001-8",
+      "name": "三芝小豬烘焙屋",
+      "address": "新北市石門區富基村崁子腳58之8號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "甜點／烘焙"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-055",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-200056274-00001-9",
+      "name": "十八王公土雞城",
+      "address": "新北市石門區茂林里小坑28號右棟",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-056",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-200163558-00001-3",
+      "name": "伊莉莎咖啡館",
+      "address": "新北市石門區下員坑15-17號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-057",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-190169416-00001-0",
+      "name": "半島海悅股份有限公司",
+      "address": "新北市石門區崁子脚58之55號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-058",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-200054485-00001-1",
+      "name": "哈那海邊商店",
+      "address": "新北市石門區德茂里八甲路1-3號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-059",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-200055114-00001-1",
+      "name": "富基美美小吃店",
+      "address": "新北市石門區楓林15-4",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-060",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-200053334-00001-3",
+      "name": "大熊海鮮食堂",
+      "address": "新北市石門區楓林17-4號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 400,
+        "max": 1800,
+        "display": "約 NT$400–1800/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮料理",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-061",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-200053436-00001-6",
+      "name": "小秋海產",
+      "address": "新北市石門區富基里楓林17-9號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-062",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-200092769-00002-9",
+      "name": "竹柏山莊",
+      "address": "新北市石門區山溪里九芎林9鄰3之1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-063",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-200091873-00001-3",
+      "name": "新錦豐商店",
+      "address": "新北市石門區八甲3號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-064",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-200091963-00001-3",
+      "name": "林媽媽素粽",
+      "address": "新北市石門區尖鹿里1鄰中央路42號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-065",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-200092009-00001-5",
+      "name": "中葉飯店",
+      "address": "新北市石門區德茂里下員坑30號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-066",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-200092099-00001-4",
+      "name": "姊妹餐廳",
+      "address": "新北市石門區富基里楓林路15-16號B3",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-067",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-200092417-00001-8",
+      "name": "海堤咖啡",
+      "address": "新北市石門區阿里荖6-2號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-068",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-189181953-00001-8",
+      "name": "拾浪有限公司",
+      "address": "新北市石門區阿里荖10號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-069",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-200150406-00001-1",
+      "name": "歐瑪咖啡廳",
+      "address": "新北市石門區富基里崁子脚58之11號、58之12號、58之13號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-070",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-202313706-00001-7",
+      "name": "主悅小吃店",
+      "address": "新北市石門區崁子脚14號之1",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-071",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-202335176-00001-2",
+      "name": "喜多多",
+      "address": "新北市石門區德茂里八甲3―2號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-072",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-202335462-00001-0",
+      "name": "新北市金山區漁會驛棧",
+      "address": "新北市石門區草里里阿里荖33-3號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-073",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-202282998-00001-5",
+      "name": "英芳號",
+      "address": "新北市石門區中央路9號之5",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-074",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-202334591-00001-2",
+      "name": "練家蜂蜜石花凍",
+      "address": "新北市石門區中央路28號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-075",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-202278613-00001-4",
+      "name": "鹿邊咖啡",
+      "address": "新北市石門區尖子鹿116號對面",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-076",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-202308247-00001-1",
+      "name": "一六八海鮮小吃店",
+      "address": "新北市石門區中央路2之1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮料理",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-077",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-202328410-00001-5",
+      "name": "迷工造物社",
+      "address": "新北市石門區阿里荖47-2號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-078",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-202325475-00001-3",
+      "name": "第一家海景餐廳",
+      "address": "新北市石門區楓林15之16號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-079",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-200233681-00001-8",
+      "name": "出磺口農場",
+      "address": "新北市石門區九芎林49號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-080",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-200074319-00001-9",
+      "name": "來來海產代客料理",
+      "address": "新北市石門區富基里楓林14之2號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-081",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-183682918-00001-9",
+      "name": "海園股份有限公司",
+      "address": "新北市石門區海園路38號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-082",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-F-102236404-00001-5",
+      "name": "海堤咖啡",
+      "address": "新北市石門區草里里阿里荖6之2號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "newtaipei-shimen-083",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-13377909",
+      "name": "富基美美小吃店",
+      "address": "新北市石門區楓林15之4號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "newtaipei-shimen-084",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-17283447",
+      "name": "漁人碼頭代客料理",
+      "address": "新北市石門區富基里楓林17之3號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "newtaipei-shimen-085",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-17291426",
+      "name": "味味餐廳",
+      "address": "新北市石門區中央路1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "newtaipei-shimen-086",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-37137674",
+      "name": "遊樂餐廳",
+      "address": "新北市石門區老梅路40-3號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "newtaipei-shimen-087",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-37909686",
+      "name": "富基漁港阿達活海產",
+      "address": "新北市石門區富基里楓林17之10號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 400,
+        "max": 1800,
+        "display": "約 NT$400–1800/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "newtaipei-shimen-088",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-41053022",
+      "name": "青心風味小館",
+      "address": "新北市石門區崁子脚21之1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "newtaipei-shimen-089",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-41371531",
+      "name": "蔡家肉粽",
+      "address": "新北市石門區老崩山10之4號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "newtaipei-shimen-090",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-47975235",
+      "name": "月灣旅遊商店",
+      "address": "新北市石門區八甲路4之3號(1樓)",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "newtaipei-shimen-091",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-50651148",
+      "name": "樂采豐農園",
+      "address": "新北市石門區山溪里老崩山29號之1",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "newtaipei-shimen-092",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-60021525",
+      "name": "渏欣商行",
+      "address": "新北市石門區石門街34之1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "newtaipei-shimen-093",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-60029266",
+      "name": "鹿野咖啡店",
+      "address": "新北市石門區山溪里老崩山3號之5",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "newtaipei-shimen-094",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-60033965",
+      "name": "哈那海邊咖啡屋",
+      "address": "新北市石門區德茂里八甲1號之10",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "newtaipei-shimen-095",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-61263726",
+      "name": "海畔商號",
+      "address": "新北市石門區富基里楓林15之9號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "newtaipei-shimen-096",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-82301308",
+      "name": "長角餐廳",
+      "address": "新北市石門區德茂里白沙灣別墅5之1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "newtaipei-shimen-097",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-91184436",
+      "name": "草里茶業",
+      "address": "新北市石門區草里里草埔尾14號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "newtaipei-shimen-098",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-91241767",
+      "name": "榮川園農場",
+      "address": "新北市石門區尖山湖1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "newtaipei-shimen-099",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-91430520",
+      "name": "美好的一天複合式餐飲",
+      "address": "新北市石門區崁子脚58之15號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "newtaipei-shimen-100",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-92909872",
+      "name": "海濱飲食店",
+      "address": "新北市石門區8甲1之1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "newtaipei-shimen-101",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-95007995",
+      "name": "咖灰咖啡甜點工作室",
+      "address": "新北市石門區德茂里八甲1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡",
+        "甜點／烘焙"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "newtaipei-shimen-102",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-98793461",
+      "name": "大熊海鮮食堂",
+      "address": "新北市石門區楓林17之4號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 400,
+        "max": 1800,
+        "display": "約 NT$400–1800/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮料理",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "newtaipei-shimen-103",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-99490541",
+      "name": "郭家肉粽店",
+      "address": "新北市石門區德茂里9鄰8甲12號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "newtaipei-shimen-104",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-82275771",
+      "name": "石門休閒育樂有限公司石門營業所",
+      "address": "新北市石門區中央路1-25號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「餐廳」（561115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-105",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-92889600",
+      "name": "集馨村港式燒腊",
+      "address": "新北市石門區中央路5號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-106",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-60033965",
+      "name": "哈那海邊咖啡屋",
+      "address": "新北市石門區八甲1之10號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「餐廳」（561115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-107",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-18260816",
+      "name": "豐村複合式餐廳",
+      "address": "新北市石門區富基里崁子脚28之5號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「餐廳」（561115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-108",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-21514737",
+      "name": "朱舍農莊",
+      "address": "新北市石門區富基里崁子脚44號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-109",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-24391111",
+      "name": "劉家肉粽股份有限公司富基分公司",
+      "address": "新北市石門區富基里崁子脚58之16號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「餐廳」（561115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-110",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-17290524",
+      "name": "小秋海產",
+      "address": "新北市石門區富基里楓林17―9號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「餐廳」（561115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-111",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-92779202",
+      "name": "十八王公邱家肉粽店尖子鹿攤位",
+      "address": "新北市石門區尖子鹿公車亭往前20公尺",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-112",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-28210034",
+      "name": "長欣農牧股份有限公司",
+      "address": "新北市石門區尖子鹿10號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "茶飲／冰品"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「其他飲料店」（563199），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-113",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-27439784",
+      "name": "劉家肉粽股份有限公司",
+      "address": "新北市石門區尖鹿里中央路30號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「餐廳」（561115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-114",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-72778747",
+      "name": "永鳳商店",
+      "address": "新北市石門區尖鹿里中央路37-2號旁",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「咖啡館」（563112），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-115",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-72685847",
+      "name": "極北懶熊企業社",
+      "address": "新北市石門區山溪里老崩山6之5號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-116",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-87301989",
+      "name": "歐瑪咖啡廳",
+      "address": "新北市石門區崁子脚58之11號、58之12號、58之13號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「餐廳」（561115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-117",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-72644945",
+      "name": "達斯樂的英式小館",
+      "address": "新北市石門區德茂里八甲路1―9號附1",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「餐廳」（561115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-118",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-92909872",
+      "name": "海濱飲食店",
+      "address": "新北市石門區德茂里八甲1之1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-119",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-99490541",
+      "name": "郭家肉粽店",
+      "address": "新北市石門區德茂里八甲12號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-120",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-91702769",
+      "name": "禾作商行",
+      "address": "新北市石門區德茂里007鄰海灣新城29之1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「咖啡館」（563112），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-121",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-02951309",
+      "name": "阿瑞小吃店",
+      "address": "新北市石門區楓林15之16號(漁貨直銷中心B棟I櫃位)",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-122",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-37909686",
+      "name": "富基漁港阿達活海產",
+      "address": "新北市石門區楓林17之10號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 400,
+        "max": 1800,
+        "display": "約 NT$400–1800/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮料理",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「餐廳」（561115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-123",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-20278003",
+      "name": "春金活海產",
+      "address": "新北市石門區楓林17之8號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「餐廳」（561115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-124",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-17283447",
+      "name": "漁人碼頭代客料理",
+      "address": "新北市石門區楓林17-3號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「餐廳」（561115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-125",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-09982995",
+      "name": "皇冠海岸咖啡坊",
+      "address": "新北市石門區楓林25之1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡",
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-126",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-10084176",
+      "name": "咖啡公園",
+      "address": "新北市石門區淡金公路29公里附近",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡",
+        "茶飲／冰品"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「其他飲料店」（563199），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-127",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-37154940",
+      "name": "達興冰菓店",
+      "address": "新北市石門區石門里石門街38號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "茶飲／冰品"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「其他飲料店」（563199），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-128",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-80019441",
+      "name": "十八王公陳家肉粽",
+      "address": "新北市石門區老崩山11之1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-129",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-60029266",
+      "name": "鹿野咖啡店",
+      "address": "新北市石門區老崩山3號之5",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「餐廳」（561115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-130",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-91353538",
+      "name": "豬爸爸石花凍餐飲",
+      "address": "新北市石門區老梅里公地21號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "newtaipei-shimen-131",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-5c7cd20e23679c7db4ef5894",
+      "name": "海堤咖啡",
+      "address": "新北市石門區阿裏荖1鄰6之2號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 100,
+        "max": 160,
+        "display": "約 NT$100–160/人（愛食記均消約 NT$130）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡",
+        "中式／台式料理",
+        "景觀餐廳"
+      ],
+      "online_rating": {
+        "platform": "愛食記",
+        "score": 4,
+        "review_count": 3,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表顯示 4 分、3 則評論",
+          "未把完整評論全文寫入資料檔。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+        "https://ifoodie.tw/restaurant/5c7cd20e23679c7db4ef5894-%E6%B5%B7%E5%A0%A4%E5%92%96%E5%95%A1"
+      ],
+      "id": "newtaipei-shimen-132",
+      "image_url": "https://lh3.googleusercontent.com/UMfGsa0vOA3NZqmzNsh-awSS8M7bp4twMk2L45B2CMlj3eELqdGEIZxw8Ksmp4nbS14bTz9RMtB3qKlKtFQwWDStzB5ZEL8MasiBMzyrxFM=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-67e49dcc7be9c3cec78159c6",
+      "name": "GRAY CAFE 咖灰",
+      "address": "新北市石門區八甲路1號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 240,
+        "max": 360,
+        "display": "約 NT$240–360/人（愛食記均消約 NT$300）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡",
+        "甜點／烘焙",
+        "甜點"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": 3,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表收錄此店家,但未顯示可解析的評分",
+          "列表顯示評論數為 3。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+        "https://ifoodie.tw/restaurant/67e49dcc7be9c3cec78159c6-GRAY-CAFE-%E5%92%96%E7%81%B0"
+      ],
+      "id": "newtaipei-shimen-133",
+      "image_url": "https://lh3.googleusercontent.com/UMfGsa0vOA3NZqmzNsh-awSS8M7bp4twMk2L45B2CMlj3eELqdGEIZxw8Ksmp4nbS14bTz9RMtB3qKlKtFQwWDStzB5ZEL8MasiBMzyrxFM=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-559c0e8fc03a101f6d8b813c",
+      "name": "}�\"Tea & Caf�",
+      "address": "新北市石門區阿里荖47之2號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 240,
+        "max": 380,
+        "display": "約 NT$240–380/人（愛食記均消約 NT$310）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡",
+        "中式／台式料理",
+        "景觀餐廳"
+      ],
+      "online_rating": {
+        "platform": "愛食記",
+        "score": 4.2,
+        "review_count": 36,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表顯示 4.2 分、36 則評論",
+          "未把完整評論全文寫入資料檔。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+        "https://ifoodie.tw/restaurant/559c0e8fc03a101f6d8b813c-%E7%99%BD%E6%97%A5%E5%A4%A2Tea-Caf-"
+      ],
+      "id": "newtaipei-shimen-134",
+      "image_url": "https://lh3.googleusercontent.com/UMfGsa0vOA3NZqmzNsh-awSS8M7bp4twMk2L45B2CMlj3eELqdGEIZxw8Ksmp4nbS14bTz9RMtB3qKlKtFQwWDStzB5ZEL8MasiBMzyrxFM=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-6281f4c4cd9957274aca9dfa",
+      "name": "老屋La' vou",
+      "address": "新北市石門區下員坑路16號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 320,
+        "max": 480,
+        "display": "約 NT$320–480/人（愛食記均消約 NT$400）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "早午餐",
+        "中式／台式料理",
+        "景觀餐廳"
+      ],
+      "online_rating": {
+        "platform": "愛食記",
+        "score": 4.6,
+        "review_count": 5,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表顯示 4.6 分、5 則評論",
+          "未把完整評論全文寫入資料檔。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+        "https://ifoodie.tw/restaurant/6281f4c4cd9957274aca9dfa-%E8%80%81%E5%B1%8BLa-vou"
+      ],
+      "id": "newtaipei-shimen-135",
+      "image_url": "https://lh3.googleusercontent.com/UMfGsa0vOA3NZqmzNsh-awSS8M7bp4twMk2L45B2CMlj3eELqdGEIZxw8Ksmp4nbS14bTz9RMtB3qKlKtFQwWDStzB5ZEL8MasiBMzyrxFM=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-6155acea781cc01afd4dac81",
+      "name": "富基漁港 來來活海鮮",
+      "address": "新北市石門區富基裏楓林14號富基漁港",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 240,
+        "max": 360,
+        "display": "約 NT$240–360/人（愛食記均消約 NT$300）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮料理",
+        "中式／台式料理",
+        "合菜"
+      ],
+      "online_rating": {
+        "platform": "愛食記",
+        "score": 5,
+        "review_count": 2,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表顯示 5 分、2 則評論",
+          "未把完整評論全文寫入資料檔。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+        "https://ifoodie.tw/restaurant/6155acea781cc01afd4dac81-%E5%AF%8C%E5%9F%BA%E6%BC%81%E6%B8%AF-%E4%BE%86%E4%BE%86%E6%B4%BB%E6%B5%B7%E9%AE%AE"
+      ],
+      "id": "newtaipei-shimen-136",
+      "image_url": "https://lh3.googleusercontent.com/UMfGsa0vOA3NZqmzNsh-awSS8M7bp4twMk2L45B2CMlj3eELqdGEIZxw8Ksmp4nbS14bTz9RMtB3qKlKtFQwWDStzB5ZEL8MasiBMzyrxFM=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-5f8d702ed6895d7e43255a76",
+      "name": "俞家肉粽",
+      "address": "新北市石門區淡金公路104號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 20,
+        "max": 20,
+        "display": "約 NT$20–20/人（愛食記均消約 NT$15）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "中式／台式料理",
+        "小吃"
+      ],
+      "online_rating": {
+        "platform": "愛食記",
+        "score": 4.5,
+        "review_count": 14,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表顯示 4.5 分、14 則評論",
+          "未把完整評論全文寫入資料檔。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+        "https://ifoodie.tw/restaurant/5f8d702ed6895d7e43255a76-%E4%BF%9E%E5%AE%B6%E8%82%89%E7%B2%BD"
+      ],
+      "id": "newtaipei-shimen-137",
+      "image_url": "https://lh3.googleusercontent.com/UMfGsa0vOA3NZqmzNsh-awSS8M7bp4twMk2L45B2CMlj3eELqdGEIZxw8Ksmp4nbS14bTz9RMtB3qKlKtFQwWDStzB5ZEL8MasiBMzyrxFM=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-61872ac2a62728018fc7b72a",
+      "name": "超鄭石花凍",
+      "address": "新北市石門區老梅里公地2鄰28號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 20,
+        "max": 50,
+        "display": "約 NT$20–50/人（愛食記均消約 NT$35）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "甜點／烘焙",
+        "茶飲／飲料",
+        "麵食／小吃"
+      ],
+      "online_rating": {
+        "platform": "愛食記",
+        "score": 5,
+        "review_count": 3,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表顯示 5 分、3 則評論",
+          "未把完整評論全文寫入資料檔。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+        "https://ifoodie.tw/restaurant/61872ac2a62728018fc7b72a-%E8%B6%85%E9%84%AD%E7%9F%B3%E8%8A%B1%E5%87%8D"
+      ],
+      "id": "newtaipei-shimen-138",
+      "image_url": "https://lh3.googleusercontent.com/UMfGsa0vOA3NZqmzNsh-awSS8M7bp4twMk2L45B2CMlj3eELqdGEIZxw8Ksmp4nbS14bTz9RMtB3qKlKtFQwWDStzB5ZEL8MasiBMzyrxFM=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-6478c2bfcb88154b7e6acf84",
+      "name": "拾浪咖啡",
+      "address": "新北市石門區阿裏荖10號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 280,
+        "max": 440,
+        "display": "約 NT$280–440/人（愛食記均消約 NT$360）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡",
+        "中式／台式料理",
+        "景觀餐廳"
+      ],
+      "online_rating": {
+        "platform": "愛食記",
+        "score": 4.5,
+        "review_count": 8,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表顯示 4.5 分、8 則評論",
+          "未把完整評論全文寫入資料檔。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+        "https://ifoodie.tw/restaurant/6478c2bfcb88154b7e6acf84-%E6%8B%BE%E6%B5%AA%E5%92%96%E5%95%A1"
+      ],
+      "id": "newtaipei-shimen-139",
+      "image_url": "https://lh3.googleusercontent.com/UMfGsa0vOA3NZqmzNsh-awSS8M7bp4twMk2L45B2CMlj3eELqdGEIZxw8Ksmp4nbS14bTz9RMtB3qKlKtFQwWDStzB5ZEL8MasiBMzyrxFM=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-5cc8696c2261393733de7ea6",
+      "name": "豹豹咖啡 • 海邊館",
+      "address": "新北市石門區號C棟",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 120,
+        "max": 200,
+        "display": "約 NT$120–200/人（愛食記均消約 NT$160）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡",
+        "中式／台式料理",
+        "景觀餐廳"
+      ],
+      "online_rating": {
+        "platform": "愛食記",
+        "score": 4.2,
+        "review_count": 11,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表顯示 4.2 分、11 則評論",
+          "未把完整評論全文寫入資料檔。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+        "https://ifoodie.tw/restaurant/5cc8696c2261393733de7ea6-%E8%B1%B9%E8%B1%B9%E5%92%96%E5%95%A1-%E6%B5%B7%E9%82%8A%E9%A4%A8"
+      ],
+      "id": "newtaipei-shimen-140",
+      "image_url": "https://lh3.googleusercontent.com/UMfGsa0vOA3NZqmzNsh-awSS8M7bp4twMk2L45B2CMlj3eELqdGEIZxw8Ksmp4nbS14bTz9RMtB3qKlKtFQwWDStzB5ZEL8MasiBMzyrxFM=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-60d2d562baf6d3124422dfde",
+      "name": "富基漁港-美美海鮮餐廳",
+      "address": "新北市石門區楓林路15之4號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 520,
+        "max": 780,
+        "display": "約 NT$520–780/人（愛食記均消約 NT$650）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮料理",
+        "中式／台式料理",
+        "合菜"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": 2,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表收錄此店家,但未顯示可解析的評分",
+          "列表顯示評論數為 2。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+        "https://ifoodie.tw/restaurant/60d2d562baf6d3124422dfde-%E5%AF%8C%E5%9F%BA%E6%BC%81%E6%B8%AF-%E7%BE%8E%E7%BE%8E%E6%B5%B7%E9%AE%AE%E9%A4%90%E5%BB%B3"
+      ],
+      "id": "newtaipei-shimen-141",
+      "image_url": "https://lh3.googleusercontent.com/UMfGsa0vOA3NZqmzNsh-awSS8M7bp4twMk2L45B2CMlj3eELqdGEIZxw8Ksmp4nbS14bTz9RMtB3qKlKtFQwWDStzB5ZEL8MasiBMzyrxFM=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-55a4b7e7c03a1002ad8ad72c",
+      "name": "張記專業生魚片",
+      "address": "新北市石門區富基漁港B9",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 900,
+        "max": 1360,
+        "display": "約 NT$900–1360/人（愛食記均消約 NT$1130）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮料理",
+        "中式／台式料理",
+        "日本料理"
+      ],
+      "online_rating": {
+        "platform": "愛食記",
+        "score": 3,
+        "review_count": 5,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表顯示 3 分、5 則評論",
+          "未把完整評論全文寫入資料檔。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+        "https://ifoodie.tw/restaurant/55a4b7e7c03a1002ad8ad72c-%E5%BC%B5%E8%A8%98%E5%B0%88%E6%A5%AD%E7%94%9F%E9%AD%9A%E7%89%87"
+      ],
+      "id": "newtaipei-shimen-142",
+      "image_url": "https://lh3.googleusercontent.com/UMfGsa0vOA3NZqmzNsh-awSS8M7bp4twMk2L45B2CMlj3eELqdGEIZxw8Ksmp4nbS14bTz9RMtB3qKlKtFQwWDStzB5ZEL8MasiBMzyrxFM=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-67deb8ca927f8046d7f6fbac",
+      "name": "鹿野咖啡",
+      "address": "新北市石門區3號之5",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 280,
+        "max": 440,
+        "display": "約 NT$280–440/人（愛食記均消約 NT$360）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "早午餐",
+        "咖啡",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "愛食記",
+        "score": 4.8,
+        "review_count": 2,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表顯示 4.8 分、2 則評論",
+          "未把完整評論全文寫入資料檔。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+        "https://ifoodie.tw/restaurant/67deb8ca927f8046d7f6fbac-%E9%B9%BF%E9%87%8E%E5%92%96%E5%95%A1"
+      ],
+      "id": "newtaipei-shimen-143",
+      "image_url": "https://lh3.googleusercontent.com/UMfGsa0vOA3NZqmzNsh-awSS8M7bp4twMk2L45B2CMlj3eELqdGEIZxw8Ksmp4nbS14bTz9RMtB3qKlKtFQwWDStzB5ZEL8MasiBMzyrxFM=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-5d162a788c906d17de13ff67",
+      "name": "鹿邊咖啡",
+      "address": "新北市石門區臺2線",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 180,
+        "max": 280,
+        "display": "約 NT$180–280/人（愛食記均消約 NT$230）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡",
+        "中式／台式料理",
+        "景觀餐廳"
+      ],
+      "online_rating": {
+        "platform": "愛食記",
+        "score": 4,
+        "review_count": 7,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表顯示 4 分、7 則評論",
+          "未把完整評論全文寫入資料檔。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+        "https://ifoodie.tw/restaurant/5d162a788c906d17de13ff67-%E9%B9%BF%E9%82%8A%E5%92%96%E5%95%A1"
+      ],
+      "id": "newtaipei-shimen-144",
+      "image_url": "https://lh3.googleusercontent.com/UMfGsa0vOA3NZqmzNsh-awSS8M7bp4twMk2L45B2CMlj3eELqdGEIZxw8Ksmp4nbS14bTz9RMtB3qKlKtFQwWDStzB5ZEL8MasiBMzyrxFM=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E6%96%B0%E5%8C%97%E5%B8%82/list/%E7%9F%B3%E9%96%80",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  ]
+}

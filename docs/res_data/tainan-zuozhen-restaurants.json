@@ -1,0 +1,1765 @@
+{
+  "collection": {
+    "title": "臺南市左鎮實體餐廳資料（含愛食記補充資料）",
+    "city": "臺南市",
+    "district": "左鎮區",
+    "scope": "從 FonFood「台南市左鎮區－美食餐廳」公開列表與料理分類頁取得候選店家，再逐頁核對店家地址、電話、料理分類、Google 評價快照、推薦菜單價位與食記摘要；僅保留地址屬於左鎮區且未見歇業標記的有店面店家。 不足筆數再以觀光署餐飲資料、食藥署「餐飲場所」登錄資料及經濟部核准設立餐廳餐館資料補充；官方資料未提供網路評分時保留 null 與來源說明。 不足筆數再以觀光署餐飲資料、食藥署「餐飲場所」登錄資料及經濟部核准設立餐廳餐館資料補充；官方資料未提供網路評分時保留 null 與來源說明。 不足筆數再以觀光署餐飲資料、食藥署「餐飲場所」登錄資料及經濟部核准設立餐廳餐館資料補充；官方資料未提供網路評分時保留 null 與來源說明。 不足筆數再以觀光署餐飲資料、食藥署「餐飲場所」登錄資料、經濟部核准設立餐廳餐館資料及財政部營業稅籍餐飲分類資料補充；官方資料未提供網路評分時保留 null 與來源說明。 再以愛食記公開行政區列表補充可核對地址的店家；偏遠或人口較少行政區若公開資料不足，保留實際可找到的筆數。 再以愛食記公開行政區列表補充可核對地址的店家；偏遠或人口較少行政區若公開資料不足，保留實際可找到的筆數。 再以愛食記公開行政區列表補充可核對地址的店家；偏遠或人口較少行政區若公開資料不足，保留實際可找到的筆數。 再以愛食記公開行政區列表補充可核對地址的店家；偏遠或人口較少行政區若公開資料不足，保留實際可找到的筆數。",
+    "collected_at": "2026-08-10",
+    "status": "partial",
+    "target_count": 200,
+    "record_count": 44,
+    "source_platform": "FonFood public restaurant pages; Tourism Administration restaurant data; FDA food business registration data; MOEA restaurant business registration data; Ministry of Finance active tax registration data; iFoodie public district restaurant lists; iFoodie public district restaurant lists; iFoodie public district restaurant lists; iFoodie public district restaurant lists",
+    "rating_note": "愛食記補充資料保留列表顯示的評分與評論數；未顯示評分時以 null 與來源說明表示，未自行推估。",
+    "review_note": "review_summary 僅保存列表可公開解析的評分與評論數說明，未把完整評論全文寫入資料檔。",
+    "price_note": "價位是每人約略消費範圍（新台幣）；優先取 FonFood 公開菜單，官方補充資料沒有菜單時依店名與料理分類估算，實際仍以店家最新菜單為準。",
+    "dedupe_rule": "以店名加地址作為唯一鍵；同品牌不同地址視為不同實體門市，同一地址不重複收錄。",
+    "source_list_pages": [
+      "https://www.fonfood.com/台南市左鎮區",
+      "https://www.fonfood.com/台南市左鎮區/2",
+      "https://www.fonfood.com/台南市",
+      "https://www.fonfood.com/台南市/2",
+      "https://www.fonfood.com/台南市/3",
+      "https://www.fonfood.com/台南市/4",
+      "https://www.fonfood.com/台南市/5",
+      "https://www.fonfood.com/台南市左鎮區/景觀餐廳",
+      "https://www.fonfood.com/台南市左鎮區/buffet",
+      "https://www.fonfood.com/台南市左鎮區/早午餐",
+      "https://www.fonfood.com/台南市左鎮區/下午茶",
+      "https://www.fonfood.com/台南市左鎮區/海鮮餐廳",
+      "https://www.fonfood.com/台南市左鎮區/必比登",
+      "https://www.fonfood.com/台南市左鎮區/米其林",
+      "https://www.fonfood.com/台南市左鎮區/燒肉吃到飽",
+      "https://www.fonfood.com/台南市左鎮區/日式",
+      "https://www.fonfood.com/台南市左鎮區/韓式",
+      "https://www.fonfood.com/台南市左鎮區/法式",
+      "https://www.fonfood.com/台南市左鎮區/義式",
+      "https://www.fonfood.com/台南市左鎮區/西班牙",
+      "https://www.fonfood.com/台南市左鎮區/美式",
+      "https://www.fonfood.com/台南市左鎮區/港式",
+      "https://www.fonfood.com/台南市左鎮區/泰式",
+      "https://www.fonfood.com/台南市左鎮區/越式",
+      "https://www.fonfood.com/台南市左鎮區/印度",
+      "https://www.fonfood.com/台南市左鎮區/小吃",
+      "https://www.fonfood.com/台南市左鎮區/古早味",
+      "https://www.fonfood.com/台南市左鎮區/冰品",
+      "https://www.fonfood.com/台南市左鎮區/輕食",
+      "https://www.fonfood.com/台南市左鎮區/拉麵",
+      "https://www.fonfood.com/台南市左鎮區/漢堡",
+      "https://www.fonfood.com/台南市左鎮區/牛排",
+      "https://www.fonfood.com/台南市左鎮區/燉飯",
+      "https://www.fonfood.com/台南市左鎮區/披薩",
+      "https://www.fonfood.com/台南市左鎮區/義大利麵",
+      "https://www.fonfood.com/台南市左鎮區/帝王蟹",
+      "https://www.fonfood.com/台南市左鎮區/龍蝦",
+      "https://www.fonfood.com/台南市左鎮區/和牛",
+      "https://www.fonfood.com/台南市左鎮區/烤鴨",
+      "https://www.fonfood.com/台南市左鎮區/牛肉麵",
+      "https://www.fonfood.com/台南市左鎮區/舒芙蕾",
+      "https://www.fonfood.com/台南市左鎮區/鬆餅",
+      "https://www.fonfood.com/台南市左鎮區/吐司",
+      "https://www.fonfood.com/台南市左鎮區/蛋糕",
+      "https://www.fonfood.com/台南市左鎮區/咖啡",
+      "https://www.fonfood.com/台南市左鎮區/平價",
+      "https://www.fonfood.com/台南市左鎮區/人氣",
+      "https://www.fonfood.com/台南市左鎮區/網美打卡",
+      "https://www.fonfood.com/台南市左鎮區/約會",
+      "https://www.fonfood.com/台南市左鎮區/聚餐",
+      "https://www.fonfood.com/台南市左鎮區/不限時",
+      "https://www.fonfood.com/台南市左鎮區/動物",
+      "https://www.fonfood.com/台南市左鎮區/庭園",
+      "https://www.fonfood.com/台南市左鎮區/老宅",
+      "https://www.fonfood.com/台南市左鎮區/異國",
+      "https://data.gov.tw/dataset/7779",
+      "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip",
+      "https://data.gov.tw/dataset/8938",
+      "https://data.fda.gov.tw/data/opendata/export/97/json",
+      "https://data.gov.tw/dataset/108355",
+      "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB",
+      "https://data.gov.tw/dataset/9400",
+      "https://eip.fia.gov.tw/data/BGMOPEN1.zip",
+      "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%B7%A6%E9%8E%AE"
+    ],
+    "collection_stats": {
+      "list_pages_fetched": 2,
+      "city_list_pages_fetched": 5,
+      "category_pages_fetched": 3,
+      "candidate_count": 112,
+      "detail_pages_parsed": 112,
+      "valid_count": 44,
+      "invalid_reason_counts": {
+        "rating": 1,
+        "district": 110,
+        "phone": 7
+      },
+      "fonfood_base_count": 1,
+      "official_candidates": {
+        "tourism": 4,
+        "fda_food_service": 21,
+        "business_registered": 5,
+        "tax_registered_food_service": 15
+      },
+      "official_added": {
+        "tourism": 4,
+        "fda": 21,
+        "business": 3,
+        "tax": 11
+      },
+      "official_added_total": 39,
+      "ifoodie_card_count": 4,
+      "ifoodie_supplement_added": 4
+    },
+    "image_collection_note": "每家最多保留一張公開圖片網址；只跳過來源頁面明文禁止外部引用或明確拒絕的來源，不下載圖片。未發現明文禁止不等同於取得圖片著作權授權；收到下架通知時應移除網址。"
+  },
+  "restaurants": [
+    {
+      "source_id": "62852",
+      "name": "【308高地】龍船山莊土雞城",
+      "address": "台南市左鎮區",
+      "phone": "06 594 7407",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 200,
+        "max": 800,
+        "display": "約 NT$200–800/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "景觀餐廳"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 3.8,
+        "review_count": 700,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 12,
+        "review_summary": [
+          "國內美食吃透透",
+          "台南景觀餐廳推薦",
+          "庭園餐廳特別的偏愛",
+          "常常三不五時就與朋友一起挖掘有特色的餐廳",
+          "嫩枝葉細嫩好吃",
+          "期待下回再來吃好吃的土雞料理"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/62852"
+      ],
+      "id": "tainan-zuozhen-001",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_395000000A_001764",
+      "name": "草山月世界308高地休閒農場桶仔雞",
+      "address": "臺南市左鎮區草山里113號",
+      "phone": "(06)5730097",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-zuozhen-002",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_395000000A_001846",
+      "name": "公館古早風味餐",
+      "address": "臺南市左鎮區岡林里31號",
+      "phone": "(06)5730107",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-zuozhen-003",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_395000000A_001885",
+      "name": "椰子林美食餐廳",
+      "address": "臺南市左鎮區112-1號",
+      "phone": "(06)5731483",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-zuozhen-004",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_395000000A_002068",
+      "name": "茅廬農莊",
+      "address": "臺南市左鎮區榮和村62-11號",
+      "phone": "(06)5732056",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-zuozhen-005",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-173078905-00002-2",
+      "name": "臺南市左鎮區農會",
+      "address": "臺南市左鎮區榮和里62-29號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-zuozhen-006",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-173507504-00001-3",
+      "name": "臺南市左鎮區左鎮國中",
+      "address": "臺南市左鎮區臺南市立左鎮國民中學",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-zuozhen-007",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-173645984-00001-8",
+      "name": "臺南市左鎮區左鎮國小",
+      "address": "臺南市左鎮區中正里7號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-zuozhen-008",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-173646055-00001-8",
+      "name": "臺南市左鎮區光榮實驗國小",
+      "address": "臺南市左鎮區榮和里61-1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-zuozhen-009",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-122853565-46158-1",
+      "name": "富達零售股份有限公司",
+      "address": "臺南市左鎮區榮和里62-29號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-zuozhen-010",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200006609-00001-4",
+      "name": "左鎮公有零售市場3、22號攤",
+      "address": "臺南市左鎮區中正里150號(左鎮公有零售市場3、22號攤)",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-zuozhen-011",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200006627-00001-4",
+      "name": "鄒婷婷",
+      "address": "臺南市左鎮區中正里134號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-zuozhen-012",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-122555003-56598-6",
+      "name": "統一超商股份有限公司",
+      "address": "臺南市左鎮區榮和里菜寮62-35號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-zuozhen-013",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-197824487-00001-1",
+      "name": "椰子林土雞城",
+      "address": "臺南市左鎮區左鎮里左鎮112之1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-zuozhen-014",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-194411337-00001-4",
+      "name": "左鎮碳烤土雞",
+      "address": "臺南市左鎮區睦光里26-1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-zuozhen-015",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200083127-00001-4",
+      "name": "平埔族美食",
+      "address": "臺南市左鎮區中正里中正8-7號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-zuozhen-016",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-150984384-00006-8",
+      "name": "化石先生股份有限公司",
+      "address": "臺南市左鎮區菜寮榮和里61號-23",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-zuozhen-017",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-174645984-00001-9",
+      "name": "臺南市立左鎮國小",
+      "address": "臺南市左鎮區中正里7號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-zuozhen-018",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-202283337-00001-1",
+      "name": "慶珍軒食品行",
+      "address": "臺南市左鎮區中正里中正147號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-zuozhen-019",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200211456-00001-2",
+      "name": "忘憂谷商行",
+      "address": "臺南市左鎮區草山里草山112之3號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-zuozhen-020",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200211472-00001-0",
+      "name": "吃飯",
+      "address": "臺南市左鎮區睦光里46之6號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-zuozhen-021",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-202335966-00001-7",
+      "name": "左食堂小吃店",
+      "address": "臺南市左鎮區中正路79號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式小吃",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-zuozhen-022",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200145698-00001-6",
+      "name": "王美華",
+      "address": "臺南市左鎮區中正里中正150之1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-zuozhen-023",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-202328502-00001-5",
+      "name": "穎香食坊",
+      "address": "臺南市左鎮區榮和里006鄰60―5號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-zuozhen-024",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200128271-00003-6",
+      "name": "三井商店",
+      "address": "臺南市左鎮區榮和里菜寮52號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-zuozhen-025",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-202322118-00001-2",
+      "name": "茶拾八商行",
+      "address": "臺南市左鎮區睦光里睦光26-17號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-zuozhen-026",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-00280553",
+      "name": "常在文創空間",
+      "address": "臺南市左鎮區光和里光和88之1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "tainan-zuozhen-027",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-37748795",
+      "name": "左莊商行",
+      "address": "臺南市左鎮區光和里光和82之3號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "tainan-zuozhen-028",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-94411337",
+      "name": "左鎮碳烤土雞",
+      "address": "臺南市左鎮區睦光里睦光26之23號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "tainan-zuozhen-029",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-92394993",
+      "name": "鄉土味小吃",
+      "address": "臺南市左鎮區中正里中正150-2號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "早餐",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「早餐店」（561111），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-zuozhen-030",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-25762238",
+      "name": "平埔族美食",
+      "address": "臺南市左鎮區中正里中正8號之7",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-zuozhen-031",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-94412928",
+      "name": "嘮嘮工作室",
+      "address": "臺南市左鎮區中正里008鄰中正113號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "茶飲／冰品"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「手搖飲店」（563115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-zuozhen-032",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-37748795",
+      "name": "左莊商行",
+      "address": "臺南市左鎮區光和里光和82-3號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「餐廳」（561115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-zuozhen-033",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-94357072",
+      "name": "秀玉商號",
+      "address": "臺南市左鎮區左鎮里左鎮100號旁邊",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-zuozhen-034",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-97824487",
+      "name": "椰子林土雞城",
+      "address": "臺南市左鎮區左鎮里011鄰左鎮112―1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「餐廳」（561115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-zuozhen-035",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-81714294",
+      "name": "臺南市文化建設發展基金左鎮化石園區",
+      "address": "臺南市左鎮區榮和里61-1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "茶飲／冰品"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「手搖飲店」（563115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-zuozhen-036",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-92405632",
+      "name": "化石先生股份有限公司左鎮店",
+      "address": "臺南市左鎮區榮和里61-23號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「餐廳」（561115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-zuozhen-037",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-94411337",
+      "name": "左鎮碳烤土雞",
+      "address": "臺南市左鎮區睦光里睦光26-23號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-zuozhen-038",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-13701574",
+      "name": "大峽谷商行",
+      "address": "臺南市左鎮區草山里草山112之2號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-zuozhen-039",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-36810356",
+      "name": "忘憂谷商行",
+      "address": "臺南市左鎮區草山里草山112-3號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「餐廳」（561115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-zuozhen-040",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-6805d6e5eb74c44d2c189a49",
+      "name": "左鎮碳烤土雞",
+      "address": "臺南市左鎮區26之1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 320,
+        "max": 480,
+        "display": "約 NT$320–480/人（愛食記均消約 NT$400）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "中式／台式料理",
+        "小吃"
+      ],
+      "online_rating": {
+        "platform": "愛食記",
+        "score": 4.5,
+        "review_count": 1,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表顯示 4.5 分、1 則評論",
+          "未把完整評論全文寫入資料檔。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%B7%A6%E9%8E%AE",
+        "https://ifoodie.tw/restaurant/6805d6e5eb74c44d2c189a49-%E5%B7%A6%E9%8E%AE%E7%A2%B3%E7%83%A4%E5%9C%9F%E9%9B%9E"
+      ],
+      "id": "tainan-zuozhen-041",
+      "image_url": "https://lh3.googleusercontent.com/O-PXeMi1U_yumP4_UxCXd5rBJYuJHjPl61radYFnnScGY5Um1YEwOU9guQa28MdOZI9UTdD4LpatFu3-E2UB5_vPrm8phK7JVx-_ryOTRC8=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%B7%A6%E9%8E%AE",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-69afcd7beb74c48f307c293e",
+      "name": "地方爸爸窯烤麵包",
+      "address": "臺南市左鎮區18之1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 40,
+        "max": 80,
+        "display": "約 NT$40–80/人（愛食記均消約 NT$60）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "甜點／烘焙",
+        "麵食／小吃",
+        "烘焙坊"
+      ],
+      "online_rating": {
+        "platform": "愛食記",
+        "score": 5,
+        "review_count": 1,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表顯示 5 分、1 則評論",
+          "未把完整評論全文寫入資料檔。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%B7%A6%E9%8E%AE",
+        "https://ifoodie.tw/restaurant/69afcd7beb74c48f307c293e-%E5%9C%B0%E6%96%B9%E7%88%B8%E7%88%B8%E7%AA%AF%E7%83%A4%E9%BA%B5%E5%8C%85"
+      ],
+      "id": "tainan-zuozhen-042",
+      "image_url": "https://lh3.googleusercontent.com/O-PXeMi1U_yumP4_UxCXd5rBJYuJHjPl61radYFnnScGY5Um1YEwOU9guQa28MdOZI9UTdD4LpatFu3-E2UB5_vPrm8phK7JVx-_ryOTRC8=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%B7%A6%E9%8E%AE",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-5dcc11572756dd227cff8676",
+      "name": "慶珍軒",
+      "address": "臺南市左鎮區中正里147號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 80,
+        "max": 120,
+        "display": "約 NT$80–120/人（愛食記均消約 NT$100）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "甜點／烘焙",
+        "麵食／小吃",
+        "小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": 1,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表收錄此店家,但未顯示可解析的評分",
+          "列表顯示評論數為 1。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%B7%A6%E9%8E%AE",
+        "https://ifoodie.tw/restaurant/5dcc11572756dd227cff8676-%E6%85%B6%E7%8F%8D%E8%BB%92"
+      ],
+      "id": "tainan-zuozhen-043",
+      "image_url": "https://lh3.googleusercontent.com/O-PXeMi1U_yumP4_UxCXd5rBJYuJHjPl61radYFnnScGY5Um1YEwOU9guQa28MdOZI9UTdD4LpatFu3-E2UB5_vPrm8phK7JVx-_ryOTRC8=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%B7%A6%E9%8E%AE",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-67df91fd7be9c35bb7a7a9ef",
+      "name": "平埔族美食(土雞料理專賣)",
+      "address": "臺南市左鎮區8號之7",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 560,
+        "max": 840,
+        "display": "約 NT$560–840/人（愛食記均消約 NT$700）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理",
+        "合菜",
+        "雞料理"
+      ],
+      "online_rating": {
+        "platform": "愛食記",
+        "score": 5,
+        "review_count": 3,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表顯示 5 分、3 則評論",
+          "未把完整評論全文寫入資料檔。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%B7%A6%E9%8E%AE",
+        "https://ifoodie.tw/restaurant/67df91fd7be9c35bb7a7a9ef-%E5%B9%B3%E5%9F%94%E6%97%8F%E7%BE%8E%E9%A3%9F-%E5%9C%9F%E9%9B%9E%E6%96%99%E7%90%86%E5%B0%88%E8%B3%A3-"
+      ],
+      "id": "tainan-zuozhen-044",
+      "image_url": "https://lh3.googleusercontent.com/O-PXeMi1U_yumP4_UxCXd5rBJYuJHjPl61radYFnnScGY5Um1YEwOU9guQa28MdOZI9UTdD4LpatFu3-E2UB5_vPrm8phK7JVx-_ryOTRC8=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%B7%A6%E9%8E%AE",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  ]
+}

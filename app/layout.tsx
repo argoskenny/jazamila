@@ -16,7 +16,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <header className="site-header">
           <Link href="/" className="brand" aria-label="JAZAMILA 首頁">
-            <span className="brand-mark" aria-hidden="true">J</span>
+            <span className="brand-mark" aria-hidden="true">
+              <img src="/assets/img/jazamila/logo/jazamila-logo-jia-transparent.png" alt="" />
+            </span>
             <span>JAZAMILA</span>
           </Link>
           <nav className="site-nav" aria-label="主要導覽">
@@ -24,7 +26,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <Link href="/listdata/0/0/0/0/1">餐廳列表</Link>
             <Link href="/about">關於本站</Link>
             <Link href="/post">餐廳分享</Link>
-            <Link href="/map">美食地圖</Link>
           </nav>
         </header>
         <main>{children}</main>

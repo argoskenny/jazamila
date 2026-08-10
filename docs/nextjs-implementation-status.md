@@ -12,7 +12,6 @@
   - `/listdata/[[...filters]]`
   - `/detail/[id]`
   - `/about`
-  - `/map`
   - `/post`
 - 完成舊 Ajax 相容端點：
   - `/jazamila_ajax/pick`

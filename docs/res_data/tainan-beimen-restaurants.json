@@ -1,0 +1,3740 @@
+{
+  "collection": {
+    "title": "臺南市北門實體餐廳資料（含愛食記補充資料）",
+    "city": "臺南市",
+    "district": "北門區",
+    "scope": "從 FonFood「台南市北門區－美食餐廳」公開列表與料理分類頁取得候選店家，再逐頁核對店家地址、電話、料理分類、Google 評價快照、推薦菜單價位與食記摘要；僅保留地址屬於北門區且未見歇業標記的有店面店家。 不足筆數再以觀光署餐飲資料、食藥署「餐飲場所」登錄資料及經濟部核准設立餐廳餐館資料補充；官方資料未提供網路評分時保留 null 與來源說明。 不足筆數再以觀光署餐飲資料、食藥署「餐飲場所」登錄資料及經濟部核准設立餐廳餐館資料補充；官方資料未提供網路評分時保留 null 與來源說明。 不足筆數再以觀光署餐飲資料、食藥署「餐飲場所」登錄資料及經濟部核准設立餐廳餐館資料補充；官方資料未提供網路評分時保留 null 與來源說明。 不足筆數再以觀光署餐飲資料、食藥署「餐飲場所」登錄資料、經濟部核准設立餐廳餐館資料及財政部營業稅籍餐飲分類資料補充；官方資料未提供網路評分時保留 null 與來源說明。 再以愛食記公開行政區列表補充可核對地址的店家；偏遠或人口較少行政區若公開資料不足，保留實際可找到的筆數。 再以愛食記公開行政區列表補充可核對地址的店家；偏遠或人口較少行政區若公開資料不足，保留實際可找到的筆數。 再以愛食記公開行政區列表補充可核對地址的店家；偏遠或人口較少行政區若公開資料不足，保留實際可找到的筆數。 再以愛食記公開行政區列表補充可核對地址的店家；偏遠或人口較少行政區若公開資料不足，保留實際可找到的筆數。",
+    "collected_at": "2026-08-10",
+    "status": "partial",
+    "target_count": 200,
+    "record_count": 97,
+    "source_platform": "FonFood public restaurant pages; Tourism Administration restaurant data; FDA food business registration data; MOEA restaurant business registration data; Ministry of Finance active tax registration data; iFoodie public district restaurant lists; iFoodie public district restaurant lists; iFoodie public district restaurant lists; iFoodie public district restaurant lists",
+    "rating_note": "愛食記補充資料保留列表顯示的評分與評論數；未顯示評分時以 null 與來源說明表示，未自行推估。",
+    "review_note": "review_summary 僅保存列表可公開解析的評分與評論數說明，未把完整評論全文寫入資料檔。",
+    "price_note": "價位是每人約略消費範圍（新台幣）；優先取 FonFood 公開菜單，官方補充資料沒有菜單時依店名與料理分類估算，實際仍以店家最新菜單為準。",
+    "dedupe_rule": "以店名加地址作為唯一鍵；同品牌不同地址視為不同實體門市，同一地址不重複收錄。",
+    "source_list_pages": [
+      "https://www.fonfood.com/台南市北門區",
+      "https://www.fonfood.com/台南市北門區/2",
+      "https://www.fonfood.com/台南市",
+      "https://www.fonfood.com/台南市/2",
+      "https://www.fonfood.com/台南市/3",
+      "https://www.fonfood.com/台南市/4",
+      "https://www.fonfood.com/台南市/5",
+      "https://www.fonfood.com/台南市北門區/在地美食",
+      "https://www.fonfood.com/台南市北門區/buffet",
+      "https://www.fonfood.com/台南市北門區/早午餐",
+      "https://www.fonfood.com/台南市北門區/下午茶",
+      "https://www.fonfood.com/台南市北門區/海鮮餐廳",
+      "https://www.fonfood.com/台南市北門區/必比登",
+      "https://www.fonfood.com/台南市北門區/米其林",
+      "https://www.fonfood.com/台南市北門區/燒肉吃到飽",
+      "https://www.fonfood.com/台南市北門區/日式",
+      "https://www.fonfood.com/台南市北門區/韓式",
+      "https://www.fonfood.com/台南市北門區/法式",
+      "https://www.fonfood.com/台南市北門區/義式",
+      "https://www.fonfood.com/台南市北門區/西班牙",
+      "https://www.fonfood.com/台南市北門區/美式",
+      "https://www.fonfood.com/台南市北門區/港式",
+      "https://www.fonfood.com/台南市北門區/泰式",
+      "https://www.fonfood.com/台南市北門區/越式",
+      "https://www.fonfood.com/台南市北門區/印度",
+      "https://www.fonfood.com/台南市北門區/小吃",
+      "https://www.fonfood.com/台南市北門區/古早味",
+      "https://www.fonfood.com/台南市北門區/冰品",
+      "https://www.fonfood.com/台南市北門區/輕食",
+      "https://www.fonfood.com/台南市北門區/拉麵",
+      "https://www.fonfood.com/台南市北門區/漢堡",
+      "https://www.fonfood.com/台南市北門區/牛排",
+      "https://www.fonfood.com/台南市北門區/燉飯",
+      "https://www.fonfood.com/台南市北門區/披薩",
+      "https://www.fonfood.com/台南市北門區/義大利麵",
+      "https://www.fonfood.com/台南市北門區/帝王蟹",
+      "https://www.fonfood.com/台南市北門區/龍蝦",
+      "https://www.fonfood.com/台南市北門區/和牛",
+      "https://www.fonfood.com/台南市北門區/烤鴨",
+      "https://www.fonfood.com/台南市北門區/牛肉麵",
+      "https://www.fonfood.com/台南市北門區/舒芙蕾",
+      "https://www.fonfood.com/台南市北門區/鬆餅",
+      "https://www.fonfood.com/台南市北門區/吐司",
+      "https://www.fonfood.com/台南市北門區/蛋糕",
+      "https://www.fonfood.com/台南市北門區/咖啡",
+      "https://www.fonfood.com/台南市北門區/平價",
+      "https://www.fonfood.com/台南市北門區/人氣",
+      "https://www.fonfood.com/台南市北門區/網美打卡",
+      "https://www.fonfood.com/台南市北門區/約會",
+      "https://www.fonfood.com/台南市北門區/聚餐",
+      "https://www.fonfood.com/台南市北門區/不限時",
+      "https://www.fonfood.com/台南市北門區/動物",
+      "https://www.fonfood.com/台南市北門區/庭園",
+      "https://www.fonfood.com/台南市北門區/老宅",
+      "https://www.fonfood.com/台南市北門區/異國",
+      "https://data.gov.tw/dataset/7779",
+      "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip",
+      "https://data.gov.tw/dataset/8938",
+      "https://data.fda.gov.tw/data/opendata/export/97/json",
+      "https://data.gov.tw/dataset/108355",
+      "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB",
+      "https://data.gov.tw/dataset/9400",
+      "https://eip.fia.gov.tw/data/BGMOPEN1.zip",
+      "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%8C%97%E9%96%80"
+    ],
+    "collection_stats": {
+      "list_pages_fetched": 2,
+      "city_list_pages_fetched": 5,
+      "category_pages_fetched": 3,
+      "candidate_count": 112,
+      "detail_pages_parsed": 112,
+      "valid_count": 97,
+      "invalid_reason_counts": {
+        "rating": 1,
+        "district": 110,
+        "phone": 7
+      },
+      "fonfood_base_count": 1,
+      "official_candidates": {
+        "tourism": 17,
+        "fda_food_service": 45,
+        "business_registered": 15,
+        "tax_registered_food_service": 28
+      },
+      "official_added": {
+        "tourism": 17,
+        "fda": 45,
+        "business": 11,
+        "tax": 19
+      },
+      "official_added_total": 92,
+      "ifoodie_card_count": 15,
+      "ifoodie_supplement_added": 4
+    },
+    "image_collection_note": "每家最多保留一張公開圖片網址；只跳過來源頁面明文禁止外部引用或明確拒絕的來源，不下載圖片。未發現明文禁止不等同於取得圖片著作權授權；收到下架通知時應移除網址。"
+  },
+  "restaurants": [
+    {
+      "source_id": "653769",
+      "name": "田媽媽 長盈海味屋",
+      "address": "台南市北門區484號",
+      "phone": "0917 549 736",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 800,
+        "max": 2500,
+        "display": "約 NT$800–2500/人",
+        "basis": "公開頁面未列出可解析的完整價位，依料理分類與餐點定位估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "在地美食",
+        "必比登",
+        "泰式",
+        "古早味",
+        "冰品"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.3,
+        "review_count": 473,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 27,
+        "review_summary": [
+          "甜味主體也是小朋友能接受的口味",
+          "多面向呈現虱目魚的珍貴美味",
+          "這道菜不是一般的單點菜色",
+          "真正好吃的東西",
+          "整體採用清新的藍色系",
+          "還有可當作晚餐豐富的宵夜吃到飽"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/653769"
+      ],
+      "id": "tainan-beimen-001",
+      "image_url": "https://lh3.googleusercontent.com/zbB04SI5gXHq37ri0X-dAmgv2r3OdO47RjY26iUL97caUYI2dVvIspcrylZYTdR_N5pjS8xxVjbts3PibgnoIg=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/653769",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_395000000A_001623",
+      "name": "秀碧蚵嗲",
+      "address": "臺南市北門區三光里三寮灣東隆宮廟埕榕樹下",
+      "phone": "0934301839",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-beimen-002",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_395000000A_001624",
+      "name": "福隆餐館",
+      "address": "臺南市北門區永隆里港北37號",
+      "phone": "(06)7861588",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮料理",
+        "麵食／小吃",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-beimen-003",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_395000000A_001625",
+      "name": "吳記燒酒螺",
+      "address": "臺南市北門區鯤江村976號",
+      "phone": "(06)7863307",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-beimen-004",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_395000000A_001716",
+      "name": "錢來也雜貨瓦斯行",
+      "address": "臺南市北門區台南市北門里舊埕187號",
+      "phone": "(06)7862627",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-beimen-005",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_395000000A_001886",
+      "name": "田媽媽長盈海味屋",
+      "address": "臺南市北門區慈安里484號",
+      "phone": "(06)7850577",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-beimen-006",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_395000000A_002284",
+      "name": "鹽鄉民宿餐廳",
+      "address": "臺南市北門區永華里井仔腳57號",
+      "phone": "(06)7862643",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-beimen-007",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_A15011100H_000019",
+      "name": "田媽媽長盈海味屋",
+      "address": "臺南市北門區慈安里三寮灣484號",
+      "phone": "0917549736",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-beimen-008",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_A15011100H_000074",
+      "name": "福隆餐廳(獲選參加2010台灣美食展特色餐廳)",
+      "address": "臺南市北門區永隆區港北37號",
+      "phone": "(06)7861588",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 400,
+        "max": 1800,
+        "display": "約 NT$400–1800/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮料理",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-beimen-009",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_A15011100H_000162",
+      "name": "北門嶼輕食風味餐",
+      "address": "臺南市北門區永隆里北門3號之5",
+      "phone": "(06)7860303",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式小吃",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-beimen-010",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_A15011100H_000310",
+      "name": "北門阿善師蚵嗲",
+      "address": "臺南市北門區北門村永隆宮廟前",
+      "phone": "0980688869",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-beimen-011",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_A15011100H_000311",
+      "name": "三寮灣秀碧蚵嗲",
+      "address": "臺南市北門區慈安里三寮灣489號 (東隆宮廟前榕樹下)",
+      "phone": "0908503797",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-beimen-012",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_A15011100H_000328",
+      "name": "蚵寮阿滿熱炒店蚵仔煎",
+      "address": "臺南市北門區保吉里蚵寮 287 號",
+      "phone": "(06)7863008",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-beimen-013",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_A15011100H_000329",
+      "name": "南鯤鯓吳記燒酒螺",
+      "address": "臺南市北門區南鯤鯓代天府入口右邊紅綠燈下",
+      "phone": "(06)7863307",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-beimen-014",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_A15011100H_000339",
+      "name": "蘆竹溝陽春麵",
+      "address": "臺南市北門區三光里蘆竹溝 300 號",
+      "phone": "(06)7850367",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 400,
+        "max": 1800,
+        "display": "約 NT$400–1800/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-beimen-015",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_A15011100H_000355",
+      "name": "北門豆花",
+      "address": "臺南市北門區北門村永隆里44號(永隆宮前廣場)",
+      "phone": "(06)7861901",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-beimen-016",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_A15011100H_000360",
+      "name": "蚵寮圓仔湯",
+      "address": "臺南市北門區蚵寮保安宮廟前廣場",
+      "phone": "0934302800",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-beimen-017",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_A15011100H_000364",
+      "name": "北門五王橋烤地瓜",
+      "address": "臺南市北門區「台 17 線」道路急水溪五王大橋北端橋頭",
+      "phone": "(06)7863903",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-beimen-018",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-123060248-14228-3",
+      "name": "全家便利商店股份有限公司",
+      "address": "臺南市北門區臺南市北門區里仁段460地號上之建物一樓部分",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-019",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200057062-00002-4",
+      "name": "麗淑快餐店",
+      "address": "臺南市北門區三光里13鄰蘆竹溝276號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-020",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-122853565-46019-7",
+      "name": "富達零售股份有限公司",
+      "address": "臺南市北門區北門里125號1樓(北門區農會)",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-021",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200006503-00080-4",
+      "name": "早安漢堡大師",
+      "address": "臺南市北門區北門路2段613號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-022",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-110767903-00001-5",
+      "name": "鹽鄉民宿餐廳",
+      "address": "臺南市北門區北門里井仔腳57號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-023",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-110833827-00001-4",
+      "name": "仁里村餐坊",
+      "address": "臺南市北門區仁里里二重港187號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-024",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-169297837-01055-3",
+      "name": "黑橋牌企業股份有限公司",
+      "address": "臺南市北門區鯤江里976號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-025",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-137725907-00001-2",
+      "name": "北門嶼輕食風味餐廳",
+      "address": "臺南市北門區北門3之5號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-026",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-122555003-44532-1",
+      "name": "統一超商股份有限公司",
+      "address": "臺南市北門區鯤江里976號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-027",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-137585976-00001-2",
+      "name": "清旺福商行",
+      "address": "臺南市北門區保吉里蚵寮276號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-028",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200043333-00696-9",
+      "name": "菲菲茶舖",
+      "address": "臺南市北門區蚵寮958號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-029",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200033203-00001-4",
+      "name": "茶府手搖飲",
+      "address": "臺南市北門區鯤江里蚵寮960號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "茶飲／冰品"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-030",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-122555003-28114-9",
+      "name": "統一超商股份有限公司",
+      "address": "臺南市北門區鯤江里841-1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-031",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-121645169-00001-6",
+      "name": "福隆餐廳",
+      "address": "臺南市北門區港北37號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-032",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-154558469-00008-5",
+      "name": "台灣守護文創股份有限公司",
+      "address": "臺南市北門區北門區永華里64號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-033",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-153253279-00221-2",
+      "name": "吳家紅茶冰有限公司",
+      "address": "臺南市北門區北門里183號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-034",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-174048599-00001-8",
+      "name": "永福飲食店",
+      "address": "臺南市北門區蚵寮里952-3號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-035",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-174501113-00001-4",
+      "name": "臺南市北門區北門國中",
+      "address": "臺南市北門區北門里井子腳1-1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-036",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-174707662-00001-1",
+      "name": "臺南市北門區北門國小",
+      "address": "臺南市北門區臺南市727北門區北門里舊埕3號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-037",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200180483-00003-9",
+      "name": "育生商號",
+      "address": "臺南市北門區慈安里484號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-038",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-202320229-00002-4",
+      "name": "綵妞滷味",
+      "address": "臺南市北門區蚵寮夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-039",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200058780-00001-1",
+      "name": "欣宏海鮮餐館",
+      "address": "臺南市北門區鯤江里951號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 400,
+        "max": 1800,
+        "display": "約 NT$400–1800/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮料理",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-040",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200226034-00002-1",
+      "name": "北門蚵記仁外燴",
+      "address": "臺南市北門區三光里盧竹溝343號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-041",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-202317113-00001-1",
+      "name": "北門豆花冷飲店",
+      "address": "臺南市北門區永隆里北門44號永隆宮廟廣場前建物",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-042",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-278958608-00002-5",
+      "name": "七股王羊肉",
+      "address": "臺南市北門區蚵寮夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-043",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200053586-00001-0",
+      "name": "北門早餐店",
+      "address": "臺南市北門區北門里11鄰北門282號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "早餐"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-044",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200215172-00001-1",
+      "name": "宜潔茶飲店",
+      "address": "臺南市北門區永隆里北門44號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "茶飲／冰品"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-045",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-222256445-00001-3",
+      "name": "吉凳霸",
+      "address": "臺南市北門區蚵寮里841-2號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-046",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200243583-00001-8",
+      "name": "金萱茶苑",
+      "address": "臺南市北門區蚵寮里蚵寮959號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-047",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200207283-00001-5",
+      "name": "北門自助餐",
+      "address": "臺南市北門區北門里北門287號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-048",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-202269928-00001-1",
+      "name": "南鯤鯓海味餐廳",
+      "address": "臺南市北門區蚵寮里蚵寮955號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-049",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200239390-00002-0",
+      "name": "巧味豆乳雞",
+      "address": "臺南市北門區蚵寮夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-050",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200239787-00005-3",
+      "name": "夜市攤商-賴建維",
+      "address": "臺南市北門區三寮灣夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-051",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-202297799-00001-8",
+      "name": "美香飲食店",
+      "address": "臺南市北門區玉港里灰磘港129之23號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-052",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-202258087-00001-5",
+      "name": "羅記大尾魷魚",
+      "address": "臺南市北門區蚵寮夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-053",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-202321469-00004-3",
+      "name": "夜市攤販-陳幸娟",
+      "address": "臺南市北門區蚵寮夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-054",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-202321469-00005-4",
+      "name": "夜市攤販-陳幸娟",
+      "address": "臺南市北門區三寮灣夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-055",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-123285582-92805-0",
+      "name": "萊爾富國際股份有限公司",
+      "address": "臺南市北門區永隆里北門1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-056",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-172135153-00001-9",
+      "name": "臺南市北門區三慈國小",
+      "address": "臺南市北門區慈安里381號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-057",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-172135230-00001-5",
+      "name": "臺南市北門區文山國小",
+      "address": "臺南市北門區文山里溪底寮50號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-058",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-172135962-00001-7",
+      "name": "臺南市北門區雙春國小",
+      "address": "臺南市北門區雙春里35-2號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-059",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-172136569-00001-1",
+      "name": "臺南市北門區蚵寮國小",
+      "address": "臺南市北門區蚵寮里791號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-060",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-172141535-00001-0",
+      "name": "臺南市北門區錦湖國小",
+      "address": "臺南市北門區錦湖里75號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-061",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200010641-00001-5",
+      "name": "元益冷飲店",
+      "address": "臺南市北門區永隆里44號對面",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-062",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-202342196-00001-0",
+      "name": "黃義欽",
+      "address": "臺南市北門區保吉里蚵寮126號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-beimen-063",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-00257440",
+      "name": "依諾克商行",
+      "address": "臺南市北門區蚵寮里蚵寮714號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "tainan-beimen-064",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-00280625",
+      "name": "同利食農社會企業",
+      "address": "臺南市北門區文山里溪底寮15號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "tainan-beimen-065",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-06229350",
+      "name": "紅樓餐廳",
+      "address": "臺南市北門區仁里里村239之1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "tainan-beimen-066",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-10767903",
+      "name": "鹽鄉民宿餐廳",
+      "address": "臺南市北門區北門里井子脚57號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "tainan-beimen-067",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-10831665",
+      "name": "錢來也商店",
+      "address": "臺南市北門區北門里北門297之1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "tainan-beimen-068",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-10833827",
+      "name": "仁里村餐坊",
+      "address": "臺南市北門區文山里二重港187號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "tainan-beimen-069",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-21645169",
+      "name": "福隆餐廳",
+      "address": "臺南市北門區永隆里港北37號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "tainan-beimen-070",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-36818049",
+      "name": "廣隆餐廳",
+      "address": "臺南市北門區永隆里北門130號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "tainan-beimen-071",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-37725907",
+      "name": "北門嶼輕食風味餐廳",
+      "address": "臺南市北門區永隆里北門3之5號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "tainan-beimen-072",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-37749990",
+      "name": "錢來也王子青蛙雜貨舖",
+      "address": "臺南市北門區北門里北門297之1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "tainan-beimen-073",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-81232228",
+      "name": "北門自助餐",
+      "address": "臺南市北門區北門里北門287號(北門市場公有零售市場0015號攤位)",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "tainan-beimen-074",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-10795838",
+      "name": "麗淑快餐店",
+      "address": "臺南市北門區三光里蘆竹溝276號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「便當、自助餐店」（561112），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-beimen-075",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-25893941",
+      "name": "顏天戶麵攤",
+      "address": "臺南市北門區三光里蘆竹溝300號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-beimen-076",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-81397683",
+      "name": "北門蚵記仁外燴",
+      "address": "臺南市北門區三光里016鄰蘆竹溝343號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-beimen-077",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-74380027",
+      "name": "滿春食堂",
+      "address": "臺南市北門區保吉里蚵寮市場",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-beimen-078",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-61550712",
+      "name": "百年鹽鹵豆花",
+      "address": "臺南市北門區北門里井仔腳64號(興安宮右4攤位)",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "茶飲／冰品",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「其他飲料店」（563199），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-beimen-079",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-36884672",
+      "name": "北門早餐店",
+      "address": "臺南市北門區北門里北門282號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "早餐"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「早餐店」（561111），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-beimen-080",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-37725907",
+      "name": "北門嶼輕食風味餐廳",
+      "address": "臺南市北門區北門里001鄰北門3-5號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「餐廳」（561115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-beimen-081",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-40790971",
+      "name": "醇萃咖啡茶飲",
+      "address": "臺南市北門區北門里002鄰舊埕段505地號上建物",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡",
+        "茶飲／冰品"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「咖啡館」（563112），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-beimen-082",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-81364374",
+      "name": "吳家紅茶冰",
+      "address": "臺南市北門區北門里010鄰北門249號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "茶飲／冰品"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「手搖飲店」（563115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-beimen-083",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-17844877",
+      "name": "育生商號",
+      "address": "臺南市北門區慈安里三寮灣484號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「餐廳」（561115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-beimen-084",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-47721079",
+      "name": "雲集商號",
+      "address": "臺南市北門區慈安里三寮灣524號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「便當、自助餐店」（561112），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-beimen-085",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-00272126",
+      "name": "濃五企業社",
+      "address": "臺南市北門區慈安里013鄰三寮灣570號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「餐廳」（561115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-beimen-086",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-47945438",
+      "name": "阿容美食",
+      "address": "臺南市北門區永隆里004鄰44號(永隆美食廣場)",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-beimen-087",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-74194971",
+      "name": "美香飲食店",
+      "address": "臺南市北門區玉港里灰󼍕港129-23號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「餐廳」（561115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-beimen-088",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-14987485",
+      "name": "欣宏海鮮餐館",
+      "address": "臺南市北門區蚵寮里蚵寮951號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 400,
+        "max": 1800,
+        "display": "約 NT$400–1800/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮料理",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「餐廳」（561115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-beimen-089",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-94358109",
+      "name": "阿娟美食區",
+      "address": "臺南市北門區蚵寮里005鄰蚵寮976號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-beimen-090",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-94325348",
+      "name": "南鯤鯓海味餐廳",
+      "address": "臺南市北門區蚵寮里5鄰蚵寮955號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-beimen-091",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-00269121",
+      "name": "南鯤鯓冷飲店",
+      "address": "臺南市北門區蚵寮里5鄰蚵寮958號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "茶飲／冰品"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「手搖飲店」（563115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-beimen-092",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-40819409",
+      "name": "三力食品有限公司台南北門雙春處",
+      "address": "臺南市北門區雙春里雙春73-11號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「餐廳」（561115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-beimen-093",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-55a4f22fc03a10241de63a72",
+      "name": "鹽鄉民宿餐廳",
+      "address": "臺南市北門區井仔腳57號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 160,
+        "max": 240,
+        "display": "約 NT$160–240/人（愛食記均消約 NT$200）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理",
+        "合菜",
+        "中式料理"
+      ],
+      "online_rating": {
+        "platform": "愛食記",
+        "score": 4.5,
+        "review_count": 6,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表顯示 4.5 分、6 則評論",
+          "未把完整評論全文寫入資料檔。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%8C%97%E9%96%80",
+        "https://ifoodie.tw/restaurant/55a4f22fc03a10241de63a72-%E9%B9%BD%E9%84%89%E6%B0%91%E5%AE%BF%E9%A4%90%E5%BB%B3"
+      ],
+      "id": "tainan-beimen-094",
+      "image_url": "https://lh3.googleusercontent.com/roHpWxZ7CWPS2-keXWayy3vhoUoOiISKoimMHML7TIXv9jW6jAOI60gJ11M2bBGYc-7LSxyxhwWCwh9V3eWG2cCoTI3P9MZ46tbnf-hyAI7Q=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%8C%97%E9%96%80",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-59b89f33226139467716fe4e",
+      "name": "北門豆花",
+      "address": "臺南市北門區永隆裏44號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 20,
+        "max": 40,
+        "display": "約 NT$20–40/人（愛食記均消約 NT$30）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "甜點／烘焙",
+        "茶飲／飲料",
+        "麵食／小吃"
+      ],
+      "online_rating": {
+        "platform": "愛食記",
+        "score": 4.1,
+        "review_count": 8,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表顯示 4.1 分、8 則評論",
+          "未把完整評論全文寫入資料檔。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%8C%97%E9%96%80",
+        "https://ifoodie.tw/restaurant/59b89f33226139467716fe4e-%E5%8C%97%E9%96%80%E8%B1%86%E8%8A%B1"
+      ],
+      "id": "tainan-beimen-095",
+      "image_url": "https://lh3.googleusercontent.com/roHpWxZ7CWPS2-keXWayy3vhoUoOiISKoimMHML7TIXv9jW6jAOI60gJ11M2bBGYc-7LSxyxhwWCwh9V3eWG2cCoTI3P9MZ46tbnf-hyAI7Q=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%8C%97%E9%96%80",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-59b89f7a23679c4e0e4e6a0f",
+      "name": "北門嶼輕食風味餐廳",
+      "address": "臺南市北門區永隆里北門3號之5",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 310,
+        "max": 470,
+        "display": "約 NT$310–470/人（愛食記均消約 NT$390）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "火鍋",
+        "中式／台式料理",
+        "輕食"
+      ],
+      "online_rating": {
+        "platform": "愛食記",
+        "score": 4,
+        "review_count": 2,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表顯示 4 分、2 則評論",
+          "未把完整評論全文寫入資料檔。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%8C%97%E9%96%80",
+        "https://ifoodie.tw/restaurant/59b89f7a23679c4e0e4e6a0f-%E5%8C%97%E9%96%80%E5%B6%BC%E8%BC%95%E9%A3%9F%E9%A2%A8%E5%91%B3%E9%A4%90%E5%BB%B3"
+      ],
+      "id": "tainan-beimen-096",
+      "image_url": "https://lh3.googleusercontent.com/roHpWxZ7CWPS2-keXWayy3vhoUoOiISKoimMHML7TIXv9jW6jAOI60gJ11M2bBGYc-7LSxyxhwWCwh9V3eWG2cCoTI3P9MZ46tbnf-hyAI7Q=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%8C%97%E9%96%80",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-672ab87a7be9c36857a625db",
+      "name": "北門阿選土魠魚焿",
+      "address": "臺南市北門區永隆裏北門44號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 80,
+        "max": 120,
+        "display": "約 NT$80–120/人（愛食記均消約 NT$100）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮料理",
+        "麵食／小吃",
+        "小吃"
+      ],
+      "online_rating": {
+        "platform": "愛食記",
+        "score": 3,
+        "review_count": 1,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表顯示 3 分、1 則評論",
+          "未把完整評論全文寫入資料檔。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%8C%97%E9%96%80",
+        "https://ifoodie.tw/restaurant/672ab87a7be9c36857a625db-%E5%8C%97%E9%96%80%E9%98%BF%E9%81%B8%E5%9C%9F%E9%AD%A0%E9%AD%9A%E7%84%BF"
+      ],
+      "id": "tainan-beimen-097",
+      "image_url": "https://lh3.googleusercontent.com/roHpWxZ7CWPS2-keXWayy3vhoUoOiISKoimMHML7TIXv9jW6jAOI60gJ11M2bBGYc-7LSxyxhwWCwh9V3eWG2cCoTI3P9MZ46tbnf-hyAI7Q=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%8C%97%E9%96%80",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  ]
+}

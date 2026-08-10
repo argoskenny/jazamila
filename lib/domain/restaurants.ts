@@ -56,10 +56,15 @@ function criteriaWhere(criteria: RestaurantCriteria): Prisma.RestaurantWhereInpu
   const where: Prisma.RestaurantWhereInput = {
     closed: { not: 1 }
   };
+  const selectedFoodTypes = criteria.foodTypes?.filter((foodType) => foodType > 0) ?? [];
 
   if (criteria.regionId) where.region = criteria.regionId;
   if (criteria.sectionId) where.section = criteria.sectionId;
-  if (criteria.foodType) where.foodType = criteria.foodType;
+  if (selectedFoodTypes.length > 0) {
+    where.foodType = { in: selectedFoodTypes };
+  } else if (criteria.foodType) {
+    where.foodType = criteria.foodType;
+  }
   if (criteria.maxPrice && criteria.maxPrice < 1100) where.price = { ...(where.price as object), lte: criteria.maxPrice };
   if (criteria.minPrice) where.price = { ...(where.price as object), gte: criteria.minPrice };
 

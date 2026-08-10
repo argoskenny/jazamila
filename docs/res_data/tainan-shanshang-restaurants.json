@@ -1,0 +1,3629 @@
+{
+  "collection": {
+    "title": "臺南市山上實體餐廳資料（含愛食記補充資料）",
+    "city": "臺南市",
+    "district": "山上區",
+    "scope": "從 FonFood「台南市山上區－美食餐廳」公開列表與料理分類頁取得候選店家，再逐頁核對店家地址、電話、料理分類、Google 評價快照、推薦菜單價位與食記摘要；僅保留地址屬於山上區且未見歇業標記的有店面店家。 不足筆數再以觀光署餐飲資料、食藥署「餐飲場所」登錄資料及經濟部核准設立餐廳餐館資料補充；官方資料未提供網路評分時保留 null 與來源說明。 不足筆數再以觀光署餐飲資料、食藥署「餐飲場所」登錄資料及經濟部核准設立餐廳餐館資料補充；官方資料未提供網路評分時保留 null 與來源說明。 不足筆數再以觀光署餐飲資料、食藥署「餐飲場所」登錄資料及經濟部核准設立餐廳餐館資料補充；官方資料未提供網路評分時保留 null 與來源說明。 不足筆數再以觀光署餐飲資料、食藥署「餐飲場所」登錄資料、經濟部核准設立餐廳餐館資料及財政部營業稅籍餐飲分類資料補充；官方資料未提供網路評分時保留 null 與來源說明。 再以愛食記公開行政區列表補充可核對地址的店家；偏遠或人口較少行政區若公開資料不足，保留實際可找到的筆數。 再以愛食記公開行政區列表補充可核對地址的店家；偏遠或人口較少行政區若公開資料不足，保留實際可找到的筆數。 再以愛食記公開行政區列表補充可核對地址的店家；偏遠或人口較少行政區若公開資料不足，保留實際可找到的筆數。 再以愛食記公開行政區列表補充可核對地址的店家；偏遠或人口較少行政區若公開資料不足，保留實際可找到的筆數。",
+    "collected_at": "2026-08-10",
+    "status": "partial",
+    "target_count": 200,
+    "record_count": 94,
+    "source_platform": "FonFood public restaurant pages; Tourism Administration restaurant data; FDA food business registration data; MOEA restaurant business registration data; Ministry of Finance active tax registration data; iFoodie public district restaurant lists; iFoodie public district restaurant lists; iFoodie public district restaurant lists; iFoodie public district restaurant lists",
+    "rating_note": "愛食記補充資料保留列表顯示的評分與評論數；未顯示評分時以 null 與來源說明表示，未自行推估。",
+    "review_note": "review_summary 僅保存列表可公開解析的評分與評論數說明，未把完整評論全文寫入資料檔。",
+    "price_note": "價位是每人約略消費範圍（新台幣）；優先取 FonFood 公開菜單，官方補充資料沒有菜單時依店名與料理分類估算，實際仍以店家最新菜單為準。",
+    "dedupe_rule": "以店名加地址作為唯一鍵；同品牌不同地址視為不同實體門市，同一地址不重複收錄。",
+    "source_list_pages": [
+      "https://www.fonfood.com/台南市山上區",
+      "https://www.fonfood.com/台南市山上區/2",
+      "https://www.fonfood.com/台南市",
+      "https://www.fonfood.com/台南市/2",
+      "https://www.fonfood.com/台南市/3",
+      "https://www.fonfood.com/台南市/4",
+      "https://www.fonfood.com/台南市/5",
+      "https://www.fonfood.com/台南市山上區/景觀咖啡",
+      "https://www.fonfood.com/台南市山上區/buffet",
+      "https://www.fonfood.com/台南市山上區/早午餐",
+      "https://www.fonfood.com/台南市山上區/下午茶",
+      "https://www.fonfood.com/台南市山上區/海鮮餐廳",
+      "https://www.fonfood.com/台南市山上區/必比登",
+      "https://www.fonfood.com/台南市山上區/米其林",
+      "https://www.fonfood.com/台南市山上區/燒肉吃到飽",
+      "https://www.fonfood.com/台南市山上區/日式",
+      "https://www.fonfood.com/台南市山上區/韓式",
+      "https://www.fonfood.com/台南市山上區/法式",
+      "https://www.fonfood.com/台南市山上區/義式",
+      "https://www.fonfood.com/台南市山上區/西班牙",
+      "https://www.fonfood.com/台南市山上區/美式",
+      "https://www.fonfood.com/台南市山上區/港式",
+      "https://www.fonfood.com/台南市山上區/泰式",
+      "https://www.fonfood.com/台南市山上區/越式",
+      "https://www.fonfood.com/台南市山上區/印度",
+      "https://www.fonfood.com/台南市山上區/小吃",
+      "https://www.fonfood.com/台南市山上區/古早味",
+      "https://www.fonfood.com/台南市山上區/冰品",
+      "https://www.fonfood.com/台南市山上區/輕食",
+      "https://www.fonfood.com/台南市山上區/拉麵",
+      "https://www.fonfood.com/台南市山上區/漢堡",
+      "https://www.fonfood.com/台南市山上區/牛排",
+      "https://www.fonfood.com/台南市山上區/燉飯",
+      "https://www.fonfood.com/台南市山上區/披薩",
+      "https://www.fonfood.com/台南市山上區/義大利麵",
+      "https://www.fonfood.com/台南市山上區/帝王蟹",
+      "https://www.fonfood.com/台南市山上區/龍蝦",
+      "https://www.fonfood.com/台南市山上區/和牛",
+      "https://www.fonfood.com/台南市山上區/烤鴨",
+      "https://www.fonfood.com/台南市山上區/牛肉麵",
+      "https://www.fonfood.com/台南市山上區/舒芙蕾",
+      "https://www.fonfood.com/台南市山上區/鬆餅",
+      "https://www.fonfood.com/台南市山上區/吐司",
+      "https://www.fonfood.com/台南市山上區/蛋糕",
+      "https://www.fonfood.com/台南市山上區/咖啡",
+      "https://www.fonfood.com/台南市山上區/平價",
+      "https://www.fonfood.com/台南市山上區/人氣",
+      "https://www.fonfood.com/台南市山上區/網美打卡",
+      "https://www.fonfood.com/台南市山上區/約會",
+      "https://www.fonfood.com/台南市山上區/聚餐",
+      "https://www.fonfood.com/台南市山上區/不限時",
+      "https://www.fonfood.com/台南市山上區/動物",
+      "https://www.fonfood.com/台南市山上區/庭園",
+      "https://www.fonfood.com/台南市山上區/老宅",
+      "https://www.fonfood.com/台南市山上區/異國",
+      "https://data.gov.tw/dataset/7779",
+      "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip",
+      "https://data.gov.tw/dataset/8938",
+      "https://data.fda.gov.tw/data/opendata/export/97/json",
+      "https://data.gov.tw/dataset/108355",
+      "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB",
+      "https://data.gov.tw/dataset/9400",
+      "https://eip.fia.gov.tw/data/BGMOPEN1.zip",
+      "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%B1%B1%E4%B8%8A"
+    ],
+    "collection_stats": {
+      "list_pages_fetched": 2,
+      "city_list_pages_fetched": 5,
+      "category_pages_fetched": 3,
+      "candidate_count": 112,
+      "detail_pages_parsed": 112,
+      "valid_count": 94,
+      "invalid_reason_counts": {
+        "rating": 1,
+        "district": 110,
+        "phone": 7
+      },
+      "fonfood_base_count": 1,
+      "official_candidates": {
+        "tourism": 3,
+        "fda_food_service": 57,
+        "business_registered": 7,
+        "tax_registered_food_service": 30
+      },
+      "official_added": {
+        "tourism": 3,
+        "fda": 57,
+        "business": 3,
+        "tax": 25
+      },
+      "official_added_total": 88,
+      "ifoodie_card_count": 9,
+      "ifoodie_supplement_added": 5
+    },
+    "image_collection_note": "每家最多保留一張公開圖片網址；只跳過來源頁面明文禁止外部引用或明確拒絕的來源，不下載圖片。未發現明文禁止不等同於取得圖片著作權授權；收到下架通知時應移除網址。"
+  },
+  "restaurants": [
+    {
+      "source_id": "195791",
+      "name": "水道咖啡",
+      "address": "台南市山上區16號",
+      "phone": "06 578 1010",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 65,
+        "max": 65,
+        "display": "約 NT$65/人",
+        "basis": "依公開頁面推薦菜單價位區間估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "景觀咖啡",
+        "咖啡"
+      ],
+      "online_rating": {
+        "platform": "Google",
+        "score": 4.2,
+        "review_count": 1020,
+        "source_snapshot": "來源頁面標註2年前",
+        "food_diary_count": 8,
+        "review_summary": [
+          "每人50元來回",
+          "門票折抵10元還須收回票根",
+          "台南市民記得要帶身份證件去門票才能打折扣50元",
+          "沒有證明文件門票100元",
+          "冰淇淋也是要65元",
+          "桌上寫100元消費起跳"
+        ]
+      },
+      "store_status_check": "公開店家頁面列有店址，未發現歇業或停業標記；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://www.fonfood.com/store/195791"
+      ],
+      "id": "tainan-shanshang-001",
+      "image_url": "https://lh3.googleusercontent.com/AlOuaXgDIPwgtzK5g1mvzK1nmo1j6t_s4-C59OB0Wqzgi5cKBsJJEcvawgdDP_bPPzuQoxnmf6vo8qxomYbTEjUx5vnB4l7ThJI=s300-c",
+      "image_source_url": "https://www.fonfood.com/store/195791",
+      "image_source_type": "JSON-LD Restaurant image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_395000000A_001678",
+      "name": "國正食堂",
+      "address": "臺南市山上區南洲里南洲103號",
+      "phone": "(06)5781059",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-shanshang-002",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_395000000A_002037",
+      "name": "阿燕姨冰枝店",
+      "address": "臺南市山上區178縣道54號",
+      "phone": "(06)5781235",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "茶飲／冰品"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-shanshang-003",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tourism-Restaurant_395000000A_002279",
+      "name": "蘭科植物園",
+      "address": "臺南市山上區玉峰里牛稠埔11-2號",
+      "phone": "(06)5781358",
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "交通部觀光署觀光資訊資料庫餐飲資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "交通部觀光署觀光資訊資料庫餐飲資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "觀光署公開資料的 ServiceStatus 為營運中，資料列有店址；出發前仍建議確認當日營業。",
+      "sources": [
+        "https://data.gov.tw/dataset/7779",
+        "https://media.taiwan.net.tw/XMLReleaseAll_public/v2.0/Zh_tw/Restaurant-json.zip"
+      ],
+      "id": "tainan-shanshang-004",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-147826171-00001-8",
+      "name": "永釩餐飲",
+      "address": "臺南市山上區南洲里南洲6之3號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-005",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-173507526-00001-7",
+      "name": "臺南市山上區山上國中",
+      "address": "臺南市山上區山上里130號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-006",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-173623588-00001-4",
+      "name": "臺南市山上區山上國小",
+      "address": "臺南市山上區臺南市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-007",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-123060248-12748-8",
+      "name": "全家便利商店股份有限公司",
+      "address": "臺南市山上區明和里明和196-1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-008",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-122853565-46006-3",
+      "name": "富達零售股份有限公司",
+      "address": "臺南市山上區山上238號(山上農會店)",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-009",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200008390-00001-3",
+      "name": "國正食堂",
+      "address": "臺南市山上區山上區南洲里南洲1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-010",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200005463-00002-2",
+      "name": "新市福祺蚵仔煎",
+      "address": "臺南市山上區山上夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-011",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-108435788-00001-5",
+      "name": "津好飲食部",
+      "address": "臺南市山上區明和里明和231之2號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-012",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-108467486-00001-5",
+      "name": "聖德堂香鋪",
+      "address": "臺南市山上區明和里明和6之5號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-013",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-122555003-55655-9",
+      "name": "統一超商股份有限公司",
+      "address": "臺南市山上區山上里249、249-1、249-2號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-014",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-194320836-00002-8",
+      "name": "洄游咖啡館",
+      "address": "臺南市山上區南洲里南洲6之3號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-015",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-122555003-27234-1",
+      "name": "統一超商股份有限公司",
+      "address": "臺南市山上區南洲337-3號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-016",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200087760-00003-3",
+      "name": "山上公有零售市場-第44攤",
+      "address": "臺南市山上區南洲里山上50-2號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-017",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200087803-00002-0",
+      "name": "山上公有零售市場46.51攤",
+      "address": "臺南市山上區山上區南洲里南洲1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-018",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-124913370-00103-4",
+      "name": "軒揚食品有限公司",
+      "address": "臺南市山上區南洲里127之2號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-019",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200015325-00002-0",
+      "name": "夜市攤販-施素雲",
+      "address": "臺南市山上區山上夜市(禮拜一)",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-020",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200082774-00001-1",
+      "name": "山上美芝城",
+      "address": "臺南市山上區南洲里125號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-021",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200125116-00001-9",
+      "name": "傻師父湯包山上店",
+      "address": "臺南市山上區南洲里127之3號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-022",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-202320884-00002-1",
+      "name": "夜市攤販-謝采綸",
+      "address": "臺南市山上區山上夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-023",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200169586-00001-8",
+      "name": "木瓜媽魚友社",
+      "address": "臺南市山上區明和里明和200之1號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-024",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200111968-00001-9",
+      "name": "山上公有零售市場-53號",
+      "address": "臺南市山上區南洲里1號山上市場第53攤",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-025",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-202281464-00001-0",
+      "name": "Bánh Mì Su Su",
+      "address": "臺南市山上區南洲104號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-026",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-202312439-00001-7",
+      "name": "一品清冰枝店",
+      "address": "臺南市山上區南洲里1鄰南州60號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-027",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200051973-00001-8",
+      "name": "1+1自助餐",
+      "address": "臺南市山上區南洲里63號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-028",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200214910-00001-0",
+      "name": "穆香素食早餐",
+      "address": "臺南市山上區南洲里南洲107號(山上公有零售市場第16號攤位)",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "早餐",
+        "素食"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-029",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200247317-00008-4",
+      "name": "夜市攤販-阮氏桃",
+      "address": "臺南市山上區山上夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-030",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-202278985-00001-4",
+      "name": "祥禾美食店",
+      "address": "臺南市山上區山上里245號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-031",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-202310323-00001-7",
+      "name": "煎佐麻里蔥油餅",
+      "address": "臺南市山上區山上夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "甜點／烘焙"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-032",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-202276319-00001-3",
+      "name": "丹丹香葸油餅",
+      "address": "臺南市山上區山上夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "甜點／烘焙"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-033",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200152881-00001-8",
+      "name": "風船章魚燒",
+      "address": "臺南市山上區山上201-9號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-034",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200242356-00001-5",
+      "name": "宏青鹹水雞",
+      "address": "臺南市山上區山上夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-035",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-202334654-00002-1",
+      "name": "章魚燒、糖葫蘆、雪琪冰、豬血糕",
+      "address": "臺南市山上區山上夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-036",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-202335769-00001-8",
+      "name": "珍記手工烙餅山上店",
+      "address": "臺南市山上區明和里226號空地",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "甜點／烘焙"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-037",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200145445-00001-6",
+      "name": "山上公有零售市場(第18.19.20.30攤)",
+      "address": "臺南市山上區南洲里109號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-038",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200240431-00001-7",
+      "name": "888牛排",
+      "address": "臺南市山上區山上夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 400,
+        "max": 1800,
+        "display": "約 NT$400–1800/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "牛排"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-039",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200240610-00002-7",
+      "name": "夜市攤販-沈新富",
+      "address": "臺南市山上區山上夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-040",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200240784-00002-9",
+      "name": "台北深坑臭豆腐",
+      "address": "臺南市山上區山上夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-041",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200241152-00005-2",
+      "name": "日品排骨酥",
+      "address": "臺南市山上區山上夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-042",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-202301983-00001-9",
+      "name": "李玉涵",
+      "address": "臺南市山上區南洲里19鄰南洲336-6號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-043",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200143714-00001-3",
+      "name": "忠盛小吃店",
+      "address": "臺南市山上區明和里北勢洲58-7號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-044",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200240073-00002-0",
+      "name": "方 蚵仔麵線",
+      "address": "臺南市山上區南洲開靈宮大廟前(山上夜市)",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-045",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200240179-00003-8",
+      "name": "泳大燒烤",
+      "address": "臺南市山上區南洲開靈宮大廟前與附近旁",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 400,
+        "max": 1800,
+        "display": "約 NT$400–1800/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "燒烤／燒肉"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-046",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200239679-00002-0",
+      "name": "和津壽司",
+      "address": "臺南市山上區山上夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 250,
+        "max": 1000,
+        "display": "約 NT$250–1000/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "日式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-047",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200239860-00002-2",
+      "name": "QQ大尾魷魚.三角骨.鳥蛋",
+      "address": "臺南市山上區山上夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-048",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200238945-00012-6",
+      "name": "朱仲文",
+      "address": "臺南市山上區山上夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-049",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200194552-00001-9",
+      "name": "妙哉素食",
+      "address": "臺南市山上區南洲里20鄰327之8號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "素食"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-050",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200238387-00002-5",
+      "name": "法貝客可莉餅",
+      "address": "臺南市山上區山上夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "甜點／烘焙"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-051",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200238744-00002-2",
+      "name": "葉家羊肉",
+      "address": "臺南市山上區山上夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-052",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200238808-00004-5",
+      "name": "手工煎餃",
+      "address": "臺南市山上區山上夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-053",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200238809-00005-7",
+      "name": "雞道鹽水雞",
+      "address": "臺南市山上區山上夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-054",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200131302-00001-3",
+      "name": "周黃淑貞",
+      "address": "臺南市山上區南洲里南洲307―2號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-055",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-202261126-00001-3",
+      "name": "白色貨櫃",
+      "address": "臺南市山上區豐德里隙子口2―22號對面",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-056",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-202290861-00004-4",
+      "name": "炸魷魚",
+      "address": "臺南市山上區山上夜市",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-057",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-400223096-00193-9",
+      "name": "台灣中油股份有限公司油品行銷事業部台南營業處",
+      "address": "臺南市山上區明和里232號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-058",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200067995-00001-9",
+      "name": "欣欣越南小吃",
+      "address": "臺南市山上區北勢洲40號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-059",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200122923-00001-2",
+      "name": "珍美味早餐店",
+      "address": "臺南市山上區南洲里72之1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "早餐"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-060",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "fda-D-200175308-00002-8",
+      "name": "街役場文創遇道飲品",
+      "address": "臺南市山上區山上里16號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "衛生福利部食品藥物管理署食品業者登錄資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "衛生福利部食品藥物管理署食品業者登錄資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "食品業者登錄項目為「餐飲場所」且列有店址；該資料未提供即時歇業狀態，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/8938",
+        "https://data.fda.gov.tw/data/opendata/export/97/json"
+      ],
+      "id": "tainan-shanshang-061",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-00256786",
+      "name": "祥禾美食店",
+      "address": "臺南市山上區山上里山上245號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "tainan-shanshang-062",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-00267405",
+      "name": "山上龍來便當",
+      "address": "臺南市山上區南洲里南洲153號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "tainan-shanshang-063",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "business-94314736",
+      "name": "桃玉餐飲商行",
+      "address": "臺南市山上區南洲里369號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 150,
+        "max": 600,
+        "display": "約 NT$150–600/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "其他餐飲"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "經濟部商業發展署餐廳餐館商業登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "經濟部商業發展署餐廳餐館商業登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "商業登記狀態為「核准設立」且列有營業地址；官方資料未提供即時營業與電話，出發前仍建議確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/108355",
+        "https://data.gcis.nat.gov.tw/od/file?oid=D6F37400-1426-4C06-B330-2E344F3F73AB"
+      ],
+      "id": "tainan-shanshang-064",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-81322467",
+      "name": "林順成",
+      "address": "臺南市山上區南洲里南洲127號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-065",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-81323803",
+      "name": "力康洋行",
+      "address": "臺南市山上區南洲里南洲326之7號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "茶飲／冰品"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「手搖飲店」（563115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-066",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-81324893",
+      "name": "茶里企業社",
+      "address": "臺南市山上區南洲里南洲327號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "茶飲／冰品"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「手搖飲店」（563115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-067",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-94314736",
+      "name": "桃玉餐飲商行",
+      "address": "臺南市山上區南洲里南洲369號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "茶飲／冰品"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「手搖飲店」（563115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-068",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-94320836",
+      "name": "洄游咖啡館",
+      "address": "臺南市山上區南洲里南洲6-3號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「咖啡館」（563112），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-069",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-37647662",
+      "name": "港口土魠魚焿山上店",
+      "address": "臺南市山上區南洲里南洲73號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-070",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-61628676",
+      "name": "雲海鮮魚湯",
+      "address": "臺南市山上區南洲里1鄰南洲72-2號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "海鮮料理",
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-071",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-08436317",
+      "name": "宏春自助餐",
+      "address": "臺南市山上區南洲里19鄰南洲336-11號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-072",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-36669961",
+      "name": "國正食堂",
+      "address": "臺南市山上區南洲里2鄰南洲103號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-073",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-47780301",
+      "name": "山上美芝城",
+      "address": "臺南市山上區南洲里2鄰南洲125號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "早餐"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「早餐店」（561111），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-074",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-85959925",
+      "name": "席爾銻工作坊",
+      "address": "臺南市山上區南洲里2鄰南洲135號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "茶飲／冰品"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「手搖飲店」（563115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-075",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-88907459",
+      "name": "妙哉素食",
+      "address": "臺南市山上區南洲里20鄰南洲327-8號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃",
+        "素食"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-076",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-26424714",
+      "name": "金祥飲料店",
+      "address": "臺南市山上區南洲里3鄰南洲54號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "茶飲／冰品"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「手搖飲店」（563115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-077",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-36613329",
+      "name": "1+1自助餐",
+      "address": "臺南市山上區南洲里3鄰南洲63號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式小吃",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「餐廳」（561115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-078",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-00267405",
+      "name": "山上龍來便當",
+      "address": "臺南市山上區南洲里7鄰南洲153號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「便當、自助餐店」（561112），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-079",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-85030357",
+      "name": "街役場文創有限公司台南分公司",
+      "address": "臺南市山上區山上里山上16號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "茶飲／冰品"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「手搖飲店」（563115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-080",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-85580438",
+      "name": "街役場文創遇道飲品",
+      "address": "臺南市山上區山上里山上16號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "茶飲／冰品"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「其他飲料店」（563199），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-081",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-85580492",
+      "name": "街役場文創水道咖啡",
+      "address": "臺南市山上區山上里山上16號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "咖啡"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「咖啡館」（563112），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-082",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-85677735",
+      "name": "風船章魚燒",
+      "address": "臺南市山上區山上里山上201-9號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-083",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-37671711",
+      "name": "阿敏餐飲店",
+      "address": "臺南市山上區山上里山上237-3號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-084",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-37694279",
+      "name": "欣欣越南小吃",
+      "address": "臺南市山上區明和里北勢洲40―1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-085",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-85563304",
+      "name": "木瓜媽魚友社",
+      "address": "臺南市山上區明和里明和200-1號1樓",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "茶飲／冰品"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「手搖飲店」（563115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-086",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-92403310",
+      "name": "9號脆皮便當",
+      "address": "臺南市山上區明和里明和200-3號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "麵食／小吃",
+        "台式小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「麵店、小吃店」（561113），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-087",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-61620576",
+      "name": "田慧君",
+      "address": "臺南市山上區明和里明和226號前空地",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "早餐"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「早餐店」（561111），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-088",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "tax-08467486",
+      "name": "聖德堂香鋪",
+      "address": "臺南市山上區明和里15鄰明和6-5號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 60,
+        "max": 400,
+        "display": "約 NT$60–400/人",
+        "basis": "官方公開資料未提供完整菜單價位，依店名與料理分類估算；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "茶飲／冰品"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": null,
+        "source_snapshot": "財政部全國營業（稅籍）登記資料（2026-08-10）未提供可驗證的網路評分快照",
+        "food_diary_count": null,
+        "review_summary": [
+          "財政部全國營業(稅籍)登記資料提供店家基本資料,但未提供可解析的網路評分、評論數或評論摘要。"
+        ]
+      },
+      "store_status_check": "稅籍資料集僅收錄營業中資料，行業分類為「手搖飲店」（563115），並列有營業地址；電話、評分與實際營業時間仍建議出發前確認。",
+      "sources": [
+        "https://data.gov.tw/dataset/9400",
+        "https://eip.fia.gov.tw/data/BGMOPEN1.zip"
+      ],
+      "id": "tainan-shanshang-089",
+      "image_url": null,
+      "image_source_url": null,
+      "image_source_type": null,
+      "image_usage_status": "no_candidate_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-59f7ea322261391074ad0ae1",
+      "name": "K.Fika 啡卡咖啡",
+      "address": "臺南市山上區6之3號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 140,
+        "max": 220,
+        "display": "約 NT$140–220/人（愛食記均消約 NT$180）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "早午餐",
+        "咖啡",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "愛食記",
+        "score": 3.8,
+        "review_count": 8,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表顯示 3.8 分、8 則評論",
+          "未把完整評論全文寫入資料檔。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%B1%B1%E4%B8%8A",
+        "https://ifoodie.tw/restaurant/59f7ea322261391074ad0ae1-K-Fika-%E5%95%A1%E5%8D%A1%E5%92%96%E5%95%A1"
+      ],
+      "id": "tainan-shanshang-090",
+      "image_url": "https://lh3.googleusercontent.com/XWghWHdABt-YUB5JXuQRkqFI0cDOpKH83FUNc6zQwUJdAoikaTDyMl1E6qkfj1HheVt8AZdnfrvsdDNcQJa6Cb-SLBlzbuw=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%B1%B1%E4%B8%8A",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-5a7ab4532756dd7bff171f0f",
+      "name": "國正食堂",
+      "address": "臺南市山上區南洲裏103號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 560,
+        "max": 840,
+        "display": "約 NT$560–840/人（愛食記均消約 NT$700）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "甜點／烘焙",
+        "茶飲／飲料",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": 3,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表收錄此店家,但未顯示可解析的評分",
+          "列表顯示評論數為 3。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%B1%B1%E4%B8%8A",
+        "https://ifoodie.tw/restaurant/5a7ab4532756dd7bff171f0f-%E5%9C%8B%E6%AD%A3%E9%A3%9F%E5%A0%82"
+      ],
+      "id": "tainan-shanshang-091",
+      "image_url": "https://lh3.googleusercontent.com/XWghWHdABt-YUB5JXuQRkqFI0cDOpKH83FUNc6zQwUJdAoikaTDyMl1E6qkfj1HheVt8AZdnfrvsdDNcQJa6Cb-SLBlzbuw=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%B1%B1%E4%B8%8A",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-5c9653ff23679c4ab2f1ba8a",
+      "name": "木瓜媽",
+      "address": "臺南市山上區178甲縣道明和200之1號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 80,
+        "max": 120,
+        "display": "約 NT$80–120/人（愛食記均消約 NT$100）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "甜點／烘焙",
+        "麵食／小吃",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": 1,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表收錄此店家,但未顯示可解析的評分",
+          "列表顯示評論數為 1。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%B1%B1%E4%B8%8A",
+        "https://ifoodie.tw/restaurant/5c9653ff23679c4ab2f1ba8a-%E6%9C%A8%E7%93%9C%E5%AA%BD"
+      ],
+      "id": "tainan-shanshang-092",
+      "image_url": "https://lh3.googleusercontent.com/XWghWHdABt-YUB5JXuQRkqFI0cDOpKH83FUNc6zQwUJdAoikaTDyMl1E6qkfj1HheVt8AZdnfrvsdDNcQJa6Cb-SLBlzbuw=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%B1%B1%E4%B8%8A",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-6666fdbf927f80cee734c043",
+      "name": "洄游咖啡",
+      "address": "臺南市山上區6之3號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 120,
+        "max": 200,
+        "display": "約 NT$120–200/人（愛食記均消約 NT$160）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "早午餐",
+        "咖啡",
+        "中式／台式料理"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": 1,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表收錄此店家,但未顯示可解析的評分",
+          "列表顯示評論數為 1。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%B1%B1%E4%B8%8A",
+        "https://ifoodie.tw/restaurant/6666fdbf927f80cee734c043-%E6%B4%84%E6%B8%B8%E5%92%96%E5%95%A1"
+      ],
+      "id": "tainan-shanshang-093",
+      "image_url": "https://lh3.googleusercontent.com/XWghWHdABt-YUB5JXuQRkqFI0cDOpKH83FUNc6zQwUJdAoikaTDyMl1E6qkfj1HheVt8AZdnfrvsdDNcQJa6Cb-SLBlzbuw=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%B1%B1%E4%B8%8A",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    },
+    {
+      "source_id": "ifoodie-55a65987c03a104df53c9bf3",
+      "name": "一品清冰品-阿燕姨冰枝店",
+      "address": "臺南市山上區60號",
+      "phone": null,
+      "physical_store": true,
+      "price_range_twd_per_person": {
+        "min": 20,
+        "max": 40,
+        "display": "約 NT$20–40/人（愛食記均消約 NT$30）",
+        "basis": "依愛食記列表顯示的均消換算為約略範圍；實際以店家最新菜單為準"
+      },
+      "cuisine_types": [
+        "甜點／烘焙",
+        "茶飲／飲料",
+        "麵食／小吃"
+      ],
+      "online_rating": {
+        "platform": "未提供",
+        "score": null,
+        "review_count": 10,
+        "source_snapshot": "愛食記行政區列表快照（2026-08-10）",
+        "food_diary_count": null,
+        "review_summary": [
+          "愛食記列表收錄此店家,但未顯示可解析的評分",
+          "列表顯示評論數為 10。"
+        ]
+      },
+      "store_status_check": "愛食記行政區列表列有店家地址；列表未標示永久歇業，電話與當日營業狀態仍建議出發前確認。",
+      "sources": [
+        "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%B1%B1%E4%B8%8A",
+        "https://ifoodie.tw/restaurant/55a65987c03a104df53c9bf3-%E4%B8%80%E5%93%81%E6%B8%85%E5%86%B0%E5%93%81-%E9%98%BF%E7%87%95%E5%A7%A8%E5%86%B0%E6%9E%9D%E5%BA%97"
+      ],
+      "id": "tainan-shanshang-094",
+      "image_url": "https://lh3.googleusercontent.com/XWghWHdABt-YUB5JXuQRkqFI0cDOpKH83FUNc6zQwUJdAoikaTDyMl1E6qkfj1HheVt8AZdnfrvsdDNcQJa6Cb-SLBlzbuw=s600",
+      "image_source_url": "https://ifoodie.tw/explore/%E5%8F%B0%E5%8D%97%E5%B8%82/list/%E5%B1%B1%E4%B8%8A",
+      "image_source_type": "Open Graph image",
+      "image_usage_status": "no_explicit_prohibition_found",
+      "image_checked_at": "2026-08-10"
+    }
+  ]
+}

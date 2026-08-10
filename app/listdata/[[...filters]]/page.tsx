@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { RestaurantListFilter } from "@/components/forms/RestaurantListFilter";
 import { createPagination } from "@/lib/pagination";
-import { buildListPath, describeFilters, listRestaurants, parseListFilters } from "@/lib/domain/restaurants";
+import { buildListPath, listRestaurants, parseListFilters } from "@/lib/domain/restaurants";
+import { foodTypes, getRegions, moneyOptions, sectionsByRegion } from "@/lib/domain/sections";
 
 type Props = {
   params: Promise<{ filters?: string[] }>;
@@ -19,41 +21,38 @@ export default async function ListDataPage({ params, searchParams }: Props) {
       <div className="list-header">
         <div>
           <h1 className="page-title">餐廳列表</h1>
-          <p className="lead">{describeFilters(filters)}</p>
+          <RestaurantListFilter
+            filters={filters}
+            regions={getRegions()}
+            sectionsByRegion={sectionsByRegion}
+            foodTypes={foodTypes}
+            moneyOptions={moneyOptions}
+          />
         </div>
-        <form className="actions" action="/listdata/0/0/0/0/1">
-          <input className="input" name="search_keyword" defaultValue={filters.keyword} placeholder="請輸入關鍵字" />
-          <button className="button secondary" type="submit">
-            搜尋
-          </button>
-        </form>
       </div>
 
       <div className="restaurant-list">
-        {result.restaurants.map((restaurant) => (
-          <article className="restaurant-card" key={restaurant.id}>
-            <img src={restaurant.imagePath} alt={restaurant.res_name} />
-            <div>
-              <h2>
-                <Link href={`/detail/${restaurant.id}?ul=${filters.location}&ut=${filters.foodType}&umx=${filters.maxPrice}&umi=${filters.minPrice}&p=${result.page}`}>
-                  {restaurant.res_name}
-                </Link>
-              </h2>
-              <p className="meta">
-                <span className="tag">{restaurant.regionLabel}{restaurant.sectionLabel}</span>
-                <span>{restaurant.foodTypeLabel}</span>
-                <span>{restaurant.priceLabel}</span>
-              </p>
-              <p>{restaurant.res_note}</p>
-              <Link
-                className="text-link"
-                href={`/detail/${restaurant.id}?ul=${filters.location}&ut=${filters.foodType}&umx=${filters.maxPrice}&umi=${filters.minPrice}&p=${result.page}`}
-              >
-                查看詳細資料
+        {result.restaurants.map((restaurant) => {
+          const detailHref = `/detail/${restaurant.id}?ul=${filters.location}&ut=${filters.foodType}&umx=${filters.maxPrice}&umi=${filters.minPrice}&p=${result.page}`;
+          const titleId = `restaurant-${restaurant.id}-title`;
+
+          return (
+            <article key={restaurant.id}>
+              <Link className="restaurant-card" href={detailHref} aria-labelledby={titleId}>
+                <img src={restaurant.imagePath} alt="" />
+                <div>
+                  <h2 id={titleId}>{restaurant.res_name}</h2>
+                  <p className="restaurant-address">{restaurant.res_address || "地址未提供"}</p>
+                  <p className="restaurant-tags">
+                    <span className="restaurant-tag restaurant-tag-cuisine">{restaurant.foodTypeLabel}</span>
+                    <span className="restaurant-tag restaurant-tag-price">{restaurant.priceLabel}</span>
+                  </p>
+                  <p className="restaurant-note">{restaurant.res_note}</p>
+                </div>
               </Link>
-            </div>
-          </article>
-        ))}
+            </article>
+          );
+        })}
       </div>
 
       {result.restaurants.length === 0 ? (

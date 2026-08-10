@@ -49,6 +49,19 @@ describe("restaurant domain", () => {
     expect(restaurant?.id).toBe(1);
   });
 
+  it("picks from any of the selected cuisine types", async () => {
+    const restaurant = await pickRestaurant({
+      regionId: 0,
+      sectionId: 0,
+      maxPrice: 0,
+      minPrice: 0,
+      foodType: 0,
+      foodTypes: [2]
+    });
+
+    expect(restaurant?.res_foodtype).toBe(2);
+  });
+
   it("lists only open public restaurants with an explicit limit", async () => {
     const restaurants = await listPublicRestaurants({ limit: 2 });
 

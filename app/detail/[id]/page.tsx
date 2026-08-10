@@ -37,23 +37,18 @@ export default async function DetailPage({ params, searchParams }: Props) {
         <img src={restaurant.imagePath} alt={restaurant.res_name} />
       </div>
       <div className="form-grid">
-        <div className="panel">
-          <p className="lead">今天就吃...</p>
+        <div className="panel detail-restaurant-panel">
           <h1 className="page-title">{restaurant.res_name}</h1>
-          <p className="meta">
-            <span className="tag">{restaurant.regionLabel}{restaurant.sectionLabel}</span>
-            <span>{restaurant.foodTypeLabel}</span>
-            <span>{restaurant.priceLabel}</span>
-          </p>
-          <p>{restaurant.res_note}</p>
-          <p>
-            <strong>地址：</strong>
-            {restaurant.res_address}
-          </p>
-          <p>
-            <strong>餐廳電話：</strong>
+          <p className="detail-restaurant-address">{restaurant.res_address || "地址未提供"}</p>
+          <p className="detail-restaurant-phone">
+            <strong>電話：</strong>
             {restaurant.telLabel}
           </p>
+          <p className="restaurant-tags">
+            <span className="restaurant-tag restaurant-tag-cuisine">{restaurant.foodTypeLabel}</span>
+            <span className="restaurant-tag restaurant-tag-price">{restaurant.priceLabel}</span>
+          </p>
+          <p className="detail-restaurant-note">{restaurant.res_note}</p>
           <Link className="text-link" href={`/listdata/${listRecord}`}>
             返回列表
           </Link>
