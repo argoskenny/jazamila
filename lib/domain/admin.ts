@@ -12,6 +12,15 @@ export async function listRestaurantsForAdmin({ page = 1, perPage = defaultPerPa
   const currentPage = clampPage(page, totalPages);
   const restaurants = await prisma.restaurant.findMany({
     orderBy: { id: "asc" },
+    include: {
+      city: { select: { name: true } },
+      district: { select: { name: true } },
+      cuisineType: { select: { id: true, code: true, name: true, normalizedName: true, status: true } },
+      tags: {
+        orderBy: { position: "asc" },
+        include: { tag: { select: { name: true, normalizedName: true } } }
+      }
+    },
     skip: (currentPage - 1) * take,
     take
   });

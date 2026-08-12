@@ -1,0 +1,195 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://jazamila.local/schemas/cuisine-web-research-v1.json",
+  "title": "JAZAMILA cuisine web research result",
+  "description": "A traceable dry-run web research result. It is not a database write.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "restaurantId": { "type": "integer", "minimum": 1 },
+    "inputFingerprint": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "searchQueries": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1, "maxLength": 500 },
+      "uniqueItems": true
+    },
+    "matchedName": {
+      "anyOf": [
+        { "type": "string", "minLength": 1, "maxLength": 200 },
+        { "type": "null" }
+      ]
+    },
+    "matchedAddress": {
+      "anyOf": [
+        { "type": "string", "minLength": 1, "maxLength": 300 },
+        { "type": "null" }
+      ]
+    },
+    "matchedPhone": {
+      "anyOf": [
+        { "type": "string", "minLength": 1, "maxLength": 80 },
+        { "type": "null" }
+      ]
+    },
+    "selectedCuisineType": {
+      "anyOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": { "type": "integer", "minimum": 1 },
+            "name": { "type": "string", "minLength": 1, "maxLength": 80 },
+            "normalizedName": { "type": "string", "minLength": 1, "maxLength": 80 },
+            "status": { "const": "active" }
+          },
+          "required": ["id", "name", "normalizedName", "status"]
+        },
+        { "type": "null" }
+      ]
+    },
+    "proposedNewCuisineType": {
+      "anyOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": { "type": "string", "minLength": 1, "maxLength": 80 },
+            "normalizedName": { "type": "string", "minLength": 1, "maxLength": 80 },
+            "reason": { "type": "string", "minLength": 1, "maxLength": 280 }
+          },
+          "required": ["name", "normalizedName", "reason"]
+        },
+        { "type": "null" }
+      ]
+    },
+    "keptTags": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1, "maxLength": 80 },
+      "uniqueItems": true
+    },
+    "removedTags": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1, "maxLength": 80 },
+      "uniqueItems": true
+    },
+    "addedTags": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1, "maxLength": 80 },
+      "uniqueItems": true
+    },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "evidenceUrls": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^https?://[^\\s]+$", "maxLength": 2000 },
+      "uniqueItems": true
+    },
+    "evidenceTitles": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1, "maxLength": 300 },
+      "uniqueItems": true
+    },
+    "checkedAt": { "type": "string", "format": "date-time" },
+    "matchConfidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "unresolvedReason": {
+      "anyOf": [
+        { "type": "string", "minLength": 1, "maxLength": 500 },
+        { "type": "null" }
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "url": { "type": "string", "pattern": "^https?://[^\\s]+$", "maxLength": 2000 },
+          "title": { "type": "string", "minLength": 1, "maxLength": 300 },
+          "sourceTier": { "type": "integer", "enum": [1, 2, 3, 4, 5] },
+          "sourceKind": { "type": "string", "minLength": 1, "maxLength": 80 },
+          "matchedName": {
+            "anyOf": [
+              { "type": "string", "minLength": 1, "maxLength": 200 },
+              { "type": "null" }
+            ]
+          },
+          "matchedAddress": {
+            "anyOf": [
+              { "type": "string", "minLength": 1, "maxLength": 300 },
+              { "type": "null" }
+            ]
+          },
+          "matchedPhone": {
+            "anyOf": [
+              { "type": "string", "minLength": 1, "maxLength": 80 },
+              { "type": "null" }
+            ]
+          },
+          "contentHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "supportedTags": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1, "maxLength": 80 },
+            "uniqueItems": true
+          },
+          "cuisineSignals": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1, "maxLength": 200 },
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "url",
+          "title",
+          "sourceTier",
+          "sourceKind",
+          "matchedName",
+          "matchedAddress",
+          "matchedPhone",
+          "contentHash",
+          "supportedTags",
+          "cuisineSignals"
+        ]
+      },
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "restaurantId",
+    "inputFingerprint",
+    "searchQueries",
+    "matchedName",
+    "matchedAddress",
+    "matchedPhone",
+    "selectedCuisineType",
+    "proposedNewCuisineType",
+    "keptTags",
+    "removedTags",
+    "addedTags",
+    "confidence",
+    "evidenceUrls",
+    "evidenceTitles",
+    "checkedAt",
+    "matchConfidence",
+    "unresolvedReason",
+    "evidence"
+  ],
+  "oneOf": [
+    {
+      "properties": {
+        "selectedCuisineType": { "type": "object" },
+        "proposedNewCuisineType": { "type": "null" }
+      }
+    },
+    {
+      "properties": {
+        "selectedCuisineType": { "type": "null" },
+        "proposedNewCuisineType": { "type": "object" }
+      }
+    },
+    {
+      "properties": {
+        "selectedCuisineType": { "type": "null" },
+        "proposedNewCuisineType": { "type": "null" }
+      }
+    }
+  ]
+}

@@ -884,11 +884,97 @@ function preserveManualOverrides(data, manualOverrideFields) {
     imageUrl: ["imageUrl", "originalImage", "externalImageUrl"],
     closed: ["closed"],
     name: ["name"],
+    cuisineTypeId: ["cuisineTypeId"],
   };
   for (const field of manualOverrideFields) {
     for (const dependentField of dependencies[field] ?? [field]) delete data[dependentField];
   }
   return data;
+}
+
+function relationTagKey(relation) {
+  return normalizeTagKey(relation?.tag?.normalizedName ?? relation?.tag?.name ?? relation?.sourceName);
+}
+
+async function mergeImportedRestaurantTags({ prisma, prepared, restaurantIds, tagIds }) {
+  if (restaurantIds.length === 0) return 0;
+  const ids = restaurantIds.map((entry) => entry.id);
+  const existingRelations = await prisma.restaurantTag.findMany({
+    where: { restaurantId: { in: ids } },
+    include: { tag: true },
+  });
+  const cuisineTypesByRestaurant = new Map(
+    (await prisma.restaurant.findMany({
+      where: { id: { in: ids } },
+      select: { id: true, cuisineType: { select: { normalizedName: true, status: true } } },
+    })).map((restaurant) => [restaurant.id, restaurant.cuisineType])
+  );
+  const relationsByRestaurant = new Map();
+  for (const relation of existingRelations) {
+    const relations = relationsByRestaurant.get(relation.restaurantId) ?? [];
+    relations.push(relation);
+    relationsByRestaurant.set(relation.restaurantId, relations);
+  }
+  let writes = 0;
+  for (const restaurant of prepared.restaurants) {
+    const restaurantId = restaurantIds.find((entry) => entry.importKey === restaurant.importKey)?.id;
+    if (!restaurantId) continue;
+    const sourceTags = [];
+    const seenSourceTags = new Set();
+    for (const tagName of restaurant.tags) {
+      const normalizedName = normalizeTagKey(tagName);
+      if (!normalizedName || seenSourceTags.has(normalizedName)) continue;
+      seenSourceTags.add(normalizedName);
+      sourceTags.push({ name: tagName, normalizedName });
+    }
+    const relations = relationsByRestaurant.get(restaurantId) ?? [];
+    const relationByKey = new Map(relations.map((relation) => [relationTagKey(relation), relation]));
+    for (let position = 0; position < sourceTags.length; position += 1) {
+      const sourceTag = sourceTags[position];
+      const tagId = tagIds.get(sourceTag.normalizedName);
+      if (!tagId) continue;
+      const cuisineType = cuisineTypesByRestaurant.get(restaurantId);
+      const isPrimaryCuisineTag = cuisineType?.status === "active"
+        && normalizeTagKey(cuisineType.normalizedName) === sourceTag.normalizedName;
+      const existing = relationByKey.get(sourceTag.normalizedName);
+      if (!existing) {
+        await prisma.restaurantTag.create({
+          data: {
+            restaurantId,
+            tagId,
+            position,
+            owner: "source",
+            sourceName: sourceTag.name,
+            isPublic: !isPrimaryCuisineTag,
+          },
+        });
+        writes += 1;
+        continue;
+      }
+      const protectedByClassifier = existing.owner === "ai" || existing.owner === "manual";
+      await prisma.restaurantTag.update({
+        where: { restaurantId_tagId: { restaurantId, tagId: existing.tagId } },
+        data: protectedByClassifier
+          ? { sourceName: sourceTag.name }
+          : { position, owner: "source", sourceName: sourceTag.name, isPublic: !isPrimaryCuisineTag },
+      });
+      writes += 1;
+    }
+    for (const existing of relations) {
+      const key = relationTagKey(existing);
+      if (existing.owner !== "source" || seenSourceTags.has(key)) continue;
+      await prisma.restaurantTag.update({
+        where: { restaurantId_tagId: { restaurantId, tagId: existing.tagId } },
+        data: {
+          owner: "source",
+          sourceName: existing.sourceName || existing.tag?.name || null,
+          isPublic: false,
+        },
+      });
+      writes += 1;
+    }
+  }
+  return writes;
 }
 
 async function applyImportTransaction({ prisma, prepared, replace, prune, batchSize }) {
@@ -1041,19 +1127,13 @@ async function applyImportTransaction({ prisma, prepared, replace, prune, batchS
       .filter((restaurant) => currentKeys.has(restaurant.importKey))
       .map((restaurant) => [restaurant.importKey, restaurant.id])
   );
-  const currentRestaurantIds = [...restaurantIds.values()];
-  for (const ids of chunk(currentRestaurantIds, batchSize * 5)) {
-    await prisma.restaurantTag.deleteMany({ where: { restaurantId: { in: ids } } });
-  }
-  const links = prepared.restaurants.flatMap((restaurant) => restaurant.tags.map((tag, position) => ({
-    restaurantId: restaurantIds.get(restaurant.importKey),
-    tagId: tagIds.get(normalizeTagKey(tag)),
-    position,
-  })));
-  for (const batch of chunk(links, batchSize * 5)) {
-    const result = await prisma.restaurantTag.createMany({ data: batch });
-    writes.restaurantTags += result.count;
-  }
+  const currentRestaurantIds = [...restaurantIds.entries()].map(([importKey, id]) => ({ importKey, id }));
+  writes.restaurantTags = await mergeImportedRestaurantTags({
+    prisma,
+    prepared,
+    restaurantIds: currentRestaurantIds,
+    tagIds,
+  });
 
   await prisma.restaurantImportIssue.deleteMany();
   const updatedAtUnix = Math.floor(Date.now() / 1000);
@@ -1113,6 +1193,7 @@ module.exports = {
   legacyPrice,
   loadDocuments,
   lookupDataFromCatalog,
+  mergeImportedRestaurantTags,
   normalizeAddressKey,
   normalizeDisplayAddress,
   normalizeNameKey,

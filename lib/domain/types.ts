@@ -3,6 +3,16 @@ export type Option = {
   label: string;
 };
 
+export type CuisineTypeOption = Option & {
+  code: string;
+  name: string;
+  normalizedName: string;
+  status: "active" | "candidate" | "disabled";
+  createdBy: "seed" | "ai" | "manual";
+  legacyFoodType: number | null;
+  value: string;
+};
+
 export type Restaurant = {
   id: number;
   res_name: string;
@@ -21,12 +31,16 @@ export type Restaurant = {
   res_updatetime?: number;
   res_post_id?: number;
   res_close?: number;
+  cuisine_type_id?: number | null;
 };
 
 export type RestaurantView = Restaurant & {
   regionLabel: string;
   sectionLabel: string;
   foodTypeLabel: string;
+  cuisineTypeId: number | null;
+  cuisineTypeCode: string | null;
+  cuisineTypeLabel: string;
   telLabel: string;
   priceLabel: string;
   imagePath: string;
@@ -86,6 +100,7 @@ export type HomePreferences = {
   foodmoney_max: number;
   foodmoney_min: number;
   foodtypes: number[];
+  cuisineTypes?: string[];
 };
 
 export type RestaurantCriteria = {
@@ -95,6 +110,7 @@ export type RestaurantCriteria = {
   minPrice: number;
   foodType: number;
   foodTypes?: number[];
+  cuisineTypeCodes?: string[];
   excludeIds?: number[];
 };
 
@@ -102,4 +118,5 @@ export type ListFilters = RestaurantCriteria & {
   location: string;
   page: number;
   keyword: string;
+  cuisineTypeCode?: string;
 };

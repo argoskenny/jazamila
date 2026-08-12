@@ -1,5 +1,6 @@
 function cleanText(value) {
   return String(value ?? "")
+    // eslint-disable-next-line no-control-regex -- Strip control characters from imported review text.
     .replace(/[\u0000-\u001f\u007f]/g, " ")
     .replace(/[ \t\r\n]+/g, " ")
     .trim();

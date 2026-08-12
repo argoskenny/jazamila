@@ -2,7 +2,6 @@
 
 const fs = require("node:fs");
 const path = require("node:path");
-const crypto = require("node:crypto");
 const { reviewSummaryToArray } = require("./review-summary-utils.cjs");
 
 const ROOT = path.resolve(__dirname, "..");
@@ -30,6 +29,7 @@ function repairMojibake(value) {
 function clean(value) {
   return String(value || "")
     .normalize("NFKC")
+    // eslint-disable-next-line no-control-regex -- Strip control characters from imported source text.
     .replace(/[\u0000-\u001f\u007f]/g, " ")
     .replace(/[ \t\r\n]+/g, " ")
     .trim();

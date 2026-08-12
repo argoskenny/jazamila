@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-const fs = require("node:fs");
 const fsp = require("node:fs/promises");
 const path = require("node:path");
 const crypto = require("node:crypto");
@@ -20,13 +19,6 @@ const SKIP_NETWORK_HOSTS = new Set([
   "media.taiwan.net.tw",
   "www.google.com",
 ]);
-
-function clean(value) {
-  return String(value ?? "")
-    .replace(/[\u0000-\u001f\u007f]/g, " ")
-    .replace(/[ \t\r\n]+/g, " ")
-    .trim();
-}
 
 function decodeEntities(value) {
   return String(value ?? "")

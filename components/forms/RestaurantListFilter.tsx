@@ -2,22 +2,24 @@
 
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import type { ListFilters, Option } from "@/lib/domain/types";
+import type { CuisineTypeOption, ListFilters, Option } from "@/lib/domain/types";
 
 type Props = {
   filters: ListFilters;
   regions: Option[];
   sectionsByRegion: Record<number, Option[]>;
-  foodTypes: Option[];
+  cuisineTypes: CuisineTypeOption[];
   moneyOptions: Option[];
 };
 
-export function RestaurantListFilter({ filters, regions, sectionsByRegion, foodTypes, moneyOptions }: Props) {
+export function RestaurantListFilter({ filters, regions, sectionsByRegion, cuisineTypes, moneyOptions }: Props) {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [regionId, setRegionId] = useState(filters.regionId);
   const [sectionId, setSectionId] = useState(filters.sectionId);
-  const [foodType, setFoodType] = useState(filters.foodType);
+  const [cuisineType, setCuisineType] = useState(
+    filters.cuisineTypeCode ? `code:${filters.cuisineTypeCode}` : filters.foodType > 0 ? `legacy:${filters.foodType}` : ""
+  );
   const [minPrice, setMinPrice] = useState(filters.minPrice);
   const [maxPrice, setMaxPrice] = useState(filters.maxPrice);
   const [keyword, setKeyword] = useState(filters.keyword);
@@ -28,7 +30,12 @@ export function RestaurantListFilter({ filters, regions, sectionsByRegion, foodT
     event.preventDefault();
     const location = regionId === 0 ? "0" : `${regionId}X${sectionId}`;
     const query = keyword.trim() ? `?search_keyword=${encodeURIComponent(keyword.trim())}` : "";
-    router.push(`/listdata/${location}/${foodType}/${maxPrice}/${minPrice}/1${query}`);
+    const typeSegment = cuisineType.startsWith("code:")
+      ? `c:${encodeURIComponent(cuisineType.slice("code:".length))}`
+      : cuisineType.startsWith("legacy:")
+        ? cuisineType.slice("legacy:".length)
+        : "0";
+    router.push(`/listdata/${location}/${typeSegment}/${maxPrice}/${minPrice}/1${query}`);
   }
 
   return (
@@ -112,15 +119,24 @@ export function RestaurantListFilter({ filters, regions, sectionsByRegion, foodT
           <fieldset className="filter-group cuisine-filter">
             <legend>吃哪種？</legend>
             <div className="cuisine-tags">
-              {foodTypes.map((option) => (
+              <label className="cuisine-tag">
+                <input
+                  type="radio"
+                  name="list-food-type"
+                  checked={cuisineType === ""}
+                  onChange={() => setCuisineType("")}
+                />
+                <span>都可以</span>
+              </label>
+              {cuisineTypes.map((option) => (
                 <label className="cuisine-tag" key={option.id}>
                   <input
                     type="radio"
                     name="list-food-type"
-                    checked={foodType === option.id}
-                    onChange={() => setFoodType(option.id)}
+                    checked={cuisineType === option.value}
+                    onChange={() => setCuisineType(option.value)}
                   />
-                  <span>{option.id === 0 ? "都可以" : option.label}</span>
+                  <span>{option.label}</span>
                 </label>
               ))}
             </div>

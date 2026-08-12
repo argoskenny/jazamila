@@ -45,7 +45,7 @@ export default async function AdminRestaurantsPage({ searchParams }: Props) {
                 <td>{restaurant.id}</td>
                 <td>{restaurant.res_name}</td>
                 <td>{restaurant.regionLabel}{restaurant.sectionLabel}</td>
-                <td>{restaurant.foodTypeLabel}</td>
+                <td>{restaurant.cuisineTypeLabel}</td>
                 <td>{restaurant.priceLabel}</td>
                 <td>
                   <Link className="text-link" href={`/admin/restaurants/${restaurant.id}`}>

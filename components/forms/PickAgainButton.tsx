@@ -7,11 +7,12 @@ type Props = {
   location?: string;
   foodType?: number;
   foodTypes?: number[];
+  cuisineTypes?: string[];
   minPrice?: number;
   maxPrice?: number;
 };
 
-export function PickAgainButton({ currentRestaurantId, location = "0", foodType = 0, foodTypes = [], minPrice = 0, maxPrice = 0 }: Props) {
+export function PickAgainButton({ currentRestaurantId, location = "0", foodType = 0, foodTypes = [], cuisineTypes = [], minPrice = 0, maxPrice = 0 }: Props) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState("");
 
@@ -29,13 +30,14 @@ export function PickAgainButton({ currentRestaurantId, location = "0", foodType 
       form.set("foodmoney_min", String(minPrice));
       form.set("foodmoney_max", String(maxPrice));
       form.set("foodtype", foodTypes.length > 0 ? foodTypes.join("-") : foodType > 0 ? String(foodType) : "0");
+      form.set("cuisine_types", cuisineTypes.join(","));
 
       const response = await fetch("/jazamila_ajax/pick", { method: "POST", body: form });
       if (!response.ok) throw new Error(`Pick request failed with status ${response.status}`);
 
       const data = (await response.json()) as { status: string; res_id: number };
       if (data.status === "success" && data.res_id > 0) {
-        window.location.href = `/detail/${data.res_id}?ul=${encodeURIComponent(location)}&ut=${foodType}&uft=${foodTypes.join("-")}&umx=${maxPrice}&umi=${minPrice}`;
+        window.location.href = `/detail/${data.res_id}?ul=${encodeURIComponent(location)}&ut=${foodType}&uft=${foodTypes.join("-")}&uct=${encodeURIComponent(cuisineTypes.join(","))}&umx=${maxPrice}&umi=${minPrice}`;
         return;
       }
       setStatus("這組條件暫時沒有其他餐廳，可以放寬條件再試一次。");

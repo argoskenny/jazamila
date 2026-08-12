@@ -1,4 +1,4 @@
-import { parsePreferenceFoodTypes } from "@/lib/cookies";
+import { parsePreferenceCuisineTypes, parsePreferenceFoodTypes } from "@/lib/cookies";
 import { jsonValidationError, readRequestInput } from "@/lib/http";
 import { pickRestaurant } from "@/lib/domain/restaurants";
 
@@ -41,6 +41,9 @@ export async function POST(request: Request) {
       minPrice: toInt(value(input.foodmoney_min, "foodmoney_min")),
       foodType: 0,
       foodTypes: parsePreferenceFoodTypes(String(value(input.foodtype, "foodtype") ?? "")),
+      cuisineTypeCodes: parsePreferenceCuisineTypes(String(value(input.cuisine_types, "cuisine_types") ?? ""))
+        .map((token) => token.startsWith("code:") ? token.slice("code:".length) : "")
+        .filter(Boolean),
       excludeIds: [...new Set([currentRestaurantId, ...recentIds].filter((id) => id > 0))].slice(0, 10)
     };
     let restaurant = await pickRestaurant(criteria);
@@ -62,6 +65,8 @@ export async function POST(request: Request) {
     response.headers.append("Set-Cookie", `foodmoney_max=${criteria.maxPrice}; Path=/; Max-Age=${maxAge}; SameSite=Lax`);
     response.headers.append("Set-Cookie", `foodmoney_min=${criteria.minPrice}; Path=/; Max-Age=${maxAge}; SameSite=Lax`);
     response.headers.append("Set-Cookie", `foodtype=${foodTypeCookie}; Path=/; Max-Age=${maxAge}; SameSite=Lax`);
+    const cuisineTypeCookie = parsePreferenceCuisineTypes(String(input.cuisine_types ?? "")).join(",");
+    response.headers.append("Set-Cookie", `cuisine_types=${encodeURIComponent(cuisineTypeCookie)}; Path=/; Max-Age=${maxAge}; SameSite=Lax`);
     if (restaurant) {
       const recentIds = [restaurant.id, ...criteria.excludeIds.filter((id) => id !== restaurant.id)].slice(0, 10);
       response.headers.append(

@@ -1,0 +1,525 @@
+{
+  "version": "cuisine-taxonomy-v1",
+  "normalization": {
+    "unicode": "NFKC",
+    "trimWhitespace": true,
+    "matchAsciiCase": "lowercase",
+    "preserveDisplayText": true
+  },
+  "cuisineTypes": [
+    { "code": "japanese", "name": "日式料理", "normalizedName": "日式料理" },
+    { "code": "chinese", "name": "中式料理", "normalizedName": "中式料理" },
+    { "code": "taiwanese", "name": "台式料理", "normalizedName": "台式料理" },
+    { "code": "korean", "name": "韓式料理", "normalizedName": "韓式料理" },
+    { "code": "american", "name": "美式料理", "normalizedName": "美式料理" },
+    { "code": "italian", "name": "義式料理", "normalizedName": "義式料理" },
+    { "code": "thai", "name": "泰式料理", "normalizedName": "泰式料理" },
+    { "code": "vietnamese", "name": "越式料理", "normalizedName": "越式料理" },
+    { "code": "hong-kong", "name": "港式料理", "normalizedName": "港式料理" },
+    { "code": "southeast-asian", "name": "東南亞料理", "normalizedName": "東南亞料理" },
+    { "code": "indian", "name": "印度料理", "normalizedName": "印度料理" },
+    { "code": "hot-pot", "name": "火鍋", "normalizedName": "火鍋" },
+    { "code": "bbq", "name": "燒肉", "normalizedName": "燒肉" },
+    { "code": "steak", "name": "牛排", "normalizedName": "牛排" },
+    { "code": "street-food", "name": "小吃", "normalizedName": "小吃" },
+    { "code": "cafe", "name": "咖啡廳", "normalizedName": "咖啡廳" },
+    { "code": "dessert", "name": "甜點店", "normalizedName": "甜點店" },
+    { "code": "breakfast-brunch", "name": "早餐／早午餐", "normalizedName": "早餐早午餐" },
+    { "code": "fast-food", "name": "速食店", "normalizedName": "速食店" },
+    { "code": "vegetarian", "name": "素食料理", "normalizedName": "素食料理" },
+    { "code": "seafood", "name": "海鮮料理", "normalizedName": "海鮮料理" },
+    { "code": "other", "name": "其他餐飲", "normalizedName": "其他餐飲" }
+  ],
+  "rules": [
+    { "id": "legacy-foodtype-japanese", "code": "japanese", "field": "foodType", "values": [1], "confidence": 1 },
+    { "id": "legacy-foodtype-american", "code": "american", "field": "foodType", "values": [2], "confidence": 1 },
+    { "id": "legacy-foodtype-italian", "code": "italian", "field": "foodType", "values": [3], "confidence": 1 },
+    { "id": "legacy-foodtype-street-food", "code": "street-food", "field": "foodType", "values": [4], "confidence": 1 },
+
+    {
+      "id": "japanese-name-strong",
+      "code": "japanese",
+      "field": "name",
+      "terms": ["日式料理", "日本料理", "日式", "日本", "壽司", "寿司", "拉麵", "拉面", "丼飯", "丼", "居酒屋", "和食"],
+      "excludeTerms": ["日式建築", "日本建築", "日式風格", "日本風格", "日式庭園"],
+      "confidence": 0.95
+    },
+    {
+      "id": "japanese-tag-strong",
+      "code": "japanese",
+      "field": "tag",
+      "terms": ["日式料理", "日本料理", "日式", "日本", "壽司", "寿司", "拉麵", "拉面", "丼飯", "丼", "居酒屋", "和食"],
+      "excludeTerms": ["日式建築", "日本建築", "日式風格", "日本風格", "日式庭園"],
+      "confidence": 0.95
+    },
+    {
+      "id": "japanese-source-strong",
+      "code": "japanese",
+      "field": "sourceCuisineType",
+      "terms": ["日式料理", "日本料理", "日式", "日本", "壽司", "寿司", "拉麵", "拉面", "丼飯", "丼", "居酒屋", "和食"],
+      "excludeTerms": ["日式建築", "日本建築", "日式風格", "日本風格", "日式庭園"],
+      "confidence": 0.97
+    },
+    {
+      "id": "korean-name-strong",
+      "code": "korean",
+      "field": "name",
+      "terms": ["韓式料理", "韓國料理", "韓式烤肉", "韓式", "韓國"],
+      "confidence": 0.95
+    },
+    {
+      "id": "korean-tag-strong",
+      "code": "korean",
+      "field": "tag",
+      "terms": ["韓式料理", "韓國料理", "韓式烤肉", "韓式", "韓國"],
+      "confidence": 0.95
+    },
+    {
+      "id": "korean-source-strong",
+      "code": "korean",
+      "field": "sourceCuisineType",
+      "terms": ["韓式料理", "韓國料理", "韓式烤肉", "韓式", "韓國"],
+      "confidence": 0.97
+    },
+    {
+      "id": "chinese-name-strong",
+      "code": "chinese",
+      "field": "name",
+      "terms": ["中式料理", "中式菜", "中國菜", "中華料理"],
+      "confidence": 0.94
+    },
+    {
+      "id": "chinese-tag-strong",
+      "code": "chinese",
+      "field": "tag",
+      "terms": ["中式料理", "中式菜", "中國菜", "中華料理"],
+      "confidence": 0.94
+    },
+    {
+      "id": "chinese-source-strong",
+      "code": "chinese",
+      "field": "sourceCuisineType",
+      "terms": ["中式料理", "中式菜", "中國菜", "中華料理"],
+      "confidence": 0.96
+    },
+    {
+      "id": "taiwanese-name-strong",
+      "code": "taiwanese",
+      "field": "name",
+      "terms": ["台式料理", "臺式料理", "台灣料理", "臺灣料理", "台灣菜", "臺灣菜"],
+      "confidence": 0.94
+    },
+    {
+      "id": "taiwanese-tag-strong",
+      "code": "taiwanese",
+      "field": "tag",
+      "terms": ["台式料理", "臺式料理", "台灣料理", "臺灣料理", "台灣菜", "臺灣菜"],
+      "confidence": 0.94
+    },
+    {
+      "id": "taiwanese-source-strong",
+      "code": "taiwanese",
+      "field": "sourceCuisineType",
+      "terms": ["台式料理", "臺式料理", "台灣料理", "臺灣料理", "台灣菜", "臺灣菜"],
+      "confidence": 0.96
+    },
+    {
+      "id": "american-name-strong",
+      "code": "american",
+      "field": "name",
+      "terms": ["美式料理", "美式", "美國料理", "漢堡", "burger", "hamburger"],
+      "confidence": 0.93
+    },
+    {
+      "id": "american-tag-strong",
+      "code": "american",
+      "field": "tag",
+      "terms": ["美式料理", "美式", "美國料理", "漢堡", "burger", "hamburger"],
+      "confidence": 0.93
+    },
+    {
+      "id": "american-source-strong",
+      "code": "american",
+      "field": "sourceCuisineType",
+      "terms": ["美式料理", "美式", "美國料理", "漢堡", "burger", "hamburger"],
+      "confidence": 0.95
+    },
+    {
+      "id": "italian-name-strong",
+      "code": "italian",
+      "field": "name",
+      "terms": ["義式料理", "義大利料理", "義式", "義大利", "披薩", "pizza", "燉飯", "義大利麵", "pasta"],
+      "confidence": 0.94
+    },
+    {
+      "id": "italian-tag-strong",
+      "code": "italian",
+      "field": "tag",
+      "terms": ["義式料理", "義大利料理", "義式", "義大利", "披薩", "pizza", "燉飯", "義大利麵", "pasta"],
+      "confidence": 0.94
+    },
+    {
+      "id": "italian-source-strong",
+      "code": "italian",
+      "field": "sourceCuisineType",
+      "terms": ["義式料理", "義大利料理", "義式", "義大利", "披薩", "pizza", "燉飯", "義大利麵", "pasta"],
+      "confidence": 0.96
+    },
+    {
+      "id": "thai-name-strong",
+      "code": "thai",
+      "field": "name",
+      "terms": ["泰式料理", "泰國料理", "泰式"],
+      "confidence": 0.95
+    },
+    {
+      "id": "thai-tag-strong",
+      "code": "thai",
+      "field": "tag",
+      "terms": ["泰式料理", "泰國料理", "泰式"],
+      "confidence": 0.95
+    },
+    {
+      "id": "thai-source-strong",
+      "code": "thai",
+      "field": "sourceCuisineType",
+      "terms": ["泰式料理", "泰國料理", "泰式"],
+      "confidence": 0.97
+    },
+    {
+      "id": "vietnamese-name-strong",
+      "code": "vietnamese",
+      "field": "name",
+      "terms": ["越式料理", "越南料理", "越式", "越南河粉", "越式河粉"],
+      "confidence": 0.95
+    },
+    {
+      "id": "vietnamese-tag-strong",
+      "code": "vietnamese",
+      "field": "tag",
+      "terms": ["越式料理", "越南料理", "越式", "越南河粉", "越式河粉"],
+      "confidence": 0.95
+    },
+    {
+      "id": "vietnamese-source-strong",
+      "code": "vietnamese",
+      "field": "sourceCuisineType",
+      "terms": ["越式料理", "越南料理", "越式", "越南河粉", "越式河粉"],
+      "confidence": 0.97
+    },
+    {
+      "id": "hong-kong-name-strong",
+      "code": "hong-kong",
+      "field": "name",
+      "terms": ["港式料理", "香港料理", "港式飲茶", "港式"],
+      "confidence": 0.95
+    },
+    {
+      "id": "hong-kong-tag-strong",
+      "code": "hong-kong",
+      "field": "tag",
+      "terms": ["港式料理", "香港料理", "港式飲茶", "港式"],
+      "confidence": 0.95
+    },
+    {
+      "id": "hong-kong-source-strong",
+      "code": "hong-kong",
+      "field": "sourceCuisineType",
+      "terms": ["港式料理", "香港料理", "港式飲茶", "港式"],
+      "confidence": 0.97
+    },
+    {
+      "id": "southeast-asian-name-strong",
+      "code": "southeast-asian",
+      "field": "name",
+      "terms": ["東南亞料理", "東南亞", "南洋料理", "新馬料理", "新加坡料理", "馬來西亞料理"],
+      "confidence": 0.94
+    },
+    {
+      "id": "southeast-asian-tag-strong",
+      "code": "southeast-asian",
+      "field": "tag",
+      "terms": ["東南亞料理", "東南亞", "南洋料理", "新馬料理", "新加坡料理", "馬來西亞料理"],
+      "confidence": 0.94
+    },
+    {
+      "id": "southeast-asian-source-strong",
+      "code": "southeast-asian",
+      "field": "sourceCuisineType",
+      "terms": ["東南亞料理", "東南亞", "南洋料理", "新馬料理", "新加坡料理", "馬來西亞料理"],
+      "confidence": 0.96
+    },
+    {
+      "id": "indian-name-strong",
+      "code": "indian",
+      "field": "name",
+      "terms": ["印度料理", "印度菜", "印度餐廳"],
+      "confidence": 0.95
+    },
+    {
+      "id": "indian-tag-strong",
+      "code": "indian",
+      "field": "tag",
+      "terms": ["印度料理", "印度菜", "印度餐廳"],
+      "confidence": 0.95
+    },
+    {
+      "id": "indian-source-strong",
+      "code": "indian",
+      "field": "sourceCuisineType",
+      "terms": ["印度料理", "印度菜", "印度餐廳"],
+      "confidence": 0.97
+    },
+    {
+      "id": "hot-pot-name-strong",
+      "code": "hot-pot",
+      "field": "name",
+      "terms": ["火鍋", "涮涮鍋", "麻辣鍋", "個人鍋", "鍋物"],
+      "confidence": 0.95
+    },
+    {
+      "id": "hot-pot-tag-strong",
+      "code": "hot-pot",
+      "field": "tag",
+      "terms": ["火鍋", "涮涮鍋", "麻辣鍋", "個人鍋", "鍋物"],
+      "confidence": 0.95
+    },
+    {
+      "id": "hot-pot-source-strong",
+      "code": "hot-pot",
+      "field": "sourceCuisineType",
+      "terms": ["火鍋", "涮涮鍋", "麻辣鍋", "個人鍋", "鍋物"],
+      "confidence": 0.97
+    },
+    {
+      "id": "bbq-name-strong",
+      "code": "bbq",
+      "field": "name",
+      "terms": ["燒肉", "炭火燒肉", "BBQ", "barbecue"],
+      "confidence": 0.95
+    },
+    {
+      "id": "bbq-tag-strong",
+      "code": "bbq",
+      "field": "tag",
+      "terms": ["燒肉", "炭火燒肉", "BBQ", "barbecue"],
+      "confidence": 0.95
+    },
+    {
+      "id": "bbq-source-strong",
+      "code": "bbq",
+      "field": "sourceCuisineType",
+      "terms": ["燒肉", "炭火燒肉", "BBQ", "barbecue"],
+      "confidence": 0.97
+    },
+    {
+      "id": "steak-name-strong",
+      "code": "steak",
+      "field": "name",
+      "terms": ["牛排", "牛排館", "steak", "steakhouse"],
+      "confidence": 0.95
+    },
+    {
+      "id": "steak-tag-strong",
+      "code": "steak",
+      "field": "tag",
+      "terms": ["牛排", "牛排館", "steak", "steakhouse"],
+      "confidence": 0.95
+    },
+    {
+      "id": "steak-source-strong",
+      "code": "steak",
+      "field": "sourceCuisineType",
+      "terms": ["牛排", "牛排館", "steak", "steakhouse"],
+      "confidence": 0.97
+    },
+    {
+      "id": "street-food-name-strong",
+      "code": "street-food",
+      "field": "name",
+      "terms": ["小吃", "小吃店", "夜市小吃", "街頭小吃"],
+      "confidence": 0.92
+    },
+    {
+      "id": "street-food-tag-strong",
+      "code": "street-food",
+      "field": "tag",
+      "terms": ["小吃", "小吃店", "夜市小吃", "街頭小吃"],
+      "confidence": 0.92
+    },
+    {
+      "id": "street-food-source-strong",
+      "code": "street-food",
+      "field": "sourceCuisineType",
+      "terms": ["小吃", "小吃店", "夜市小吃", "街頭小吃"],
+      "confidence": 0.94
+    },
+    {
+      "id": "cafe-name-strong",
+      "code": "cafe",
+      "field": "name",
+      "terms": ["咖啡", "景觀咖啡", "咖啡店", "咖啡廳", "咖啡館", "coffee", "cafe"],
+      "confidence": 0.95
+    },
+    {
+      "id": "cafe-tag-strong",
+      "code": "cafe",
+      "field": "tag",
+      "terms": ["咖啡", "景觀咖啡", "咖啡店", "咖啡廳", "咖啡館", "coffee", "cafe"],
+      "confidence": 0.95
+    },
+    {
+      "id": "cafe-source-strong",
+      "code": "cafe",
+      "field": "sourceCuisineType",
+      "terms": ["咖啡", "景觀咖啡", "咖啡店", "咖啡廳", "咖啡館", "coffee", "cafe"],
+      "confidence": 0.97
+    },
+    {
+      "id": "dessert-name-strong",
+      "code": "dessert",
+      "field": "name",
+      "terms": ["甜點店", "甜點專賣", "甜品店"],
+      "confidence": 0.94
+    },
+    {
+      "id": "dessert-tag-strong",
+      "code": "dessert",
+      "field": "tag",
+      "terms": ["甜點店", "甜點專賣", "甜品店"],
+      "confidence": 0.94
+    },
+    {
+      "id": "dessert-source-strong",
+      "code": "dessert",
+      "field": "sourceCuisineType",
+      "terms": ["甜點店", "甜點專賣", "甜品店"],
+      "confidence": 0.96
+    },
+    {
+      "id": "breakfast-brunch-name-strong",
+      "code": "breakfast-brunch",
+      "field": "name",
+      "terms": ["早餐店", "早餐餐廳", "早午餐", "brunch"],
+      "confidence": 0.94
+    },
+    {
+      "id": "breakfast-brunch-tag-strong",
+      "code": "breakfast-brunch",
+      "field": "tag",
+      "terms": ["早餐店", "早餐餐廳", "早午餐", "brunch"],
+      "confidence": 0.94
+    },
+    {
+      "id": "breakfast-brunch-source-strong",
+      "code": "breakfast-brunch",
+      "field": "sourceCuisineType",
+      "terms": ["早餐店", "早餐餐廳", "早午餐", "brunch"],
+      "confidence": 0.96
+    },
+    {
+      "id": "fast-food-name-strong",
+      "code": "fast-food",
+      "field": "name",
+      "terms": ["速食店", "速食", "fast food"],
+      "confidence": 0.94
+    },
+    {
+      "id": "fast-food-tag-strong",
+      "code": "fast-food",
+      "field": "tag",
+      "terms": ["速食店", "速食", "fast food"],
+      "confidence": 0.94
+    },
+    {
+      "id": "fast-food-source-strong",
+      "code": "fast-food",
+      "field": "sourceCuisineType",
+      "terms": ["速食店", "速食", "fast food"],
+      "confidence": 0.96
+    },
+    {
+      "id": "vegetarian-name-strong",
+      "code": "vegetarian",
+      "field": "name",
+      "terms": ["素食料理", "素食餐廳", "素食", "蔬食"],
+      "confidence": 0.95
+    },
+    {
+      "id": "vegetarian-tag-strong",
+      "code": "vegetarian",
+      "field": "tag",
+      "terms": ["素食料理", "素食餐廳", "素食", "蔬食"],
+      "confidence": 0.95
+    },
+    {
+      "id": "vegetarian-source-strong",
+      "code": "vegetarian",
+      "field": "sourceCuisineType",
+      "terms": ["素食料理", "素食餐廳", "素食", "蔬食"],
+      "confidence": 0.97
+    },
+    {
+      "id": "seafood-name-strong",
+      "code": "seafood",
+      "field": "name",
+      "terms": ["海鮮料理", "海鮮餐廳", "海產店", "海鮮"],
+      "confidence": 0.94
+    },
+    {
+      "id": "seafood-tag-strong",
+      "code": "seafood",
+      "field": "tag",
+      "terms": ["海鮮料理", "海鮮餐廳", "海產店", "海鮮"],
+      "confidence": 0.94
+    },
+    {
+      "id": "seafood-source-strong",
+      "code": "seafood",
+      "field": "sourceCuisineType",
+      "terms": ["海鮮料理", "海鮮餐廳", "海產店", "海鮮"],
+      "confidence": 0.96
+    }
+  ],
+  "auxiliaryTags": [
+    { "name": "人氣", "aliases": ["人氣", "超人氣", "熱門"] },
+    { "name": "平價", "aliases": ["平價", "實惠", "高CP值", "高CP"] },
+    { "name": "吃到飽", "aliases": ["吃到飽", "吃到撑", "無限享用"] },
+    { "name": "古早味", "aliases": ["古早味", "古早風味"] },
+    { "name": "排隊", "aliases": ["排隊", "排隊名店"] },
+    { "name": "聚餐", "aliases": ["聚餐", "團體聚餐"] },
+    { "name": "約會", "aliases": ["約會", "情侶約會"] },
+    { "name": "親子", "aliases": ["親子", "親子友善"] },
+    { "name": "寵物友善", "aliases": ["寵物友善", "寵物友好"] }
+  ],
+  "ambiguousTerms": [
+    {
+      "id": "ambiguous-dessert",
+      "terms": ["甜點"],
+      "fields": ["name", "tag", "sourceCuisineType"],
+      "resolvedByRuleIds": ["dessert-name-strong", "dessert-tag-strong", "dessert-source-strong"],
+      "reason": "單獨的甜點可能是餐廳特色或品項，不足以判定甜點店。"
+    },
+    {
+      "id": "ambiguous-breakfast",
+      "terms": ["早餐"],
+      "fields": ["name", "tag", "sourceCuisineType"],
+      "resolvedByRuleIds": ["breakfast-brunch-name-strong", "breakfast-brunch-tag-strong", "breakfast-brunch-source-strong"],
+      "reason": "單獨的早餐可能只是供餐時段，不足以判定早餐店。"
+    },
+    {
+      "id": "ambiguous-beef-noodle",
+      "terms": ["牛肉麵", "牛肉面"],
+      "fields": ["name", "tag", "sourceCuisineType"],
+      "resolvedByRuleIds": [],
+      "reason": "牛肉麵是品項，可能屬於台式、小吃或其他餐飲，v1 不單憑此詞分類。"
+    },
+    {
+      "id": "ambiguous-taiwanese-street-food",
+      "terms": ["台式小吃", "臺式小吃"],
+      "fields": ["name", "tag", "sourceCuisineType"],
+      "resolvedByRuleIds": [],
+      "reason": "台式小吃同時描述地域與餐飲型態，v1 不在兩個正式類型間猜測。"
+    }
+  ]
+}

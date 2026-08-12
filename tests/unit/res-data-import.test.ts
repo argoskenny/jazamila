@@ -5,6 +5,7 @@ import { describe, expect, it } from "vitest";
 const require = createRequire(import.meta.url);
 const importer = require("../../scripts/res-data-importer.cjs") as {
   applyImport: (options: Record<string, unknown>) => Promise<Record<string, number>>;
+  mergeImportedRestaurantTags: (options: Record<string, unknown>) => Promise<number>;
   buildLocationCatalog: (documents: SourceDocument[], lookup?: Record<string, unknown>) => LocationCatalog;
   legacyFoodType: (tags: string[]) => number;
   prepareImport: (options: {
@@ -548,6 +549,64 @@ describe("res-data importer", () => {
       await prisma.district.deleteMany({ where: { city: { code: "chiayi-city" } } });
       await prisma.city.deleteMany({ where: { code: "chiayi-city" } });
       await prisma.tag.deleteMany({ where: { normalizedName: "冪等測試標籤" } });
+    }
+  });
+
+  it("preserves AI and manual tag ownership across an idempotent source re-import", async () => {
+    const prepared = importer.prepareImport({
+      documents: [source("chiayi-city-dong-restaurants.json", "嘉義市", "東區", [record({
+        id: "ownership-source",
+        name: "來源 ownership 測試餐廳",
+        address: "嘉義市東區測試路101號",
+        cuisine_types: ["火鍋", "phase6來源料理", "phase6輔助標籤"],
+      })])],
+      existingLookup: {},
+    });
+    const importKey = prepared.restaurants[0].importKey;
+    let restaurantId: number | null = null;
+    try {
+      await importer.applyImport({ prisma, prepared, batchSize: 10 });
+      const imported = await prisma.restaurant.findUnique({ where: { importKey } });
+      restaurantId = imported?.id ?? null;
+      expect(restaurantId).toBeTruthy();
+      const sourceCuisineTag = await prisma.tag.findUnique({ where: { normalizedName: "phase6來源料理" } });
+      const hotPot = await prisma.cuisineType.findFirstOrThrow({ where: { code: "hot-pot", status: "active" } });
+      const hotPotTag = await prisma.tag.findUniqueOrThrow({ where: { normalizedName: "火鍋" } });
+      const manualTag = await prisma.tag.create({ data: { name: "phase6人工保留", normalizedName: "phase6人工保留" } });
+      expect(sourceCuisineTag).toBeTruthy();
+      await prisma.restaurant.update({ where: { id: restaurantId! }, data: { cuisineTypeId: hotPot.id } });
+      await prisma.restaurantTag.update({
+        where: { restaurantId_tagId: { restaurantId: restaurantId!, tagId: hotPotTag.id } },
+        data: { isPublic: false },
+      });
+      await prisma.restaurantTag.update({
+        where: { restaurantId_tagId: { restaurantId: restaurantId!, tagId: sourceCuisineTag!.id } },
+        data: { owner: "ai", isPublic: false },
+      });
+      await prisma.restaurantTag.create({
+        data: { restaurantId: restaurantId!, tagId: manualTag.id, position: 9, owner: "manual", sourceName: "人工保留", isPublic: true },
+      });
+
+      await importer.applyImport({ prisma, prepared, batchSize: 10 });
+      const relations = await prisma.restaurantTag.findMany({
+        where: { restaurantId: restaurantId! },
+        include: { tag: true },
+        orderBy: { tagId: "asc" },
+      });
+      expect(relations).toEqual(expect.arrayContaining([
+        expect.objectContaining({ owner: "ai", isPublic: false, tag: expect.objectContaining({ normalizedName: "phase6來源料理" }) }),
+        expect.objectContaining({ owner: "source", isPublic: true, tag: expect.objectContaining({ normalizedName: "phase6輔助標籤" }) }),
+        expect.objectContaining({ owner: "source", isPublic: false, tag: expect.objectContaining({ normalizedName: "火鍋" }) }),
+        expect.objectContaining({ owner: "manual", isPublic: true, tag: expect.objectContaining({ normalizedName: "phase6人工保留" }) }),
+      ]));
+      await expect(prisma.restaurant.findUnique({ where: { id: restaurantId! } })).resolves.toMatchObject({ cuisineTypeId: hotPot.id });
+      expect(relations.filter((relation) => relation.tag.normalizedName === "phase6來源料理")).toHaveLength(1);
+    } finally {
+      if (restaurantId) await prisma.restaurant.delete({ where: { id: restaurantId } });
+      await prisma.restaurantImportIssue.deleteMany();
+      await prisma.district.deleteMany({ where: { city: { code: "chiayi-city" } } });
+      await prisma.city.deleteMany({ where: { code: "chiayi-city" } });
+      await prisma.tag.deleteMany({ where: { normalizedName: "phase6人工保留" } });
     }
   });
 });

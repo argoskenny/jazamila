@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PickAgainButton } from "@/components/forms/PickAgainButton";
 import { RestaurantImage } from "@/components/restaurants/RestaurantImage";
+import { listSegmentForCuisineTypeTokens, normalizeCuisineTypeQueryTokens } from "@/lib/domain/cuisine-types";
 import { getRestaurantDetail } from "@/lib/domain/restaurants";
 
 type Props = {
@@ -22,9 +23,11 @@ export default async function DetailPage({ params, searchParams }: Props) {
   const restaurant = await getRestaurantDetail(restaurantId);
   if (!restaurant) notFound();
 
+  const cuisineTypes = normalizeCuisineTypeQueryTokens(first(query.uct, ""));
+  const listTypeSegment = listSegmentForCuisineTypeTokens(cuisineTypes) ?? first(query.ut, "0");
   const listRecord = [
     first(query.ul, "0"),
-    first(query.ut, "0"),
+    listTypeSegment,
     first(query.umx, "0"),
     first(query.umi, "0"),
     first(query.p, "1")
@@ -89,6 +92,7 @@ export default async function DetailPage({ params, searchParams }: Props) {
               location={first(query.ul, "0")}
               foodType={Number.parseInt(first(query.ut, "0"), 10) || 0}
               foodTypes={foodTypes}
+              cuisineTypes={cuisineTypes}
               maxPrice={Number.parseInt(first(query.umx, "0"), 10) || 0}
               minPrice={Number.parseInt(first(query.umi, "0"), 10) || 0}
             />

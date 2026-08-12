@@ -20,7 +20,7 @@ export default async function AdminRestaurantDetailPage({ params }: Props) {
         <h1 className="page-title">{restaurant.res_name}</h1>
         <p className="meta">
           <span className="tag">{restaurant.regionLabel}{restaurant.sectionLabel}</span>
-          <span>{restaurant.foodTypeLabel}</span>
+          <span>{restaurant.cuisineTypeLabel}</span>
           <span>{restaurant.priceLabel}</span>
         </p>
         <p>{restaurant.res_note}</p>

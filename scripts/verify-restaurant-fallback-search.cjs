@@ -46,7 +46,11 @@ let fdaIndex = null;
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 function clean(value) {
-  return String(value ?? "").replace(/[\u0000-\u001f\u007f]/g, " ").replace(/\s+/g, " ").trim();
+  return String(value ?? "")
+    // eslint-disable-next-line no-control-regex -- Strip control characters from untrusted source text.
+    .replace(/[\u0000-\u001f\u007f]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function loadFdaIndex() {
@@ -196,7 +200,9 @@ async function searchYahoo(query, filter) {
   try {
     const cached = JSON.parse(await fsp.readFile(cachePath(queryUrl), "utf8"));
     if (cached.version === CACHE_VERSION) return cached;
-  } catch {}
+  } catch {
+    // Cache miss or invalid cache is handled by the normal fetch path.
+  }
   const result = {
     version: CACHE_VERSION,
     provider: "yahoo-search",
@@ -469,7 +475,9 @@ async function verifyDirectRecord(record) {
   try {
     const cached = JSON.parse(await fsp.readFile(resultPath, "utf8"));
     if (cached.version === CACHE_VERSION) return cached.result;
-  } catch {}
+  } catch {
+    // Cache miss or invalid cache is handled by the normal direct-verification path.
+  }
   if (CACHE_ONLY) {
     return {
       keep: true,
@@ -520,7 +528,6 @@ function buildUncertain(record, results, reason) {
 }
 
 function buildFdaOperating(record) {
-  const source = `食藥署公開資料（${FDA_SOURCE_URL}，目前匯出仍收錄此食品業者登錄字號）`;
   const reason = "食藥署最新公開餐飲場所資料仍收錄此食品業者登錄字號；本次未發現撤銷或停業標記，先視為有登錄營運證據。";
   return {
     ...record,

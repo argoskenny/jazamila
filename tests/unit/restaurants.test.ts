@@ -2,6 +2,8 @@ import { describe, expect, it } from "vitest";
 import { prisma } from "@/lib/db/prisma";
 import {
   describeFilters,
+  buildListPath,
+  getActiveCuisineTypeOptions,
   getRestaurantForAdmin,
   getRestaurantDetail,
   listPublicRestaurants,
@@ -11,7 +13,8 @@ import {
   restaurantFromAdminForm,
   summarizeRestaurantTags,
   updateRestaurant,
-  toRestaurantView
+  toRestaurantView,
+  toRestaurantViewFromPrisma
 } from "@/lib/domain/restaurants";
 
 describe("restaurant domain", () => {
@@ -35,6 +38,54 @@ describe("restaurant domain", () => {
       page: 2,
       keyword: "Sushi"
     });
+  });
+
+  it("accepts canonical CuisineType URL tokens without changing legacy URL parsing", () => {
+    const filters = parseListFilters(["0", "c:hot-pot", "0", "0", "1"], {});
+    expect(filters).toMatchObject({ foodType: 0, cuisineTypeCode: "hot-pot" });
+    expect(buildListPath(filters, 2)).toBe("/listdata/0/c:hot-pot/0/0/2");
+    expect(parseListFilters(["0", "2", "0", "0", "1"], {}).foodType).toBe(2);
+  });
+
+  it("loads only active CuisineTypes for public controls and uses the relation as the primary label", async () => {
+    const options = await getActiveCuisineTypeOptions();
+    expect(options.every((option) => option.status === "active")).toBe(true);
+    await expect(getRestaurantDetail(1)).resolves.toMatchObject({
+      cuisineTypeId: expect.any(Number),
+      cuisineTypeLabel: "日式料理",
+      foodTypeLabel: "日式料理"
+    });
+  });
+
+  it("does not expose an active cuisine name twice as a public auxiliary tag", () => {
+    const view = toRestaurantViewFromPrisma({
+      id: 99,
+      name: "重複料理測試",
+      areaNum: "02",
+      telNum: "12345678",
+      region: 1,
+      section: 2,
+      address: "臺北市測試路 99 號",
+      foodType: 0,
+      cuisineTypeId: 12,
+      price: 200,
+      openTime: 0,
+      closeTime: 0,
+      note: null,
+      imageUrl: null,
+      originalImage: null,
+      updatedAtUnix: 0,
+      postId: 0,
+      closed: 0,
+      cuisineType: { id: 12, code: "hot-pot", name: "火鍋", normalizedName: "火鍋", status: "active" },
+      tags: [
+        { position: 0, owner: "source", isPublic: true, tag: { name: "火鍋", normalizedName: "火鍋" } },
+        { position: 1, owner: "source", isPublic: true, tag: { name: "海鮮", normalizedName: "海鮮" } },
+      ],
+    } as unknown as Parameters<typeof toRestaurantViewFromPrisma>[0]);
+
+    expect(view.cuisineTypeLabel).toBe("火鍋");
+    expect(view.tags).toEqual(["海鮮"]);
   });
 
   it("filters restaurants and builds readable text", async () => {
@@ -114,7 +165,7 @@ describe("restaurant domain", () => {
     const restaurant = await getRestaurantDetail(5);
 
     expect(restaurant).toMatchObject({
-      foodTypeLabel: "火鍋",
+      foodTypeLabel: "未分類",
       priceLabel: "每人 400–1,500 元",
       imagePath: "https://example.com/hot-pot.jpg",
       fallbackImagePath: "/assets/img/jazamila/generated/restaurant-default.jpg",
@@ -199,6 +250,7 @@ describe("restaurant domain", () => {
       res_section: "2",
       res_address: "  台北市  ",
       res_foodtype: "1",
+      cuisine_type_id: "1",
       res_price: "120",
       res_note: "  備註  ",
       res_img_url: "  custom.jpg  "
@@ -211,7 +263,8 @@ describe("restaurant domain", () => {
       res_address: "台北市",
       res_note: "備註",
       res_img_url: "custom.jpg",
-      res_price: 120
+      res_price: 120,
+      cuisine_type_id: 1
     });
   });
 

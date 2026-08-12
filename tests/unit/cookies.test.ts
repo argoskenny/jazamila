@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { defaultPreferences, parsePreferenceFoodTypes, readHomePreferences } from "@/lib/cookies";
+import { defaultPreferences, parsePreferenceCuisineTypes, parsePreferenceFoodTypes, readHomePreferences } from "@/lib/cookies";
 
 function cookieReader(values: Record<string, string>) {
   return {
@@ -35,5 +35,10 @@ describe("homepage preference cookies", () => {
     expect(parsePreferenceFoodTypes("2")).toEqual([2]);
     expect(parsePreferenceFoodTypes("0")).toEqual([]);
     expect(defaultPreferences().foodtypes).toEqual([]);
+  });
+
+  it("reads canonical CuisineType cookies while preserving the legacy cookie shape", () => {
+    expect(parsePreferenceCuisineTypes("legacy:1,code:hot-pot,invalid value")).toEqual(["legacy:1", "code:hot-pot"]);
+    expect(readHomePreferences(cookieReader({ cuisine_types: "code:hot-pot" }))).toMatchObject({ cuisineTypes: ["code:hot-pot"] });
   });
 });

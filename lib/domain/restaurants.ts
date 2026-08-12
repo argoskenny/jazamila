@@ -2,7 +2,13 @@ import type { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/db/prisma";
 import { clampPage } from "@/lib/pagination";
 import { foodTypes, getSections, labelFor, regions } from "@/lib/domain/sections";
-import type { ListFilters, Restaurant, RestaurantCriteria, RestaurantView } from "@/lib/domain/types";
+import {
+  cuisineTypeForLegacyFoodType,
+  cuisineTypeOptionFor,
+  cuisineTypeCatalog,
+  type CuisineTypeRecord
+} from "@/lib/domain/cuisine-types";
+import type { CuisineTypeOption, ListFilters, Restaurant, RestaurantCriteria, RestaurantView } from "@/lib/domain/types";
 import { restaurantAdminSchema } from "@/lib/validation/forms";
 
 const perPage = 10;
@@ -11,36 +17,55 @@ const defaultPublicListLimit = 500;
 type PrismaRestaurant = Prisma.RestaurantGetPayload<object> & {
   city?: { name: string } | null;
   district?: { name: string } | null;
-  tags?: Array<{ position: number; tag: { name: string } }>;
+  cuisineType?: { id: number; code: string; name: string; normalizedName: string; status: string } | null;
+  tags?: Array<{
+    position: number;
+    owner?: string;
+    sourceName?: string | null;
+    isPublic?: boolean;
+    tag: { name: string; normalizedName?: string };
+  }>;
 };
 
 const publicRestaurantInclude = {
   city: { select: { name: true } },
   district: { select: { name: true } },
+  cuisineType: { select: { id: true, code: true, name: true, normalizedName: true, status: true } },
   tags: {
+    where: { isPublic: true },
     orderBy: { position: "asc" as const },
-    include: { tag: { select: { name: true } } }
+    include: { tag: { select: { name: true, normalizedName: true } } }
   }
 };
 
-const cuisineTagTerms: Record<number, string[]> = {
-  1: ["日式", "日本", "壽司", "拉麵", "丼飯", "居酒屋", "和食"],
-  2: ["美式", "漢堡", "美國"],
-  3: ["義式", "義大利", "披薩", "燉飯", "pasta"],
-  4: ["小吃"]
+const adminRestaurantInclude = {
+  city: { select: { name: true } },
+  district: { select: { name: true } },
+  cuisineType: { select: { id: true, code: true, name: true, normalizedName: true, status: true } },
+  tags: {
+    orderBy: { position: "asc" as const },
+    include: { tag: { select: { name: true, normalizedName: true } } }
+  }
 };
 
+function activeCuisineTypePredicate(code: string): Prisma.RestaurantWhereInput {
+  return { cuisineType: { is: { status: "active", code } } };
+}
+
 function cuisinePredicates(cuisineId: number): Prisma.RestaurantWhereInput[] {
-  const legacyFoodType: Prisma.RestaurantWhereInput = cuisineId === 4
-    ? { AND: [{ foodType: 4 }, { importKey: null }] }
-    : { foodType: cuisineId };
+  const legacyType = cuisineTypeForLegacyFoodType(cuisineId);
+  const legacyFallback: Prisma.RestaurantWhereInput = cuisineId === 4
+    ? { AND: [{ cuisineTypeId: null }, { foodType: 4 }, { importKey: null }] }
+    : { AND: [{ cuisineTypeId: null }, { foodType: cuisineId }] };
 
   return [
-    legacyFoodType,
-    ...(cuisineTagTerms[cuisineId] ?? []).map((term) => ({
-      tags: { some: { tag: { name: { contains: term } } } }
-    }))
+    ...(legacyType ? [activeCuisineTypePredicate(legacyType.code)] : []),
+    legacyFallback
   ];
+}
+
+function cuisineCodePredicates(codes: string[]): Prisma.RestaurantWhereInput[] {
+  return codes.filter(Boolean).map(activeCuisineTypePredicate);
 }
 
 function toInt(value: string | number | undefined, fallback = 0): number {
@@ -73,15 +98,18 @@ export function parseListFilters(
   const keywordParam = searchParams.search_keyword;
   const keyword = Array.isArray(keywordParam) ? keywordParam[0] ?? "" : keywordParam ?? "";
 
+  const rawType = String(typeSegment ?? "0");
+  const canonicalType = rawType.startsWith("c:") ? decodeURIComponent(rawType.slice(2)) : "";
   return {
     location: location.location,
     regionId: location.regionId,
     sectionId: location.sectionId,
-    foodType: toInt(typeSegment),
+    foodType: canonicalType ? 0 : toInt(typeSegment),
     maxPrice: toInt(maxSegment),
     minPrice: toInt(minSegment),
     page: Math.max(1, toInt(pageSegment, 1)),
-    keyword: keyword.trim()
+    keyword: keyword.trim(),
+    ...(canonicalType ? { cuisineTypeCode: canonicalType } : {})
   };
 }
 
@@ -104,9 +132,10 @@ function criteriaWhere(criteria: RestaurantCriteria): Prisma.RestaurantWhereInpu
   }
 
   const cuisineIds = selectedFoodTypes.length > 0 ? selectedFoodTypes : criteria.foodType ? [criteria.foodType] : [];
-  if (cuisineIds.length > 0) {
+  const cuisineCodes = criteria.cuisineTypeCodes?.map((code) => String(code).trim()).filter(Boolean) ?? [];
+  if (cuisineIds.length > 0 || cuisineCodes.length > 0) {
     conditions.push({
-      OR: cuisineIds.flatMap(cuisinePredicates)
+      OR: [...cuisineIds.flatMap(cuisinePredicates), ...cuisineCodePredicates(cuisineCodes)]
     });
   }
 
@@ -135,7 +164,10 @@ function criteriaWhere(criteria: RestaurantCriteria): Prisma.RestaurantWhereInpu
 }
 
 function listWhere(filters: ListFilters): Prisma.RestaurantWhereInput {
-  const where = criteriaWhere(filters);
+  const where = criteriaWhere({
+    ...filters,
+    cuisineTypeCodes: filters.cuisineTypeCode ? [filters.cuisineTypeCode] : []
+  });
 
   if (filters.keyword) {
     where.OR = [
@@ -144,7 +176,7 @@ function listWhere(filters: ListFilters): Prisma.RestaurantWhereInput {
       { note: { contains: filters.keyword } },
       { city: { name: { contains: filters.keyword } } },
       { district: { name: { contains: filters.keyword } } },
-      { tags: { some: { tag: { name: { contains: filters.keyword } } } } }
+      { tags: { some: { isPublic: true, tag: { name: { contains: filters.keyword } } } } }
     ];
   }
 
@@ -161,6 +193,7 @@ function fromPrismaRestaurant(restaurant: PrismaRestaurant): Restaurant {
     res_section: restaurant.section,
     res_address: restaurant.address ?? "",
     res_foodtype: restaurant.foodType,
+    cuisine_type_id: restaurant.cuisineTypeId ?? null,
     res_price: restaurant.price,
     res_open_time: Number(restaurant.openTime),
     res_close_time: Number(restaurant.closeTime),
@@ -229,6 +262,9 @@ export function toRestaurantView(restaurant: Restaurant): RestaurantView {
     regionLabel: labelFor(regions, restaurant.res_region, "未知縣市"),
     sectionLabel: labelFor(getSections(restaurant.res_region), restaurant.res_section, "未知區域"),
     foodTypeLabel: labelFor(foodTypes, restaurant.res_foodtype, "未分類"),
+    cuisineTypeId: null,
+    cuisineTypeCode: null,
+    cuisineTypeLabel: labelFor(foodTypes, restaurant.res_foodtype, "未分類"),
     telLabel: tel,
     priceLabel: restaurant.res_price > 0 ? `${restaurant.res_price} 元左右` : "價格彈性",
     imagePath: imagePathForRestaurant(restaurant),
@@ -251,9 +287,17 @@ export function toRestaurantViewFromPrisma(restaurant: PrismaRestaurant): Restau
   const base = toRestaurantView(legacy);
   const fallbackImagePath = defaultRestaurantImagePath;
   const externalImageUrl = restaurant.externalImageUrl?.trim();
-  const tags = restaurant.tags?.map((relation) => relation.tag.name).filter(Boolean) ?? [];
+  const tags = restaurant.tags
+    ?.filter((relation) => !(
+      restaurant.cuisineType?.status === "active" &&
+      relation.tag.normalizedName &&
+      relation.tag.normalizedName === restaurant.cuisineType.normalizedName
+    ))
+    .map((relation) => relation.tag.name)
+    .filter(Boolean) ?? [];
   const phone = restaurant.phone?.trim() || base.telLabel;
   const phoneDigits = phone === "未提供" ? "" : phone.replace(/[^\d+]/g, "");
+  const cuisineTypeLabel = restaurant.cuisineType?.name || (legacy.res_foodtype > 0 ? base.foodTypeLabel : "未分類");
 
   return {
     ...base,
@@ -264,7 +308,10 @@ export function toRestaurantViewFromPrisma(restaurant: PrismaRestaurant): Restau
     fallbackImagePath,
     cityLabel: restaurant.city?.name || base.regionLabel,
     districtLabel: restaurant.district?.name || base.sectionLabel,
-    foodTypeLabel: legacy.res_foodtype > 0 ? base.foodTypeLabel : tags[0] || "其他餐飲",
+    foodTypeLabel: cuisineTypeLabel,
+    cuisineTypeId: restaurant.cuisineTypeId ?? null,
+    cuisineTypeCode: restaurant.cuisineType?.code ?? null,
+    cuisineTypeLabel,
     tags,
     ratingPlatform: restaurant.ratingPlatform ?? "",
     ratingScore: restaurant.ratingScore,
@@ -298,7 +345,8 @@ export async function listRestaurants(filters: ListFilters) {
 
 export function buildListPath(filters: ListFilters, page: number): string {
   const query = filters.keyword ? `?search_keyword=${encodeURIComponent(filters.keyword)}` : "";
-  return `/listdata/${filters.location}/${filters.foodType}/${filters.maxPrice}/${filters.minPrice}/${page}${query}`;
+  const typeSegment = filters.cuisineTypeCode ? `c:${encodeURIComponent(filters.cuisineTypeCode)}` : String(filters.foodType);
+  return `/listdata/${filters.location}/${typeSegment}/${filters.maxPrice}/${filters.minPrice}/${page}${query}`;
 }
 
 export function describeFilters(filters: ListFilters): string {
@@ -308,7 +356,10 @@ export function describeFilters(filters: ListFilters): string {
     const section = filters.sectionId ? labelFor(getSections(filters.regionId), filters.sectionId, "") : "";
     parts.push(`地點為${region}${section}`);
   }
-  if (filters.foodType) parts.push(`美食類型為${labelFor(foodTypes, filters.foodType, "")}`);
+  if (filters.cuisineTypeCode) {
+    const knownType = cuisineTypeCatalog.find((type) => type.code === filters.cuisineTypeCode);
+    parts.push(`美食類型為${knownType?.name ?? filters.cuisineTypeCode}`);
+  } else if (filters.foodType) parts.push(`美食類型為${labelFor(foodTypes, filters.foodType, "")}`);
   if (filters.maxPrice || filters.minPrice) {
     const max = filters.maxPrice === 0 ? "無上限" : `${filters.maxPrice}元`;
     parts.push(`平均價位由${filters.minPrice}元至${max}`);
@@ -330,9 +381,19 @@ export async function getRestaurantDetail(id: number): Promise<RestaurantView | 
 
 export async function getRestaurantForAdmin(id: number): Promise<RestaurantView | null> {
   const restaurant = await prisma.restaurant.findUnique({
-    where: { id }
+    where: { id },
+    include: adminRestaurantInclude
   });
   return restaurant ? toRestaurantViewFromPrisma(restaurant) : null;
+}
+
+export async function getActiveCuisineTypeOptions(): Promise<CuisineTypeOption[]> {
+  const types = await prisma.cuisineType.findMany({
+    where: { status: "active" },
+    select: { id: true, code: true, name: true, normalizedName: true, status: true, createdBy: true, legacyFoodType: true },
+    orderBy: [{ legacyFoodType: "asc" }, { id: "asc" }]
+  });
+  return types.map((type) => cuisineTypeOptionFor(type as CuisineTypeRecord));
 }
 
 export async function pickRestaurant(criteria: RestaurantCriteria): Promise<RestaurantView | null> {
@@ -372,6 +433,12 @@ export async function listPublicRestaurants({ limit = defaultPublicListLimit } =
 }
 
 export async function createRestaurant(input: Omit<Restaurant, "id">): Promise<RestaurantView> {
+  const selectedCuisineType = input.cuisine_type_id && input.cuisine_type_id > 0
+    ? await prisma.cuisineType.findFirst({ where: { id: input.cuisine_type_id, status: "active" } })
+    : null;
+  if (input.cuisine_type_id && input.cuisine_type_id > 0 && !selectedCuisineType) {
+    throw new Error("只能選擇 active CuisineType");
+  }
   const restaurant = await prisma.restaurant.create({
     data: {
       name: input.res_name,
@@ -380,7 +447,8 @@ export async function createRestaurant(input: Omit<Restaurant, "id">): Promise<R
       region: input.res_region,
       section: input.res_section,
       address: input.res_address,
-      foodType: input.res_foodtype,
+      foodType: selectedCuisineType ? selectedCuisineType.legacyFoodType ?? 0 : input.res_foodtype,
+      cuisineTypeId: selectedCuisineType?.id ?? null,
       price: input.res_price,
       openTime: input.res_open_time,
       closeTime: input.res_close_time,
@@ -392,7 +460,8 @@ export async function createRestaurant(input: Omit<Restaurant, "id">): Promise<R
       closed: input.res_close ?? 0
     }
   });
-  return toRestaurantViewFromPrisma(restaurant);
+  const hydrated = await prisma.restaurant.findUnique({ where: { id: restaurant.id }, include: adminRestaurantInclude });
+  return hydrated ? toRestaurantViewFromPrisma(hydrated) : toRestaurantViewFromPrisma(restaurant);
 }
 
 export async function updateRestaurant(
@@ -412,6 +481,10 @@ export async function updateRestaurant(
       : null;
     const phoneArea = input.res_area_num ?? existing.areaNum ?? "";
     const phoneNumber = input.res_tel_num ?? existing.telNum ?? "";
+    const selectedCuisineType = input.cuisine_type_id === undefined || input.cuisine_type_id === null || input.cuisine_type_id === 0
+      ? input.cuisine_type_id === undefined ? undefined : null
+      : await prisma.cuisineType.findFirst({ where: { id: input.cuisine_type_id, status: "active" } });
+    if (input.cuisine_type_id && input.cuisine_type_id > 0 && !selectedCuisineType) return null;
     const adminData = {
       name: input.res_name,
       areaNum: input.res_area_num,
@@ -419,7 +492,10 @@ export async function updateRestaurant(
       region: input.res_region,
       section: input.res_section,
       address: input.res_address,
-      foodType: input.res_foodtype,
+      foodType: input.cuisine_type_id === undefined
+        ? input.res_foodtype
+        : selectedCuisineType?.legacyFoodType ?? 0,
+      cuisineTypeId: input.cuisine_type_id === undefined ? undefined : selectedCuisineType?.id ?? null,
       price: input.res_price,
       note: input.res_note,
       imageUrl: input.res_img_url,
@@ -440,7 +516,7 @@ export async function updateRestaurant(
         .map(([field]) => field);
       manualOverrideFields = JSON.stringify([...new Set([...previous, ...changed])].sort());
     }
-    const restaurant = await prisma.restaurant.update({
+    await prisma.restaurant.update({
       where: { id },
       data: {
         ...adminData,
@@ -453,7 +529,8 @@ export async function updateRestaurant(
         manualOverrideFields
       }
     });
-    return toRestaurantViewFromPrisma(restaurant);
+    const restaurant = await prisma.restaurant.findUnique({ where: { id }, include: adminRestaurantInclude });
+    return restaurant ? toRestaurantViewFromPrisma(restaurant) : null;
   } catch {
     return null;
   }
@@ -468,6 +545,7 @@ export function restaurantFromForm(input: Record<string, FormDataEntryValue>): O
     res_section: toInt(String(input.res_section ?? "0")),
     res_address: String(input.res_address ?? ""),
     res_foodtype: toInt(String(input.res_foodtype ?? "0")),
+    cuisine_type_id: input.cuisine_type_id === undefined ? undefined : toInt(String(input.cuisine_type_id ?? "0")),
     res_price: toInt(String(input.res_price ?? "0")),
     res_open_time: 0,
     res_close_time: 0,
@@ -492,6 +570,7 @@ export function restaurantFromAdminForm(input: unknown): Omit<Restaurant, "id"> 
     res_section: data.res_section,
     res_address: data.res_address,
     res_foodtype: data.res_foodtype,
+    cuisine_type_id: data.cuisine_type_id,
     res_price: data.res_price,
     res_open_time: 0,
     res_close_time: 0,

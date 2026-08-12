@@ -1,4 +1,5 @@
 const { PrismaClient } = require("@prisma/client");
+const { cuisineTypes: cuisineTypeCatalog } = require("../lib/domain/cuisine-types.json");
 
 process.env.DATABASE_URL ||= "file:./dev.db";
 
@@ -11,9 +12,38 @@ async function main() {
   await prisma.feedback.deleteMany();
   await prisma.post.deleteMany();
   await prisma.restaurant.deleteMany();
+  await prisma.cuisineType.deleteMany();
   await prisma.district.deleteMany();
   await prisma.city.deleteMany();
   await prisma.tag.deleteMany();
+
+  await prisma.cuisineType.createMany({
+    data: cuisineTypeCatalog.map((cuisineType) => ({
+      code: cuisineType.code,
+      name: cuisineType.name,
+      normalizedName: cuisineType.normalizedName,
+      status: cuisineType.status,
+      createdBy: cuisineType.createdBy,
+      legacyFoodType: cuisineType.legacyFoodType
+    }))
+  });
+  const seededCuisineTypes = await prisma.cuisineType.findMany({
+    select: { code: true, legacyFoodType: true }
+  });
+  const cuisineTypeIdsByLegacyFoodType = new Map(
+    seededCuisineTypes
+      .filter((cuisineType) => cuisineType.legacyFoodType !== null)
+      .map((cuisineType) => [cuisineType.legacyFoodType, cuisineType.code])
+  );
+  const cuisineTypeIdsByCode = new Map(
+    (await prisma.cuisineType.findMany({ select: { id: true, code: true } }))
+      .map((cuisineType) => [cuisineType.code, cuisineType.id])
+  );
+
+  function cuisineTypeIdForLegacyFoodType(foodType) {
+    const code = cuisineTypeIdsByLegacyFoodType.get(foodType);
+    return code ? cuisineTypeIdsByCode.get(code) : null;
+  }
 
   await prisma.restaurant.createMany({
     data: [
@@ -26,6 +56,7 @@ async function main() {
         section: 2,
         address: "台北市大同區民生西路 100 號",
         foodType: 1,
+        cuisineTypeId: cuisineTypeIdForLegacyFoodType(1),
         price: 100,
         openTime: 0,
         closeTime: 0,
@@ -45,6 +76,7 @@ async function main() {
         section: 3,
         address: "台北市中山區南京東路 88 號",
         foodType: 2,
+        cuisineTypeId: cuisineTypeIdForLegacyFoodType(2),
         price: 200,
         openTime: 0,
         closeTime: 0,
@@ -64,6 +96,7 @@ async function main() {
         section: 1,
         address: "新北市板橋區文化路 10 號",
         foodType: 3,
+        cuisineTypeId: cuisineTypeIdForLegacyFoodType(3),
         price: 300,
         openTime: 0,
         closeTime: 0,
@@ -83,6 +116,7 @@ async function main() {
         section: 2,
         address: "台北市大同區封存路 1 號",
         foodType: 1,
+        cuisineTypeId: cuisineTypeIdForLegacyFoodType(1),
         price: 100,
         openTime: 0,
         closeTime: 0,

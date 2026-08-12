@@ -1,13 +1,14 @@
-import { foodTypes, getRegions, getSections } from "@/lib/domain/sections";
-import type { RestaurantView } from "@/lib/domain/types";
+import { getRegions, getSections } from "@/lib/domain/sections";
+import type { CuisineTypeOption, RestaurantView } from "@/lib/domain/types";
 
 type Props = {
   action: (formData: FormData) => void | Promise<void>;
   restaurant?: RestaurantView;
+  cuisineTypes: CuisineTypeOption[];
   submitLabel: string;
 };
 
-export function RestaurantForm({ action, restaurant, submitLabel }: Props) {
+export function RestaurantForm({ action, restaurant, cuisineTypes, submitLabel }: Props) {
   const regions = getRegions();
   const sectionRegion = restaurant?.res_region ?? 1;
 
@@ -52,10 +53,12 @@ export function RestaurantForm({ action, restaurant, submitLabel }: Props) {
       </label>
       <label className="field">
         <span>美食類型</span>
-        <select className="select" name="res_foodtype" defaultValue={restaurant?.res_foodtype ?? 1}>
-          {foodTypes.map((foodType) => (
-            <option key={foodType.id} value={foodType.id}>
-              {foodType.label}
+        <input type="hidden" name="res_foodtype" value={restaurant?.res_foodtype ?? 0} />
+        <select className="select" name="cuisine_type_id" defaultValue={restaurant?.cuisineTypeId ?? 0}>
+          <option value={0}>未分類</option>
+          {cuisineTypes.map((cuisineType) => (
+            <option key={cuisineType.id} value={cuisineType.id}>
+              {cuisineType.label}
             </option>
           ))}
         </select>

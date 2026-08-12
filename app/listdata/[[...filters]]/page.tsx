@@ -2,8 +2,8 @@ import Link from "next/link";
 import { RestaurantListFilter } from "@/components/forms/RestaurantListFilter";
 import { RestaurantImage } from "@/components/restaurants/RestaurantImage";
 import { createPagination } from "@/lib/pagination";
-import { buildListPath, listRestaurants, parseListFilters, summarizeRestaurantTags } from "@/lib/domain/restaurants";
-import { foodTypes, getRegions, moneyOptions, sectionsByRegion } from "@/lib/domain/sections";
+import { buildListPath, getActiveCuisineTypeOptions, listRestaurants, parseListFilters, summarizeRestaurantTags } from "@/lib/domain/restaurants";
+import { getRegions, moneyOptions, sectionsByRegion } from "@/lib/domain/sections";
 
 type Props = {
   params: Promise<{ filters?: string[] }>;
@@ -14,7 +14,7 @@ export default async function ListDataPage({ params, searchParams }: Props) {
   const { filters: segments } = await params;
   const query = await searchParams;
   const filters = parseListFilters(segments, query);
-  const result = await listRestaurants(filters);
+  const [result, cuisineTypes] = await Promise.all([listRestaurants(filters), getActiveCuisineTypeOptions()]);
   const pagination = createPagination(result.page, result.totalPages);
 
   return (
@@ -26,7 +26,7 @@ export default async function ListDataPage({ params, searchParams }: Props) {
             filters={filters}
             regions={getRegions()}
             sectionsByRegion={sectionsByRegion}
-            foodTypes={foodTypes}
+            cuisineTypes={cuisineTypes}
             moneyOptions={moneyOptions}
           />
         </div>
@@ -37,7 +37,10 @@ export default async function ListDataPage({ params, searchParams }: Props) {
 
       <div className="restaurant-list">
         {result.restaurants.map((restaurant) => {
-          const detailHref = `/detail/${restaurant.id}?ul=${filters.location}&ut=${filters.foodType}&umx=${filters.maxPrice}&umi=${filters.minPrice}&p=${result.page}`;
+          const cuisineQuery = filters.cuisineTypeCode
+            ? `&uct=${encodeURIComponent(`code:${filters.cuisineTypeCode}`)}`
+            : `&ut=${filters.foodType}`;
+          const detailHref = `/detail/${restaurant.id}?ul=${filters.location}${cuisineQuery}&umx=${filters.maxPrice}&umi=${filters.minPrice}&p=${result.page}`;
           const titleId = `restaurant-${restaurant.id}-title`;
           const tagSummary = summarizeRestaurantTags(restaurant.tags, restaurant.foodTypeLabel);
 

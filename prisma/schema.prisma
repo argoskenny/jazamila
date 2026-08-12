@@ -57,15 +57,35 @@ model Restaurant {
   manualOverrideFields String?         @map("manual_override_fields")
   cityId               Int?            @map("city_id")
   districtId           Int?            @map("district_id")
+  cuisineTypeId        Int?            @map("cuisine_type_id")
   city                 City?           @relation(fields: [cityId], references: [id], onDelete: SetNull)
   district             District?       @relation(fields: [districtId], references: [id], onDelete: SetNull)
+  cuisineType          CuisineType?    @relation(fields: [cuisineTypeId], references: [id], onDelete: SetNull)
   blogLinks            BlogLink[]
   tags                 RestaurantTag[]
+  cuisineApplyChanges  CuisineApplyChange[]
 
   @@index([closed, region, section, foodType, price])
   @@index([cityId, districtId])
+  @@index([cuisineTypeId])
   @@index([sourceId])
   @@map("r_restaurant")
+}
+
+model CuisineType {
+  id             Int          @id @default(autoincrement())
+  code           String       @unique
+  name           String
+  normalizedName String       @unique @map("normalized_name")
+  status         String       @default("active")
+  createdBy      String       @default("seed") @map("created_by")
+  legacyFoodType Int?         @unique @map("legacy_foodtype")
+  createdAt      DateTime     @default(now()) @map("created_at")
+  updatedAt      DateTime     @updatedAt @map("updated_at")
+  restaurants    Restaurant[]
+
+  @@index([status])
+  @@map("r_cuisine_type")
 }
 
 model City {
@@ -108,12 +128,50 @@ model RestaurantTag {
   restaurantId Int        @map("restaurant_id")
   tagId        Int        @map("tag_id")
   position     Int        @default(0)
+  owner        String     @default("source")
+  sourceName   String?    @map("source_name")
+  isPublic     Boolean    @default(true) @map("is_public")
+  createdAt    DateTime   @default(now()) @map("created_at")
+  updatedAt    DateTime   @default(now()) @updatedAt @map("updated_at")
   restaurant   Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
   tag          Tag        @relation(fields: [tagId], references: [id], onDelete: Cascade)
 
   @@id([restaurantId, tagId])
   @@index([tagId])
   @@map("r_restaurant_tag")
+}
+
+model CuisineApplyBatch {
+  id           String               @id
+  status       String               @default("planned")
+  source       String
+  createdBy    String               @default("manual") @map("created_by")
+  createdAt    DateTime             @default(now()) @map("created_at")
+  updatedAt    DateTime             @updatedAt @map("updated_at")
+  rolledBackAt DateTime?            @map("rolled_back_at")
+  changes      CuisineApplyChange[]
+
+  @@index([status])
+  @@map("r_cuisine_apply_batch")
+}
+
+model CuisineApplyChange {
+  id                  Int               @id @default(autoincrement())
+  batchId             String            @map("batch_id")
+  restaurantId        Int               @map("restaurant_id")
+  inputFingerprint    String            @map("input_fingerprint")
+  beforeJson          String            @map("before_json")
+  afterJson           String            @map("after_json")
+  decisionJson        String            @map("decision_json")
+  actionStatus        String            @default("applied") @map("action_status")
+  protectedFieldsJson String?           @map("protected_fields_json")
+  createdAt           DateTime          @default(now()) @map("created_at")
+  batch               CuisineApplyBatch @relation(fields: [batchId], references: [id], onDelete: Cascade)
+  restaurant          Restaurant        @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+
+  @@unique([batchId, restaurantId])
+  @@index([restaurantId])
+  @@map("r_cuisine_apply_change")
 }
 
 model RestaurantImportIssue {

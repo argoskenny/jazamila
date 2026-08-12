@@ -1,22 +1,23 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import type { HomePreferences, Option } from "@/lib/domain/types";
+import type { CuisineTypeOption, HomePreferences, Option } from "@/lib/domain/types";
 
 type Props = {
   preferences: HomePreferences;
   regions: Option[];
   sectionsByRegion: Record<number, Option[]>;
-  foodTypes: Option[];
+  cuisineTypes: CuisineTypeOption[];
   moneyOptions: Option[];
 };
 
-export function PickRestaurantForm({ preferences, regions, sectionsByRegion, foodTypes, moneyOptions }: Props) {
+export function PickRestaurantForm({ preferences, regions, sectionsByRegion, cuisineTypes, moneyOptions }: Props) {
   const [regionId, setRegionId] = useState(preferences.foodwhere_region);
   const [sectionId, setSectionId] = useState(preferences.foodwhere_section);
-  const [selectedFoodTypes, setSelectedFoodTypes] = useState(() =>
-    preferences.foodtypes.filter((id) => foodTypes.some((foodType) => foodType.id === id && id > 0))
-  );
+  const [selectedCuisineTypes, setSelectedCuisineTypes] = useState(() => {
+    const saved = preferences.cuisineTypes ?? preferences.foodtypes.map((id) => `legacy:${id}`);
+    return saved.filter((value) => cuisineTypes.some((cuisineType) => cuisineType.value === value));
+  });
   const [status, setStatus] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isReady, setIsReady] = useState(false);
@@ -36,6 +37,14 @@ export function PickRestaurantForm({ preferences, regions, sectionsByRegion, foo
     try {
       const form = new FormData(event.currentTarget);
       form.set("foodwhere_section", String(sectionId));
+      form.set("cuisine_types", selectedCuisineTypes.join(","));
+      form.set(
+        "foodtype",
+        selectedCuisineTypes
+          .map((value) => cuisineTypes.find((cuisineType) => cuisineType.value === value)?.legacyFoodType)
+          .filter((value): value is number => value != null)
+          .join("-") || "0"
+      );
 
       const response = await fetch("/jazamila_ajax/pick", {
         method: "POST",
@@ -52,7 +61,10 @@ export function PickRestaurantForm({ preferences, regions, sectionsByRegion, foo
         const location = regionId === 0 ? "0" : `${regionId}X${sectionId}`;
         const minPrice = Number(form.get("foodmoney_min") ?? 0);
         const maxPrice = Number(form.get("foodmoney_max") ?? 0);
-        window.location.href = `/detail/${data.res_id}?ul=${encodeURIComponent(location)}&ut=0&uft=${selectedFoodTypes.join("-")}&umx=${maxPrice}&umi=${minPrice}`;
+        window.location.href = `/detail/${data.res_id}?ul=${encodeURIComponent(location)}&ut=0&uft=${selectedCuisineTypes
+          .filter((value) => value.startsWith("legacy:"))
+          .map((value) => value.slice("legacy:".length))
+          .join("-")}&uct=${encodeURIComponent(selectedCuisineTypes.join(","))}&umx=${maxPrice}&umi=${minPrice}`;
         return;
       }
 
@@ -66,7 +78,8 @@ export function PickRestaurantForm({ preferences, regions, sectionsByRegion, foo
 
   return (
     <form className="form-grid decision-form" aria-busy={isSubmitting} onSubmit={onSubmit}>
-      <input type="hidden" name="foodtype" value={selectedFoodTypes.join("-")} />
+      <input type="hidden" name="foodtype" value="0" />
+      <input type="hidden" name="cuisine_types" value={selectedCuisineTypes.join(",")} />
       <div className="decision-primary">
         <button className="button decision-button" type="submit" disabled={!isReady || isSubmitting}>
           {isSubmitting ? "抽選中..." : "幫我選"}
@@ -164,25 +177,25 @@ export function PickRestaurantForm({ preferences, regions, sectionsByRegion, foo
               <label className="cuisine-tag">
                 <input
                   type="checkbox"
-                  checked={selectedFoodTypes.length === 0}
-                  onChange={() => setSelectedFoodTypes([])}
+                  checked={selectedCuisineTypes.length === 0}
+                  onChange={() => setSelectedCuisineTypes([])}
                 />
                 <span>都可以</span>
               </label>
-              {foodTypes.filter((foodType) => foodType.id > 0).map((foodType) => (
-                <label className="cuisine-tag" key={foodType.id}>
+              {cuisineTypes.map((cuisineType) => (
+                <label className="cuisine-tag" key={cuisineType.id}>
                   <input
                     type="checkbox"
-                    checked={selectedFoodTypes.includes(foodType.id)}
+                    checked={selectedCuisineTypes.includes(cuisineType.value)}
                     onChange={() => {
-                      setSelectedFoodTypes((current) =>
-                        current.includes(foodType.id)
-                          ? current.filter((id) => id !== foodType.id)
-                          : [...current, foodType.id]
+                      setSelectedCuisineTypes((current) =>
+                        current.includes(cuisineType.value)
+                          ? current.filter((value) => value !== cuisineType.value)
+                          : [...current, cuisineType.value]
                       );
                     }}
                   />
-                  <span>{foodType.label}</span>
+                  <span>{cuisineType.label}</span>
                 </label>
               ))}
             </div>

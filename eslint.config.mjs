@@ -28,11 +28,25 @@ export default [
         module: "readonly",
         process: "readonly",
         require: "readonly",
-        __dirname: "readonly"
+        __dirname: "readonly",
+        setTimeout: "readonly",
+        fetch: "readonly",
+        AbortSignal: "readonly",
+        URL: "readonly",
+        Buffer: "readonly",
+        navigator: "readonly"
       }
     },
     rules: {
-      "@typescript-eslint/no-require-imports": "off"
+      "@typescript-eslint/no-require-imports": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          "argsIgnorePattern": "^_",
+          "varsIgnorePattern": "^_",
+          "caughtErrorsIgnorePattern": "^_"
+        }
+      ]
     }
   }
 ];

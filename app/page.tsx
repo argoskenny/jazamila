@@ -1,11 +1,13 @@
 import { cookies } from "next/headers";
 import { PickRestaurantForm } from "@/components/forms/PickRestaurantForm";
 import { readHomePreferences } from "@/lib/cookies";
-import { foodTypes, getRegions, moneyOptions, sectionsByRegion } from "@/lib/domain/sections";
+import { getRegions, moneyOptions, sectionsByRegion } from "@/lib/domain/sections";
+import { getActiveCuisineTypeOptions } from "@/lib/domain/restaurants";
 
 export default async function HomePage() {
   const cookieStore = await cookies();
   const preferences = readHomePreferences(cookieStore);
+  const cuisineTypes = await getActiveCuisineTypeOptions();
 
   return (
     <section className="page-shell hero-grid">
@@ -18,7 +20,7 @@ export default async function HomePage() {
           preferences={preferences}
           regions={getRegions()}
           sectionsByRegion={sectionsByRegion}
-          foodTypes={foodTypes}
+          cuisineTypes={cuisineTypes}
           moneyOptions={moneyOptions}
         />
       </div>

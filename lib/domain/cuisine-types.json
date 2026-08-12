@@ -1,0 +1,26 @@
+{
+  "cuisineTypes": [
+    { "code": "japanese", "name": "日式料理", "normalizedName": "日式料理", "status": "active", "createdBy": "seed", "legacyFoodType": 1 },
+    { "code": "chinese", "name": "中式料理", "normalizedName": "中式料理", "status": "active", "createdBy": "seed", "legacyFoodType": null },
+    { "code": "taiwanese", "name": "台式料理", "normalizedName": "台式料理", "status": "active", "createdBy": "seed", "legacyFoodType": null },
+    { "code": "korean", "name": "韓式料理", "normalizedName": "韓式料理", "status": "active", "createdBy": "seed", "legacyFoodType": null },
+    { "code": "american", "name": "美式料理", "normalizedName": "美式料理", "status": "active", "createdBy": "seed", "legacyFoodType": 2 },
+    { "code": "italian", "name": "義式料理", "normalizedName": "義式料理", "status": "active", "createdBy": "seed", "legacyFoodType": 3 },
+    { "code": "thai", "name": "泰式料理", "normalizedName": "泰式料理", "status": "active", "createdBy": "seed", "legacyFoodType": null },
+    { "code": "vietnamese", "name": "越式料理", "normalizedName": "越式料理", "status": "active", "createdBy": "seed", "legacyFoodType": null },
+    { "code": "hong-kong", "name": "港式料理", "normalizedName": "港式料理", "status": "active", "createdBy": "seed", "legacyFoodType": null },
+    { "code": "southeast-asian", "name": "東南亞料理", "normalizedName": "東南亞料理", "status": "active", "createdBy": "seed", "legacyFoodType": null },
+    { "code": "indian", "name": "印度料理", "normalizedName": "印度料理", "status": "active", "createdBy": "seed", "legacyFoodType": null },
+    { "code": "hot-pot", "name": "火鍋", "normalizedName": "火鍋", "status": "active", "createdBy": "seed", "legacyFoodType": null },
+    { "code": "bbq", "name": "燒肉", "normalizedName": "燒肉", "status": "active", "createdBy": "seed", "legacyFoodType": null },
+    { "code": "steak", "name": "牛排", "normalizedName": "牛排", "status": "active", "createdBy": "seed", "legacyFoodType": null },
+    { "code": "street-food", "name": "小吃", "normalizedName": "小吃", "status": "active", "createdBy": "seed", "legacyFoodType": 4 },
+    { "code": "cafe", "name": "咖啡廳", "normalizedName": "咖啡廳", "status": "active", "createdBy": "seed", "legacyFoodType": null },
+    { "code": "dessert", "name": "甜點店", "normalizedName": "甜點店", "status": "active", "createdBy": "seed", "legacyFoodType": null },
+    { "code": "breakfast-brunch", "name": "早餐／早午餐", "normalizedName": "早餐早午餐", "status": "active", "createdBy": "seed", "legacyFoodType": null },
+    { "code": "fast-food", "name": "速食店", "normalizedName": "速食店", "status": "active", "createdBy": "seed", "legacyFoodType": null },
+    { "code": "vegetarian", "name": "素食料理", "normalizedName": "素食料理", "status": "active", "createdBy": "seed", "legacyFoodType": null },
+    { "code": "seafood", "name": "海鮮料理", "normalizedName": "海鮮料理", "status": "active", "createdBy": "seed", "legacyFoodType": null },
+    { "code": "other", "name": "其他餐飲", "normalizedName": "其他餐飲", "status": "active", "createdBy": "seed", "legacyFoodType": null }
+  ]
+}

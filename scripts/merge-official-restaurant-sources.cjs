@@ -74,6 +74,7 @@ function normalize(value) {
 function clean(value) {
   return String(value || "")
     .normalize("NFKC")
+    // eslint-disable-next-line no-control-regex -- Strip control characters from imported source text.
     .replace(/[\u0000-\u001f\u007f]/g, " ")
     .replace(/[ \t\r\n]+/g, " ")
     .trim();

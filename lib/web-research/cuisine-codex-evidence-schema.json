@@ -1,0 +1,130 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://jazamila.local/schemas/cuisine-codex-evidence-v1.json",
+  "title": "JAZAMILA Codex fetched web evidence sidecar",
+  "description": "Fetched page content used to validate a Web research result. This artifact is not a database write.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "customId": {
+      "type": "string",
+      "pattern": "^jazamila-cuisine-web-v1:r[1-9][0-9]*:f[a-f0-9]{64}$"
+    },
+    "restaurantId": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "inputFingerprint": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "fetchedSources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "url": { "type": "string", "pattern": "^https?://[^\\s]+$", "maxLength": 2000 },
+          "title": { "type": "string", "minLength": 1, "maxLength": 300 },
+          "sourceTier": { "type": "integer", "enum": [1, 2, 3, 4, 5] },
+          "sourceKind": { "type": "string", "minLength": 1, "maxLength": 80 },
+          "content": { "type": "string", "minLength": 1 },
+          "contentHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "retrievedAt": { "type": "string", "format": "date-time" },
+          "matchedName": {
+            "anyOf": [
+              { "type": "string", "minLength": 1, "maxLength": 200 },
+              { "type": "null" }
+            ]
+          },
+          "matchedAddress": {
+            "anyOf": [
+              { "type": "string", "minLength": 1, "maxLength": 300 },
+              { "type": "null" }
+            ]
+          },
+          "matchedPhone": {
+            "anyOf": [
+              { "type": "string", "minLength": 1, "maxLength": 80 },
+              { "type": "null" }
+            ]
+          },
+          "identityMatch": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": { "type": "boolean" },
+              "address": { "type": "boolean" },
+              "phone": { "type": "boolean" },
+              "score": { "type": "number", "minimum": 0, "maximum": 1 }
+            },
+            "required": ["name", "address", "phone", "score"]
+          },
+          "supportedTags": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1, "maxLength": 80 },
+            "uniqueItems": true
+          },
+          "cuisineSignals": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1, "maxLength": 200 },
+            "uniqueItems": true
+          },
+          "cuisineTypeCodes": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1, "maxLength": 80 },
+            "uniqueItems": true
+          },
+          "fetched": { "const": true }
+        },
+        "required": [
+          "url",
+          "title",
+          "sourceTier",
+          "sourceKind",
+          "content",
+          "contentHash",
+          "retrievedAt",
+          "matchedName",
+          "matchedAddress",
+          "matchedPhone",
+          "identityMatch",
+          "supportedTags",
+          "cuisineSignals",
+          "cuisineTypeCodes",
+          "fetched"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "searchQueries": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1, "maxLength": 500 },
+          "uniqueItems": true
+        },
+        "searchHits": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "query": { "type": "string", "minLength": 1 },
+              "url": { "type": "string", "pattern": "^https?://[^\\s]+$" },
+              "title": { "type": "string", "minLength": 1 }
+            },
+            "required": ["query", "url", "title"]
+          }
+        },
+        "searchErrors": { "type": "array", "items": { "type": "object" } },
+        "fetchErrors": { "type": "array", "items": { "type": "object" } },
+        "sourceConflict": { "type": "boolean" }
+      },
+      "required": ["searchQueries", "searchHits", "searchErrors", "fetchErrors", "sourceConflict"]
+    }
+  },
+  "required": ["customId", "restaurantId", "inputFingerprint", "fetchedSources", "audit"]
+}
