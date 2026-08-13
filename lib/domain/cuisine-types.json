@@ -21,6 +21,8 @@
     { "code": "fast-food", "name": "速食店", "normalizedName": "速食店", "status": "active", "createdBy": "seed", "legacyFoodType": null },
     { "code": "vegetarian", "name": "素食料理", "normalizedName": "素食料理", "status": "active", "createdBy": "seed", "legacyFoodType": null },
     { "code": "seafood", "name": "海鮮料理", "normalizedName": "海鮮料理", "status": "active", "createdBy": "seed", "legacyFoodType": null },
+    { "code": "hakka", "name": "客家料理", "normalizedName": "客家料理", "status": "active", "createdBy": "ai", "legacyFoodType": null },
+    { "code": "spanish", "name": "西班牙料理", "normalizedName": "西班牙料理", "status": "active", "createdBy": "ai", "legacyFoodType": null },
     { "code": "other", "name": "其他餐飲", "normalizedName": "其他餐飲", "status": "active", "createdBy": "seed", "legacyFoodType": null }
   ]
 }

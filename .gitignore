@@ -53,3 +53,10 @@ pnpm-debug.log*
 .idea/
 
 docs/res_data/*
+
+# Local data handoffs for Codex sessions
+tmp_dev/
+
+# Local classification inputs, reports, and retained summaries
+artifacts/
+data_tmp/

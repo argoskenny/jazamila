@@ -34,7 +34,8 @@ export default async function AdminRestaurantsPage({ searchParams }: Props) {
               <th>ID</th>
               <th>名稱</th>
               <th>地區</th>
-              <th>類型</th>
+              <th>料理類型</th>
+              <th>輔助標籤</th>
               <th>價位</th>
               <th>操作</th>
             </tr>
@@ -46,6 +47,7 @@ export default async function AdminRestaurantsPage({ searchParams }: Props) {
                 <td>{restaurant.res_name}</td>
                 <td>{restaurant.regionLabel}{restaurant.sectionLabel}</td>
                 <td>{restaurant.cuisineTypeLabel}</td>
+                <td>{restaurant.auxiliaryTags.slice(0, 3).join("、") || "無"}{restaurant.auxiliaryTags.length > 3 ? ` +${restaurant.auxiliaryTags.length - 3}` : ""}</td>
                 <td>{restaurant.priceLabel}</td>
                 <td>
                   <Link className="text-link" href={`/admin/restaurants/${restaurant.id}`}>

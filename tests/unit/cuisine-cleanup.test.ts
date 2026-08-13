@@ -73,8 +73,10 @@ describe("cuisine tag cleanup planning", () => {
     expect(result.plans.every((plan) => plan.before.tags[0].isPublic === plan.after.tags[0].isPublic)).toBe(true);
   });
 
-  it("requires an explicit non-dev SQLite target", () => {
+  it("requires an explicit opt-in for the development runtime SQLite target", () => {
     expect(() => cleanup.parseArgs(["--database", "file:./dev.db"])).toThrow(/dev\.db/u);
+    expect(cleanup.parseArgs(["--database", "file:./dev.db", "--allow-dev-runtime", "--batch-id", "cleanup-dev-001", "--apply"]))
+      .toMatchObject({ database: "file:./dev.db", allowDevRuntime: true, batchId: "cleanup-dev-001", apply: true });
     expect(cleanup.parseArgs(["--database", "file:/private/tmp/isolated.sqlite", "--batch-id", "cleanup-001", "--apply"]))
       .toMatchObject({ database: "file:/private/tmp/isolated.sqlite", batchId: "cleanup-001", apply: true });
   });

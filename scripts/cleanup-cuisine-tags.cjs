@@ -12,6 +12,8 @@ const {
 const { normalizeCandidateName } = require("../lib/domain/cuisine-candidate-review.cjs");
 const { previewRollback, rollbackBatch } = require("./apply-cuisine-classification.cjs");
 
+const ROOT = path.resolve(__dirname, "..");
+
 const TAG_LOCK_FIELDS = new Set(["tag", "tags", "restaurantTag", "restaurantTags"]);
 const CLEANUP_SOURCE = "cuisine-tag-cleanup";
 const CLEANUP_VERSION = "cuisine-tag-cleanup-v1";
@@ -26,21 +28,26 @@ Options:
   --batch-id <id>    Stable batch id; required with --apply or --rollback
   --apply            Apply the cleanup in one transaction
   --rollback         Preview or roll back an existing cleanup batch
+  --allow-dev-runtime Explicitly allow prisma/dev.db (development only)
+  --output <path>     Persist the complete result JSON
   --help             Show this help
 `;
 }
 
 function parseArgs(argv) {
-  const options = { database: null, batchId: null, apply: false, rollback: false, help: false };
+  const options = { database: null, batchId: null, apply: false, rollback: false, allowDevRuntime: false, output: null, help: false };
   for (let index = 0; index < argv.length; index += 1) {
     const argument = argv[index];
     if (argument === "--apply") options.apply = true;
     else if (argument === "--rollback") options.rollback = true;
+    else if (argument === "--allow-dev-runtime") options.allowDevRuntime = true;
     else if (argument === "--help" || argument === "-h") options.help = true;
     else if (argument === "--database" || argument.startsWith("--database=")) {
       options.database = argument.includes("=") ? argument.split("=", 2)[1] : argv[++index];
     } else if (argument === "--batch-id" || argument.startsWith("--batch-id=")) {
       options.batchId = argument.includes("=") ? argument.split("=", 2)[1] : argv[++index];
+    } else if (argument === "--output" || argument.startsWith("--output=")) {
+      options.output = path.resolve(argument.includes("=") ? argument.split("=", 2)[1] : argv[++index]);
     } else {
       throw new Error(`Unknown option: ${argument}`);
     }
@@ -48,8 +55,8 @@ function parseArgs(argv) {
   if (options.help) return options;
   if (!options.database) throw new Error("--database is required; cleanup never defaults to prisma/dev.db");
   if (!String(options.database).startsWith("file:")) throw new Error("cleanup only supports an explicit file: SQLite URL");
-  if (String(options.database).includes("prisma/dev.db") || String(options.database).endsWith("/dev.db")) {
-    throw new Error("prisma/dev.db is not an allowed cleanup target");
+  if ((String(options.database).includes("prisma/dev.db") || String(options.database).endsWith("/dev.db")) && !options.allowDevRuntime) {
+    throw new Error("prisma/dev.db requires the explicit --allow-dev-runtime opt-in");
   }
   if ((options.apply || options.rollback) && !options.batchId) throw new Error("--batch-id is required with --apply or --rollback");
   return options;
@@ -66,7 +73,8 @@ function tagFieldsLocked(fields) {
 }
 
 function sqlitePathFromUrl(databaseUrl) {
-  return path.resolve(decodeURIComponent(String(databaseUrl).slice("file:".length)));
+  const raw = decodeURIComponent(String(databaseUrl).slice("file:".length));
+  return path.isAbsolute(raw) ? raw : path.resolve(ROOT, "prisma", raw);
 }
 
 function assertExistingSqlite(databaseUrl) {
@@ -139,7 +147,7 @@ function buildCleanupPlans(rows) {
     const after = {
       ...before,
       tags: before.tags.map((tag) => matches.some((relation) => relation.tagId === tag.tagId) && !protectedIds.has(tag.tagId)
-        ? { ...tag, isPublic: false }
+        ? { ...tag, kind: "legacy_cuisine", isPublic: false, visibilityReason: "canonical-cuisine-duplicate" }
         : tag),
     };
     const changed = !snapshotsEqual(before, after);
@@ -205,10 +213,10 @@ async function applyCleanupPlans({ prisma, plans, batchId }) {
       if (fingerprintForRestaurant(restaurant) !== plan.inputFingerprint) throw new Error(`restaurant ${plan.restaurantId} fingerprint changed after cleanup dry-run`);
       for (const tag of plan.after.tags) {
         const beforeTag = plan.before.tags.find((candidate) => candidate.tagId === tag.tagId);
-        if (beforeTag && beforeTag.isPublic !== tag.isPublic) {
+        if (beforeTag && (beforeTag.isPublic !== tag.isPublic || beforeTag.kind !== tag.kind || beforeTag.visibilityReason !== tag.visibilityReason)) {
           await tx.restaurantTag.update({
             where: { restaurantId_tagId: { restaurantId: restaurant.id, tagId: tag.tagId } },
-            data: { isPublic: tag.isPublic },
+            data: { kind: tag.kind, isPublic: tag.isPublic, visibilityReason: tag.visibilityReason },
           });
         }
       }
@@ -261,7 +269,9 @@ async function main(argv = process.argv.slice(2)) {
       const result = options.apply
         ? await rollbackBatch({ prisma, batchId: options.batchId })
         : await previewRollback({ prisma, batchId: options.batchId });
-      process.stdout.write(`${JSON.stringify({ mode: options.apply ? "apply" : "dry-run", readOnly: !options.apply, writesDatabase: options.apply, ...result }, null, 2)}\n`);
+      const output = { mode: options.apply ? "apply" : "dry-run", readOnly: !options.apply, writesDatabase: options.apply, ...result };
+      if (options.output) { fs.mkdirSync(path.dirname(options.output), { recursive: true }); fs.writeFileSync(options.output, `${JSON.stringify(output, null, 2)}\n`); }
+      process.stdout.write(`${JSON.stringify(options.output ? { ...output, changes: output.changes?.length, output: options.output } : output, null, 2)}\n`);
       return result;
     }
     const { plans, audit } = buildCleanupPlans(await loadRows(prisma));
@@ -276,12 +286,15 @@ async function main(argv = process.argv.slice(2)) {
         summary: plans.reduce((counts, plan) => ({ ...counts, [plan.status]: (counts[plan.status] ?? 0) + 1 }), {}),
         plans: plans.map(planOutput),
       };
-      process.stdout.write(`${JSON.stringify(result, null, 2)}\n`);
+      if (options.output) { fs.mkdirSync(path.dirname(options.output), { recursive: true }); fs.writeFileSync(options.output, `${JSON.stringify(result, null, 2)}\n`); }
+      process.stdout.write(`${JSON.stringify(options.output ? { ...result, plans: result.plans.length, output: options.output } : result, null, 2)}\n`);
       return result;
     }
     if (!options.batchId) throw new Error("--apply requires an explicit --batch-id");
     const result = await applyCleanupPlans({ prisma, plans, batchId: options.batchId });
-    process.stdout.write(`${JSON.stringify({ mode: "apply", readOnly: false, writesDatabase: true, cleanupVersion: CLEANUP_VERSION, audit, ...result }, null, 2)}\n`);
+    const output = { mode: "apply", readOnly: false, writesDatabase: true, cleanupVersion: CLEANUP_VERSION, audit, ...result };
+    if (options.output) { fs.mkdirSync(path.dirname(options.output), { recursive: true }); fs.writeFileSync(options.output, `${JSON.stringify(output, null, 2)}\n`); }
+    process.stdout.write(`${JSON.stringify({ ...output, output: options.output }, null, 2)}\n`);
     return result;
   } finally {
     await prisma.$disconnect();

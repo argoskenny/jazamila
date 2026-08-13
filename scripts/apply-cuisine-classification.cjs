@@ -42,6 +42,7 @@ Options:
   --apply                      Apply the selected batch in one transaction
   --rollback                   Roll back --batch-id; also requires --apply to write
   --database <url>             DATABASE_URL override (default: file:./dev.db)
+  --output <path>              Persist the complete result JSON
   --help                       Show this help
 `;
 }
@@ -59,6 +60,7 @@ function parseArgs(argv) {
     apply: false,
     rollback: false,
     database: null,
+    output: null,
     help: false,
   };
   const valueOptions = new Map([
@@ -71,6 +73,7 @@ function parseArgs(argv) {
     ["--restaurant-id", "restaurantIds"],
     ["--limit", "limit"],
     ["--database", "database"],
+    ["--output", "output"],
   ]);
   for (let index = 0; index < argv.length; index += 1) {
     const argument = argv[index];
@@ -87,7 +90,7 @@ function parseArgs(argv) {
       else options[key] = value;
     }
   }
-  for (const key of ["aiResults", "webResults", "deterministicReport", "review", "cuisineTypes"]) {
+  for (const key of ["aiResults", "webResults", "deterministicReport", "review", "cuisineTypes", "output"]) {
     if (options[key]) options[key] = path.resolve(ROOT, String(options[key]));
   }
   options.restaurantIds = [...new Set(options.restaurantIds.map((id) => Number(id)).filter((id) => Number.isInteger(id) && id > 0))];
@@ -260,7 +263,9 @@ async function applyTagOperations(tx, restaurant, plan) {
       data: {
         owner: "ai",
         sourceName: relation.sourceName || relation.tag.name,
+        kind: "legacy_cuisine",
         isPublic: false,
+        visibilityReason: "canonical-cuisine-duplicate",
       },
     });
   }
@@ -274,7 +279,7 @@ async function applyTagOperations(tx, restaurant, plan) {
       if (relation.owner === "manual") continue;
       await tx.restaurantTag.update({
         where: { restaurantId_tagId: { restaurantId: restaurant.id, tagId: tag.id } },
-        data: { owner: "ai", isPublic: true },
+        data: { owner: "ai", kind: "auxiliary", isPublic: true, visibilityReason: null },
       });
     } else {
       await tx.restaurantTag.create({
@@ -284,7 +289,9 @@ async function applyTagOperations(tx, restaurant, plan) {
           position: restaurant.tags.reduce((max, current) => Math.max(max, current.position), -1) + 1,
           owner: "ai",
           sourceName: null,
+          kind: "auxiliary",
           isPublic: true,
+          visibilityReason: null,
         },
       });
     }
@@ -366,7 +373,9 @@ async function restoreTags(tx, restaurantId, before, current) {
           position: beforeTag.position,
           owner: beforeTag.owner,
           sourceName: beforeTag.sourceName,
+          kind: beforeTag.kind || "auxiliary",
           isPublic: beforeTag.isPublic,
+          visibilityReason: beforeTag.visibilityReason ?? null,
         },
       });
     } else {
@@ -377,7 +386,9 @@ async function restoreTags(tx, restaurantId, before, current) {
           position: beforeTag.position,
           owner: beforeTag.owner,
           sourceName: beforeTag.sourceName,
+          kind: beforeTag.kind || "auxiliary",
           isPublic: beforeTag.isPublic,
+          visibilityReason: beforeTag.visibilityReason ?? null,
         },
       });
     }
@@ -496,7 +507,9 @@ async function main(argv = process.argv.slice(2)) {
       const result = options.apply
         ? await rollbackBatch({ prisma, batchId: options.batchId, restaurantIds: options.restaurantIds, limit: options.limit })
         : await previewRollback({ prisma, batchId: options.batchId, restaurantIds: options.restaurantIds, limit: options.limit });
-      process.stdout.write(`${JSON.stringify({ mode: options.apply ? "apply" : "dry-run", readOnly: !options.apply, writesDatabase: options.apply, ...result }, null, 2)}\n`);
+      const output = { mode: options.apply ? "apply" : "dry-run", readOnly: !options.apply, writesDatabase: options.apply, ...result };
+      if (options.output) { fs.mkdirSync(path.dirname(options.output), { recursive: true }); fs.writeFileSync(options.output, `${JSON.stringify(output, null, 2)}\n`); }
+      process.stdout.write(`${JSON.stringify(options.output ? { ...output, changes: output.changes?.length, output: options.output } : output, null, 2)}\n`);
       return result;
     }
     const offlineCuisineTypes = readCuisineTypes(options.cuisineTypes);
@@ -539,11 +552,14 @@ async function main(argv = process.argv.slice(2)) {
           protectedFields: plan.protectedFields ?? [],
         })),
       };
-      process.stdout.write(`${JSON.stringify(output, null, 2)}\n`);
+      if (options.output) { fs.mkdirSync(path.dirname(options.output), { recursive: true }); fs.writeFileSync(options.output, `${JSON.stringify(output, null, 2)}\n`); }
+      process.stdout.write(`${JSON.stringify(options.output ? { ...output, plans: output.plans.length, output: options.output } : output, null, 2)}\n`);
       return output;
     }
     const result = await applyPlans({ prisma, plans: planned.plans, batchId: options.batchId });
-    process.stdout.write(`${JSON.stringify({ mode: "apply", readOnly: false, writesDatabase: true, ...result }, null, 2)}\n`);
+    const output = { mode: "apply", readOnly: false, writesDatabase: true, ...result };
+    if (options.output) { fs.mkdirSync(path.dirname(options.output), { recursive: true }); fs.writeFileSync(options.output, `${JSON.stringify(output, null, 2)}\n`); }
+    process.stdout.write(`${JSON.stringify({ ...output, output: options.output }, null, 2)}\n`);
     return result;
   } finally {
     await prisma.$disconnect();

@@ -45,7 +45,7 @@ function stage3(overrides: Record<string, unknown> = {}) {
 }
 
 function report(results: Array<Record<string, unknown>>) {
-  return { mode: "dry-run", readOnly: true, taxonomyVersion: "cuisine-taxonomy-v1", results };
+  return { mode: "dry-run", readOnly: true, taxonomyVersion: "cuisine-taxonomy-v1.1", results };
 }
 
 function makeRequest(overrides: Record<string, unknown> = {}) {
@@ -135,6 +135,32 @@ describe("web research eligibility and identity-bound queries", () => {
       stage3Result: stage3({ confidence: 0.95, aiInput: { ...input, name: "", address: "" } }),
     });
     expect(missing.reasons).toContain("INSUFFICIENT_INFORMATION");
+  });
+
+  it("carries an unresolved AI handoff into Web eligibility", () => {
+    const stage3Result = stage3({ confidence: 0, needsWebResearch: true });
+    const aiResult = {
+      customId: `jazamila-cuisine-ai-v1:r42:f${fingerprint}`,
+      restaurantId: 42,
+      inputFingerprint: fingerprint,
+      status: "unresolved",
+      result: {
+        selectedCuisineTypeId: null,
+        selectedCuisineTypeName: null,
+        proposedNewCuisineType: null,
+        confidence: 0,
+        needsWebResearch: true,
+      },
+    };
+    const requests = pipeline.buildRequestsFromStage3Report({
+      report: report([stage3Result]),
+      aiResults: [aiResult],
+      suppliedCuisineTypes,
+      confidenceThreshold: 0.7,
+    });
+    expect(requests).toHaveLength(1);
+    expect(requests[0].aiResult).toMatchObject({ needsWebResearch: true });
+    expect(requests[0].eligibility.reasons).toContain("EXPLICIT_NEEDS_WEB_RESEARCH");
   });
 
   it("uses full name, address, city, district, phone, and branch in every query", () => {

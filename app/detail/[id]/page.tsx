@@ -74,12 +74,12 @@ export default async function DetailPage({ params, searchParams }: Props) {
             <p><strong>{restaurant.priceLabel}</strong><span>平均消費</span></p>
             <p><strong>{restaurant.businessHoursLabel}</strong><span>營業時間</span></p>
           </div>
-          <p className="restaurant-tags">
-            <span className="restaurant-tag restaurant-tag-cuisine">{restaurant.foodTypeLabel}</span>
-            {restaurant.tags.filter((tag) => tag !== restaurant.foodTypeLabel).map((tag) => (
+          <div className="restaurant-tags" aria-label="餐廳分類">
+            <span className="restaurant-tag restaurant-tag-cuisine">{restaurant.cuisineTypeLabel}</span>
+            {restaurant.auxiliaryTags.map((tag) => (
               <span className="restaurant-tag restaurant-tag-feature" key={tag}>{tag}</span>
             ))}
-          </p>
+          </div>
           {restaurant.reviewSummaries.length > 0 ? (
             <div className="review-summary">
               <h2>評論摘要</h2>

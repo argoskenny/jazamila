@@ -25,6 +25,8 @@
     "db:import:res-data:dry": "node scripts/import-res-data-to-sqlite.cjs --dry-run",
     "db:import:res-data": "node scripts/import-res-data-to-sqlite.cjs",
     "db:classify:cuisine:dry": "node scripts/classify-cuisine-deterministic.cjs --dry-run",
+    "db:classify:cuisine:unverified:dry": "node scripts/classify-cuisine-unverified-backup.cjs",
+    "db:classify:cuisine:codex:autonomous:prepare": "node scripts/prepare-cuisine-autonomous-codex-handoffs.cjs",
     "db:classify:cuisine:ai:dry": "node scripts/prepare-cuisine-ai-classification.cjs --dry-run",
     "db:classify:cuisine:ai:run": "node scripts/run-cuisine-ai-classification.cjs",
     "db:classify:cuisine:web:dry": "node scripts/prepare-cuisine-web-research.cjs --dry-run",

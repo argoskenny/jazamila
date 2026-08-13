@@ -4,6 +4,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const { PrismaClient } = require("@prisma/client");
 const { parseManualOverrideFields, snapshotForRestaurant, snapshotsEqual } = require("../lib/domain/cuisine-apply.cjs");
+const ROOT = path.resolve(__dirname, "..");
 
 const EXPECTED_RESTAURANTS = 31_293;
 const EXPECTED_ACTIVE_CUISINE_TYPES = 24;
@@ -30,6 +31,7 @@ Options:
   --candidate <name=count>
                      Expected candidate normalizedName and restaurant count; repeatable
   --output <path>    Write the read-only audit JSON
+  --allow-dev-runtime Explicitly audit prisma/dev.db (development only)
   --help             Show this help
 `;
 }
@@ -56,12 +58,14 @@ function parseArgs(argv) {
     expectedChanges: EXPECTED_APPLY_CHANGES,
     candidates: EXPECTED_CANDIDATES.map((candidate) => ({ ...candidate })),
     output: null,
+    allowDevRuntime: false,
     help: false,
   };
   let candidatesProvided = false;
   for (let index = 0; index < argv.length; index += 1) {
     const argument = argv[index];
     if (argument === "--help" || argument === "-h") options.help = true;
+    else if (argument === "--allow-dev-runtime") options.allowDevRuntime = true;
     else if (argument === "--database" || argument.startsWith("--database=")) options.database = argument.includes("=") ? argument.split("=", 2)[1] : argv[++index];
     else if (argument === "--before-database" || argument.startsWith("--before-database=")) options.beforeDatabase = argument.includes("=") ? argument.split("=", 2)[1] : argv[++index];
     else if (argument === "--batch-id" || argument.startsWith("--batch-id=")) options.batchId = argument.includes("=") ? argument.split("=", 2)[1] : argv[++index];
@@ -82,7 +86,7 @@ function parseArgs(argv) {
   if (options.help) return options;
   if (!options.database) throw new Error("--database is required");
   if (!String(options.database).startsWith("file:")) throw new Error("target audit only supports an explicit file: SQLite URL");
-  if (String(options.database).includes("prisma/dev.db") || String(options.database).endsWith("/dev.db")) throw new Error("prisma/dev.db is not an allowed target");
+  if ((String(options.database).includes("prisma/dev.db") || String(options.database).endsWith("/dev.db")) && !options.allowDevRuntime) throw new Error("prisma/dev.db requires --allow-dev-runtime");
   if (!String(options.beforeDatabase).startsWith("file:")) throw new Error("before-database must be an explicit file: SQLite URL");
   if (String(options.beforeDatabase).includes("prisma/dev.db") || String(options.beforeDatabase).endsWith("/dev.db")) throw new Error("prisma/dev.db is not an allowed baseline");
   return options;
@@ -91,7 +95,8 @@ function parseArgs(argv) {
 function sqlitePathFromUrl(databaseUrl) {
   const rawPath = String(databaseUrl).slice("file:".length);
   if (!rawPath || rawPath.startsWith(":memory:")) return null;
-  return path.resolve(decodeURIComponent(rawPath));
+  const decoded = decodeURIComponent(rawPath);
+  return path.isAbsolute(decoded) ? decoded : path.resolve(ROOT, "prisma", decoded);
 }
 
 function assertExistingSqlite(databaseUrl, label) {

@@ -35,7 +35,7 @@ function stage3() {
     results: [{
       restaurantId: 42,
       inputFingerprint: fingerprint,
-      taxonomyVersion: "cuisine-taxonomy-v1",
+      taxonomyVersion: "cuisine-taxonomy-v1.1",
       needsAi: true,
       needsWebResearch: false,
       confidence: 0.4,

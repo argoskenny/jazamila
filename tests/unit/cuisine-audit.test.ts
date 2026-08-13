@@ -130,4 +130,52 @@ describe("cuisine conversion artifact audit", () => {
     expect(complete.pass).toBe(false);
     expect(complete.errors).toContain("ai: non-terminal statuses remain: refusal(1)");
   });
+
+  it("accepts a schema-valid unresolved AI handoff that explicitly requires Web research", () => {
+    const results = [{ restaurantId: 1, inputFingerprint: "a".repeat(64), proposedCuisineType: null, needsAi: true }];
+    const report = {
+      mode: "dry-run",
+      readOnly: true,
+      snapshot: { inputHash: classifier.snapshotHashForResults(results) },
+      results,
+    };
+    const request = {
+      customId: `jazamila-cuisine-ai-v1:r1:f${"a".repeat(64)}`,
+      restaurantId: 1,
+      inputFingerprint: "a".repeat(64),
+      snapshotHash: report.snapshot.inputHash,
+      sourceReferences: [],
+      input: { currentTags: [] },
+      suppliedCuisineTypes: [{ id: 22, code: "other", name: "其他餐飲", normalizedName: "其他餐飲", status: "active" }],
+    };
+    const unresolved = {
+      ...request,
+      status: "unresolved",
+      result: {
+        restaurantId: 1,
+        inputFingerprint: "a".repeat(64),
+        selectedCuisineTypeId: null,
+        selectedCuisineTypeName: null,
+        proposedNewCuisineType: null,
+        keptTags: [],
+        removedTags: [],
+        addedTags: [],
+        confidence: 0,
+        needsWebResearch: true,
+        reasonCodes: ["INSUFFICIENT_EVIDENCE", "WEB_RESEARCH_REQUIRED"],
+        shortReason: "證據不足，等待可追溯的網路證據。",
+      },
+    };
+    const audited = audit.auditArtifacts({
+      deterministicReport: writeReport(report),
+      aiRequests: writeJsonl([request]),
+      aiResults: writeJsonl([unresolved]),
+      webRequests: null,
+      webResults: null,
+      review: null,
+      cuisineTypes: null,
+      requireComplete: true,
+    });
+    expect(audited).toMatchObject({ pass: true, ai: { statuses: { unresolved: 1 } } });
+  });
 });

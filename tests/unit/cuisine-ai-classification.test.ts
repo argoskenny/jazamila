@@ -167,7 +167,7 @@ describe("AI cuisine prompts and request pipeline", () => {
       knownSourceReferences: [{ file: "source.json", id: "42" }],
       savedSourceCuisineTypes: ["火鍋"],
     });
-    expect(bundle.promptVersion).toBe("cuisine-ai-prompt-v1");
+    expect(bundle.promptVersion).toBe("cuisine-ai-prompt-v2");
     expect(bundle.systemPrompt).toContain("人氣、平價、古早味、聚餐、排隊");
     expect(bundle.systemPrompt).toContain("僅輸出符合指定 JSON Schema 的資料");
     expect(bundle.userPrompt).toContain('"麻辣鍋"');
@@ -179,7 +179,7 @@ describe("AI cuisine prompts and request pipeline", () => {
     const report = {
       mode: "dry-run",
       readOnly: true,
-      taxonomyVersion: "cuisine-taxonomy-v1",
+      taxonomyVersion: "cuisine-taxonomy-v1.1",
       results: [
         {
           restaurantId: 1,
@@ -212,7 +212,7 @@ describe("AI cuisine prompts and request pipeline", () => {
     expect(requests[0]).toMatchObject({
       restaurantId: 42,
       customId: pipeline.customIdFor(42, fingerprint),
-      promptVersion: "cuisine-ai-prompt-v1",
+      promptVersion: "cuisine-ai-prompt-v2",
       modelVersion: "mock-model-v1",
       input: { knownSourceReferences: [{ file: "source.json", id: "42" }] },
     });
@@ -239,7 +239,7 @@ describe("AI cuisine prompts and request pipeline", () => {
         restaurantId: 42,
         inputFingerprint: fingerprint,
         needsAi: true,
-        taxonomyVersion: "cuisine-taxonomy-v1",
+        taxonomyVersion: "cuisine-taxonomy-v1.1",
         originalTags: ["甜點", "人氣"],
         keptAuxiliaryTags: ["人氣"],
         removedCuisineTags: ["甜點"],

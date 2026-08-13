@@ -171,6 +171,7 @@ async function readRestaurantRows(prisma) {
     SELECT
       r.id AS restaurant_id,
       r.res_name AS name,
+      r.res_note AS note,
       r.res_area_num AS area_num,
       r.res_tel_num AS tel_num,
       r.res_address AS address,
@@ -194,6 +195,7 @@ async function readRestaurantRows(prisma) {
       row = {
         id: restaurantId,
         name: rawRow.name,
+        note: rawRow.note,
         areaNum: rawRow.area_num,
         telNum: rawRow.tel_num,
         address: rawRow.address,
@@ -221,6 +223,7 @@ function inputForRow(row, sourceIndex) {
   return {
     restaurantId: row.id,
     name: row.name,
+    note: row.note,
     address: row.address,
     phone: row.phone ?? row.telNum,
     areaNum: row.areaNum,
@@ -356,6 +359,7 @@ async function main(argv = process.argv.slice(2)) {
         ...result,
         aiInput: {
           name: input.name,
+          note: input.note,
           address: input.address,
           phone: input.phone,
           currentFoodType: input.originalFoodType,

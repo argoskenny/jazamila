@@ -42,7 +42,7 @@ export default async function ListDataPage({ params, searchParams }: Props) {
             : `&ut=${filters.foodType}`;
           const detailHref = `/detail/${restaurant.id}?ul=${filters.location}${cuisineQuery}&umx=${filters.maxPrice}&umi=${filters.minPrice}&p=${result.page}`;
           const titleId = `restaurant-${restaurant.id}-title`;
-          const tagSummary = summarizeRestaurantTags(restaurant.tags, restaurant.foodTypeLabel);
+          const tagSummary = summarizeRestaurantTags(restaurant.auxiliaryTags, restaurant.cuisineTypeLabel);
 
           return (
             <article key={restaurant.id}>
@@ -64,8 +64,9 @@ export default async function ListDataPage({ params, searchParams }: Props) {
                       {restaurant.ratingReviewCount != null ? `（${restaurant.ratingReviewCount.toLocaleString("zh-TW")} 則）` : ""}
                     </p>
                   ) : null}
-                  <p className="restaurant-tags">
-                    <span className="restaurant-tag restaurant-tag-cuisine">{restaurant.foodTypeLabel}</span>
+                  <div className="restaurant-classification" aria-label="餐廳分類">
+                    <p><strong>料理類型：</strong><span className="restaurant-tag restaurant-tag-cuisine">{restaurant.cuisineTypeLabel}</span></p>
+                    <p><strong>輔助標籤：</strong>
                     <span className="restaurant-tag restaurant-tag-price">{restaurant.priceLabel}</span>
                     {tagSummary.visibleTags.map((tag) => (
                       <span className="restaurant-tag restaurant-tag-feature" key={tag}>{tag}</span>
@@ -73,7 +74,9 @@ export default async function ListDataPage({ params, searchParams }: Props) {
                     {tagSummary.hiddenCount > 0 ? (
                       <span className="restaurant-tag restaurant-tag-more">+{tagSummary.hiddenCount}</span>
                     ) : null}
-                  </p>
+                    {restaurant.auxiliaryTags.length === 0 ? <span>無</span> : null}
+                    </p>
+                  </div>
                 </div>
               </Link>
             </article>

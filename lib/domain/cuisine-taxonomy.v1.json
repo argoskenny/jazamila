@@ -1,10 +1,18 @@
 {
-  "version": "cuisine-taxonomy-v1",
+  "version": "cuisine-taxonomy-v1.1",
   "normalization": {
     "unicode": "NFKC",
     "trimWhitespace": true,
     "matchAsciiCase": "lowercase",
     "preserveDisplayText": true
+  },
+  "evidencePriorities": {
+    "brand": 500,
+    "name": 400,
+    "sourceCuisineType": 300,
+    "note": 200,
+    "tag": 200,
+    "foodType": 100
   },
   "cuisineTypes": [
     { "code": "japanese", "name": "日式料理", "normalizedName": "日式料理" },
@@ -28,13 +36,28 @@
     { "code": "fast-food", "name": "速食店", "normalizedName": "速食店" },
     { "code": "vegetarian", "name": "素食料理", "normalizedName": "素食料理" },
     { "code": "seafood", "name": "海鮮料理", "normalizedName": "海鮮料理" },
+    { "code": "hakka", "name": "客家料理", "normalizedName": "客家料理" },
+    { "code": "spanish", "name": "西班牙料理", "normalizedName": "西班牙料理" },
     { "code": "other", "name": "其他餐飲", "normalizedName": "其他餐飲" }
   ],
   "rules": [
+    { "id": "brand-fast-food", "code": "fast-food", "field": "brand", "terms": ["麥當勞", "McDonald's", "McDonalds", "肯德基", "KFC", "摩斯漢堡", "MOS BURGER", "漢堡王", "Burger King", "頂呱呱"], "confidence": 0.99 },
+    { "id": "brand-cafe", "code": "cafe", "field": "brand", "terms": ["星巴克", "Starbucks", "路易莎咖啡", "Louisa Coffee", "cama cafe", "cama café"], "confidence": 0.99 },
+    { "id": "brand-japanese", "code": "japanese", "field": "brand", "terms": ["壽司郎", "Sushiro", "藏壽司", "くら寿司", "Kura Sushi", "爭鮮", "Sukiya", "すき家", "吉野家"], "confidence": 0.99 },
+    { "id": "brand-hot-pot", "code": "hot-pot", "field": "brand", "terms": ["石二鍋", "築間幸福鍋物", "海底撈", "涮乃葉"], "confidence": 0.99 },
+    { "id": "brand-breakfast", "code": "breakfast-brunch", "field": "brand", "terms": ["拉亞漢堡", "弘爺漢堡", "早安美芝城", "麥味登"], "confidence": 0.99 },
+
     { "id": "legacy-foodtype-japanese", "code": "japanese", "field": "foodType", "values": [1], "confidence": 1 },
     { "id": "legacy-foodtype-american", "code": "american", "field": "foodType", "values": [2], "confidence": 1 },
     { "id": "legacy-foodtype-italian", "code": "italian", "field": "foodType", "values": [3], "confidence": 1 },
     { "id": "legacy-foodtype-street-food", "code": "street-food", "field": "foodType", "values": [4], "confidence": 1 },
+
+    { "id": "hakka-name-strong", "code": "hakka", "field": "name", "terms": ["客家料理", "客家菜", "客家小吃", "客家美食", "客家餐館"], "confidence": 0.96 },
+    { "id": "hakka-tag-strong", "code": "hakka", "field": "tag", "terms": ["客家料理", "客家菜", "客家小吃", "客家美食"], "confidence": 0.97 },
+    { "id": "hakka-source-strong", "code": "hakka", "field": "sourceCuisineType", "terms": ["客家料理", "客家菜", "客家小吃", "客家美食"], "confidence": 0.98 },
+    { "id": "spanish-name-strong", "code": "spanish", "field": "name", "terms": ["西班牙料理", "西班牙餐廳", "西班牙餐酒", "tapas"], "confidence": 0.96 },
+    { "id": "spanish-tag-strong", "code": "spanish", "field": "tag", "terms": ["西班牙料理", "西班牙", "tapas"], "confidence": 0.97 },
+    { "id": "spanish-source-strong", "code": "spanish", "field": "sourceCuisineType", "terms": ["西班牙料理", "西班牙", "tapas"], "confidence": 0.98 },
 
     {
       "id": "japanese-name-strong",
@@ -337,21 +360,21 @@
       "id": "street-food-name-strong",
       "code": "street-food",
       "field": "name",
-      "terms": ["小吃", "小吃店", "夜市小吃", "街頭小吃"],
+      "terms": ["小吃", "小吃店", "夜市小吃", "街頭小吃", "台式小吃", "臺式小吃", "火雞肉飯", "雞肉飯", "滷肉飯", "魯肉飯", "爌肉飯", "焢肉飯", "肉燥飯", "臭豆腐", "蚵仔煎", "肉圓", "鹽酥雞", "鹹酥雞", "雞排", "水煎包", "蔥油餅", "麵線", "米糕", "碗粿", "刈包", "割包"],
       "confidence": 0.92
     },
     {
       "id": "street-food-tag-strong",
       "code": "street-food",
       "field": "tag",
-      "terms": ["小吃", "小吃店", "夜市小吃", "街頭小吃"],
+      "terms": ["小吃", "小吃店", "夜市小吃", "街頭小吃", "台式小吃", "臺式小吃", "麵食/小吃", "麵食／小吃", "火雞肉飯", "雞肉飯", "滷肉飯", "魯肉飯", "爌肉飯", "焢肉飯", "肉燥飯", "臭豆腐", "蚵仔煎", "肉圓", "鹽酥雞", "鹹酥雞", "雞排", "水煎包", "蔥油餅", "麵線", "米糕", "碗粿", "刈包", "割包"],
       "confidence": 0.92
     },
     {
       "id": "street-food-source-strong",
       "code": "street-food",
       "field": "sourceCuisineType",
-      "terms": ["小吃", "小吃店", "夜市小吃", "街頭小吃"],
+      "terms": ["小吃", "小吃店", "夜市小吃", "街頭小吃", "台式小吃", "臺式小吃", "麵食/小吃", "麵食／小吃", "火雞肉飯", "雞肉飯", "滷肉飯", "魯肉飯", "爌肉飯", "焢肉飯", "肉燥飯", "臭豆腐", "蚵仔煎", "肉圓", "鹽酥雞", "鹹酥雞", "雞排", "水煎包", "蔥油餅", "麵線", "米糕", "碗粿", "刈包", "割包"],
       "confidence": 0.94
     },
     {
@@ -379,21 +402,21 @@
       "id": "dessert-name-strong",
       "code": "dessert",
       "field": "name",
-      "terms": ["甜點店", "甜點專賣", "甜品店"],
+      "terms": ["甜點店", "甜點專賣", "甜品店", "豆花", "冰店", "剉冰", "挫冰", "燒仙草", "甜湯"],
       "confidence": 0.94
     },
     {
       "id": "dessert-tag-strong",
       "code": "dessert",
       "field": "tag",
-      "terms": ["甜點店", "甜點專賣", "甜品店"],
+      "terms": ["甜點店", "甜點專賣", "甜品店", "豆花", "冰店", "剉冰", "挫冰", "燒仙草", "甜湯"],
       "confidence": 0.94
     },
     {
       "id": "dessert-source-strong",
       "code": "dessert",
       "field": "sourceCuisineType",
-      "terms": ["甜點店", "甜點專賣", "甜品店"],
+      "terms": ["甜點店", "甜點專賣", "甜品店", "豆花", "冰店", "剉冰", "挫冰", "燒仙草", "甜湯"],
       "confidence": 0.96
     },
     {
@@ -481,6 +504,31 @@
       "confidence": 0.96
     }
   ],
+  "unsupportedCategories": [
+    {
+      "id": "unsupported-beverage-shop",
+      "category": "beverage-shop",
+      "fields": ["name", "tag", "sourceCuisineType"],
+      "terms": ["飲料店", "茶飲", "手搖飲", "手搖", "果汁店", "果汁吧", "茶行", "飲品"],
+      "reason": "現行 CuisineType 沒有獨立的飲料店類型，不應強塞進咖啡廳或甜點店。"
+    },
+    {
+      "id": "unsupported-bakery-shop",
+      "category": "bakery-shop",
+      "fields": ["name", "tag", "sourceCuisineType"],
+      "terms": ["烘焙", "麵包店", "麵包坊", "餅舖", "餅店", "糕餅", "bakery"],
+      "reason": "現行 CuisineType 沒有獨立的烘焙店類型，不應在沒有其他證據時猜成甜點店。"
+    }
+  ],
+  "entityRisks": [
+    {
+      "id": "convenience-store-entity-risk",
+      "category": "non-restaurant-entity-risk",
+      "fields": ["name"],
+      "terms": ["統一超商", "7-ELEVEN", "7-Eleven", "全家便利商店", "FamilyMart", "萊爾富", "Hi-Life", "OK超商", "OK mart"],
+      "reason": "名稱顯示可能是便利商店或公司登記，而不是可直接套用料理類型的餐廳。"
+    }
+  ],
   "auxiliaryTags": [
     { "name": "人氣", "aliases": ["人氣", "超人氣", "熱門"] },
     { "name": "平價", "aliases": ["平價", "實惠", "高CP值", "高CP"] },
@@ -518,8 +566,8 @@
       "id": "ambiguous-taiwanese-street-food",
       "terms": ["台式小吃", "臺式小吃"],
       "fields": ["name", "tag", "sourceCuisineType"],
-      "resolvedByRuleIds": [],
-      "reason": "台式小吃同時描述地域與餐飲型態，v1 不在兩個正式類型間猜測。"
+      "resolvedByRuleIds": ["street-food-name-strong", "street-food-tag-strong", "street-food-source-strong"],
+      "reason": "v1.1 政策將台式小吃優先歸入餐飲型態「小吃」，地域資訊不另建第二個主要類型。"
     }
   ]
 }

@@ -20,9 +20,24 @@ export default async function AdminRestaurantDetailPage({ params }: Props) {
         <h1 className="page-title">{restaurant.res_name}</h1>
         <p className="meta">
           <span className="tag">{restaurant.regionLabel}{restaurant.sectionLabel}</span>
-          <span>{restaurant.cuisineTypeLabel}</span>
           <span>{restaurant.priceLabel}</span>
         </p>
+        <section className="admin-classification-section" aria-labelledby="admin-cuisine-heading">
+          <h2 id="admin-cuisine-heading">料理類型</h2>
+          <p>{restaurant.cuisineTypeLabel}</p>
+        </section>
+        <section className="admin-classification-section" aria-labelledby="admin-auxiliary-heading">
+          <h2 id="admin-auxiliary-heading">公開輔助標籤</h2>
+          <p>{restaurant.auxiliaryTags.join("、") || "無"}</p>
+        </section>
+        <section className="admin-classification-section" aria-labelledby="admin-hidden-heading">
+          <h2 id="admin-hidden-heading">隱藏的 legacy／source tag</h2>
+          {restaurant.hiddenSourceTags.length > 0 ? (
+            <ul>{restaurant.hiddenSourceTags.map((tag) => (
+              <li key={`${tag.id}-${tag.name}`}>{tag.name}（來源：{tag.sourceName || tag.owner}；原因：{tag.reason}）</li>
+            ))}</ul>
+          ) : <p>無</p>}
+        </section>
         <p>{restaurant.res_note}</p>
         <p>{restaurant.res_address}</p>
         <div className="actions">

@@ -11,6 +11,7 @@ export function AdminNav({ username }: { username: string }) {
       <nav className="admin-nav" aria-label="後台導覽">
         <Link href="/admin">總覽</Link>
         <Link href="/admin/restaurants">餐廳</Link>
+        <Link href="/admin/cuisine-candidates">料理候選</Link>
         <Link href="/admin/posts">投稿</Link>
         <Link href="/admin/blogs">食記</Link>
         <Link href="/admin/feedback">回饋</Link>

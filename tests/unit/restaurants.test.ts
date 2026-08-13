@@ -45,6 +45,7 @@ describe("restaurant domain", () => {
     expect(filters).toMatchObject({ foodType: 0, cuisineTypeCode: "hot-pot" });
     expect(buildListPath(filters, 2)).toBe("/listdata/0/c:hot-pot/0/0/2");
     expect(parseListFilters(["0", "2", "0", "0", "1"], {}).foodType).toBe(2);
+    expect(parseListFilters(["0", "c%3Ajapanese", "0", "0", "1"], {}).cuisineTypeCode).toBe("japanese");
   });
 
   it("loads only active CuisineTypes for public controls and uses the relation as the primary label", async () => {

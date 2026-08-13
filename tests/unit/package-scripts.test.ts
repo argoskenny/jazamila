@@ -18,6 +18,7 @@ describe("package scripts", () => {
     expect(pkg.scripts["db:import:res-data:dry"]).toContain("--dry-run");
     expect(pkg.scripts["db:import:res-data"]).toBeTruthy();
     expect(pkg.scripts["db:classify:cuisine:dry"]).toContain("--dry-run");
+    expect(pkg.scripts["db:classify:cuisine:unverified:dry"]).toContain("classify-cuisine-unverified-backup");
     expect(pkg.scripts["db:classify:cuisine:ai:dry"]).toContain("--dry-run");
     expect(pkg.scripts["db:classify:cuisine:ai:run"]).toContain("run-cuisine-ai-classification");
     expect(pkg.scripts["db:classify:cuisine:web:dry"]).toContain("--dry-run");

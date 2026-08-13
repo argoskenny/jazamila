@@ -126,6 +126,23 @@ Web agent 只能在明確允許網路的獨立 session 執行，並且同時產�
 6. staging 全量 apply dry-run。
 7. 以 100–500 筆代表性資料建立第一個 apply batch，確認報表與 rollback 後再擴大。
 
+### 4.1 Unresolved 與「其他餐飲」語意
+
+- 證據不足、證據衝突、模糊詞、身分風險或現行 taxonomy 沒有適用類型時，結果必須維持 `classificationStatus=unresolved`。
+- unresolved 結果必須是 `needsWebResearch=true`，且不得只因流程需要終態就自動選擇「其他餐飲」。
+- 「其他餐飲」只能由明確證據支持或經人工決策選定；它不是錯誤、拒答或缺資料的 fallback。
+- AI unresolved envelope 與 Web `unresolved` 都不會被 apply normalization 當成可套用分類。
+
+對已匯出的 unverified 備份，可在完全不讀寫 SQLite、不使用網路的情況下重新執行 deterministic 分層：
+
+```bash
+node scripts/classify-cuisine-unverified-backup.cjs \
+  --input data_tmp/cuisine-unverified-other-20260812/records.jsonl \
+  --output-dir artifacts/cuisine/<new-batch-id>
+```
+
+輸出目錄必須是新目錄。完成 artifact 包含 `classified-results.jsonl`、`unresolved-results.jsonl`、`summary.json` 與 `sha256-manifest.json`；任何 fingerprint mismatch 都不得進入後續套用。
+
 ## 5. 實際套用閘門
 
 ```bash

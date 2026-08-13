@@ -760,6 +760,45 @@ img {
   margin: 0 0 12px;
 }
 
+.restaurant-classification {
+  display: grid;
+  gap: 0.45rem;
+  margin-top: 0.75rem;
+}
+
+.restaurant-classification p {
+  margin: 0;
+}
+
+.admin-tag-fieldset {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.field-help {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.admin-tag-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.5rem;
+  max-height: 18rem;
+  overflow: auto;
+}
+
+.admin-tag-option {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.admin-classification-section + .admin-classification-section {
+  margin-top: 1rem;
+}
+
 .restaurant-tag {
   min-height: 30px;
   display: inline-flex;

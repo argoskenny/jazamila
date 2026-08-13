@@ -56,9 +56,10 @@ describe("cuisine type catalog and compatibility mapping", () => {
     expect(seededTypes.map((cuisineType) => cuisineType.code)).toEqual(
       [...cuisineTypeCatalog].map((cuisineType) => cuisineType.code).sort()
     );
+    const catalogByCode = new Map(cuisineTypeCatalog.map((type) => [type.code, type]));
     expect(seededTypes.every((cuisineType) =>
       cuisineType.status === "active" &&
-      cuisineType.createdBy === "seed" &&
+      cuisineType.createdBy === catalogByCode.get(cuisineType.code)?.createdBy &&
       cuisineType.createdAt instanceof Date &&
       cuisineType.updatedAt instanceof Date
     )).toBe(true);

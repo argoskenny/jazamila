@@ -159,7 +159,7 @@ function auditResultSet({ label, requests, results, prefix, suppliedCuisineTypes
     if (["pending", "invalid", "error", "refusal", "unresolved", "skipped"].includes(record.status)) {
       addWarning(`${label}: ${record.status} for ${customId}`, record.status);
     }
-    if (label === "ai" && record.status === "ok") {
+    if (label === "ai" && (record.status === "ok" || record.status === "unresolved")) {
       const validation = validateClassificationResult(record.result, {
         restaurantId: request.restaurantId,
         inputFingerprint: request.inputFingerprint,
@@ -167,6 +167,9 @@ function auditResultSet({ label, requests, results, prefix, suppliedCuisineTypes
         currentTags: request.input?.currentTags ?? [],
       });
       if (!validation.success) errors.push(`${label}: schema validation failed for ${customId}`);
+      if (record.status === "unresolved" && record.result?.needsWebResearch !== true) {
+        errors.push(`${label}: unresolved result must require Web research for ${customId}`);
+      }
     }
     if (label === "web" && record.status === "ok") {
       const validation = validateWebSchemaOnly(record.result);
@@ -237,7 +240,7 @@ function auditArtifacts(options) {
   if (options.requireComplete) {
     for (const [label, audit] of [["ai", ai], ["web", web]]) {
       if (audit.resultCount !== audit.requestCount) errors.push(`${label}: not every request has a terminal result`);
-      const allowedStatuses = label === "ai" ? new Set(["ok"]) : new Set(["ok", "unresolved"]);
+      const allowedStatuses = new Set(["ok", "unresolved"]);
       const nonTerminal = Object.entries(audit.statuses)
         .filter(([status]) => !allowedStatuses.has(status))
         .map(([status, count]) => `${status}(${count})`);

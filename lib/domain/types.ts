@@ -48,6 +48,16 @@ export type RestaurantView = Restaurant & {
   cityLabel: string;
   districtLabel: string;
   tags: string[];
+  auxiliaryTags: string[];
+  auxiliaryTagIds: number[];
+  hiddenSourceTags: Array<{
+    id: number;
+    name: string;
+    owner: string;
+    sourceName: string | null;
+    kind: string;
+    reason: string;
+  }>;
   ratingPlatform: string;
   ratingScore: number | null;
   ratingReviewCount: number | null;
@@ -55,6 +65,12 @@ export type RestaurantView = Restaurant & {
   businessHoursLabel: string;
   phoneHref: string | null;
   mapHref: string | null;
+};
+
+export type AuxiliaryTagOption = {
+  id: number;
+  name: string;
+  normalizedName: string;
 };
 
 export type BlogLink = {

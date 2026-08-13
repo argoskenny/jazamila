@@ -42,7 +42,7 @@ function classify(input: Record<string, unknown>) {
 
 describe("deterministic cuisine classifier", () => {
   it("keeps the taxonomy versioned and aligned with the controlled CuisineType catalog", () => {
-    expect(classifier.TAXONOMY_VERSION).toBe("cuisine-taxonomy-v1");
+    expect(classifier.TAXONOMY_VERSION).toBe("cuisine-taxonomy-v1.1");
     expect(taxonomy.version).toBe(classifier.TAXONOMY_VERSION);
     expect(taxonomy.cuisineTypes).toEqual(seededCatalog.map(({ code, name, normalizedName }) => ({ code, name, normalizedName })));
     expect(new Set(taxonomy.rules.map((rule) => rule.id)).size).toBe(taxonomy.rules.length);
@@ -102,12 +102,12 @@ describe("deterministic cuisine classifier", () => {
       { name: "午後甜點" , originalTags: ["甜點"] },
       { name: "早餐時光", originalTags: ["早餐"] },
       { name: "老張牛肉麵", originalTags: ["牛肉麵"] },
-      { name: "台式小吃名店", originalTags: ["台式小吃"] },
     ]) {
       const result = classify(input);
       expect(result.proposedCuisineType).toBeNull();
       expect(result.needsAi).toBe(true);
-      expect(result.needsWebResearch).toBe(false);
+      expect(result.classificationStatus).toBe("unresolved");
+      expect(result.needsWebResearch).toBe(true);
     }
     expect(classify({ name: "小樹甜點店", originalTags: ["甜點"] })).toMatchObject({
       proposedCuisineType: { code: "dessert" },
@@ -126,6 +126,81 @@ describe("deterministic cuisine classifier", () => {
     expect(result.keptAuxiliaryTags).toEqual(["人氣"]);
     expect(result.removedCuisineTags).toEqual(["日式料理", "韓式料理"]);
     expect(result.needsAi).toBe(true);
+    expect(result.needsWebResearch).toBe(true);
+  });
+
+  it("lets a unique stronger source beat conflicting legacy fields without hiding the weaker evidence", () => {
+    const named = classify({
+      name: "民主火雞肉飯",
+      originalFoodType: 1,
+      originalTags: ["在地美食"],
+    });
+    expect(named).toMatchObject({
+      proposedCuisineType: { code: "street-food", name: "小吃" },
+      decisionReason: "higher-priority-cuisine-evidence",
+      classificationStatus: "classified",
+      needsAi: false,
+      needsWebResearch: false,
+    });
+    expect((named.candidateEvidence as Array<Record<string, unknown>>).map((candidate) => candidate.code))
+      .toEqual(["street-food", "japanese"]);
+
+    expect(classify({
+      name: "昭和十八史蹟資料館",
+      note: "料理與特色：景觀咖啡、咖啡、日式建築",
+      originalFoodType: 1,
+      originalTags: ["景觀咖啡", "咖啡", "日式建築"],
+      sourceCuisineTypes: ["景觀咖啡", "咖啡", "日式建築"],
+    })).toMatchObject({
+      proposedCuisineType: { code: "cafe" },
+      decisionReason: "higher-priority-cuisine-evidence",
+      classificationStatus: "classified",
+    });
+  });
+
+  it("uses the controlled 台式小吃 policy and conservative chain-brand lookup", () => {
+    expect(classify({ name: "老街名店", originalTags: ["台式小吃"] })).toMatchObject({
+      proposedCuisineType: { code: "street-food" },
+      classificationStatus: "classified",
+    });
+    expect(classify({ name: "麥當勞台北站前店", originalFoodType: 1, originalTags: ["咖啡"] })).toMatchObject({
+      proposedCuisineType: { code: "fast-food" },
+      confidence: 0.99,
+      decisionReason: "higher-priority-cuisine-evidence",
+    });
+    expect(classify({ name: "壽司郎台北館前路店", originalTags: ["平價"] })).toMatchObject({
+      proposedCuisineType: { code: "japanese" },
+      confidence: 0.99,
+    });
+  });
+
+  it("keeps unsupported shop categories and likely non-restaurant entities unresolved", () => {
+    const beverage = classify({ name: "好喝茶飲", originalTags: ["茶飲"] });
+    expect(beverage).toMatchObject({
+      proposedCuisineType: null,
+      classificationStatus: "unresolved",
+      decisionReason: "unsupported-cuisine-category",
+      needsAi: true,
+      needsWebResearch: true,
+    });
+    expect(new Set((beverage.unsupportedCategoryMatches as Array<Record<string, unknown>>).map((match) => match.category)))
+      .toEqual(new Set(["beverage-shop"]));
+    expect(classify({ name: "統一超商股份有限公司", originalTags: ["其他餐飲"] })).toMatchObject({
+      proposedCuisineType: null,
+      classificationStatus: "unresolved",
+      decisionReason: "non-restaurant-entity-risk",
+      needsAi: false,
+      needsWebResearch: true,
+      entityRiskMatches: [{ id: "convenience-store-entity-risk" }],
+    });
+  });
+
+  it("allows stronger explicit names to override lower-priority ambiguous feature tags", () => {
+    expect(classify({ name: "木更咖啡 Mugeneration", originalTags: ["甜點"] })).toMatchObject({
+      proposedCuisineType: { code: "cafe" },
+      classificationStatus: "classified",
+      needsWebResearch: false,
+    });
   });
 
   it("is deterministic and fingerprints all classification inputs", () => {
