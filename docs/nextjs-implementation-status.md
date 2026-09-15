@@ -64,6 +64,6 @@ HTTP smoke tests:
 
 - 確認 production host 有 persistent filesystem，並在 staging 執行 legacy import dry-run。
 - 依 staging 結果調整 import script 的資料清洗規則。
-- 建立正式圖片上傳與儲存方案。
-- 加入 Playwright E2E。
+- 在 staging 建立並驗證 runbook 定義的 persistent asset volume／symlink。
+- 擴充 Playwright 至登入後台與 mutation 流程；公開主要流程已有 E2E。
 - 依真實 production 主機調整 systemd/reverse proxy 路徑與備份排程。

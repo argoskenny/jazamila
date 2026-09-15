@@ -1,6 +1,7 @@
 import type { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/db/prisma";
 import type { Post } from "@/lib/domain/types";
+import { clampPage } from "@/lib/pagination";
 import { restaurantPostSchema } from "@/lib/validation/forms";
 
 type PrismaPost = Prisma.PostGetPayload<object>;
@@ -50,30 +51,116 @@ export async function createRestaurantPost(input: unknown): Promise<Post> {
   return fromPrismaPost(post);
 }
 
-export async function listPostsForAdmin(status?: number): Promise<Post[]> {
+export async function listPostsForAdmin({
+  status,
+  page = 1,
+  perPage = 50
+}: { status?: number; page?: number; perPage?: number } = {}) {
+  const take = Math.min(Math.max(1, perPage), 100);
+  const where = status === undefined ? undefined : { status };
+  const totalRows = await prisma.post.count({ where });
+  const totalPages = Math.max(1, Math.ceil(totalRows / take));
+  const currentPage = clampPage(page, totalPages);
   const posts = await prisma.post.findMany({
-    where: status === undefined ? undefined : { status },
-    orderBy: { id: "desc" }
+    where,
+    orderBy: { id: "desc" },
+    skip: (currentPage - 1) * take,
+    take
   });
-  return posts.map(fromPrismaPost);
+  return {
+    posts: posts.map(fromPrismaPost),
+    totalRows,
+    totalPages,
+    page: currentPage,
+    perPage: take
+  };
 }
 
 export async function approvePost(id: number): Promise<Post | null> {
-  return updatePostStatus(id, 1);
+  return prisma.$transaction(async (tx) => {
+    const post = await tx.post.findUnique({ where: { id } });
+    if (!post) return null;
+
+    const publicationKey = `post-submission:${id}`;
+    const publishedRestaurants = await tx.restaurant.findMany({
+      where: { OR: [{ postId: id }, { importKey: publicationKey }] },
+      orderBy: { id: "asc" }
+    });
+    const publishedRestaurant = publishedRestaurants.find((restaurant) => restaurant.importKey === publicationKey)
+      ?? publishedRestaurants[0];
+    const city = post.region > 0
+      ? await tx.city.findUnique({ where: { legacyRegion: post.region } })
+      : null;
+    const district = city && post.section > 0
+      ? await tx.district.findUnique({
+          where: { cityId_legacySection: { cityId: city.id, legacySection: post.section } }
+        })
+      : null;
+    const cuisineType = post.foodType > 0
+      ? await tx.cuisineType.findFirst({ where: { legacyFoodType: post.foodType, status: "active" } })
+      : null;
+    const phone = post.telNum
+      ? `${post.areaNum ?? ""} ${post.telNum}`.trim()
+      : null;
+    const restaurantData = {
+      name: post.name,
+      areaNum: post.areaNum,
+      telNum: post.telNum,
+      region: post.region,
+      section: post.section,
+      address: post.address,
+      foodType: cuisineType?.legacyFoodType ?? post.foodType,
+      cuisineTypeId: cuisineType?.id ?? null,
+      price: post.price,
+      openTime: post.openTime,
+      closeTime: post.closeTime,
+      note: post.note,
+      imageUrl: post.imageUrl,
+      originalImage: post.originalImage,
+      updatedAtUnix: post.updatedAtUnix,
+      postId: post.id,
+      importKey: publicationKey,
+      closed: 0,
+      phone,
+      cityId: city?.id ?? null,
+      districtId: district?.id ?? null
+    };
+
+    if (publishedRestaurant) {
+      await tx.restaurant.update({ where: { id: publishedRestaurant.id }, data: restaurantData });
+      const duplicateIds = publishedRestaurants
+        .filter((restaurant) => restaurant.id !== publishedRestaurant.id)
+        .map((restaurant) => restaurant.id);
+      if (duplicateIds.length > 0) {
+        await tx.restaurant.updateMany({
+          where: { id: { in: duplicateIds } },
+          data: { closed: 1 }
+        });
+      }
+    } else {
+      await tx.restaurant.create({ data: restaurantData });
+    }
+
+    const approved = await tx.post.update({ where: { id }, data: { status: 1 } });
+    return fromPrismaPost(approved);
+  });
 }
 
 export async function rejectPost(id: number): Promise<Post | null> {
-  return updatePostStatus(id, 2);
-}
+  return prisma.$transaction(async (tx) => {
+    const post = await tx.post.findUnique({ where: { id } });
+    if (!post) return null;
 
-async function updatePostStatus(id: number, status: number): Promise<Post | null> {
-  try {
-    const post = await prisma.post.update({
-      where: { id },
-      data: { status }
+    await tx.restaurant.updateMany({
+      where: {
+        OR: [
+          { postId: id },
+          { importKey: `post-submission:${id}` }
+        ]
+      },
+      data: { closed: 1 }
     });
-    return fromPrismaPost(post);
-  } catch {
-    return null;
-  }
+    const rejected = await tx.post.update({ where: { id }, data: { status: 2 } });
+    return fromPrismaPost(rejected);
+  });
 }

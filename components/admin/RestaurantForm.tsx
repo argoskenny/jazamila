@@ -1,4 +1,7 @@
-import { getRegions, getSections } from "@/lib/domain/sections";
+"use client";
+
+import { useMemo, useState } from "react";
+import { regions, getSections } from "@/lib/domain/sections";
 import type { AuxiliaryTagOption, CuisineTypeOption, RestaurantView } from "@/lib/domain/types";
 
 type Props = {
@@ -9,9 +12,50 @@ type Props = {
   submitLabel: string;
 };
 
+const defaultVisibleTagCount = 40;
+
+function normalizeTagSearch(value: string): string {
+  return value.normalize("NFKC").replace(/\s+/gu, " ").trim().toLocaleLowerCase("zh-TW");
+}
+
 export function RestaurantForm({ action, restaurant, cuisineTypes, auxiliaryTags, submitLabel }: Props) {
-  const regions = getRegions();
-  const sectionRegion = restaurant?.res_region ?? 1;
+  const initialRegionId = restaurant?.res_region ?? 1;
+  const initialSections = getSections(initialRegionId);
+  const requestedInitialSectionId = restaurant?.res_section ?? 2;
+  const initialSectionId = initialSections.some((section) => section.id === requestedInitialSectionId)
+    ? requestedInitialSectionId
+    : initialSections[0]?.id ?? 0;
+  const [regionId, setRegionId] = useState(initialRegionId);
+  const [sectionId, setSectionId] = useState(initialSectionId);
+  const [tagQuery, setTagQuery] = useState("");
+  const sections = getSections(regionId);
+  const visibleTagIds = useMemo(() => {
+    const normalizedQuery = normalizeTagSearch(tagQuery);
+    if (normalizedQuery) {
+      return new Set(
+        auxiliaryTags
+          .filter((tag) => normalizeTagSearch(tag.name).includes(normalizedQuery))
+          .map((tag) => tag.id)
+      );
+    }
+
+    const selectedTagIds = new Set(restaurant?.auxiliaryTagIds ?? []);
+    const visibleIds = auxiliaryTags
+      .filter((tag) => selectedTagIds.has(tag.id))
+      .map((tag) => tag.id);
+    for (const tag of auxiliaryTags) {
+      if (visibleIds.length >= defaultVisibleTagCount || selectedTagIds.has(tag.id)) continue;
+      visibleIds.push(tag.id);
+    }
+    return new Set(visibleIds);
+  }, [auxiliaryTags, restaurant?.auxiliaryTagIds, tagQuery]);
+
+  function handleRegionChange(event: React.ChangeEvent<HTMLSelectElement>) {
+    const nextRegionId = Number(event.target.value);
+    const nextSections = getSections(nextRegionId);
+    setRegionId(nextRegionId);
+    setSectionId(nextSections[0]?.id ?? 0);
+  }
 
   return (
     <form className="panel form-grid" action={action}>
@@ -30,7 +74,7 @@ export function RestaurantForm({ action, restaurant, cuisineTypes, auxiliaryTags
       </label>
       <label className="field">
         <span>縣市</span>
-        <select className="select" name="res_region" defaultValue={restaurant?.res_region ?? 1}>
+        <select className="select" name="res_region" value={regionId} onChange={handleRegionChange}>
           {regions.map((region) => (
             <option key={region.id} value={region.id}>
               {region.label}
@@ -40,8 +84,13 @@ export function RestaurantForm({ action, restaurant, cuisineTypes, auxiliaryTags
       </label>
       <label className="field">
         <span>區域</span>
-        <select className="select" name="res_section" defaultValue={restaurant?.res_section ?? 2}>
-          {getSections(sectionRegion).map((section) => (
+        <select
+          className="select"
+          name="res_section"
+          value={sectionId}
+          onChange={(event) => setSectionId(Number(event.target.value))}
+        >
+          {sections.map((section) => (
             <option key={section.id} value={section.id}>
               {section.label}
             </option>
@@ -66,10 +115,19 @@ export function RestaurantForm({ action, restaurant, cuisineTypes, auxiliaryTags
       </label>
       <fieldset className="field admin-tag-fieldset">
         <legend>公開輔助標籤</legend>
-        <p className="field-help">可複選既有標籤；取消選取會隱藏關聯並保留追溯資料。</p>
+        <p className="field-help">可複選既有標籤；預設顯示最多 {defaultVisibleTagCount} 項，輸入關鍵字可搜尋全部標籤。</p>
+        <input
+          className="input"
+          type="search"
+          value={tagQuery}
+          onChange={(event) => setTagQuery(event.target.value)}
+          placeholder="搜尋輔助標籤"
+          aria-label="搜尋輔助標籤"
+        />
+        {tagQuery && visibleTagIds.size === 0 ? <p className="field-help">找不到符合的標籤。</p> : null}
         <div className="admin-tag-options">
           {auxiliaryTags.map((tag) => (
-            <label key={tag.id} className="admin-tag-option">
+            <label key={tag.id} className="admin-tag-option" hidden={!visibleTagIds.has(tag.id)}>
               <input
                 type="checkbox"
                 name="auxiliary_tag_ids"

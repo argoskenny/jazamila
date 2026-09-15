@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { approvePostAction, rejectPostAction } from "@/app/admin/posts/actions";
 import { foodTypes, getSections, labelFor, regions } from "@/lib/domain/sections";
 import { listPostsForAdmin } from "@/lib/domain/posts";
@@ -12,16 +13,26 @@ function statusLabel(status: number): string {
   return "待審核";
 }
 
+function first(value: string | string[] | undefined): string | undefined {
+  return Array.isArray(value) ? value[0] : value;
+}
+
 export default async function AdminPostsPage({ searchParams }: Props) {
   const query = await searchParams;
-  const status = query.status === undefined ? undefined : Number.parseInt(String(query.status), 10);
-  const posts = await listPostsForAdmin(Number.isFinite(status) ? status : undefined);
+  const requestedStatus = Number.parseInt(first(query.status) ?? "", 10);
+  const status = Number.isFinite(requestedStatus) ? requestedStatus : undefined;
+  const requestedPage = Number.parseInt(first(query.page) ?? first(query.set) ?? "1", 10);
+  const result = await listPostsForAdmin({
+    status,
+    page: Number.isFinite(requestedPage) ? requestedPage : 1
+  });
+  const statusQuery = status === undefined ? "" : `&status=${status}`;
 
   return (
     <div className="form-grid">
       <div>
         <h1 className="page-title">投稿審核</h1>
-        <p className="lead">處理使用者分享的餐廳。</p>
+        <p className="lead">處理使用者分享的餐廳，共 {result.totalRows} 筆。</p>
       </div>
       <div className="table-wrap">
         <table>
@@ -36,7 +47,7 @@ export default async function AdminPostsPage({ searchParams }: Props) {
             </tr>
           </thead>
           <tbody>
-            {posts.map((post) => (
+            {result.posts.map((post) => (
               <tr key={post.id}>
                 <td>{post.id}</td>
                 <td>
@@ -47,24 +58,33 @@ export default async function AdminPostsPage({ searchParams }: Props) {
                 <td>{labelFor(foodTypes, post.post_foodtype, "未分類")}</td>
                 <td>{statusLabel(post.post_prove)}</td>
                 <td>
-                  <form className="actions" action={approvePostAction}>
-                    <input type="hidden" name="id" value={post.id} />
-                    <button className="button secondary" type="submit">
-                      通過
-                    </button>
-                  </form>
-                  <form className="actions" action={rejectPostAction}>
-                    <input type="hidden" name="id" value={post.id} />
-                    <button className="button ghost" type="submit">
-                      不通過
-                    </button>
-                  </form>
+                  {post.post_prove !== 1 ? (
+                    <form className="actions" action={approvePostAction}>
+                      <input type="hidden" name="id" value={post.id} />
+                      <button className="button secondary" type="submit">
+                        通過
+                      </button>
+                    </form>
+                  ) : null}
+                  {post.post_prove !== 2 ? (
+                    <form className="actions" action={rejectPostAction}>
+                      <input type="hidden" name="id" value={post.id} />
+                      <button className="button ghost" type="submit">
+                        不通過
+                      </button>
+                    </form>
+                  ) : null}
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+      <nav className="pagination" aria-label="投稿分頁">
+        {result.page > 1 ? <Link href={`?page=${result.page - 1}${statusQuery}`}>上一頁</Link> : <span>上一頁</span>}
+        <span className="active">{result.page} / {result.totalPages}</span>
+        {result.page < result.totalPages ? <Link href={`?page=${result.page + 1}${statusQuery}`}>下一頁</Link> : <span>下一頁</span>}
+      </nav>
     </div>
   );
 }

@@ -1,7 +1,13 @@
 import { describe, expect, it } from "vitest";
-import { createBlogLinkSubmission } from "@/lib/domain/blogs";
+import { createBlogLinkSubmission, listBlogLinksForRestaurant } from "@/lib/domain/blogs";
 
 describe("blog link domain", () => {
+  it("lists approved links for a public restaurant", async () => {
+    await expect(listBlogLinksForRestaurant(1)).resolves.toEqual([
+      expect.objectContaining({ b_blogname: "Sushi Blog", b_blog_show: 1 })
+    ]);
+  });
+
   it("rejects submissions for missing restaurants", async () => {
     await expect(
       createBlogLinkSubmission({

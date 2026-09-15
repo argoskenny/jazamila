@@ -1,9 +1,21 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { RestaurantListFilter } from "@/components/forms/RestaurantListFilter";
 import { RestaurantImage } from "@/components/restaurants/RestaurantImage";
 import { createPagination } from "@/lib/pagination";
 import { buildListPath, getActiveCuisineTypeOptions, listRestaurants, parseListFilters, summarizeRestaurantTags } from "@/lib/domain/restaurants";
-import { getRegions, moneyOptions, sectionsByRegion } from "@/lib/domain/sections";
+import { regions, moneyOptions, sectionsByRegion } from "@/lib/domain/sections";
+
+export const metadata: Metadata = {
+  title: "餐廳列表",
+  description: "依地點、料理類型、價位與關鍵字瀏覽 JAZAMILA 餐廳清單。",
+  alternates: { canonical: "/listdata/0/0/0/0/1" },
+  openGraph: {
+    title: "餐廳列表｜JAZAMILA",
+    description: "依地點、料理類型、價位與關鍵字瀏覽 JAZAMILA 餐廳清單。",
+    url: "/listdata/0/0/0/0/1"
+  }
+};
 
 type Props = {
   params: Promise<{ filters?: string[] }>;
@@ -24,7 +36,7 @@ export default async function ListDataPage({ params, searchParams }: Props) {
           <h1 className="page-title">餐廳列表</h1>
           <RestaurantListFilter
             filters={filters}
-            regions={getRegions()}
+            regions={regions}
             sectionsByRegion={sectionsByRegion}
             cuisineTypes={cuisineTypes}
             moneyOptions={moneyOptions}
@@ -40,7 +52,10 @@ export default async function ListDataPage({ params, searchParams }: Props) {
           const cuisineQuery = filters.cuisineTypeCode
             ? `&uct=${encodeURIComponent(`code:${filters.cuisineTypeCode}`)}`
             : `&ut=${filters.foodType}`;
-          const detailHref = `/detail/${restaurant.id}?ul=${filters.location}${cuisineQuery}&umx=${filters.maxPrice}&umi=${filters.minPrice}&p=${result.page}`;
+          const keywordQuery = filters.keyword
+            ? `&search_keyword=${encodeURIComponent(filters.keyword)}`
+            : "";
+          const detailHref = `/detail/${restaurant.id}?ul=${filters.location}${cuisineQuery}&umx=${filters.maxPrice}&umi=${filters.minPrice}&p=${result.page}${keywordQuery}`;
           const titleId = `restaurant-${restaurant.id}-title`;
           const tagSummary = summarizeRestaurantTags(restaurant.auxiliaryTags, restaurant.cuisineTypeLabel);
 
@@ -66,15 +81,15 @@ export default async function ListDataPage({ params, searchParams }: Props) {
                   ) : null}
                   <div className="restaurant-classification" aria-label="餐廳分類">
                     <p><strong>料理類型：</strong><span className="restaurant-tag restaurant-tag-cuisine">{restaurant.cuisineTypeLabel}</span></p>
+                    <p><strong>價位：</strong><span className="restaurant-tag restaurant-tag-price">{restaurant.priceLabel}</span></p>
                     <p><strong>輔助標籤：</strong>
-                    <span className="restaurant-tag restaurant-tag-price">{restaurant.priceLabel}</span>
-                    {tagSummary.visibleTags.map((tag) => (
-                      <span className="restaurant-tag restaurant-tag-feature" key={tag}>{tag}</span>
-                    ))}
-                    {tagSummary.hiddenCount > 0 ? (
-                      <span className="restaurant-tag restaurant-tag-more">+{tagSummary.hiddenCount}</span>
-                    ) : null}
-                    {restaurant.auxiliaryTags.length === 0 ? <span>無</span> : null}
+                      {tagSummary.visibleTags.map((tag) => (
+                        <span className="restaurant-tag restaurant-tag-feature" key={tag}>{tag}</span>
+                      ))}
+                      {tagSummary.hiddenCount > 0 ? (
+                        <span className="restaurant-tag restaurant-tag-more">+{tagSummary.hiddenCount}</span>
+                      ) : null}
+                      {tagSummary.visibleTags.length === 0 ? <span>無</span> : null}
                     </p>
                   </div>
                 </div>

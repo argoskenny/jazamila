@@ -42,6 +42,7 @@ staging.jazamila.example.com
 /srv/jazamila/current        # currently deployed release
 /srv/jazamila/releases       # release directories
 /srv/jazamila/shared/.env.production
+/srv/jazamila/shared/assets  # persistent pics/post/tmp
 /var/lib/jazamila/jazamila.sqlite
 /var/lib/jazamila/backups
 /var/log/jazamila
@@ -53,10 +54,19 @@ staging.jazamila.example.com
 /srv/jazamila-staging/current
 /srv/jazamila-staging/releases
 /srv/jazamila-staging/shared/.env.production
+/srv/jazamila-staging/shared/assets
 /var/lib/jazamila-staging/jazamila.sqlite
 /var/lib/jazamila-staging/backups
 /var/log/jazamila-staging
 ```
+
+`public/assets/pics`、`public/assets/post`、`public/assets/tmp` 必須在每個 release 連到對應的
+`shared/assets` 子目錄；切換 release 時不可建立新的空 runtime asset 目錄。建立連結前只移除
+repository 內的 `.gitkeep` 與確認為空的目錄，若目錄已有檔案則先停止部署並人工搬移，禁止覆蓋。
+
+既有 SQLite 若沒有 `_prisma_migrations` history，不可直接執行 deploy。先依
+`docs/nextjs-sqlite-production-migration.md` 驗證 legacy baseline 並只 resolve 一次，再執行
+`db:migrate:prod`。新的空資料庫則直接執行 `db:migrate:prod`。
 
 ## 4. 環境變數
 
@@ -109,6 +119,9 @@ LEGACY_DATABASE_URL="mysql://legacy_user:password@host:3306/jazamila_legacy"
 ```bash
 mkdir -p /srv/jazamila-staging/releases
 mkdir -p /srv/jazamila-staging/shared
+mkdir -p /srv/jazamila-staging/shared/assets/pics
+mkdir -p /srv/jazamila-staging/shared/assets/post
+mkdir -p /srv/jazamila-staging/shared/assets/tmp
 mkdir -p /var/lib/jazamila-staging/backups
 ```
 
@@ -118,10 +131,11 @@ mkdir -p /var/lib/jazamila-staging/backups
 cd /srv/jazamila-staging/releases/<release>
 npm ci
 cp /srv/jazamila-staging/shared/.env.production .env.production
-DATABASE_URL="file:/var/lib/jazamila-staging/jazamila.sqlite" npm run db:push:prod
+node scripts/link-runtime-assets.cjs /srv/jazamila-staging/shared/assets
+DATABASE_URL="file:/var/lib/jazamila-staging/jazamila.sqlite" npm run db:migrate:prod
 npm run typecheck
 npm test
-npm run build
+DATABASE_URL="file:/var/lib/jazamila-staging/jazamila.sqlite" npm run build
 ```
 
 建立 current symlink：
@@ -146,6 +160,9 @@ NODE_ENV=production npm run start
 ```bash
 mkdir -p /srv/jazamila/releases
 mkdir -p /srv/jazamila/shared
+mkdir -p /srv/jazamila/shared/assets/pics
+mkdir -p /srv/jazamila/shared/assets/post
+mkdir -p /srv/jazamila/shared/assets/tmp
 mkdir -p /var/lib/jazamila/backups
 ```
 
@@ -155,10 +172,11 @@ mkdir -p /var/lib/jazamila/backups
 cd /srv/jazamila/releases/<release>
 npm ci
 cp /srv/jazamila/shared/.env.production .env.production
-DATABASE_URL="file:/var/lib/jazamila/jazamila.sqlite" npm run db:push:prod
+node scripts/link-runtime-assets.cjs /srv/jazamila/shared/assets
+DATABASE_URL="file:/var/lib/jazamila/jazamila.sqlite" npm run db:migrate:prod
 npm run typecheck
 npm test
-npm run build
+DATABASE_URL="file:/var/lib/jazamila/jazamila.sqlite" npm run build
 ```
 
 建立 current symlink：
@@ -216,14 +234,15 @@ LEGACY_DATABASE_URL="mysql://legacy_user:password@host:3306/jazamila_legacy" \
 2. 建立 production DB backup。
 3. 部署新 release 到 `/srv/jazamila/releases/<release>`。
 4. 執行 `npm ci`。
-5. 執行 `npm run typecheck`。
-6. 執行 `npm test`。
-7. 執行 `npm run build`。
-8. 執行 `DATABASE_URL=... npm run db:push:prod`。
-9. 切換 `current` symlink。
-10. restart Node.js process。
-11. 執行 smoke tests。
-12. 觀察 logs。
+5. 執行 `node scripts/link-runtime-assets.cjs /srv/jazamila/shared/assets`，並確認輸出的三個連結都指向 shared volume。
+6. 執行 `DATABASE_URL="file:/var/lib/jazamila/jazamila.sqlite" npm run db:migrate:prod`；schema 與地區 lookup 必須先完成，build 才能讀取資料。
+7. 執行 `npm run typecheck`。
+8. 執行 `npm test`。
+9. 執行 `DATABASE_URL="file:/var/lib/jazamila/jazamila.sqlite" npm run build`。
+10. 切換 `current` symlink。
+11. restart Node.js process。
+12. 執行 smoke tests。
+13. 觀察 logs。
 
 ## 9. Smoke Tests
 
@@ -287,7 +306,7 @@ systemctl restart jazamila
 
 ### 11.2 DB rollback
 
-適用：資料匯入錯誤、schema push 後資料異常。
+適用：資料匯入錯誤、schema migration 後資料異常。
 
 1. 停止 app process。
 2. 備份目前異常 DB。
@@ -322,6 +341,11 @@ Nginx:
 ```nginx
 server {
     server_name jazamila.example.com;
+
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 1024;
+    gzip_types application/json text/css application/javascript;
 
     location / {
         proxy_pass http://127.0.0.1:3000;
@@ -366,6 +390,7 @@ WantedBy=multi-user.target
 - [ ] production `.env.production` 已更新。
 - [ ] SQLite DB backup 已建立。
 - [ ] uploads/assets 已備份。
+- [ ] `pics`、`post`、`tmp` 均為指向 shared volume 的 symlink。
 - [ ] rollback release 已確認。
 - [ ] reverse proxy config 可切回上一個穩定 upstream。
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { executeRecaptcha } from "@/components/forms/recaptcha";
 import type { Option } from "@/lib/domain/types";
 
@@ -11,31 +11,41 @@ type Props = {
 };
 
 export function RestaurantPostForm({ regions, sectionsByRegion, foodTypes }: Props) {
-  const [regionId, setRegionId] = useState(0);
+  const [regionId, setRegionId] = useState<number | "">("");
+  const [sectionId, setSectionId] = useState<number | "">("");
   const [status, setStatus] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const sections = useMemo(() => sectionsByRegion[regionId] ?? [], [regionId, sectionsByRegion]);
+  const sections = regionId === "" ? [] : sectionsByRegion[regionId] ?? [];
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const form = event.currentTarget;
     setIsSubmitting(true);
     setStatus("");
 
     try {
-      const formData = new FormData(event.currentTarget);
+      const formData = new FormData(form);
       formData.set("recaptcha_token", await executeRecaptcha("restaurant_post"));
 
       const response = await fetch("/save_post_data", {
         method: "POST",
         body: formData
       });
-      const data = (await response.json()) as { status: string };
-      setStatus(data.status === "success" ? "已儲存成功，感謝你的分享！" : "投稿失敗，請確認必填欄位。");
-      if (data.status === "success") event.currentTarget.reset();
+      const data = (await response.json()) as { status: string; errors?: Record<string, string[]> };
+      if (data.status === "success") {
+        setStatus("已儲存成功，感謝你的分享！");
+        form.reset();
+        setRegionId("");
+        setSectionId("");
+      } else {
+        const fieldError = Object.values(data.errors ?? {}).flat()[0];
+        setStatus(fieldError ?? "投稿失敗，請確認必填欄位。");
+      }
     } catch {
       setStatus("驗證失敗，請稍後再試。");
+    } finally {
+      setIsSubmitting(false);
     }
-    setIsSubmitting(false);
   }
 
   return (
@@ -51,9 +61,15 @@ export function RestaurantPostForm({ regions, sectionsByRegion, foodTypes }: Pro
           className="select"
           name="post_region"
           value={regionId}
-          onChange={(event) => setRegionId(Number(event.target.value))}
+          onChange={(event) => {
+            const nextRegionId = Number(event.target.value);
+            setRegionId(nextRegionId);
+            setSectionId("");
+          }}
+          required
         >
-          {regions.map((region) => (
+          <option value="" disabled>請選擇縣市</option>
+          {regions.filter((region) => region.id > 0).map((region) => (
             <option key={region.id} value={region.id}>
               {region.label}
             </option>
@@ -62,9 +78,16 @@ export function RestaurantPostForm({ regions, sectionsByRegion, foodTypes }: Pro
       </label>
       <label className="field">
         <span>地區 *</span>
-        <select className="select" name="post_section">
-          <option value={0}>全區</option>
-          {sections.map((section) => (
+        <select
+          className="select"
+          name="post_section"
+          value={sectionId}
+          onChange={(event) => setSectionId(Number(event.target.value))}
+          required
+          disabled={regionId === ""}
+        >
+          <option value="" disabled>請選擇地區</option>
+          {sections.filter((section) => section.id > 0).map((section) => (
             <option key={section.id} value={section.id}>
               {section.label}
             </option>
@@ -73,7 +96,7 @@ export function RestaurantPostForm({ regions, sectionsByRegion, foodTypes }: Pro
       </label>
       <label className="field">
         <span>餐廳地址 *</span>
-        <input className="input" name="post_address" placeholder="請輸入餐廳地址" />
+        <input className="input" name="post_address" placeholder="請輸入餐廳地址" required />
       </label>
       <label className="field">
         <span>餐廳電話區碼</span>
@@ -85,8 +108,9 @@ export function RestaurantPostForm({ regions, sectionsByRegion, foodTypes }: Pro
       </label>
       <label className="field">
         <span>美食類別 *</span>
-        <select className="select" name="post_foodtype">
-          {foodTypes.map((foodType) => (
+        <select className="select" name="post_foodtype" defaultValue="" required>
+          <option value="" disabled>請選擇美食類別</option>
+          {foodTypes.filter((foodType) => foodType.id > 0).map((foodType) => (
             <option key={foodType.id} value={foodType.id}>
               {foodType.label}
             </option>

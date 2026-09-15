@@ -995,23 +995,52 @@ async function applyImportTransaction({ prisma, prepared, replace, prune, batchS
   const cityIds = new Map();
   const districtIds = new Map();
   for (const city of prepared.catalog.cities) {
-    const savedCity = await prisma.city.upsert({
-      where: { code: city.code },
-      update: { name: city.name, legacyRegion: city.legacyRegion },
-      create: { code: city.code, name: city.name, legacyRegion: city.legacyRegion },
+    const existingCity = await prisma.city.findFirst({
+      where: {
+        OR: [
+          { code: city.code },
+          { name: city.name },
+          { legacyRegion: city.legacyRegion },
+        ],
+      },
     });
+    const savedCity = existingCity
+      ? await prisma.city.update({
+        where: { id: existingCity.id },
+        data: { code: city.code, name: city.name, legacyRegion: city.legacyRegion },
+      })
+      : await prisma.city.create({
+        data: { code: city.code, name: city.name, legacyRegion: city.legacyRegion },
+      });
     cityIds.set(city.code, savedCity.id);
     for (const district of city.districts) {
-      const savedDistrict = await prisma.district.upsert({
-        where: { cityId_code: { cityId: savedCity.id, code: district.code } },
-        update: { name: district.name, legacySection: district.legacySection },
-        create: {
+      const existingDistrict = await prisma.district.findFirst({
+        where: {
           cityId: savedCity.id,
-          code: district.code,
-          name: district.name,
-          legacySection: district.legacySection,
+          OR: [
+            { code: district.code },
+            { name: district.name },
+            { legacySection: district.legacySection },
+          ],
         },
       });
+      const savedDistrict = existingDistrict
+        ? await prisma.district.update({
+          where: { id: existingDistrict.id },
+          data: {
+            code: district.code,
+            name: district.name,
+            legacySection: district.legacySection,
+          },
+        })
+        : await prisma.district.create({
+          data: {
+            cityId: savedCity.id,
+            code: district.code,
+            name: district.name,
+            legacySection: district.legacySection,
+          },
+        });
       districtIds.set(`${city.code}|${district.code}`, savedDistrict.id);
     }
   }

@@ -1,5 +1,6 @@
 const { PrismaClient } = require("@prisma/client");
 const { cuisineTypes: cuisineTypeCatalog } = require("../lib/domain/cuisine-types.json");
+const { syncLocationLookups } = require("../scripts/location-lookups.cjs");
 
 process.env.DATABASE_URL ||= "file:./dev.db";
 
@@ -130,12 +131,6 @@ async function main() {
     ]
   });
 
-  const taipei = await prisma.city.create({
-    data: { code: "taipei", name: "台北市", legacyRegion: 1 }
-  });
-  const datong = await prisma.district.create({
-    data: { cityId: taipei.id, code: "datong", name: "大同區", legacySection: 2 }
-  });
   const hotPot = await prisma.tag.create({
     data: { name: "火鍋", normalizedName: "火鍋" }
   });
@@ -158,8 +153,6 @@ async function main() {
       businessOpenTime: "11:00",
       businessCloseTime: "22:00",
       externalImageUrl: "https://example.com/hot-pot.jpg",
-      cityId: taipei.id,
-      districtId: datong.id,
       imageUrl: "preview_1380970870.jpg",
       closed: 0
     }
@@ -167,6 +160,8 @@ async function main() {
   await prisma.restaurantTag.create({
     data: { restaurantId: importedRestaurant.id, tagId: hotPot.id, position: 0 }
   });
+
+  await syncLocationLookups(prisma);
 
   await prisma.blogLink.createMany({
     data: [

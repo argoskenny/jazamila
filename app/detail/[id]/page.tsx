@@ -1,8 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { cache } from "react";
+import { BlogLinkForm } from "@/components/forms/BlogLinkForm";
 import { PickAgainButton } from "@/components/forms/PickAgainButton";
 import { RestaurantImage } from "@/components/restaurants/RestaurantImage";
 import { listSegmentForCuisineTypeTokens, normalizeCuisineTypeQueryTokens } from "@/lib/domain/cuisine-types";
+import { listBlogLinksForRestaurant } from "@/lib/domain/blogs";
 import { getRestaurantDetail } from "@/lib/domain/restaurants";
 
 type Props = {
@@ -10,8 +14,37 @@ type Props = {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 };
 
+const getCachedRestaurantDetail = cache(getRestaurantDetail);
+
 function first(value: string | string[] | undefined, fallback: string): string {
   return Array.isArray(value) ? value[0] ?? fallback : value ?? fallback;
+}
+
+export async function generateMetadata({ params }: Pick<Props, "params">): Promise<Metadata> {
+  const { id } = await params;
+  const restaurantId = Number.parseInt(id, 10);
+  if (!Number.isFinite(restaurantId)) return { title: "找不到餐廳" };
+  const restaurant = await getCachedRestaurantDetail(restaurantId);
+  if (!restaurant) return { title: "找不到餐廳" };
+
+  const description = [
+    restaurant.cuisineTypeLabel,
+    restaurant.cityLabel,
+    restaurant.districtLabel,
+    restaurant.res_address
+  ].filter(Boolean).join("｜");
+  return {
+    title: restaurant.res_name,
+    description,
+    alternates: { canonical: `/detail/${restaurant.id}` },
+    openGraph: {
+      type: "article",
+      title: restaurant.res_name,
+      description,
+      url: `/detail/${restaurant.id}`,
+      images: [{ url: restaurant.imagePath, alt: `${restaurant.res_name}餐廳照片` }]
+    }
+  };
 }
 
 export default async function DetailPage({ params, searchParams }: Props) {
@@ -20,7 +53,10 @@ export default async function DetailPage({ params, searchParams }: Props) {
   const restaurantId = Number.parseInt(id, 10);
   if (!Number.isFinite(restaurantId)) notFound();
 
-  const restaurant = await getRestaurantDetail(restaurantId);
+  const [restaurant, blogLinks] = await Promise.all([
+    getCachedRestaurantDetail(restaurantId),
+    listBlogLinksForRestaurant(restaurantId)
+  ]);
   if (!restaurant) notFound();
 
   const cuisineTypes = normalizeCuisineTypeQueryTokens(first(query.uct, ""));
@@ -36,6 +72,10 @@ export default async function DetailPage({ params, searchParams }: Props) {
     .split("-")
     .map((value) => Number.parseInt(value, 10))
     .filter((value) => Number.isFinite(value) && value > 0);
+  const searchKeyword = first(query.search_keyword, "").trim();
+  const listQuery = searchKeyword
+    ? `?search_keyword=${encodeURIComponent(searchKeyword)}`
+    : "";
   const restaurantNameMapHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(restaurant.res_name)}`;
 
   return (
@@ -96,9 +136,24 @@ export default async function DetailPage({ params, searchParams }: Props) {
               maxPrice={Number.parseInt(first(query.umx, "0"), 10) || 0}
               minPrice={Number.parseInt(first(query.umi, "0"), 10) || 0}
             />
-            <Link className="button ghost" href={`/listdata/${listRecord}`}>返回列表</Link>
+            <Link className="button ghost" href={`/listdata/${listRecord}${listQuery}`}>返回列表</Link>
           </div>
         </div>
+        <section className="panel form-grid" aria-labelledby="blog-links-heading">
+          <h2 id="blog-links-heading">食記介紹</h2>
+          {blogLinks.length > 0 ? (
+            <ul className="blog-list">
+              {blogLinks.map((blogLink) => (
+                <li key={blogLink.id}>
+                  <a className="text-link" href={blogLink.b_bloglink} target="_blank" rel="noreferrer">
+                    {blogLink.b_blogname}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          ) : <p className="lead">目前還沒有公開食記。</p>}
+        </section>
+        <BlogLinkForm restaurantId={restaurant.id} />
       </div>
     </section>
   );

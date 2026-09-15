@@ -82,9 +82,3 @@ export function cuisineTypeOptionFor(type: CuisineTypeRecord): CuisineTypeOption
     value: cuisineTypeTokenFor(type),
   };
 }
-
-export function getPublicCuisineTypes(
-  types: readonly CuisineTypeCatalogEntry[] = cuisineTypeCatalog
-): CuisineTypeCatalogEntry[] {
-  return types.filter((cuisineType) => cuisineType.status === "active");
-}

@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@500;700;900&display=swap");
-
 :root {
+  --font-sans: "PingFang TC", "Microsoft JhengHei", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: "Songti TC", "Noto Serif TC", ui-serif, Georgia, serif;
   --paper: #fffaf1;
   --paper-strong: #ffe9d2;
   --surface: #fffefd;
@@ -32,7 +32,7 @@ html {
     linear-gradient(180deg, var(--paper) 0%, #fffefd 52%, var(--paper) 100%);
   background-size: 42px 42px, auto;
   color: var(--ink);
-  font-family: "Noto Sans TC", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-sans);
 }
 
 body {
@@ -115,7 +115,7 @@ img {
   background: var(--gold);
   overflow: hidden;
   color: var(--red-dark);
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--font-serif);
   font-size: 22px;
   font-weight: 900;
   line-height: 1;
@@ -193,11 +193,7 @@ img {
   border: 3px solid var(--line);
   border-radius: var(--radius);
   padding: clamp(32px, 6vw, 72px);
-  background:
-    linear-gradient(115deg, rgba(58, 13, 9, 0.94), rgba(159, 23, 23, 0.76) 58%, rgba(92, 25, 13, 0.48)),
-    url("/assets/img/jazamila/generated/hero-dining.png");
-  background-position: center;
-  background-size: cover;
+  background: #3a0d09;
   color: #fffdf8;
   box-shadow: var(--shadow-hard);
 }
@@ -206,6 +202,20 @@ img {
 .hero-copy::after {
   content: "";
   position: absolute;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-background {
+  z-index: 0;
+  object-fit: cover;
+}
+
+.hero-scrim {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(115deg, rgba(58, 13, 9, 0.94), rgba(159, 23, 23, 0.76) 58%, rgba(92, 25, 13, 0.48));
   pointer-events: none;
 }
 
@@ -228,7 +238,7 @@ img {
 
 .hero-heading {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   width: min(820px, 100%);
   text-align: center;
 }
@@ -237,7 +247,7 @@ img {
 .page-title {
   position: relative;
   margin: 0;
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--font-serif);
   font-size: clamp(42px, 8vw, 96px);
   font-weight: 900;
   line-height: 1.02;
@@ -281,7 +291,7 @@ img {
 .section-title {
   margin: 0 0 18px;
   color: var(--red-dark);
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--font-serif);
   font-size: clamp(24px, 3.2vw, 34px);
   font-weight: 900;
   line-height: 1.18;
@@ -300,7 +310,7 @@ img {
 
 .decision-form {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   width: min(720px, 100%);
   gap: 8px;
 }
@@ -325,7 +335,7 @@ img {
   min-height: 138px;
   border-width: 3px;
   box-shadow: 6px 6px 0 var(--line);
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--font-serif);
   font-size: clamp(39px, 5.6vw, 56px);
   line-height: 1.1;
 }
@@ -795,6 +805,10 @@ img {
   gap: 0.45rem;
 }
 
+.admin-tag-option[hidden] {
+  display: none;
+}
+
 .admin-classification-section + .admin-classification-section {
   margin-top: 1rem;
 }
@@ -1043,7 +1057,7 @@ img {
   display: block;
   margin-top: 8px;
   color: var(--red-dark);
-  font-family: "Noto Serif TC", serif;
+  font-family: var(--font-serif);
   font-size: 42px;
   line-height: 1;
 }

@@ -61,5 +61,5 @@ In production, the app rejects missing admin credentials, the development passwo
 
 - Run the SQLite import plan against a staging copy of the legacy database.
 - Confirm production persistent volume and backup strategy.
-- Replace local image filename handling with object storage or a persistent upload volume if needed.
+- Provision and verify the persistent shared asset directories defined by the deployment runbook.
 - Extend the production-mode Playwright gate from the current public smoke flows to authenticated admin flows.

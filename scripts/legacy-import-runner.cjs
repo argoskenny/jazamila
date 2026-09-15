@@ -1,3 +1,5 @@
+const { syncLocationLookupsInTransaction } = require("./location-lookups.cjs");
+
 function toInt(value, fallback = 0) {
   const number = Number.parseInt(String(value ?? ""), 10);
   return Number.isFinite(number) ? number : fallback;
@@ -27,7 +29,7 @@ async function replaceTable(model, rows, label, { dryRun, batchSize, logger }) {
   if (dryRun) return;
 
   for (const group of chunks(rows, batchSize)) {
-    await model.createMany({ data: group, skipDuplicates: true });
+    await model.createMany({ data: group });
   }
 }
 
@@ -127,6 +129,9 @@ async function validateCounts(connection, prisma, { dryRun, logger }) {
     const [[legacy]] = await connection.query(`SELECT COUNT(*) AS count FROM \`${table}\``);
     const target = dryRun ? "dry-run" : await model.count();
     logger.log(`${table}: legacy=${legacy.count} sqlite=${target}`);
+    if (!dryRun && Number(legacy.count) !== Number(target)) {
+      throw new Error(`${table} 匯入筆數不一致：legacy=${legacy.count} sqlite=${target}`);
+    }
   }
 }
 
@@ -141,6 +146,7 @@ async function runImport({ prisma, legacy, dryRun, batchSize, logger = console }
     await migrateBlogLinks(legacy, client, options);
     await migrateFeedback(legacy, client, options);
     await validateCounts(legacy, client, options);
+    if (!dryRun) await syncLocationLookupsInTransaction(client);
   }
 
   if (dryRun) {
@@ -154,5 +160,6 @@ async function runImport({ prisma, legacy, dryRun, batchSize, logger = console }
 }
 
 module.exports = {
+  replaceTable,
   runImport
 };

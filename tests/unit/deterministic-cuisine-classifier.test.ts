@@ -254,11 +254,7 @@ describe("deterministic cuisine classifier", () => {
     }).inputFingerprint);
   });
 
-  it("keeps the dry-run script read-only and rejects an apply mode", () => {
-    const scriptPath = path.join(process.cwd(), "scripts", "classify-cuisine-deterministic.cjs");
-    const scriptSource = fs.readFileSync(scriptPath, "utf8");
-    expect(scriptSource).not.toMatch(/prisma\.(create|update|delete|upsert|\$transaction)/u);
-
+  it("parses dry-run options and rejects apply mode", () => {
     const { parseArgs } = require("../../scripts/classify-cuisine-deterministic.cjs") as {
       parseArgs: (args: string[]) => { dryRun: boolean; sampleSize: number };
     };

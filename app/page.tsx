@@ -1,7 +1,8 @@
 import { cookies } from "next/headers";
+import Image from "next/image";
 import { PickRestaurantForm } from "@/components/forms/PickRestaurantForm";
 import { readHomePreferences } from "@/lib/cookies";
-import { getRegions, moneyOptions, sectionsByRegion } from "@/lib/domain/sections";
+import { regions, moneyOptions, sectionsByRegion } from "@/lib/domain/sections";
 import { getActiveCuisineTypeOptions } from "@/lib/domain/restaurants";
 
 export default async function HomePage() {
@@ -12,13 +13,22 @@ export default async function HomePage() {
   return (
     <section className="page-shell hero-grid">
       <div className="hero-copy">
+        <Image
+          className="hero-background"
+          src="/assets/img/jazamila/generated/hero-dining.png"
+          alt=""
+          fill
+          priority
+          sizes="(max-width: 768px) calc(100vw - 32px), 1120px"
+        />
+        <div className="hero-scrim" aria-hidden="true" />
         <div className="hero-heading">
           <h1>等一下吃什麼？</h1>
           <p>不用再想了，交給 JAZAMILA 幫你選一間。</p>
         </div>
         <PickRestaurantForm
           preferences={preferences}
-          regions={getRegions()}
+          regions={regions}
           sectionsByRegion={sectionsByRegion}
           cuisineTypes={cuisineTypes}
           moneyOptions={moneyOptions}

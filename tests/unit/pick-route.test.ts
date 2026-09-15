@@ -28,4 +28,23 @@ describe("restaurant pick route", () => {
     expect([1, 2, 4]).not.toContain(data.res_id);
     expect(response.headers.get("set-cookie")).toContain("recent_restaurants=");
   });
+
+  it("does not return the current restaurant when it is the only matching candidate", async () => {
+    const request = new Request("http://localhost/jazamila_ajax/pick", {
+      method: "POST",
+      headers: { "content-type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        foodwhere_region: "2",
+        foodwhere_section: "1",
+        foodmoney_max: "0",
+        foodmoney_min: "0",
+        foodtype: "0",
+        exclude_restaurant_id: "3"
+      })
+    });
+
+    const response = await POST(request);
+    await expect(response.json()).resolves.toEqual({ status: "success", res_id: 0 });
+    expect(response.headers.get("set-cookie")).not.toContain("recent_restaurants=");
+  });
 });

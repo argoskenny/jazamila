@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { approveBlogAction, rejectBlogAction } from "@/app/admin/blogs/actions";
 import { listBlogLinksForAdmin } from "@/lib/domain/blogs";
 
@@ -11,16 +12,26 @@ function statusLabel(status: number): string {
   return "待審核";
 }
 
+function first(value: string | string[] | undefined): string | undefined {
+  return Array.isArray(value) ? value[0] : value;
+}
+
 export default async function AdminBlogsPage({ searchParams }: Props) {
   const query = await searchParams;
-  const status = query.status === undefined ? undefined : Number.parseInt(String(query.status), 10);
-  const blogLinks = await listBlogLinksForAdmin(Number.isFinite(status) ? status : undefined);
+  const requestedStatus = Number.parseInt(first(query.status) ?? "", 10);
+  const status = Number.isFinite(requestedStatus) ? requestedStatus : undefined;
+  const requestedPage = Number.parseInt(first(query.page) ?? first(query.set) ?? "1", 10);
+  const result = await listBlogLinksForAdmin({
+    status,
+    page: Number.isFinite(requestedPage) ? requestedPage : 1
+  });
+  const statusQuery = status === undefined ? "" : `&status=${status}`;
 
   return (
     <div className="form-grid">
       <div>
         <h1 className="page-title">食記審核</h1>
-        <p className="lead">處理餐廳詳細頁收到的外部食記連結。</p>
+        <p className="lead">處理餐廳詳細頁收到的外部食記連結，共 {result.totalRows} 筆。</p>
       </div>
       <div className="table-wrap">
         <table>
@@ -35,7 +46,7 @@ export default async function AdminBlogsPage({ searchParams }: Props) {
             </tr>
           </thead>
           <tbody>
-            {blogLinks.map((blog) => (
+            {result.blogLinks.map((blog) => (
               <tr key={blog.id}>
                 <td>{blog.id}</td>
                 <td>{blog.b_res_id}</td>
@@ -65,6 +76,11 @@ export default async function AdminBlogsPage({ searchParams }: Props) {
           </tbody>
         </table>
       </div>
+      <nav className="pagination" aria-label="食記分頁">
+        {result.page > 1 ? <Link href={`?page=${result.page - 1}${statusQuery}`}>上一頁</Link> : <span>上一頁</span>}
+        <span className="active">{result.page} / {result.totalPages}</span>
+        {result.page < result.totalPages ? <Link href={`?page=${result.page + 1}${statusQuery}`}>下一頁</Link> : <span>下一頁</span>}
+      </nav>
     </div>
   );
 }

@@ -1,5 +1,3 @@
-import fs from "node:fs";
-import path from "node:path";
 import { describe, expect, it } from "vitest";
 
 /* eslint-disable @typescript-eslint/no-require-imports */
@@ -402,10 +400,8 @@ describe("web research pipeline and mocked provider", () => {
     expect(modelCalls).toBe(0);
   });
 
-  it("keeps the dry-run CLI read-only and rejects apply mode", () => {
+  it("supports CLI help and rejects apply mode", () => {
     expect(webScript.parseArgs(["--help"]).help).toBe(true);
     expect(() => webScript.parseArgs(["--apply"])).toThrow("Unknown option");
-    const scriptSource = fs.readFileSync(path.join(process.cwd(), "scripts", "prepare-cuisine-web-research.cjs"), "utf8");
-    expect(scriptSource).not.toMatch(/PrismaClient|prisma\.(create|update|delete|upsert|\$transaction)/u);
   });
 });

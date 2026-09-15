@@ -1,6 +1,7 @@
 import type { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/db/prisma";
 import type { Feedback } from "@/lib/domain/types";
+import { clampPage } from "@/lib/pagination";
 import { feedbackSchema } from "@/lib/validation/forms";
 
 type PrismaFeedback = Prisma.FeedbackGetPayload<object>;
@@ -30,11 +31,23 @@ export async function createFeedback(input: unknown): Promise<Feedback> {
   return fromPrismaFeedback(feedback);
 }
 
-export async function listFeedbackForAdmin(): Promise<Feedback[]> {
+export async function listFeedbackForAdmin({ page = 1, perPage = 50 } = {}) {
+  const take = Math.min(Math.max(1, perPage), 100);
+  const totalRows = await prisma.feedback.count();
+  const totalPages = Math.max(1, Math.ceil(totalRows / take));
+  const currentPage = clampPage(page, totalPages);
   const feedback = await prisma.feedback.findMany({
-    orderBy: { id: "desc" }
+    orderBy: { id: "desc" },
+    skip: (currentPage - 1) * take,
+    take
   });
-  return feedback.map(fromPrismaFeedback);
+  return {
+    feedback: feedback.map(fromPrismaFeedback),
+    totalRows,
+    totalPages,
+    page: currentPage,
+    perPage: take
+  };
 }
 
 export async function markFeedbackRead(id: number): Promise<Feedback | null> {

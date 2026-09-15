@@ -69,7 +69,7 @@ npm run db:setup
 For production SQLite schema sync:
 
 ```bash
-DATABASE_URL="file:/var/lib/jazamila/jazamila.sqlite" npm run db:push:prod
+DATABASE_URL="file:/var/lib/jazamila/jazamila.sqlite" npm run db:migrate:prod
 ```
 
 ## Development Conventions
@@ -101,8 +101,8 @@ Important files:
 
 - Some compatibility endpoints still intentionally preserve legacy response shapes.
 - The legacy import script needs staging dry-run results before production use.
-- Image upload/storage is still local-file oriented and needs a production volume or object-storage decision.
-- Playwright E2E coverage has not been added yet.
+- Runtime image storage uses the deployment runbook's shared persistent asset directories; the host mount/symlink still needs staging verification.
+- Playwright E2E covers the main public decision, filtering, detail, and return flows; admin mutation coverage should still be expanded.
 
 ## Before Finishing Changes
 

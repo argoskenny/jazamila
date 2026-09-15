@@ -59,8 +59,19 @@ LEGACY_DATABASE_URL="mysql://legacy_user:password@host:3306/jazamila_legacy"
 建立 SQLite 檔案與 schema：
 
 ```bash
-DATABASE_URL="file:/var/lib/jazamila/jazamila.sqlite" npm run db:push:prod
+DATABASE_URL="file:/var/lib/jazamila/jazamila.sqlite" npm run db:migrate:prod
 ```
+
+既有 legacy SQLite 若已有 baseline schema、但尚未建立 `_prisma_migrations`，必須先確認 schema 與
+`00000000000000_legacy_baseline` 相符，再僅執行一次：
+
+```bash
+DATABASE_URL="file:/var/lib/jazamila/jazamila.sqlite" \
+  npx prisma migrate resolve --applied 00000000000000_legacy_baseline
+DATABASE_URL="file:/var/lib/jazamila/jazamila.sqlite" npm run db:migrate:prod
+```
+
+不得以 `prisma db push` 更新 staging 或 production；正式 schema history 一律由 migrations 管理。
 
 若是全新站可 seed：
 
@@ -155,7 +166,7 @@ sqlite3 /var/lib/jazamila/jazamila.sqlite ".backup '/backups/jazamila-$(date +%Y
 1. 確認 production host 有 persistent volume。
 2. 建立 `/var/lib/jazamila` 並設定權限。
 3. 設定 `.env.production`。
-4. 執行 `db:push:prod`。
+4. 執行 `db:migrate:prod`。
 5. 對 legacy DB 執行 dry-run。
 6. 暫停 legacy 寫入。
 7. 備份 legacy DB 與 uploads/assets。

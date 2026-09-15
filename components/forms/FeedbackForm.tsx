@@ -9,11 +9,12 @@ export function FeedbackForm() {
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const form = event.currentTarget;
     setIsSubmitting(true);
     setStatus("");
 
     try {
-      const formData = new FormData(event.currentTarget);
+      const formData = new FormData(form);
       formData.set("recaptcha_token", await executeRecaptcha("feedback"));
 
       const response = await fetch("/jazamila_ajax/save_feedback_post", {
@@ -22,11 +23,12 @@ export function FeedbackForm() {
       });
       const text = await response.text();
       setStatus(text === "success" ? "已送出你的問題或建議，感謝你。" : "送出失敗，請稍後再試。");
-      if (text === "success") event.currentTarget.reset();
+      if (text === "success") form.reset();
     } catch {
       setStatus("驗證失敗，請稍後再試。");
+    } finally {
+      setIsSubmitting(false);
     }
-    setIsSubmitting(false);
   }
 
   return (
@@ -37,7 +39,7 @@ export function FeedbackForm() {
         <input className="input" name="name" placeholder="請輸入大名" required />
       </label>
       <label className="field">
-        <span>電子郵件</span>
+        <span>電子郵件 *</span>
         <input className="input" name="email" placeholder="請輸入電子郵件信箱" type="email" required />
       </label>
       <label className="field">

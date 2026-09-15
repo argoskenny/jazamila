@@ -9,11 +9,12 @@ export function BlogLinkForm({ restaurantId }: { restaurantId: number }) {
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const form = event.currentTarget;
     setIsSubmitting(true);
     setStatus("");
 
     try {
-      const formData = new FormData(event.currentTarget);
+      const formData = new FormData(form);
       formData.set("res_id", String(restaurantId));
       formData.set("recaptcha_token", await executeRecaptcha("blog_save"));
 
@@ -23,11 +24,12 @@ export function BlogLinkForm({ restaurantId }: { restaurantId: number }) {
       });
       const data = (await response.json()) as { status: string };
       setStatus(data.status === "success" ? "已儲存成功，感謝你的分享！" : "送出失敗，請確認網址。");
-      if (data.status === "success") event.currentTarget.reset();
+      if (data.status === "success") form.reset();
     } catch {
       setStatus("驗證失敗，請稍後再試。");
+    } finally {
+      setIsSubmitting(false);
     }
-    setIsSubmitting(false);
   }
 
   return (

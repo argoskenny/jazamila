@@ -1,4 +1,16 @@
+import type { Metadata } from "next";
 import { FeedbackForm } from "@/components/forms/FeedbackForm";
+
+export const metadata: Metadata = {
+  title: "關於本站",
+  description: "了解 JAZAMILA 如何用簡單的方式幫你決定今天吃什麼。",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "關於本站｜JAZAMILA",
+    description: "了解 JAZAMILA 如何用簡單的方式幫你決定今天吃什麼。",
+    url: "/about"
+  }
+};
 
 const faqs = [
   {

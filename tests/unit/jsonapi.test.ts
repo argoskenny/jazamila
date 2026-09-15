@@ -47,4 +47,36 @@ describe("jsonapi", () => {
 
     expect(data.map((restaurant) => restaurant.res_name)).not.toContain("Closed Diner");
   });
+
+  it("supports shared-cache and conditional requests", async () => {
+    const first = await GET();
+    const etag = first.headers.get("etag");
+
+    expect(first.headers.get("cache-control")).toContain("s-maxage=3600");
+    expect(etag).toMatch(/^".+"$/);
+
+    const conditional = await GET(new Request("http://localhost/jsonapi", {
+      headers: { "if-none-match": etag ?? "" }
+    }));
+    expect(conditional.status).toBe(304);
+    expect(await conditional.text()).toBe("");
+  });
+
+  it("returns the complete legacy array instead of silently truncating at 500 rows", async () => {
+    const prefix = "JSON API 完整清單測試";
+    const publicBefore = await prisma.restaurant.count({ where: { closed: { not: 1 } } });
+    await prisma.restaurant.createMany({
+      data: Array.from({ length: 501 }, (_, index) => ({ name: `${prefix}-${index}` }))
+    });
+
+    try {
+      const response = await GET();
+      const data = (await response.json()) as Array<{ res_name: string }>;
+
+      expect(data).toHaveLength(publicBefore + 501);
+      expect(data.some((restaurant) => restaurant.res_name === `${prefix}-500`)).toBe(true);
+    } finally {
+      await prisma.restaurant.deleteMany({ where: { name: { startsWith: prefix } } });
+    }
+  });
 });

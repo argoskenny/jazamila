@@ -3,7 +3,6 @@ import {
   cuisineTypeCatalog,
   cuisineTypeCodeForLegacyFoodType,
   cuisineTypeForLegacyFoodType,
-  getPublicCuisineTypes,
   listSegmentForCuisineTypeTokens,
   normalizeCuisineTypeQueryTokens
 } from "@/lib/domain/cuisine-types";
@@ -19,22 +18,9 @@ describe("cuisine type catalog and compatibility mapping", () => {
     expect(cuisineTypeCodeForLegacyFoodType(99)).toBeNull();
   });
 
-  it("has unique normalized names and no candidate in public options", () => {
+  it("has unique normalized names", () => {
     const normalizedNames = cuisineTypeCatalog.map((cuisineType) => cuisineType.normalizedName);
     expect(new Set(normalizedNames).size).toBe(normalizedNames.length);
-
-    const withCandidate = [
-      ...cuisineTypeCatalog,
-      {
-        code: "candidate-test",
-        name: "候選料理",
-        normalizedName: "候選料理",
-        status: "candidate" as const,
-        createdBy: "ai" as const,
-        legacyFoodType: null
-      }
-    ];
-    expect(getPublicCuisineTypes(withCandidate).some((cuisineType) => cuisineType.status === "candidate")).toBe(false);
   });
 
   it("normalizes detail query tokens and preserves a single canonical list segment", () => {

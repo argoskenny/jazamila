@@ -200,10 +200,6 @@ function cleanText(value) {
   return String(value ?? "").normalize("NFKC").replace(/\s+/gu, " ").trim();
 }
 
-function normalizeKey(value) {
-  return cleanText(value).toLocaleLowerCase("en-US").replace(/[^\p{L}\p{N}]+/gu, "");
-}
-
 function sha256File(filePath) {
   return crypto.createHash("sha256").update(fs.readFileSync(filePath)).digest("hex");
 }
@@ -404,11 +400,6 @@ function resultForRequest(request) {
     result = build();
   }
   throw new Error(`restaurant ${request.restaurantId}: tag validation did not converge`);
-}
-
-function resultTargetKey(result) {
-  if (result.proposedNewCuisineType) return result.proposedNewCuisineType.normalizedName;
-  return String(result.selectedCuisineTypeId);
 }
 
 function classificationSummary(results) {

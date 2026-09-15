@@ -6,14 +6,12 @@ import { foodTypes, getSections, labelFor, regions } from "@/lib/domain/sections
 import {
   cuisineTypeForLegacyFoodType,
   cuisineTypeOptionFor,
-  cuisineTypeCatalog,
   type CuisineTypeRecord
 } from "@/lib/domain/cuisine-types";
 import type { AuxiliaryTagOption, CuisineTypeOption, ListFilters, Restaurant, RestaurantCriteria, RestaurantView } from "@/lib/domain/types";
 import { restaurantAdminSchema } from "@/lib/validation/forms";
 
 const perPage = 10;
-const defaultPublicListLimit = 500;
 
 type PrismaRestaurant = Prisma.RestaurantGetPayload<object> & {
   city?: { name: string } | null;
@@ -220,8 +218,8 @@ export function summarizeRestaurantTags(tags: string[], foodTypeLabel: string, v
   };
 }
 
-function imagePathForRestaurant(restaurant: Restaurant): string {
-  const filename = restaurant.res_img_url.trim().split(/[\\/]/).pop() ?? "";
+function imagePathForValue(imageUrl: string | null | undefined): string {
+  const filename = (imageUrl ?? "").trim().split(/[\\/]/).pop() ?? "";
   if (!filename || filename === "." || filename === "..") return defaultRestaurantImagePath;
   return `/assets/pics/${encodeURIComponent(filename)}`;
 }
@@ -322,7 +320,7 @@ export function toRestaurantView(restaurant: Restaurant): RestaurantView {
     cuisineTypeLabel: labelFor(foodTypes, restaurant.res_foodtype, "未分類"),
     telLabel: tel,
     priceLabel: restaurant.res_price > 0 ? `${restaurant.res_price} 元左右` : "價格彈性",
-    imagePath: imagePathForRestaurant(restaurant),
+    imagePath: imagePathForValue(restaurant.res_img_url),
     fallbackImagePath: defaultRestaurantImagePath,
     cityLabel: labelFor(regions, restaurant.res_region, "未知縣市"),
     districtLabel: labelFor(getSections(restaurant.res_region), restaurant.res_section, ""),
@@ -425,25 +423,6 @@ export function buildListPath(filters: ListFilters, page: number): string {
   return `/listdata/${filters.location}/${typeSegment}/${filters.maxPrice}/${filters.minPrice}/${page}${query}`;
 }
 
-export function describeFilters(filters: ListFilters): string {
-  const parts: string[] = [];
-  if (filters.location !== "0") {
-    const region = labelFor(regions, filters.regionId, "");
-    const section = filters.sectionId ? labelFor(getSections(filters.regionId), filters.sectionId, "") : "";
-    parts.push(`地點為${region}${section}`);
-  }
-  if (filters.cuisineTypeCode) {
-    const knownType = cuisineTypeCatalog.find((type) => type.code === filters.cuisineTypeCode);
-    parts.push(`美食類型為${knownType?.name ?? filters.cuisineTypeCode}`);
-  } else if (filters.foodType) parts.push(`美食類型為${labelFor(foodTypes, filters.foodType, "")}`);
-  if (filters.maxPrice || filters.minPrice) {
-    const max = filters.maxPrice === 0 ? "無上限" : `${filters.maxPrice}元`;
-    parts.push(`平均價位由${filters.minPrice}元至${max}`);
-  }
-  if (filters.keyword) parts.push(`關鍵字為${filters.keyword}`);
-  return `${parts.length ? parts.join("，") : "所有"}的餐廳`;
-}
-
 export async function getRestaurantDetail(id: number): Promise<RestaurantView | null> {
   const restaurant = await prisma.restaurant.findFirst({
     where: {
@@ -497,34 +476,87 @@ export async function pickRestaurant(criteria: RestaurantCriteria): Promise<Rest
   return selected ? toRestaurantViewFromPrisma(selected) : null;
 }
 
-export async function listAllRestaurants(): Promise<RestaurantView[]> {
+export async function listPublicRestaurantIds(): Promise<number[]> {
   const restaurants = await prisma.restaurant.findMany({
-    include: publicRestaurantInclude,
+    where: { closed: { not: 1 } },
+    select: { id: true },
     orderBy: { id: "asc" }
   });
-  return restaurants.map(toRestaurantViewFromPrisma);
+  return restaurants.map((restaurant) => restaurant.id);
 }
 
-export async function listPublicRestaurants({ limit = defaultPublicListLimit } = {}): Promise<RestaurantView[]> {
+export async function listPublicRestaurantApiRows() {
   const restaurants = await prisma.restaurant.findMany({
-    where: {
-      closed: { not: 1 }
+    where: { closed: { not: 1 } },
+    select: {
+      id: true,
+      name: true,
+      region: true,
+      section: true,
+      price: true,
+      foodType: true,
+      address: true,
+      imageUrl: true,
+      externalImageUrl: true,
+      cuisineType: { select: { name: true } }
     },
-    include: publicRestaurantInclude,
-    orderBy: { id: "asc" },
-    take: Math.min(Math.max(1, limit), defaultPublicListLimit)
+    orderBy: { id: "asc" }
   });
-  return restaurants.map(toRestaurantViewFromPrisma);
+
+  return restaurants.map((restaurant) => {
+    const externalImageUrl = restaurant.externalImageUrl?.trim();
+    return {
+      id: restaurant.id,
+      res_name: restaurant.name,
+      res_region: labelFor(regions, restaurant.region, "未知縣市"),
+      res_section: labelFor(getSections(restaurant.region), restaurant.section, "未知區域"),
+      res_price: restaurant.price,
+      res_foodtype: restaurant.cuisineType?.name ?? labelFor(foodTypes, restaurant.foodType, "未分類"),
+      res_address: restaurant.address ?? "",
+      imagePath: externalImageUrl && /^https?:\/\//i.test(externalImageUrl)
+        ? externalImageUrl
+        : imagePathForValue(restaurant.imageUrl)
+    };
+  });
 }
 
-export async function createRestaurant(input: Omit<Restaurant, "id">): Promise<RestaurantView> {
+async function resolveLocation(
+  tx: Prisma.TransactionClient,
+  region: number,
+  section: number
+): Promise<{ cityId: number | null; districtId: number | null }> {
+  const city = region > 0
+    ? await tx.city.findUnique({ where: { legacyRegion: region } })
+    : null;
+  if (region > 0 && !city) throw new Error("無效的縣市");
+  if (region === 0 && section > 0) throw new Error("地區必須隸屬於有效縣市");
+
+  const district = city && section > 0
+    ? await tx.district.findUnique({
+        where: { cityId_legacySection: { cityId: city.id, legacySection: section } }
+      })
+    : null;
+  if (section > 0 && !district) throw new Error("地區與縣市不相符");
+
+  return { cityId: city?.id ?? null, districtId: district?.id ?? null };
+}
+
+async function createRestaurantInTransaction(
+  tx: Prisma.TransactionClient,
+  input: Omit<Restaurant, "id">
+) {
   const selectedCuisineType = input.cuisine_type_id && input.cuisine_type_id > 0
-    ? await prisma.cuisineType.findFirst({ where: { id: input.cuisine_type_id, status: "active" } })
+    ? await tx.cuisineType.findFirst({ where: { id: input.cuisine_type_id, status: "active" } })
     : null;
   if (input.cuisine_type_id && input.cuisine_type_id > 0 && !selectedCuisineType) {
     throw new Error("只能選擇 active CuisineType");
   }
-  const restaurant = await prisma.restaurant.create({
+  const location = await resolveLocation(tx, input.res_region, input.res_section);
+  const phone = input.res_tel_num
+    ? `${input.res_area_num} ${input.res_tel_num}`.trim()
+    : null;
+
+  return tx.restaurant.create({
     data: {
       name: input.res_name,
       areaNum: input.res_area_num,
@@ -542,181 +574,196 @@ export async function createRestaurant(input: Omit<Restaurant, "id">): Promise<R
       originalImage: input.res_img_ori_url ?? "",
       updatedAtUnix: input.res_updatetime ?? 0,
       postId: input.res_post_id ?? 0,
-      closed: input.res_close ?? 0
-    }
+      closed: input.res_close ?? 0,
+      phone,
+      cityId: location.cityId,
+      districtId: location.districtId
+    },
+    include: adminRestaurantInclude
   });
-  const hydrated = await prisma.restaurant.findUnique({ where: { id: restaurant.id }, include: adminRestaurantInclude });
-  return hydrated ? toRestaurantViewFromPrisma(hydrated) : toRestaurantViewFromPrisma(restaurant);
 }
 
-export async function updateRestaurant(
+async function updateRestaurantInTransaction(
+  tx: Prisma.TransactionClient,
   id: number,
   input: Partial<Omit<Restaurant, "id">>
+){
+  const beforeRestaurant = await tx.restaurant.findUnique({ where: { id }, include: adminRestaurantInclude });
+  if (!beforeRestaurant) return null;
+
+  const changesRegion = input.res_region !== undefined;
+  const changesSection = input.res_section !== undefined;
+  if (changesRegion !== changesSection) {
+    throw new Error("縣市與地區必須同時更新");
+  }
+  const location = changesRegion && changesSection
+    ? await resolveLocation(tx, input.res_region!, input.res_section!)
+    : null;
+  const phoneArea = input.res_area_num ?? beforeRestaurant.areaNum ?? "";
+  const phoneNumber = input.res_tel_num ?? beforeRestaurant.telNum ?? "";
+  const selectedCuisineType = input.cuisine_type_id === undefined || input.cuisine_type_id === null || input.cuisine_type_id === 0
+    ? input.cuisine_type_id === undefined ? undefined : null
+    : await tx.cuisineType.findFirst({ where: { id: input.cuisine_type_id, status: "active" } });
+  if (input.cuisine_type_id && input.cuisine_type_id > 0 && !selectedCuisineType) {
+    throw new Error("只能選擇 active CuisineType");
+  }
+
+  const adminData = {
+    name: input.res_name,
+    areaNum: input.res_area_num,
+    telNum: input.res_tel_num,
+    region: input.res_region,
+    section: input.res_section,
+    address: input.res_address,
+    foodType: input.cuisine_type_id === undefined
+      ? input.res_foodtype
+      : selectedCuisineType?.legacyFoodType ?? 0,
+    cuisineTypeId: input.cuisine_type_id === undefined ? undefined : selectedCuisineType?.id ?? null,
+    price: input.res_price,
+    note: input.res_note,
+    imageUrl: input.res_img_url === "" && beforeRestaurant.imageUrl == null
+      ? beforeRestaurant.imageUrl
+      : input.res_img_url,
+    closed: input.res_close
+  } as const;
+  const changedFields = Object.entries(adminData)
+    .filter(([, value]) => value !== undefined)
+    .filter(([field, value]) => beforeRestaurant[field as keyof typeof beforeRestaurant] !== value)
+    .map(([field]) => field);
+  const manualOverrideFields = changedFields.length === 0
+    ? beforeRestaurant.manualOverrideFields
+    : JSON.stringify([...new Set([...parseStringArray(beforeRestaurant.manualOverrideFields), ...changedFields])].sort());
+  const before = auditSnapshot(beforeRestaurant as PrismaRestaurant);
+
+  await tx.restaurant.update({
+    where: { id },
+    data: {
+      ...adminData,
+      phone: input.res_area_num !== undefined || input.res_tel_num !== undefined
+        ? phoneNumber ? `${phoneArea} ${phoneNumber}`.trim() : null
+        : undefined,
+      cityId: location?.cityId,
+      districtId: location?.districtId,
+      updatedAtUnix: input.res_updatetime,
+      manualOverrideFields
+    }
+  });
+  const restaurant = await tx.restaurant.findUnique({ where: { id }, include: adminRestaurantInclude });
+  if (!restaurant) return null;
+  const after = auditSnapshot(restaurant as PrismaRestaurant);
+  if (before.cuisineTypeId !== after.cuisineTypeId) {
+    await writeAdminClassificationAudit(tx, id, before, after, "update-cuisine-type");
+  }
+  return restaurant;
+}
+
+async function updateRestaurantAuxiliaryTagsInTransaction(
+  tx: Prisma.TransactionClient,
+  id: number,
+  selectedTagIds: number[],
+  newTagNames: string[]
+){
+  const selected = new Set(selectedTagIds.filter((tagId) => Number.isInteger(tagId) && tagId > 0));
+  const requestedNames = [...new Set(newTagNames.map((name) => name.normalize("NFKC").replace(/\s+/gu, " ").trim()).filter(Boolean))];
+  const beforeRestaurant = await tx.restaurant.findUnique({ where: { id }, include: adminRestaurantInclude });
+  if (!beforeRestaurant) throw new Error("找不到餐廳");
+  const before = auditSnapshot(beforeRestaurant as PrismaRestaurant);
+
+  for (const name of requestedNames) {
+    const normalizedName = normalizedTagName(name);
+    const tag = await tx.tag.upsert({
+      where: { normalizedName },
+      update: {},
+      create: { name, normalizedName }
+    });
+    selected.add(tag.id);
+  }
+
+  const selectedTags = selected.size > 0
+    ? await tx.tag.findMany({ where: { id: { in: [...selected] } }, select: { id: true } })
+    : [];
+  if (selectedTags.length !== selected.size) throw new Error("包含不存在的輔助標籤");
+
+  const relationByTagId = new Map(beforeRestaurant.tags.map((relation) => [relation.tagId, relation]));
+  for (const relation of beforeRestaurant.tags) {
+    if ((relation.kind ?? "auxiliary") !== "auxiliary" || selected.has(relation.tagId) || !relation.isPublic) continue;
+    await tx.restaurantTag.update({
+      where: { restaurantId_tagId: { restaurantId: id, tagId: relation.tagId } },
+      data: {
+        owner: "manual",
+        kind: "auxiliary",
+        isPublic: false,
+        visibilityReason: "admin-removed"
+      }
+    });
+  }
+
+  let nextPosition = beforeRestaurant.tags.reduce((max, relation) => Math.max(max, relation.position), -1) + 1;
+  for (const tagId of selected) {
+    const existingRelation = relationByTagId.get(tagId);
+    if (
+      existingRelation?.owner === "manual" &&
+      existingRelation.kind === "auxiliary" &&
+      existingRelation.isPublic &&
+      existingRelation.visibilityReason === null
+    ) continue;
+
+    await tx.restaurantTag.upsert({
+      where: { restaurantId_tagId: { restaurantId: id, tagId } },
+      update: { owner: "manual", kind: "auxiliary", isPublic: true, visibilityReason: null },
+      create: {
+        restaurantId: id,
+        tagId,
+        position: nextPosition++,
+        owner: "manual",
+        kind: "auxiliary",
+        isPublic: true
+      }
+    });
+  }
+
+  const afterRestaurant = await tx.restaurant.findUnique({ where: { id }, include: adminRestaurantInclude });
+  if (!afterRestaurant) throw new Error("儲存輔助標籤後找不到餐廳");
+  const after = auditSnapshot(afterRestaurant as PrismaRestaurant);
+  if (JSON.stringify(before) !== JSON.stringify(after)) {
+    const currentFields = parseStringArray(beforeRestaurant.manualOverrideFields);
+    await tx.restaurant.update({
+      where: { id },
+      data: { manualOverrideFields: JSON.stringify([...new Set([...currentFields, "tags"])].sort()) }
+    });
+  }
+  await writeAdminClassificationAudit(tx, id, before, after, "update-auxiliary-tags");
+  return afterRestaurant;
+}
+
+export async function createRestaurantWithAuxiliaryTags(
+  input: Omit<Restaurant, "id">,
+  selectedTagIds: number[],
+  newTagNames: string[]
+): Promise<RestaurantView> {
+  return prisma.$transaction(async (tx) => {
+    const restaurant = await createRestaurantInTransaction(tx, input);
+    const hydrated = await updateRestaurantAuxiliaryTagsInTransaction(tx, restaurant.id, selectedTagIds, newTagNames);
+    return toRestaurantViewFromPrisma(hydrated);
+  });
+}
+
+export async function updateRestaurantWithAuxiliaryTags(
+  id: number,
+  input: Partial<Omit<Restaurant, "id">>,
+  selectedTagIds: number[],
+  newTagNames: string[]
 ): Promise<RestaurantView | null> {
   try {
-    const existing = await prisma.restaurant.findUnique({ where: { id } });
-    if (!existing) return null;
-    const city = input.res_region === undefined
-      ? null
-      : await prisma.city.findUnique({ where: { legacyRegion: input.res_region } });
-    const district = city && input.res_section !== undefined
-      ? await prisma.district.findUnique({
-          where: { cityId_legacySection: { cityId: city.id, legacySection: input.res_section } }
-        })
-      : null;
-    const phoneArea = input.res_area_num ?? existing.areaNum ?? "";
-    const phoneNumber = input.res_tel_num ?? existing.telNum ?? "";
-    const selectedCuisineType = input.cuisine_type_id === undefined || input.cuisine_type_id === null || input.cuisine_type_id === 0
-      ? input.cuisine_type_id === undefined ? undefined : null
-      : await prisma.cuisineType.findFirst({ where: { id: input.cuisine_type_id, status: "active" } });
-    if (input.cuisine_type_id && input.cuisine_type_id > 0 && !selectedCuisineType) return null;
-    const adminData = {
-      name: input.res_name,
-      areaNum: input.res_area_num,
-      telNum: input.res_tel_num,
-      region: input.res_region,
-      section: input.res_section,
-      address: input.res_address,
-      foodType: input.cuisine_type_id === undefined
-        ? input.res_foodtype
-        : selectedCuisineType?.legacyFoodType ?? 0,
-      cuisineTypeId: input.cuisine_type_id === undefined ? undefined : selectedCuisineType?.id ?? null,
-      price: input.res_price,
-      note: input.res_note,
-      imageUrl: input.res_img_url === "" && existing.imageUrl == null ? existing.imageUrl : input.res_img_url,
-      closed: input.res_close
-    } as const;
-    let manualOverrideFields: string | null | undefined;
-    {
-      let previous: string[] = [];
-      try {
-        const parsed = JSON.parse(existing.manualOverrideFields ?? "[]");
-        if (Array.isArray(parsed)) previous = parsed.filter((field): field is string => typeof field === "string");
-      } catch {
-        previous = [];
-      }
-      const changed = Object.entries(adminData)
-        .filter(([, value]) => value !== undefined)
-        .filter(([field, value]) => existing[field as keyof typeof existing] !== value)
-        .map(([field]) => field);
-      manualOverrideFields = changed.length === 0
-        ? existing.manualOverrideFields
-        : JSON.stringify([...new Set([...previous, ...changed])].sort());
-    }
     return await prisma.$transaction(async (tx) => {
-      const beforeRestaurant = await tx.restaurant.findUnique({ where: { id }, include: adminRestaurantInclude });
-      if (!beforeRestaurant) return null;
-      const before = auditSnapshot(beforeRestaurant as PrismaRestaurant);
-      await tx.restaurant.update({
-        where: { id },
-        data: {
-          ...adminData,
-          phone: input.res_area_num !== undefined || input.res_tel_num !== undefined
-            ? phoneNumber ? `${phoneArea} ${phoneNumber}`.trim() : null
-            : undefined,
-          cityId: city?.id,
-          districtId: district?.id,
-          updatedAtUnix: input.res_updatetime,
-          manualOverrideFields
-        }
-      });
-      const restaurant = await tx.restaurant.findUnique({ where: { id }, include: adminRestaurantInclude });
+      const restaurant = await updateRestaurantInTransaction(tx, id, input);
       if (!restaurant) return null;
-      const after = auditSnapshot(restaurant as PrismaRestaurant);
-      if (before.cuisineTypeId !== after.cuisineTypeId) {
-        await writeAdminClassificationAudit(tx, id, before, after, "update-cuisine-type");
-      }
-      return toRestaurantViewFromPrisma(restaurant);
+      const hydrated = await updateRestaurantAuxiliaryTagsInTransaction(tx, id, selectedTagIds, newTagNames);
+      return toRestaurantViewFromPrisma(hydrated);
     });
   } catch {
     return null;
   }
-}
-
-export async function updateRestaurantAuxiliaryTags(
-  id: number,
-  selectedTagIds: number[],
-  newTagNames: string[]
-): Promise<void> {
-  const selected = new Set(selectedTagIds.filter((tagId) => Number.isInteger(tagId) && tagId > 0));
-  const requestedNames = [...new Set(newTagNames.map((name) => name.normalize("NFKC").replace(/\s+/gu, " ").trim()).filter(Boolean))];
-  await prisma.$transaction(async (tx) => {
-    const beforeRestaurant = await tx.restaurant.findUnique({ where: { id }, include: adminRestaurantInclude });
-    if (!beforeRestaurant) throw new Error("找不到餐廳");
-    const before = auditSnapshot(beforeRestaurant as PrismaRestaurant);
-    let changed = false;
-    for (const relation of beforeRestaurant.tags) {
-      if ((relation.kind ?? "auxiliary") !== "auxiliary") continue;
-      const shouldBePublic = selected.has(relation.tagId);
-      if (relation.isPublic !== shouldBePublic) {
-        changed = true;
-        await tx.restaurantTag.update({
-          where: { restaurantId_tagId: { restaurantId: id, tagId: relation.tagId } },
-          data: {
-            owner: "manual",
-            kind: "auxiliary",
-            isPublic: shouldBePublic,
-            visibilityReason: shouldBePublic ? null : "admin-removed"
-          }
-        });
-      }
-    }
-    for (const name of requestedNames) {
-      const normalizedName = normalizedTagName(name);
-      const tag = await tx.tag.upsert({
-        where: { normalizedName },
-        update: {},
-        create: { name, normalizedName }
-      });
-      selected.add(tag.id);
-      const existingRelation = beforeRestaurant.tags.find((relation) => relation.tagId === tag.id);
-      if (!existingRelation || !existingRelation.isPublic || existingRelation.kind !== "auxiliary") changed = true;
-      await tx.restaurantTag.upsert({
-        where: { restaurantId_tagId: { restaurantId: id, tagId: tag.id } },
-        update: { owner: "manual", kind: "auxiliary", isPublic: true, visibilityReason: null },
-        create: {
-          restaurantId: id,
-          tagId: tag.id,
-          position: beforeRestaurant.tags.reduce((max, relation) => Math.max(max, relation.position), -1) + selected.size,
-          owner: "manual",
-          kind: "auxiliary",
-          isPublic: true
-        }
-      });
-    }
-    if (changed) {
-      const currentFields = parseStringArray(beforeRestaurant.manualOverrideFields);
-      await tx.restaurant.update({
-        where: { id },
-        data: { manualOverrideFields: JSON.stringify([...new Set([...currentFields, "tags"])].sort()) }
-      });
-    }
-    const afterRestaurant = await tx.restaurant.findUnique({ where: { id }, include: adminRestaurantInclude });
-    if (!afterRestaurant) throw new Error("儲存輔助標籤後找不到餐廳");
-    await writeAdminClassificationAudit(tx, id, before, auditSnapshot(afterRestaurant as PrismaRestaurant), "update-auxiliary-tags");
-  });
-}
-
-export function restaurantFromForm(input: Record<string, FormDataEntryValue>): Omit<Restaurant, "id"> {
-  return {
-    res_name: String(input.res_name ?? ""),
-    res_area_num: String(input.res_area_num ?? "02").padStart(2, "0"),
-    res_tel_num: String(input.res_tel_num ?? ""),
-    res_region: toInt(String(input.res_region ?? "0")),
-    res_section: toInt(String(input.res_section ?? "0")),
-    res_address: String(input.res_address ?? ""),
-    res_foodtype: toInt(String(input.res_foodtype ?? "0")),
-    cuisine_type_id: input.cuisine_type_id === undefined ? undefined : toInt(String(input.cuisine_type_id ?? "0")),
-    res_price: toInt(String(input.res_price ?? "0")),
-    res_open_time: 0,
-    res_close_time: 0,
-    res_note: String(input.res_note ?? ""),
-    res_img_url: String(input.res_img_url ?? "preview_1380970870.jpg"),
-    res_img_ori_url: "",
-    res_updatetime: Math.floor(Date.now() / 1000),
-    res_post_id: 0,
-    res_close: 0
-  };
 }
 
 export function restaurantFromAdminForm(input: unknown): Omit<Restaurant, "id"> {

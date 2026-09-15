@@ -1,10 +1,24 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { getSiteUrl } from "@/lib/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "JAZAMILA",
+  metadataBase: getSiteUrl(),
+  title: {
+    default: "JAZAMILA｜今天吃什麼",
+    template: "%s｜JAZAMILA"
+  },
   description: "JAZAMILA內有許多美食、餐廳的資料，幫你解決不知該吃哪間餐廳的煩惱。",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "zh_TW",
+    siteName: "JAZAMILA",
+    title: "JAZAMILA｜今天吃什麼",
+    description: "從餐廳資料中快速挑出今天的一餐。",
+    url: "/"
+  },
   icons: {
     icon: "/assets/img/jazamila/logo/jazamila.ico"
   }
@@ -30,7 +44,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         </header>
         <main>{children}</main>
         <footer className="site-footer">
-          <span>2025 JAZAMILA</span>
+          <span>{new Date().getFullYear()} JAZAMILA</span>
           <Link href="/admin">管理後台</Link>
         </footer>
       </body>

@@ -410,6 +410,7 @@ describe("res-data importer", () => {
   });
 
   it("rolls back the whole import when a late write fails", async () => {
+    const cityCountBefore = await prisma.city.count({ where: { code: "chiayi-city" } });
     const prepared = importer.prepareImport({
       documents: [source("chiayi-city-dong-restaurants.json", "嘉義市", "東區", [record({
         id: "atomic-rollback-record",
@@ -438,7 +439,7 @@ describe("res-data importer", () => {
     })).rejects.toThrow();
 
     await expect(prisma.restaurant.count({ where: { importKey } })).resolves.toBe(0);
-    await expect(prisma.city.count({ where: { code: "chiayi-city" } })).resolves.toBe(0);
+    await expect(prisma.city.count({ where: { code: "chiayi-city" } })).resolves.toBe(cityCountBefore);
   });
 
   it("migrates a legacy content-derived key in place through source refs", async () => {

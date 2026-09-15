@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { getSections } from "@/lib/domain/sections";
 
 const httpUrlSchema = z
   .string()
@@ -36,7 +37,10 @@ export const restaurantPostSchema = z.object({
   post_foodtype: z.coerce.number().int().min(1, "請選擇美食類別"),
   post_price: z.coerce.number().int().nonnegative().default(0),
   post_note: z.string().trim().max(4000).default("")
-});
+}).refine(
+  (data) => getSections(data.post_region).some((section) => section.id === data.post_section),
+  { path: ["post_section"], message: "地區與縣市不相符" }
+);
 
 export const restaurantAdminSchema = z.object({
   res_name: z.string().trim().min(1, "請填寫餐廳名稱").max(120),
@@ -51,4 +55,9 @@ export const restaurantAdminSchema = z.object({
   res_note: z.string().trim().max(4000).default(""),
   res_img_url: z.string().trim().max(255).default("preview_1380970870.jpg"),
   res_close: z.coerce.number().int().min(0).max(1).default(0)
-});
+}).refine(
+  (data) => data.res_region === 0
+    ? data.res_section === 0
+    : getSections(data.res_region).some((section) => section.id === data.res_section),
+  { path: ["res_section"], message: "地區與縣市不相符" }
+);

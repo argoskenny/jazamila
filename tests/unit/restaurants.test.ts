@@ -1,18 +1,17 @@
 import { describe, expect, it } from "vitest";
 import { prisma } from "@/lib/db/prisma";
 import {
-  describeFilters,
   buildListPath,
+  createRestaurantWithAuxiliaryTags,
   getActiveCuisineTypeOptions,
   getRestaurantForAdmin,
   getRestaurantDetail,
-  listPublicRestaurants,
   listRestaurants,
   parseListFilters,
   pickRestaurant,
   restaurantFromAdminForm,
   summarizeRestaurantTags,
-  updateRestaurant,
+  updateRestaurantWithAuxiliaryTags,
   toRestaurantView,
   toRestaurantViewFromPrisma
 } from "@/lib/domain/restaurants";
@@ -49,13 +48,29 @@ describe("restaurant domain", () => {
   });
 
   it("loads only active CuisineTypes for public controls and uses the relation as the primary label", async () => {
-    const options = await getActiveCuisineTypeOptions();
-    expect(options.every((option) => option.status === "active")).toBe(true);
-    await expect(getRestaurantDetail(1)).resolves.toMatchObject({
-      cuisineTypeId: expect.any(Number),
-      cuisineTypeLabel: "日式料理",
-      foodTypeLabel: "日式料理"
+    const hiddenCodes = ["test-public-candidate", "test-public-disabled"];
+    await prisma.cuisineType.createMany({
+      data: hiddenCodes.map((code, index) => ({
+        code,
+        name: code,
+        normalizedName: code,
+        status: index === 0 ? "candidate" : "disabled",
+        createdBy: "manual"
+      }))
     });
+    try {
+      const options = await getActiveCuisineTypeOptions();
+      expect(options.some((option) => option.code === "japanese")).toBe(true);
+      expect(options.every((option) => option.status === "active")).toBe(true);
+      expect(options.filter((option) => hiddenCodes.includes(option.code))).toEqual([]);
+      await expect(getRestaurantDetail(1)).resolves.toMatchObject({
+        cuisineTypeId: expect.any(Number),
+        cuisineTypeLabel: "日式料理",
+        foodTypeLabel: "日式料理"
+      });
+    } finally {
+      await prisma.cuisineType.deleteMany({ where: { code: { in: hiddenCodes } } });
+    }
   });
 
   it("does not expose an active cuisine name twice as a public auxiliary tag", () => {
@@ -89,13 +104,12 @@ describe("restaurant domain", () => {
     expect(view.tags).toEqual(["海鮮"]);
   });
 
-  it("filters restaurants and builds readable text", async () => {
+  it("filters restaurants by location, cuisine, and price", async () => {
     const filters = parseListFilters(["1X2", "1", "200", "0", "1"], {});
     const result = await listRestaurants(filters);
 
     expect(result.totalRows).toBe(1);
     expect(result.restaurants[0].res_name).toBe("Sushi House");
-    expect(describeFilters(filters)).toContain("台北市大同區");
   });
 
   it("picks a restaurant by criteria", async () => {
@@ -179,13 +193,6 @@ describe("restaurant domain", () => {
       phoneHref: "tel:0255551234"
     });
     expect(restaurant?.reviewSummaries).toEqual(["湯頭選擇多", "服務親切"]);
-  });
-
-  it("lists only open public restaurants with an explicit limit", async () => {
-    const restaurants = await listPublicRestaurants({ limit: 2 });
-
-    expect(restaurants).toHaveLength(2);
-    expect(restaurants.map((restaurant) => restaurant.res_name)).not.toContain("Closed Diner");
   });
 
   it("keeps closed restaurants hidden publicly but available to admin lookups", async () => {
@@ -284,7 +291,7 @@ describe("restaurant domain", () => {
       res_close: "1"
     });
 
-    const updated = await updateRestaurant(4, input);
+    const updated = await updateRestaurantWithAuxiliaryTags(4, input, [], []);
 
     expect(updated).toMatchObject({
       res_name: "Closed Diner Updated",
@@ -302,7 +309,7 @@ describe("restaurant domain", () => {
     });
 
     try {
-      await updateRestaurant(restaurant.id, { res_close: 1 });
+      await updateRestaurantWithAuxiliaryTags(restaurant.id, { res_close: 1 }, [], []);
       const saved = await prisma.restaurant.findUnique({ where: { id: restaurant.id } });
 
       expect(saved?.closed).toBe(1);
@@ -310,5 +317,60 @@ describe("restaurant domain", () => {
     } finally {
       await prisma.restaurant.delete({ where: { id: restaurant.id } });
     }
+  });
+
+  it("creates a relation when an existing auxiliary tag is selected for the first time", async () => {
+    const tag = await prisma.tag.findFirstOrThrow({ where: { name: "火鍋" } });
+    const restaurant = await prisma.restaurant.create({ data: { name: "既有標籤關聯測試" } });
+
+    try {
+      const updated = await updateRestaurantWithAuxiliaryTags(restaurant.id, {}, [tag.id], []);
+      expect(updated?.id).toBe(restaurant.id);
+
+      await expect(
+        prisma.restaurantTag.findUnique({
+          where: { restaurantId_tagId: { restaurantId: restaurant.id, tagId: tag.id } }
+        })
+      ).resolves.toMatchObject({
+        owner: "manual",
+        kind: "auxiliary",
+        isPublic: true
+      });
+    } finally {
+      await prisma.restaurant.delete({ where: { id: restaurant.id } });
+    }
+  });
+
+  it("rolls back the restaurant update when auxiliary tag persistence fails", async () => {
+    const restaurant = await prisma.restaurant.create({
+      data: { name: "原子更新測試", region: 1, section: 2 }
+    });
+
+    try {
+      const result = await updateRestaurantWithAuxiliaryTags(
+        restaurant.id,
+        { res_name: "不應寫入的新名稱" },
+        [999_999],
+        []
+      );
+
+      expect(result).toBeNull();
+      await expect(prisma.restaurant.findUnique({ where: { id: restaurant.id } })).resolves.toMatchObject({
+        name: "原子更新測試"
+      });
+    } finally {
+      await prisma.restaurant.delete({ where: { id: restaurant.id } });
+    }
+  });
+
+  it("rolls back restaurant creation when auxiliary tag persistence fails", async () => {
+    const input = restaurantFromAdminForm({
+      res_name: "原子新增測試",
+      res_region: "1",
+      res_section: "2"
+    });
+
+    await expect(createRestaurantWithAuxiliaryTags(input, [999_999], [])).rejects.toThrow("不存在的輔助標籤");
+    await expect(prisma.restaurant.count({ where: { name: "原子新增測試" } })).resolves.toBe(0);
   });
 });

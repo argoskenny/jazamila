@@ -58,7 +58,7 @@ openssl rand -base64 32
 
 - SQLite DB：`/var/lib/jazamila/jazamila.sqlite`
 - SQLite backup 目錄：`/var/lib/jazamila/backups`
-- runtime 圖片或上傳檔案：依部署方式保留 `public/assets/pics/`、`public/assets/post/`、`public/assets/tmp/`
+- runtime 圖片或上傳檔案：`/srv/jazamila/shared/assets/{pics,post,tmp}`，並由每個 release 的 `public/assets/{pics,post,tmp}` symlink 指向
 
 注意事項：
 

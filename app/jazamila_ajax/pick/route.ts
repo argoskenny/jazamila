@@ -48,7 +48,10 @@ export async function POST(request: Request) {
     };
     let restaurant = await pickRestaurant(criteria);
     if (!restaurant && criteria.excludeIds.length > 0) {
-      restaurant = await pickRestaurant({ ...criteria, excludeIds: [] });
+      restaurant = await pickRestaurant({
+        ...criteria,
+        excludeIds: currentRestaurantId > 0 ? [currentRestaurantId] : []
+      });
     }
     const response = Response.json({ status: "success", res_id: restaurant?.id ?? 0 });
     const maxAge = 8650000;

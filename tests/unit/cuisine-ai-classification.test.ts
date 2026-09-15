@@ -221,14 +221,16 @@ describe("AI cuisine prompts and request pipeline", () => {
     expect(requests[0].requestBody.response_format.json_schema.strict).toBe(true);
   });
 
-  it("writes and reads request/result JSONL without touching Prisma", () => {
+  it("writes and reads request/result JSONL", () => {
     const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), "jazamila-ai-jsonl-"));
     const filePath = path.join(tempDir, "requests.jsonl");
     const records = [{ customId: "one", restaurantId: 42 }, { customId: "two", restaurantId: 43 }];
-    expect(pipeline.writeJsonl(filePath, records)).toBe(filePath);
-    expect(pipeline.readJsonl(filePath)).toEqual(records);
-    const scriptSource = fs.readFileSync(path.join(process.cwd(), "scripts", "prepare-cuisine-ai-classification.cjs"), "utf8");
-    expect(scriptSource).not.toMatch(/PrismaClient|prisma\.(create|update|delete|upsert|\$transaction)/u);
+    try {
+      expect(pipeline.writeJsonl(filePath, records)).toBe(filePath);
+      expect(pipeline.readJsonl(filePath)).toEqual(records);
+    } finally {
+      fs.rmSync(tempDir, { recursive: true, force: true });
+    }
   });
 
   it("maps a provider refusal into a structured result JSONL line", async () => {

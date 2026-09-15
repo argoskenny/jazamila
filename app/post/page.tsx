@@ -1,5 +1,17 @@
+import type { Metadata } from "next";
 import { RestaurantPostForm } from "@/components/forms/RestaurantPostForm";
-import { foodTypes, getRegions, sectionsByRegion } from "@/lib/domain/sections";
+import { foodTypes, regions, sectionsByRegion } from "@/lib/domain/sections";
+
+export const metadata: Metadata = {
+  title: "餐廳分享",
+  description: "向 JAZAMILA 分享值得推薦的餐廳與美食資訊。",
+  alternates: { canonical: "/post" },
+  openGraph: {
+    title: "餐廳分享｜JAZAMILA",
+    description: "向 JAZAMILA 分享值得推薦的餐廳與美食資訊。",
+    url: "/post"
+  }
+};
 
 const postFaqs = [
   {
@@ -54,7 +66,7 @@ export default function PostPage() {
           ))}
         </div>
       </div>
-      <RestaurantPostForm regions={getRegions()} sectionsByRegion={sectionsByRegion} foodTypes={foodTypes} />
+      <RestaurantPostForm regions={regions} sectionsByRegion={sectionsByRegion} foodTypes={foodTypes} />
     </section>
   );
 }

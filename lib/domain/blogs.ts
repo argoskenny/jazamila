@@ -2,6 +2,7 @@ import type { Prisma } from "@prisma/client";
 import { ZodError } from "zod";
 import { prisma } from "@/lib/db/prisma";
 import type { BlogLink } from "@/lib/domain/types";
+import { clampPage } from "@/lib/pagination";
 import { blogLinkSchema } from "@/lib/validation/forms";
 
 type PrismaBlogLink = Prisma.BlogLinkGetPayload<object>;
@@ -28,12 +29,29 @@ export async function listBlogLinksForRestaurant(restaurantId: number): Promise<
   return blogLinks.map(fromPrismaBlogLink);
 }
 
-export async function listBlogLinksForAdmin(status?: number): Promise<BlogLink[]> {
+export async function listBlogLinksForAdmin({
+  status,
+  page = 1,
+  perPage = 50
+}: { status?: number; page?: number; perPage?: number } = {}) {
+  const take = Math.min(Math.max(1, perPage), 100);
+  const where = status === undefined ? undefined : { status };
+  const totalRows = await prisma.blogLink.count({ where });
+  const totalPages = Math.max(1, Math.ceil(totalRows / take));
+  const currentPage = clampPage(page, totalPages);
   const blogLinks = await prisma.blogLink.findMany({
-    where: status === undefined ? undefined : { status },
-    orderBy: { id: "desc" }
+    where,
+    orderBy: { id: "desc" },
+    skip: (currentPage - 1) * take,
+    take
   });
-  return blogLinks.map(fromPrismaBlogLink);
+  return {
+    blogLinks: blogLinks.map(fromPrismaBlogLink),
+    totalRows,
+    totalPages,
+    page: currentPage,
+    perPage: take
+  };
 }
 
 export async function createBlogLinkSubmission(input: unknown): Promise<BlogLink> {

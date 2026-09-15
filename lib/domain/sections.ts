@@ -24,16 +24,8 @@ export const moneyOptions: Option[] = Array.from({ length: 12 }, (_, index) => {
   return { id: value, label: `${value}元左右` };
 });
 
-export function getRegions(): Option[] {
-  return regions;
-}
-
 export function getSections(regionId: number): Option[] {
   return sectionsByRegion[regionId] ?? [];
-}
-
-export function getFoodTypes(): Option[] {
-  return foodTypes;
 }
 
 export function labelFor(options: Option[], id: number, fallback = "未分類"): string {
