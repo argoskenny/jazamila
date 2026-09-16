@@ -40,7 +40,7 @@ export function PickAgainButton({ currentRestaurantId, returnTo, keyword = "", l
 
       const data = (await response.json()) as { status: string; res_id: number };
       if (data.status === "success" && data.res_id > 0) {
-        window.location.href = `/detail/${data.res_id}?picked=1&ul=${encodeURIComponent(location)}&ut=${foodType}&uft=${foodTypes.join("-")}&uct=${encodeURIComponent(cuisineTypes.join(","))}&umx=${maxPrice}&umi=${minPrice}&search_keyword=${encodeURIComponent(keyword)}${returnTo ? `&returnTo=${encodeURIComponent(returnTo)}` : ""}`;
+        window.location.href = `/detail/${data.res_id}?ul=${encodeURIComponent(location)}&ut=${foodType}&uft=${foodTypes.join("-")}&uct=${encodeURIComponent(cuisineTypes.join(","))}&umx=${maxPrice}&umi=${minPrice}&search_keyword=${encodeURIComponent(keyword)}${returnTo ? `&returnTo=${encodeURIComponent(returnTo)}` : ""}`;
         return;
       }
       setStatus("這組條件暫時沒有其他餐廳，可以放寬條件再試一次。");

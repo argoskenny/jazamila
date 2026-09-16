@@ -20,8 +20,9 @@ test("restores keyword fields on back navigation and retains a search through an
     expect(route.request().postData()).toContain("Sushi");
     await route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify({ status: "success", res_id: 1 }) });
   });
+  const previousUrl = page.url();
   await page.getByRole("button", { name: "再選一間" }).click();
-  await expect(page).toHaveURL(/picked=1/);
+  await expect(page).not.toHaveURL(previousUrl);
   await page.getByRole("link", { name: "返回列表" }).click();
   await expect(page).toHaveURL(/search_keyword=Sushi/);
 });
@@ -39,24 +40,19 @@ test("retains multiple cuisines when returning from a homepage pick", async ({ p
   await expect(page.getByRole("checkbox", { name: "美式料理", exact: true })).toBeChecked();
 });
 
-test("uses a compact mobile menu and persists favorites, history and exclusions", async ({ page }) => {
+test("uses compact mobile navigation and restaurant reporting without personal features", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
   expect((await page.locator(".site-header").boundingBox())!.height).toBeLessThan(100);
   await page.getByRole("button", { name: "選單", exact: true }).click();
   await page.getByRole("navigation", { name: "主要導覽" }).getByRole("link", { name: "餐廳列表" }).click();
   await page.getByRole("link", { name: "Sushi House", exact: true }).click();
-  await page.locator(".detail-restaurant-panel").getByRole("button", { name: "收藏", exact: true }).click();
-  await page.getByRole("button", { name: "暫時排除 24 小時" }).click();
-  await page.goto("/saved");
-  await expect(page.getByRole("heading", { name: "收藏餐廳", exact: true }).locator("..").getByRole("link", { name: "Sushi House" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "暫時排除", exact: true }).locator("..").getByRole("link", { name: "Sushi House" })).toBeVisible();
-  await page.goto("/detail/1?picked=1");
-  await expect(page.getByRole("button", { name: "已收藏", exact: true })).toHaveAttribute("aria-pressed", "true");
+  await expect(page.locator(".detail-restaurant-panel")).toBeVisible();
+  await expect(page.getByRole("link", { name: "我的收藏" })).toHaveCount(0);
+  await expect(page.getByRole("button", { name: "收藏", exact: true })).toHaveCount(0);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.getByRole("link", { name: "回報資料有誤／已歇業" }).click();
   await expect(page.getByLabel("問題或建議 *", { exact: true })).toHaveValue(/Sushi House（ID 1）/);
-  await page.goto("/saved");
-  await expect(page.getByRole("heading", { name: "最近抽選", exact: true }).locator("..").getByRole("link", { name: "Sushi House" })).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });
 

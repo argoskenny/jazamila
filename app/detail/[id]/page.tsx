@@ -1,4 +1,3 @@
-import { RestaurantTools } from "@/components/restaurants/RestaurantTools";
 import { buildListPath, parseListFilters, filterCuisineTokens, validListReturnPath } from "@/lib/domain/list-filters";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -135,7 +134,6 @@ export default async function DetailPage({ params, searchParams }: Props) {
             資料更新：{restaurant.res_updatetime ? new Date(restaurant.res_updatetime * 1000).toLocaleDateString("zh-TW", { timeZone: "Asia/Taipei" }) : "未提供"}。營業時間與評分為資料紀錄，非即時資訊，出發前請向店家確認。
             {restaurant.sourceLinks?.map((source) => <a className="text-link" key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.label}</a>)}
           </p>
-          <RestaurantTools id={restaurant.id} name={restaurant.res_name} trackRecent={first(query.picked, "") === "1"} />
           <Link className="text-link" href={`/about?restaurant=${restaurant.id}&name=${encodeURIComponent(restaurant.res_name)}`}>回報資料有誤／已歇業</Link>
           <div className="detail-actions">
             <PickAgainButton

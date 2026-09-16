@@ -59,12 +59,10 @@ describe("review regression cases", () => {
     const response = await pick({ reuse_preferences: "1", cuisine_types: "", foodtype: "1", search_keyword: r.name }, "cuisine_types=code%3Acafe");
     expect(await response.json()).toEqual({ status: "success", res_id: r.id });
   });
-  it("keeps temporary exclusions even when recent-history fallback is needed", async () => {
+  it("ignores obsolete personal exclusions and falls back when all matches were recently picked", async () => {
     const r = await row({ name: "review-exclude" });
     const response = await pick({ foodtype: "0", search_keyword: r.name }, `excluded_restaurants=${r.id}@${Date.now() + 60000}; recent_restaurants=${r.id}`);
-    expect(await response.json()).toEqual({ status: "success", res_id: 0 });
-    const expired = await pick({ foodtype: "0", search_keyword: r.name }, `excluded_restaurants=${r.id}@1`);
-    expect(await expired.json()).toEqual({ status: "success", res_id: r.id });
+    expect(await response.json()).toEqual({ status: "success", res_id: r.id });
   });
   it("rejects a reversed budget and accepts an unbounded maximum", async () => {
     expect(priceRangeError(900, 200)).not.toBe("");

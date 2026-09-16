@@ -1,4 +1,3 @@
-import { RestaurantTools } from "@/components/restaurants/RestaurantTools";
 import { filterCuisineTokens, priceRangeError, sortOptions } from "@/lib/domain/list-filters";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -107,7 +106,6 @@ export default async function ListDataPage({ params, searchParams }: Props) {
                   </div>
                 </div>
               </Link>
-              <RestaurantTools id={restaurant.id} name={restaurant.res_name} compact />
             </article>
           );
         })}

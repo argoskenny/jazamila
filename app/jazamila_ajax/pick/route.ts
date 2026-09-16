@@ -35,7 +35,6 @@ export async function POST(request: Request) {
       reusePreferences && inputValue === undefined ? cookies.get(cookieName) : inputValue;
     const currentRestaurantId = toInt(input.exclude_restaurant_id);
     const recentIds = recentRestaurantIds(cookies.get("recent_restaurants"));
-    const excludedIds = (cookies.get("excluded_restaurants") ?? "").split("-").filter((value) => Number(value.split("@")[1]) > Date.now()).map((value) => toInt(value.split("@")[0])).filter((id) => id > 0).slice(0, 10);
     const criteria = {
       regionId: toInt(value(input.foodwhere_region, "foodwhere_region")),
       sectionId: toInt(value(input.foodwhere_section, "foodwhere_section")),
@@ -47,7 +46,7 @@ export async function POST(request: Request) {
       cuisineTypeCodes: parsePreferenceCuisineTypes(String(value(input.cuisine_types, "cuisine_types") ?? ""))
         .map((token) => token.startsWith("code:") ? token.slice("code:".length) : "")
         .filter(Boolean),
-      excludeIds: [...new Set([currentRestaurantId, ...excludedIds, ...recentIds].filter((id) => id > 0))].slice(0, 21)
+      excludeIds: [...new Set([currentRestaurantId, ...recentIds].filter((id) => id > 0))].slice(0, 10)
     };
     const rangeError = priceRangeError(criteria.minPrice, criteria.maxPrice);
     if (rangeError) return Response.json({ status: "fail", error: rangeError }, { status: 422 });
@@ -55,7 +54,7 @@ export async function POST(request: Request) {
     if (!restaurant && criteria.excludeIds.length > 0) {
       restaurant = await pickRestaurant({
         ...criteria,
-        excludeIds: [...new Set([currentRestaurantId, ...excludedIds].filter((id) => id > 0))]
+        excludeIds: currentRestaurantId > 0 ? [currentRestaurantId] : []
       });
     }
     const response = Response.json({ status: "success", res_id: restaurant?.id ?? 0 });
