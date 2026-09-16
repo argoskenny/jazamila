@@ -235,7 +235,7 @@ LEGACY_DATABASE_URL="mysql://legacy_user:password@host:3306/jazamila_legacy" \
 3. 部署新 release 到 `/srv/jazamila/releases/<release>`。
 4. 執行 `npm ci`。
 5. 執行 `node scripts/link-runtime-assets.cjs /srv/jazamila/shared/assets`，並確認輸出的三個連結都指向 shared volume。
-6. 執行 `DATABASE_URL="file:/var/lib/jazamila/jazamila.sqlite" npm run db:migrate:prod`；schema 與地區 lookup 必須先完成，build 才能讀取資料。
+6. 執行 `DATABASE_URL="file:/var/lib/jazamila/jazamila.sqlite" npm run db:migrate:prod`；schema、地區 lookup 與料理分類初始化必須先完成，build 才能讀取資料。
 7. 執行 `npm run typecheck`。
 8. 執行 `npm test`。
 9. 執行 `DATABASE_URL="file:/var/lib/jazamila/jazamila.sqlite" npm run build`。
@@ -403,3 +403,13 @@ WantedBy=multi-user.target
 - [ ] `/admin/login` 200。
 - [ ] logs 無持續錯誤。
 - [ ] SQLite backup job 正常。
+
+`db:migrate:prod` 同時初始化必要料理分類（可重複執行），不寫入示範餐廳。部署後需確認 `r_cuisine_type` 有 active 分類；分類定義衝突會中止部署。
+
+## 16. 餐廳 API 分頁與效能觀察
+
+- 舊客戶端的 `/jsonapi` 維持完整陣列契約。
+- 新客戶端可使用 `/jsonapi?page=1&per_page=100`，每頁最多 100 筆，回傳仍為陣列。
+- 回應標頭 `X-Total-Count`、`X-Page`、`X-Total-Pages`、`X-Per-Page` 提供分頁資訊；超出最後一頁會回傳最後一頁。
+- 壓測／監控應分別觀察列表、關鍵字查詢、排序、API 的延遲與回應大小；正式環境需以實際併發數與資料量驗證。
+- sitemap 目前每日更新，餐廳後台異動時會失效重建。接近 50,000 個網址前應改為 sitemap index 與分檔。

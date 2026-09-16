@@ -1,3 +1,4 @@
+import type { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/db/prisma";
 import { clampPage } from "@/lib/pagination";
 import { toRestaurantViewFromPrisma } from "@/lib/domain/restaurants";
@@ -5,12 +6,18 @@ import { toRestaurantViewFromPrisma } from "@/lib/domain/restaurants";
 const defaultPerPage = 20;
 const maxPerPage = 100;
 
-export async function listRestaurantsForAdmin({ page = 1, perPage = defaultPerPage } = {}) {
+export async function listRestaurantsForAdmin({ page = 1, perPage = defaultPerPage, keyword = "", region = 0, closed }: { page?: number; perPage?: number; keyword?: string; region?: number; closed?: number } = {}) {
   const take = Math.min(Math.max(1, perPage), maxPerPage);
-  const totalRows = await prisma.restaurant.count();
+  const where: Prisma.RestaurantWhereInput = {
+    ...(region > 0 ? { region } : {}),
+    ...(closed === 0 || closed === 1 ? { closed } : {}),
+    ...(keyword.trim() ? { OR: [{ name: { contains: keyword.trim() } }, { address: { contains: keyword.trim() } }, { phone: { contains: keyword.trim() } }, { telNum: { contains: keyword.trim() } }, ...(Number.isSafeInteger(Number(keyword)) ? [{ id: Number(keyword) }] : [])] } : {})
+  };
+  const totalRows = await prisma.restaurant.count({ where });
   const totalPages = Math.max(1, Math.ceil(totalRows / take));
   const currentPage = clampPage(page, totalPages);
   const restaurants = await prisma.restaurant.findMany({
+    where,
     orderBy: { id: "asc" },
     include: {
       city: { select: { name: true } },

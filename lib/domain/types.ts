@@ -32,6 +32,9 @@ export type Restaurant = {
   res_post_id?: number;
   res_close?: number;
   cuisine_type_id?: number | null;
+  res_price_min?: number | null;
+  res_price_max?: number | null;
+  external_image_url?: string | null;
 };
 
 export type RestaurantView = Restaurant & {
@@ -65,6 +68,7 @@ export type RestaurantView = Restaurant & {
   businessHoursLabel: string;
   phoneHref: string | null;
   mapHref: string | null;
+  sourceLinks?: Array<{ label: string; url: string }>;
 };
 
 export type AuxiliaryTagOption = {
@@ -128,6 +132,7 @@ export type RestaurantCriteria = {
   foodTypes?: number[];
   cuisineTypeCodes?: string[];
   excludeIds?: number[];
+  keyword?: string;
 };
 
 export type ListFilters = RestaurantCriteria & {
@@ -135,4 +140,6 @@ export type ListFilters = RestaurantCriteria & {
   page: number;
   keyword: string;
   cuisineTypeCode?: string;
+  cuisineTokens?: string[];
+  sort?: string;
 };

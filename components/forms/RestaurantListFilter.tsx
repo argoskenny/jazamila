@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
+import { buildListPath, filterCuisineTokens, priceRangeError, sortOptions } from "@/lib/domain/list-filters";
 import type { CuisineTypeOption, ListFilters, Option } from "@/lib/domain/types";
 
 type Props = {
@@ -17,9 +18,9 @@ export function RestaurantListFilter({ filters, regions, sectionsByRegion, cuisi
   const [isOpen, setIsOpen] = useState(false);
   const [regionId, setRegionId] = useState(filters.regionId);
   const [sectionId, setSectionId] = useState(filters.sectionId);
-  const [cuisineType, setCuisineType] = useState(
-    filters.cuisineTypeCode ? `code:${filters.cuisineTypeCode}` : filters.foodType > 0 ? `legacy:${filters.foodType}` : ""
-  );
+  const [cuisineTypesSelected, setCuisineTypesSelected] = useState(filterCuisineTokens(filters));
+  const [sort, setSort] = useState(filters.sort ?? "id");
+  const [status, setStatus] = useState("");
   const [minPrice, setMinPrice] = useState(filters.minPrice);
   const [maxPrice, setMaxPrice] = useState(filters.maxPrice);
   const [keyword, setKeyword] = useState(filters.keyword);
@@ -29,13 +30,10 @@ export function RestaurantListFilter({ filters, regions, sectionsByRegion, cuisi
   function applyFilters(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const location = regionId === 0 ? "0" : `${regionId}X${sectionId}`;
-    const query = keyword.trim() ? `?search_keyword=${encodeURIComponent(keyword.trim())}` : "";
-    const typeSegment = cuisineType.startsWith("code:")
-      ? `c:${encodeURIComponent(cuisineType.slice("code:".length))}`
-      : cuisineType.startsWith("legacy:")
-        ? cuisineType.slice("legacy:".length)
-        : "0";
-    router.push(`/listdata/${location}/${typeSegment}/${maxPrice}/${minPrice}/1${query}`);
+    const error = priceRangeError(minPrice, maxPrice);
+    if (error) { setStatus(error); return; }
+    router.push(buildListPath({ ...filters, location, regionId, sectionId, foodType: 0, cuisineTypeCode: undefined,
+      cuisineTokens: cuisineTypesSelected, minPrice, maxPrice, keyword: keyword.trim(), sort }, 1));
   }
 
   return (
@@ -117,24 +115,24 @@ export function RestaurantListFilter({ filters, regions, sectionsByRegion, cuisi
           </div>
 
           <fieldset className="filter-group cuisine-filter">
-            <legend>吃哪種？</legend>
+            <legend>吃哪種？（可複選）</legend>
             <div className="cuisine-tags">
               <label className="cuisine-tag">
                 <input
-                  type="radio"
+                  type="checkbox"
                   name="list-food-type"
-                  checked={cuisineType === ""}
-                  onChange={() => setCuisineType("")}
+                  checked={cuisineTypesSelected.length === 0}
+                  onChange={() => setCuisineTypesSelected([])}
                 />
                 <span>都可以</span>
               </label>
               {cuisineTypes.map((option) => (
                 <label className="cuisine-tag" key={option.id}>
                   <input
-                    type="radio"
+                    type="checkbox"
                     name="list-food-type"
-                    checked={cuisineType === option.value}
-                    onChange={() => setCuisineType(option.value)}
+                    checked={cuisineTypesSelected.includes(option.value)}
+                    onChange={() => setCuisineTypesSelected((current) => current.includes(option.value) ? current.filter((v) => v !== option.value) : [...current, option.value])}
                   />
                   <span>{option.label}</span>
                 </label>
@@ -152,6 +150,8 @@ export function RestaurantListFilter({ filters, regions, sectionsByRegion, cuisi
             />
           </label>
 
+          <label className="field"><span>排序</span><select className="select" value={sort} onChange={(event) => setSort(event.target.value)}>{sortOptions.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}</select></label>
+          {status ? <p className="status" role="alert">{status}</p> : null}
           <button className="button" type="submit">
             套用篩選
           </button>

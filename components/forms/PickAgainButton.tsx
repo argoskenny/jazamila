@@ -4,6 +4,8 @@ import { useState } from "react";
 
 type Props = {
   currentRestaurantId: number;
+  returnTo?: string;
+  keyword?: string;
   location?: string;
   foodType?: number;
   foodTypes?: number[];
@@ -12,7 +14,7 @@ type Props = {
   maxPrice?: number;
 };
 
-export function PickAgainButton({ currentRestaurantId, location = "0", foodType = 0, foodTypes = [], cuisineTypes = [], minPrice = 0, maxPrice = 0 }: Props) {
+export function PickAgainButton({ currentRestaurantId, returnTo, keyword = "", location = "0", foodType = 0, foodTypes = [], cuisineTypes = [], minPrice = 0, maxPrice = 0 }: Props) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState("");
 
@@ -24,12 +26,13 @@ export function PickAgainButton({ currentRestaurantId, location = "0", foodType 
       const [regionId = "0", sectionId = "0"] = location === "0" ? ["0", "0"] : location.split("X");
       const form = new FormData();
       form.set("reuse_preferences", "1");
+      form.set("search_keyword", keyword);
       form.set("exclude_restaurant_id", String(currentRestaurantId));
       form.set("foodwhere_region", regionId);
       form.set("foodwhere_section", sectionId);
       form.set("foodmoney_min", String(minPrice));
       form.set("foodmoney_max", String(maxPrice));
-      form.set("foodtype", foodTypes.length > 0 ? foodTypes.join("-") : foodType > 0 ? String(foodType) : "0");
+      form.set("foodtype", cuisineTypes.length > 0 ? cuisineTypes.filter((value) => value.startsWith("legacy:")).map((value) => value.slice(7)).join("-") || "0" : foodTypes.length > 0 ? foodTypes.join("-") : foodType > 0 ? String(foodType) : "0");
       form.set("cuisine_types", cuisineTypes.join(","));
 
       const response = await fetch("/jazamila_ajax/pick", { method: "POST", body: form });
@@ -37,7 +40,7 @@ export function PickAgainButton({ currentRestaurantId, location = "0", foodType 
 
       const data = (await response.json()) as { status: string; res_id: number };
       if (data.status === "success" && data.res_id > 0) {
-        window.location.href = `/detail/${data.res_id}?ul=${encodeURIComponent(location)}&ut=${foodType}&uft=${foodTypes.join("-")}&uct=${encodeURIComponent(cuisineTypes.join(","))}&umx=${maxPrice}&umi=${minPrice}`;
+        window.location.href = `/detail/${data.res_id}?picked=1&ul=${encodeURIComponent(location)}&ut=${foodType}&uft=${foodTypes.join("-")}&uct=${encodeURIComponent(cuisineTypes.join(","))}&umx=${maxPrice}&umi=${minPrice}&search_keyword=${encodeURIComponent(keyword)}${returnTo ? `&returnTo=${encodeURIComponent(returnTo)}` : ""}`;
         return;
       }
       setStatus("這組條件暫時沒有其他餐廳，可以放寬條件再試一次。");

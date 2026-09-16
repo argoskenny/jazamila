@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     question: "Q6. 餐廳資料是不是有點少，而且只有西門町的？",
-    answer: "A6. 對，因為網站才剛開不久，餐廳資料之後會慢慢增加。短期目標是收集完西門町所有餐廳的資料。中期目標則是各地重要商圈的資料。"
+    answer: "A6. 現在已收錄多個城市的餐廳，可以透過城市、地區、料理與價格篩選。餐廳資訊可能變動，出發前請再向店家確認。"
   },
   {
     question: "Q7. 好，雖然網站訴求還是有點怪怪的，但我還能接受，哪邊加入會員？",
@@ -47,7 +47,17 @@ const faqs = [
   }
 ];
 
-export default function AboutPage() {
+export default async function AboutPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
+  const query = await searchParams;
+  const id = Number(query.restaurant);
+  const name = typeof query.name === "string" ? query.name.slice(0, 120) : "";
+  const initialContent = Number.isSafeInteger(id) && id > 0 ? `餐廳資料回報：${name}（ID ${id}）\n餐廳頁面：/detail/${id}\n回報內容（資料有誤／已歇業）：\n` : "";
+  if (initialContent) return <section className="page-shell" style={{ maxWidth: 720 }}>
+    <h1 className="page-title">回報餐廳資料</h1>
+    <p className="lead">回報將由管理者確認，不會直接更動餐廳資料。</p>
+    <FeedbackForm key={initialContent} initialContent={initialContent} />
+    <a className="text-link" href={`/detail/${id}`}>返回餐廳</a>
+  </section>;
   return (
     <section className="page-shell detail-grid">
       <div className="form-grid">
@@ -71,7 +81,7 @@ export default function AboutPage() {
           ))}
         </div>
       </div>
-      <FeedbackForm />
+      <FeedbackForm key={initialContent} initialContent={initialContent} />
     </section>
   );
 }

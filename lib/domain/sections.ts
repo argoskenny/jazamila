@@ -17,11 +17,10 @@ export const sectionsByRegion: Record<number, Option[]> = Object.fromEntries(
 
 export const foodTypes: Option[] = data.foodTypes;
 
-export const moneyOptions: Option[] = Array.from({ length: 12 }, (_, index) => {
+export const moneyOptions: Option[] = Array.from({ length: 11 }, (_, index) => {
   const value = index * 100;
-  if (value === 0) return { id: value, label: "都可以" };
-  if (value === 1100) return { id: value, label: "1000元以上" };
-  return { id: value, label: `${value}元左右` };
+  if (value === 0) return { id: value, label: "無上限" };
+  return { id: value, label: `${value}元` };
 });
 
 export function getSections(regionId: number): Option[] {

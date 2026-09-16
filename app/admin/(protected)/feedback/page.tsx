@@ -1,3 +1,4 @@
+import { PendingSubmit } from "@/components/admin/PendingSubmit";
 import Link from "next/link";
 import { markFeedbackReadAction } from "@/app/admin/feedback/actions";
 import { listFeedbackForAdmin } from "@/lib/domain/feedback";
@@ -46,9 +47,9 @@ export default async function AdminFeedbackPage({ searchParams }: Props) {
                 <td>
                   <form action={markFeedbackReadAction}>
                     <input type="hidden" name="id" value={item.id} />
-                    <button className="button ghost" type="submit">
+                    <PendingSubmit className="button ghost">
                       標為已讀
-                    </button>
+                    </PendingSubmit>
                   </form>
                 </td>
               </tr>

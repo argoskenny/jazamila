@@ -1,3 +1,4 @@
+import { SiteNavigation } from "@/components/navigation/SiteNavigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getSiteUrl } from "@/lib/site";
@@ -35,12 +36,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             </span>
             <span>JAZAMILA</span>
           </Link>
-          <nav className="site-nav" aria-label="主要導覽">
-            <Link href="/">首頁</Link>
-            <Link href="/listdata/0/0/0/0/1">餐廳列表</Link>
-            <Link href="/about">關於本站</Link>
-            <Link href="/post">餐廳分享</Link>
-          </nav>
+          <SiteNavigation />
         </header>
         <main>{children}</main>
         <footer className="site-footer">

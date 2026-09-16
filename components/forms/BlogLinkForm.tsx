@@ -23,7 +23,7 @@ export function BlogLinkForm({ restaurantId }: { restaurantId: number }) {
         body: formData
       });
       const data = (await response.json()) as { status: string };
-      setStatus(data.status === "success" ? "已儲存成功，感謝你的分享！" : "送出失敗，請確認網址。");
+      setStatus(data.status === "success" ? "已收到你的食記，待審核通過後公開，謝謝！" : "送出失敗，請確認網址。");
       if (data.status === "success") form.reset();
     } catch {
       setStatus("驗證失敗，請稍後再試。");

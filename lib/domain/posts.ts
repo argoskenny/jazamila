@@ -67,8 +67,9 @@ export async function listPostsForAdmin({
     skip: (currentPage - 1) * take,
     take
   });
+  const published = posts.length ? await prisma.restaurant.findMany({ where: { postId: { in: posts.map((post) => post.id) } }, select: { id: true, postId: true }, orderBy: { id: "asc" } }) : [];
   return {
-    posts: posts.map(fromPrismaPost),
+    posts: posts.map((post) => ({ ...fromPrismaPost(post), restaurantId: published.find((row) => row.postId === post.id)?.id })),
     totalRows,
     totalPages,
     page: currentPage,
@@ -127,7 +128,7 @@ export async function approvePost(id: number): Promise<Post | null> {
     };
 
     if (publishedRestaurant) {
-      await tx.restaurant.update({ where: { id: publishedRestaurant.id }, data: restaurantData });
+      await tx.restaurant.update({ where: { id: publishedRestaurant.id }, data: { closed: 0 } });
       const duplicateIds = publishedRestaurants
         .filter((restaurant) => restaurant.id !== publishedRestaurant.id)
         .map((restaurant) => restaurant.id);

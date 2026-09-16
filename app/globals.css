@@ -1248,3 +1248,38 @@ td p {
     width: 100%;
   }
 }
+
+/* Clear selection state and compact navigation at small widths. */
+.mobile-menu-toggle { display: none; }
+.active-filters { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 18px 0; }
+.active-filters > span { padding: 5px 10px; border: 1px solid var(--line-soft); border-radius: 16px; background: var(--surface); }
+.restaurant-tools { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+.restaurant-tools .button { min-height: 40px; padding: 6px 14px; font-size: 14px; }
+.restaurant-list > article { min-width: 0; }
+.restaurant-list > article > .restaurant-tools { justify-content: flex-end; }
+.data-provenance { font-size: 13px; line-height: 1.7; color: var(--muted); }
+.data-provenance a { display: inline-block; margin-left: 8px; }
+.saved-list { padding-left: 0; list-style: none; }
+.saved-list li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line-soft); }
+.saved-list li > a { overflow-wrap: anywhere; }
+@media (max-width: 900px) {
+  .site-header { flex-direction: row; align-items: center; flex-wrap: wrap; }
+  .site-nav { width: 100%; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .site-header { padding: 8px; gap: 8px; }
+  .brand { font-size: 16px; }
+  .mobile-menu-toggle { display: inline-flex; width: auto; min-height: 44px; margin-left: auto; padding: 8px 12px; font-size: 14px; }
+  .site-nav { display: none; }
+  .site-nav.is-open { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); max-height: 60vh; overflow: auto; }
+  .restaurant-tools .button { width: auto; flex: 1; }
+  .detail-actions { position: sticky; bottom: 8px; z-index: 10; padding: 10px; border: 1px solid var(--line-soft); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow-soft); }
+  .detail-actions .button { min-height: 44px; }
+  .detail-grid > .form-grid { min-width: 0; }
+  .filter-disclosure.is-open { margin-bottom: 28px; }
+  .saved-list .button { width: auto; flex-shrink: 0; }
+}
+@media (max-width: 560px) {
+  .admin-nav { display: flex; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 8px; }
+  .admin-nav > * { flex: 0 0 auto; }
+}

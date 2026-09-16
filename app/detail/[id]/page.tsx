@@ -1,3 +1,5 @@
+import { RestaurantTools } from "@/components/restaurants/RestaurantTools";
+import { buildListPath, parseListFilters, filterCuisineTokens, validListReturnPath } from "@/lib/domain/list-filters";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -73,9 +75,12 @@ export default async function DetailPage({ params, searchParams }: Props) {
     .map((value) => Number.parseInt(value, 10))
     .filter((value) => Number.isFinite(value) && value > 0);
   const searchKeyword = first(query.search_keyword, "").trim();
-  const listQuery = searchKeyword
-    ? `?search_keyword=${encodeURIComponent(searchKeyword)}`
-    : "";
+  const legacyFilters = parseListFilters(listRecord.split("/"), { search_keyword: searchKeyword });
+  const legacyTokens = cuisineTypes.length ? cuisineTypes : foodTypes.map((id) => `legacy:${id}`);
+  const returnTo = validListReturnPath(first(query.returnTo, "")) ?? buildListPath({ ...legacyFilters,
+    ...(legacyTokens.length ? { cuisineTokens: legacyTokens } : {}) }, legacyFilters.page);
+  const returnUrl = new URL(returnTo, "http://localhost");
+  const returnFilters = parseListFilters(returnUrl.pathname.split("/").slice(2), Object.fromEntries(returnUrl.searchParams));
   const restaurantNameMapHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(restaurant.res_name)}`;
 
   return (
@@ -126,17 +131,25 @@ export default async function DetailPage({ params, searchParams }: Props) {
               <ul>{restaurant.reviewSummaries.slice(0, 4).map((summary) => <li key={summary}>{summary}</li>)}</ul>
             </div>
           ) : null}
+          <p className="data-provenance">{restaurant.ratingPlatform ? `評分來源：${restaurant.ratingPlatform}。` : "評分來源未提供。"}
+            資料更新：{restaurant.res_updatetime ? new Date(restaurant.res_updatetime * 1000).toLocaleDateString("zh-TW", { timeZone: "Asia/Taipei" }) : "未提供"}。營業時間與評分為資料紀錄，非即時資訊，出發前請向店家確認。
+            {restaurant.sourceLinks?.map((source) => <a className="text-link" key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.label}</a>)}
+          </p>
+          <RestaurantTools id={restaurant.id} name={restaurant.res_name} trackRecent={first(query.picked, "") === "1"} />
+          <Link className="text-link" href={`/about?restaurant=${restaurant.id}&name=${encodeURIComponent(restaurant.res_name)}`}>回報資料有誤／已歇業</Link>
           <div className="detail-actions">
             <PickAgainButton
               currentRestaurantId={restaurant.id}
-              location={first(query.ul, "0")}
+              returnTo={returnTo}
+              keyword={returnFilters.keyword}
+              location={returnFilters.location}
               foodType={Number.parseInt(first(query.ut, "0"), 10) || 0}
               foodTypes={foodTypes}
-              cuisineTypes={cuisineTypes}
-              maxPrice={Number.parseInt(first(query.umx, "0"), 10) || 0}
-              minPrice={Number.parseInt(first(query.umi, "0"), 10) || 0}
+              cuisineTypes={filterCuisineTokens(returnFilters).length ? filterCuisineTokens(returnFilters) : cuisineTypes}
+              maxPrice={returnFilters.maxPrice}
+              minPrice={returnFilters.minPrice}
             />
-            <Link className="button ghost" href={`/listdata/${listRecord}${listQuery}`}>返回列表</Link>
+            <Link className="button ghost" href={returnTo}>返回列表</Link>
           </div>
         </div>
         <section className="panel form-grid" aria-labelledby="blog-links-heading">

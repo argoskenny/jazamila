@@ -14,7 +14,7 @@
     "test": "DATABASE_URL=${TEST_DATABASE_URL:-file:./test.db} node prisma/ensure-sqlite.cjs && DATABASE_URL=${TEST_DATABASE_URL:-file:./test.db} prisma db push --skip-generate && DATABASE_URL=${TEST_DATABASE_URL:-file:./test.db} node prisma/seed.cjs && DATABASE_URL=${TEST_DATABASE_URL:-file:./test.db} vitest run --no-file-parallelism",
     "db:generate": "DATABASE_URL=${DATABASE_URL:-file:./dev.db} prisma generate",
     "db:push": "DATABASE_URL=${DATABASE_URL:-file:./dev.db} prisma db push",
-    "db:migrate:prod": "node prisma/ensure-sqlite.cjs && prisma migrate deploy && node scripts/sync-location-lookups.cjs",
+    "db:migrate:prod": "node prisma/ensure-sqlite.cjs && prisma migrate deploy && node scripts/sync-location-lookups.cjs && node scripts/seed-cuisine-types.cjs --apply",
     "db:seed": "DATABASE_URL=${DATABASE_URL:-file:./dev.db} node prisma/seed.cjs",
     "db:seed:cuisine:dry": "node scripts/seed-cuisine-types.cjs --dry-run",
     "db:seed:cuisine": "node scripts/seed-cuisine-types.cjs --apply",

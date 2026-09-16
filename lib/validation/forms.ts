@@ -17,47 +17,55 @@ const httpUrlSchema = z
 
 export const feedbackSchema = z.object({
   name: z.string().trim().min(1, "請留下稱呼").max(80),
-  email: z.string().trim().email("請輸入正確 email").max(120),
-  content: z.string().trim().min(1, "請填寫內容").max(4000)
+  email: z.string().trim().email("請輸入正確 email").max(120, "最多可輸入 120 個字"),
+  content: z.string().trim().min(1, "請填寫內容").max(4000, "最多可輸入 4000 個字")
 });
 
 export const blogLinkSchema = z.object({
   res_id: z.coerce.number().int().nonnegative(),
-  res_blogname: z.string().trim().min(1, "請填寫食記名稱").max(120),
+  res_blogname: z.string().trim().min(1, "請填寫食記名稱").max(120, "最多可輸入 120 個字"),
   res_bloglink: httpUrlSchema
 });
 
 export const restaurantPostSchema = z.object({
-  post_name: z.string().trim().min(1, "請填寫餐廳名稱").max(120),
+  post_name: z.string().trim().min(1, "請填寫餐廳名稱").max(120, "最多可輸入 120 個字"),
   post_area_num: z.string().trim().max(10).default(""),
-  post_tel_num: z.string().trim().max(20).default(""),
+  post_tel_num: z.string().trim().max(20, "電話最多可輸入 20 個字元").default(""),
   post_region: z.coerce.number().int().min(1, "請選擇縣市"),
   post_section: z.coerce.number().int().min(1, "請選擇地區"),
-  post_address: z.string().trim().min(1, "請填寫餐廳地址").max(255),
+  post_address: z.string().trim().min(1, "請填寫餐廳地址").max(255, "最多可輸入 255 個字"),
   post_foodtype: z.coerce.number().int().min(1, "請選擇美食類別"),
   post_price: z.coerce.number().int().nonnegative().default(0),
-  post_note: z.string().trim().max(4000).default("")
+  post_note: z.string().trim().max(4000, "最多可輸入 4000 個字").default("")
 }).refine(
   (data) => getSections(data.post_region).some((section) => section.id === data.post_section),
   { path: ["post_section"], message: "地區與縣市不相符" }
 );
 
+const optionalPrice = z.preprocess((value) => value === "" || value === null ? null : value, z.coerce.number().int().nonnegative().nullable().optional());
+
 export const restaurantAdminSchema = z.object({
-  res_name: z.string().trim().min(1, "請填寫餐廳名稱").max(120),
-  res_area_num: z.string().trim().max(10).default("02"),
-  res_tel_num: z.string().trim().max(20).default(""),
+  res_name: z.string().trim().min(1, "請填寫餐廳名稱").max(120, "最多可輸入 120 個字"),
+  res_area_num: z.string().trim().max(10).default(""),
+  res_tel_num: z.string().trim().max(20, "電話最多可輸入 20 個字元").default(""),
   res_region: z.coerce.number().int().nonnegative().default(0),
   res_section: z.coerce.number().int().nonnegative().default(0),
-  res_address: z.string().trim().max(255).default(""),
+  res_address: z.string().trim().max(255, "最多可輸入 255 個字").default(""),
   res_foodtype: z.coerce.number().int().nonnegative().default(0),
   cuisine_type_id: z.coerce.number().int().nonnegative().optional(),
   res_price: z.coerce.number().int().nonnegative().default(0),
-  res_note: z.string().trim().max(4000).default(""),
-  res_img_url: z.string().trim().max(255).default("preview_1380970870.jpg"),
+  price_mode: z.enum(["single", "range"]).optional(),
+  image_source: z.enum(["local", "external"]).optional(),
+  res_price_min: optionalPrice,
+  res_price_max: optionalPrice,
+  external_image_url: z.union([httpUrlSchema, z.literal("")]).nullable().optional(),
+  res_note: z.string().trim().max(4000, "最多可輸入 4000 個字").default(""),
+  res_img_url: z.string().trim().max(255, "最多可輸入 255 個字").default("preview_1380970870.jpg"),
   res_close: z.coerce.number().int().min(0).max(1).default(0)
 }).refine(
   (data) => data.res_region === 0
     ? data.res_section === 0
     : getSections(data.res_region).some((section) => section.id === data.res_section),
   { path: ["res_section"], message: "地區與縣市不相符" }
-);
+).refine((data) => data.res_price_min == null || data.res_price_max == null || data.res_price_min <= data.res_price_max,
+  { path: ["res_price_max"], message: "價格上限不可低於下限" });

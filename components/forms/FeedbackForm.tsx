@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { executeRecaptcha } from "@/components/forms/recaptcha";
 
-export function FeedbackForm() {
+export function FeedbackForm({ initialContent = "" }: { initialContent?: string }) {
   const [status, setStatus] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -43,8 +43,8 @@ export function FeedbackForm() {
         <input className="input" name="email" placeholder="請輸入電子郵件信箱" type="email" required />
       </label>
       <label className="field">
-        <span>問題或建議 *</span>
-        <textarea className="textarea" name="content" placeholder="請輸入內容" required />
+        <span id="feedback-content-label">問題或建議 *</span>
+        <textarea className="textarea" name="content" aria-labelledby="feedback-content-label" defaultValue={initialContent} placeholder="請輸入內容" required />
       </label>
       <button className="button secondary" type="submit" disabled={isSubmitting}>
         確定送出

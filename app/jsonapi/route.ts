@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { listPublicRestaurantApiRows } from "@/lib/domain/restaurants";
+import { listPublicRestaurantApiPage, listPublicRestaurantApiRows } from "@/lib/domain/restaurants";
 
 export const revalidate = 3_600;
 
@@ -10,7 +10,14 @@ function publicImageUrl(path: string): string {
 }
 
 export async function GET(request?: Request) {
-  const restaurants = await listPublicRestaurantApiRows();
+  const query = request ? new URL(request.url).searchParams : new URLSearchParams();
+  const paginated = query.has("page") || query.has("per_page");
+  const positiveInteger = (value: string | null, fallback: number) => {
+    const parsed = Number(value);
+    return Number.isSafeInteger(parsed) && parsed > 0 ? parsed : fallback;
+  };
+  const result = paginated ? await listPublicRestaurantApiPage(positiveInteger(query.get("page"), 1), Math.min(100, positiveInteger(query.get("per_page"), 100))) : null;
+  const restaurants = result?.restaurants ?? await listPublicRestaurantApiRows();
   const data = restaurants.map((restaurant) => ({
     id: restaurant.id,
     res_name: restaurant.res_name,
@@ -25,7 +32,11 @@ export async function GET(request?: Request) {
   const etag = `"${createHash("sha256").update(body).digest("base64url")}"`;
   const headers = {
     "Cache-Control": "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400",
-    ETag: etag
+    ETag: etag,
+    ...(result ? {
+      "X-Total-Count": String(result.total), "X-Page": String(result.page),
+      "X-Total-Pages": String(result.pages), "X-Per-Page": String(result.perPage)
+    } : {})
   };
 
   if (request?.headers.get("if-none-match") === etag) {

@@ -1,3 +1,5 @@
+import { RestaurantTools } from "@/components/restaurants/RestaurantTools";
+import { filterCuisineTokens, priceRangeError, sortOptions } from "@/lib/domain/list-filters";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { RestaurantListFilter } from "@/components/forms/RestaurantListFilter";
@@ -35,6 +37,7 @@ export default async function ListDataPage({ params, searchParams }: Props) {
         <div>
           <h1 className="page-title">餐廳列表</h1>
           <RestaurantListFilter
+            key={buildListPath(filters, result.page)}
             filters={filters}
             regions={regions}
             sectionsByRegion={sectionsByRegion}
@@ -47,6 +50,16 @@ export default async function ListDataPage({ params, searchParams }: Props) {
         </p>
       </div>
 
+      <div className="active-filters" aria-label="目前篩選條件">
+        <span>{filters.regionId ? regions.find((item) => item.id === filters.regionId)?.label : "所有城市"}</span>
+        {filters.sectionId ? <span>{sectionsByRegion[filters.regionId]?.find((item) => item.id === filters.sectionId)?.label}</span> : null}
+        {filterCuisineTokens(filters).map((token) => <span key={token}>{cuisineTypes.find((item) => item.value === token)?.label ?? token}</span>)}
+        {(filters.minPrice > 0 || filters.maxPrice > 0) ? <span>{filters.minPrice} 元至 {filters.maxPrice === 0 || filters.maxPrice === 1100 ? "無上限" : `${filters.maxPrice} 元`}</span> : null}
+        {filters.keyword ? <span>關鍵字：{filters.keyword}</span> : null}
+        <span>{sortOptions.find((item) => item.value === (filters.sort ?? "id"))?.label}</span>
+        <Link className="text-link" href="/listdata/0/0/0/0/1">清除全部條件</Link>
+      </div>
+      {priceRangeError(filters.minPrice, filters.maxPrice) ? <p className="status" role="alert">{priceRangeError(filters.minPrice, filters.maxPrice)}</p> : null}
       <div className="restaurant-list">
         {result.restaurants.map((restaurant) => {
           const cuisineQuery = filters.cuisineTypeCode
@@ -55,7 +68,7 @@ export default async function ListDataPage({ params, searchParams }: Props) {
           const keywordQuery = filters.keyword
             ? `&search_keyword=${encodeURIComponent(filters.keyword)}`
             : "";
-          const detailHref = `/detail/${restaurant.id}?ul=${filters.location}${cuisineQuery}&umx=${filters.maxPrice}&umi=${filters.minPrice}&p=${result.page}${keywordQuery}`;
+          const detailHref = `/detail/${restaurant.id}?ul=${filters.location}${cuisineQuery}&umx=${filters.maxPrice}&umi=${filters.minPrice}&p=${result.page}${keywordQuery}&returnTo=${encodeURIComponent(buildListPath(filters, result.page))}`;
           const titleId = `restaurant-${restaurant.id}-title`;
           const tagSummary = summarizeRestaurantTags(restaurant.auxiliaryTags, restaurant.cuisineTypeLabel);
 
@@ -94,6 +107,7 @@ export default async function ListDataPage({ params, searchParams }: Props) {
                   </div>
                 </div>
               </Link>
+              <RestaurantTools id={restaurant.id} name={restaurant.res_name} compact />
             </article>
           );
         })}
@@ -102,7 +116,9 @@ export default async function ListDataPage({ params, searchParams }: Props) {
       {result.restaurants.length === 0 ? (
         <p className="panel">
           暫時沒有符合的搜尋結果。<br />
-          建議您輸入其他的關鍵字，或重新選擇縮小列表範圍的條件。
+          建議更換關鍵字，或放寬篩選條件。<br />
+          <Link className="text-link" href={buildListPath({ ...filters, minPrice: 0, maxPrice: 0 }, 1)}>清除價格限制</Link>{" · "}
+          <Link className="text-link" href={buildListPath({ ...filters, location: "0", regionId: 0, sectionId: 0 }, 1)}>不限地區</Link>
         </p>
       ) : null}
 

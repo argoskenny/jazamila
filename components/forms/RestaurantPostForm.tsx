@@ -33,7 +33,7 @@ export function RestaurantPostForm({ regions, sectionsByRegion, foodTypes }: Pro
       });
       const data = (await response.json()) as { status: string; errors?: Record<string, string[]> };
       if (data.status === "success") {
-        setStatus("已儲存成功，感謝你的分享！");
+        setStatus("已收到你的餐廳分享，待審核通過後公開，謝謝！");
         form.reset();
         setRegionId("");
         setSectionId("");

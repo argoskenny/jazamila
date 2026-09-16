@@ -51,6 +51,8 @@ export function readHomePreferences(cookies: CookieReader): HomePreferences {
     foodmoney_min: toSafeInt(cookies.get("foodmoney_min")?.value),
     foodtypes: parsePreferenceFoodTypes(cookies.get("foodtype")?.value)
   };
+  if (preferences.foodmoney_max === 1100) preferences.foodmoney_max = 0;
+  if (preferences.foodmoney_min === 1100) preferences.foodmoney_min = 1000;
   const cuisineTypes = parsePreferenceCuisineTypes(cookies.get("cuisine_types")?.value);
   if (cuisineTypes.length > 0) preferences.cuisineTypes = cuisineTypes;
   return preferences;

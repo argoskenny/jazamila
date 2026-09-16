@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { buildListPath, priceRangeError } from "@/lib/domain/list-filters";
 import type { CuisineTypeOption, HomePreferences, Option } from "@/lib/domain/types";
 
 type Props = {
@@ -46,6 +47,8 @@ export function PickRestaurantForm({ preferences, regions, sectionsByRegion, cui
           .join("-") || "0"
       );
 
+      const error = priceRangeError(Number(form.get("foodmoney_min")), Number(form.get("foodmoney_max")));
+      if (error) { setStatus(error); return; }
       const response = await fetch("/jazamila_ajax/pick", {
         method: "POST",
         body: form
@@ -61,10 +64,11 @@ export function PickRestaurantForm({ preferences, regions, sectionsByRegion, cui
         const location = regionId === 0 ? "0" : `${regionId}X${sectionId}`;
         const minPrice = Number(form.get("foodmoney_min") ?? 0);
         const maxPrice = Number(form.get("foodmoney_max") ?? 0);
-        window.location.href = `/detail/${data.res_id}?ul=${encodeURIComponent(location)}&ut=0&uft=${selectedCuisineTypes
+        const returnTo = buildListPath({ location, regionId, sectionId, foodType: 0, cuisineTokens: selectedCuisineTypes, minPrice, maxPrice, page: 1, keyword: "" });
+        window.location.href = `/detail/${data.res_id}?picked=1&ul=${encodeURIComponent(location)}&ut=0&uft=${selectedCuisineTypes
           .filter((value) => value.startsWith("legacy:"))
           .map((value) => value.slice("legacy:".length))
-          .join("-")}&uct=${encodeURIComponent(selectedCuisineTypes.join(","))}&umx=${maxPrice}&umi=${minPrice}`;
+          .join("-")}&uct=${encodeURIComponent(selectedCuisineTypes.join(","))}&umx=${maxPrice}&umi=${minPrice}&returnTo=${encodeURIComponent(returnTo)}`;
         return;
       }
 
@@ -200,6 +204,8 @@ export function PickRestaurantForm({ preferences, regions, sectionsByRegion, cui
               ))}
             </div>
           </fieldset>
+          <button className="button" type="submit" disabled={!isReady || isSubmitting}>{isSubmitting ? "抽選中..." : "套用條件並抽選"}</button>
+          <a className="text-link" href="/saved">查看收藏與最近抽選／管理暫時排除</a>
           </div>
         </div>
       </div>

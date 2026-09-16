@@ -1,3 +1,4 @@
+import { PendingSubmit } from "@/components/admin/PendingSubmit";
 import Link from "next/link";
 import { approveBlogAction, rejectBlogAction } from "@/app/admin/blogs/actions";
 import { listBlogLinksForAdmin } from "@/lib/domain/blogs";
@@ -60,15 +61,15 @@ export default async function AdminBlogsPage({ searchParams }: Props) {
                 <td>
                   <form className="actions" action={approveBlogAction}>
                     <input type="hidden" name="id" value={blog.id} />
-                    <button className="button secondary" type="submit">
+                    <PendingSubmit className="button secondary">
                       通過
-                    </button>
+                    </PendingSubmit>
                   </form>
                   <form className="actions" action={rejectBlogAction}>
                     <input type="hidden" name="id" value={blog.id} />
-                    <button className="button ghost" type="submit">
+                    <PendingSubmit className="button ghost">
                       不通過
-                    </button>
+                    </PendingSubmit>
                   </form>
                 </td>
               </tr>

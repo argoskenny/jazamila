@@ -62,6 +62,17 @@ describe("jsonapi", () => {
     expect(await conditional.text()).toBe("");
   });
 
+  it("offers optional bounded pagination while preserving the legacy array", async () => {
+    const response = await GET(new Request("http://localhost/jsonapi?page=1&per_page=2"));
+    const data = await response.json();
+    expect(Array.isArray(data)).toBe(true);
+    expect(data).toHaveLength(2);
+    expect(Number(response.headers.get("x-total-count"))).toBeGreaterThan(2);
+    expect(response.headers.get("x-page")).toBe("1");
+    const last = await GET(new Request("http://localhost/jsonapi?page=999999&per_page=2"));
+    expect(last.headers.get("x-page")).toBe(last.headers.get("x-total-pages"));
+  });
+
   it("returns the complete legacy array instead of silently truncating at 500 rows", async () => {
     const prefix = "JSON API 完整清單測試";
     const publicBefore = await prisma.restaurant.count({ where: { closed: { not: 1 } } });
